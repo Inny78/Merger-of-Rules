@@ -1,0 +1,175 @@
+# Merger of Rules scripted triggers
+# These triggers are also meant as a library for modders who want to reuse them in their own mods.
+
+# List of the "other" planets for the planet cracker's test fire.
+merg_is_crackable_planet = {
+	OR = {
+		# Planetary Diversity
+		is_planet_class = pc_acid
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_ash
+		is_planet_class = pc_carbon
+		is_planet_class = pc_chthonian
+		is_planet_class = pc_crystal
+		is_planet_class = pc_diamond
+		is_planet_class = pc_ethane_ocean
+		is_planet_class = pc_floating
+		is_planet_class = pc_graveyard
+		is_planet_class = pc_hydrocarbon
+		is_planet_class = pc_iron
+		is_planet_class = pc_irradiated
+		is_planet_class = pc_methane
+		is_planet_class = pc_subglacial
+		is_planet_class = pc_sulfur
+		is_planet_class = pc_technoorganic
+		is_planet_class = pc_volcanic
+		# Gigastructures
+		is_planet_class = pc_ll_torrid
+		is_planet_class = pc_ll_temperate
+		is_planet_class = pc_ll_foggy
+		is_planet_class = pc_habitable_gas_giant
+	}
+}
+
+merg_is_standard_empire = {
+	OR = {
+		is_country_type = default
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		# ZOFE
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+		# The Empty Vagrant
+		is_country_type = default_ev
+		is_country_type = fallen_empire_ev
+		is_country_type = awakened_fallen_empire_ev
+		# Human Fallen Empire
+		# is_country_type = human_fallen_empire
+		# is_country_type = hfe_pirate
+	}
+}
+
+# Expanded version of country_type = default
+# Also replacing is_zofe_compatible so I don't have to check for a global flag
+merg_is_default_empire = {
+	OR = {
+		is_country_type = default
+		# ZOFE
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+		# The Empty Vagrant
+		is_country_type = default_ev
+	}
+}
+
+# List of dormant/standard Fallen Empires
+merg_is_fallen_empire = {
+	OR = {
+		is_country_type = fallen_empire
+		# ZOFE
+		is_country_type = lost_empire
+		# Human Fallen Empire
+		#AND = {
+		#	is_country_type = human_fallen_empire
+		#	NOT = { has_civic = hfe_civic_egypt_fury }
+		#}
+		# The Empty Vagrant
+		is_country_type = fallen_empire_ev
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_fallen_empire
+	}
+}
+
+# List of awakened Fallen Empires
+merg_is_awakened_fe = {
+	OR = {
+		is_country_type = awakened_fallen_empire
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_awakened_fallen_empire
+		is_country_type = awakened_return_kuat_empire
+		# A Deadly Tempest
+		is_country_type = awakened_gate_builders
+		# Human Fallen Empire
+		#AND = {
+		#	is_country_type = human_fallen_empire
+		#	has_civic = hfe_civic_egypt_fury
+		#}
+		# ZOFE
+		is_country_type = ascended_empire
+	}
+}
+
+# If I forget that this is not a thing, then it will be a thing anyway
+merg_is_regular_empire = {
+	is_regular_empire = yes
+}
+
+# Used by Planet Killers to forbid them to destroy invalid targets
+merg_is_forbidden_target = {
+	OR = {
+		# Merger of Rules
+		has_planet_flag = merg_forbidden_target # add this to your planet to dynamically exclude it.
+		has_star_flag = lcluster1 # Don't blow up Terminal Egress
+		# Gigastructures
+		is_planet_class = pc_birch
+		is_planet_class = pc_giga_empty_space
+		is_planet_class = pc_core_black_hole
+		is_planet_class = pc_core_quasar
+		# Ancient Empires
+		is_planet_class = pc_ag_void_star
+		# ACOT
+		is_planet_class = pc_invisible_star
+		# History of the Lost Empire
+		is_planet_class = pc_empty_space
+		# MEM
+		is_planet_class = pc_mem_micro_black_hole
+		is_planet_class = pc_mem_synthetic_sun
+		# Hypothetical Stars
+		is_planet_class = pc_white_hole
+		# Not updated yet, keeping it for later
+		# Some Events of Outside Cluster
+		# is_planet_class = pc_star_void_dummy_01
+		# Wild Space
+		# is_planet_class = pc_dn_star
+		# is_planet_class = pc_WS_barycenter
+	}
+}
+
+# List of dense stars for can_destroy_planet_with_PLANET_KILLER_Ark_CRACKER
+merg_is_dense_star = {
+	OR = {
+		is_planet_class = pc_black_hole
+		is_planet_class = pc_neutron_star
+		is_planet_class = pc_pulsar
+		# Gigastructures
+		is_planet_class = pc_birch
+		is_planet_class = pc_giga_empty_space
+		is_planet_class = pc_core_black_hole
+		is_planet_class = pc_core_quasar
+		is_planet_class = pc_black_hole_giga
+		is_planet_class = pc_ehof_black_hole
+		is_planet_class = pc_pouchkinn_black_hole
+		# Hypothetical Stars
+		is_planet_class = pc_white_hole
+		is_planet_class = pc_strange_star
+		# Real Space
+		is_planet_class = pc_collapsar
+		is_planet_class = pc_magnetar
+		is_planet_class = pc_microquasar_1
+		is_planet_class = pc_microquasar_2
+		# APSR: Anomalies, Planetary and Space Resources
+		is_planet_class = pc_apsr_ancient
+		is_planet_class = pc_apsr_unique
+	}
+}
+
+# Detection of Ethics and Civics Classic
+is_ethics_classic = {
+	AND = {
+		has_global_flag = cultural_overhaul_active
+  		NOR = {
+    		has_global_flag = bugbranch_global_flag
+    		has_global_flag = cultural_overhaul_redux_active
+  		}
+	}
+}

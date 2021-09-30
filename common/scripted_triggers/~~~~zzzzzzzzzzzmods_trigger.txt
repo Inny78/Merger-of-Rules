@@ -1,0 +1,115 @@
+# Scripted triggers from mods, expanded to acknowledge other mods.
+
+# Making Shadowgate acknowledge mod-made Fallen Empires
+shadowgate_is_fe = {
+    merg_is_fallen_empire = yes
+}
+
+# Making Shadowgate acknowledge mod-made Awakened Empires
+shadowgate_is_ae = {
+    merg_is_awakened_fe = yes
+}
+
+# Making Shadowgate acknowledge Underground Realms
+shadowgate_is_purifier = {
+    OR = {
+        has_country_flag = shadowgate_ap_restricted
+        has_valid_civic = civic_fanatic_purifiers
+        has_valid_civic = civic_machine_terminator
+        has_valid_civic = civic_hive_devouring_swarm
+		# Underground Realms
+		has_country_flag = dark_side
+    }
+}
+
+# Making Shadowgate acknowledge Starbase Ships.
+shadowgate_is_military_fleet = {
+    OR = {
+        has_fleet_flag = shadowgate_military_fleet
+        any_owned_ship = {
+			OR = {
+				is_ship_class = shipclass_military
+				is_ship_class = shipclass_military_special
+				is_ship_class = shipclass_transport
+				is_ship_size = juggernaut
+				# Gigastructural Engineering & More
+				is_ship_size = giga_systemcraft
+				# AOT
+				is_ship_size = ascended_juggernaut
+				is_ship_size = precursor_juggernaut
+				# ACOT
+				is_ship_size = precursor_colossus
+			}
+		}
+    }
+}
+
+# Expanding a bit the country list of Gigastructural Engineering & More
+ehof_default_country = {
+	OR = {
+		is_country_type = default
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		# ZOFE
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+		# The Empty Vagrant
+		is_country_type = default_ev
+		is_country_type = fallen_empire_ev
+		is_country_type = awakened_fallen_empire_ev
+		# Human Fallen Empire
+		# is_country_type = human_fallen_empire
+		# is_country_type = hfe_pirate
+	}
+}
+
+# ACOT/AOT/Twinks mods merging.
+has_advanced_fort = {
+	OR = {
+		# ACOT
+		has_building = building_dm_stronghold
+		has_building = building_fe_stronghold
+		has_building = building_ae_stronghold
+		# AOT
+		has_building = building_stellarite_stronghold
+		# Twinks Mods
+		has_building = building_precinct_house_at_b
+		has_building = building_tw_arcane_hold
+		# has_building = building_demon_fortress # For later
+	}
+}
+
+# This trigger doesn't exists yet, it's just a concept for potential future use in GPM.
+# It adds to is_megacorp all megacorp authorities that exist outside of the trigger as they use their own rules.
+# gpm_is_megacorp = {
+# 	OR = {
+# 		is_megacorp = yes
+# 		# Warship Girls R And MIST Species
+# 		AND = {
+# 			has_authority = auth_shenhai
+# 			OR = {
+# 				has_country_flag = pantsu_shop_origin
+# 				has_civic = civic_sh_criminal_syndicate
+# 			}
+# 		}
+# 		# Azur Lane Stellaris DLC
+# 		has_authority = auth_azur_lane_0
+# 		has_authority = auth_azur_lane_1
+# 		has_authority = auth_azur_lane_2
+# 		has_authority = auth_azur_lane_K
+# 		# Stellaris Evolved
+# 		AND = {
+# 			has_global_flag = stellarisevolved
+# 			OR = {
+# 				AND = {
+# 					is_hive_empire = yes
+# 					tec_is_symbiotic_hivemind = yes
+# 				}
+# 				AND = {
+# 					is_machine_empire = yes
+# 					tec_is_symbiotic_machine = yes
+# 				}
+# 			}
+# 		}
+# 	}
+# }

@@ -1,0 +1,1668 @@
+##########################################################################
+# Empire Policies
+#
+# #####
+#
+# AI:
+# Base AI-weight is 100, if unchanged
+# AI will grab whatever policy-option has the highest weight
+#
+# #####
+#
+##########################################################################
+
+diplomatic_stance = {
+	potential = {
+		OR = {
+			merg_is_default_empire = yes
+			is_country_type = primitive
+			is_country_type = awakened_marauders
+			# Star Wars: Kuat Ancient Empire
+			is_country_type = kuat_fallen_empire
+			is_country_type = kuat_awakened_fallen_empire
+			is_country_type = awakened_return_kuat_empire
+			# The Empty Vagrant
+			is_country_type = default_ev
+			is_country_type = fallen_empire_ev
+			is_country_type = awakened_fallen_empire_ev
+		}
+	}
+
+	allow = {
+		is_at_war = no # Not allowed to change policies in this group while at war
+	}
+
+	option = {
+		name = "diplo_stance_belligerent"
+		icon = "GFX_diplomatic_stance_belligerent"
+
+		potential = {
+			OR = {
+				merg_is_default_empire = yes
+				is_country_type = awakened_fallen_empire
+				# ZOFE
+				is_country_type = ascended_empire
+				# Star Wars: Kuat Ancient Empire
+				is_country_type = kuat_awakened_fallen_empire
+				is_country_type = awakened_return_kuat_empire
+				# The Empty Vagrant
+				is_country_type = default_ev
+				is_country_type = awakened_fallen_empire_ev
+			}
+		}
+
+		valid = {
+			NOR = {
+				has_valid_civic = civic_inwards_perfection
+				# Ethics and Civics Alternative - Redux / Classic / Stellaris Evolved
+				has_valid_civic = civic_isolationism
+				# Espionage Extended
+				has_valid_civic = civic_shadow_state
+			}
+			is_homicidal = no # They have their own variants of this
+		}
+
+		policy_flags = {
+			diplo_stance_belligerent
+		}
+
+		modifier = {
+			country_war_exhaustion_mult = -0.1
+			country_naval_cap_mult = 0.1
+			country_claim_influence_cost_mult = -0.1
+		}
+
+		ai_weight = {
+			weight = 10
+
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = has_encountered_other_empire }
+			}
+
+			# Pacifists
+			modifier = { # Fanatic Pacifists will *only* go belligerent if there's a rival neighbor...
+				factor = 0
+				OR = {
+					has_ethic = ethic_fanatic_pacifist
+					# Expanded Traits, Civics, Pops, and More
+					has_valid_civic = civic_harm_hive
+					has_valid_civic = civic_harm_machine
+				}
+				NOT = {
+					any_neighbor_country = {
+						is_rival = root
+					}
+				}
+			}
+			modifier = { # Regular Pacifists have only a small chance to go belligerent unless there's a rival neighbor...
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					# Expanded Traits, Civics, Pops, and More
+					has_ai_personality = open_hive_mind
+					has_ai_personality = open_machine_intelligence
+				}
+				NOT = {
+					any_neighbor_country = {
+						is_rival = root
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5 # ...but they're still less likely to.
+				OR = {
+					is_pacifist = yes
+					# Expanded Traits, Civics, Pops, and More
+					has_ai_personality = open_hive_mind
+					has_ai_personality = open_machine_intelligence
+				}
+			}
+
+			# Angry people like to be belligerent
+			modifier = {
+				factor = 2.0
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_militarist
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_authoritarian
+			}
+			modifier = {
+				factor = 5.0 # Intentionally high value for despoilers/Nihilistic Acquisition
+				is_slaver = yes
+			}
+			modifier = {
+				factor = 1.5
+				has_valid_civic = civic_nationalistic_zeal
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					has_valid_civic = civic_hive_strength_of_legions
+					has_valid_civic = civic_machine_warbots
+					has_valid_civic = civic_private_military_companies
+					has_valid_civic = civic_warrior_culture
+				}
+			}
+
+			modifier = {
+				factor = 1.5
+				has_ai_personality_behaviour = conqueror
+			}
+			modifier = {
+				factor = 1.5
+				has_ai_personality_behaviour = subjugator
+			}
+
+			modifier = {
+				factor = 3.0 # Blocked in propagators get ANGRY
+				has_ai_expansion_plan = no
+				has_ai_personality_behaviour = propagator
+			}
+			# Expanded Traits, Civics, Pops, and More
+			modifier = {
+				factor = 2
+				has_ai_personality = egalitarian_imperialists
+				any_neighbor_country = {
+					OR = {
+						is_rival = root
+						ROOT = { is_domineering_to = PREV }
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "diplo_stance_cooperative"
+		icon = "GFX_diplomatic_stance_cooperative"
+
+		potential = {
+			OR = {
+				merg_is_default_empire = yes
+				is_country_type = awakened_fallen_empire
+				# Star Wars: Kuat Ancient Empire
+				is_country_type = kuat_awakened_fallen_empire
+				is_country_type = awakened_return_kuat_empire
+				# The Empty Vagrant
+				is_country_type = default_ev
+				is_country_type = awakened_fallen_empire_ev
+			}
+		}
+
+		valid = {
+			NOR = {
+				has_valid_civic = civic_inwards_perfection
+				# Ethics and Civics Alternative - Redux / Classic / Stellaris Evolved
+				has_valid_civic = civic_isolationism
+				# Espionage Extended
+				has_valid_civic = civic_shadow_state
+			}
+			is_unfriendly = no # Not homicidal or barbaric despoilers
+		}
+
+		policy_flags = {
+			diplo_stance_cooperative
+		}
+
+		modifier = {
+			diplo_weight_mult = 0.25
+			envoy_improve_relations_mult = 0.5
+			country_border_friction_mult = -0.5
+			operations_cost_mult = 0.25
+			operations_upkeep_mult = 0.25
+		}
+
+		ai_weight = {
+			weight = 10
+
+			modifier = {
+				factor = 0.01
+				has_ascension_perk = ap_become_the_crisis
+			}
+
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = has_encountered_other_empire }
+			}
+
+			# Tons of Ethics modifiers!
+			# Cranky people:
+			modifier = {
+				factor = 0
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_ethic = ethic_xenophobe
+					# Expanded Traits, Civics, Pops, and More
+					has_civic = civic_infestation
+					has_civic = civic_living_hosts
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_authoritarian
+			}
+
+			# Nice people:
+			modifier = {
+				factor = 2.0
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 1.3
+				OR = {
+					has_ethic = ethic_fanatic_pacifist
+					# Expanded Traits, Civics, Pops, and More
+					has_valid_civic = civic_harm_hive
+					has_valid_civic = civic_harm_machine
+				}
+			}
+			modifier = {
+				factor = 1.15
+				OR = {
+					has_ethic = ethic_pacifist
+					# Expanded Traits, Civics, Pops, and More
+					has_ai_personality = open_hive_mind
+					has_ai_personality = open_machine_intelligence
+				}
+			}
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 1.15
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = 1.1
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 1.05
+				has_ethic = ethic_materialist
+			}
+
+			modifier = {
+				factor = 1.25
+				has_ai_personality_behaviour = multispecies
+			}
+
+			modifier = {
+				factor = 3.0
+				has_ai_personality = federation_builders
+			}
+		}
+	}
+
+	option = {
+		name = "diplo_stance_isolationist"
+		icon = "GFX_diplomatic_stance_isolationist"
+
+		potential = {
+			OR = {
+				merg_is_default_empire = yes
+				is_country_type = awakened_fallen_empire
+				# Star Wars: Kuat Ancient Empire
+				is_country_type = kuat_awakened_fallen_empire
+				is_country_type = awakened_return_kuat_empire
+				# The Empty Vagrant
+				is_country_type = default_ev
+				is_country_type = awakened_fallen_empire_ev
+			}
+		}
+
+		valid = {
+			is_megacorp = no # "NO! YOU CAN'T BUY OUR STUFF!" makes the shareholders sad
+			is_homicidal = no # Homicidal variants below
+			# Espionage Extended
+			NOT = { has_valid_civic = civic_shadow_state }
+		}
+
+		policy_flags = {
+			diplo_stance_isolationist
+		}
+
+		modifier = {
+			country_admin_cap_mult = 0.15
+			country_unity_produces_mult = 0.10
+			diplo_weight_mult = -0.50
+			diplomacy_upkeep_mult = 1
+			pop_government_ethic_attraction = 0.25
+			country_border_friction_mult = 2.0
+		}
+
+		on_enabled = {
+		}
+
+		ai_weight = {
+			weight = 10
+
+			modifier = {
+				factor = 0.01
+				has_ascension_perk = ap_become_the_crisis
+			}
+
+			modifier = {
+				factor = 0.25 # Let the isolationists start in this if they want
+				NOT = { has_country_flag = has_encountered_other_empire }
+			}
+
+			modifier = {
+				factor = 0
+				OR = {
+					has_ai_personality = federation_builders
+					has_ai_personality = fanatic_befrienders
+				}
+			}
+
+			modifier = {
+				factor = 100.0 # Inwards Perfection should almost always go isolationist
+				has_valid_civic = civic_inwards_perfection
+				# Ethics and Civics Alternative - Redux / Stellaris Evolved
+				AND = {
+					OR = {
+						has_global_flag = cultural_overhaul_redux_active
+						has_global_flag = stellarisevolved
+					}
+					has_valid_civic = civic_isolationism
+				}
+			}
+
+			modifier = {
+				factor = 3.0
+				has_ai_personality_behaviour = isolationist
+			}
+
+			modifier = {
+				factor = 2.0
+				is_xenophobe = yes
+				is_militarist = no
+				is_authoritarian = no
+			}
+			# Expanded Traits, Civics, Pops, and More
+			modifier = {
+				factor = 2
+				has_ai_personality = egalitarian_imperialists
+				NOT = {
+					any_neighbor_country = {
+						OR = {
+							is_rival = root
+							ROOT = { is_domineering_to = PREV }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "diplo_stance_expansionist"
+		icon = "GFX_diplomatic_stance_expansionist"
+
+		potential = {
+			OR = {
+				merg_is_default_empire = yes
+				is_country_type = awakened_fallen_empire
+				# Star Wars: Kuat Ancient Empire
+				is_country_type = kuat_awakened_fallen_empire
+				is_country_type = awakened_return_kuat_empire
+				# The Empty Vagrant
+				is_country_type = default_ev
+				is_country_type = awakened_fallen_empire_ev
+			}
+		}
+
+		valid = {
+			is_homicidal = no
+			# Espionage Extended
+			NOT = { has_valid_civic = civic_shadow_state }
+		}
+
+		policy_flags = {
+			diplo_stance_expansionist
+		}
+
+		modifier = {
+			starbase_outpost_cost_mult = -0.10
+			planet_colony_development_speed_mult = 0.15
+			country_border_friction_mult = 1.0
+		}
+
+		ai_weight = {
+			weight = 10
+
+			modifier = {
+				factor = 2
+				NOT = { has_country_flag = has_encountered_other_empire }
+			}
+
+			modifier = {
+				factor = 0.01
+				has_ascension_perk = ap_become_the_crisis
+			}
+		}
+	}
+
+	option = {
+		name = "diplo_stance_mercantile"
+		icon = "GFX_diplomatic_stance_mercantile"
+
+		potential = {
+			OR = {
+				merg_is_default_empire = yes
+				is_country_type = awakened_fallen_empire
+				# Star Wars: Kuat Ancient Empire
+				is_country_type = kuat_awakened_fallen_empire
+				is_country_type = awakened_return_kuat_empire
+				# The Empty Vagrant
+				is_country_type = default_ev
+				is_country_type = awakened_fallen_empire_ev
+			}
+			is_gestalt = no
+			# Ethics and Civics Alternative - Redux / Classic / Bugged / Stellaris Evolved
+			OR = {
+				is_megacorp = yes
+				has_ethic = ethic_capitalism
+				has_ethic = ethic_fanatic_capitalism
+			}
+			NOR = { has_valid_civic = civic_inwards_perfection   }
+		}
+
+		valid = {
+			NOR = {
+				has_valid_civic = civic_inwards_perfection
+				# Ethics and Civics Alternative - Redux / Stellaris Evolved
+				AND = {
+					OR = {
+						has_global_flag = cultural_overhaul_redux_active
+						has_global_flag = stellarisevolved
+					}
+					has_valid_civic = civic_isolationism
+				}
+			}
+			is_homicidal = no
+			# some ugliness to preserve the
+			# auth/civic - potential/valid divide for tooltip
+			if = {
+				limit = {
+					has_megacorp = yes
+					is_megacorp = yes
+				}
+				is_megacorp = yes
+			}
+			else_if = {
+				limit = { has_megacorp = yes }
+				has_civic = civic_merchant_guilds
+			}
+			else = {
+				OR = {
+					has_civic = civic_corporate_dominion
+					# Ethics and Civics Alternative - Redux
+					has_ethic = ethic_capitalism
+					has_ethic = ethic_fanatic_capitalism
+					# Expanded Traits, Civics, Pops, and More
+					has_valid_civic = civic_corporate_dominion
+					has_valid_civic = civic_merchant_guilds
+				}
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_mercantile
+		}
+
+		modifier = {
+			diplo_weight_economy_mult = 0.25
+			trade_value_mult = 0.1
+			local_trade_protection_add = 5
+		}
+
+		ai_weight = {
+			weight = 10
+
+			modifier = {
+				factor = 0.01
+				has_ascension_perk = ap_become_the_crisis
+			}
+			modifier = {
+				factor = 3.0
+				is_megacorp = yes # Megacorps should generally prefer this diplo stance unless their ethics get them to specialize differently
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					has_valid_civic = civic_free_traders
+					# Expanded Traits, Civics, Pops, and More
+					has_valid_civic = civic_trading_posts
+					has_valid_civic = civic_parliamentary_system_corp
+					has_valid_civic = civic_royal_trading_company
+					has_valid_civic = civic_megastore
+					has_valid_civic = civic_memorialist_corp
+				}
+			}
+			modifier = {
+				factor = 0.65
+				OR = {
+					has_valid_civic = civic_private_prospectors
+					has_valid_civic = civic_private_military_companies
+					# Expanded Traits, Civics, Pops, and More
+					has_valid_civic = civic_shadow_council_megacorp
+					has_valid_civic = civic_corp_security
+				}
+			}
+			# Espionage Extended
+			modifier = {
+				factor = 0.01
+				has_valid_civic = civic_shadow_state
+			}
+		}
+	}
+
+	option = {
+		name = "diplo_stance_supremacist"
+		icon = "GFX_diplomatic_stance_supremacy"
+
+		potential = {
+			OR = {
+				is_country_type = awakened_fallen_empire
+				is_country_type = awakened_marauders
+				merg_is_default_empire = yes
+				# ZOFE
+				is_country_type = ascended_empire
+				# Star Wars: Kuat Ancient Empire
+				is_country_type = kuat_awakened_fallen_empire
+				is_country_type = awakened_return_kuat_empire
+				# The Empty Vagrant
+				is_country_type = awakened_fallen_empire_ev
+				is_country_type = awakened_marauders_ev
+				is_country_type = default_ev
+			}
+		}
+		valid = {
+			NOR = {
+				has_valid_civic = civic_inwards_perfection
+				has_modifier = humiliated
+				# Ethics and Civics Alternative - Redux / Stellaris Evolved
+				AND = {
+					OR = {
+						has_global_flag = cultural_overhaul_redux_active
+						has_global_flag = stellarisevolved
+					}
+					has_valid_civic = civic_isolationism
+				}
+			}
+			is_homicidal = no
+			custom_tooltip = {
+				fail_text = "requires_supremacy_traditions"
+				OR = {
+					has_tradition = tr_supremacy_finish
+					merg_is_default_empire = no
+				}
+			}
+			is_subject = no
+			# Espionage Extended
+			custom_tooltip = {
+				fail_text = "supremacist_shadow_paradox"
+				NOT = { has_valid_civic = civic_shadow_state }	
+			}			
+		}
+
+		policy_flags = {
+			diplo_stance_supremacist
+		}
+
+		modifier = {
+			diplo_weight_naval_mult = 1.00
+			country_war_exhaustion_mult = -0.20
+			country_naval_cap_mult = 0.20
+			country_claim_influence_cost_mult = -0.1
+		}
+
+		on_enabled = {
+		}
+
+		ai_weight = {
+			weight = 10
+
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = has_encountered_other_empire }
+			}
+
+			modifier = {
+				factor = 0
+				is_pacifist = yes
+			}
+
+			modifier = {
+				factor = 10
+				OR = {
+					is_country_type = awakened_fallen_empire
+					is_country_type = awakened_marauders
+					# Star Wars: Kuat Ancient Empire
+					is_country_type = kuat_awakened_fallen_empire
+					is_country_type = awakened_return_kuat_empire
+				}
+			}
+
+			# Angry people want to be Supreme
+			modifier = {
+				factor = 2.0
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_militarist
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_authoritarian
+			}
+			modifier = {
+				factor = 1.25 # Despoilers/Nihilistic Acquisition intentionally get a higher multiplier for Belligerent than Supremacist
+				is_slaver = yes
+			}
+			modifier = {
+				factor = 2
+				has_valid_civic = civic_nationalistic_zeal
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					has_valid_civic = civic_hive_strength_of_legions
+					has_valid_civic = civic_machine_warbots
+					has_valid_civic = civic_private_military_companies
+					has_valid_civic = civic_warrior_culture
+					# Expanded Traits, Civics, Pops, and More
+					AND = {
+						has_global_flag = expanded_pops_active
+						OR = {
+							has_valid_civic = civic_barbaric_despoilers
+							has_valid_civic = civic_crusaders
+							has_valid_civic = civic_living_hosts
+							has_valid_civic = civic_infestation
+							has_origin = origin_necrophage
+							has_origin = origin_militarist
+						}
+					}
+				}
+			}
+
+			modifier = {
+				factor = 1.5
+				has_ai_personality_behaviour = conqueror
+			}
+			modifier = {
+				factor = 1.5
+				has_ai_personality_behaviour = subjugator
+			}
+
+			modifier = { # Don't be suicidal
+				factor = 0
+				any_relation = {
+					has_communications = root
+					has_policy_flag = diplo_stance_supremacist
+					merg_is_default_empire = yes
+					is_subject = no
+					relative_power = {
+						who = root
+						category = fleet
+						value = overwhelming
+					}
+				}
+			}
+			modifier = {
+				factor = 0.25
+				any_neighbor_country = {
+					has_communications = root
+					merg_is_default_empire = yes
+					is_subject = no
+					relative_power = {
+						who = root
+						category = fleet
+						value > equivalent
+					}
+				}
+			}
+			# Expanded Traits, Civics, Pops, and More
+			modifier = {
+				factor = 2
+				has_ai_personality = egalitarian_imperialists
+				any_neighbor_country = {
+					OR = {
+						is_rival = root
+						ROOT = { is_domineering_to = PREV }
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "diplo_stance_hunger"
+		icon = "GFX_diplomatic_stance_rest"
+
+		potential = {
+			has_authority = auth_hive_mind
+		}
+
+		valid = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+
+		policy_flags = {
+			diplo_stance_hunger
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			weight = 100
+		}
+	}
+
+	option = {
+		name = "diplo_stance_extermination"
+		icon = "GFX_diplomatic_stance_recompiling"
+
+		potential = {
+			has_authority = auth_machine_intelligence
+		}
+
+		valid = {
+			has_valid_civic = civic_machine_terminator
+		}
+
+		policy_flags = {
+			diplo_stance_extermination
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			weight = 100
+		}
+	}
+
+	option = {
+		name = "diplo_stance_purification"
+		icon = "GFX_diplomatic_stance_withdrawn"
+
+		potential = {
+			has_utopia = yes
+		}
+
+		valid = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+
+		policy_flags = {
+			diplo_stance_purification
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			weight = 100
+		}
+	}
+
+	option = {
+		name = "diplo_stance_isolationist_fallen_empire"
+		icon = "GFX_diplomatic_stance_isolationist"
+
+		potential = {
+			OR = {
+				is_country_type = fallen_empire
+				# ZOFE
+				is_country_type = lost_empire
+				# Star Wars: Kuat Ancient Empire
+				is_country_type = kuat_fallen_empire
+				# The Empty Vagrant
+				is_country_type = fallen_empire_ev
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_isolationist_fallen_empire
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			weight = 100
+			# ZOFE
+			modifier = {
+				factor = 3.0
+				is_country_type = lost_empire
+			}
+		}
+	}
+
+	option = {
+		name = "diplo_stance_primitive"
+		icon = "GFX_diplomatic_stance_isolationist"
+
+		potential = {
+			is_country_type = primitive
+		}
+
+		policy_flags = {
+			diplo_stance_primitive
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			weight = 1
+		}
+	}
+	# Stellaris Evolved
+	option = {
+		name = "diplo_stance_evangelist"
+		icon = "GFX_diplomatic_stance_evangelist"
+
+		potential = {
+			has_global_flag = stellarisevolved
+			always = no
+			is_unfriendly = no # Not homicidal or barbaric despoilers
+			NOR = { 
+				has_valid_civic = civic_inwards_perfection 
+				has_valid_civic = civic_tec_propagandistic
+				has_valid_civic = civic_brand_loyalty
+			}
+			OR = {
+				has_valid_civic = civic_evangelism
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_evangelist
+		}
+
+		modifier = {
+			envoy_improve_relations_mult = -1
+			envoy_harm_relations_mult = -1
+			# custom_tooltip = {
+			# 	text = evangalist_effect
+			# }
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				country_event = {
+					id = techaul_evangelist.1
+				}
+			}
+		}
+		ai_weight = {
+			weight = 10
+
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = has_encountered_other_empire }
+			}
+
+			# Tons of Ethics modifiers!
+			# Cranky people:
+			modifier = {
+				factor = 0
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+
+			# Nice people:
+			modifier = {
+				factor = 2.0
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			modifier = {
+				factor = 2.0
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 1.1
+				has_ethic = ethic_fanatic_materialist
+			}
+
+			modifier = {
+				factor = 1.25
+				has_ai_personality_behaviour = multispecies
+			}
+
+			modifier = {
+				factor = 3.0
+				has_ai_personality = federation_builders
+			}
+		}
+	}
+	option = {
+		name = "diplo_stance_propaganda"
+		icon = "GFX_diplomatic_stance_propaganda"
+
+		potential = {
+			has_global_flag = stellarisevolved
+			always = no
+			is_unfriendly = no # Not homicidal or barbaric despoilers
+			NOR = { 
+				has_valid_civic = civic_inwards_perfection 
+				has_valid_civic = civic_evangelism
+			}
+			OR = {
+				has_valid_civic = civic_tec_propagandistic
+				has_valid_civic = civic_brand_loyalty
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_propaganda
+		}
+
+		modifier = {
+			envoy_improve_relations_mult = -1
+			envoy_harm_relations_mult = -1
+			# custom_tooltip = {
+			# 	text = evangalist_effect
+			# }
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				country_event = {
+					id = techaul_evangelist.1
+				}
+			}
+		}
+		ai_weight = {
+			weight = 10
+
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = has_encountered_other_empire }
+			}
+
+			# Tons of Ethics modifiers!
+			# Cranky people:
+			modifier = {
+				factor = 0
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+
+			# Nice people:
+			modifier = {
+				factor = 2.0
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			modifier = {
+				factor = 2.0
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = 1.3
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 1.1
+				has_ethic = ethic_fanatic_materialist
+			}
+
+			modifier = {
+				factor = 1.25
+				has_ai_personality_behaviour = multispecies
+			}
+
+			modifier = {
+				factor = 3.0
+				has_ai_personality = federation_builders
+			}
+		}
+	}
+	# Espionage Extended
+	option = {
+		name = "diplo_stance_shadow"
+		icon = "GFX_diplomatic_stance_shadow"
+
+		potential = {
+			has_global_flag = has_mod_espionage_extended
+			OR = {
+				merg_is_default_empire = yes
+			}
+		}
+
+		valid = {
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+				has_valid_civic = civic_shadow_state
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_shadow
+		}
+
+		modifier = {
+			country_unity_produces_mult = 0.10		
+			diplo_weight_mult = -0.50
+			diplomacy_upkeep_mult = 1
+			country_claim_influence_cost_mult = 0.3		
+			starbase_outpost_cost_mult = -0.10			
+			country_border_friction_mult = 1
+			envoy_improve_relations_mult = -0.5
+			operations_cost_mult = -0.25
+			operations_upkeep_mult = -0.25
+			spy_network_daily_value_mult = 0.25
+			espionage_operation_difficulty_add = -1
+			starbase_upgrade_speed_mult = 0.50
+			shipsize_military_station_small_build_speed_mult = 0.50
+			ship_military_station_small_cost_mult = -0.1			
+		}
+
+		ai_weight = {
+			weight = 100
+		}
+	}
+}
+war_philosophy = {
+
+	potential = {
+		OR = {
+			merg_is_default_empire = yes
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			# Star Wars: Kuat Ancient Empire
+			is_country_type = kuat_fallen_empire
+			is_country_type = kuat_awakened_fallen_empire
+			is_country_type = awakened_return_kuat_empire
+		}
+	}
+
+	allow = {
+		is_at_war = no # Not allowed to change policies in this group while at war
+	}
+	option = {
+		name = "unrestricted_wars"
+
+		policy_flags = {
+			unrestricted_wars
+		}
+
+		in_breach_of = {
+			{
+				key = resolution_rulesofwar_last_resort_doctrine
+			}
+		}
+
+		valid = {
+			NOR = {
+				is_pacifist = yes
+				has_valid_civic = "civic_inwards_perfection"
+				# Expanded Traits, Civics, Pops, and More
+				has_valid_civic = civic_closed_collective
+				has_valid_civic = civic_closed_network
+				has_valid_civic = "civic_harm_hive"
+				has_valid_civic = "civic_harm_machine"
+				has_ai_personality = harmonious_hierarchy
+				# Stellaris Evolved
+				has_valid_civic = "civic_peacekeepers"
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_valid_ai_personality = no
+					is_ai = no
+				}
+				is_pacifist = no
+			}
+			modifier = {
+				factor = 10
+				has_valid_ai_personality = yes
+				is_ai = yes
+				OR = {
+					has_ai_personality_behaviour = conqueror
+					has_ai_personality_behaviour = subjugator
+					has_ai_personality_behaviour = purger
+				}
+			}
+			modifier = {
+				factor = 10
+				has_ascension_perk = ap_become_the_crisis
+			}
+			modifier = {
+				factor = 0.1
+				has_valid_ai_personality = yes
+				is_ai = yes
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+					is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_pacifist = yes
+					# Expanded Traits, Civics, Pops, and More
+					has_ai_personality = open_hive_mind
+					has_ai_personality = open_machine_intelligence
+				}
+			}
+		}
+	}
+	option = {
+		name = "liberation_wars"
+
+		policy_flags = {
+			liberation_wars
+		}
+
+		potential = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_pacifist"
+				has_valid_civic = "civic_fanatic_purifiers"
+			}
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				check_casus_belli_valid = {
+					type = cb_ideology
+				}
+			}
+		}
+		on_disabled = {
+			hidden_effect = {
+				check_casus_belli_valid = {
+					type = cb_ideology
+				}
+			}
+		}
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_valid_ai_personality = no
+					is_ai = no
+				}
+				has_ethic = "ethic_pacifist"
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				is_ai = yes
+				OR = {
+					has_ai_personality_behaviour = conqueror
+					has_ai_personality_behaviour = subjugator
+					has_ai_personality_behaviour = liberator
+				}
+			}
+			# Expanded Traits, Civics, Pops, and More
+			modifier = {
+				factor = 3
+				has_valid_ai_personality = yes
+				is_ai = yes
+				OR = {
+					has_ai_personality_behaviour = conqueror
+					has_ai_personality_behaviour = subjugator
+					has_ai_personality_behaviour = liberator
+				}
+				has_authority = auth_democratic
+				OR = {
+					is_militarist = no
+					is_xenophobe = no
+				}
+			}
+			modifier = {
+				factor = 5
+				has_valid_ai_personality = yes
+				is_ai = yes
+				has_ai_personality = democratic_crusaders
+			}
+			modifier = {
+				factor = 5
+				has_valid_ai_personality = no
+				is_ai = yes
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_militarist
+			}
+		}
+	}
+	option = {
+		name = "no_wars"
+		policy_flags = {
+			no_wars
+		}
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_militarist"
+				has_valid_civic = "civic_fanatic_purifiers"
+				has_valid_civic = "civic_hive_devouring_swarm"
+				has_valid_civic = "civic_machine_terminator"
+			}
+		}
+		AI_weight = {
+			modifier = {
+				factor = 5
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_ethic = "ethic_fanatic_pacifist" }
+			}
+			# Expanded Traits, Civics, Pops, and More
+			modifier = {
+				factor = 1.5
+				has_global_flag = cultural_overhaul_active
+				has_ethic = ethic_fanatic_xenophile
+				is_authoritarian = no
+				is_militarist = no
+			}
+			modifier = {
+				factor = 1.5
+				has_global_flag = cultural_overhaul_active
+				has_ethic = "ethic_pacifist"
+			}
+			modifier = {
+				factor = 1.5
+				has_global_flag = cultural_overhaul_active
+				OR = {
+					has_valid_civic = civic_diplomatic_corps
+					has_valid_civic = civic_public_relations_specialists
+					has_valid_civic = civic_hive_empath
+					has_valid_civic = civic_machine_emotions
+					has_origin = origin_common_ground
+					has_origin = origin_common_ground_npc
+				}
+			}
+			modifier = {
+				factor = 0
+				has_global_flag = cultural_overhaul_active
+				NOR = {
+					is_pacifist = yes
+					AND = {
+						has_ethic = ethic_fanatic_xenophile
+						is_authoritarian = no
+						is_militarist = no
+					}
+					has_ai_personality = open_hive_mind
+					has_ai_personality = open_machine_intelligence
+				}
+			}
+		}
+	}
+}
+# war_doctrine
+
+orbital_bombardment = {
+
+	potential = {
+		OR = {
+			merg_is_default_empire = yes
+			is_country_type_with_subjects = yes
+			is_country_type = vol
+		}
+	}
+
+	option = {
+		name = "orbital_bombardment_selective"
+		policy_flags = {
+			orbital_bombardment_selective
+		}
+		potential = {
+			OR = {
+				NOT= { has_global_flag = prob_global_flag }
+				# Powerful & Realistic Orbital Bombardments
+				AND = {
+					has_global_flag = prob_global_flag
+					prob_forced_armageddon_bombardment = no
+				}
+			}
+		}
+		AI_weight = {
+			modifier = {
+				factor = 0
+				is_pacifist = no
+				NOR = {
+					AND = {
+						is_galactic_community_member = yes
+						OR = {
+							is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+							is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+							is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+						}
+					}
+					# Ethics and Civics Classic
+					has_ethic = "ethic_green"
+					has_ethic = "ethic_fanatic_green"
+				}
+			}
+		}
+	}
+	option = {
+		name = "orbital_bombardment_indiscriminate"
+
+		in_breach_of = {
+			{
+				key = resolution_rulesofwar_independent_tribunals
+			}
+		}
+		potential = {
+			OR = {
+				NOT= { has_global_flag = prob_global_flag }
+				# Powerful & Realistic Orbital Bombardments
+				AND = {
+					has_global_flag = prob_global_flag
+					prob_forced_armageddon_bombardment = no
+					OR = {
+						has_country_flag = prob_enable_indiscriminate_bombardment
+						has_country_flag = prob_enable_full_bombardment
+						has_country_flag = prob_enable_armageddon_bombardment
+						has_tradition = tr_supremacy_finish # tr_supremacy_adopt
+					}
+				}
+			}
+		}
+
+		policy_flags = {
+			orbital_bombardment_indiscriminate
+		}
+		modifier = {}
+
+		valid = {
+			is_pacifist = no
+			NOR = {
+				# Ethics and Civics Classic/Redux
+				has_valid_civic = "civic_xeno_militarist"
+				# Ethics & Civics: Bug Branch
+				has_valid_civic = "civic_interventionalist"
+				has_valid_civic = "civic_interventionalist_corpo"
+			}
+		}
+		AI_weight = {
+			modifier = {
+				factor = 0.1
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+		}
+	}
+	# Powerful & Realistic Orbital Bombardments
+	option = {
+		name = "orbital_bombardment_full"
+		policy_flags = { orbital_bombardment_indiscriminate orbital_bombardment_full }
+		potential = {
+			prob_forced_armageddon_bombardment = no
+			OR = {
+				has_country_flag = prob_enable_full_bombardment
+				has_country_flag = prob_enable_armageddon_bombardment
+				AND = {
+					is_pacifist = no
+					OR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_militarist = yes
+						is_xenophobe = yes
+						has_tradition = tr_supremacy_finish # tr_supremacy_adopt
+						AND = {
+							has_ascension_perk = ap_become_the_crisis
+							has_menace_perk = menp_death_from_above
+						}
+					}
+				}
+			}
+			has_global_flag = prob_global_flag
+		}
+		valid = { is_pacifist = no }
+		AI_weight = {
+			weight = 3
+			modifier = {
+				factor = 0.1
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+		}
+	}
+	# Vanilla
+	option = {
+		name = "orbital_bombardment_armageddon"
+		in_breach_of = {
+			{
+				key = resolution_rulesofwar_independent_tribunals
+			}
+		}
+		potential = {
+			OR = {
+				has_civic = civic_fanatic_purifiers
+				has_civic = civic_machine_terminator
+				# ZOFE
+				is_country_type = ascended_empire
+				# Civics Expanded
+				has_valid_civic = civic_bringers_of_death
+				# Powerful & Realistic Orbital Bombardments
+				AND = {
+					has_global_flag = prob_global_flag
+					OR = {
+						has_country_flag = prob_enable_armageddon_bombardment
+						prob_forced_armageddon_bombardment = yes
+						AND = {
+							has_ascension_perk = ap_become_the_crisis
+							has_menace_perk = menp_death_from_above
+						}
+					}
+				}
+			}
+		}
+
+		policy_flags = {
+			orbital_bombardment_armageddon
+		}
+		modifier = {}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_civic = civic_fanatic_purifiers
+					has_civic = civic_machine_terminator
+					has_ascension_perk = ap_become_the_crisis
+					# ZOFE
+					has_valid_civic = civic_galactic_superpower
+				}
+			}
+			# Powerful & Realistic Orbital Bombardments
+			modifier = {
+				factor = 10
+				has_global_flag = prob_global_flag
+				prob_forced_armageddon_bombardment = yes
+			}
+		}
+	}
+	# Gigastructural Engineering & More
+	option = {
+		name = "orbital_bombardment_redtoxin"
+		in_breach_of = {
+			{
+				key = resolution_rulesofwar_independent_tribunals
+			}
+		}
+		potential = {
+			has_global_flag = gigastructures_enabled
+			OR = {
+				ehof_default_country = yes
+				is_country_type_with_subjects = yes
+				is_country_type = vol
+			}
+		}
+		prerequisites = { tech_scourge_deployment }
+		policy_flags = { orbital_bombardment_redtoxin }
+		valid = {
+			NOR = {
+				is_pacifist = yes
+				# Ethics and Civics Classic
+				has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				# Ethics and Civics Alternative - Redux
+				has_valid_civic = "civic_xeno_militarist"
+				# Stellaris Evolved
+				has_valid_civic = "civic_peacekeepers"
+			}
+		}
+	}
+}
+
+# interference
+# enlightenment
+# resettlement
+# appropriation
+# leader_enhancement
+# first_contact_protocol
+
+border_policy = {
+	potential = {
+		always = yes
+	}
+	option = {
+		name = "border_policy_open"
+		policy_flags = {
+			border_policy_open
+		}
+		valid = {
+			merg_is_default_empire = yes
+			NOR = {
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_fanatic_purifiers
+				# Ethics and Civics mods but not Redux
+                AND = {
+					OR = {
+                    	has_global_flag = cultural_overhaul_active # Classics and Bug Branch
+						has_global_flag = stellarisevolved
+					}
+                    NOT = { has_global_flag = cultural_overhaul_redux_active }
+                    has_valid_civic = civic_inwards_perfection
+                }
+				# Espionage Extended
+				has_valid_civic = civic_shadow_state
+				# ACOT
+				is_country_type = original_empire_active
+			}
+		}
+	}
+	option = {
+		name = "border_policy_closed"
+
+		policy_flags = {
+			border_policy_closed
+		}
+		modifier = {}
+
+		valid = {
+			always = yes
+		}
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				AND = {
+					is_megacorp = yes # More Authorities
+					# Espionage Extended
+					NOT = { has_valid_civic = civic_shadow_state }
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				NOR = {
+					has_ai_personality_behaviour = isolationist
+					has_ai_personality_behaviour = attack_neutrals
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = no
+				is_xenophone = no
+				# Ethics and Civics Alternative - Redux
+				NOT = {
+					has_crisis_level = crisis_level_5
+				}
+			}
+			modifier = {
+				factor = 10
+				has_crisis_level = crisis_level_5
+			}
+		}
+	}
+}
+
+# food_policy
+# food_policy_gestalt
+# economic_policy
+# trade_policy
+# drone_policy
+# artificial_intelligence_policy
+# robot_pop_policy
+# pre_sapients
+# refugees
+# population_controls
+# slavery
+# purge

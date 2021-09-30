@@ -1,0 +1,18 @@
+namespace = merg
+
+event = {
+	id = merg.1
+	hide_window = yes
+    is_triggered_only = yes
+	
+	trigger = { NOT = { has_global_flag = merged_rules } }
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT =  { has_global_flag = merged_rules }
+			}
+			set_global_flag = merged_rules
+		}
+	}
+}
