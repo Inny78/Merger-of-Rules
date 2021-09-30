@@ -1280,6 +1280,17 @@ war_philosophy = {
 				has_ethic = ethic_fanatic_egalitarian
 				has_ethic = ethic_militarist
 			}
+			# Ariphaos patch
+			modifier = {
+				factor = 10
+				has_valid_ai_personality = yes
+				is_ai = yes
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+					is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+				}
+			}
 		}
 	}
 	option = {
@@ -1364,13 +1375,10 @@ orbital_bombardment = {
 			orbital_bombardment_selective
 		}
 		potential = {
-			OR = {
-				NOT= { has_global_flag = prob_global_flag }
-				# Powerful & Realistic Orbital Bombardments
-				AND = {
-					has_global_flag = prob_global_flag
-					prob_forced_armageddon_bombardment = no
-				}
+			# Powerful & Realistic Orbital Bombardments
+			NAND = {
+				has_global_flag = prob_global_flag
+				prob_forced_armageddon_bombardment = yes
 			}
 		}
 		AI_weight = {
