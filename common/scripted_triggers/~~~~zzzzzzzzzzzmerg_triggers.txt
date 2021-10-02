@@ -156,6 +156,18 @@ is_organic_species = {
 			is_archetype = half_aberration
 			is_archetype = half_perfect
 			is_archetype = half_amalgamated
+			# Aquatic Portraits mod
+			is_archetype = JAYPEES_AQUATIC
+			is_archetype = JAYPEES_BRAIN
+			is_archetype = JAYPEES_CRAB
+			is_archetype = JAYPEES_DOLPHIN
+			is_archetype = JAYPEES_DUMBO
+			is_archetype = JAYPEES_ELESQUID
+			is_archetype = JAYPEES_FISH
+			is_archetype = JAYPEES_HAIRTENTACLE
+			is_archetype = JAYPEES_SEAL
+			is_archetype = JAYPEES_SQUID
+			is_archetype = JAYPEES_TURTLEHORSE
 		}
 	}
 }
