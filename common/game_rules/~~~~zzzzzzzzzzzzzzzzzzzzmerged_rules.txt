@@ -1682,13 +1682,11 @@ can_colonize_planet = {
 
 #Root = country
 #This = planet
-can_colonize_outside_borders = {
-	root = {
-		OR = {
-			is_country_type = "ev_leviathans_crisis"
-		}
-	}
-}
+#can_colonize_outside_borders = {
+#	root.owner = {
+#		is_country_type = "ev_leviathans_crisis"
+#	}
+#}
 
 #Root = country
 #This = planet
