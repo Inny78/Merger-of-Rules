@@ -23,11 +23,8 @@ merg_is_crackable_planet = {
 		is_planet_class = pc_sulfur
 		is_planet_class = pc_technoorganic
 		is_planet_class = pc_volcanic
-		# Gigastructures
-		is_planet_class = pc_ll_torrid
-		is_planet_class = pc_ll_temperate
-		is_planet_class = pc_ll_foggy
-		is_planet_class = pc_habitable_gas_giant
+		# Gigastructural Engineering & More
+		is_planet_class = pc_red_toxic
 	}
 }
 
@@ -109,29 +106,13 @@ merg_is_forbidden_target = {
 	OR = {
 		# Merger of Rules
 		has_planet_flag = merg_forbidden_target # add this to your planet to dynamically exclude it.
-		has_star_flag = lcluster1 # Don't blow up Terminal Egress
-		# Gigastructures
-		is_planet_class = pc_birch
-		is_planet_class = pc_giga_empty_space
-		is_planet_class = pc_core_black_hole
-		is_planet_class = pc_core_quasar
-		# Ancient Empires
-		is_planet_class = pc_ag_void_star
-		# ACOT
-		is_planet_class = pc_invisible_star
-		# History of the Lost Empire
-		is_planet_class = pc_empty_space
+		merg_is_dense_star = yes
+		merg_is_empty_space = yes
 		# MEM
-		is_planet_class = pc_mem_micro_black_hole
 		is_planet_class = pc_mem_synthetic_sun
-		# Hypothetical Stars
-		is_planet_class = pc_white_hole
-		# Not updated yet, keeping it for later
-		# Some Events of Outside Cluster
-		# is_planet_class = pc_star_void_dummy_01
-		# Wild Space
-		# is_planet_class = pc_dn_star
-		# is_planet_class = pc_WS_barycenter
+		# APSR - These should be targetable imho but it's the author's choice
+		is_planet_class = pc_apsr_ancient
+		is_planet_class = pc_apsr_unique
 	}
 }
 
@@ -141,14 +122,16 @@ merg_is_dense_star = {
 		is_planet_class = pc_black_hole
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
-		# Gigastructures
+		# Gigastructural Engineering & More
 		is_planet_class = pc_birch
-		is_planet_class = pc_giga_empty_space
 		is_planet_class = pc_core_black_hole
 		is_planet_class = pc_core_quasar
 		is_planet_class = pc_black_hole_giga
 		is_planet_class = pc_ehof_black_hole
 		is_planet_class = pc_pouchkinn_black_hole
+		is_planet_class = pc_whc_star
+		is_planet_class = pc_wh_star
+		is_planet_class = pc_whdyson_star
 		# Hypothetical Stars
 		is_planet_class = pc_white_hole
 		is_planet_class = pc_strange_star
@@ -157,9 +140,27 @@ merg_is_dense_star = {
 		is_planet_class = pc_magnetar
 		is_planet_class = pc_microquasar_1
 		is_planet_class = pc_microquasar_2
-		# APSR: Anomalies, Planetary and Space Resources
-		is_planet_class = pc_apsr_ancient
-		is_planet_class = pc_apsr_unique
+		# MEM
+		is_planet_class = pc_mem_micro_black_hole
+	}
+}
+
+merg_is_empty_space = {
+	OR = {
+		# Gigastructural Engineering & More
+		is_planet_class = giga_hidden
+		# Ancient Empires
+		is_planet_class = pc_ag_void_star
+		# ACOT
+		is_planet_class = pc_invisible_star
+		# History of the Lost Empire
+		is_planet_class = pc_empty_space
+		# Not updated yet, keeping it for later
+		# Some Events of Outside Cluster
+		# is_planet_class = pc_star_void_dummy_01
+		# Wild Space
+		# is_planet_class = pc_dn_star
+		# is_planet_class = pc_WS_barycenter
 	}
 }
 

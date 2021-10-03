@@ -79,6 +79,11 @@ has_advanced_fort = {
 	}
 }
 
+# Overwriting this for other mods to use my trigger instead.
+is_zofe_compatible = {
+	merg_is_default_empire = yes
+}
+
 # This trigger doesn't exists yet, it's just a concept for potential future use in GPM.
 # It adds to is_megacorp all megacorp authorities that exist outside of the trigger as they use their own rules.
 # gpm_is_megacorp = {
