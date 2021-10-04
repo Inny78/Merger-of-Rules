@@ -1383,6 +1383,7 @@ subject_can_expand = {
 #This = country, target
 #This rule is a condition for taking hostile actions towards neutral targets. Such as landing troops or attacking their fleets
 can_take_hostile_actions = {
+	# Vanilia
 	if = {
 		limit = {
 			root = {
@@ -1577,6 +1578,58 @@ can_take_hostile_actions = {
 		}
 		always = no
 	}
+	# Some Events of Outside Cluster
+	else_if = {
+		limit = {
+			OR = {
+				AND = {
+					root = { has_country_flag = nep_gaia_assist_war }
+					has_country_flag = nep_highlander_country
+				}
+				AND = {
+					root = { has_country_flag = nep_highlander_assist_war }
+					has_country_flag = nep_gaia_country
+				}
+			}
+		}
+		always = yes
+	}
+	else_if = {
+		# SEoOC_side_story
+		limit = {
+			root = { is_ai = no }
+			OR = {
+				AND = {
+					root = { has_country_flag = nep_gaia_assist_war }
+					has_country_flag = nep_gaia_country
+				}
+				AND = {
+					has_country_flag = nep_gaia_assist_war
+					root = { has_country_flag = nep_gaia_country }
+				}
+				AND = {
+					root = { has_country_flag = nep_highlander_assist_war }
+					has_country_flag = nep_highlander_country
+				}
+				AND = {
+					has_country_flag = nep_highlander_assist_war
+					root = { has_country_flag = nep_highlander_country }
+				}
+				AND = {
+					has_country_flag = nep_gpc_country
+					root = { has_country_flag = nep_caravaneer_fleet_country }
+				}
+				AND = {
+					root = { has_country_flag = nep_gpc_country }
+					has_country_flag = nep_caravaneer_fleet_country
+				}
+			}
+		}
+		custom_tooltip = {
+			text = "CAN_TAKE_HOSTILE_ACTION_NEP_GAIA"
+			always = no
+		}
+	}
 	# Vanilla
 	else = {
 		always = yes
@@ -1683,8 +1736,9 @@ can_colonize_planet = {
 #Root = country
 #This = planet
 #can_colonize_outside_borders = {
-#	root.owner = {
-#		is_country_type = "ev_leviathans_crisis"
+#	exists = root
+#	root = {
+#		is_country_type = ev_leviathans_crisis
 #	}
 #}
 
@@ -2660,6 +2714,36 @@ can_jump_drive = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			exists = solar_system
+			solar_system = { has_star_flag = nep_Scrus_cluster }
+		}
+		custom_tooltip = {
+			text = "CAN_NOT_JUMP_WHEN_IN_SCRUS"
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
+			exists = solar_system
+			solar_system = {
+				OR = {
+					has_star_flag = nep_whitegoo_1
+					has_star_flag = nep_whitegoo_2
+					has_star_flag = nep_whitegoo_3
+				}
+			}
+			owner = { NOT = { has_technology = tech_nep_whitegoo_3_2 } }
+		}
+		custom_tooltip = {
+			text = "CAN_NOT_JUMP_IN_WHITEGOO"
+			always = no
+		}
+	}
+	else = {
+		always = yes
+	}
 }
 
 # this = country
@@ -2744,7 +2828,7 @@ system_blocks_sensors = {
 # This = system being targeted
 can_enter_system_by_jump = {
 	custom_tooltip = {
-		success_text = "debug: can jump"
+		# success_text = "debug: can jump"
 		fail_text = cannot_jump_to_system
 
 		# Sealed system
@@ -2791,6 +2875,16 @@ can_enter_system_by_jump = {
 					urmazin_system = yes
 					everchanging_system = yes
 					katzen_jump_blocked_system = yes
+				}
+			}
+			# Some Events of Outside Cluster
+			has_star_flag = nep_Krahen_cluster
+			has_star_flag = nep_Scrus_cluster
+			AND = {
+				has_global_flag = nep_not_pass_Aemethms
+				OR = {
+					has_star_flag = nep_dragon_system
+					has_star_flag = nep_heptagram_cluster
 				}
 			}
 		}
