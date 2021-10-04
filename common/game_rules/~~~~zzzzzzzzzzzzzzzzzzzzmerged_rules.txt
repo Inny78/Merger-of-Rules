@@ -2875,6 +2875,7 @@ can_enter_system_by_jump = {
 					urmazin_system = yes
 					everchanging_system = yes
 					katzen_jump_blocked_system = yes
+					has_star_flag = maginot_anti_jump_star
 				}
 			}
 			# Some Events of Outside Cluster
