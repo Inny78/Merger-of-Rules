@@ -65,15 +65,15 @@ merg_is_fallen_empire = {
 		is_country_type = fallen_empire
 		# ZOFE
 		is_country_type = lost_empire
+		# The Empty Vagrant
+		is_country_type = fallen_empire_ev
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_fallen_empire
 		# Human Fallen Empire
 		#AND = {
 		#	is_country_type = human_fallen_empire
 		#	NOT = { has_civic = hfe_civic_egypt_fury }
 		#}
-		# The Empty Vagrant
-		is_country_type = fallen_empire_ev
-		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_fallen_empire
 	}
 }
 
@@ -86,13 +86,13 @@ merg_is_awakened_fe = {
 		is_country_type = awakened_return_kuat_empire
 		# A Deadly Tempest
 		is_country_type = awakened_gate_builders
+		# ZOFE
+		is_country_type = ascended_empire
 		# Human Fallen Empire
 		#AND = {
 		#	is_country_type = human_fallen_empire
 		#	has_civic = hfe_civic_egypt_fury
 		#}
-		# ZOFE
-		is_country_type = ascended_empire
 	}
 }
 
@@ -155,9 +155,9 @@ merg_is_empty_space = {
 		is_planet_class = pc_invisible_star
 		# History of the Lost Empire
 		is_planet_class = pc_empty_space
-		# Not updated yet, keeping it for later
 		# Some Events of Outside Cluster
-		# is_planet_class = pc_star_void_dummy_01
+		is_planet_class = pc_star_void_dummy_01
+		# Not updated yet, keeping it for later
 		# Wild Space
 		# is_planet_class = pc_dn_star
 		# is_planet_class = pc_WS_barycenter
