@@ -1693,47 +1693,8 @@ can_declare_war = {
 	}
 }
 
-#Root = country
-#This = planet
-can_colonize_planet = {
-	hidden_trigger = {
-		if = {
-			limit = { NOT = { has_global_flag = stellarisevolved } }
-		}
-		always = yes
-	}
-	# Stellaris Evolved
-	custom_tooltip = {
-		text = "This is our target!"
-		fail_text = "Must be the exocolonist main target"
-		#always = yes
-		exists = root
-		root = { 
-			OR = {
-				NOT = {
-					is_country_type = default_exocolonist
-				}
-				AND = {
-					is_country_type = default_exocolonist
-					OR = {
-						prevprev = {
-							has_planet_flag = exocolonist_forced_destination
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-#Root = country
-#This = planet
-#can_colonize_outside_borders = {
-#	exists = root
-#	root = {
-#		is_country_type = ev_leviathans_crisis
-#	}
-#}
+# can_colonize_planet
+# can_colonize_outside_borders
 
 #Root = country
 #This = planet
