@@ -3460,9 +3460,12 @@ is_criminal_syndicate_rule = {
 				has_valid_civic = civic_ev_criminal_ship
 			}
 			# Stellaris Evolved
-			AND = {
-				has_global_flag = stellarisevolved
-				tec_is_parasite_hivemind = no
+			OR = {
+				NOT = { has_global_flag = stellarisevolved }
+				AND = {
+					has_global_flag = stellarisevolved
+					tec_is_parasite_hivemind = no
+				}
 			}
 		}
 		AND = {
