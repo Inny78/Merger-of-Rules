@@ -36,13 +36,7 @@ can_add_claim = {
 	hidden_trigger = {
 		if = {
 			limit = {
-				root = {
-					NOR = {
-						merg_is_default_empire = yes
-						# ACOT
-						is_country_type = ascended_empire
-					}
-				}
+				root = { merg_is_default_empire = no }
 			}
 			always = yes
 		}
@@ -99,7 +93,6 @@ can_add_claim = {
 					is_country_type = fallen_empire
 					is_country_type = awakened_fallen_empire
 					# ACOT
-					is_country_type = ascended_empire
 					is_country_type = original_empire_active
 					is_country_type = sofe_light_seeker					
 				}
@@ -2102,7 +2095,11 @@ can_species_be_assembled = {
 				}
 			}
 			else = {
-				root = { has_building = building_clone_vats }
+				OR = {
+					root = { has_building = building_clone_vats }
+					# The DAL Species Mod
+					is_archetype = DATEALIVE
+				}
 			}
 		}
 		# Now for Stellaris Evolved
@@ -2123,7 +2120,6 @@ can_species_be_assembled = {
 				}
 			}
 		}
-
 	# Organic units
 		# Generic organic assembly rule
 		AND = {

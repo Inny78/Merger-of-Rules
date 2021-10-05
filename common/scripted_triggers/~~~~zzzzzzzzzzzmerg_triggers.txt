@@ -168,6 +168,10 @@ is_organic_species = {
 			is_archetype = JAYPEES_SEAL
 			is_archetype = JAYPEES_SQUID
 			is_archetype = JAYPEES_TURTLEHORSE
+			# The DAL Species Mod
+			is_archetype = DATEALIVE
+			# Nyto Species Events Pack
+			is_archetype = NYTO
 		}
 	}
 }

@@ -935,6 +935,64 @@ can_destroy_planet_with_PLANET_KILLER_SHROUDER = {
 	}
 }
 
+# # The DAL Species Mod
+can_destroy_planet_with_PLANET_KILLER_EDEN = {
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		is_a_habitable_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+		}
+	}
+	custom_tooltip = {
+		fail_text = no_has_dal_war_in_eden
+		NOR = {
+			has_modifier = planet_dal_war_in_eden
+		}
+	}
+	custom_tooltip = {
+		#success_text = "is at war with player"
+		fail_text = is_not_hostile_or_primitive
+		OR = {
+			planet_is_hostile = yes
+			AND = {
+				exists = owner
+				owner = { is_country_type = primitive }
+			}
+			AND = {
+				exists = owner
+				owner = { is_same_value = from.owner }
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_country_type = primitive }
+		}
+		custom_tooltip = {
+			fail_text = primitives_not_in_borders
+			exists = space_owner
+			space_owner = { is_same_value = from.owner }
+		}
+	}
+	custom_tooltip = {
+		fail_text = no_dal_assimilatable_pops
+		any_owned_pop = {
+			NOR = {
+				has_trait = trait_DAL_spirit_1
+				has_trait = trait_DAL_spirit_2				
+			}
+		}
+	}
+}
+
 # Vanilla triggers
 is_a_planet = {
 	is_star = no

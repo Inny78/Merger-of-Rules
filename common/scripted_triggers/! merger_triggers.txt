@@ -40,6 +40,9 @@ merg_is_standard_empire = {
 		is_country_type = default_ev
 		is_country_type = fallen_empire_ev
 		is_country_type = awakened_fallen_empire_ev
+		# Stellaris Evolved
+		is_country_type = default_exocolonist
+		is_country_type = default_exocolonist_ai
 		# Human Fallen Empire
 		# is_country_type = human_fallen_empire
 		# is_country_type = hfe_pirate
@@ -56,6 +59,9 @@ merg_is_default_empire = {
 		is_country_type = lost_empire
 		# The Empty Vagrant
 		is_country_type = default_ev
+		# Stellaris Evolved
+		is_country_type = default_exocolonist
+		is_country_type = default_exocolonist_ai
 	}
 }
 
