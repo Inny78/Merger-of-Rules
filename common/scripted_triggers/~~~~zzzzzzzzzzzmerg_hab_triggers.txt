@@ -186,10 +186,10 @@ has_upgraded_capital = {
 			custom_tooltip = {
 				fail_text = "requires_building_machine_capital"
 				OR = {
-					has_building = building_tec_old_machine_major_capital 
-					has_building = building_tec_old_machine_system_capital 
+					has_building = building_tec_old_machine_capital
+					has_building = building_tec_old_machine_major_capital
+					has_building = building_tec_old_machine_system_capital
 					has_building = building_tec_old_machine_mega_capital
-
 					has_building = building_tec_old_machine_imperial_capital
 				}
 			}
@@ -203,8 +203,8 @@ has_upgraded_capital = {
 					has_building = building_machine_system_capital
 					has_building = building_imperial_machine_capital
 					# ACOT
-					has_building = building_dm_ancient_control_center	
-					has_building = building_ae_ancient_control_center	
+					has_building = building_dm_ancient_control_center
+					has_building = building_ae_ancient_control_center
 					has_building = building_heaven_sanctuary
 					has_building = building_ancient_control_center
 					has_building = building_phanon_tower
