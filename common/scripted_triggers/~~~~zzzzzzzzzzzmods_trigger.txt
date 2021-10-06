@@ -55,11 +55,6 @@ ehof_default_country = {
 		is_country_type = lost_empire
 		# The Empty Vagrant
 		is_country_type = default_ev
-		is_country_type = fallen_empire_ev
-		is_country_type = awakened_fallen_empire_ev
-		# Human Fallen Empire
-		# is_country_type = human_fallen_empire
-		# is_country_type = hfe_pirate
 	}
 }
 
@@ -86,7 +81,7 @@ is_zofe_compatible = {
 
 # This trigger doesn't exists yet, it's just a concept for potential future use in GPM.
 # It adds to is_megacorp all megacorp authorities that exist outside of the trigger as they use their own rules.
-# gpm_is_megacorp = {
+# expanded_is_megacorp = {
 # 	OR = {
 # 		is_megacorp = yes
 # 		# Warship Girls R And MIST Species

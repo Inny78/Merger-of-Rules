@@ -44,8 +44,8 @@ merg_is_standard_empire = {
 		is_country_type = default_exocolonist
 		is_country_type = default_exocolonist_ai
 		# Human Fallen Empire
-		# is_country_type = human_fallen_empire
-		# is_country_type = hfe_pirate
+		is_country_type = human_fallen_empire
+		is_country_type = hfe_pirate
 	}
 }
 
@@ -76,10 +76,10 @@ merg_is_fallen_empire = {
 		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_fallen_empire
 		# Human Fallen Empire
-		#AND = {
-		#	is_country_type = human_fallen_empire
-		#	NOT = { has_civic = hfe_civic_egypt_fury }
-		#}
+		AND = {
+			is_country_type = human_fallen_empire
+			NOT = { has_civic = hfe_civic_egypt_fury }
+		}
 	}
 }
 
@@ -95,10 +95,10 @@ merg_is_awakened_fe = {
 		# ZOFE
 		is_country_type = ascended_empire
 		# Human Fallen Empire
-		#AND = {
-		#	is_country_type = human_fallen_empire
-		#	has_civic = hfe_civic_egypt_fury
-		#}
+		AND = {
+			is_country_type = human_fallen_empire
+			has_civic = hfe_civic_egypt_fury
+		}
 	}
 }
 
@@ -116,7 +116,7 @@ merg_is_forbidden_target = {
 		merg_is_empty_space = yes
 		# MEM
 		is_planet_class = pc_mem_synthetic_sun
-		# APSR - These should be targetable imho but it's the author's choice
+		# APSR
 		is_planet_class = pc_apsr_ancient
 		is_planet_class = pc_apsr_unique
 	}

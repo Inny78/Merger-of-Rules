@@ -1694,7 +1694,26 @@ can_declare_war = {
 }
 
 # can_colonize_planet
-# can_colonize_outside_borders
+
+#Root = country
+#This = planet
+can_colonize_outside_borders = {
+	exists = root
+	root = {
+		OR = {
+			# Human Fallen Empires
+			is_country_type = hfe_features_exodus
+			# The Empty Vagrant
+			is_country_type = ev_leviathans_crisis
+		}
+	}
+	exists = solar_system
+	solar_system = {
+		not = {
+			exists = owner
+		}
+	}
+}
 
 #Root = country
 #This = planet
@@ -1915,6 +1934,8 @@ can_species_procreate = {
 		}
 		# Girls Frontline
 		has_trait = trait_doll
+		# Human Fallen Empires
+		has_trait = hfe_species_trait_brainworm
 	}
 	NAND = {
 		root = { has_modifier = slave_colony }
@@ -2332,6 +2353,8 @@ can_orbital_bombard = {
 				is_country_type = mem_ancestor_guardian
 				# Solar Storm
 				is_country_type = abyssal_host_invaders_type
+				# Human Fallen Empires
+				is_country_type = human_fallen_empire
 			}
 		}
 		root.OWNER = {
@@ -2389,6 +2412,8 @@ can_orbital_bombard = {
 				is_country_type = mem_ancestor_guardian
 				# Solar Storm
 				is_country_type = abyssal_host_invaders_type
+				# Human Fallen Empires
+				is_country_type = human_fallen_empire
 			}
 		}
 		AND = {
@@ -3013,6 +3038,8 @@ can_build_branch_offices = {
 			has_authority = auth_azur_lane_K
 			# Girls Frontline
 			has_civic = civic_gk
+			# Human Fallen Empires
+			is_country_type = hfe_pirate
 		}
 	}
 	# Stellaris Evolved
@@ -3170,6 +3197,11 @@ can_build_branch_office_on_planet = {
 					}
 					is_same_value = root
 				}
+			}
+			# Human Fallen Empires
+			root = {
+				is_country_type = hfe_pirate
+				is_forced_friendly = prev.owner
 			}
 			# Vanilla
 			# allow branch offices in subsidiaries and vice versa
@@ -3698,7 +3730,42 @@ can_be_part_of_galactic_council = {
 # is_allowed_to_be_advanced_empire
 # has_enough_pops_for_necrophage_on_planet
 
-# can_pop_auto_migrate
+# Root = current planet
+# This = pop
+# Purge, Sapience, Migration Controls policy (ignored by Gestalts and Synths), and target habitability are checked in code.
+can_pop_auto_migrate = {
+	or = {
+		is_unemployed = yes
+		# z Expanded Traits, Civics, Pops, and More
+		has_job = grunt
+		has_job = slave_toiler
+		# Human Fallen Empire
+		AND = {
+			has_global_flag = hfe_installed
+			hfe_trigger_unemployed_auto_migrate = yes
+		}
+	}
+	is_being_assimilated = no
+	OR = {
+		AND = {
+			is_shackled_robot = no
+			is_enslaved = no
+		}
+		planet = {
+			has_building = building_slave_processing
+		}
+		# Human Fallen Empire
+		AND = {
+			has_global_flag = hfe_installed
+			owner = {
+				or = {
+					is_country_type = hfe_pirate
+					hfe_trigger_is_human_fallen = yes
+				}
+			}
+		}
+	}
+}
 
 # This = planet
 # Checked before can_pop_auto_migrate to save performance
@@ -3707,6 +3774,8 @@ can_planet_auto_migrate = {
 	OR = {
 		colony_age > 60
 		is_capital = yes # Don't break Doomsday!
+		# z Expanded Traits, Civics, Pops, and More
+		has_planet_flag = void_dweller_habitat # Don't break Void Dwellers!
 		# Planetary Diversity - Habitats
 		has_planet_flag = pd_habitat_start_luna
 		has_planet_flag = pd_habitat_start_mars
