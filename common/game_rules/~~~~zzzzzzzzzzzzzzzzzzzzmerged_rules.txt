@@ -1160,6 +1160,8 @@ can_generate_leader_from_pop = {
 		# Expanded Events / Expanded Traits, Civics, Pops, and More
 		has_trait = trait_memorex_comatos
 		has_trait = trait_infested_basic
+		# Holofrixit Revisited
+		has_trait = trait_holodrone
 	}
 	OR = {
 		is_robot_pop = no
@@ -1170,6 +1172,19 @@ can_generate_leader_from_pop = {
 				is_mechanical_empire = yes
 				# Girls Frontline
 				root = { has_technology = tech_mind_plus }
+			}
+		}
+		# Holofrixit Revisited
+		ROOT = {
+			has_origin = origin_holofrixit
+			PREV.species = {
+				OR = {
+					NOT = { has_trait = trait_holofrixit }
+					has_trait = trait_holooverseer
+					has_trait = trait_hologanglion
+					# has_trait = trait_holowarrior
+					# has_trait = trait_holowarrior_2
+				}
 			}
 		}
 	}
@@ -1238,6 +1253,16 @@ can_generate_military_leader_from_pop = {
 				is_mechanical_empire = yes
 				# Girls Frontline
 				root = { has_technology = tech_mind_plus }
+				# Holofrixit Revisited
+				AND = {
+					has_origin = origin_holofrixit
+					PREV.species = {
+						OR = {
+							has_trait = trait_holowarrior
+							has_trait = trait_holowarrior_2
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1936,6 +1961,8 @@ can_species_procreate = {
 		has_trait = trait_doll
 		# Human Fallen Empires
 		has_trait = hfe_species_trait_brainworm
+		# Holofrixit Revisited
+		has_trait = trait_hologanglion
 	}
 	NAND = {
 		root = { has_modifier = slave_colony }
@@ -1995,6 +2022,7 @@ can_species_procreate = {
 # Root = Planet
 can_species_be_assembled = {
 	is_sapient = yes
+	NOT = { has_trait = trait_holodrone } # Holofrixit Revisited
 	OR = {
 		# Robots
 		AND = {
@@ -2442,6 +2470,11 @@ can_orbital_bombard = {
 		# The Empty Vagrant
 		root.OWNER = {
 			is_country_type = ev_leviathans_crisis
+		}
+		# Eldar Revisited
+		AND = {
+			root.owner = { is_country_type = shroud_spirits }
+			from = { has_planet_flag = is_shroud_attack_planet_target }
 		}
 	}
 }
@@ -3734,7 +3767,7 @@ can_be_part_of_galactic_council = {
 # This = pop
 # Purge, Sapience, Migration Controls policy (ignored by Gestalts and Synths), and target habitability are checked in code.
 can_pop_auto_migrate = {
-	or = {
+	OR = {
 		is_unemployed = yes
 		# z Expanded Traits, Civics, Pops, and More
 		has_job = grunt
