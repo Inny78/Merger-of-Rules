@@ -2855,7 +2855,7 @@ can_enter_system_by_jump = {
 			}
 		}
 
-		# L-Cluster/Compound_Cluster
+		# Clusters and forbidden systems
 		NOR = {
 			has_star_flag = lcluster
 			# Ancient Empire
