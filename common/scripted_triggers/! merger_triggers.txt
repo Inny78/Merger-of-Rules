@@ -36,27 +36,35 @@ merg_is_standard_empire = {
 		# ZOFE
 		AND = {
 			has_global_flag = zofe_activated
-			is_country_type = ascended_empire
-			is_country_type = lost_empire
+			OR = {
+				is_country_type = ascended_empire
+				is_country_type = lost_empire
+			}
 		}
 		# The Empty Vagrant
 		AND = {
 			has_global_flag = enable_empty_vagrant_mod
-			is_country_type = default_ev
-			is_country_type = fallen_empire_ev
-			is_country_type = awakened_fallen_empire_ev
+			OR = {
+				is_country_type = default_ev
+				is_country_type = fallen_empire_ev
+				is_country_type = awakened_fallen_empire_ev
+			}
 		}
 		# Stellaris Evolved
 		AND = {
 			has_global_flag = stellarisevolved
-			is_country_type = default_exocolonist
-			is_country_type = default_exocolonist_ai
+			OR = {
+				is_country_type = default_exocolonist
+				is_country_type = default_exocolonist_ai
+			}
 		}
 		# Human Fallen Empire
 		AND = {
 			has_global_flag = hfe_installed
-			is_country_type = human_fallen_empire
-			is_country_type = hfe_pirate
+			OR = {
+				is_country_type = human_fallen_empire
+				is_country_type = hfe_pirate
+			}
 		}
 	}
 }
@@ -69,8 +77,10 @@ merg_is_default_empire = {
 		# ZOFE
 		AND = {
 			has_global_flag = zofe_activated
-			is_country_type = ascended_empire
-			is_country_type = lost_empire
+			OR = {
+				is_country_type = ascended_empire
+				is_country_type = lost_empire
+			}
 		}
 		# The Empty Vagrant
 		AND = {
@@ -80,8 +90,10 @@ merg_is_default_empire = {
 		# Stellaris Evolved
 		AND = {
 			has_global_flag = stellarisevolved
-			is_country_type = default_exocolonist
-			is_country_type = default_exocolonist_ai
+			OR = {
+				is_country_type = default_exocolonist
+				is_country_type = default_exocolonist_ai
+			}
 		}
 	}
 }
@@ -121,8 +133,10 @@ merg_is_awakened_fe = {
 		# SW:KUAT ANCIENT EMPIRE
 		AND = {
 			has_global_flag = install_kuat_mod
-			is_country_type = kuat_awakened_fallen_empire
-			is_country_type = awakened_return_kuat_empire
+			OR = {
+				is_country_type = kuat_awakened_fallen_empire
+				is_country_type = awakened_return_kuat_empire
+			}
 		}
 		# A Deadly Tempest
 		AND = {
