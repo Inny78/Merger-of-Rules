@@ -34,18 +34,30 @@ merg_is_standard_empire = {
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		AND = {
+			has_global_flag = zofe_activated
+			is_country_type = ascended_empire
+			is_country_type = lost_empire
+		}
 		# The Empty Vagrant
-		is_country_type = default_ev
-		is_country_type = fallen_empire_ev
-		is_country_type = awakened_fallen_empire_ev
+		AND = {
+			has_global_flag = enable_empty_vagrant_mod
+			is_country_type = default_ev
+			is_country_type = fallen_empire_ev
+			is_country_type = awakened_fallen_empire_ev
+		}
 		# Stellaris Evolved
-		is_country_type = default_exocolonist
-		is_country_type = default_exocolonist_ai
+		AND = {
+			has_global_flag = stellarisevolved
+			is_country_type = default_exocolonist
+			is_country_type = default_exocolonist_ai
+		}
 		# Human Fallen Empire
-		is_country_type = human_fallen_empire
-		is_country_type = hfe_pirate
+		AND = {
+			has_global_flag = hfe_installed
+			is_country_type = human_fallen_empire
+			is_country_type = hfe_pirate
+		}
 	}
 }
 
@@ -55,13 +67,22 @@ merg_is_default_empire = {
 	OR = {
 		is_country_type = default
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		AND = {
+			has_global_flag = zofe_activated
+			is_country_type = ascended_empire
+			is_country_type = lost_empire
+		}
 		# The Empty Vagrant
-		is_country_type = default_ev
+		AND = {
+			has_global_flag = enable_empty_vagrant_mod
+			is_country_type = default_ev
+		}
 		# Stellaris Evolved
-		is_country_type = default_exocolonist
-		is_country_type = default_exocolonist_ai
+		AND = {
+			has_global_flag = stellarisevolved
+			is_country_type = default_exocolonist
+			is_country_type = default_exocolonist_ai
+		}
 	}
 }
 
@@ -70,13 +91,23 @@ merg_is_fallen_empire = {
 	OR = {
 		is_country_type = fallen_empire
 		# ZOFE
-		is_country_type = lost_empire
+		AND = {
+			has_global_flag = zofe_activated
+			is_country_type = lost_empire
+		}
 		# The Empty Vagrant
-		is_country_type = fallen_empire_ev
+		AND = {
+			has_global_flag = enable_empty_vagrant_mod
+			is_country_type = fallen_empire_ev
+		}
 		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_fallen_empire
+		AND = {
+			has_global_flag = install_kuat_mod
+			is_country_type = kuat_fallen_empire
+		}
 		# Human Fallen Empire
 		AND = {
+			has_global_flag = hfe_installed
 			is_country_type = human_fallen_empire
 			NOT = { has_civic = hfe_civic_egypt_fury }
 		}
@@ -88,12 +119,21 @@ merg_is_awakened_fe = {
 	OR = {
 		is_country_type = awakened_fallen_empire
 		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_awakened_fallen_empire
-		is_country_type = awakened_return_kuat_empire
+		AND = {
+			has_global_flag = install_kuat_mod
+			is_country_type = kuat_awakened_fallen_empire
+			is_country_type = awakened_return_kuat_empire
+		}
 		# A Deadly Tempest
-		is_country_type = awakened_gate_builders
+		AND = {
+			has_global_flag = a_deadly_tempest_mod_active
+			is_country_type = awakened_gate_builders
+		}
 		# ZOFE
-		is_country_type = ascended_empire
+		AND = {
+			has_global_flag = zofe_activated
+			is_country_type = ascended_empire
+		}
 		# Human Fallen Empire
 		AND = {
 			is_country_type = human_fallen_empire
