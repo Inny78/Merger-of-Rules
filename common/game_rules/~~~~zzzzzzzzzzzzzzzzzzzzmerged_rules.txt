@@ -2372,17 +2372,30 @@ can_orbital_bombard = {
 				is_country_type = void_lifeforms_1
 				is_country_type = void_lifeforms_2
 				# Star Wars: Kuat Ancient Empire
-				is_country_type = kuat_fleet
-				is_country_type = awakened_return_kuat_empire				
+				AND = {
+					has_global_flag = install_kuat_mod
+					OR = {
+						is_country_type = kuat_fleet
+						is_country_type = awakened_return_kuat_empire
+					}
+				}
 				# Gigastructural Engineering & More
-				is_country_type = katzenartig_imperium
-				is_country_type = compound_empire
+				AND = {
+					has_global_flag = gigastructures_enabled
+					OR = {
+						is_country_type = katzenartig_imperium
+						is_country_type = compound_empire
+					}
+				}
 				# LEX
 				is_country_type = mem_ancestor_guardian
 				# Solar Storm
 				is_country_type = abyssal_host_invaders_type
 				# Human Fallen Empires
-				is_country_type = human_fallen_empire
+				AND = {
+					has_global_flag = hfe_installed
+					is_country_type = human_fallen_empire
+				}
 			}
 		}
 		root.OWNER = {

@@ -150,6 +150,7 @@ merg_is_awakened_fe = {
 		}
 		# Human Fallen Empire
 		AND = {
+			has_global_flag = hfe_installed
 			is_country_type = human_fallen_empire
 			has_civic = hfe_civic_egypt_fury
 		}

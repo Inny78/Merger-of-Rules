@@ -1739,7 +1739,7 @@ border_policy = {
 			modifier = {
 				factor = 0
 				has_valid_ai_personality = no
-				is_xenophone = no
+				is_xenophobe = no
 				# Ethics and Civics Alternative - Redux
 				NOT = {
 					has_crisis_level = crisis_level_5
