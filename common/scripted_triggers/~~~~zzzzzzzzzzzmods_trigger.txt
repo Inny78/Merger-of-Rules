@@ -51,10 +51,18 @@ ehof_default_country = {
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		AND = {
+			has_global_flag = zofe_activated
+			OR = {
+				is_country_type = ascended_empire
+				is_country_type = lost_empire
+			}
+		}
 		# The Empty Vagrant
-		is_country_type = default_ev
+		AND = {
+			has_global_flag = enable_empty_vagrant_mod
+			is_country_type = default_ev
+		}
 	}
 }
 
