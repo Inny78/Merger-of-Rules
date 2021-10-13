@@ -2252,6 +2252,7 @@ can_species_be_assembled = {
             root.owner = {
                 has_policy_flag = tec_assembly_disallowed
             }
+		}
 		# Bioservants can only be assembled with bioservant facilities present
 		AND = {
 			has_global_flag = stellarisevolved
