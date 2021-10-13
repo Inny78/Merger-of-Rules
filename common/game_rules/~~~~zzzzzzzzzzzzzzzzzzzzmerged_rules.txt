@@ -2027,25 +2027,40 @@ can_species_be_assembled = {
 		# Robots
 		AND = {
 			is_robotic = yes
-			NOT = {
-				species = {
-					# Azur lane Stellaris DLC
-					has_trait = trait_robot_mind_relic_core
-				}
-			}
-			root = {
-				check_modifier_value = {
-					modifier = planet_pop_assembly_add
-					value > 0
-				}
-				owner = {
+			OR = {
+				AND = {
 					NOR = {
 						# Azur lane Stellaris DLC
-						has_authority = auth_azur_lane_1
-						has_authority = auth_azur_lane_2
-						has_authority = auth_azur_lane_K
-						# Girls Frontline
-						has_authority = auth_commonwealth
+						has_trait = trait_robot_mind_relic_core
+						# Stellaris Evolved
+						has_trait = trait_tec_robot_fractal
+					}
+					root = {
+						check_modifier_value = {
+							modifier = planet_pop_assembly_add
+							value > 0
+						}
+						owner = {
+							NOR = {
+								# Azur lane Stellaris DLC
+								has_authority = auth_azur_lane_1
+								has_authority = auth_azur_lane_2
+								has_authority = auth_azur_lane_K
+								# Girls Frontline
+								has_authority = auth_commonwealth
+							}
+						}
+					}
+				}
+				# Stellaris Evolved
+				AND = { # fractal robots
+					has_trait = trait_tec_robot_fractal
+					root = {
+						check_modifier_value = {
+							modifier = planet_pop_assembly_add
+							value > 0
+						}
+						any_owned_species = { is_exact_same_species = prevprev }
 					}
 				}
 			}
@@ -2067,6 +2082,7 @@ can_species_be_assembled = {
 			has_trait = trait_doll
 			root.owner = { has_authority = auth_commonwealth }
 		}
+
 		# Organics - this is the vanilla version
 		AND = {
 			NOT = { has_global_flag = stellarisevolved }
@@ -2116,33 +2132,41 @@ can_species_be_assembled = {
 		# Generic organic assembly rule
 		AND = {
 			has_global_flag = stellarisevolved
-			is_robotic = yes
-			root = {
-				check_modifier_value = {
-					modifier = planet_pop_assembly_add
-					value > 0
-				}
-			}
-			if = { # fractal robots
-				limit = { has_trait = trait_tec_robot_fractal }
-				root = {
-					any_owned_species = { is_exact_same_species = prevprev }
-				}
-			}
-		}
-	# Organic units
-		# Generic organic assembly rule
-		AND = {
-			has_global_flag = stellarisevolved
 			is_organic_species = yes
-			root = {
-				check_modifier_value = {
-					modifier = planet_pop_assembly_organic_add
-					value > 0
+			OR = {
+				AND = { # Non flourishing plantoids
+					NOT = {
+						has_trait = trait_plantoid_budding
+					}
+					NOT = {
+						has_trait = trait_tec_lithoid_sedimentary
+					}
+					root = {
+						check_modifier_value = {
+							modifier = planet_pop_assembly_organic_add
+							value > 0
+						}
+						tec_has_bioservant_buildings = no
+						tec_has_genetic_buildings = no
+						tec_has_robotic_buildings = no
+					}
 				}
-				tec_has_bioservant_buildings = no
-				tec_has_genetic_buildings = no
-				tec_has_robotic_buildings = no
+				AND = { # flourishing plantoids
+					OR = {
+						has_trait = trait_plantoid_budding
+						has_trait = trait_tec_lithoid_sedimentary
+					}
+					root = {
+						any_owned_species = { is_exact_same_species = prevprev }
+						check_modifier_value = {
+							modifier = planet_pop_assembly_organic_add
+							value > 0
+						}
+						tec_has_bioservant_buildings = no
+						tec_has_genetic_buildings = no
+						tec_has_robotic_buildings = no
+					}
+				}
 			}
 			root.owner = {
 				NOT = {
@@ -2152,14 +2176,17 @@ can_species_be_assembled = {
 			if = {	# Hives can only clone drones
 				limit = {
 					root.owner = { is_hive_empire = yes }
+					root = {
+						check_modifier_value = {
+							modifier = planet_pop_assembly_organic_add
+							value > 0
+						}
+						tec_has_bioservant_buildings = no
+						tec_has_genetic_buildings = no
+						tec_has_robotic_buildings = no
+					}
 				}
 				has_trait = trait_hive_mind
-			}
-			else_if = { # flourishing plantoids
-				limit = { has_trait = trait_plantoid_budding }
-				root = {
-					any_owned_species = { is_exact_same_species = prevprev }
-				}
 			}
 			else_if = { # Clone army thing
 				limit = {
@@ -2181,55 +2208,50 @@ can_species_be_assembled = {
 			}
 		}
 		# Pure main species organic assembly rule
-		AND = {
+        AND = {
 			has_global_flag = stellarisevolved
-			is_organic_species = yes
-			species = {
-				is_exact_same_species = root.owner
-			}
-			root = {
-				check_modifier_value = {
-					modifier = planet_pop_assembly_organic_add
-					value > 0
-				}
-				tec_has_bioservant_buildings = no
-				tec_has_genetic_buildings = yes
-				tec_has_robotic_buildings = no
-			}
-			root.owner = {
-				has_policy_flag = tec_assembly_disallowed
-			}
-			if = {	# Hives can only clone drones
-				limit = {
-					root.owner = { is_hive_empire = yes }
-				}
-				has_trait = trait_hive_mind
-			}
-			else_if = { # flourishing plantoids
-				limit = { has_trait = trait_plantoid_budding }
-				root = {
-					any_owned_species = { is_exact_same_species = prevprev }
-				}
-			}
-			else_if = { # Clone army thing
-				limit = {
-					OR = {
-						has_trait = trait_clone_soldier_infertile
-						has_trait = trait_clone_soldier_infertile_full_potential
-					}
-				}
-				root = {
-					# Event 'clones.3' should cover this, but extra safety check.
-					has_building = building_clone_army_clone_vat
-					NOT = {
-						check_variable = {
-							which = clone_pops_missing
-							value = 0
-						}
-					}
-				}
-			}
-		}
+            is_organic_species = yes
+            species = {
+                is_exact_same_species = root.owner
+            }
+            OR = {
+                AND = { # Non flourishing plantoids
+                    NOT = {
+                        has_trait = trait_plantoid_budding
+                    }
+                    NOT = {
+                        has_trait = trait_tec_lithoid_sedimentary
+                    }
+                    root = {
+                        check_modifier_value = {
+                            modifier = planet_pop_assembly_organic_add
+                            value > 0
+                        }
+                        tec_has_bioservant_buildings = no
+                        tec_has_genetic_buildings = yes
+                        tec_has_robotic_buildings = no
+                    }
+                }
+                AND = { # flourishing plantoids
+                    OR = {
+                        has_trait = trait_plantoid_budding
+                        has_trait = trait_tec_lithoid_sedimentary
+                    }
+                    root = {
+                        any_owned_species = { is_exact_same_species = prevprev }
+                        check_modifier_value = {
+                            modifier = planet_pop_assembly_organic_add
+                            value > 0
+                        }
+                        tec_has_bioservant_buildings = no
+                        tec_has_genetic_buildings = yes
+                        tec_has_robotic_buildings = no
+                    }
+                }
+            }
+            root.owner = {
+                has_policy_flag = tec_assembly_disallowed
+            }
 		# Bioservants can only be assembled with bioservant facilities present
 		AND = {
 			has_global_flag = stellarisevolved
@@ -2251,7 +2273,6 @@ can_species_be_assembled = {
 				}
 			}
 		}
-
 		# Replicants can grow, be cloned, be assembled, whatever...
 		AND = {
 			has_global_flag = stellarisevolved
@@ -2276,8 +2297,13 @@ can_species_be_assembled = {
 				}
 				has_trait = trait_hive_mind
 			}
-			else_if = { # flourishing plantoids
-				limit = { has_trait = trait_plantoid_budding }
+			else_if = { # flourishing plantoids & lithoids
+				limit = { 
+					OR = {
+						has_trait = trait_plantoid_budding
+						has_trait = trait_tec_lithoid_sedimentary
+					}
+				}
 				root = {
 					any_owned_species = { is_exact_same_species = prevprev }
 				}
