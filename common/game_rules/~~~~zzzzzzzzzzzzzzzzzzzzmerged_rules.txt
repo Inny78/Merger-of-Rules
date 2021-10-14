@@ -2067,9 +2067,7 @@ can_species_be_assembled = {
 		}
 		# Azur lane Stellaris DLC
 		AND = {
-			species = {
-				is_archetype = KANSEN
-			}
+			species = { is_archetype = KANSEN }
 			root = {
 				check_modifier_value = {
 					modifier = planet_pop_assembly_organic_add
@@ -2082,7 +2080,6 @@ can_species_be_assembled = {
 			has_trait = trait_doll
 			root.owner = { has_authority = auth_commonwealth }
 		}
-
 		# Organics - this is the vanilla version
 		AND = {
 			NOT = { has_global_flag = stellarisevolved }
@@ -2211,17 +2208,11 @@ can_species_be_assembled = {
         AND = {
 			has_global_flag = stellarisevolved
             is_organic_species = yes
-            species = {
-                is_exact_same_species = root.owner
-            }
+            species = { is_exact_same_species = root.owner }
             OR = {
                 AND = { # Non flourishing plantoids
-                    NOT = {
-                        has_trait = trait_plantoid_budding
-                    }
-                    NOT = {
-                        has_trait = trait_tec_lithoid_sedimentary
-                    }
+                    NOT = { has_trait = trait_plantoid_budding }
+                    NOT = { has_trait = trait_tec_lithoid_sedimentary }
                     root = {
                         check_modifier_value = {
                             modifier = planet_pop_assembly_organic_add
@@ -2249,9 +2240,7 @@ can_species_be_assembled = {
                     }
                 }
             }
-            root.owner = {
-                has_policy_flag = tec_assembly_disallowed
-            }
+            root.owner = { has_policy_flag = tec_assembly_disallowed }
 		}
 		# Bioservants can only be assembled with bioservant facilities present
 		AND = {
@@ -2269,9 +2258,7 @@ can_species_be_assembled = {
 				}
 			}
 			root.owner = {
-				NOT = {
-					has_policy_flag = tec_assembly_disallowed
-				}
+				NOT = { has_policy_flag = tec_assembly_disallowed }
 			}
 		}
 		# Replicants can grow, be cloned, be assembled, whatever...
