@@ -1175,6 +1175,30 @@ can_destroy_planet_with_PLANET_KILLER_EDEN = {
 	}
 }
 
+# Some Events of Outside Cluster
+can_destroy_planet_with_PLANET_KILLER_NEP_UGO = {
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		is_a_habitable_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+		}
+	}
+	custom_tooltip = {
+		fail_text = nep_no_sapient_pops
+		any_owned_pop = {
+			is_sapient = yes
+		}
+	}
+}
+
+
 # Merger of Rules
 # List of uninhabitable planets for the planet cracker's test fire.
 merg_is_crackable_planet = {

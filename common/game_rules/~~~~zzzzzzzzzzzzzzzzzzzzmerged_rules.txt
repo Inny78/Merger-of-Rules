@@ -1218,8 +1218,8 @@ can_generate_leader_from_species = {
 					OR = {
 						has_technology = "tech_synthetic_leaders"
 						# Stellaris Evolved
-						has_origin = origin_slavetothesystem
-						has_origin = origin_robosapiens
+						has_origin = origin_tec_slavetothesystem
+						has_origin = origin_tec_robosapiens
 					}
 				}
 			}
@@ -1611,6 +1611,19 @@ can_take_hostile_actions = {
 			}
 		}
 		always = yes
+	}
+	else_if = {
+		# SEoOC_phantom
+		limit = {
+			root = {
+				NOT = { has_technology = tech_nep_phantom_phase_shift }
+			}
+			is_country_type = nep_phantom_passive
+		}
+		custom_tooltip = {
+			text = "CAN_TAKE_HOSTILE_ACTION_NEP_PHANTOM"
+			always = no
+		}
 	}
 	else_if = {
 		# SEoOC_side_story
@@ -2791,6 +2804,7 @@ can_jump_drive = {
 			}
 		}
 	}
+	# Some Events of Outside Cluster
 	if = {
 		limit = {
 			exists = solar_system
