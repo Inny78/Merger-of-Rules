@@ -429,13 +429,11 @@ is_democracy = { #Power of many
 	}
 	# More Authorities
 	has_authority = auth_strict_democratic
-	has_authority = auth_direct_democratic
+	has_authority = auth_direct_democratic # Also used by Stellaris Evolved
 	AND = {
 		has_authority = auth_democratic_dictatorship
 		is_egalitarian = yes
 	}
-	# Stellaris Evolved
-	has_authority = auth_direct_democratic
 	# Expanded Traits, Civics, Pops, and More
 	has_authority = auth_cooperative
 }

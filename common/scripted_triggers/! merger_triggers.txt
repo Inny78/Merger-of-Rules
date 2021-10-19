@@ -185,6 +185,7 @@ merg_is_empty_space = {
 		is_planet_class = giga_hidden
 		# Ancient Empires
 		is_planet_class = pc_ag_void_star
+		is_planet_class = pc_ag_void_planet
 		# ACOT
 		is_planet_class = pc_invisible_star
 		# History of the Lost Empire
@@ -254,48 +255,48 @@ is_ethics_classic = {
 # }
 
 # List of all habitable ringworld sections
-# merg_is_hab_ringworld = {
-#	OR = {
-# 	is_planet_class = pc_ringworld_habitable
-# 	# Gigastructural Engineering & More
-# 	is_planet_class = pc_gigaorbital_ring
-# 	is_planet_class = pc_interstellar_ringworld_habitable
-# 	is_planet_class = pc_ringworld_city
-# 	is_planet_class = pc_squareworld_habitable
-# 	is_planet_class = pc_giga_penrose_habitable
-# 	is_planet_class = pc_ringworld_machine
-# 	is_planet_class = pc_ringworld_hive
-# 	# Ancient Empire
-# 	# listed planet types are for colors only, they're all ideal
-# 	is_planet_class = pc_ag_ringworld_desert
-# 	is_planet_class = pc_ag_ringworld_arid
-# 	is_planet_class = pc_ag_ringworld_savannah
-# 	is_planet_class = pc_ag_ringworld_ocean
-# 	is_planet_class = pc_ag_ringworld_continental
-# 	is_planet_class = pc_ag_ringworld_tropical
-# 	is_planet_class = pc_ag_ringworld_tundra
-# 	is_planet_class = pc_ag_ringworld_arctic
-# 	is_planet_class = pc_ag_ringworld_alpine
-# 	is_planet_class = pc_ag_ringworld_machine
-# 	is_planet_class = pc_ag_ringworld_city
-# 	is_planet_class = pc_ag_ringworld_gaia
-# 	# Giga Diversity
-# 	is_planet_class = pc_ringworld_necrocity
-# 	is_planet_class = pc_ringworld_milarc
-# 	is_planet_class = pc_ringworld_ecocity
-# 	is_planet_class = pc_ringworld_bioforge
-# 	is_planet_class = pc_ringworld_biofort
-# 	is_planet_class = pc_ringworld_machine_factory
-# 	is_planet_class = pc_ringworld_machine_fort
-# 	is_planet_class = pc_ringworld_relic
-# 	is_planet_class = pc_ringworld_milarc_relic
-# 	is_planet_class = pc_shroudring
-# 	is_planet_class = pc_aquaticring
-# 	is_planet_class = pc_ringworld_methanecity
-# 	is_planet_class = pc_ringworld_ammoniacity
-# 	is_planet_class = pc_ringworld_ashcity
-# 	is_planet_class = pc_ringworld_sulfurcity
-# 	is_planet_class = pc_ringworld_aquaticcity
-# 	is_planet_class = pc_ringworld_shroudcity
-#	}
-# }
+merg_is_hab_ringworld = {
+	OR = {
+	is_planet_class = pc_ringworld_habitable
+	# Gigastructural Engineering & More
+	is_planet_class = pc_gigaorbital_ring
+	is_planet_class = pc_interstellar_ringworld_habitable
+	is_planet_class = pc_ringworld_city
+	is_planet_class = pc_squareworld_habitable
+	is_planet_class = pc_giga_penrose_habitable
+	is_planet_class = pc_ringworld_machine
+	is_planet_class = pc_ringworld_hive
+	# Ancient Empire
+	# listed planet types are for colors only, they're all ideal
+	is_planet_class = pc_ag_ringworld_desert
+	is_planet_class = pc_ag_ringworld_arid
+	is_planet_class = pc_ag_ringworld_savannah
+	is_planet_class = pc_ag_ringworld_ocean
+	is_planet_class = pc_ag_ringworld_continental
+	is_planet_class = pc_ag_ringworld_tropical
+	is_planet_class = pc_ag_ringworld_tundra
+	is_planet_class = pc_ag_ringworld_arctic
+	is_planet_class = pc_ag_ringworld_alpine
+	is_planet_class = pc_ag_ringworld_machine
+	is_planet_class = pc_ag_ringworld_city
+	is_planet_class = pc_ag_ringworld_gaia
+	# Giga Diversity - these don't exist yet
+	# is_planet_class = pc_ringworld_necrocity
+	# is_planet_class = pc_ringworld_milarc
+	# is_planet_class = pc_ringworld_ecocity
+	# is_planet_class = pc_ringworld_bioforge
+	# is_planet_class = pc_ringworld_biofort
+	# is_planet_class = pc_ringworld_machine_factory
+	# is_planet_class = pc_ringworld_machine_fort
+	# is_planet_class = pc_ringworld_relic
+	# is_planet_class = pc_ringworld_milarc_relic
+	# is_planet_class = pc_shroudring
+	# is_planet_class = pc_aquaticring
+	# is_planet_class = pc_ringworld_methanecity
+	# is_planet_class = pc_ringworld_ammoniacity
+	# is_planet_class = pc_ringworld_ashcity
+	# is_planet_class = pc_ringworld_sulfurcity
+	# is_planet_class = pc_ringworld_aquaticcity
+	# is_planet_class = pc_ringworld_shroudcity
+	}
+}
