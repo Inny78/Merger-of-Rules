@@ -2135,6 +2135,9 @@ can_species_be_assembled = {
 					root = { has_building = building_clone_vats }
 					# The DAL Species Mod
 					is_archetype = DATEALIVE
+					# Warship Girls R and MIST species
+					is_archetype = WARSHIPGIRL
+					is_archetype = SHENHAI
 				}
 			}
 		}
