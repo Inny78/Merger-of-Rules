@@ -198,6 +198,22 @@ merg_is_empty_space = {
 	}
 }
 
+# List of planetary shield buildings
+# merg_has_planetary_shield = {
+# 	OR = {
+#     	has_building = building_planetary_shield_generator
+# 		# MEM
+# 		has_building = building_mem_planetary_shield_generator
+# 		has_building = building_mem_planetary_shield_generator_heavy
+# 		has_building = building_mem_planetary_shield_generator_orila
+# 		# ACOT
+# 		has_building = building_dark_energy_psg
+# 		has_building = building_ae_dark_energy_psg
+# 		# AOT
+# 		has_building = building_stellarite_psg
+# 	}
+# }
+
 # Detection of Ethics and Civics Classic
 is_ethics_classic = {
 	AND = {
