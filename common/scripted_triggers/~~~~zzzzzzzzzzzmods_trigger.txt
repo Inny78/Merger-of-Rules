@@ -194,9 +194,6 @@ tec_is_ringworld = {
 	}
 }
 
-
-# ag_ancient_ringworld
-
 # This trigger doesn't exists yet, it's just a concept for potential future use in GPM.
 # It adds to is_megacorp all megacorp authorities that exist outside of the trigger as they use their own rules.
 # expanded_is_megacorp = {
