@@ -88,63 +88,44 @@ is_zofe_compatible = {
 }
 
 # Overwriting to give support to other ringworlds
+# Switching to district sets to reduce its size
 giga_habitable_structure = {
 	OR = {
-		is_planet_class = pc_ringworld_habitable
-		is_planet_class = pc_habitat
-		is_planet_class = pc_gigaorbital_ring
-		is_planet_class = pc_habitable_gas_giant
-		is_planet_class = pc_interstellar_habitat
-		is_planet_class = pc_interstellar_ringworld_habitable
-		is_planet_class = pc_giga_penrose_habitable
-		is_planet_class = pc_ringworld_city
-		is_planet_class = pc_ringworld_machine
-		is_planet_class = pc_ringworld_hive
-		is_planet_class = pc_equatorial_shipyard
-		is_planet_class = pc_birch
-		is_planet_class = pc_squareworld_habitable
-		is_planet_class = pc_virtual_reality
-		is_planet_class = pc_virtual_industry
-		is_planet_class = pc_virtual_stellar_industry
-		is_planet_class = pc_alderson_slice_gaia
-		is_planet_class = pc_alderson_slice_pc
-		is_planet_class = pc_alderson_slice_ecu
-		is_planet_class = pc_alderson_slice_hive
-		is_planet_class = pc_alderson_slice_machine
+		uses_district_set = habitat
+		# Planetary Diversity
+		uses_district_set = pdplanethab
+		# Gigastructural Engineering & More
+		uses_district_set = giga_planet
+		uses_district_set = penrose_ring
+		uses_district_set = interstellar_ring
+		uses_district_set = giga_gas_giant_habitat
+		uses_district_set = giga_birch
+		uses_district_set = virtual_ring
+		uses_district_set = virtual_ring_industry
+		uses_district_set = acot_giga_void_sphere
+		uses_district_set = giga_alderson
 		is_planet_class = pc_pouchkinn_black_hole
-		is_planet_class = pc_flat_world
- 		# Ancient Empire
- 		# listed planet types are for colors only, they're all ideal
-		is_planet_class = pc_ag_ringworld_desert
-		is_planet_class = pc_ag_ringworld_arid
-		is_planet_class = pc_ag_ringworld_savannah
-		is_planet_class = pc_ag_ringworld_ocean
-		is_planet_class = pc_ag_ringworld_continental
-		is_planet_class = pc_ag_ringworld_tropical
-		is_planet_class = pc_ag_ringworld_tundra
-		is_planet_class = pc_ag_ringworld_arctic
-		is_planet_class = pc_ag_ringworld_alpine
-		is_planet_class = pc_ag_ringworld_machine
-		is_planet_class = pc_ag_ringworld_city
-		is_planet_class = pc_ag_ringworld_gaia
+		# For reference, unused
+		# uses_district_set = maginot_world_districts
+
+		# Ancient Empire
+		uses_district_set = ag_ancient_ringworld
+
+		# Starborn: Improved Voidtouched
+		uses_district_set = starborn_start
+
+		# Twinks Atlantean
+		uses_district_set = skypalace
+
+		# More Events Mod
+		is_planet_class = pc_mem_vazuran_habitat
+
+		# Acquisition of Technology
+		uses_district_set = dm_habitat
+		uses_district_set = ae_habitat
+		uses_district_set = sigma_habitat
+
  		# Giga Diversity - these don't exist yet
-		# is_planet_class = pc_ringworld_necrocity
-		# is_planet_class = pc_ringworld_milarc
-		# is_planet_class = pc_ringworld_ecocity
-		# is_planet_class = pc_ringworld_bioforge
-		# is_planet_class = pc_ringworld_biofort
-		# is_planet_class = pc_ringworld_machine_factory
-		# is_planet_class = pc_ringworld_machine_fort
-		# is_planet_class = pc_ringworld_relic
-		# is_planet_class = pc_ringworld_milarc_relic
-		# is_planet_class = pc_shroudring
-		# is_planet_class = pc_aquaticring
-		# is_planet_class = pc_ringworld_methanecity
-		# is_planet_class = pc_ringworld_ammoniacity
-		# is_planet_class = pc_ringworld_ashcity
-		# is_planet_class = pc_ringworld_sulfurcity
-		# is_planet_class = pc_ringworld_aquaticcity
-		# is_planet_class = pc_ringworld_shroudcity
 	}
 }
 
