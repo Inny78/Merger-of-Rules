@@ -254,6 +254,11 @@ species_can_live_on_planet = {
 			}
 		}
 	}
+	# Expanded Gestalts
+	NAND = {
+		root = { NOT = { is_planet_class = pc_matryoshka } }
+		has_trait = trait_machine_digital
+	}
 	# Vanilla
 	if = {
 		limit = {
@@ -1162,6 +1167,8 @@ can_generate_leader_from_pop = {
 		has_trait = trait_infested_basic
 		# Holofrixit Revisited
 		has_trait = trait_holodrone
+		# Expanded Gestalts
+		root = { has_origin = origin_hive_overmind }
 	}
 	OR = {
 		is_robot_pop = no
@@ -1275,6 +1282,8 @@ can_generate_military_leader_from_pop = {
 			}
 		}
 	}
+	# Expanded Gestalts
+	NOT = { root = { has_origin = origin_hive_overmind } }
 }
 
 # can_generate_army_from_planet
@@ -1976,6 +1985,8 @@ can_species_procreate = {
 		has_trait = hfe_species_trait_brainworm
 		# Holofrixit Revisited
 		has_trait = trait_hologanglion
+		# Expanded Gestalts
+		has_trait = trait_hive_mind_overlord
 	}
 	NAND = {
 		root = { has_modifier = slave_colony }
@@ -2093,6 +2104,11 @@ can_species_be_assembled = {
 			has_trait = trait_doll
 			root.owner = { has_authority = auth_commonwealth }
 		}
+		# Expanded Gestalts
+		NAND = {
+			root = { owner = { has_valid_civic = civic_machine_replicators } }
+			has_trait = trait_machine_central
+		}
 		# Organics - this is the vanilla version
 		AND = {
 			NOT = { has_global_flag = stellarisevolved }
@@ -2102,7 +2118,11 @@ can_species_be_assembled = {
 				limit = {
 					root.owner = { is_hive_empire = yes }
 				}
-				has_trait = trait_hive_mind
+				AND = {
+					has_trait = trait_hive_mind
+					# Expanded Gestalts
+					NOT = { has_trait = trait_hive_mind_overlord }
+				}
 			}
 			# flourishing plantoids
 			else_if = {
@@ -2654,6 +2674,8 @@ can_spawn_debris = {
 			is_country_type = default_ev
 			# Twinks Atlantean
 			has_civic = civic_tw_atlantis
+			# Expanded Gestalts
+			has_civic = civic_hive_strong_connection
 		}
 	}
 }

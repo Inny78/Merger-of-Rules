@@ -1153,6 +1153,8 @@ war_philosophy = {
 				has_ai_personality = harmonious_hierarchy
 				# Stellaris Evolved
 				has_valid_civic = "civic_peacekeepers"
+				# Expanded Gestalts
+				has_valid_civic = "civic_mutualistic_behavior"
 			}
 		}
 
@@ -1356,6 +1358,43 @@ war_philosophy = {
 			}
 		}
 	}
+	# Expanded Gestalts
+	option = {
+		name = "protection_wars"
+		
+		policy_flags = {
+			protection_wars
+		}
+		
+		potential = {
+			has_valid_civic = civic_mutualistic_behavior
+			has_global_flag = complex_hive
+		}
+		
+	
+		on_enabled = {
+			hidden_effect = {
+				check_casus_belli_valid = {
+					type = cb_protect
+				}
+			}
+		}
+
+		on_disabled = {
+			hidden_effect = {
+				check_casus_belli_valid = {
+					type = cb_protect
+				}
+			}
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 2
+				has_valid_civic = civic_mutualistic_behavior
+			}
+		}
+	}
 }
 war_doctrine = {
 	potential = {
@@ -1530,6 +1569,8 @@ orbital_bombardment = {
 				# Ethics & Civics: Bug Branch
 				has_valid_civic = "civic_interventionalist"
 				has_valid_civic = "civic_interventionalist_corpo"
+				# Expanded Gestalts
+				has_valid_civic = civic_mutualistic_behavior
 			}
 		}
 		AI_weight = {
@@ -1671,10 +1712,228 @@ orbital_bombardment = {
 
 # interference
 # enlightenment
-# resettlement
+
+resettlement = {
+	potential = {
+		NOT = { has_ethic = "ethic_gestalt_consciousness" }
+	}
+	option = {
+		name = "resettlement_not_allowed"
+
+		policy_flags = {
+			resettlement_not_allowed
+		}
+		# Ethics and Civics Classic
+		valid = {
+			NOT = { has_valid_civic = civic_ultimate_collective }
+		}
+	}
+	option = {
+		name = "resettlement_allowed"
+		policy_flags = {
+			resettlement_allowed
+		}
+		# Ethics and Civics Classic
+		valid = {
+			NOR = {
+				has_valid_civic = civic_beacon_of_liberty # Also in Ethics and Civics Alternative - Redux and Stellaris Evolved
+				has_valid_civic = civic_anarchy_ideals
+				# Ethics & Civics: Bug Branch
+				has_valid_civic = civic_beacon_of_liberty_corpo
+			}
+		}
+		# Vanilla
+		modifier = {}
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_egalitarian = yes
+			}
+		}
+	}
+}
+
 # appropriation
 # leader_enhancement
-# first_contact_protocol
+
+first_contact_protocol = {
+
+	potential = {
+		always = yes
+	}
+
+	option = {
+		name = "first_contact_proactive"
+
+		policy_flags = {
+			first_contact_proactive
+		}
+
+		modifier = {
+			first_contact_speed_mult = 0.1
+		}
+
+		on_enabled = {
+		}
+
+		valid = {
+			OR = {
+				AND = {
+					NOT = { has_global_flag = expanded_pops_active }
+					is_homicidal = no
+					is_xenophobe = no
+				}
+				# Expanded Traits, Civics, Pops, and More
+				AND = { 
+					has_global_flag = expanded_pops_active
+					is_xenophobic_isolationists = no
+					is_homicidal = no
+					is_xenophobe = no
+				}
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				is_pacifist = yes
+			}
+			modifier = {
+				factor = 2
+				is_xenophile = yes
+			}
+			modifier = {
+				factor = 2
+				has_valid_civic = civic_machine_servitor
+			}
+			# Expanded Traits, Civics, Pops, and More
+			modifier = {
+				factor = 2
+				AND = {
+					has_global_flag = expanded_pops_active
+					is_open_gestalt = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "first_contact_cautious"
+
+		policy_flags = {
+			first_contact_cautious
+		}
+
+		modifier = {
+			first_contact_defense_add = 2
+		}
+
+		on_enabled = {
+		}
+
+		valid = {
+			is_homicidal = no
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 1.5
+				always = yes #Liu Cixin is right
+			}
+			# Expanded Traits, Civics, Pops, and More
+			modifier = {
+				factor = 2
+				AND = {
+					has_global_flag = expanded_pops_active
+					is_xenophobic_isolationists = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					has_global_flag = expanded_pops_active
+					OR = {
+						is_gestalt = yes
+						is_open_gestalt = no
+						is_civic_militarist = no
+						is_civic_materialist = no # aggressively curious
+						is_spy_empire = no
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "first_contact_attack_allowed"
+
+		policy_flags = {
+			first_contact_attack_allowed
+		}
+		modifier = {}
+
+		valid = {
+			OR = {
+				AND = {
+					NOT = { has_global_flag = expanded_pops_active }
+					is_pacifist = no
+					is_xenophile = no
+					# Expanded Gestalts
+					NOT = { has_valid_civic = civic_mutualistic_behavior }
+				}
+				# Expanded Traits, Civics, Pops, and More
+				AND = {
+					has_global_flag = expanded_pops_active
+					is_pacifist = no
+					is_xenophile = no
+					# Expanded Gestalts
+					NOT = { has_valid_civic = civic_mutualistic_behavior }
+					is_open_gestalt = no
+				}
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				is_militarist = yes
+			}
+			modifier = {
+				factor = 2
+				is_xenophobe = yes
+			}
+			modifier = {
+				factor = 2
+				is_gestalt = yes
+			}
+			# Expanded Traits, Civics, Pops, and More
+			modifier = {
+				factor = 2
+				OR = {
+					has_ai_personality = slaving_despots
+					has_ai_personality = infested_hive_mind
+					has_ai_personality = assimilators
+					has_ai_personality = metalhead
+					has_ai_personality = became_the_crisis
+					has_ai_personality = vb_sneering_technocrats
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ai_personality = democratic_crusaders
+					has_ai_personality = vb_keepers_of_peace
+					has_ai_personality = honorbound_warriors
+					has_ai_personality = technological_warriors
+					has_ai_personality = fanatic_befrienders
+					has_ai_personality = egalitarian_imperialists
+					has_ai_personality = vb_ambitious_unifiers
+				}
+			}
+		}
+	}
+}
 
 border_policy = {
 	potential = {
@@ -1764,4 +2023,125 @@ border_policy = {
 # refugees
 # population_controls
 # slavery
-# purge
+
+purge = {
+	option = {
+		name = "purge_not_allowed"
+
+		valid = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			NOT = { has_valid_civic = "civic_fanatic_purifiers" }
+		}
+
+		policy_flags = {
+			purge_not_allowed
+		}
+	}
+
+	option = {
+		name = "purge_displacement_only"
+
+		policy_flags = {
+			purge_displacement_only
+		}
+
+		modifier = {}
+
+		valid = {
+			NOR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			is_homicidal = no
+		}
+
+		AI_weight = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = multispecies
+			}
+		}
+	}
+
+	option = {
+		name = "purge_allowed"
+
+		in_breach_of = {
+			{
+				key = resolution_rulesofwar_reverence_for_life
+			}
+		}
+
+		policy_flags = {
+			purge_allowed
+		}
+		modifier = {}
+
+		valid = {
+			NOR = {
+				is_subject_type = signatory
+				# Expanded Traits, Civics, Pops, and More
+				is_subject_type = scion_signatory
+				is_subject_type = scion_auxiliary
+			}
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+				has_menace_perk = menp_undertaker	# Unlocked with Crisis Level 1
+				# ZOFE
+				is_country_type = ascended_empire
+			}
+			# Expanded Gestalts
+			NOT = { has_valid_civic = civic_mutualistic_behavior }
+			# Expanded Traits, Civics, Pops, and More
+			NOR = {
+				has_ai_personality = harmonious_hierarchy
+				has_valid_civic = "civic_harm_hive"
+				has_valid_civic = "civic_harm_machine"
+			}
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 40
+				has_ethic = ethic_gestalt_consciousness
+				NOT = { has_valid_civic = civic_hive_empath }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				NOR = {
+					has_ai_personality_behaviour = purger
+					has_ethic = ethic_gestalt_consciousness
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_valid_ai_personality = yes
+				is_ai = yes
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_rulesofwar_reverence_for_life"
+					is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+					is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+					is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+				}
+			}
+			modifier = {
+				factor = 10
+				has_ascension_perk = ap_become_the_crisis
+			}
+		}
+	}
+}

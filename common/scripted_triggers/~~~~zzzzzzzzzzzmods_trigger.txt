@@ -148,18 +148,6 @@ tec_is_total_psionic_pop = {
 	}
 }
 
-tec_is_any_psionic_pop = {
-	OR = {
-		tec_is_psionic_pop = yes
-
-		has_trait = trait_tec_hive_psionic_resonance
-		has_trait = trait_tec_hive_psionic_entanglement
-
-		has_trait = trait_tec_pure_psionic
-	#	has_trait = trait_tec_pure_psionic_hive
-	}
-}
-
 tec_is_default_country = {
 	merg_is_default_empire = yes
 }
