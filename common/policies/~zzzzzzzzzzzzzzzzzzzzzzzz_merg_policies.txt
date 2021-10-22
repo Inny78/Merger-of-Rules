@@ -1710,7 +1710,140 @@ orbital_bombardment = {
 	}
 }
 
-# interference
+interference = {
+
+	potential = {
+		has_met_primitives = yes
+	}
+
+	option = {
+		name = "interference_passive"
+
+		policy_flags = {
+			interference_passive
+		}
+
+		on_enabled = {
+			hidden_effect = { set_country_flag = encountered_first_primitive }
+		}
+
+		in_breach_of = {
+			{
+				key = resolution_galacticstudies_advanced_xenostudies
+			}
+		}
+
+		valid = {
+			OR = {
+				is_subject_type = signatory
+				NOR = {
+					has_ethic = "ethic_fanatic_xenophobe"
+					has_valid_civic = "civic_fanatic_purifiers"
+					has_valid_civic = "civic_hive_devouring_swarm"
+					has_valid_civic = "civic_machine_terminator"
+				}
+				# Expanded Traits, Civics, Pops, and More
+				is_subject_type = scion_signatory
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 0.1
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "interference_active"
+
+		policy_flags = {
+			interference_active
+		}
+		modifier = {}
+
+		on_enabled = {
+			hidden_effect = { set_country_flag = encountered_first_primitive }
+		}
+
+		valid = {
+			NOR = {
+				is_subject_type = signatory
+				has_valid_civic = "civic_fanatic_purifiers"
+				has_valid_civic = "civic_hive_devouring_swarm"
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				OR = {
+					has_ai_personality_behaviour = infiltrator
+					has_ai_personality_behaviour = dominator
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				NOR = {
+					has_ai_personality_behaviour = infiltrator
+					has_ai_personality_behaviour = dominator
+				}
+				NOT = {
+					is_galactic_community_member = yes
+					OR = {
+						is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+						is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+						is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "interference_full"
+
+		potential = {
+		}
+		valid = {
+			NOT = { is_subject_type = signatory }
+			is_pacifist = no
+		}
+		on_enabled = {
+			hidden_effect = { set_country_flag = encountered_first_primitive }
+		}
+		policy_flags = {
+			interference_full
+		}
+		modifier = {}
+		AI_weight = {
+			modifier = {
+				factor = 3
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = dominator
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				NOT = {
+					has_ai_personality_behaviour = dominator
+				}
+			}
+			modifier = {
+				factor = 0
+				is_pacifist = yes
+			}
+		}
+	}
+}
+
 # enlightenment
 
 resettlement = {
@@ -2017,11 +2150,346 @@ border_policy = {
 # economic_policy
 # trade_policy
 # drone_policy
-# artificial_intelligence_policy
-# robot_pop_policy
+
+artificial_intelligence_policy = {
+
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		OR = { 
+			can_set_ai_policy = yes
+			has_country_flag = synthetic_empire
+			# Girls Frontline
+			has_authority = auth_gf_commonwealth
+		}
+		# Stellaris Evolved
+		NOR = { 
+			has_origin = origin_tec_slavetothesystem
+			has_origin = origin_tec_robosapiens
+		}
+	}
+	option = {
+		name = "ai_outlawed"
+		valid = {
+			OR = {
+				AND = {
+					NOT = { has_global_flag = stellarisevolved }
+					NOR = {
+						is_materialist = yes
+						has_valid_civic = civic_machine_cult # Ethics and Civics Classic/Redux
+						has_valid_civic = civic_machine_cult_corpo # Ethics & Civics: Bug Branch
+						custom_tooltip = {
+							success_text = is_a_synthetic_empire
+							has_country_flag = synthetic_empire
+						}
+					}
+				}
+				AND = {
+					has_global_flag = stellarisevolved
+					NOR = {
+						custom_tooltip = {
+							success_text = is_a_synthetic_empire
+							tec_is_synthetic_controlled_empire = yes
+						}
+						has_ascension_perk = ap_synthetic_evolution
+						tec_is_robot_lover_spiritualist = yes
+					}
+				}
+			}
+			# Girls Frontline
+			NOT = { has_authority = auth_gf_commonwealth }
+		}
+		policy_flags = {
+			ai_outlawed
+		}
+		in_breach_of = {
+			{
+				key = resolution_galacticstudies_advanced_xenostudies
+			}
+		}
+		AI_weight = {
+			modifier = {
+				factor = 0
+				is_materialist = yes
+			}
+			modifier = {
+				factor = 5
+				NOT = { has_global_flag = stellarisevolved }
+				is_spiritualist = yes
+			}
+			# Stellaris Evolved
+			modifier = {
+				factor = 5
+				has_global_flag = stellarisevolved
+				is_spiritualist = yes
+				NOT = {
+					tec_is_robot_lover_spiritualist = yes
+				}
+			}
+			# Vanilla			
+			modifier = {
+				factor = 0.1
+				has_valid_ai_personality = yes
+				is_ai = yes
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+		}
+	}
+	option = {
+		name = "ai_servitude"
+		valid = {
+			NOR = {
+				# Ethics and Civics Classic/Redux
+				has_valid_civic = civic_machine_cult
+				# Ethics & Civics: Bug Branch
+				has_valid_civic = civic_machine_cult_corpo
+				# Girls Frontline
+				has_authority = auth_gf_commonwealth
+			}
+			custom_tooltip = {
+				fail_text = is_a_synthetic_empire_fail
+				NOT = { has_country_flag = synthetic_empire }
+			}
+		}
+		policy_flags = {
+			ai_servitude
+		}
+		AI_weight = {
+			modifier = {
+				factor = 5
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = robot_exploiter
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = robot_liberator
+			}
+			# Ethics and Civics Classic/Redux/Stellaris Evolved
+			modifier = {
+				factor = 0
+				is_spiritualist = yes
+				NOR = {
+					has_valid_civic = civic_machine_cult
+					# Ethics & Civics: Bug Branch
+					has_valid_civic = civic_machine_cult_corpo
+				}
+			}
+			# Vanilla
+			modifier = {
+				factor = 0
+				is_spiritualist = yes
+				NOT = {
+					has_valid_ai_personality = yes
+					is_ai = yes
+					is_galactic_community_member = yes
+					OR = {
+						is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+						is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+						is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "ai_full_rights"
+		valid = {
+			OR = {
+				AND = {
+					NOT = { has_global_flag = stellarisevolved }
+					OR = {
+						custom_tooltip = {
+							fail_text = is_a_synthetic_empire
+							has_country_flag = synthetic_empire
+						}
+						is_spiritualist = no
+						# Ethics and Civics Classic/Redux
+						has_valid_civic = civic_machine_cult
+						# Ethics & Civics: Bug Branch
+						has_valid_civic = civic_machine_cult_corpo
+					}
+				}
+				AND = {
+					has_global_flag = stellarisevolved
+					OR = {
+						is_spiritualist = no
+						AND = {
+							is_spiritualist = yes
+							OR = {
+								tec_is_robot_lover_spiritualist = yes
+								has_ascension_perk = ap_the_flesh_is_weak
+							}
+						}
+						custom_tooltip = {
+							fail_text = is_a_synthetic_empire
+							OR = {
+								has_ascension_perk = ap_synthetic_evolution
+								tec_is_synthetic_empire = yes
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { has_global_flag = stellarisevolved }
+				AND = {
+					has_global_flag = stellarisevolved
+					custom_tooltip = {
+						fail_text = "tec_fail_requires_intelligent_robots"
+						has_technology = tech_droid_workers
+					}
+				}
+			}
+			NOT = { has_policy_flag = robots_outlawed }
+			# Expanded Traits, Civics, Pops, and More
+			NOT = { has_ascension_perk = ap_synthetic_servants }
+		}
+		policy_flags = {
+			ai_full_rights
+		}
+		modifier = {}
+		AI_weight = {
+			modifier = {
+				factor = 0.5
+				is_materialist = no
+				NOR = {
+					is_synthetic_empire = yes
+					has_technology = tech_synthetic_workers
+				}
+			}
+			modifier = {
+				factor = 5
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = robot_liberator
+			}
+			modifier = {
+				factor = 0
+				is_spiritualist = yes
+			}
+		}
+	}
+}
+
+robot_pop_policy = {
+
+	potential = {
+		OR = {
+			AND = {
+				NOT = { has_global_flag = stellarisevolved }
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				OR = {
+					has_technology = tech_robotic_workers
+					any_owned_species = { has_trait = trait_mechanical }
+				}
+			}
+			# Stellaris Evolved
+			AND = {
+				has_global_flag = stellarisevolved
+				OR = {
+					has_technology = tech_robotic_workers
+					any_owned_species = { has_trait = trait_mechanical }
+				}
+				OR = {
+					NOT = { has_ethic = "ethic_gestalt_consciousness" }
+					AND = {
+						has_ethic = ethic_gestalt_consciousness
+						is_hive_empire = yes
+						tec_is_organic_hive = no
+						tec_is_radical_hive = no
+					}
+				}
+			}
+		}
+		# Girls Frontline
+		NOT = { has_authority = auth_gf_commonwealth }
+	}
+
+	option = {
+		name = "robot_pops_outlawed"
+
+		valid = {
+			is_materialist = no
+			NOT = { has_policy_flag = ai_full_rights }
+			# Stellaris Evolved
+			OR = {
+				NOT = { has_global_flag = stellarisevolved }
+				AND = {
+					has_global_flag = stellarisevolved
+					NOR = {
+						tec_is_synthetic_empire = yes
+						has_ascension_perk = ap_synthetic_evolution
+						is_materialist = yes
+						has_valid_civic = civic_machine_cult
+					}
+				}
+			}
+			NOR = {
+				# Ethics & Civics Classic/Redux
+				has_valid_civic = civic_machine_cult
+				# Ethics & Civics: Bug Branch/etc
+				has_valid_civic = civic_machine_cult_corpo
+				# Girls Frontline
+				has_authority = auth_gf_commonwealth
+			}
+		}
+
+		policy_flags = {
+			robots_outlawed
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				every_owned_species = {
+					limit = { is_robotic_species = yes }
+					set_citizenship_type = {
+						type = citizenship_purge
+						country = root
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_materialist = yes
+			}
+			modifier = {
+				factor = 10
+				has_valid_ai_personality = yes
+				NOR = {
+					has_ai_personality_behaviour = robot_exploiter
+					has_ai_personality_behaviour = robot_liberator
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "robot_pops_allowed"
+
+		policy_flags = {
+			robots_allowed
+		}
+
+		AI_weight = {
+			factor = 2
+		}
+	}
+}
+
 # pre_sapients
+
 # refugees
+
 # population_controls
+
 # slavery
 
 purge = {
