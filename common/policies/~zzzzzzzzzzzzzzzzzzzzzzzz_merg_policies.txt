@@ -1932,6 +1932,7 @@ border_policy = {
 					has_ai_personality_behaviour = isolationist
 					has_ai_personality_behaviour = attack_neutrals
 				}
+				NOT = { has_crisis_level = crisis_level_5 }
 			}
 			modifier = {
 				factor = 0

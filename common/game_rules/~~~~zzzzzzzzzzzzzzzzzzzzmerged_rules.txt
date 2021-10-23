@@ -2042,6 +2042,12 @@ can_species_be_assembled = {
 		# Organics
 		AND = {
 			is_organic_species = yes
+            # root = {
+            #     check_modifier_value = {
+            #         modifier = planet_pop_assembly_organic_add
+            #         value > 0
+            #     }
+            # }
 			# Hives can only clone drones
 			if = {
 				limit = {
@@ -2079,6 +2085,11 @@ can_species_be_assembled = {
 					}
 				}
 			}
+			# Plentiful Traditions - Extra Perks
+			else_if = {
+				limit = { root.owner = { has_ascension_perk = ap_total_assimilation } }
+				has_trait = trait_plentiful_traditions_pt_cocoon
+			}
 			else = {
 				OR = {
 					root = { has_building = building_clone_vats }
@@ -2089,13 +2100,6 @@ can_species_be_assembled = {
 					is_archetype = SHENHAI
 				}
 			}
-		}
-		# Plentiful perks
-		AND = {
-			root.owner = {
-				has_ascension_perk = ap_total_assimilation				
-			}
-			has_trait = trait_plentiful_traditions_pt_cocoon
 		}
 	}
 	# Vanilla
