@@ -2000,23 +2000,21 @@ can_species_be_assembled = {
 		# Robots
 		AND = {
 			is_robotic = yes
-			AND = {
-				# Azur lane Stellaris DLC
-				NOT = { has_trait = trait_robot_mind_relic_core }
-				root = {
-					check_modifier_value = {
-						modifier = planet_pop_assembly_add
-						value > 0
-					}
-					owner = {
-						NOR = {
-							# Azur lane Stellaris DLC
-							has_authority = auth_azur_lane_1
-							has_authority = auth_azur_lane_2
-							has_authority = auth_azur_lane_K
-							# Girls Frontline
-							has_authority = auth_commonwealth
-						}
+			# Azur lane Stellaris DLC
+			NOT = { has_trait = trait_robot_mind_relic_core }
+			root = {
+				check_modifier_value = {
+					modifier = planet_pop_assembly_add
+					value > 0
+				}
+				owner = {
+					NOR = {
+						# Azur lane Stellaris DLC
+						has_authority = auth_azur_lane_1
+						has_authority = auth_azur_lane_2
+						has_authority = auth_azur_lane_K
+						# Girls Frontline
+						has_authority = auth_commonwealth
 					}
 				}
 			}
