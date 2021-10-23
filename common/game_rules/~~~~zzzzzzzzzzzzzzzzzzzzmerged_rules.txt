@@ -1154,10 +1154,6 @@ can_generate_leader_from_pop = {
 		has_trait = trait_nerve_stapled
 		# Rogue Maid (Rogue Servitor Completely Remake)
 		has_trait = trait_working_machine
-		# Stellaris Evolved
-		has_trait = trait_slave_gene # Also a common trait of ethics mods
-		has_trait = trait_tec_bioservant_nerve_stapled
-		has_trait = trait_tec_cyborg_mindless
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
 		# Ethics & Civics: Bug Branch
@@ -1204,13 +1200,6 @@ can_generate_leader_from_pop = {
 			}
 		}
 	}
-	# Stellaris Evolved
-	OR = {
-		NOT = {
-			has_trait = trait_tec_bioservant
-		}
-		root = { has_technology = tech_tec_bioservant_3 }
-	}
 }
 
 #Checks whether this species is eligible to become rulers through elections
@@ -1220,28 +1209,10 @@ can_generate_leader_from_species = {
 	is_sapient = yes
 	OR = {
 		NAND = {
-			NOT = {
-				root = {
-					OR = {
-						has_technology = "tech_synthetic_leaders"
-						# Stellaris Evolved
-						has_origin = origin_tec_slavetothesystem
-						has_origin = origin_tec_robosapiens
-					}
-				}
-			}
+			NOT = { root = { has_technology = "tech_synthetic_leaders" } }
 			has_trait = "trait_mechanical"
 		}
 		has_citizenship_type = { type = citizenship_full country = root }
-		# Stellaris Evolved
-		NAND = {
-			NOT = { 
-				root = { 
-					has_technology = "tech_capacity_boosters" 
-				} 
-			}
-			has_trait = "trait_tec_bioservant"
-		}
 	}
 }
 
@@ -1893,8 +1864,6 @@ species_has_happiness = {
 		has_trait = trait_machine_unit
 		has_trait = trait_hive_mind
 		has_trait = trait_nerve_stapled
-		# Stellaris Evolved
-		has_trait = trait_tec_bioservant_nerve_stapled
 		# Warship Girls R And MIST Species
 		has_trait = sh_trait_shenhai
 		has_trait = sh_trait_shenhai1
@@ -2019,26 +1988,6 @@ can_species_procreate = {
 			}
 		}
 	}
-	# Stellaris Evolved
-	# Apathic servitors control the population of non trophies pretty well
-	if = {
-		limit = {
-			root.owner = { 
-				has_valid_civic = civic_machine_servitor
-				has_ethic = ethic_gestalt_apathy
-			}
-			NOT = { 
-				has_species_flag = tec_original_biotrophy_@root.owner 
-			}
-		}
-		NOT = { 
-			root = {
-				any_owned_species = {
-					has_species_flag = tec_original_biotrophy_@root.owner 
-				}
-			}
-		}
-	}
 }
 
 # Checks if a pop can be assembled
@@ -2051,40 +2000,23 @@ can_species_be_assembled = {
 		# Robots
 		AND = {
 			is_robotic = yes
-			OR = {
-				AND = {
-					NOR = {
-						# Azur lane Stellaris DLC
-						has_trait = trait_robot_mind_relic_core
-						# Stellaris Evolved
-						has_trait = trait_tec_robot_fractal
+			AND = {
+				# Azur lane Stellaris DLC
+				NOT = { has_trait = trait_robot_mind_relic_core }
+				root = {
+					check_modifier_value = {
+						modifier = planet_pop_assembly_add
+						value > 0
 					}
-					root = {
-						check_modifier_value = {
-							modifier = planet_pop_assembly_add
-							value > 0
+					owner = {
+						NOR = {
+							# Azur lane Stellaris DLC
+							has_authority = auth_azur_lane_1
+							has_authority = auth_azur_lane_2
+							has_authority = auth_azur_lane_K
+							# Girls Frontline
+							has_authority = auth_commonwealth
 						}
-						owner = {
-							NOR = {
-								# Azur lane Stellaris DLC
-								has_authority = auth_azur_lane_1
-								has_authority = auth_azur_lane_2
-								has_authority = auth_azur_lane_K
-								# Girls Frontline
-								has_authority = auth_commonwealth
-							}
-						}
-					}
-				}
-				# Stellaris Evolved
-				AND = { # fractal robots
-					has_trait = trait_tec_robot_fractal
-					root = {
-						check_modifier_value = {
-							modifier = planet_pop_assembly_add
-							value > 0
-						}
-						any_owned_species = { is_exact_same_species = prevprev }
 					}
 				}
 			}
@@ -2109,9 +2041,8 @@ can_species_be_assembled = {
 			root = { owner = { has_valid_civic = civic_machine_replicators } }
 			has_trait = trait_machine_central
 		}
-		# Organics - this is the vanilla version
+		# Organics
 		AND = {
-			NOT = { has_global_flag = stellarisevolved }
 			is_organic_species = yes
 			# Hives can only clone drones
 			if = {
@@ -2158,196 +2089,6 @@ can_species_be_assembled = {
 					# Warship Girls R and MIST species
 					is_archetype = WARSHIPGIRL
 					is_archetype = SHENHAI
-				}
-			}
-		}
-		# Now for Stellaris Evolved
-		# Generic organic assembly rule
-		AND = {
-			has_global_flag = stellarisevolved
-			is_organic_species = yes
-			OR = {
-				AND = { # Non flourishing plantoids
-					NOT = {
-						has_trait = trait_plantoid_budding
-					}
-					NOT = {
-						has_trait = trait_tec_lithoid_sedimentary
-					}
-					root = {
-						check_modifier_value = {
-							modifier = planet_pop_assembly_organic_add
-							value > 0
-						}
-						tec_has_bioservant_buildings = no
-						tec_has_genetic_buildings = no
-						tec_has_robotic_buildings = no
-					}
-				}
-				AND = { # flourishing plantoids
-					OR = {
-						has_trait = trait_plantoid_budding
-						has_trait = trait_tec_lithoid_sedimentary
-					}
-					root = {
-						any_owned_species = { is_exact_same_species = prevprev }
-						check_modifier_value = {
-							modifier = planet_pop_assembly_organic_add
-							value > 0
-						}
-						tec_has_bioservant_buildings = no
-						tec_has_genetic_buildings = no
-						tec_has_robotic_buildings = no
-					}
-				}
-			}
-			root.owner = {
-				NOT = {
-					has_policy_flag = tec_assembly_disallowed
-				}
-			}
-			if = {	# Hives can only clone drones
-				limit = {
-					root.owner = { is_hive_empire = yes }
-					root = {
-						check_modifier_value = {
-							modifier = planet_pop_assembly_organic_add
-							value > 0
-						}
-						tec_has_bioservant_buildings = no
-						tec_has_genetic_buildings = no
-						tec_has_robotic_buildings = no
-					}
-				}
-				has_trait = trait_hive_mind
-			}
-			else_if = { # Clone army thing
-				limit = {
-					OR = {
-						has_trait = trait_clone_soldier_infertile
-						has_trait = trait_clone_soldier_infertile_full_potential
-					}
-				}
-				root = {
-					# Event 'clones.3' should cover this, but extra safety check.
-					has_building = building_clone_army_clone_vat
-					NOT = {
-						check_variable = {
-							which = clone_pops_missing
-							value = 0
-						}
-					}
-				}
-			}
-		}
-		# Pure main species organic assembly rule
-        AND = {
-			has_global_flag = stellarisevolved
-            is_organic_species = yes
-            species = { is_exact_same_species = root.owner }
-            OR = {
-                AND = { # Non flourishing plantoids
-                    NOT = { has_trait = trait_plantoid_budding }
-                    NOT = { has_trait = trait_tec_lithoid_sedimentary }
-                    root = {
-                        check_modifier_value = {
-                            modifier = planet_pop_assembly_organic_add
-                            value > 0
-                        }
-                        tec_has_bioservant_buildings = no
-                        tec_has_genetic_buildings = yes
-                        tec_has_robotic_buildings = no
-                    }
-                }
-                AND = { # flourishing plantoids
-                    OR = {
-                        has_trait = trait_plantoid_budding
-                        has_trait = trait_tec_lithoid_sedimentary
-                    }
-                    root = {
-                        any_owned_species = { is_exact_same_species = prevprev }
-                        check_modifier_value = {
-                            modifier = planet_pop_assembly_organic_add
-                            value > 0
-                        }
-                        tec_has_bioservant_buildings = no
-                        tec_has_genetic_buildings = yes
-                        tec_has_robotic_buildings = no
-                    }
-                }
-            }
-            root.owner = { has_policy_flag = tec_assembly_disallowed }
-		}
-		# Bioservants can only be assembled with bioservant facilities present
-		AND = {
-			has_global_flag = stellarisevolved
-			is_archetype = BIOSERVANT
-			root = {
-				tec_has_bioservant_buildings = yes
-				tec_has_genetic_buildings = no
-				tec_has_robotic_buildings = no
-			}
-			root = {
-				check_modifier_value = {
-					modifier = planet_pop_assembly_organic_add
-					value > 0
-				}
-			}
-			root.owner = {
-				NOT = { has_policy_flag = tec_assembly_disallowed }
-			}
-		}
-		# Replicants can grow, be cloned, be assembled, whatever...
-		AND = {
-			has_global_flag = stellarisevolved
-			is_archetype = REPLICANT
-			# A specific building will be created in the future
-			root = {
-				tec_has_assembly_buildings = yes
-				OR = {
-					check_modifier_value = {
-						modifier = planet_pop_assembly_organic_add
-						value > 0
-					}
-					check_modifier_value = {
-						modifier = planet_pop_assembly_add
-						value > 0
-					}
-				}
-			}
-			if = {	# Hives can only clone drones
-				limit = {
-					root.owner = { is_hive_empire = yes }
-				}
-				has_trait = trait_hive_mind
-			}
-			else_if = { # flourishing plantoids & lithoids
-				limit = { 
-					OR = {
-						has_trait = trait_plantoid_budding
-						has_trait = trait_tec_lithoid_sedimentary
-					}
-				}
-				root = {
-					any_owned_species = { is_exact_same_species = prevprev }
-				}
-			}
-			else_if = { # Clone army thing
-				limit = {
-					OR = {
-						has_trait = trait_clone_soldier_infertile
-						has_trait = trait_clone_soldier_infertile_full_potential
-					}
-				}
-				root = {
-					# Event 'clones.3' should cover this, but extra safety check.
-					has_building = building_clone_army_clone_vat
-					NOT = {
-						check_variable = {
-							which = clone_pops_missing
-							value = 0
-						}
-					}
 				}
 			}
 		}
@@ -3176,27 +2917,6 @@ can_build_branch_offices = {
 			is_country_type = hfe_pirate
 		}
 	}
-	# Stellaris Evolved
-	if = {
-		limit = { 
-			has_global_flag = stellarisevolved
-			is_hive_empire = yes
-		}
-		custom_tooltip = {
-			fail_text = BRANCH_OFFICE_TEC_NOT_SYMBIOTIC
-			tec_is_symbiotic_hivemind = yes
-		}
-	}
-	else_if = {
-		limit = {
-			has_global_flag = stellarisevolved
-			is_machine_empire = yes
-		}
-		custom_tooltip = {
-			fail_text = BRANCH_OFFICE_TEC_NOT_SYMBIOTIC_MACHINE
-			tec_is_symbiotic_machine = yes
-		}
-	}
 }
 
 # This = country
@@ -3233,19 +2953,6 @@ can_support_branch_offices = {
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_REGULAR_EMPIRE
 		is_regular_empire = yes
-	}
-	# Stellaris Evolved
-	# Gestalts empathic empires can host branch offices
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_TEC_ONLY_EMPATHIC_GESTALTS
-		OR = {
-			NOT = { has_global_flag = stellarisevolved }
-			AND = {
-				has_global_flag = stellarisevolved
-				is_gestalt = yes
-				has_ethic = ethic_gestalt_empathy
-			}
-		}
 	}
 	# More Authorities
 	# As some mods allow megacorps to build branch offices in other megacorps, we need to check that we're not building one on our own empire.
@@ -3294,20 +3001,6 @@ can_build_branch_office_on_planet = {
 			AND = {
 				has_global_flag = expanded_pops_active
 				owner = { has_country_flag = cb_markets_opened@root }
-			}
-			# Stellaris Evolved
-			AND = {
-				has_global_flag = stellarisevolved
-				root = {
-					NOT = {
-						has_valid_civic = civic_tec_machine_traders
-					}
-					tec_is_symbiotic_machine = yes
-				}
-			}
-			AND = {
-				has_global_flag = stellarisevolved
-				root = { tec_is_parasite_hivemind = yes }
 			}
 			# Warship Girls R And MIST Species
 			AND = {
@@ -3441,166 +3134,21 @@ can_build_branch_office_on_planet = {
 			}
 		}
 	}	
-	# Stellaris Evolved
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_TEC_NOT_COOPERACORP
-		exists = owner
-		OR = {
-			owner = { 
-				is_megacorp = no
-			}
-
-			AND = {
-				owner = { 
-					is_megacorp = yes
-				}
-				root = {
-					has_valid_civic = civic_tec_cooperacorp
-				}
-			}
-			
-			AND = {
-				owner = { 
-					is_megacorp = yes
-					has_valid_civic = civic_tec_cooperacorp
-				}
-				root = {
-					NOT = {
-						has_valid_civic = civic_tec_cooperacorp
-					}
-				}
-			}
-		}
-	}
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_TEC_NOT_RELATION
-		exists = owner
-		OR = {
-			NOT = { has_global_flag = stellarisevolved }
-			AND = {
-				has_global_flag = stellarisevolved
-				OR = {
-					root = { is_megacorp = yes }
-					root = { 
-						has_valid_civic = civic_tec_machine_traders
-						tec_is_symbiotic_machine = yes
-					}
-					root = { is_criminal_syndicate = yes }
-					root = { tec_is_parasite_hivemind = yes }
-					root = { tec_is_parasite_machine = yes }
-					this.owner = {
-						opinion_level = { who = root level >= good }
-					}
-					owner = { is_in_federation_with = root }
-		
-					# allow branch offices in subsidiaries and vice versa
-					root = {
-						is_subject = yes
-						OR = {
-							is_subject_type = subsidiary
-							# Reworked Advanced Ascension
-							is_subject_type = subsidiary2
-						}
-						overlord = { is_same_value = prevprev.owner }
-					}
-					owner = {
-						is_subject = yes
-						OR = {
-							is_subject_type = subsidiary
-							# Reworked Advanced Ascension
-							is_subject_type = subsidiary2
-						}
-						overlord = { is_same_value = root }
-					}
-				}
-			}
-		}
-	}
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_TEC_PARASITE_HAS_TRUCE
-		exists = owner
-		OR = {
-			NOT = { has_global_flag = stellarisevolved }
-			AND = {
-				has_global_flag = stellarisevolved
-				OR = {
-					root = { 
-						tec_is_parasite_hivemind = no
-					}
-					owner = {
-						NOR = {
-							has_truce = root
-							is_at_war_with = root
-						}
-					}
-				}
-			}
-		}
-	}
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_TEC_PARASITE_COOLDOWN
-		exists = owner
-		OR = {
-			NOT = { has_global_flag = stellarisevolved }
-			AND = {
-				has_global_flag = stellarisevolved
-				OR = {
-					root = { 
-						tec_is_parasite_hivemind = no
-					}
-					AND = {
-						root = { tec_is_parasite_hivemind = yes }
-						NOT = { 
-							has_planet_flag = parasite_branch_closed_cooldown_planet@root 
-						}
-					}
-				}
-			}
-		}
-	}
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_TEC_NOT_OWN
-		exists = owner
-		OR = {
-			NOT = { has_global_flag = stellarisevolved }
-			AND = {
-				has_global_flag = stellarisevolved
-				owner = {
-					NOT = { 
-						is_same_value = root
-					}
-				}
-			}
-		}
-	}
 }
 
 # This = country
 # Checked by is_criminal_syndicate trigger
 is_criminal_syndicate_rule = {
-	OR = {
-		AND = {
-			is_megacorp = yes
-			OR = {
-				has_valid_civic = civic_criminal_heritage
-				# The Empty Vagrant
-				has_valid_civic = civic_ev_criminal_ship
-			}
-			# Stellaris Evolved
-			OR = {
-				NOT = { has_global_flag = stellarisevolved }
-				AND = {
-					has_global_flag = stellarisevolved
-					tec_is_parasite_hivemind = no
-				}
-			}
-		}
-		AND = {
-			has_global_flag = stellarisevolved
-			tec_is_parasite_hivemind = yes
+	AND = {
+		is_megacorp = yes
+		OR = {
+			has_valid_civic = civic_criminal_heritage
+			# The Empty Vagrant
+			has_valid_civic = civic_ev_criminal_ship
 		}
 	}
 }
+
 
 # This = planet
 can_crossbreed_species_on_planet = {

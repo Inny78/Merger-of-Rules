@@ -54,7 +54,7 @@ diplomatic_stance = {
 		valid = {
 			NOR = {
 				has_valid_civic = civic_inwards_perfection
-				# Ethics and Civics Alternative - Redux / Classic / Stellaris Evolved
+				# Ethics and Civics Alternative - Redux / Classic
 				has_valid_civic = civic_isolationism
 				# Espionage Extended
 				has_valid_civic = civic_shadow_state
@@ -202,7 +202,7 @@ diplomatic_stance = {
 		valid = {
 			NOR = {
 				has_valid_civic = civic_inwards_perfection
-				# Ethics and Civics Alternative - Redux / Classic / Stellaris Evolved
+				# Ethics and Civics Alternative - Redux / Classic
 				has_valid_civic = civic_isolationism
 				# Espionage Extended
 				has_valid_civic = civic_shadow_state
@@ -379,12 +379,9 @@ diplomatic_stance = {
 			modifier = {
 				factor = 100.0 # Inwards Perfection should almost always go isolationist
 				has_valid_civic = civic_inwards_perfection
-				# Ethics and Civics Alternative - Redux / Stellaris Evolved
+				# Ethics and Civics Alternative - Redux
 				AND = {
-					OR = {
-						has_global_flag = cultural_overhaul_redux_active
-						has_global_flag = stellarisevolved
-					}
+					has_global_flag = cultural_overhaul_redux_active
 					has_valid_civic = civic_isolationism
 				}
 			}
@@ -480,7 +477,7 @@ diplomatic_stance = {
 				is_country_type = awakened_fallen_empire_ev
 			}
 			is_gestalt = no
-			# Ethics and Civics Alternative - Redux / Classic / Bugged / Stellaris Evolved
+			# Ethics and Civics Alternative - Redux / Classic / Bugged
 			OR = {
 				is_megacorp = yes
 				has_ethic = ethic_capitalism
@@ -492,12 +489,9 @@ diplomatic_stance = {
 		valid = {
 			NOR = {
 				has_valid_civic = civic_inwards_perfection
-				# Ethics and Civics Alternative - Redux / Stellaris Evolved
+				# Ethics and Civics Alternative - Redux
 				AND = {
-					OR = {
-						has_global_flag = cultural_overhaul_redux_active
-						has_global_flag = stellarisevolved
-					}
+					has_global_flag = cultural_overhaul_redux_active
 					has_valid_civic = civic_isolationism
 				}
 			}
@@ -603,12 +597,9 @@ diplomatic_stance = {
 			NOR = {
 				has_valid_civic = civic_inwards_perfection
 				has_modifier = humiliated
-				# Ethics and Civics Alternative - Redux / Stellaris Evolved
+				# Ethics and Civics Alternative - Redux
 				AND = {
-					OR = {
-						has_global_flag = cultural_overhaul_redux_active
-						has_global_flag = stellarisevolved
-					}
+					has_global_flag = cultural_overhaul_redux_active
 					has_valid_civic = civic_isolationism
 				}
 			}
@@ -887,185 +878,6 @@ diplomatic_stance = {
 			weight = 1
 		}
 	}
-	# Stellaris Evolved
-	option = {
-		name = "diplo_stance_evangelist"
-		icon = "GFX_diplomatic_stance_evangelist"
-
-		potential = {
-			has_global_flag = stellarisevolved
-			always = no
-			is_unfriendly = no # Not homicidal or barbaric despoilers
-			NOR = { 
-				has_valid_civic = civic_inwards_perfection 
-				has_valid_civic = civic_tec_propagandistic
-				has_valid_civic = civic_brand_loyalty
-			}
-			OR = {
-				has_valid_civic = civic_evangelism
-			}
-		}
-
-		policy_flags = {
-			diplo_stance_evangelist
-		}
-
-		modifier = {
-			envoy_improve_relations_mult = -1
-			envoy_harm_relations_mult = -1
-			# custom_tooltip = {
-			# 	text = evangalist_effect
-			# }
-		}
-
-		on_enabled = {
-			hidden_effect = {
-				country_event = {
-					id = techaul_evangelist.1
-				}
-			}
-		}
-		ai_weight = {
-			weight = 10
-
-			modifier = {
-				factor = 0
-				NOT = { has_country_flag = has_encountered_other_empire }
-			}
-
-			# Tons of Ethics modifiers!
-			# Cranky people:
-			modifier = {
-				factor = 0
-				has_ethic = ethic_fanatic_xenophobe
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_authoritarian
-			}
-
-			# Nice people:
-			modifier = {
-				factor = 2.0
-				has_ethic = ethic_fanatic_spiritualist
-			}
-			modifier = {
-				factor = 2.0
-				has_ethic = ethic_fanatic_xenophile
-			}
-			modifier = {
-				factor = 1.3
-				has_ethic = ethic_fanatic_pacifist
-			}
-			modifier = {
-				factor = 1.3
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 1.1
-				has_ethic = ethic_fanatic_materialist
-			}
-
-			modifier = {
-				factor = 1.25
-				has_ai_personality_behaviour = multispecies
-			}
-
-			modifier = {
-				factor = 3.0
-				has_ai_personality = federation_builders
-			}
-		}
-	}
-	option = {
-		name = "diplo_stance_propaganda"
-		icon = "GFX_diplomatic_stance_propaganda"
-
-		potential = {
-			has_global_flag = stellarisevolved
-			always = no
-			is_unfriendly = no # Not homicidal or barbaric despoilers
-			NOR = { 
-				has_valid_civic = civic_inwards_perfection 
-				has_valid_civic = civic_evangelism
-			}
-			OR = {
-				has_valid_civic = civic_tec_propagandistic
-				has_valid_civic = civic_brand_loyalty
-			}
-		}
-
-		policy_flags = {
-			diplo_stance_propaganda
-		}
-
-		modifier = {
-			envoy_improve_relations_mult = -1
-			envoy_harm_relations_mult = -1
-			# custom_tooltip = {
-			# 	text = evangalist_effect
-			# }
-		}
-
-		on_enabled = {
-			hidden_effect = {
-				country_event = {
-					id = techaul_evangelist.1
-				}
-			}
-		}
-		ai_weight = {
-			weight = 10
-
-			modifier = {
-				factor = 0
-				NOT = { has_country_flag = has_encountered_other_empire }
-			}
-
-			# Tons of Ethics modifiers!
-			# Cranky people:
-			modifier = {
-				factor = 0
-				has_ethic = ethic_fanatic_xenophobe
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_authoritarian
-			}
-
-			# Nice people:
-			modifier = {
-				factor = 2.0
-				has_ethic = ethic_fanatic_spiritualist
-			}
-			modifier = {
-				factor = 2.0
-				has_ethic = ethic_fanatic_xenophile
-			}
-			modifier = {
-				factor = 1.3
-				has_ethic = ethic_fanatic_pacifist
-			}
-			modifier = {
-				factor = 1.3
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 1.1
-				has_ethic = ethic_fanatic_materialist
-			}
-
-			modifier = {
-				factor = 1.25
-				has_ai_personality_behaviour = multispecies
-			}
-
-			modifier = {
-				factor = 3.0
-				has_ai_personality = federation_builders
-			}
-		}
-	}
 	# Espionage Extended
 	option = {
 		name = "diplo_stance_shadow"
@@ -1151,8 +963,6 @@ war_philosophy = {
 				has_valid_civic = "civic_harm_hive"
 				has_valid_civic = "civic_harm_machine"
 				has_ai_personality = harmonious_hierarchy
-				# Stellaris Evolved
-				has_valid_civic = "civic_peacekeepers"
 				# Expanded Gestalts
 				has_valid_civic = "civic_mutualistic_behavior"
 			}
@@ -1703,8 +1513,6 @@ orbital_bombardment = {
 				has_ethic = "ethic_fanatic_green"
 				# Ethics and Civics Alternative - Redux
 				has_valid_civic = "civic_xeno_militarist"
-				# Stellaris Evolved
-				has_valid_civic = "civic_peacekeepers"
 			}
 		}
 	}
@@ -1869,7 +1677,7 @@ resettlement = {
 		# Ethics and Civics Classic
 		valid = {
 			NOR = {
-				has_valid_civic = civic_beacon_of_liberty # Also in Ethics and Civics Alternative - Redux and Stellaris Evolved
+				has_valid_civic = civic_beacon_of_liberty # Also in Ethics and Civics Alternative - Redux
 				has_valid_civic = civic_anarchy_ideals
 				# Ethics & Civics: Bug Branch
 				has_valid_civic = civic_beacon_of_liberty_corpo
@@ -2085,10 +1893,7 @@ border_policy = {
 				has_valid_civic = civic_fanatic_purifiers
 				# Ethics and Civics mods but not Redux
                 AND = {
-					OR = {
-                    	has_global_flag = cultural_overhaul_active # Classics and Bug Branch
-						has_global_flag = stellarisevolved
-					}
+                   	has_global_flag = cultural_overhaul_active # Classics and Bug Branch
                     NOT = { has_global_flag = cultural_overhaul_redux_active }
                     has_valid_civic = civic_inwards_perfection
                 }
@@ -2161,37 +1966,18 @@ artificial_intelligence_policy = {
 			# Girls Frontline
 			has_authority = auth_gf_commonwealth
 		}
-		# Stellaris Evolved
-		NOR = { 
-			has_origin = origin_tec_slavetothesystem
-			has_origin = origin_tec_robosapiens
-		}
 	}
 	option = {
 		name = "ai_outlawed"
 		valid = {
-			OR = {
-				AND = {
-					NOT = { has_global_flag = stellarisevolved }
-					NOR = {
-						is_materialist = yes
-						has_valid_civic = civic_machine_cult # Ethics and Civics Classic/Redux
-						has_valid_civic = civic_machine_cult_corpo # Ethics & Civics: Bug Branch
-						custom_tooltip = {
-							success_text = is_a_synthetic_empire
-							has_country_flag = synthetic_empire
-						}
-					}
-				}
-				AND = {
-					has_global_flag = stellarisevolved
-					NOR = {
-						custom_tooltip = {
-							success_text = is_a_synthetic_empire
-							tec_is_synthetic_controlled_empire = yes
-						}
-						has_ascension_perk = ap_synthetic_evolution
-						tec_is_robot_lover_spiritualist = yes
+			AND = {
+				NOR = {
+					is_materialist = yes
+					has_valid_civic = civic_machine_cult # Ethics and Civics Classic/Redux
+					has_valid_civic = civic_machine_cult_corpo # Ethics & Civics: Bug Branch
+					custom_tooltip = {
+						success_text = is_a_synthetic_empire
+						has_country_flag = synthetic_empire
 					}
 				}
 			}
@@ -2213,17 +1999,7 @@ artificial_intelligence_policy = {
 			}
 			modifier = {
 				factor = 5
-				NOT = { has_global_flag = stellarisevolved }
 				is_spiritualist = yes
-			}
-			# Stellaris Evolved
-			modifier = {
-				factor = 5
-				has_global_flag = stellarisevolved
-				is_spiritualist = yes
-				NOT = {
-					tec_is_robot_lover_spiritualist = yes
-				}
 			}
 			# Vanilla			
 			modifier = {
@@ -2269,7 +2045,7 @@ artificial_intelligence_policy = {
 				has_valid_ai_personality = yes
 				has_ai_personality_behaviour = robot_liberator
 			}
-			# Ethics and Civics Classic/Redux/Stellaris Evolved
+			# Ethics and Civics Classic/Redux/
 			modifier = {
 				factor = 0
 				is_spiritualist = yes
@@ -2299,50 +2075,17 @@ artificial_intelligence_policy = {
 	option = {
 		name = "ai_full_rights"
 		valid = {
-			OR = {
-				AND = {
-					NOT = { has_global_flag = stellarisevolved }
-					OR = {
-						custom_tooltip = {
-							fail_text = is_a_synthetic_empire
-							has_country_flag = synthetic_empire
-						}
-						is_spiritualist = no
-						# Ethics and Civics Classic/Redux
-						has_valid_civic = civic_machine_cult
-						# Ethics & Civics: Bug Branch
-						has_valid_civic = civic_machine_cult_corpo
-					}
-				}
-				AND = {
-					has_global_flag = stellarisevolved
-					OR = {
-						is_spiritualist = no
-						AND = {
-							is_spiritualist = yes
-							OR = {
-								tec_is_robot_lover_spiritualist = yes
-								has_ascension_perk = ap_the_flesh_is_weak
-							}
-						}
-						custom_tooltip = {
-							fail_text = is_a_synthetic_empire
-							OR = {
-								has_ascension_perk = ap_synthetic_evolution
-								tec_is_synthetic_empire = yes
-							}
-						}
-					}
-				}
-			}
-			OR = {
-				NOT = { has_global_flag = stellarisevolved }
-				AND = {
-					has_global_flag = stellarisevolved
+			AND = {
+				OR = {
 					custom_tooltip = {
-						fail_text = "tec_fail_requires_intelligent_robots"
-						has_technology = tech_droid_workers
+						fail_text = is_a_synthetic_empire
+						has_country_flag = synthetic_empire
 					}
+					is_spiritualist = no
+					# Ethics and Civics Classic/Redux
+					has_valid_civic = civic_machine_cult
+					# Ethics & Civics: Bug Branch
+					has_valid_civic = civic_machine_cult_corpo
 				}
 			}
 			NOT = { has_policy_flag = robots_outlawed }
@@ -2378,31 +2121,11 @@ artificial_intelligence_policy = {
 robot_pop_policy = {
 
 	potential = {
-		OR = {
-			AND = {
-				NOT = { has_global_flag = stellarisevolved }
-				NOT = { has_ethic = ethic_gestalt_consciousness }
-				OR = {
-					has_technology = tech_robotic_workers
-					any_owned_species = { has_trait = trait_mechanical }
-				}
-			}
-			# Stellaris Evolved
-			AND = {
-				has_global_flag = stellarisevolved
-				OR = {
-					has_technology = tech_robotic_workers
-					any_owned_species = { has_trait = trait_mechanical }
-				}
-				OR = {
-					NOT = { has_ethic = "ethic_gestalt_consciousness" }
-					AND = {
-						has_ethic = ethic_gestalt_consciousness
-						is_hive_empire = yes
-						tec_is_organic_hive = no
-						tec_is_radical_hive = no
-					}
-				}
+		AND = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			OR = {
+				has_technology = tech_robotic_workers
+				any_owned_species = { has_trait = trait_mechanical }
 			}
 		}
 		# Girls Frontline
@@ -2415,19 +2138,6 @@ robot_pop_policy = {
 		valid = {
 			is_materialist = no
 			NOT = { has_policy_flag = ai_full_rights }
-			# Stellaris Evolved
-			OR = {
-				NOT = { has_global_flag = stellarisevolved }
-				AND = {
-					has_global_flag = stellarisevolved
-					NOR = {
-						tec_is_synthetic_empire = yes
-						has_ascension_perk = ap_synthetic_evolution
-						is_materialist = yes
-						has_valid_civic = civic_machine_cult
-					}
-				}
-			}
 			NOR = {
 				# Ethics & Civics Classic/Redux
 				has_valid_civic = civic_machine_cult

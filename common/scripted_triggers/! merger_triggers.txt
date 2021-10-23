@@ -23,14 +23,6 @@ merg_is_standard_empire = {
 				is_country_type = awakened_fallen_empire_ev
 			}
 		}
-		# Stellaris Evolved
-		AND = {
-			has_global_flag = stellarisevolved
-			OR = {
-				is_country_type = default_exocolonist
-				is_country_type = default_exocolonist_ai
-			}
-		}
 		# Human Fallen Empire
 		AND = {
 			has_global_flag = hfe_installed
@@ -59,14 +51,6 @@ merg_is_default_empire = {
 		AND = {
 			has_global_flag = enable_empty_vagrant_mod
 			is_country_type = default_ev
-		}
-		# Stellaris Evolved
-		AND = {
-			has_global_flag = stellarisevolved
-			OR = {
-				is_country_type = default_exocolonist
-				is_country_type = default_exocolonist_ai
-			}
 		}
 	}
 }
