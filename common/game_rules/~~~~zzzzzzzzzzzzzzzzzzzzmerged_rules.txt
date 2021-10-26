@@ -2156,48 +2156,26 @@ can_orbital_bombard = {
 					root.OWNER = { is_hostile = prev }
 				}
 				# Ancient Empire
-				AND = {
-					has_global_flag = has_ancient_empire_mod
-					OR = {
-						is_country_type = ag_ancient_primitive_crisis
-						is_country_type = ag_ancient_epsilon_guardian
-						is_country_type = ag_zeta_crisis_country
-						is_country_type = ag_ancient_psi_guardian
-					}
-				}
-				AND = {
-					has_global_flag = acot_activated
-					OR = {
-						is_country_type = original_empire
-						is_country_type = void_lifeforms_1
-						is_country_type = void_lifeforms_2
-					}
-				}
+				is_country_type = ag_ancient_primitive_crisis
+				is_country_type = ag_ancient_epsilon_guardian
+				is_country_type = ag_zeta_crisis_country
+				is_country_type = ag_ancient_psi_guardian
+				# ACOT
+				is_country_type = original_empire
+				is_country_type = void_lifeforms_1
+				is_country_type = void_lifeforms_2
 				# Star Wars: Kuat Ancient Empire
-				AND = {
-					has_global_flag = install_kuat_mod
-					OR = {
-						is_country_type = kuat_fleet
-						is_country_type = awakened_return_kuat_empire
-					}
-				}
+				is_country_type = kuat_fleet
+				is_country_type = awakened_return_kuat_empire
 				# Gigastructural Engineering & More
-				AND = {
-					has_global_flag = gigastructures_enabled
-					OR = {
-						is_country_type = katzenartig_imperium
-						is_country_type = compound_empire
-					}
-				}
+				is_country_type = katzenartig_imperium
+				is_country_type = compound_empire
 				# LEX
 				is_country_type = mem_ancestor_guardian
 				# Solar Storm
 				is_country_type = abyssal_host_invaders_type
 				# Human Fallen Empires
-				AND = {
-					has_global_flag = hfe_installed
-					is_country_type = human_fallen_empire
-				}
+				is_country_type = human_fallen_empire
 			}
 		}
 		root.OWNER = {
@@ -2224,65 +2202,39 @@ can_orbital_bombard = {
 				# Star Wars: UnknownWorld Shipgirls Story
 				is_country_type = afk_crisis_country
 				# Ancient Empire
+				is_country_type = ag_kuat_invasion_country
+				is_country_type = ag_ancient_primitive_crisis
+				is_country_type = ag_ancient_gamma_guardian
+				is_country_type = ag_ancient_epsilon_guardian
+				is_country_type = ag_zeta_crisis_country
 				AND = {
-					has_global_flag = has_ancient_empire_mod
-					OR = {
-						is_country_type = ag_kuat_invasion_country
-						is_country_type = ag_ancient_primitive_crisis
-						is_country_type = ag_ancient_gamma_guardian
-						is_country_type = ag_ancient_epsilon_guardian
-						is_country_type = ag_zeta_crisis_country
-						AND = {
-							is_country_type = ag_ancient_psi_guardian
-							from.controller = { is_hostile = root.owner }
-						}
-					}
+					is_country_type = ag_ancient_psi_guardian
+					from.controller = { is_hostile = root.owner }
 				}
 				# ACOT
-				AND = {
-					has_global_flag = acot_activated
-					OR = {
-						is_country_type = original_empire
-						is_country_type = void_lifeforms_1
-						is_country_type = void_lifeforms_2
-					}
-				}
+				is_country_type = original_empire
+				is_country_type = void_lifeforms_1
+				is_country_type = void_lifeforms_2
 				# Star Wars: Kuat Ancient Empire
-				AND = {
-					has_global_flag = install_kuat_mod
-					OR = {
-						is_country_type = kuat_fleet
-						is_country_type = awakened_return_kuat_empire
-						is_country_type = kuat_fallen_empire
-						is_country_type = kuat_awakened_fallen_empire
-						is_country_type = awakened_return_kuat_empire
-					}
-				}
+				is_country_type = kuat_fleet
+				is_country_type = awakened_return_kuat_empire
+				is_country_type = kuat_fallen_empire
+				is_country_type = kuat_awakened_fallen_empire
+				is_country_type = awakened_return_kuat_empire
 				# History of the Lost Empire
 				is_country_type = LsE_fallen_empire
 				# Gigastructural Engineering & More
-				AND = {
-					has_global_flag = gigastructures_enabled
-					OR = {
-						is_country_type = katzenartig_imperium
-						is_country_type = acot_crazed_stellarite
-						is_country_type = compound_empire
-					}
-				}
+				is_country_type = katzenartig_imperium
+				is_country_type = acot_crazed_stellarite
+				is_country_type = compound_empire
 				# The Empty Vagrant
-				AND = {
-					has_global_flag = enable_empty_vagrant_mod
-					is_country_type = default_ev
-				}
+				is_country_type = default_ev
 				# LEX
 				is_country_type = mem_ancestor_guardian
 				# Solar Storm
 				is_country_type = abyssal_host_invaders_type
 				# Human Fallen Empires
-				AND = {
-					has_global_flag = hfe_installed
-					is_country_type = human_fallen_empire
-				}
+				is_country_type = human_fallen_empire
 			}
 		}
 		AND = {

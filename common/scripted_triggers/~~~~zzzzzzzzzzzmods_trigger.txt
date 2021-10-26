@@ -84,7 +84,22 @@ has_advanced_fort = {
 
 # Overwriting this for other mods to use my trigger instead.
 is_zofe_compatible = {
-	merg_is_default_empire = yes
+	OR = {
+		is_country_type = default
+		# ZOFE
+		AND = {
+			has_global_flag = zofe_activated
+			OR = {
+				is_country_type = ascended_empire
+				is_country_type = lost_empire
+			}
+		}
+		# The Empty Vagrant
+		AND = {
+			has_global_flag = enable_empty_vagrant_mod
+			is_country_type = default_ev
+		}
+	}
 }
 
 # Overwriting to give support to other ringworlds
@@ -92,6 +107,7 @@ is_zofe_compatible = {
 giga_habitable_structure = {
 	OR = {
 		uses_district_set = habitat
+		is_ringworld = yes
 		# Planetary Diversity
 		uses_district_set = pdplanethab
 		# Gigastructural Engineering & More
@@ -105,6 +121,47 @@ giga_habitable_structure = {
 		uses_district_set = acot_giga_void_sphere
 		uses_district_set = giga_alderson
 		is_planet_class = pc_pouchkinn_black_hole
+		# For reference, unused
+		# uses_district_set = maginot_world_districts
+
+		# Ancient Empire
+		uses_district_set = ag_ancient_ringworld
+
+		# Starborn: Improved Voidtouched
+		uses_district_set = starborn_start
+
+		# Twinks Atlantean
+		uses_district_set = skypalace
+
+		# More Events Mod
+		is_planet_class = pc_mem_vazuran_habitat
+
+		# Acquisition of Technology
+		uses_district_set = dm_habitat
+		uses_district_set = ae_habitat
+		uses_district_set = sigma_habitat
+
+ 		# Giga Diversity - these don't exist yet
+	}
+}
+
+# AOT trigger disallowing shields to be shown
+is_memeable_space_habitat = {
+	OR = {
+		uses_district_set = habitat
+		habitable_structure = yes
+		# Planetary Diversity
+		uses_district_set = pdplanethab
+		# Gigastructural Engineering & More
+		uses_district_set = giga_planet
+		uses_district_set = penrose_ring
+		uses_district_set = interstellar_ring
+		uses_district_set = giga_gas_giant_habitat
+		uses_district_set = giga_birch
+		uses_district_set = virtual_ring
+		uses_district_set = virtual_ring_industry
+		uses_district_set = acot_giga_void_sphere
+		uses_district_set = giga_alderson
 		# For reference, unused
 		# uses_district_set = maginot_world_districts
 

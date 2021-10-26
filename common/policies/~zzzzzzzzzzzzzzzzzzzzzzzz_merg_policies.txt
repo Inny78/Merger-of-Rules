@@ -14,7 +14,7 @@
 diplomatic_stance = {
 	potential = {
 		OR = {
-			merg_is_default_empire = yes
+			merg_is_default_empire_not_ev = yes
 			is_country_type = primitive
 			is_country_type = awakened_marauders
 			# Star Wars: Kuat Ancient Empire
@@ -38,7 +38,7 @@ diplomatic_stance = {
 
 		potential = {
 			OR = {
-				merg_is_default_empire = yes
+				merg_is_default_empire_not_ev = yes
 				is_country_type = awakened_fallen_empire
 				# ZOFE
 				is_country_type = ascended_empire
@@ -188,7 +188,7 @@ diplomatic_stance = {
 
 		potential = {
 			OR = {
-				merg_is_default_empire = yes
+				merg_is_default_empire_not_ev = yes
 				is_country_type = awakened_fallen_empire
 				# Star Wars: Kuat Ancient Empire
 				is_country_type = kuat_awakened_fallen_empire
@@ -321,7 +321,7 @@ diplomatic_stance = {
 
 		potential = {
 			OR = {
-				merg_is_default_empire = yes
+				merg_is_default_empire_not_ev = yes
 				is_country_type = awakened_fallen_empire
 				# Star Wars: Kuat Ancient Empire
 				is_country_type = kuat_awakened_fallen_empire
@@ -419,7 +419,7 @@ diplomatic_stance = {
 
 		potential = {
 			OR = {
-				merg_is_default_empire = yes
+				merg_is_default_empire_not_ev = yes
 				is_country_type = awakened_fallen_empire
 				# Star Wars: Kuat Ancient Empire
 				is_country_type = kuat_awakened_fallen_empire
@@ -467,7 +467,7 @@ diplomatic_stance = {
 
 		potential = {
 			OR = {
-				merg_is_default_empire = yes
+				merg_is_default_empire_not_ev = yes
 				is_country_type = awakened_fallen_empire
 				# Star Wars: Kuat Ancient Empire
 				is_country_type = kuat_awakened_fallen_empire
@@ -581,7 +581,7 @@ diplomatic_stance = {
 			OR = {
 				is_country_type = awakened_fallen_empire
 				is_country_type = awakened_marauders
-				merg_is_default_empire = yes
+				merg_is_default_empire_not_ev = yes
 				# ZOFE
 				is_country_type = ascended_empire
 				# Star Wars: Kuat Ancient Empire
@@ -608,7 +608,7 @@ diplomatic_stance = {
 				fail_text = "requires_supremacy_traditions"
 				OR = {
 					has_tradition = tr_supremacy_finish
-					merg_is_default_empire = no
+					merg_is_default_empire_not_ev = no
 				}
 			}
 			is_subject = no
@@ -718,7 +718,7 @@ diplomatic_stance = {
 				any_relation = {
 					has_communications = root
 					has_policy_flag = diplo_stance_supremacist
-					merg_is_default_empire = yes
+					merg_is_default_empire_not_ev = yes
 					is_subject = no
 					relative_power = {
 						who = root
@@ -731,7 +731,7 @@ diplomatic_stance = {
 				factor = 0.25
 				any_neighbor_country = {
 					has_communications = root
-					merg_is_default_empire = yes
+					merg_is_default_empire_not_ev = yes
 					is_subject = no
 					relative_power = {
 						who = root
@@ -886,7 +886,7 @@ diplomatic_stance = {
 		potential = {
 			has_global_flag = has_mod_espionage_extended
 			OR = {
-				merg_is_default_empire = yes
+				merg_is_default_empire_not_ev = yes
 			}
 		}
 
@@ -927,7 +927,7 @@ war_philosophy = {
 
 	potential = {
 		OR = {
-			merg_is_default_empire = yes
+			merg_is_default_empire_not_ev = yes
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
 			# Star Wars: Kuat Ancient Empire
@@ -1208,7 +1208,7 @@ war_philosophy = {
 }
 war_doctrine = {
 	potential = {
-		merg_is_default_empire = yes
+		merg_is_default_empire_not_ev = yes
 		has_tradition = tr_supremacy_finish
 	}
 
@@ -1303,7 +1303,7 @@ orbital_bombardment = {
 
 	potential = {
 		OR = {
-			merg_is_default_empire = yes
+			merg_is_default_empire_not_ev = yes
 			is_country_type_with_subjects = yes
 			is_country_type = vol
 		}
@@ -1886,7 +1886,7 @@ border_policy = {
 			border_policy_open
 		}
 		valid = {
-			merg_is_default_empire = yes
+			merg_is_default_empire_not_ev = yes
 			NOR = {
 				has_valid_civic = civic_machine_terminator
 				has_valid_civic = civic_hive_devouring_swarm
@@ -2199,9 +2199,194 @@ robot_pop_policy = {
 
 # refugees
 
-# population_controls
+population_controls = {
+	potential = {
+		NOT = { has_ethic = "ethic_gestalt_consciousness" }
+	}
 
-# slavery
+	option = {
+		name = "population_controls_not_allowed"
+
+		on_enabled = {
+			hidden_effect = { every_owned_planet = { remove_modifier = planet_population_control } }
+		}
+
+		policy_flags = {
+			population_controls_not_allowed
+		}
+	}
+
+	option = {
+		name = "population_controls_allowed"
+
+		on_enabled = {
+			hidden_effect = { every_owned_planet = { remove_modifier = planet_growth_discouraged } }
+		}
+
+		valid = {
+			OR = {
+				NOT = { has_global_flag = cultural_overhaul_active }
+				NOR = {
+					# Ethics and Civics Classic
+					AND = {
+						is_ethics_classic = yes
+						OR = {
+							has_valid_civic = civic_anarchy_ideals
+							has_valid_civic = civic_spiritual_democracy
+						}
+					}
+					# Ethics and Civics Alternative - Redux
+					AND = {
+						has_global_flag = cultural_overhaul_redux_active
+						OR = {
+							has_valid_civic = civic_beacon_of_liberty
+							has_valid_civic = civic_spiritual_democracy
+						}
+					}
+					# Ethics & Civics: Bug Branch
+					AND = {
+						has_global_flag = bugbranch_global_flag
+						OR = {
+							has_valid_civic = civic_beacon_of_liberty
+							has_valid_civic = civic_beacon_of_liberty_corpo
+							has_valid_civic = civic_theocratic_republic
+						}
+					}
+				}
+			}
+		}
+
+		policy_flags = {
+			population_controls_allowed
+		}
+		modifier = {}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+	}
+}
+
+slavery = {
+	potential = {
+		NOT = { has_ethic = "ethic_gestalt_consciousness" }
+	}
+
+	option = {
+		name = "slavery_not_allowed"
+
+		valid = {
+			NOR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+				# Ethics and Civics Classic
+				has_valid_civic = civic_state_monopoly
+				has_valid_civic = civic_divine_order # Also Redux
+				# Ethics & Civics: Bug Branch
+				has_valid_civic = civic_slaving_despots
+				has_valid_civic = civic_slaving_despots_corpo
+				has_valid_civic = civic_caste_system
+			}
+		}
+
+		policy_flags = {
+			slavery_not_allowed
+		}
+
+		on_enabled = {
+			hidden_effect = { every_owned_planet = { remove_modifier = slave_colony } }
+		}
+
+		modifier = {
+			slave_market_cost_mult = 1
+		}
+	}
+
+	option = {
+		name = "slavery_allowed"
+
+		valid = {
+			NOT = { is_subject_type = signatory }
+			OR = {
+				is_authoritarian = yes
+				is_xenophobe = yes
+				# Ethics and Civics Classic
+				AND = {
+					is_ethics_classic = yes
+					OR = {
+						has_ethic = ethic_fanatic_capitalism
+						has_valid_civic = civic_slaver_guilds
+						has_valid_civic = civic_indentured_assets
+					}
+				}
+				# Ethics and Civics Alternative - Redux
+				AND = {
+					has_global_flag = cultural_overhaul_redux_active
+					has_valid_civic = civic_slaver_guilds
+				}
+				# Ethics & Civics: Bug Branch
+				AND = {
+					has_global_flag = bugbranch_global_flag
+					OR = {
+						has_valid_civic = civic_caste_system
+						has_valid_civic = civic_slaving_despots
+						has_valid_civic = civic_slaving_despots_corpo
+					}
+				}
+			}
+		}
+
+		policy_flags = {
+			slavery_allowed
+		}
+		modifier = {}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				NOT = { has_ai_personality_behaviour = slaver }
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = no
+				NOR = {
+					is_authoritarian = yes
+					is_xenophobe = yes
+				}
+			}
+			# special case for harmonious collectives
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = no
+				is_ai = yes
+				NOR = {
+					is_xenophobe = yes
+					is_militarist = yes
+				}
+				OR = {
+					is_pacifist = yes
+					is_xenophile = yes
+					is_authoritarian = yes
+				}
+				NOR = {
+					has_valid_civic = "civic_slaver_guilds"
+					has_trait = "trait_decadent"
+				}
+			}
+		}
+	}
+}
 
 purge = {
 	option = {
