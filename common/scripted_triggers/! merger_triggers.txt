@@ -55,21 +55,6 @@ merg_is_default_empire = {
 	}
 }
 
-# for policies
-merg_is_default_empire_not_ev = {
-	OR = {
-		is_country_type = default
-		# ZOFE
-		AND = {
-			has_global_flag = zofe_activated
-			OR = {
-				is_country_type = ascended_empire
-				is_country_type = lost_empire
-			}
-		}
-	}
-}
-
 # List of dormant/standard Fallen Empires
 merg_is_fallen_empire = {
 	OR = {
@@ -221,6 +206,7 @@ is_ethics_classic = {
   		NOR = {
     		has_global_flag = bugbranch_global_flag
     		has_global_flag = cultural_overhaul_redux_active
+			has_global_flag = ideological_revolution
   		}
 	}
 }

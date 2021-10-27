@@ -18,12 +18,12 @@ is_megacorp = {
 		# Expanded Gestalts: Forgotten Queens
 		has_valid_civic = civic_mutualistic_behavior
 		has_valid_civic = civic_machine_trading
+		# Arknights Near Future
+		has_valid_civic = civic_city_enterprise
 		# Not updated yet, keeping them for later
 		# More Corporate Authorities
 		# has_authority = auth_corporate_fiefdom
 		# has_authority = auth_cooperative
-		# Arknights Near Future
-		# has_valid_civic = civic_city_enterprise
 	}
 }
 
