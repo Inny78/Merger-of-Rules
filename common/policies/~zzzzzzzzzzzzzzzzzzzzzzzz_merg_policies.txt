@@ -14,7 +14,7 @@
 diplomatic_stance = {
 	potential = {
 		OR = {
-			merg_is_default_empire_not_ev = yes
+			merg_is_default_empire = yes
 			is_country_type = primitive
 			is_country_type = awakened_marauders
 			# Star Wars: Kuat Ancient Empire
@@ -22,7 +22,6 @@ diplomatic_stance = {
 			is_country_type = kuat_awakened_fallen_empire
 			is_country_type = awakened_return_kuat_empire
 			# The Empty Vagrant
-			is_country_type = default_ev
 			is_country_type = fallen_empire_ev
 			is_country_type = awakened_fallen_empire_ev
 		}
@@ -38,7 +37,7 @@ diplomatic_stance = {
 
 		potential = {
 			OR = {
-				merg_is_default_empire_not_ev = yes
+				merg_is_default_empire = yes
 				is_country_type = awakened_fallen_empire
 				# ZOFE
 				is_country_type = ascended_empire
@@ -46,7 +45,6 @@ diplomatic_stance = {
 				is_country_type = kuat_awakened_fallen_empire
 				is_country_type = awakened_return_kuat_empire
 				# The Empty Vagrant
-				is_country_type = default_ev
 				is_country_type = awakened_fallen_empire_ev
 			}
 		}
@@ -188,13 +186,12 @@ diplomatic_stance = {
 
 		potential = {
 			OR = {
-				merg_is_default_empire_not_ev = yes
+				merg_is_default_empire = yes
 				is_country_type = awakened_fallen_empire
 				# Star Wars: Kuat Ancient Empire
 				is_country_type = kuat_awakened_fallen_empire
 				is_country_type = awakened_return_kuat_empire
 				# The Empty Vagrant
-				is_country_type = default_ev
 				is_country_type = awakened_fallen_empire_ev
 			}
 		}
@@ -321,7 +318,7 @@ diplomatic_stance = {
 
 		potential = {
 			OR = {
-				merg_is_default_empire_not_ev = yes
+				merg_is_default_empire = yes
 				is_country_type = awakened_fallen_empire
 				# Star Wars: Kuat Ancient Empire
 				is_country_type = kuat_awakened_fallen_empire
@@ -419,7 +416,7 @@ diplomatic_stance = {
 
 		potential = {
 			OR = {
-				merg_is_default_empire_not_ev = yes
+				merg_is_default_empire = yes
 				is_country_type = awakened_fallen_empire
 				# Star Wars: Kuat Ancient Empire
 				is_country_type = kuat_awakened_fallen_empire
@@ -467,7 +464,7 @@ diplomatic_stance = {
 
 		potential = {
 			OR = {
-				merg_is_default_empire_not_ev = yes
+				merg_is_default_empire = yes
 				is_country_type = awakened_fallen_empire
 				# Star Wars: Kuat Ancient Empire
 				is_country_type = kuat_awakened_fallen_empire
@@ -581,7 +578,7 @@ diplomatic_stance = {
 			OR = {
 				is_country_type = awakened_fallen_empire
 				is_country_type = awakened_marauders
-				merg_is_default_empire_not_ev = yes
+				merg_is_default_empire = yes
 				# ZOFE
 				is_country_type = ascended_empire
 				# Star Wars: Kuat Ancient Empire
@@ -608,7 +605,7 @@ diplomatic_stance = {
 				fail_text = "requires_supremacy_traditions"
 				OR = {
 					has_tradition = tr_supremacy_finish
-					merg_is_default_empire_not_ev = no
+					merg_is_default_empire = no
 				}
 			}
 			is_subject = no
@@ -718,7 +715,7 @@ diplomatic_stance = {
 				any_relation = {
 					has_communications = root
 					has_policy_flag = diplo_stance_supremacist
-					merg_is_default_empire_not_ev = yes
+					merg_is_default_empire = yes
 					is_subject = no
 					relative_power = {
 						who = root
@@ -731,7 +728,7 @@ diplomatic_stance = {
 				factor = 0.25
 				any_neighbor_country = {
 					has_communications = root
-					merg_is_default_empire_not_ev = yes
+					merg_is_default_empire = yes
 					is_subject = no
 					relative_power = {
 						who = root
@@ -886,7 +883,7 @@ diplomatic_stance = {
 		potential = {
 			has_global_flag = has_mod_espionage_extended
 			OR = {
-				merg_is_default_empire_not_ev = yes
+				merg_is_default_empire = yes
 			}
 		}
 
@@ -927,7 +924,7 @@ war_philosophy = {
 
 	potential = {
 		OR = {
-			merg_is_default_empire_not_ev = yes
+			merg_is_default_empire = yes
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
 			# Star Wars: Kuat Ancient Empire
@@ -1208,7 +1205,7 @@ war_philosophy = {
 }
 war_doctrine = {
 	potential = {
-		merg_is_default_empire_not_ev = yes
+		merg_is_default_empire = yes
 		has_tradition = tr_supremacy_finish
 	}
 
@@ -1303,7 +1300,7 @@ orbital_bombardment = {
 
 	potential = {
 		OR = {
-			merg_is_default_empire_not_ev = yes
+			merg_is_default_empire = yes
 			is_country_type_with_subjects = yes
 			is_country_type = vol
 		}
@@ -1886,7 +1883,7 @@ border_policy = {
 			border_policy_open
 		}
 		valid = {
-			merg_is_default_empire_not_ev = yes
+			merg_is_default_empire = yes
 			NOR = {
 				has_valid_civic = civic_machine_terminator
 				has_valid_civic = civic_hive_devouring_swarm
