@@ -243,7 +243,6 @@ species_can_live_on_planet = {
 			has_trait = trait_mechanical
 			# Girls Frontline
 			has_trait = trait_doll
-			# has_trait = trait_happy_machine # Ethics & Civics Bug Branch
 			AND = {
 				has_trait = trait_cybernetic
 				exists = root.owner
@@ -774,6 +773,7 @@ species_can_live_on_planet = {
 			is_planet_class = pc_glacial
 			is_planet_class = pc_geothermal
 			is_planet_class = pc_karst
+			is_planet_class = pc_reef
 			is_planet_class = pc_primal
 			is_planet_class = pc_salt
 			is_planet_class = pc_aquifer
@@ -914,6 +914,7 @@ species_can_live_on_planet = {
 			is_planet_class = pc_glacial
 			is_planet_class = pc_geothermal
 			is_planet_class = pc_karst
+			is_planet_class = pc_reef
 			is_planet_class = pc_primal
 			is_planet_class = pc_salt
 			is_planet_class = pc_aquifer
@@ -1872,9 +1873,36 @@ species_has_happiness = {
 		has_trait = sh_trait_silent1
 		# Expanded Events
 		has_trait = trait_memorex_comatos
+		# Trait Diversity
+        has_trait = trait_td_multi_hiveminded
+        has_trait = trait_td_emotionless
+        has_trait = trait_td_psychopathic
+		has_trait = trait_td_thymoleptic_implants
+		has_trait = trait_td_rbot_thymoleptic_scripts
+		has_trait = trait_td_rbot_thought_inhibitor
 		# Vanilla
 		AND = {
 			has_trait = trait_mechanical
+			# Animated Synthetics Portraits Expanded: Reborn
+			OR = {
+				NOT = { has_global_flag = extended_synths_on }
+				AND = {
+					has_global_flag = extended_synths_on
+					from = { has_authority = auth_machine_intelligence }
+					has_trait = trait_extsynth_synthetic
+					NOT = {
+						has_trait = trait_psionic
+					}
+				}
+				AND = {
+					has_global_flag = extended_synths_on
+					NOT = {
+						from = { has_authority = auth_machine_intelligence }
+						has_trait = trait_extsynth_synthetic
+					}
+				}
+			}
+			# Vanilla
 			OR = {
 				NOT = { exists = from }
 				from = { has_authority = auth_machine_intelligence }
