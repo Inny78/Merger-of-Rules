@@ -1412,6 +1412,31 @@ can_take_hostile_actions = {
 			always = no
 		}
 	}
+	# Origins of Civilization
+	else_if = {
+		limit = {
+			ROOT = { is_country_type = default }
+			is_country_type = mpo_lost_spacefarers
+		}
+		hidden_trigger = {
+			has_country_flag = mpo_attack_spacefarers
+			OR = {
+				any_owned_fleet = {
+					exists = solar_system.space_owner
+					solar_system.space_owner = {
+						is_same_value = ROOT
+					}
+				}
+				any_owned_planet = {
+					exists = solar_system.space_owner
+					solar_system.space_owner = {
+						is_same_value = ROOT
+					}
+				}		
+			}
+		}
+	}
+	# Vanilla
 	else_if = {
 		#attacking primitives with non-interference
 		limit = {
@@ -2165,6 +2190,16 @@ can_orbital_bombard = {
 			}
 			from.OWNER = { is_country_type = primitive }
 		}
+		# Origins of Civilization
+		AND = {
+			ROOT.OWNER = {
+				NOT = {
+					has_policy_flag = ai_full_rights
+				}
+			}
+			FROM.OWNER = { is_country_type = vbp_machine }
+		}
+		# Vanilla
 		ROOT.OWNER = { is_hostile = FROM.CONTROLLER } # Ariphaos patch - Risa Fix
 		root.OWNER = { is_at_war_with = from.CONTROLLER }
 		from = {
@@ -2353,11 +2388,15 @@ can_orbital_bombard = {
 # Check if full sensor range in entire galaxy
 # root: country
 has_full_sensor_range = {
+	NOT = { has_country_flag = z_fw_misc_full_sensor_off } # Core Framework & Modmenu
 	OR = {
 		has_megastructure = spy_orb_4
 		has_megastructure = spy_orb_restored
 		# ACOT
 		has_megastructure = sofe_omega_spy_orb_center
+		# Core Framework & Modmenu
+		has_country_flag = z_fw_r_celestial_orrey_activited
+		has_country_flag = z_fw_r_cheat_quantum_beacon_activited
 		# Galaxius
 		#any_owned_planet = {
 		#	has_deposit = d_ie_sa
@@ -2426,6 +2465,7 @@ can_orbitable_repair_ships = {
 # this = ship
 # root = country that kills ship
 can_spawn_debris = {
+	NOT = { has_global_flag = z_fw_flg_glbl_tech_overwhelm } # Core Framework & Modmenu
 	root = {
 		merg_is_default_empire = yes
 	}
@@ -2650,7 +2690,7 @@ can_spawn_occupation_armies = {
 # this = system
 # root = country
 system_blocks_sensors = {
-	# Includes code from Ariphaos' Sensor Expansion
+	# Vanilla, includes code from Ariphaos' Sensor Expansion
 	OR = {
 		AND = {
 			OR = {
@@ -2717,6 +2757,12 @@ can_enter_system_by_jump = {
 	custom_tooltip = {
 		# success_text = "debug: can jump"
 		fail_text = cannot_jump_to_system
+
+		# Core Framework & Modmenu
+		OR = {
+			root = { has_country_flag = z_fw_r_celestial_orrey_activited }
+			root = { has_country_flag = z_fw_r_cheat_quantum_beacon_activited }
+		}
 
 		# Sealed system
 		OR = {
@@ -3183,6 +3229,7 @@ is_criminal_syndicate_rule = {
 # This = planet
 can_crossbreed_species_on_planet = {
 	exists = owner
+	NOT = { has_global_flag = z_pf2_flg_glbl_no_hybird } # Better Performance & Utilities
 	OR = {
 		owner = { has_ascension_perk = ap_xeno_compatibility }
 		# Red Light Demeanor
@@ -3482,6 +3529,11 @@ can_pop_auto_migrate = {
 # This = planet
 # Checked before can_pop_auto_migrate to save performance
 can_planet_auto_migrate = {
+	NAND = {
+		exists = owner
+		owner = { has_country_flag = z_pr_flg_cntr_reg }
+		NOT = { has_planet_flag = z_pr_flg_plnt_ignore }
+	}
 	NOT = { has_modifier = planet_culture_shock }
 	OR = {
 		colony_age > 60
@@ -3496,6 +3548,8 @@ can_planet_auto_migrate = {
 	owner = {
 		is_country_type_with_subjects = yes
 	}
+	# Better Performance & Utilities
+	NOT = { has_global_flag = z_pf2_flg_vam_disabled }
 }
 
 can_planet_receive_auto_migration = {
