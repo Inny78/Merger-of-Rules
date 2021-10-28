@@ -2760,8 +2760,16 @@ can_enter_system_by_jump = {
 
 		# Core Framework & Modmenu
 		OR = {
-			root = { has_country_flag = z_fw_r_celestial_orrey_activited }
-			root = { has_country_flag = z_fw_r_cheat_quantum_beacon_activited }
+			NOT = { has_global_flag = z_framework_installed }
+			AND = {
+				has_global_flag = z_framework_installed
+				root = {
+					OR = {
+						has_country_flag = z_fw_r_celestial_orrey_activited
+						has_country_flag = z_fw_r_cheat_quantum_beacon_activited
+					}
+				}
+			}
 		}
 
 		# Sealed system
