@@ -2498,7 +2498,12 @@ can_spawn_debris = {
 ai_should_restrict_system = {
 	OR = {
 		AND = {
-			root = { merg_is_fallen_empire = yes }
+			root = {
+				OR = {
+					merg_is_fallen_empire = yes
+					is_country_type = caravaneer_fleet
+				}
+			}
 			exists = owner
 			owner = { 
 				OR = {
@@ -2511,9 +2516,10 @@ ai_should_restrict_system = {
 		AND = {
 			root = {
 				OR = {
+					is_country_type = caravaneer_fleet
 					is_country_type = awakened_marauders
 					# Ariphaos Patch
-					is_country_type = dormant_marauders
+					is_country_type = marauder_raiders
 				}
 			}
 			exists = owner
@@ -2523,7 +2529,9 @@ ai_should_restrict_system = {
 			root = {
 				OR = {
 					merg_is_fallen_empire = yes
-					merg_is_awakened_fe = yes
+					is_country_type = awakened_marauders
+					is_country_type = marauder_raiders
+					is_country_type = caravaneer_fleet
 				}
 			}
 			has_star_flag = guardian
@@ -2556,6 +2564,7 @@ ai_should_restrict_system = {
 					merg_is_fallen_empire = yes
 					is_country_type = awakened_marauders
 					is_country_type = marauder_raiders
+					is_country_type = caravaneer_fleet
 				}
 			}
 			OR = {
@@ -2757,76 +2766,71 @@ can_enter_system_by_jump = {
 	custom_tooltip = {
 		# success_text = "debug: can jump"
 		fail_text = cannot_jump_to_system
-
-		# Core Framework & Modmenu
 		OR = {
-			NOT = { has_global_flag = z_framework_installed }
+			# Core Framework & Modmenu
+			root = {
+				OR = {
+					has_country_flag = z_fw_r_celestial_orrey_activited
+					has_country_flag = z_fw_r_cheat_quantum_beacon_activited
+				}
+			}
 			AND = {
-				has_global_flag = z_framework_installed
-				root = {
-					OR = {
-						has_country_flag = z_fw_r_celestial_orrey_activited
-						has_country_flag = z_fw_r_cheat_quantum_beacon_activited
+				# Sealed system
+				OR = {
+					NOT = { has_star_flag = sealed_system }
+					AND = {
+						root = { has_country_flag = entered_sealed_system }
+						has_star_flag = sealed_system
 					}
 				}
-			}
-		}
-
-		# Sealed system
-		OR = {
-			NOT = { has_star_flag = sealed_system }
-			AND = {
-				root = { has_country_flag = entered_sealed_system }
-				has_star_flag = sealed_system
-			}
-		}
-
-		# Clusters and forbidden systems
-		NOR = {
-			has_star_flag = lcluster
-			# Ancient Empire
-			has_star_flag = ag_no_jump_in_system
-			# ACOT
-			has_star_flag = outercluster
-			# Warship Girls R And MIST Species
-			has_star_flag = wg_sealed_system
-			has_star_flag = wg_psionic_systems
-			# SW:Kuat Ancient Empire
-			has_star_flag = Kuat_system
-			has_star_flag = Kuat_system_1
-			has_star_flag = Kuat_system_2
-			has_star_flag = Kuat_system_3
-			has_star_flag = kuat_initial_system
-			has_star_flag = Kuat_system_int
-			has_star_flag = Kuat_system_int_1
-			has_star_flag = Kuat_system_int_2
-			has_star_flag = Kuat_system_int_3
-			has_star_flag = Kuat_system_int_4			
-			AND = {
-				has_global_flag = starkillerbase_not_passed
-				has_star_flag = starkiller_system	
-			}
-			# Gigastructural Engineering and More
-			AND = {
-				has_global_flag = gigastructures_enabled
-				OR = {
-					has_star_flag = ehof_compound_system
-					has_star_flag = giga_core_03
-					cohesive_system = yes
-					urmazin_system = yes
-					everchanging_system = yes
-					katzen_jump_blocked_system = yes
-					has_star_flag = maginot_anti_jump_star
-				}
-			}
-			# Some Events of Outside Cluster
-			has_star_flag = nep_Krahen_cluster
-			has_star_flag = nep_Scrus_cluster
-			AND = {
-				has_global_flag = nep_not_pass_Aemethms
-				OR = {
-					has_star_flag = nep_dragon_system
-					has_star_flag = nep_heptagram_cluster
+				# Clusters and forbidden systems
+				NOR = {
+					has_star_flag = lcluster
+					# Ancient Empire
+					has_star_flag = ag_no_jump_in_system
+					# ACOT
+					has_star_flag = outercluster
+					# Warship Girls R And MIST Species
+					has_star_flag = wg_sealed_system
+					has_star_flag = wg_psionic_systems
+					# SW:Kuat Ancient Empire
+					has_star_flag = Kuat_system
+					has_star_flag = Kuat_system_1
+					has_star_flag = Kuat_system_2
+					has_star_flag = Kuat_system_3
+					has_star_flag = kuat_initial_system
+					has_star_flag = Kuat_system_int
+					has_star_flag = Kuat_system_int_1
+					has_star_flag = Kuat_system_int_2
+					has_star_flag = Kuat_system_int_3
+					has_star_flag = Kuat_system_int_4			
+					AND = {
+						has_global_flag = starkillerbase_not_passed
+						has_star_flag = starkiller_system	
+					}
+					# Gigastructural Engineering and More
+					AND = {
+						has_global_flag = gigastructures_enabled
+						OR = {
+							has_star_flag = ehof_compound_system
+							has_star_flag = giga_core_03
+							cohesive_system = yes
+							urmazin_system = yes
+							everchanging_system = yes
+							katzen_jump_blocked_system = yes
+							has_star_flag = maginot_anti_jump_star
+						}
+					}
+					# Some Events of Outside Cluster
+					has_star_flag = nep_Krahen_cluster
+					has_star_flag = nep_Scrus_cluster
+					AND = {
+						has_global_flag = nep_not_pass_Aemethms
+						OR = {
+							has_star_flag = nep_dragon_system
+							has_star_flag = nep_heptagram_cluster
+						}
+					}
 				}
 			}
 		}
