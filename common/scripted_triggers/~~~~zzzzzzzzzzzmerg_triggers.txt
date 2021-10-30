@@ -15,16 +15,14 @@ is_megacorp = {
 		has_authority = auth_corporate_democratic
 		# Expanded Traits, Civics, Pops, and More
 		has_authority = auth_private
-		has_authority = auth_cooperative
+		has_authority = auth_cooperative # Also More Corporate Authorities
 		# Expanded Gestalts: Forgotten Queens
 		has_valid_civic = civic_mutualistic_behavior
 		has_valid_civic = civic_machine_trading
 		# Arknights Near Future
 		has_valid_civic = civic_city_enterprise
-		# Not updated yet, keeping them for later
 		# More Corporate Authorities
-		# has_authority = auth_corporate_fiefdom
-		# has_authority = auth_cooperative
+		has_authority = auth_corporate_fiefdom
 	}
 }
 
@@ -48,14 +46,6 @@ is_regular_empire = {
 				is_country_type = default_ev
 				is_country_type = fallen_empire_ev
 				is_country_type = awakened_fallen_empire_ev
-			}
-		}
-		# Stellaris Evolved
-		AND = {
-			has_global_flag = stellarisevolved
-			OR = {
-				is_country_type = default_exocolonist
-				is_country_type = default_exocolonist_ai
 			}
 		}
 		# Human Fallen Empire
@@ -364,7 +354,7 @@ uninhabitable_regular_planet = {
 is_a_habitable_planet_megastructure = {
 	OR = {
 		is_planet_class = pc_infested
-		# is_planet_class = pc_matryoshka # Expanded Gestalts: Forgotten Queens
+		is_planet_class = pc_matryoshka # Expanded Gestalts: Forgotten Queens
 		colonizable_planet = yes # Ariphaos patch
 		habitable_structure = yes
 	}
@@ -381,7 +371,20 @@ habitable_structure = {
 
 is_country_type_with_subjects = {
 	OR = {
-		merg_is_default_empire = yes
+		is_country_type = default
+		# ZOFE
+		AND = {
+			has_global_flag = zofe_activated
+			OR = {
+				is_country_type = ascended_empire
+				is_country_type = lost_empire
+			}
+		}
+		# The Empty Vagrant
+		AND = {
+			has_global_flag = enable_empty_vagrant_mod
+			is_country_type = default_ev
+		}
 		is_country_type = awakened_fallen_empire
 		# ACOT
 		AND = {
@@ -457,6 +460,8 @@ is_autocracy = { #Power of one
 		has_authority = auth_tec_patrocorporate
 		# Expanded Traits, Civics, Pops, and More
 		has_authority = auth_private
+		# More Corporate Authorities
+		has_authority = auth_corporate_fiefdom
 	}
 }
 

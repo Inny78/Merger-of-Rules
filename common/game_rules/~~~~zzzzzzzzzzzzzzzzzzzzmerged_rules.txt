@@ -3003,6 +3003,8 @@ can_build_branch_offices = {
 			has_civic = civic_gk
 			# Human Fallen Empires
 			is_country_type = hfe_pirate
+			# More Corporate Authorities
+			has_civic = civic_galactic_sovereign_megacorp
 		}
 	}
 }
@@ -3036,6 +3038,8 @@ can_support_branch_offices = {
 			has_authority = auth_azur_lane_1
 			# Reworked Advanced Ascension
 			is_subject_type = subsidiary2
+			# More Corporate Authorities
+			has_civic = civic_galactic_sovereign_megacorp
 		}
 	}
 	custom_tooltip = {
@@ -3221,7 +3225,29 @@ can_build_branch_office_on_planet = {
 				}
 			}
 		}
-	}	
+	}
+	# More Corportate Authorities
+	# principled rogues won't build branch offices in countries they like
+	hidden_trigger = {
+		has_global_flag = using_mod_more_corporate_authorities
+		OR = {
+			NOT = {
+				root = {
+					has_ai_personality = principled_rogues
+					is_ai = yes
+				}
+			}	
+			owner = {
+				their_opinion = { who = root value < 0 }
+			}
+			owner = {
+				their_opinion = { who = root value < 20 }
+				NOT = {
+					has_opinion_modifier = { who = root modifier = opinion_new_contact is_reverse = yes }
+				}
+			}
+		}
+	}
 }
 
 # This = country
