@@ -2718,6 +2718,16 @@ system_blocks_sensors = {
 				has_star_flag = lcluster
 				has_star_flag = sealed_system
 			}
+			# Making sure modded hidden systems will work as intended if Sensor Expansion is installed
+			NOR = {
+				# Warship Girls R And MIST Species
+				has_star_flag = wg_sealed_system
+				has_star_flag = wg_psionic_systems
+				# Ancient Empire
+				has_star_flag = ag_no_sensor_system
+				# Solar Storm
+				has_star_flag = ss_abyssal_shockwave
+			}
 			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_sealed } }
 		}
 		# Warship Girls R And MIST Species
@@ -2725,6 +2735,8 @@ system_blocks_sensors = {
 		has_star_flag = wg_psionic_systems
 		# Ancient Empire
 		has_star_flag = ag_no_sensor_system
+		# Solar Storm
+		has_star_flag = ss_abyssal_shockwave
 		# Sensor Expansion
 		AND = {
 			has_global_flag = ariphaos_sensors_installed
@@ -3262,7 +3274,6 @@ is_criminal_syndicate_rule = {
 		}
 	}
 }
-
 
 # This = planet
 can_crossbreed_species_on_planet = {
