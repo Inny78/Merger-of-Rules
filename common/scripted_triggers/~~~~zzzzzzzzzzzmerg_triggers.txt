@@ -128,18 +128,10 @@ is_crisis_faction = {
 		is_country_type = gray_goo
 		is_country_type = awakened_marauders
 		# Gigastructural Engineering & More
-		AND = {
-			has_global_flag = gigastructures_enabled
-			OR = {
-				is_country_type = katzenartig_imperium
-				is_country_type = dormant_aeternum
-			}
-		}
+		is_country_type = katzenartig_imperium
+		is_country_type = dormant_aeternum
 		# ACOT
-		AND = {
-			has_global_flag = acot_activated
-		    is_country_type = original_empire
-		}
+	    is_country_type = original_empire
 		# Solar Storm
 		is_country_type = abyssal_host_invaders_type
 	}

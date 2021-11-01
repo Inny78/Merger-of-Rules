@@ -1,0 +1,59 @@
+# List of planetary shield buildings
+# merg_has_planetary_shield = {
+# 	OR = {
+#     	has_building = building_planetary_shield_generator
+# 		# MEM
+# 		has_building = building_mem_planetary_shield_generator
+# 		has_building = building_mem_planetary_shield_generator_heavy
+# 		has_building = building_mem_planetary_shield_generator_orila
+# 		# ACOT
+# 		has_building = building_dark_energy_psg
+# 		has_building = building_ae_dark_energy_psg
+# 		# AOT
+# 		has_building = building_stellarite_psg
+# 	}
+# }
+
+# List of ideal ringworlds
+# For use with Ascension - Biological Module
+# merg_is_ideal_ringworld = {
+#	OR = {
+# 	is_planet_class = pc_ringworld_habitable
+# 	# Gigastructural Engineering & More
+# 	is_planet_class = pc_gigaorbital_ring
+# 	is_planet_class = pc_interstellar_ringworld_habitable
+# 	is_planet_class = pc_ringworld_city
+# 	is_planet_class = pc_squareworld_habitable
+# 	is_planet_class = pc_giga_penrose_habitable
+# 	# Ancient Empire
+# 	# listed planet types are for colors only, they're all ideal
+# 	is_planet_class = pc_ag_ringworld_desert
+# 	is_planet_class = pc_ag_ringworld_arid
+# 	is_planet_class = pc_ag_ringworld_savannah
+# 	is_planet_class = pc_ag_ringworld_ocean
+# 	is_planet_class = pc_ag_ringworld_continental
+# 	is_planet_class = pc_ag_ringworld_tropical
+# 	is_planet_class = pc_ag_ringworld_tundra
+# 	is_planet_class = pc_ag_ringworld_arctic
+# 	is_planet_class = pc_ag_ringworld_alpine
+# 	is_planet_class = pc_ag_ringworld_machine
+# 	is_planet_class = pc_ag_ringworld_city
+# 	is_planet_class = pc_ag_ringworld_gaia
+#	}
+# }
+
+# Empires who are so powerful that their bombardments should bypass some anti-bombardment conditions
+# merg_is_powerful_empire = {
+# 	OR = {
+# 		# Gigastructural Engineering & More
+# 		is_country_type = compound_empire
+#		is_country_type = acot_crazed_stellarite
+# 		# ACOT
+# 		is_country_type = original_empire
+#		# Ancient Empire
+#		is_country_type = ag_ancient_gamma_guardian
+#		is_country_type = ag_zeta_crisis_country
+#		# MEM
+#		is_country_type = mem_vazurans
+# 	}
+# }
