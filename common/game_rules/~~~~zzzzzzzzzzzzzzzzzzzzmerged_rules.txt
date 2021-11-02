@@ -1780,6 +1780,27 @@ can_terraform_planet = {
 		fail_text = "requires_actor_not_pdtol"
 		root = { NOT = { has_origin = origin_pd_tree_of_life } }
 	}
+	# Real Space New Frontiers
+	custom_tooltip = {
+		fail_text = NO_TERRAFORM_HOLLOW_WORLD
+		OR = {
+			NOT = { has_global_flag = has_new_frontiers_mod }
+			AND = {
+				has_global_flag = has_new_frontiers_mod # Let's not affect Expanded Gestalt's own pc_hollow
+				NOT = { is_planet_class = pc_hollow }
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = NO_TERRAFORM_OVERMIND
+		OR = {
+			NOT = { has_global_flag = has_new_frontiers_mod }
+			AND = {
+				has_global_flag = has_new_frontiers_mod # to avoid a bug
+				NOT = { has_deposit = d_heart_of_the_overmind }
+			}
+		}
+	}
 }
 
 #Root = country
@@ -2167,10 +2188,10 @@ can_species_be_assembled = {
 #From = planet, potential target
 can_orbital_bombard = {
 	exists = from.OWNER
-	NOT = {
-		any_owned_ship = {
-			is_ship_size = colossus
-		}
+	NOR = {
+		any_owned_ship = { is_ship_size = colossus }
+		# Real Space New Frontiers
+		from = { is_planet_class = pc_hollow }
 	}
 	OR = {
 		AND = {

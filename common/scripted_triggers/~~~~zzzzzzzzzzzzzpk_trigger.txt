@@ -551,7 +551,7 @@ can_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = {
 	}
 	custom_tooltip = {
 		fail_text = "ag_requires_no_compact_star_star_killer"
-		ag_is_compact_star = no
+		merg_is_dense_star = no
 	}
 	custom_tooltip = {
 		fail_text = "ag_requires_outside_border_star_killer"
