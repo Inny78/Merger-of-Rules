@@ -942,58 +942,67 @@ can_destroy_planet_with_PLANET_KILLER_SK = {
 }
 
 can_destroy_planet_with_PLANET_KILLER_WATERB = {
-	custom_tooltip = {
-		fail_text = is_not_a_standard_planet_or_megastructure
-		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
-	}
-	custom_tooltip = {
-		fail_text = is_shielded
-		NOR = {
-			is_planet_class = pc_shielded
-			is_planet_class = pc_ringworld_shielded
-			is_planet_class = pc_habitat_shielded
-		}
-	}
-	custom_tooltip = {
-		fail_text = is_shielded_gaia
-		NOT = {	is_planet_class = pc_shielded_gaia }
-	}
-	custom_tooltip = {
-		fail_text = is_water_planet
-		NOR = {
-			is_planet_class = pc_wg_water
-			is_planet_class = pc_ringworld_habitable_water
-		}
-	}
 	OR = {
+		hidden_trigger = {
+			AND = {
+				FROM = { has_fleet_flag = RBQ_Dragon_fleet }
+				NOT = { is_planet_class = pc_wg_water }
+			}
+		}
+		AND = {
+			custom_tooltip = {
+			fail_text = is_not_a_standard_planet_or_megastructure
+			is_a_planet_megastructure = yes
+			merg_is_forbidden_target = no
+		}
 		custom_tooltip = {
-			fail_text = is_not_hostile_or_primitive
-			OR = {
-				planet_is_hostile = yes
-				AND = {
-					exists = owner
-					owner = {
-						is_country_type = primitive
+			fail_text = is_shielded
+			NOR = {
+				is_planet_class = pc_shielded
+				is_planet_class = pc_ringworld_shielded
+				is_planet_class = pc_habitat_shielded
+			}
+		}
+		custom_tooltip = {
+			fail_text = is_shielded_gaia
+			NOT = {	is_planet_class = pc_shielded_gaia }
+		}
+		custom_tooltip = {
+			fail_text = is_water_planet
+			NOR = {
+				is_planet_class = pc_wg_water
+				is_planet_class = pc_ringworld_habitable_water
+			}
+		}
+		OR = {
+			custom_tooltip = {
+				fail_text = is_not_hostile_or_primitive
+				OR = {
+					planet_is_hostile = yes
+					AND = {
+						exists = owner
+						owner = {
+							is_country_type = primitive
+						}
+					}
+				}		
+			}
+			custom_tooltip = {
+				text = not_barren_molten_frozen_toxic_test_fire
+				NOT = { exists = owner }
+				OR = {
+					NOT = { exists = space_owner }
+					AND = {
+						exists = space_owner
+						space_owner = { is_same_value = from.owner }
 					}
 				}
-			}		
-		}
-		custom_tooltip = {
-			text = not_barren_molten_frozen_toxic_test_fire
-			NOT = { exists = owner }
-			OR = {
-				NOT = { exists = space_owner }
-				AND = {
-					exists = space_owner
-					space_owner = { is_same_value = from.owner }
+				OR = {
+					is_habitable = yes
+					is_artificial = yes
+					is_colonizable = yes
+					merg_is_crackable_planet = yes
 				}
-			}
-			OR = {
-				is_habitable = yes
-				is_artificial = yes
-				is_colonizable = yes
-				merg_is_crackable_planet = yes
 			}
 		}
 	}
