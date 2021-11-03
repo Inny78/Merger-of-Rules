@@ -224,8 +224,3 @@ mem_is_spherical_world = {
  		# Giga Diversity - these don't exist yet
 	}
 }
-
-# Core Framework relic list overwrite
-#z_fw_trgr_wg_cb_relic = {
-#	merg_has_any_relic = yes
-#}
