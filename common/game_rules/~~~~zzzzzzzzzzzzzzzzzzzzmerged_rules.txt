@@ -2093,35 +2093,15 @@ can_species_be_assembled = {
 				}
 			}
 		}
-		# Azur lane Stellaris DLC
-		AND = {
-			species = { is_archetype = KANSEN }
-			root = {
-				check_modifier_value = {
-					modifier = planet_pop_assembly_organic_add
-					value > 0
-				}
-			}
-		}
-		# Girls Frontline
-		AND = {
-			has_trait = trait_doll
-			root.owner = { has_authority = auth_commonwealth }
-		}
-		# Expanded Gestalts
-		NAND = {
-			root = { owner = { has_valid_civic = civic_machine_replicators } }
-			has_trait = trait_machine_central
-		}
 		# Organics
 		AND = {
 			is_organic_species = yes
-            # root = {
-            #     check_modifier_value = {
-            #         modifier = planet_pop_assembly_organic_add
-            #         value > 0
-            #     }
-            # }
+            root = {
+                check_modifier_value = {
+                    modifier = planet_pop_assembly_organic_add
+                    value > 0
+                }
+            }
 			# Hives can only clone drones
 			if = {
 				limit = {
@@ -2173,6 +2153,29 @@ can_species_be_assembled = {
 					is_archetype = WARSHIPGIRL
 					is_archetype = SHENHAI
 				}
+			}
+		}
+		# Azur lane Stellaris DLC
+		AND = {
+			species = { is_archetype = KANSEN }
+			root = {
+				check_modifier_value = {
+					modifier = planet_pop_assembly_organic_add
+					value > 0
+				}
+			}
+		}
+		# Girls Frontline
+		AND = {
+			has_trait = trait_doll
+			root.owner = { has_authority = auth_commonwealth }
+		}
+		# Expanded Gestalts
+		AND = {
+			has_global_flag = complex_hive
+			NAND = {
+				root = { owner = { has_valid_civic = civic_machine_replicators } }
+				has_trait = trait_machine_central
 			}
 		}
 	}
