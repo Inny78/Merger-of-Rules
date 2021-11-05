@@ -154,3 +154,10 @@ merg_is_hab_ringworld = {
 	# is_planet_class = pc_ringworld_shroudcity
 	}
 }
+
+# List of standard cloning buildings
+merg_has_any_cloning_building = {
+	OR = {
+		has_building = building_clone_vats
+	}
+}
