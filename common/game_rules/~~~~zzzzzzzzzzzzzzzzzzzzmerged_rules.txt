@@ -2096,12 +2096,6 @@ can_species_be_assembled = {
 		# Organics
 		AND = {
 			is_organic_species = yes
-            root = {
-                check_modifier_value = {
-                    modifier = planet_pop_assembly_organic_add
-                    value > 0
-                }
-            }
 			# Hives can only clone drones
 			if = {
 				limit = {
@@ -2146,7 +2140,12 @@ can_species_be_assembled = {
 			}
 			else = {
 				OR = {
-					root = { has_building = building_clone_vats }
+					root = {
+						check_modifier_value = {
+							modifier = planet_pop_assembly_organic_add
+							value > 0
+						}
+					}
 					# The DAL Species Mod
 					is_archetype = DATEALIVE
 					# Warship Girls R and MIST species
