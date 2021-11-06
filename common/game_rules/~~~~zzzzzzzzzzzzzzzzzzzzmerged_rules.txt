@@ -1186,8 +1186,6 @@ can_generate_leader_from_pop = {
 					NOT = { has_trait = trait_holofrixit }
 					has_trait = trait_holooverseer
 					has_trait = trait_hologanglion
-					# has_trait = trait_holowarrior
-					# has_trait = trait_holowarrior_2
 				}
 			}
 		}
@@ -3221,7 +3219,7 @@ can_build_branch_office_on_planet = {
 	# More Corportate Authorities
 	# principled rogues won't build branch offices in countries they like
 	hidden_trigger = {
-		has_global_flag = using_mod_more_corporate_authorities
+		# has_global_flag = using_mod_more_corporate_authorities
 		OR = {
 			NOT = {
 				root = {
