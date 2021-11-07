@@ -1747,6 +1747,8 @@ can_colonize_outside_borders = {
 			is_country_type = hfe_features_exodus
 			# The Empty Vagrant
 			is_country_type = ev_leviathans_crisis
+			# Project Gestalt
+			is_country_type = pg_last_hope
 		}
 	}
 	exists = solar_system

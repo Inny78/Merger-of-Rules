@@ -2203,6 +2203,11 @@ population_controls = {
 	option = {
 		name = "population_controls_not_allowed"
 
+		valid = {
+			# Project Gestalt
+			NOT = { has_origin = origin_vb_psi_soul_eater }
+		}
+
 		on_enabled = {
 			hidden_effect = { every_owned_planet = { remove_modifier = planet_population_control } }
 		}
