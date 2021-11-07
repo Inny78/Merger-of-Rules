@@ -15,6 +15,11 @@ has_any_ethics_mod = {
 	has_global_flag = cultural_overhaul_active
 }
 
+# ANZ Advanced Cloning
+has_anz_cloning = {
+	has_global_flag = anz_clones_installed
+}
+
 # APSR: Anomalies, Planetary and Space Resources
 has_apsr = {
 	has_global_flag = apsr_mod_on

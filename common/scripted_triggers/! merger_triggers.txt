@@ -120,3 +120,23 @@ merg_is_hab_ringworld = {
 	# is_planet_class = pc_ringworld_shroudcity
 	}
 }
+
+merg_has_cloning_building = {
+	OR = {
+		# Vanilla
+		has_building = building_clone_vats
+		# ANZ Advanced Cloning
+		has_building = building_clone_vats_basic_organic
+		has_building = building_clone_vats_improved_organic
+		has_building = building_clone_vats_advanced_organic
+		has_building = building_clone_vats_augmented_organic
+		has_building = building_clone_vats_basic_asim
+		has_building = building_clone_vats_improved_asim
+		has_building = building_clone_vats_advanced_asim
+		has_building = building_clone_vats_augmented_asim
+		has_building = building_clone_vats_basic_serv
+		has_building = building_clone_vats_improved_serv
+		has_building = building_clone_vats_advanced_serv
+		has_building = building_clone_vats_augmented_serv
+	}
+}

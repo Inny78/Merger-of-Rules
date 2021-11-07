@@ -2156,7 +2156,19 @@ can_species_be_assembled = {
 			# Vanilla
 			else = {
 				OR = {
-					root = { has_building = building_clone_vats }
+					root = {
+						merg_has_cloning_building = yes
+						OR = {
+							has_anz_cloning = no
+							# ANZ Advanced Cloning
+							AND = {
+								has_anz_cloning = yes
+								NOT = {
+									has_modifier = planet_cloning_limits
+								}
+							}
+						}
+					}
 					# The DAL Species Mod
 					is_archetype = DATEALIVE
 					# Warship Girls R and MIST species
