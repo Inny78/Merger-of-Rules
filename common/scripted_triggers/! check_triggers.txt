@@ -99,6 +99,11 @@ has_more_authorities = {
 	has_global_flag = gf_moreauthorities_activated
 }
 
+# More Corporate Authorities
+has_mca = {
+	has_global_flag = using_mod_more_corporate_authorities
+}
+
 # More Events Mod
 has_mem = {
 	has_global_flag = mem_more_events_mod
@@ -114,6 +119,11 @@ has_power_bombard = {
 	has_global_flag = prob_global_flag
 }
 
+# Real Space
+has_real_space = {
+	has_global_flag = has_real_space_mod
+}
+
 # Real Space New Frontiers
 has_real_new_frontiers = {
 	has_global_flag = has_new_frontiers_mod
@@ -122,6 +132,16 @@ has_real_new_frontiers = {
 # Sensor Expansion
 has_sensor_expansion = {
 	has_global_flag = ariphaos_sensors_installed
+}
+
+# Shadowgate
+has_shadowgate = {
+	has_global_flag = shadowgate_mod_active
+}
+
+# Some Events of Outside Cluster
+has_seooc = {
+	has_global_flag = has_nsc_active
 }
 
 # Special Colonies Overhaul
