@@ -378,7 +378,7 @@ diplomatic_stance = {
 				has_valid_civic = civic_inwards_perfection
 				# Ethics and Civics Alternative - Redux
 				AND = {
-					has_global_flag = cultural_overhaul_redux_active
+					has_ethics_redux = yes
 					has_valid_civic = civic_isolationism
 				}
 			}
@@ -488,7 +488,7 @@ diplomatic_stance = {
 				has_valid_civic = civic_inwards_perfection
 				# Ethics and Civics Alternative - Redux
 				AND = {
-					has_global_flag = cultural_overhaul_redux_active
+					has_ethics_redux = yes
 					has_valid_civic = civic_isolationism
 				}
 			}
@@ -596,7 +596,7 @@ diplomatic_stance = {
 				has_modifier = humiliated
 				# Ethics and Civics Alternative - Redux
 				AND = {
-					has_global_flag = cultural_overhaul_redux_active
+					has_ethics_redux = yes
 					has_valid_civic = civic_isolationism
 				}
 			}
@@ -688,7 +688,7 @@ diplomatic_stance = {
 					has_valid_civic = civic_warrior_culture
 					# Expanded Traits, Civics, Pops, and More
 					AND = {
-						has_global_flag = expanded_pops_active
+						has_expanded_pops = yes
 						OR = {
 							has_valid_civic = civic_barbaric_despoilers
 							has_valid_civic = civic_crusaders
@@ -881,7 +881,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_shadow"
 
 		potential = {
-			has_global_flag = has_mod_espionage_extended
+			has_espionage_extended = yes
 			OR = {
 				merg_is_default_empire = yes
 			}
@@ -1127,19 +1127,19 @@ war_philosophy = {
 			# Expanded Traits, Civics, Pops, and More
 			modifier = {
 				factor = 1.5
-				has_global_flag = cultural_overhaul_active
+				has_expanded_pops = yes
 				has_ethic = ethic_fanatic_xenophile
 				is_authoritarian = no
 				is_militarist = no
 			}
 			modifier = {
 				factor = 1.5
-				has_global_flag = cultural_overhaul_active
+				has_expanded_pops = yes
 				has_ethic = "ethic_pacifist"
 			}
 			modifier = {
 				factor = 1.5
-				has_global_flag = cultural_overhaul_active
+				has_expanded_pops = yes
 				OR = {
 					has_valid_civic = civic_diplomatic_corps
 					has_valid_civic = civic_public_relations_specialists
@@ -1151,7 +1151,7 @@ war_philosophy = {
 			}
 			modifier = {
 				factor = 0
-				has_global_flag = cultural_overhaul_active
+				has_expanded_pops = yes
 				NOR = {
 					is_pacifist = yes
 					AND = {
@@ -1175,7 +1175,7 @@ war_philosophy = {
 		
 		potential = {
 			has_valid_civic = civic_mutualistic_behavior
-			has_global_flag = complex_hive
+			has_expanded_gestalts = yes
 		}
 		
 	
@@ -1314,7 +1314,7 @@ orbital_bombardment = {
 		potential = {
 			# Powerful & Realistic Orbital Bombardments
 			NAND = {
-				has_global_flag = prob_global_flag
+				has_power_bombard = yes
 				prob_forced_armageddon_bombardment = yes
 			}
 		}
@@ -1348,10 +1348,10 @@ orbital_bombardment = {
 		}
 		potential = {
 			OR = {
-				NOT= { has_global_flag = prob_global_flag }
+				has_power_bombard = no
 				# Powerful & Realistic Orbital Bombardments
 				AND = {
-					has_global_flag = prob_global_flag
+					has_power_bombard = yes
 					prob_forced_armageddon_bombardment = no
 					OR = {
 						has_country_flag = prob_enable_indiscriminate_bombardment
@@ -1414,7 +1414,7 @@ orbital_bombardment = {
 					}
 				}
 			}
-			has_global_flag = prob_global_flag
+			has_power_bombard = yes
 		}
 		valid = { is_pacifist = no }
 		AI_weight = {
@@ -1447,7 +1447,7 @@ orbital_bombardment = {
 				has_valid_civic = civic_bringers_of_death
 				# Powerful & Realistic Orbital Bombardments
 				AND = {
-					has_global_flag = prob_global_flag
+					has_power_bombard = yes
 					OR = {
 						has_country_flag = prob_enable_armageddon_bombardment
 						prob_forced_armageddon_bombardment = yes
@@ -1479,7 +1479,7 @@ orbital_bombardment = {
 			# Powerful & Realistic Orbital Bombardments
 			modifier = {
 				factor = 10
-				has_global_flag = prob_global_flag
+				has_power_bombard = yes
 				prob_forced_armageddon_bombardment = yes
 			}
 		}
@@ -1493,7 +1493,7 @@ orbital_bombardment = {
 			}
 		}
 		potential = {
-			has_global_flag = gigastructures_enabled
+			has_gigastructures = yes
 			OR = {
 				ehof_default_country = yes
 				is_country_type_with_subjects = yes
@@ -1717,13 +1717,13 @@ first_contact_protocol = {
 		valid = {
 			OR = {
 				AND = {
-					NOT = { has_global_flag = expanded_pops_active }
+					NOT = { has_expanded_pops = yes }
 					is_homicidal = no
 					is_xenophobe = no
 				}
 				# Expanded Traits, Civics, Pops, and More
 				AND = { 
-					has_global_flag = expanded_pops_active
+					has_expanded_pops = yes
 					is_xenophobic_isolationists = no
 					is_homicidal = no
 					is_xenophobe = no
@@ -1748,7 +1748,7 @@ first_contact_protocol = {
 			modifier = {
 				factor = 2
 				AND = {
-					has_global_flag = expanded_pops_active
+					has_expanded_pops = yes
 					is_open_gestalt = yes
 				}
 			}
@@ -1782,14 +1782,14 @@ first_contact_protocol = {
 			modifier = {
 				factor = 2
 				AND = {
-					has_global_flag = expanded_pops_active
+					has_expanded_pops = yes
 					is_xenophobic_isolationists = yes
 				}
 			}
 			modifier = {
 				factor = 2
 				AND = {
-					has_global_flag = expanded_pops_active
+					has_expanded_pops = yes
 					OR = {
 						is_gestalt = yes
 						is_open_gestalt = no
@@ -1813,7 +1813,7 @@ first_contact_protocol = {
 		valid = {
 			OR = {
 				AND = {
-					NOT = { has_global_flag = expanded_pops_active }
+					NOT = { has_expanded_pops = yes }
 					is_pacifist = no
 					is_xenophile = no
 					# Expanded Gestalts
@@ -1821,7 +1821,7 @@ first_contact_protocol = {
 				}
 				# Expanded Traits, Civics, Pops, and More
 				AND = {
-					has_global_flag = expanded_pops_active
+					has_expanded_pops = yes
 					is_pacifist = no
 					is_xenophile = no
 					# Expanded Gestalts
@@ -1889,8 +1889,8 @@ border_policy = {
 				has_valid_civic = civic_fanatic_purifiers
 				# Ethics and Civics mods but not Redux
                 AND = {
-                   	has_global_flag = cultural_overhaul_active # Classics and Bug Branch
-                    NOT = { has_global_flag = cultural_overhaul_redux_active }
+					has_any_ethics_mod = yes # Classics and Bug Branch
+                    has_ethics_redux = no
                     has_valid_civic = civic_inwards_perfection
                 }
 				# Espionage Extended
@@ -2221,11 +2221,11 @@ population_controls = {
 
 		valid = {
 			OR = {
-				NOT = { has_global_flag = cultural_overhaul_active }
+				has_any_ethics_mod = no
 				NOR = {
 					# Ethics and Civics Classic
 					AND = {
-						is_ethics_classic = yes
+						has_ethics_classic = yes
 						OR = {
 							has_valid_civic = civic_anarchy_ideals
 							has_valid_civic = civic_spiritual_democracy
@@ -2233,7 +2233,7 @@ population_controls = {
 					}
 					# Ethics and Civics Alternative - Redux
 					AND = {
-						has_global_flag = cultural_overhaul_redux_active
+						has_ethics_redux = yes
 						OR = {
 							has_valid_civic = civic_beacon_of_liberty
 							has_valid_civic = civic_spiritual_democracy
@@ -2241,7 +2241,7 @@ population_controls = {
 					}
 					# Ethics & Civics: Bug Branch
 					AND = {
-						has_global_flag = bugbranch_global_flag
+						has_ethics_bug = yes
 						OR = {
 							has_valid_civic = civic_beacon_of_liberty
 							has_valid_civic = civic_beacon_of_liberty_corpo
@@ -2317,7 +2317,7 @@ slavery = {
 				is_xenophobe = yes
 				# Ethics and Civics Classic
 				AND = {
-					is_ethics_classic = yes
+					has_ethics_classic = yes
 					OR = {
 						has_ethic = ethic_fanatic_capitalism
 						has_valid_civic = civic_slaver_guilds
@@ -2326,12 +2326,12 @@ slavery = {
 				}
 				# Ethics and Civics Alternative - Redux
 				AND = {
-					has_global_flag = cultural_overhaul_redux_active
+					has_ethics_redux = yes
 					has_valid_civic = civic_slaver_guilds
 				}
 				# Ethics & Civics: Bug Branch
 				AND = {
-					has_global_flag = bugbranch_global_flag
+					has_ethics_bug = yes
 					OR = {
 						has_valid_civic = civic_caste_system
 						has_valid_civic = civic_slaving_despots

@@ -9,7 +9,7 @@ is_valid_rival = {
 	# Powerful & Realistic Orbital Bombardments
 	hidden_trigger = {
 		if = {
-			limit = { has_global_flag = prob_global_flag }
+			limit = { has_power_bombard = yes }
 			always = yes
 		}
 	}
@@ -49,7 +49,7 @@ can_add_claim = {
 					has_policy_flag = unrestricted_wars
 					# Expanded Traits, Civics, Pops, and More
 					AND = {
-						has_global_flag = expanded_pops_active
+						has_expanded_pops = yes
 						OR = {
 							NOT = { has_valid_civic = civic_closed_collective }
 							NOT = { has_valid_civic = civic_closed_network }
@@ -58,7 +58,7 @@ can_add_claim = {
 				}
 			}
 			AND = { # Expanded Traits, Civics, Pops, and More
-				has_global_flag = expanded_pops_active
+				has_expanded_pops = yes
 				root = {
 					has_policy_flag = liberation_wars
 					has_authority = auth_democratic
@@ -1264,7 +1264,7 @@ can_release_vassal = {
 	hidden_trigger = {
 		if = {
 			limit = {
-				has_global_flag = expanded_pops_active
+				has_expanded_pops = yes
 			}
 			always = yes
 		}
@@ -1314,14 +1314,14 @@ can_release_vassal_from_species = {
 			has_trait = trait_memorex_comatos
 			has_trait = trait_infested_basic
 			AND = {
-				has_global_flag = expanded_pops_active
+				has_expanded_pops = yes
 				prev = { NOT = { has_technology = tech_synthetic_leaders } }
 				has_trait = trait_mechanical
 			}
 		}
 		if = {
 			limit = {
-				has_global_flag = expanded_pops_active
+				has_expanded_pops = yes
 				prev = {
 					OR = {
 						has_valid_civic = civic_fanatic_purifiers
@@ -1334,7 +1334,7 @@ can_release_vassal_from_species = {
 		}
 		if = {
 			limit = {
-				has_global_flag = expanded_pops_active
+				has_expanded_pops = yes
 				prev = { has_authority = auth_machine_intelligence }
 			}
 			OR = {
@@ -1345,7 +1345,7 @@ can_release_vassal_from_species = {
 		}
 		if = {
 			limit = {
-				has_global_flag = expanded_pops_active
+				has_expanded_pops = yes
 				prev = { has_authority = auth_hive_mind }
 			}
 			OR = {
@@ -1366,7 +1366,7 @@ can_release_vassal_from_species = {
 #This rule is a condition for when subjects that normally cannot colonize outside their borders are allowed to
 subject_can_expand = {
 	# Exalted domination totally disallow vassal expansion
-	NOT = { has_global_flag = has_exalted_domination_mod }
+	has_exalted_domination = no
 	root = {
 		OR = {
 			has_valid_civic = civic_feudal_realm
@@ -1782,9 +1782,9 @@ can_terraform_planet = {
 	custom_tooltip = {
 		fail_text = NO_TERRAFORM_HOLLOW_WORLD
 		OR = {
-			NOT = { has_global_flag = has_new_frontiers_mod }
+			has_real_new_frontiers = no
 			AND = {
-				has_global_flag = has_new_frontiers_mod # Let's not affect Expanded Gestalt's own pc_hollow
+				has_real_new_frontiers = yes # Let's not affect Expanded Gestalt's own pc_hollow
 				NOT = { is_planet_class = pc_hollow }
 			}
 		}
@@ -1792,9 +1792,9 @@ can_terraform_planet = {
 	custom_tooltip = {
 		fail_text = NO_TERRAFORM_OVERMIND
 		OR = {
-			NOT = { has_global_flag = has_new_frontiers_mod }
+			has_real_new_frontiers = no
 			AND = {
-				has_global_flag = has_new_frontiers_mod # to avoid a bug
+				has_real_new_frontiers = yes # to avoid a bug
 				NOT = { has_deposit = d_heart_of_the_overmind }
 			}
 		}
@@ -1929,9 +1929,9 @@ species_has_happiness = {
 			has_trait = trait_mechanical
 			# Animated Synthetics Portraits Expanded: Reborn
 			OR = {
-				NOT = { has_global_flag = extended_synths_on }
+				has_animated_synth = no
 				AND = {
-					has_global_flag = extended_synths_on
+					has_animated_synth = yes
 					from = { has_authority = auth_machine_intelligence }
 					has_trait = trait_extsynth_synthetic
 					NOT = {
@@ -1939,7 +1939,7 @@ species_has_happiness = {
 					}
 				}
 				AND = {
-					has_global_flag = extended_synths_on
+					has_animated_synth = yes
 					NOT = {
 						from = { has_authority = auth_machine_intelligence }
 						has_trait = trait_extsynth_synthetic
@@ -2034,7 +2034,7 @@ can_species_procreate = {
 		NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
 		# Special Colonies Overhaul
 		AND = {
-			has_global_flag = SCO_enabled_flag
+			has_special_colonies = yes
 			NOT = {
 				root = {
 					owner = {
@@ -2170,7 +2170,7 @@ can_species_be_assembled = {
 		}
 		# Expanded Gestalts
 		AND = {
-			has_global_flag = complex_hive
+			has_expanded_gestalts = yes
 			NAND = {
 				root = { owner = { has_valid_civic = civic_machine_replicators } }
 				has_trait = trait_machine_central
@@ -2717,7 +2717,7 @@ system_blocks_sensors = {
 		has_star_flag = ss_abyssal_shockwave
 		# Sensor Expansion
 		AND = {
-			has_global_flag = ariphaos_sensors_installed
+			has_sensor_expansion = yes
 			OR = {
 				is_star_class = sc_binary_2
 				is_star_class = sc_neutron_star
@@ -2725,7 +2725,7 @@ system_blocks_sensors = {
 			ROOT = { NOT = { has_technology = tech_sensors_4 } }
 		}
 		AND = {
-			has_global_flag = ariphaos_sensors_installed
+			has_sensor_expansion = yes
 			OR = {
 				is_star_class = sc_binary_1
 				is_star_class = sc_pulsar
@@ -2733,12 +2733,12 @@ system_blocks_sensors = {
 			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_pulsar } }
 		}
 		AND = {
-			has_global_flag = ariphaos_sensors_installed
+			has_sensor_expansion = yes
 			has_natural_wormhole = yes
 			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_wormhole } }
 		}
 		AND = {
-			has_global_flag = ariphaos_sensors_installed
+			has_sensor_expansion = yes
 			is_star_class = sc_black_hole
 			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_black_hole } }
 		}
@@ -2800,7 +2800,7 @@ can_enter_system_by_jump = {
 					}
 					# Gigastructural Engineering and More
 					AND = {
-						has_global_flag = gigastructures_enabled
+						has_gigastructures = yes
 						OR = {
 							has_star_flag = ehof_compound_system
 							has_star_flag = giga_core_03
@@ -3041,9 +3041,9 @@ can_support_branch_offices = {
 	custom_tooltip = {
 		fail_text = ACTION_RECIPIENT_NOT_YOUR_CORP
 		OR = {
-			NOT = { has_global_flag = gf_moreauthorities_activated }
+			has_more_authorities = no
 			AND = {
-				has_global_flag = gf_moreauthorities_activated
+				has_more_authorities = yes
 				NAND = {
 					is_megacorp = yes
 					is_subject = no
@@ -3081,7 +3081,7 @@ can_build_branch_office_on_planet = {
 			owner = { is_in_federation_with = root }
 			# Expanded Traits, Civics, Pops, and More
 			AND = {
-				has_global_flag = expanded_pops_active
+				has_expanded_pops = yes
 				owner = { has_country_flag = cb_markets_opened@root }
 			}
 			# Warship Girls R And MIST Species
@@ -3147,7 +3147,7 @@ can_build_branch_office_on_planet = {
 			# Vassals Expanded and Reworked
 			# allow branch offices in all subjects and vice versa
 			AND = {
-				has_global_flag = gf_veru_activated
+				has_vassals_expanded = yes
 				OR = {
 					root = {
 						is_subject = yes
@@ -3271,7 +3271,7 @@ can_crossbreed_species_on_planet = {
 	}
 	# Warship Girls R And MIST Species
 	NAND = {
-		has_global_flag = has_wsg_mod
+		has_warship_girls = yes
 		any_owned_species = { has_wg_traits = yes }
 	}
 }
@@ -3287,12 +3287,12 @@ can_crossbreed_species = {
 	}
 	# Warship Girls R And MIST Species
 	NAND = {
-		has_global_flag = has_wsg_mod
+		has_warship_girls = yes
 		any_owned_species = { has_wg_traits = yes }
 	}
 	root = {
 		NAND = {
-			has_global_flag = has_wsg_mod
+			has_warship_girls = yes
 			any_owned_species = { has_wg_traits = yes }
 		}
 	}
@@ -3398,7 +3398,7 @@ can_be_sold_on_slave_market = {
 		has_trait = trait_clone_soldier_infertile_full_potential
 		# Warship Girls R And MIST Species
 		AND = {
-			has_global_flag = has_wsg_mod
+			has_warship_girls = yes
 			has_wg_traits = yes
 		}
 		# Plentiful Perks
@@ -3527,7 +3527,7 @@ can_pop_auto_migrate = {
 		has_job = slave_toiler
 		# Human Fallen Empire
 		AND = {
-			has_global_flag = hfe_installed
+			has_human_fallen = yes
 			hfe_trigger_unemployed_auto_migrate = yes
 		}
 	}
@@ -3542,7 +3542,7 @@ can_pop_auto_migrate = {
 		}
 		# Human Fallen Empire
 		AND = {
-			has_global_flag = hfe_installed
+			has_human_fallen = yes
 			owner = {
 				or = {
 					is_country_type = hfe_pirate

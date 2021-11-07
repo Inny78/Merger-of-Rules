@@ -1,0 +1,113 @@
+# Checking for mod presence
+
+# Ancient Cache of Technologies
+has_acot = {
+	has_global_flag = acot_activated
+}
+
+# Animated Synthetics Portraits Expanded: Reborn
+has_animated_synth = {
+	has_global_flag = extended_synths_on
+}
+
+# Any fork of Ethics mod
+has_any_ethics_mod = {
+	has_global_flag = cultural_overhaul_active
+}
+
+# APSR: Anomalies, Planetary and Space Resources
+has_apsr = {
+	has_global_flag = apsr_mod_on
+}
+
+# Espionage Extended
+has_espionage_extended = {
+	has_global_flag = has_mod_espionage_extended
+}
+
+# Ethics and Civics Bug Branch
+has_ethics_bug = {
+	has_global_flag = bugbranch_global_flag
+}
+
+# Ethics and Civics Classic
+has_ethics_classic = {
+	AND = {
+		has_global_flag = cultural_overhaul_active
+  		NOR = {
+    		has_global_flag = bugbranch_global_flag
+    		has_global_flag = cultural_overhaul_redux_active
+			has_global_flag = ideological_revolution
+  		}
+	}
+}
+
+# Ethics and Civics Redux
+has_ethics_redux = {
+	has_global_flag = cultural_overhaul_redux_active
+}
+
+# Expanded Gestalts
+has_expanded_gestalts = {
+	has_global_flag = complex_hive
+}
+
+# Expanded Traits, Civics, Pops, and More
+has_expanded_pops = {
+	has_global_flag = expanded_pops_active
+}
+
+# Exalted domination
+has_exalted_domination = {
+	has_global_flag = has_exalted_domination_mod
+}
+
+# Gigastructural Engineering and More
+has_gigastructures = {
+	has_global_flag = gigastructures_enabled
+}
+
+# Human Fallen Empire
+has_human_fallen = {
+	has_global_flag = hfe_installed
+}
+
+# More Authorities
+has_more_authorities = {
+	has_global_flag = gf_moreauthorities_activated
+}
+
+# Powerful & Realistic Orbital Bombardments
+has_power_bombard = {
+	has_global_flag = prob_global_flag
+}
+
+# Real Space New Frontiers
+has_real_new_frontiers = {
+	has_global_flag = has_new_frontiers_mod
+}
+
+# Sensor Expansion
+has_sensor_expansion = {
+	has_global_flag = ariphaos_sensors_installed
+}
+
+# Special Colonies Overhaul
+has_special_colonies = {
+	has_global_flag = SCO_enabled_flag
+}
+
+# The Zenith of Fallen Empires
+has_zofe = {
+	has_global_flag = zofe_activated
+}
+
+# Vassals Expanded and Reworked
+has_vassals_expanded = {
+	has_global_flag = gf_veru_activated
+}
+
+# Warship Girls R And MIST Species
+has_warship_girls = {
+	has_global_flag = has_wsg_mod
+}

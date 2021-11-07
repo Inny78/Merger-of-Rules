@@ -74,18 +74,6 @@ merg_is_regular_empire = {
 	is_regular_empire = yes
 }
 
-# Detection of Ethics and Civics Classic
-is_ethics_classic = {
-	AND = {
-		has_global_flag = cultural_overhaul_active
-  		NOR = {
-    		has_global_flag = bugbranch_global_flag
-    		has_global_flag = cultural_overhaul_redux_active
-			has_global_flag = ideological_revolution
-  		}
-	}
-}
-
 # List of all habitable ringworld sections
 merg_is_hab_ringworld = {
 	OR = {

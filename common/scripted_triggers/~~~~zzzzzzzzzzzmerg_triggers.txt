@@ -83,7 +83,7 @@ colonizable_planet = {
 		is_planet_class = pc_shenhai
 		# APSR: Anomalies, Planetary and Space Resources
 		AND = {
-			has_global_flag = apsr_mod_on
+			has_apsr = yes
 			has_apsr_modifiers = yes
 		}
 		# Endless Frontier
@@ -357,15 +357,10 @@ has_comms_with_alien_empire = {
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
 			# ACOT
-			AND = {
-				has_global_flag = acot_activated
-				OR = {
-					is_country_type = original_empire
-					is_country_type = original_empire_passive
-					is_country_type = original_empire_active
-					is_country_type = sofe_light_seeker
-				}
-			}
+			is_country_type = original_empire
+			is_country_type = original_empire_passive
+			is_country_type = original_empire_active
+			is_country_type = sofe_light_seeker
 		}
 	}
 }
@@ -382,15 +377,10 @@ has_comms_with_alien_civilization = {
 			is_country_type = dormant_marauders
 			is_country_type = awakened_marauders
 			# ACOT
-			AND = {
-				has_global_flag = acot_activated
-				OR = {
-					is_country_type = original_empire
-					is_country_type = original_empire_passive
-					is_country_type = original_empire_active
-					is_country_type = sofe_light_seeker
-				}
-			}
+			is_country_type = original_empire
+			is_country_type = original_empire_passive
+			is_country_type = original_empire_active
+			is_country_type = sofe_light_seeker
 		}
 	}
 }
