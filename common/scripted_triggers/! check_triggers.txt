@@ -67,14 +67,46 @@ has_gigastructures = {
 	has_global_flag = gigastructures_enabled
 }
 
+# Guilli's Planet Modifiers and Features
+has_gpm = {
+	OR = {
+		has_global_flag = has_guillis_planet_modifiers_mod
+		has_global_flag = guillis_planet_modifiers_active
+	}
+}
+
 # Human Fallen Empire
 has_human_fallen = {
 	has_global_flag = hfe_installed
 }
 
+# Kancolle
+has_kancolle = {
+	OR = {
+		has_global_flag = kancolle_crisis_jia
+		has_global_flag = kancolle_crisis_yi
+		has_global_flag = kancolle_crisis_bing
+		has_global_flag = kancolle_crisis_ding
+		has_global_flag = kancolle_crisis_disabled
+		has_global_flag = created_kc_fallen_empire
+		has_global_flag = kancolle_yukikaze_kaini
+		has_global_flag = Strike_Witches_precursors
+	}
+}
+
 # More Authorities
 has_more_authorities = {
 	has_global_flag = gf_moreauthorities_activated
+}
+
+# More Events Mod
+has_mem = {
+	has_global_flag = mem_more_events_mod
+}
+
+# Nirvana Empire Project
+has_nirvana_project = {
+	has_global_flag = nirvana_empire_start
 }
 
 # Powerful & Realistic Orbital Bombardments
@@ -95,6 +127,11 @@ has_sensor_expansion = {
 # Special Colonies Overhaul
 has_special_colonies = {
 	has_global_flag = SCO_enabled_flag
+}
+
+# The Empty Vagrant
+has_empty_vagrant = {
+	has_global_flag = enable_empty_vagrant_mod
 }
 
 # The Zenith of Fallen Empires
