@@ -2142,6 +2142,16 @@ can_species_be_assembled = {
 				limit = { root.owner = { has_ascension_perk = ap_total_assimilation } }
 				has_trait = trait_plentiful_traditions_pt_cocoon
 			}
+			# The Dark Art of Necromancy
+			else_if = {
+				limit = {
+					OR = {
+						has_trait = trait_necromage
+						has_trait = trait_mindless_undead
+					}
+				}
+			}
+			# Vanilla
 			else = {
 				OR = {
 					root = { has_building = building_clone_vats }
