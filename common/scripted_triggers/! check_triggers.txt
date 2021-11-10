@@ -119,6 +119,11 @@ has_nirvana_project = {
 	has_global_flag = nirvana_empire_start
 }
 
+# Planetary Diversity
+has_planetary_diversity = {
+	has_global_flag = planetarydiversity
+}
+
 # Powerful & Realistic Orbital Bombardments
 has_power_bombard = {
 	has_global_flag = prob_global_flag
@@ -152,6 +157,11 @@ has_seooc = {
 # Special Colonies Overhaul
 has_special_colonies = {
 	has_global_flag = SCO_enabled_flag
+}
+
+# Stellaris Evolved
+has_stellaris_evolved = {
+	has_global_flag = stellarisevolved
 }
 
 # The Empty Vagrant

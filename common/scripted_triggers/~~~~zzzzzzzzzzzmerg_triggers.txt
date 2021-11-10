@@ -289,6 +289,17 @@ habitable_planet = {
 		is_planet_class = pc_ll_temperate
 		is_planet_class = pc_ll_foggy
 		is_planet_class = pc_ll_torrid
+		# Real Space - New Frontiers / Expanded Gestalts: Forgotten Queens
+		is_planet_class = pc_hollow
+		# Giga Diversity
+		is_planet_class = pc_ll_methane
+		is_planet_class = pc_ll_ash
+		is_planet_class = pc_ll_sulfur
+		is_planet_class = pc_ll_ammonia
+		is_planet_class = pc_ll_ocean
+		is_planet_class = pc_ll_tidallylocked_cold
+		is_planet_class = pc_ll_tidallylocked
+		is_planet_class = pc_ll_rogue
 		# Not updated yet, keeping it for later
 		# Master of the Planet
 		# is_planet_class = pc_mining
@@ -298,8 +309,6 @@ habitable_planet = {
 		# is_planet_class = pc_training_shielded
 		# is_planet_class = pc_trade
 		# is_planet_class = pc_eco
-		# Real Space - New Frontiers / Expanded Gestalts: Forgotten Queens
-		# is_planet_class = pc_hollow
 	}
 }
 
