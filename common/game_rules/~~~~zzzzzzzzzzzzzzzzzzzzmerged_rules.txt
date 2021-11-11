@@ -1985,6 +1985,12 @@ can_colonize_with_species = {
 		limit = { has_trait = trait_machine_unit }
 		root = { is_machine_empire = yes }
 	}
+	# Nyto Species Event Pack
+	else_if = {
+		limit = {  has_species_flag = GF_nyto_not_coloniz }
+		always = no
+	}
+	# Vanilla
 	else = {
 		always = yes
 	}
@@ -2185,12 +2191,6 @@ can_species_be_assembled = {
 		# Organics
 		AND = {
 			is_organic_species = yes
-            root = {
-                check_modifier_value = {
-                    modifier = planet_pop_assembly_organic_add
-                    value > 0
-                }
-            }
 			# Hives can only clone drones
 			if = {
 				limit = {
@@ -2238,6 +2238,7 @@ can_species_be_assembled = {
 				limit = {
 					OR = {
 						has_trait = trait_necromage
+						has_trait = trait_undead
 						has_trait = trait_mindless_undead
 					}
 				}
