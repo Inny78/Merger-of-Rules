@@ -183,6 +183,15 @@ is_organic_species = {
 			is_archetype = DATEALIVE
 			# Nyto Species Events Pack
 			is_archetype = NYTO
+			# Silfae's Portrait Revisited
+            AND = {
+                is_archetype = HOLOARCH
+                NOR = {
+                    has_trait = trait_holofrixigram
+                    has_trait = trait_holofrixigram_2
+                    has_trait = trait_holofrixigram_3
+                }
+            }
 		}
 	}
 }

@@ -1255,6 +1255,9 @@ can_generate_leader_from_pop = {
 		has_trait = trait_holodrone
 		# Expanded Gestalts
 		root = { has_origin = origin_hive_overmind }
+		# Diagraphers Trait Mod
+		has_trait = trait_subsapient_form
+		has_trait = trait_living_architecture
 	}
 	OR = {
 		is_robot_pop = no
@@ -1923,6 +1926,11 @@ can_colonize_with_pop = {
 		has_trait = trait_plentiful_traditions_pt_cocoon
 		# Madoka Magica NEW
 		has_trait = trait_mahoshoujo
+		# Diagraphers Trait Mod
+		has_trait = trait_subsapient_form
+		has_trait = trait_rooted_adults_rooted
+		has_trait = trait_living_architecture
+		has_trait = trait_dimorphic_male
 	}
 	# Vanilla
 	if = {
@@ -1944,6 +1952,13 @@ can_colonize_with_species = {
 	has_colonization_control = {
 		value = no
 		country =root
+	}
+	NOR = {
+		# Diagraphers Trait Mod
+		has_trait = trait_subsapient_form
+		has_trait = trait_rooted_adults_rooted
+		has_trait = trait_living_architecture
+		has_trait = trait_dimorphic_male
 	}
 	OR = {
 		NOT = { has_trait = trait_self_modified }
@@ -1996,7 +2011,17 @@ can_colonize_with_species = {
 	}
 }
 
-# pop_has_random_ethics
+# Root = Pop
+# From = Country
+# This = Pop
+# NOTE: species_has_happiness is also checked for this
+pop_has_random_ethics = {
+	NOR = {
+		has_citizenship_type = { type = citizenship_organic_trophy }
+		# Diagraphers Trait Mod
+		has_trait = trait_subsapient_form
+	}
+}
 
 # Root = Species
 # From = Country
@@ -2021,6 +2046,8 @@ species_has_happiness = {
 		has_trait = trait_td_thymoleptic_implants
 		has_trait = trait_td_rbot_thymoleptic_scripts
 		has_trait = trait_td_rbot_thought_inhibitor
+		# Diagraphers Trait Mod
+		has_trait = trait_multihive_drone
 		# Vanilla
 		AND = {
 			has_trait = trait_mechanical
@@ -2125,6 +2152,8 @@ can_species_procreate = {
 		has_trait = trait_hologanglion
 		# Expanded Gestalts
 		has_trait = trait_hive_mind_overlord
+		# Diagraphers Trait Mod
+		has_trait = trait_dimorphic_male
 	}
 	NAND = {
 		root = { has_modifier = slave_colony }
@@ -2144,6 +2173,30 @@ can_species_procreate = {
 			}
 		}
 	}
+	# Diagraphers Trait Mod
+	NAND = {
+		has_trait = trait_exotic_gas_dependency
+		exists = root.owner
+		root.owner = {
+			resource_stockpile_compare = {
+				resource = exotic_gases
+				value <= 0
+			}
+		}
+	}
+	NAND = {
+		has_trait = trait_delicate
+		exists = root.owner
+		has_citizenship_type = { type = citizenship_slavery country = root.owner }
+	}
+	NAND = {
+		has_trait = trait_sterile
+		exists = root.owner
+		root.owner = {
+			has_artificial_wombs = no
+		}
+	}
+	# Vanilla
 	if = {
 		limit = {
 			has_trait = trait_necrophage
@@ -2171,6 +2224,18 @@ can_species_be_assembled = {
 			is_robotic = yes
 			# Azur lane Stellaris DLC
 			NOT = { has_trait = trait_robot_mind_relic_core }
+			# Diagraphers Trait Mod
+			NAND = {
+				has_trait = trait_robot_rare_crystal_components
+				exists = root.owner
+				root.owner = {
+					resource_stockpile_compare = {
+						resource = rare_crystals
+						value <= 0
+					}
+				}
+			}
+			# Vanilla
 			root = {
 				check_modifier_value = {
 					modifier = planet_pop_assembly_add
@@ -2948,28 +3013,25 @@ can_resettle_pop = {
 		fail_text = "self_modified_refuse"
 		NOT = { has_trait = trait_self_modified }
 	}
+	# Diagraphers Trait Mod
 	if = { #Done as an IF/ELSE so the tooltip isn't hideous and unreadable
+		limit = {
+			OR = {
+				has_trait = trait_living_architecture
+				has_trait = trait_rooted_adults_rooted
+			}
+		}
+		always = no
+	}
+	# Vanilla
+	else_if = {
 		limit = { is_shackled_robot = yes }
 		always = yes
 	}
 	else_if = {
 		limit = {
 			planet = {
-				OR = {
-					has_modifier = doomsday_1
-					has_modifier = doomsday_2
-					has_modifier = doomsday_3
-					has_modifier = doomsday_4
-					has_modifier = doomsday_5
-					# Expanded Events
-					has_modifier = deteriorating_ecosystem
-					has_modifier = catastrophe_approach
-					has_modifier = apocalypse
-					has_modifier = ravenous_locusts
-					has_modifier = planet_active_worm
-					# Endless Frontier: An Event Mod
-					has_modifier = mzilli_events_dying_world
-				}
+				merg_is_doomed_planet = yes
 			}
 		}
 		always = yes
@@ -3005,7 +3067,21 @@ can_resettle_pop = {
 	}
 }
 
-# can_country_resettle
+can_country_resettle = {
+	OR = {
+		has_policy_flag = resettlement_allowed
+		is_gestalt = yes
+		custom_tooltip = {
+			text = owns_non_sapient_robots
+			country_has_shackled_robots = yes
+		}
+		hidden_trigger = { #don't need to show this as tooltip only shown when all game rule fails, and this is a special case
+			any_owned_planet = {
+				merg_is_doomed_planet = yes
+			}
+		}
+	}
+}
 
 # This = Planet
 can_resettle_planet = {
@@ -3015,21 +3091,7 @@ can_resettle_planet = {
 			is_gestalt = yes
 			country_has_shackled_robots = yes
 			any_owned_planet = {
-				OR = {
-					has_modifier = doomsday_1
-					has_modifier = doomsday_2
-					has_modifier = doomsday_3
-					has_modifier = doomsday_4
-					has_modifier = doomsday_5
-					# Expanded Events
-					has_modifier = deteriorating_ecosystem
-					has_modifier = catastrophe_approach
-					has_modifier = apocalypse
-					has_modifier = ravenous_locusts
-					has_modifier = planet_active_worm
-					# Endless Frontier: An Event Mod
-					has_modifier = mzilli_events_dying_world
-				}
+				merg_is_doomed_planet = yes
 			}
 		}
 	}
@@ -3506,6 +3568,17 @@ can_be_sold_on_slave_market = {
 		}
 		is_sapient = no
 	}
+	# Diagraphers Trait Mod
+	if = {
+		limit = {
+			OR = {
+				has_trait = trait_living_architecture
+				has_trait = trait_rooted_adults_rooted
+			}
+		}
+		always = no
+	}
+	# Vanilla
 	NOR = {
 		# Since they can't reproduce, they die out too fast for anyone to want to buy them.
 		has_trait = trait_clone_soldier_infertile
@@ -3665,6 +3738,12 @@ can_pop_auto_migrate = {
 			}
 		}
 	}
+	# Diagraphers Trait Mod
+	NOR = {
+		has_trait = trait_living_architecture
+		has_trait = trait_rooted_adults_rooted
+		has_trait = trait_presapient_earthbound
+	}
 }
 
 # This = planet
@@ -3697,19 +3776,7 @@ can_planet_receive_auto_migration = {
 	NOR = {
 		planet_devastation >= 10
 		has_modifier = planet_culture_shock
-		has_modifier = doomsday_1
-		has_modifier = doomsday_2
-		has_modifier = doomsday_3
-		has_modifier = doomsday_4
-		has_modifier = doomsday_5
-		# Expanded Events
-		has_modifier = deteriorating_ecosystem
-		has_modifier = catastrophe_approach
-		has_modifier = apocalypse
-		has_modifier = ravenous_locusts
-		has_modifier = planet_active_worm
-		# Endless Frontier: An Event Mod
-		has_modifier = mzilli_events_dying_world
+		merg_is_doomed_planet = yes
 	}
 }
 
