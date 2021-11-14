@@ -1251,7 +1251,7 @@ can_generate_leader_from_pop = {
 		# Expanded Events / Expanded Traits, Civics, Pops, and More
 		has_trait = trait_memorex_comatos
 		has_trait = trait_infested_basic
-		# Holofrixit Revisited
+		# Holofrixit Revisited / Silfae's Portraits: Revisited
 		has_trait = trait_holodrone
 		# Expanded Gestalts
 		root = { has_origin = origin_hive_overmind }
@@ -1270,7 +1270,7 @@ can_generate_leader_from_pop = {
 				root = { has_technology = tech_mind_plus }
 			}
 		}
-		# Holofrixit Revisited
+		# Holofrixit Revisited / Silfae's Portraits: Revisited
 		ROOT = {
 			has_origin = origin_holofrixit
 			PREV.species = {
@@ -1304,6 +1304,8 @@ can_generate_leader_from_species = {
 			has_trait = "trait_mechanical"
 		}
 		has_citizenship_type = { type = citizenship_full country = root }
+		# ThaumStellaris
+		NOT = { has_trait = "tc_trait_golem" }
 	}
 }
 
@@ -1322,7 +1324,7 @@ can_generate_military_leader_from_pop = {
 				is_mechanical_empire = yes
 				# Girls Frontline
 				root = { has_technology = tech_mind_plus }
-				# Holofrixit Revisited
+				# Holofrixit Revisited / Silfae's Portraits: Revisited
 				AND = {
 					has_origin = origin_holofrixit
 					PREV.species = {
@@ -1959,6 +1961,10 @@ can_colonize_with_species = {
 		has_trait = trait_rooted_adults_rooted
 		has_trait = trait_living_architecture
 		has_trait = trait_dimorphic_male
+		# Plentiful Perks
+		has_trait = trait_plentiful_traditions_pt_cocoon
+		# ThaumStellaris
+		has_trait = tc_trait_golem
 	}
 	OR = {
 		NOT = { has_trait = trait_self_modified }
@@ -1978,10 +1984,6 @@ can_colonize_with_species = {
 				}
 			}
 		}
-	}
-	# Plentiful Perks
-	NOT = {
-		has_trait = trait_plentiful_traditions_pt_cocoon
 	}
 	# Vanilla
 	if = {
@@ -2048,6 +2050,8 @@ species_has_happiness = {
 		has_trait = trait_td_rbot_thought_inhibitor
 		# Diagraphers Trait Mod
 		has_trait = trait_multihive_drone
+		# ThaumStellaris
+		has_trait = tc_trait_golem
 		# Vanilla
 		AND = {
 			has_trait = trait_mechanical
@@ -2148,7 +2152,7 @@ can_species_procreate = {
 		has_trait = trait_doll
 		# Human Fallen Empires
 		has_trait = hfe_species_trait_brainworm
-		# Holofrixit Revisited
+		# Holofrixit Revisited / Silfae's Portraits: Revisited
 		has_trait = trait_hologanglion
 		# Expanded Gestalts
 		has_trait = trait_hive_mind_overlord
@@ -2217,7 +2221,7 @@ can_species_procreate = {
 # Root = Planet
 can_species_be_assembled = {
 	is_sapient = yes
-	NOT = { has_trait = trait_holodrone } # Holofrixit Revisited
+	NOT = { has_trait = trait_holodrone } # Holofrixit Revisited / Silfae's Portraits: Revisited
 	OR = {
 		# Robots
 		AND = {
@@ -2371,6 +2375,7 @@ can_orbital_bombard = {
 	NOR = {
 		any_owned_ship = { is_ship_size = colossus }
 		# Real Space New Frontiers
+		# This will affect Expanded Gestalt's planet too, but there's only so much I can do
 		from = { is_planet_class = pc_hollow }
 	}
 	OR = {
@@ -2549,10 +2554,6 @@ has_full_sensor_range = {
 		# Core Framework & Modmenu
 		has_country_flag = z_fw_r_celestial_orrey_activited
 		has_country_flag = z_fw_r_cheat_quantum_beacon_activited
-		# Galaxius
-		#any_owned_planet = {
-		#	has_deposit = d_ie_sa
-		#}
 	}
 }
 
@@ -2601,7 +2602,7 @@ can_orbitable_repair_ships = {
 				is_megastructure_type = mega_shipyard_1
 				is_megastructure_type = mega_shipyard_2
 				is_megastructure_type = mega_shipyard_3
-				# ACOT
+				# ACOT/AOT
 				is_megastructure_type = acot_precursor_colossus_base
 				is_megastructure_type = acot_precursor_colossus_stage_two
 				is_megastructure_type = acot_amerigo
@@ -3013,8 +3014,9 @@ can_resettle_pop = {
 		fail_text = "self_modified_refuse"
 		NOT = { has_trait = trait_self_modified }
 	}
+	#Done as an IF/ELSE so the tooltip isn't hideous and unreadable
 	# Diagraphers Trait Mod
-	if = { #Done as an IF/ELSE so the tooltip isn't hideous and unreadable
+	if = {
 		limit = {
 			OR = {
 				has_trait = trait_living_architecture
@@ -3568,21 +3570,14 @@ can_be_sold_on_slave_market = {
 		}
 		is_sapient = no
 	}
-	# Diagraphers Trait Mod
-	if = {
-		limit = {
-			OR = {
-				has_trait = trait_living_architecture
-				has_trait = trait_rooted_adults_rooted
-			}
-		}
-		always = no
-	}
 	# Vanilla
 	NOR = {
 		# Since they can't reproduce, they die out too fast for anyone to want to buy them.
 		has_trait = trait_clone_soldier_infertile
 		has_trait = trait_clone_soldier_infertile_full_potential
+		# Diagraphers Trait Mod
+		has_trait = trait_living_architecture
+		has_trait = trait_rooted_adults_rooted
 		# Warship Girls R And MIST Species
 		AND = {
 			has_warship_girls = yes

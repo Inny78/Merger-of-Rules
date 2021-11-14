@@ -1183,6 +1183,121 @@ can_destroy_planet_with_PLANET_KILLER_NEP_UGO = {
 	}
 }
 
+# ThaumStellaris
+can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
+	custom_tooltip = {
+	fail_text = "tc_planet_killer_excavation_not_target"
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+			is_planet_class = pc_asteroid
+		}
+		merg_is_forbidden_target = no
+		is_star = no
+	}
+	custom_tooltip = {
+		fail_text = "tc_planet_killer_excavation_nothing_dig"
+		NOT = {
+			is_planet_class = pc_tc_bedrock
+		}
+	}
+	custom_tooltip = {
+		fail_text = "tc_planet_killer_excavation_not_hostile"
+		OR = {
+			AND = {
+				custom_tooltip = {
+					fail_text = "tc_planet_killer_excavation_our_planet"
+					NOT = { exists = owner }
+					exists = space_owner
+					space_owner = { is_same_value = from.owner }
+				}
+			}
+			AND = {
+				custom_tooltip = {
+					text = is_not_hostile_cracker
+					OR = {
+						AND = {
+							exists = space_owner
+							space_owner = {
+								OR = {
+									is_at_war_with = from.owner
+									is_country_type = swarm
+									is_country_type = extradimensional
+									is_country_type = extradimensional_2
+									is_country_type = extradimensional_3
+									is_country_type = ai_empire
+								}
+							}
+						}
+						AND = { # colony
+							exists = owner
+							owner = {
+								OR = {
+									is_at_war_with = from.owner
+									is_country_type = swarm
+									is_country_type = extradimensional
+									is_country_type = extradimensional_2
+									is_country_type = extradimensional_3
+									is_country_type = ai_empire
+								}
+							}
+						}
+						AND = { # primitive
+							exists = space_owner
+							exists = owner
+							owner = {
+								is_primitive = yes
+							}
+							space_owner = {
+								OR = {
+									is_at_war_with = from.owner
+									is_country_type = swarm
+									is_country_type = extradimensional
+									is_country_type = extradimensional_2
+									is_country_type = extradimensional_3
+									is_country_type = ai_empire
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM = {
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		OR = {
+			is_a_habitable_planet_megastructure = yes
+			is_planet_class = pc_ai
+		}
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_not_hostile_or_primitive
+		OR = {
+			planet_is_hostile_or_crisis = yes
+			AND = {
+				exists = owner
+				owner = {
+					is_country_type = primitive
+				}
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+		}
+	}
+}
+
 # Vanilla triggers
 is_a_planet = {
 	is_star = no
@@ -1280,7 +1395,7 @@ merg_is_dense_star = {
 	}
 }
 
-# List of void stars for planet killers
+# List of void stars and planet for planet killers
 merg_is_empty_space = {
 	OR = {
 		# Gigastructural Engineering & More
@@ -1294,6 +1409,8 @@ merg_is_empty_space = {
 		is_planet_class = pc_empty_space
 		# Some Events of Outside Cluster
 		is_planet_class = pc_star_void_dummy_01
+		# ThaumStellaris
+		is_planet_class = pc_tc_not_texture
 		# Not updated yet, keeping it for later
 		# Wild Space
 		# is_planet_class = pc_dn_star

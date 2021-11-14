@@ -51,18 +51,10 @@ ehof_default_country = {
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
 		# ZOFE
-		AND = {
-			has_global_flag = zofe_activated
-			OR = {
-				is_country_type = ascended_empire
-				is_country_type = lost_empire
-			}
-		}
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
 		# The Empty Vagrant
-		AND = {
-			has_global_flag = enable_empty_vagrant_mod
-			is_country_type = default_ev
-		}
+		is_country_type = default_ev
 	}
 }
 
@@ -121,31 +113,23 @@ giga_habitable_structure = {
 		uses_district_set = acot_giga_void_sphere
 		uses_district_set = giga_alderson
 		is_planet_class = pc_pouchkinn_black_hole
-		# For reference, unused
-		# uses_district_set = maginot_world_districts
-
 		# Ancient Empire
 		uses_district_set = ag_ancient_ringworld
-
 		# Starborn: Improved Voidtouched
 		uses_district_set = starborn_start
-
 		# Twinks Atlantean
 		uses_district_set = skypalace
-
 		# More Events Mod
 		is_planet_class = pc_mem_vazuran_habitat
-
 		# Acquisition of Technology
 		uses_district_set = dm_habitat
 		uses_district_set = ae_habitat
 		uses_district_set = sigma_habitat
-
  		# Giga Diversity - these don't exist yet
 	}
 }
 
-# AOT trigger disallowing shields to be shown
+# AOT trigger disallowing planetary shields to be shown
 is_memeable_space_habitat = {
 	OR = {
 		uses_district_set = habitat
@@ -163,24 +147,18 @@ is_memeable_space_habitat = {
 		uses_district_set = virtual_ring_industry
 		uses_district_set = acot_giga_void_sphere
 		uses_district_set = giga_alderson
-
 		# Ancient Empire
 		uses_district_set = ag_ancient_ringworld
-
 		# Starborn: Improved Voidtouched
 		uses_district_set = starborn_start
-
 		# Twinks Atlantean
 		uses_district_set = skypalace
-
 		# More Events Mod
 		is_planet_class = pc_mem_vazuran_habitat
-
 		# Acquisition of Technology
 		uses_district_set = dm_habitat
 		uses_district_set = ae_habitat
 		uses_district_set = sigma_habitat
-
  		# Giga Diversity - these don't exist yet
 	}
 }
@@ -203,24 +181,35 @@ mem_is_spherical_world = {
 		uses_district_set = virtual_ring_industry
 		uses_district_set = acot_giga_void_sphere
 		uses_district_set = giga_alderson
-
 		# Ancient Empire
 		uses_district_set = ag_ancient_ringworld
-
 		# Starborn: Improved Voidtouched
 		uses_district_set = starborn_start
-
 		# Twinks Atlantean
 		uses_district_set = skypalace
-
 		# More Events Mod
 		is_planet_class = pc_mem_vazuran_habitat
-
 		# Acquisition of Technology
 		uses_district_set = dm_habitat
 		uses_district_set = ae_habitat
 		uses_district_set = sigma_habitat
-
  		# Giga Diversity - these don't exist yet
+	}
+}
+
+# ThaumStellaris
+# Expanding this with more desolate worlds
+tc_element_shard_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		uninhabitable_regular_planet = yes
+		is_planet_class = pc_asteroid
+		is_planet_class = pc_broken
+		is_planet_class = pc_shattered
+		# Planetary Diversity
+		is_planet_class = pc_rogue
+		is_planet_class = pc_eyeball
+		is_planet_class = pc_diamond
+		is_planet_class = pc_chthonian
 	}
 }

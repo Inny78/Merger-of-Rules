@@ -99,6 +99,11 @@ has_kancolle = {
 	}
 }
 
+# Star Wars: Kuat Ancient Empire
+has_kuat = {
+	has_global_flag = install_kuat_mod
+}
+
 # More Authorities
 has_more_authorities = {
 	has_global_flag = gf_moreauthorities_activated
