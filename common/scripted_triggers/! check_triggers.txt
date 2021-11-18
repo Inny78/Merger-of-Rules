@@ -1,4 +1,5 @@
 # Checking for mod presence
+# These triggers are also meant as a library for modders who want to reuse them in their own mods.
 
 # Ancient Cache of Technologies
 has_acot = {

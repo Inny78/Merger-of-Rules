@@ -20,7 +20,6 @@ merg_is_standard_empire = {
 }
 
 # Expanded version of country_type = default
-# Also replacing is_zofe_compatible so I don't have to check for a global flag
 merg_is_default_empire = {
 	OR = {
 		is_country_type = default

@@ -241,3 +241,71 @@
 # 		has_relic = r_sh_book
 # 	}
 # }
+
+# Adding isolated systems from other mods
+# hyperlane_eligible = {
+# 	NOR = {
+# 		is_same_value = prev
+# 		has_hyperlane_to = prev
+# 		has_star_flag = sealed_system #Vanilla lone system
+# 		# Gigastructural Engineering & More
+# 		AND = {
+# 			has_gigastructures = yes
+# 			OR = {
+# 				has_star_flag = giga_inner
+# 				has_star_flag = giga_outer_01
+# 				has_star_flag = giga_outer_02
+# 				has_star_flag = giga_outer_03
+# 				has_star_flag = giga_galactic_center
+# 				has_star_flag = has_new_hyperlane
+# 				has_star_flag = giga_grox_system
+# 				cohesive_system = yes
+# 				compound_cluster = yes
+# 				annihilator_system = yes
+# 				urmazin_system = yes
+# 			}
+# 		}
+# 		# Some Events of Outside Cluster
+# 		has_star_flag = nep_Krahen_cluster
+# 		has_star_flag = nep_Scrus_cluster
+# 		has_star_flag = nep_dragon_system
+# 		has_star_flag = nep_heptagram_cluster
+# 		# Warship Girls R And MIST Species
+# 		has_star_flag = wg_sealed_system
+# 		has_star_flag = wg_psionic_systems
+# 		# Ancient Empire
+# 		has_star_flag = ag_no_jump_in_system
+# 	}
+# }
+
+# # Adding isolated systems from other mods
+# ehof_hyperlane_eligible = {
+# 	has_star_flag = ehof_system_created_by_@root
+# 	NOR = {
+# 		is_same_value = prev
+# 		has_hyperlane_to = prev
+# 		# Gigastructural Engineering & More
+# 		has_star_flag = giga_inner
+# 		has_star_flag = giga_outer_01
+# 		has_star_flag = giga_outer_02
+# 		has_star_flag = giga_outer_03
+# 		has_star_flag = giga_galactic_center
+# 		# Some Events of Outside Cluster
+# 		has_star_flag = nep_Krahen_cluster
+# 		has_star_flag = nep_Scrus_cluster
+# 		has_star_flag = nep_dragon_system
+# 		has_star_flag = nep_heptagram_cluster
+# 		# Warship Girls R And MIST Species
+# 		has_star_flag = wg_sealed_system
+# 		has_star_flag = wg_psionic_systems
+# 		# Ancient Empire
+# 		has_star_flag = ag_no_jump_in_system
+# 	}
+# 	OR = {
+# 		any_fleet_in_system = {
+# 			exists = owner
+# 			owner = { is_same_value = root }
+# 		}
+# 		has_star_flag = empire_has_visited@root
+# 	}
+# }
