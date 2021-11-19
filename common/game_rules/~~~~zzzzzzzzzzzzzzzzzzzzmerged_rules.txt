@@ -1493,7 +1493,11 @@ can_take_hostile_actions = {
 	else_if = {
 		limit = {
 			AND = {
-				NOT = { has_country_flag = hostile_to_nomads }
+				NOR = {
+					has_country_flag = hostile_to_nomads
+					# Ariphaos Patch
+					is_hostile = root
+				}
 				root = {
 					is_country_type = nomad
 				}

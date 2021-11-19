@@ -959,7 +959,10 @@ war_philosophy = {
 				has_valid_civic = civic_closed_network
 				has_valid_civic = "civic_harm_hive"
 				has_valid_civic = "civic_harm_machine"
-				has_ai_personality = harmonious_hierarchy
+				AND = {
+					has_expanded_pops = yes
+					has_ai_personality = harmonious_hierarchy
+				}
 				# Expanded Gestalts
 				has_valid_civic = "civic_mutualistic_behavior"
 			}
