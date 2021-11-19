@@ -1,12 +1,23 @@
 # Checking for mod presence
 # These triggers are also meant as a library for modders who want to reuse them in their own mods.
 
-# Ancient Cache of Technologies
+# A Deadly Tempest 2028826064
+has_deadly_tempest = {
+	has_global_flag = CmtFlagActivated
+}
+
+# Acquisition of Technologies 2178603631
+has_aot = {
+	has_global_flag = has_aot_mod
+}
+
+# Ancient Cache of Technologies 1419304439
+# Ancient Cache of Technologies : Secrets Beyond The Gates 1481972266
 has_acot = {
 	has_global_flag = acot_activated
 }
 
-# Animated Synthetics Portraits Expanded: Reborn
+# Animated Synthetics Portraits Expanded: Reborn 1492025820
 has_animated_synth = {
 	has_global_flag = extended_synths_on
 }
@@ -16,27 +27,27 @@ has_any_ethics_mod = {
 	has_global_flag = cultural_overhaul_active
 }
 
-# ANZ Advanced Cloning
+# ANZ Advanced Cloning 2602243400
 has_anz_cloning = {
 	has_global_flag = anz_clones_installed
 }
 
-# APSR: Anomalies, Planetary and Space Resources
+# APSR: Anomalies, Planetary and Space Resources 1346877266
 has_apsr = {
 	has_global_flag = apsr_mod_on
 }
 
-# Espionage Extended
+# Espionage Extended 2465577434
 has_espionage_extended = {
 	has_global_flag = has_mod_espionage_extended
 }
 
-# Ethics and Civics Bug Branch
+# Ethics and Civics Bug Branch 2517213262
 has_ethics_bug = {
 	has_global_flag = bugbranch_global_flag
 }
 
-# Ethics and Civics Classic
+# Ethics and Civics Classic 1100284147
 has_ethics_classic = {
 	AND = {
 		has_global_flag = cultural_overhaul_active
@@ -48,12 +59,12 @@ has_ethics_classic = {
 	}
 }
 
-# Ethics and Civics Redux
+# Ethics and Civics Redux 2387799348
 has_ethics_redux = {
 	has_global_flag = cultural_overhaul_redux_active
 }
 
-# Expanded Gestalts
+# Expanded Gestalts 
 has_expanded_gestalts = {
 	has_global_flag = complex_hive
 }
@@ -68,7 +79,7 @@ has_exalted_domination = {
 	has_global_flag = has_exalted_domination_mod
 }
 
-# Gigastructural Engineering and More
+# Gigastructural Engineering and More 1121692237
 has_gigastructures = {
 	has_global_flag = gigastructures_enabled
 }

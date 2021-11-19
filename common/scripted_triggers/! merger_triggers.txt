@@ -76,47 +76,47 @@ merg_is_regular_empire = {
 # List of all habitable ringworld sections
 merg_is_hab_ringworld = {
 	OR = {
-	is_planet_class = pc_ringworld_habitable
-	# Gigastructural Engineering & More
-	is_planet_class = pc_gigaorbital_ring
-	is_planet_class = pc_interstellar_ringworld_habitable
-	is_planet_class = pc_ringworld_city
-	is_planet_class = pc_squareworld_habitable
-	is_planet_class = pc_giga_penrose_habitable
-	is_planet_class = pc_ringworld_machine
-	is_planet_class = pc_ringworld_hive
-	# Ancient Empire
-	# listed planet types are for colors only, they're all ideal
-	is_planet_class = pc_ag_ringworld_desert
-	is_planet_class = pc_ag_ringworld_arid
-	is_planet_class = pc_ag_ringworld_savannah
-	is_planet_class = pc_ag_ringworld_ocean
-	is_planet_class = pc_ag_ringworld_continental
-	is_planet_class = pc_ag_ringworld_tropical
-	is_planet_class = pc_ag_ringworld_tundra
-	is_planet_class = pc_ag_ringworld_arctic
-	is_planet_class = pc_ag_ringworld_alpine
-	is_planet_class = pc_ag_ringworld_machine
-	is_planet_class = pc_ag_ringworld_city
-	is_planet_class = pc_ag_ringworld_gaia
-	# Giga Diversity - these don't exist yet
-	# is_planet_class = pc_ringworld_necrocity
-	# is_planet_class = pc_ringworld_milarc
-	# is_planet_class = pc_ringworld_ecocity
-	# is_planet_class = pc_ringworld_bioforge
-	# is_planet_class = pc_ringworld_biofort
-	# is_planet_class = pc_ringworld_machine_factory
-	# is_planet_class = pc_ringworld_machine_fort
-	# is_planet_class = pc_ringworld_relic
-	# is_planet_class = pc_ringworld_milarc_relic
-	# is_planet_class = pc_shroudring
-	# is_planet_class = pc_aquaticring
-	# is_planet_class = pc_ringworld_methanecity
-	# is_planet_class = pc_ringworld_ammoniacity
-	# is_planet_class = pc_ringworld_ashcity
-	# is_planet_class = pc_ringworld_sulfurcity
-	# is_planet_class = pc_ringworld_aquaticcity
-	# is_planet_class = pc_ringworld_shroudcity
+		is_planet_class = pc_ringworld_habitable
+		# Gigastructural Engineering & More
+		is_planet_class = pc_gigaorbital_ring
+		is_planet_class = pc_interstellar_ringworld_habitable
+		is_planet_class = pc_ringworld_city
+		is_planet_class = pc_squareworld_habitable
+		is_planet_class = pc_giga_penrose_habitable
+		is_planet_class = pc_ringworld_machine
+		is_planet_class = pc_ringworld_hive
+		# Ancient Empire
+		# listed planet types are for colors only, they're all ideal
+		is_planet_class = pc_ag_ringworld_desert
+		is_planet_class = pc_ag_ringworld_arid
+		is_planet_class = pc_ag_ringworld_savannah
+		is_planet_class = pc_ag_ringworld_ocean
+		is_planet_class = pc_ag_ringworld_continental
+		is_planet_class = pc_ag_ringworld_tropical
+		is_planet_class = pc_ag_ringworld_tundra
+		is_planet_class = pc_ag_ringworld_arctic
+		is_planet_class = pc_ag_ringworld_alpine
+		is_planet_class = pc_ag_ringworld_machine
+		is_planet_class = pc_ag_ringworld_city
+		is_planet_class = pc_ag_ringworld_gaia
+		# Giga Diversity - these don't exist yet
+		# is_planet_class = pc_ringworld_necrocity
+		# is_planet_class = pc_ringworld_milarc
+		# is_planet_class = pc_ringworld_ecocity
+		# is_planet_class = pc_ringworld_bioforge
+		# is_planet_class = pc_ringworld_biofort
+		# is_planet_class = pc_ringworld_machine_factory
+		# is_planet_class = pc_ringworld_machine_fort
+		# is_planet_class = pc_ringworld_relic
+		# is_planet_class = pc_ringworld_milarc_relic
+		# is_planet_class = pc_shroudring
+		# is_planet_class = pc_aquaticring
+		# is_planet_class = pc_ringworld_methanecity
+		# is_planet_class = pc_ringworld_ammoniacity
+		# is_planet_class = pc_ringworld_ashcity
+		# is_planet_class = pc_ringworld_sulfurcity
+		# is_planet_class = pc_ringworld_aquaticcity
+		# is_planet_class = pc_ringworld_shroudcity
 	}
 }
 
@@ -137,6 +137,27 @@ merg_has_cloning_building = {
 		has_building = building_clone_vats_improved_serv
 		has_building = building_clone_vats_advanced_serv
 		has_building = building_clone_vats_augmented_serv
+	}
+}
+
+# Listing habitats
+merg_is_habitat = {
+	OR = {
+		is_planet_class = pc_habitat
+		# Planetary Diversity
+		uses_district_set = pdplanethab
+		# Gigastructural Engineering & More
+		is_planet_class = pc_interstellar_habitat
+		# More Events Mod
+		is_planet_class = pc_mem_vazuran_habitat
+		# Acquisition of Technology
+		uses_district_set = dm_habitat
+		uses_district_set = ae_habitat
+		uses_district_set = sigma_habitat
+		# Starborn: Improved Voidtouched
+		uses_district_set = starborn_start
+		# Twinks Atlantean
+		uses_district_set = skypalace
 	}
 }
 

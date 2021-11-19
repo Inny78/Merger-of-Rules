@@ -232,3 +232,57 @@ tc_element_shard_candidate = {
 		is_planet_class = pc_chthonian
 	}
 }
+
+# Expanding Starborn trigger with ACOT/AOT gene clinics
+has_gene_clinic = {
+	OR = {
+		has_building = building_hospital
+		has_building = building_clinic
+		# ACOT
+		has_building = building_fe_hospital
+		has_building = building_ae_hospital
+		# AOT
+		has_building = building_stellarite_hospital
+	}
+}
+
+# Adding support to other mods structures
+starborn_can_place_hab = {
+	custom_tooltip = {
+		fail_text = "requires_surveyed_planet"
+		is_surveyed = {			# prevent leaking habitability information
+			who = prev.from
+			status = yes
+		}
+	}
+	custom_tooltip = {
+		fail_text = "requires_no_anomaly"
+		NOT = { has_anomaly = yes }
+	}
+	custom_tooltip = {
+		fail_text = "requires_no_existing_megastructure"
+		NOR = {
+			has_planet_flag = megastructure
+			has_planet_flag = has_megastructure
+			solar_system = {
+				OR = {
+					has_any_megastructure = yes
+					has_star_flag = ring_world_built
+				}
+			}
+			is_ringworld = yes
+			merg_is_hab_ringworld = yes
+			is_planet_class = pc_ringworld_habitable_damaged
+			is_planet_class = pc_ringworld_tech
+			is_planet_class = pc_ringworld_tech_damaged
+			is_planet_class = pc_ringworld_seam
+			is_planet_class = pc_ringworld_seam_damaged
+			merg_is_habitat = yes
+			# Gigastructural Engineering & More
+			AND = {
+				has_gigastructures = yes
+				giga_habitable_structure = yes
+			}
+		}
+	}
+}
