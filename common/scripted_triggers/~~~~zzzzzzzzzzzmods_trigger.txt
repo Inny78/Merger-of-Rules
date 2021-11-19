@@ -277,7 +277,19 @@ starborn_can_place_hab = {
 			is_planet_class = pc_ringworld_tech_damaged
 			is_planet_class = pc_ringworld_seam
 			is_planet_class = pc_ringworld_seam_damaged
-			merg_is_habitat = yes
+			is_planet_class = pc_habitat
+			# Planetary Diversity
+			uses_district_set = pdplanethab
+			# Gigastructural Engineering & More
+			is_planet_class = pc_interstellar_habitat
+			# More Events Mod
+			is_planet_class = pc_mem_vazuran_habitat
+			# Acquisition of Technology
+			uses_district_set = dm_habitat
+			uses_district_set = ae_habitat
+			uses_district_set = sigma_habitat
+			# Twinks Atlantean
+			uses_district_set = skypalace
 			# Gigastructural Engineering & More
 			AND = {
 				has_gigastructures = yes
