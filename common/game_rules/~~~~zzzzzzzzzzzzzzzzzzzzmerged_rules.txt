@@ -352,8 +352,6 @@ species_can_live_on_planet = {
 			is_planet_class = pc_ringworld_hive
 			is_planet_class = pc_giga_maginot_world
 			is_planet_class = pc_giga_maginot_gas_giant
-			#New GD Habitats
-			is_planet_class = pc_gd_hydrocarbon_hab
 			}
 			has_modifier = pdammoniaatmosphere 
 		}
@@ -409,8 +407,6 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ringworld_hive
 				is_planet_class = pc_giga_maginot_world
 				is_planet_class = pc_giga_maginot_gas_giant
-				#New GD Habitats
-				is_planet_class = pc_gd_hydrocarbon_hab
 			}
 			has_modifier = pdsulfuratmosphere 
 		}
@@ -470,8 +466,6 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ringworld_hive
 				is_planet_class = pc_giga_maginot_world
 				is_planet_class = pc_giga_maginot_gas_giant
-				#New GD Habitats
-				is_planet_class = pc_gd_hydrocarbon_hab
 			}
 			has_building = building_acid_maker
 		}
@@ -540,8 +534,6 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ringworld_hive
 				is_planet_class = pc_giga_maginot_world
 				is_planet_class = pc_giga_maginot_gas_giant
-				#New GD Habitats
-				is_planet_class = pc_gd_hydrocarbon_hab
 			}
 			has_modifier = pdmethaneatmosphere 
 		}
@@ -555,8 +547,8 @@ species_can_live_on_planet = {
 	NAND = {
 		root = {
 			OR = {
-				has_trait = trait_pc_ash_preference
-				has_trait = trait_pc_ll_ash_preference
+				is_planet_class = pc_ash
+				is_planet_class = pc_ll_ash
 			}
 		}
 		NOR = { 
@@ -611,8 +603,6 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ringworld_hive
 				is_planet_class = pc_giga_maginot_world
 				is_planet_class = pc_giga_maginot_gas_giant
-				#New GD Habitats
-				is_planet_class = pc_gd_hydrocarbon_hab
 			}
 			has_modifier = pdashatmosphere 
 		}
@@ -698,6 +688,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_nuked
 				is_planet_class = pc_pdshroud
 				is_planet_class = pc_gaia
+				is_planet_class = pc_sulfur
 				#Giga
 				is_planet_class = pc_ll_temperate
 				is_planet_class = pc_ll_foggy
@@ -708,7 +699,6 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ll_methane
 				is_planet_class = pc_ll_ash
 				is_planet_class = pc_ll_sulfur
-				is_planet_class = pc_ll_ammonia
 				is_planet_class = pc_ll_ocean
 				is_planet_class = pc_ll_tidallylocked_cold
 				is_planet_class = pc_ll_tidallylocked
@@ -757,8 +747,6 @@ species_can_live_on_planet = {
 						is_planet_class = pc_ringworld_hive
 						is_planet_class = pc_giga_maginot_world
 						is_planet_class = pc_giga_maginot_gas_giant
-						#New GD Habitats
-						is_planet_class = pc_gd_hydrocarbon_hab
 					}
 					NOR = { 
 						has_modifier = pdammoniaatmosphere 
@@ -860,7 +848,6 @@ species_can_live_on_planet = {
 				#New GD Lifeless Worlds
 				is_planet_class = pc_ll_methane
 				is_planet_class = pc_ll_ash
-				is_planet_class = pc_ll_sulfur
 				is_planet_class = pc_ll_ammonia
 				is_planet_class = pc_ll_ocean
 				is_planet_class = pc_ll_tidallylocked_cold
@@ -910,8 +897,6 @@ species_can_live_on_planet = {
 						is_planet_class = pc_ringworld_hive
 						is_planet_class = pc_giga_maginot_world
 						is_planet_class = pc_giga_maginot_gas_giant
-						#New GD Habitats
-						is_planet_class = pc_gd_hydrocarbon_hab
 					}
 					NOR = { 
 						has_modifier = pdsulfuratmosphere 
@@ -1011,7 +996,6 @@ species_can_live_on_planet = {
 				is_planet_class = pc_katzenland
 				is_planet_class = pc_flat_world
 				#New GD Lifeless Worlds
-				is_planet_class = pc_ll_methane
 				is_planet_class = pc_ll_ash
 				is_planet_class = pc_ll_sulfur
 				is_planet_class = pc_ll_ammonia
@@ -1063,8 +1047,6 @@ species_can_live_on_planet = {
 						is_planet_class = pc_ringworld_hive
 						is_planet_class = pc_giga_maginot_world
 						is_planet_class = pc_giga_maginot_gas_giant
-						#New GD Habitats
-						is_planet_class = pc_gd_hydrocarbon_hab
 					}
 					NOT = { has_modifier = pdmethaneatmosphere }
 				}
@@ -1163,7 +1145,6 @@ species_can_live_on_planet = {
 				is_planet_class = pc_flat_world
 				#New GD Lifeless Worlds
 				is_planet_class = pc_ll_methane
-				is_planet_class = pc_ll_ash
 				is_planet_class = pc_ll_sulfur
 				is_planet_class = pc_ll_ammonia
 				is_planet_class = pc_ll_ocean
@@ -1214,8 +1195,6 @@ species_can_live_on_planet = {
 						is_planet_class = pc_ringworld_hive
 						is_planet_class = pc_giga_maginot_world
 						is_planet_class = pc_giga_maginot_gas_giant
-						#New GD Habitats
-						is_planet_class = pc_gd_hydrocarbon_hab
 					}
 					NOT = { has_modifier = pdashatmosphere }
 				}
@@ -1860,9 +1839,12 @@ can_colonize_outside_borders = {
 #Root = country
 #This = planet
 can_terraform_planet = {
-	NAND = {
-		root = { has_policy_flag = pre_sapients_protect }
-		any_owned_pop = { is_sapient = no }
+	custom_tooltip = {
+		fail_text = terraform_fail_no_presapient_protection_or_no_presapients
+		NAND = {
+			root = { has_policy_flag = pre_sapients_protect }
+			any_owned_pop = { is_sapient = no }
+		}
 	}
 	# Planetary Diversity
 	NAND = {
@@ -2205,6 +2187,7 @@ can_species_procreate = {
 		}
 	}
 	# Vanilla
+	NOT = { has_species_flag = nivlac_no_procreation }
 	if = {
 		limit = {
 			has_trait = trait_necrophage
@@ -3748,11 +3731,13 @@ can_pop_auto_migrate = {
 # This = planet
 # Checked before can_pop_auto_migrate to save performance
 can_planet_auto_migrate = {
+	# Production Revolution
 	NAND = {
 		exists = owner
 		owner = { has_country_flag = z_pr_flg_cntr_reg }
 		NOT = { has_planet_flag = z_pr_flg_plnt_ignore }
 	}
+	# Vanilla
 	NOT = { has_modifier = planet_culture_shock }
 	OR = {
 		colony_age > 60
@@ -3782,4 +3767,9 @@ can_planet_receive_auto_migration = {
 # can_have_first_contact
 # can_use_envoys_to_raise_imperial_authority
 # can_use_envoys_to_lower_imperial_authority
+# should_planetary_automate
+# can_fill_drone_job
+# can_fill_worker_job
+# can_fill_specialist_job
+# can_fill_ruler_job
 # should_planetary_automate

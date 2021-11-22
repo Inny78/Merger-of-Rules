@@ -37,6 +37,11 @@ has_apsr = {
 	has_global_flag = apsr_mod_on
 }
 
+# Ascension Enhancements
+has_uac = {
+	has_global_flag = has_uac_mod
+}
+
 # Espionage Extended 2465577434
 has_espionage_extended = {
 	has_global_flag = has_mod_espionage_extended

@@ -271,6 +271,7 @@ habitable_planet = {
 		is_planet_class = pc_ash
 		is_planet_class = pc_primal
 		is_planet_class = pc_aquatic
+		is_planet_class = pc_aquatic_uw
 		is_planet_class = pc_salt
 		is_planet_class = pc_aquifer
 		is_planet_class = pc_coral
