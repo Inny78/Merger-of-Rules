@@ -99,6 +99,10 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_ag_ringworld_machine
 		is_planet_class = pc_ag_ringworld_city
 		is_planet_class = pc_ag_ringworld_gaia
+		# Warship Girls and MIST species
+		is_planet_class = pc_ringworld_habitable_sh
+		is_planet_class = pc_ringworld_habitable_wsg
+
 		# Giga Diversity - these don't exist yet
 		# is_planet_class = pc_ringworld_necrocity
 		# is_planet_class = pc_ringworld_milarc

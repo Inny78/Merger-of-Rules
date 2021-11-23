@@ -17,6 +17,11 @@ has_acot = {
 	has_global_flag = acot_activated
 }
 
+# Ancient Empire
+has_ancient_empire = {
+	has_global_flag = has_ancient_empire_mod
+}
+
 # Animated Synthetics Portraits Expanded: Reborn 1492025820
 has_animated_synth = {
 	has_global_flag = extended_synths_on

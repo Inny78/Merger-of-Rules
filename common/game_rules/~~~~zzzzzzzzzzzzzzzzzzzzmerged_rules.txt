@@ -2322,6 +2322,27 @@ can_species_be_assembled = {
 					is_archetype = SHENHAI
 				}
 			}
+			# Special Colonies Overhaul
+			OR = {
+				has_special_colonies = no
+				AND = {
+					has_special_colonies = yes
+					NAND = {
+						root = { has_modifier = slave_colony }
+						NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
+						not = {
+							root = {
+								owner = {
+									or = {
+										has_civic = civic_slaver_guilds
+										has_civic = civic_indentured_assets
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		# Azur lane Stellaris DLC
 		AND = {
@@ -2412,10 +2433,11 @@ can_orbital_bombard = {
 					root.OWNER = { is_hostile = prev }
 				}
 				# Ancient Empire
-				is_country_type = ag_ancient_primitive_crisis
-				is_country_type = ag_ancient_epsilon_guardian
-				is_country_type = ag_zeta_crisis_country
-				is_country_type = ag_ancient_psi_guardian
+				AND = {
+					has_ancient_empire = yes
+					ag_can_be_orbital_bombardment_country = yes
+				}
+				# ACOT
 				is_country_type = original_empire
 				is_country_type = void_lifeforms_1
 				is_country_type = void_lifeforms_2
@@ -2451,20 +2473,19 @@ can_orbital_bombard = {
 					from.CONTROLLER = { is_hostile = prev }
 				}
 				# Warship Girls R And MIST Species
-				is_country_type = wg_crisis_country
-				is_country_type = wg_Khan_country_type
-				is_country_type = wg_Khan_country_type_auto_delete
+				AND = {
+					has_wsg = yes
+					OR = {
+						is_country_type = wg_crisis_country
+						is_khan_country_type = yes
+					}
+				}
 				# Star Wars: UnknownWorld Shipgirls Story
 				is_country_type = afk_crisis_country
 				# Ancient Empire
-				is_country_type = ag_kuat_invasion_country
-				is_country_type = ag_ancient_primitive_crisis
-				is_country_type = ag_ancient_gamma_guardian
-				is_country_type = ag_ancient_epsilon_guardian
-				is_country_type = ag_zeta_crisis_country
 				AND = {
-					is_country_type = ag_ancient_psi_guardian
-					from.controller = { is_hostile = root.owner }
+					has_ancient_empire = yes
+					ag_can_do_orbital_bombardment_country = yes
 				}
 				# ACOT
 				is_country_type = original_empire
