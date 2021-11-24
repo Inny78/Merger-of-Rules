@@ -1970,19 +1970,19 @@ artificial_intelligence_policy = {
 	option = {
 		name = "ai_outlawed"
 		valid = {
-			AND = {
-				NOR = {
-					is_materialist = yes
-					has_valid_civic = civic_machine_cult # Ethics and Civics Classic/Redux
-					has_valid_civic = civic_machine_cult_corpo # Ethics & Civics: Bug Branch
-					custom_tooltip = {
-						success_text = is_a_synthetic_empire
-						has_country_flag = synthetic_empire
-					}
+			NOR = {
+				is_materialist = yes
+				custom_tooltip = {
+					success_text = is_a_synthetic_empire
+					has_country_flag = synthetic_empire
 				}
+				# Ethics and Civics Classic/Redux
+				has_valid_civic = civic_machine_cult
+				# Ethics & Civics: Bug Branch
+				has_valid_civic = civic_machine_cult_corpo
+				# Girls Frontline
+				has_authority = auth_gf_commonwealth
 			}
-			# Girls Frontline
-			NOT = { has_authority = auth_gf_commonwealth }
 		}
 		policy_flags = {
 			ai_outlawed
@@ -2045,10 +2045,14 @@ artificial_intelligence_policy = {
 				has_valid_ai_personality = yes
 				has_ai_personality_behaviour = robot_liberator
 			}
-			# Ethics and Civics Classic/Redux/
+			# Ethics and Civics Classic/Redux
 			modifier = {
 				factor = 0
 				is_spiritualist = yes
+				OR = {
+					has_ethics_classic = yes
+					has_ethics_redux = yes
+				}
 				NOR = {
 					has_valid_civic = civic_machine_cult
 					# Ethics & Civics: Bug Branch
@@ -2117,83 +2121,7 @@ artificial_intelligence_policy = {
 		}
 	}
 }
-
-robot_pop_policy = {
-
-	potential = {
-		AND = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
-			OR = {
-				has_technology = tech_robotic_workers
-				any_owned_species = { has_trait = trait_mechanical }
-			}
-		}
-		# Girls Frontline
-		NOT = { has_authority = auth_gf_commonwealth }
-	}
-
-	option = {
-		name = "robot_pops_outlawed"
-
-		valid = {
-			is_materialist = no
-			NOT = { has_policy_flag = ai_full_rights }
-			NOR = {
-				# Ethics & Civics Classic/Redux
-				has_valid_civic = civic_machine_cult
-				# Ethics & Civics: Bug Branch/etc
-				has_valid_civic = civic_machine_cult_corpo
-				# Girls Frontline
-				has_authority = auth_gf_commonwealth
-			}
-		}
-
-		policy_flags = {
-			robots_outlawed
-		}
-
-		on_enabled = {
-			hidden_effect = {
-				every_owned_species = {
-					limit = { is_robotic_species = yes }
-					set_citizenship_type = {
-						type = citizenship_purge
-						country = root
-					}
-				}
-			}
-		}
-
-		AI_weight = {
-			factor = 1
-			modifier = {
-				factor = 0
-				is_materialist = yes
-			}
-			modifier = {
-				factor = 10
-				has_valid_ai_personality = yes
-				NOR = {
-					has_ai_personality_behaviour = robot_exploiter
-					has_ai_personality_behaviour = robot_liberator
-				}
-			}
-		}
-	}
-
-	option = {
-		name = "robot_pops_allowed"
-
-		policy_flags = {
-			robots_allowed
-		}
-
-		AI_weight = {
-			factor = 2
-		}
-	}
-}
-
+# robot_pop_policy
 # pre_sapients
 
 # refugees
