@@ -2121,7 +2121,81 @@ artificial_intelligence_policy = {
 		}
 	}
 }
-# robot_pop_policy
+robot_pop_policy = {
+
+	potential = {
+		OR = { 
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_technology = tech_robotic_workers
+			any_owned_species = { has_trait = trait_mechanical }
+			# Ascension Enhancements
+			has_technology = tech_gestalt_robotic_workers
+		}
+		# Girls Frontline
+		NOT = { has_authority = auth_gf_commonwealth }
+	}
+
+	option = {
+		name = "robot_pops_outlawed"
+
+		valid = {
+			is_materialist = no
+			NOR = {
+				has_policy_flag = ai_full_rights
+				# Ethics & Civics Classic/Redux
+				has_valid_civic = civic_machine_cult
+				# Ethics & Civics: Bug Branch/etc
+				has_valid_civic = civic_machine_cult_corpo
+				# Girls Frontline
+				has_authority = auth_gf_commonwealth
+			}
+		}
+
+		policy_flags = {
+			robots_outlawed
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				every_owned_species = {
+					limit = { is_robotic_species = yes }
+					set_citizenship_type = {
+						type = citizenship_purge
+						country = root
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_materialist = yes
+			}
+			modifier = {
+				factor = 10
+				has_valid_ai_personality = yes
+				NOR = {
+					has_ai_personality_behaviour = robot_exploiter
+					has_ai_personality_behaviour = robot_liberator
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "robot_pops_allowed"
+
+		policy_flags = {
+			robots_allowed
+		}
+
+		AI_weight = {
+			factor = 2
+		}
+	}
+}
 # pre_sapients
 
 # refugees

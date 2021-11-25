@@ -298,3 +298,17 @@ starborn_can_place_hab = {
 		}
 	}
 }
+
+# Legendary Worlds
+# Overwriting with vanilla for a correct use of the triggers
+legw_is_dry = {
+	has_climate = dry
+}
+
+legw_is_wet = {
+	has_climate = wet
+}
+
+legw_is_cold = {
+	has_climate = cold
+}

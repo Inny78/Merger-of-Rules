@@ -505,3 +505,16 @@ has_any_habitability = {
 		has_orbital_bombardment = no
 	}
 }
+
+# Overwriting with vanilla for a correct use of the triggers
+is_wet = {
+	has_climate = wet
+}
+
+is_dry = {
+	has_climate = dry
+}
+
+is_cold = {
+	has_climate = cold
+}
