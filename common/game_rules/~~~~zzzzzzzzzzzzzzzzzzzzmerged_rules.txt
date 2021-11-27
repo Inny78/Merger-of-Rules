@@ -3460,6 +3460,8 @@ can_crossbreed_species_on_planet = {
 		has_warship_girls = yes
 		any_owned_species = { has_wg_traits = yes }
 	}
+	# Red Light Demeanor
+	NOT = { has_country_flag = redlight_no_crossbreeding }
 }
 
 # This = species one

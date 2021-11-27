@@ -79,6 +79,11 @@ has_expanded_gestalts = {
 	has_global_flag = complex_hive
 }
 
+# Expanded Stellaris Traditions
+has_expanded_stel_trad = {
+	has_global_flag = expanded_stellaris_traditions_mod_in_use
+}
+
 # Expanded Traits, Civics, Pops, and More
 has_expanded_pops = {
 	has_global_flag = expanded_pops_active

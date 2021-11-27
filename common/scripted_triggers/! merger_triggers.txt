@@ -141,6 +141,9 @@ merg_has_cloning_building = {
 		has_building = building_clone_vats_improved_serv
 		has_building = building_clone_vats_advanced_serv
 		has_building = building_clone_vats_augmented_serv
+		# Ethics and Civics Bug Branch
+		has_building = building_evolution_monastery
+		has_building = building_evolution_monastery_two
 	}
 }
 
