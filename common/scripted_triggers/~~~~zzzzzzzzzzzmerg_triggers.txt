@@ -289,6 +289,7 @@ habitable_planet = {
 		is_planet_class = pc_bioforge
 		is_planet_class = pc_biocapital
 		is_planet_class = pc_biofort
+		is_planet_class = pc_tidallygaia
 		# Warship Girls R And MIST Species
 		is_planet_class = pc_wsg_port
 		is_planet_class = pc_shenhai
@@ -503,6 +504,25 @@ has_any_habitability = {
 		is_under_colonization = no
 		is_controlled_by = owner
 		has_orbital_bombardment = no
+	}
+}
+
+has_phototrophic_energy_upkeep = {
+	OR = {
+		has_trait = trait_plantoid_phototrophic
+		AND = {
+			OR = {
+				has_trait = trait_plantoid_radiotrophic
+				has_trait = trait_harvested_radiotrophic
+			}
+			NOR = {
+				planet = { is_planet_class = pc_nuked }
+				# Planetary Diversity
+				planet = { is_planet_class = pc_irradiated }
+				# Galaxius
+				planet = { is_planet_class = pc_ie_gateway }
+			}
+		}
 	}
 }
 
