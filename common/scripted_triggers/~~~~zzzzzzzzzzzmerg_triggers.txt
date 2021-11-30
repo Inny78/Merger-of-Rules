@@ -311,15 +311,6 @@ habitable_planet = {
 		is_planet_class = pc_ll_tidallylocked_cold
 		is_planet_class = pc_ll_tidallylocked
 		is_planet_class = pc_ll_rogue
-		# Not updated yet, keeping it for later
-		# Master of the Planet
-		# is_planet_class = pc_mining
-		# is_planet_class = pc_energy
-		# is_planet_class = pc_farming
-		# is_planet_class = pc_training
-		# is_planet_class = pc_training_shielded
-		# is_planet_class = pc_trade
-		# is_planet_class = pc_eco
 	}
 }
 

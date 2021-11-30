@@ -3181,6 +3181,8 @@ can_build_branch_offices = {
 			is_country_type = hfe_pirate
 			# More Corporate Authorities
 			has_civic = civic_galactic_sovereign_megacorp
+			# Arknights Near Future
+			has_civic = civic_business_union
 		}
 	}
 }
@@ -3216,6 +3218,8 @@ can_support_branch_offices = {
 			is_subject_type = subsidiary2
 			# More Corporate Authorities
 			has_civic = civic_galactic_sovereign_megacorp
+			# Arknights Near Future
+			has_civic = civic_business_union
 		}
 	}
 	custom_tooltip = {

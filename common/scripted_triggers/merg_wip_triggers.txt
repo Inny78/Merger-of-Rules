@@ -27,18 +27,18 @@
 # 	is_planet_class = pc_giga_penrose_habitable
 # 	# Ancient Empire
 # 	# listed planet types are for colors only, they're all ideal
-# 	is_planet_class = pc_ag_ringworld_desert
-# 	is_planet_class = pc_ag_ringworld_arid
-# 	is_planet_class = pc_ag_ringworld_savannah
-# 	is_planet_class = pc_ag_ringworld_ocean
-# 	is_planet_class = pc_ag_ringworld_continental
-# 	is_planet_class = pc_ag_ringworld_tropical
-# 	is_planet_class = pc_ag_ringworld_tundra
-# 	is_planet_class = pc_ag_ringworld_arctic
-# 	is_planet_class = pc_ag_ringworld_alpine
-# 	is_planet_class = pc_ag_ringworld_machine
-# 	is_planet_class = pc_ag_ringworld_city
-# 	is_planet_class = pc_ag_ringworld_gaia
+	# is_planet_class = pc_ag_ringworld_desert
+	# is_planet_class = pc_ag_ringworld_arid
+	# is_planet_class = pc_ag_ringworld_savannah
+	# is_planet_class = pc_ag_ringworld_ocean
+	# is_planet_class = pc_ag_ringworld_continental
+	# is_planet_class = pc_ag_ringworld_tropical
+	# is_planet_class = pc_ag_ringworld_tundra
+	# is_planet_class = pc_ag_ringworld_arctic
+	# is_planet_class = pc_ag_ringworld_alpine
+	# is_planet_class = pc_ag_ringworld_machine
+	# is_planet_class = pc_ag_ringworld_city
+	# is_planet_class = pc_ag_ringworld_gaia
 #	}
 # }
 
@@ -326,7 +326,8 @@
 # 	}
 # }
 
-# For operations, unfinished
+# For operations
+# Starbase scope
 # has_nonshipyard_starbase_buildings = {
 # 	OR = {
 # 		has_starbase_building = art_college
@@ -339,6 +340,7 @@
 # 		has_starbase_building = disruption_field
 # 		has_starbase_building = fleet_academy
 # 		has_starbase_building = hydroponics_bay
+# 		# has_starbase_building = ice_mining_station
 # 		has_starbase_building = listening_post
 # 		has_starbase_building = naval_logistics_office
 # 		has_starbase_building = nebula_refinery
@@ -346,8 +348,39 @@
 # 		has_starbase_building = resource_silo
 # 		has_starbase_building = target_uplink_computer
 # 		has_starbase_building = trader_proxy_office
+# 		# has_starbase_building = transit_hub
 # 		has_starbase_building = warp_fluctuator
-# 		# Expanded starbases
+# 		# ACOT
+# 		has_starbase_building = acot_supply_bay
+# 		has_starbase_building = acot_super_reactor
+# 		has_starbase_building = acot_starbase_super_computer
+# 		has_starbase_building = acot_starbase_aura_generator
+# 		has_starbase_building = acot_starbase_reinforced_wall
+# 		has_starbase_building = acot_sigma_supply_bay
+# 		has_starbase_building = acot_sigma_super_reactor
+# 		has_starbase_building = acot_sigma_starbase_super_computer
+# 		has_starbase_building = acot_sigma_starbase_aura_generator
+# 		has_starbase_building = acot_sigma_starbase_reinforced_wall
+# 		has_starbase_building = acot_phanon_supply_bay
+# 		has_starbase_building = acot_phanon_super_reactor
+# 		has_starbase_building = acot_phanon_starbase_super_computer
+# 		has_starbase_building = acot_phanon_starbase_aura_generator
+# 		has_starbase_building = acot_phanon_starbase_reinforced_wall
+# 		# ACOT SBTG
+# 		has_starbase_building = sofe_module_lm_generator
+# 		has_starbase_building = sofe_module_defense_matrix
+# 		# Ancient Empire
+# 		has_starbase_building = ag_iota_enclave_building
+# 		# Archaeology Story Pack
+# 		has_starbase_building = aspmod_axis_of_planet_building
+# 		# Arknights Near Future
+# 		has_starbase_building = machining_station
+# 		# Ascension - Biological Module
+# 		has_starbase_building = starbase_building_space_home
+# 		# Azur Lane Stellaris DLC
+# 		has_starbase_building = azur_naval_headquarters
+# 		has_starbase_building = azur_cube_station_computer
+# 		# Expanded Starbases
 #         has_starbase_building = climate_control
 #         has_starbase_building = space_production
 #         has_starbase_building = trade_patrol
@@ -359,34 +392,30 @@
 #         has_starbase_building = starbase_fortifications
 #         has_starbase_building = dathnak_embassy
 #         has_starbase_building = starbase_minefield
-# 		# Ancient Empire
-# 		has_starbase_building = ag_iota_enclave_building
-# 		# ThaumStellaris
-# 		has_starbase_building = tc_wand_focus_equal_trade_building
-# 		has_starbase_building = tc_wand_focus_warding_building
-# 		# EUTAB
-# 		has_starbase_building = eutab_intel_office
-# 		has_starbase_building = eutab_monastery
-# 		has_starbase_building = eutab_parts_replicator
-# 		has_starbase_building = eutab_auto_armory
-# 		has_starbase_building = eutab_cultural_freeport
-# 		has_starbase_building = eutab_battle_sphere
-# 		has_starbase_building = eutab_material_renewal
-# 		has_starbase_building = eutab_solar_tracker
+# 		# Expanded Stellaris Ascension Perks
+# 		has_starbase_building = esap_ct2_diplomacy_finance_trade_post
+# 		# Gigastructural Engineering & More
+# 		has_starbase_building = katzen_submarine_snare
 # 		# Guilli's Technologies
 # 		has_starbase_building = gt_trading_company_offices
 # 		has_starbase_building = gt_bounty_hunter_office
-# 		# Archaeology Story Pack
-# 		has_starbase_building = aspmod_axis_of_planet_building
-# 		# Sensor Expansion
-# 		has_starbase_building = ariphaos_sensors_jammer_starbases
+# 		# Human Fallen Empire
+# 		has_starbase_building = hfe_starbase_building_drone_trading_hub
+# 		has_starbase_building = hfe_starbase_building_population_navigator
 # 		# Planetary Wonders
 # 		has_starbase_building = pw_offworld_logistics_station
 # 		has_starbase_building = pw_station_skyhook
 # 		has_starbase_building = pw_sentinel_command_center
-# 		# Ascension - Biological Module
-# 		has_starbase_building = starbase_building_space_home
-# 		# Expanded Stellaris Ascension Perks
-# 		has_starbase_building = esap_ct2_diplomacy_finance_trade_post
+# 		# Sensor Expansion
+# 		has_starbase_building = ariphaos_sensors_jammer_starbases
+# 		# Stellaris Evolved
+# 		# has_starbase_building = tec_starbase_b_energygrid
+# 		# has_starbase_building = tec_starbase_b_mininggrid
+# 		# has_starbase_building = tec_starbase_b_research
+# 		# ThaumStellaris
+# 		has_starbase_building = tc_wand_focus_equal_trade_building
+# 		has_starbase_building = tc_wand_focus_warding_building
+# 		# The Empty Vagrant
+# 		has_starbase_building = ev_manpower_station
 # 	}
 # }

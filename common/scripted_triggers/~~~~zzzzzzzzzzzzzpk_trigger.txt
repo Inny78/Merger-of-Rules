@@ -321,20 +321,6 @@ can_destroy_planet_with_PLANET_KILLER_NANOBOTS = {
 }
 
 can_destroy_planet_with_PLANET_KILLER_DELUGE = {
-	# custom_tooltip = { #feedback suggests this isn't fun, but leaving it here in case we need it
-	# 	fail_text = requires_free_ice_mining_station
-	# 	from.owner = {
-	# 		any_owned_starbase = {
-	# 			has_starbase_building = ice_mining_station
-	# 			solar_system = {
-	# 				OR = {
-	# 					NOT = { has_star_flag = ice_mining_in_progress }
-	# 					has_star_flag = ice_mining@root.from
-	# 				}
-	# 			}
-	# 		}
-	# 	}
-	# }
 	custom_tooltip = {
 		fail_text = is_habitable_non_artificial
 		OR = {
@@ -1684,6 +1670,50 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 				is_artificial = yes
 				merg_is_crackable_planet = yes
 			}
+		}
+	}
+}
+
+# Arknights Near Future
+can_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = {
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		is_a_habitable_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_not_hostile_or_primitive
+		OR = {
+			has_owner = no
+			AND = {
+				exists = space_owner
+				space_owner = {
+					OR = {
+						is_at_war_with = from.owner
+						is_primitive = yes
+						is_country_type = swarm
+						is_country_type = extradimensional
+						is_country_type = extradimensional_2
+						is_country_type = extradimensional_3
+						is_country_type = ai_empire
+					}
+				}
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = ark_is_ai_planet
+		NOR = {
+			is_planet_class = pc_ai
+			is_planet_class = pc_machine
 		}
 	}
 }
