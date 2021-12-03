@@ -243,8 +243,8 @@ diplomatic_stance = {
 				OR = {
 					has_ethic = ethic_xenophobe
 					# Expanded Traits, Civics, Pops, and More
-					has_civic = civic_infestation
-					has_civic = civic_living_hosts
+					has_valid_civic = civic_infestation
+					has_valid_civic = civic_living_hosts
 				}
 			}
 			modifier = {
@@ -504,11 +504,11 @@ diplomatic_stance = {
 			}
 			else_if = {
 				limit = { has_megacorp = yes }
-				has_civic = civic_merchant_guilds
+				has_valid_civic = civic_merchant_guilds
 			}
 			else = {
 				OR = {
-					has_civic = civic_corporate_dominion
+					has_valid_civic = civic_corporate_dominion
 					# Ethics and Civics Alternative - Redux
 					has_ethic = ethic_capitalism
 					has_ethic = ethic_fanatic_capitalism
@@ -656,23 +656,23 @@ diplomatic_stance = {
 
 			# Angry people want to be Supreme
 			modifier = {
-				factor = 2.0
+				factor = 5
 				has_ethic = ethic_fanatic_militarist
 			}
 			modifier = {
-				factor = 1.5
+				factor = 2
 				has_ethic = ethic_militarist
 			}
 			modifier = {
-				factor = 1.5
+				factor = 2
 				has_ethic = ethic_fanatic_authoritarian
 			}
 			modifier = {
-				factor = 1.25
+				factor = 1.5
 				has_ethic = ethic_authoritarian
 			}
 			modifier = {
-				factor = 1.25 # Despoilers/Nihilistic Acquisition intentionally get a higher multiplier for Belligerent than Supremacist
+				factor = 1.5 # Despoilers/Nihilistic Acquisition intentionally get a higher multiplier for Belligerent than Supremacist
 				is_slaver = yes
 			}
 			modifier = {
@@ -1274,7 +1274,7 @@ war_doctrine = {
 				has_ethic = ethic_militarist
 				has_ethic = ethic_fanatic_militarist
 				has_ethic = ethic_gestalt_consciousness
-				has_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_fanatic_purifiers
 			}
 		}
 
@@ -1385,6 +1385,10 @@ orbital_bombardment = {
 		}
 		AI_weight = {
 			modifier = {
+				factor = 5
+				is_pacifist = no
+			}
+			modifier = {
 				factor = 0.1
 				is_galactic_community_member = yes
 				OR = {
@@ -1442,8 +1446,8 @@ orbital_bombardment = {
 		}
 		potential = {
 			OR = {
-				has_civic = civic_fanatic_purifiers
-				has_civic = civic_machine_terminator
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_machine_terminator
 				# ZOFE
 				is_country_type = ascended_empire
 				# Civics Expanded
@@ -1472,8 +1476,8 @@ orbital_bombardment = {
 			modifier = {
 				factor = 10
 				OR = {
-					has_civic = civic_fanatic_purifiers
-					has_civic = civic_machine_terminator
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_machine_terminator
 					has_ascension_perk = ap_become_the_crisis
 					# ZOFE
 					has_valid_civic = civic_galactic_superpower
@@ -1847,6 +1851,12 @@ first_contact_protocol = {
 				factor = 2
 				is_gestalt = yes
 			}
+			# Ariphaos Patch
+			modifier = {
+				factor = 0
+				is_megacorp = yes
+				is_criminal_syndicate = no
+			}
 			# Expanded Traits, Civics, Pops, and More
 			modifier = {
 				factor = 2
@@ -2149,6 +2159,7 @@ robot_pop_policy = {
 				# Girls Frontline
 				has_authority = auth_gf_commonwealth
 			}
+			NOT = { has_policy_flag = ai_full_rights }
 		}
 
 		policy_flags = {

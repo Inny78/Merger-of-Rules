@@ -4,7 +4,7 @@
 is_megacorp = {
 	OR = {
 		has_authority = auth_corporate
-		has_civic = civic_galactic_sovereign_megacorp
+		has_valid_civic = civic_galactic_sovereign_megacorp
 		# Warship Girls R And MIST Species
 		has_authority = auth_warshipgirls
 		# Stellaris Evolved
@@ -115,7 +115,7 @@ has_encountered_other_species = {
 	OR = {
 		has_origin = origin_syncretic_evolution
 		has_origin = origin_necrophage
-		has_civic = civic_machine_servitor
+		has_valid_civic = civic_machine_servitor
 		# Ethics and Civics Classic and all its variants
 		has_valid_civic = civic_symbiotic_race
 		has_valid_civic = civic_slave_race
@@ -290,6 +290,7 @@ habitable_planet = {
 		is_planet_class = pc_biocapital
 		is_planet_class = pc_biofort
 		is_planet_class = pc_tidallygaia
+		is_planet_class = pc_tidallyaquatic
 		# Warship Girls R And MIST Species
 		is_planet_class = pc_wsg_port
 		is_planet_class = pc_shenhai

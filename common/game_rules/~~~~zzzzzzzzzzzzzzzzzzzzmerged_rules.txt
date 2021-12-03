@@ -248,7 +248,7 @@ species_can_live_on_planet = {
 				exists = root.owner
 				root.owner = {
 					has_authority = auth_machine_intelligence
-					has_civic = civic_machine_assimilator # Assimilator empire
+					has_valid_civic = civic_machine_assimilator # Assimilator empire
 				}
 			}
 		}
@@ -2073,7 +2073,7 @@ species_has_happiness = {
 			exists = from
 			from = {
 				has_authority = auth_machine_intelligence
-				has_civic = civic_machine_assimilator # Assimilator empire
+				has_valid_civic = civic_machine_assimilator # Assimilator empire
 			}
 		}
 	}
@@ -2155,8 +2155,8 @@ can_species_procreate = {
 				root = {
 					owner = {
 						or = {
-							has_civic = civic_slaver_guilds
-							has_civic = civic_indentured_assets
+							has_valid_civic = civic_slaver_guilds
+							has_valid_civic = civic_indentured_assets
 						}
 					}
 				}
@@ -2334,8 +2334,8 @@ can_species_be_assembled = {
 							root = {
 								owner = {
 									or = {
-										has_civic = civic_slaver_guilds
-										has_civic = civic_indentured_assets
+										has_valid_civic = civic_slaver_guilds
+										has_valid_civic = civic_indentured_assets
 									}
 								}
 							}
@@ -2650,9 +2650,9 @@ can_spawn_debris = {
 			# The Empty Vagrant
 			is_country_type = default_ev
 			# Twinks Atlantean
-			has_civic = civic_tw_atlantis
+			has_valid_civic = civic_tw_atlantis
 			# Expanded Gestalts
-			has_civic = civic_hive_strong_connection
+			has_valid_civic = civic_hive_strong_connection
 		}
 	}
 }
@@ -3167,7 +3167,7 @@ can_build_branch_offices = {
 				has_authority = auth_shenhai
 				OR = {
 					has_country_flag = pantsu_shop_origin
-					has_civic = civic_sh_criminal_syndicate
+					has_valid_civic = civic_sh_criminal_syndicate
 				}
 			}
 			# Azur Lane Stellaris DLC
@@ -3176,13 +3176,13 @@ can_build_branch_offices = {
 			has_authority = auth_azur_lane_2
 			has_authority = auth_azur_lane_K
 			# Girls Frontline
-			has_civic = civic_gk
+			has_valid_civic = civic_gk
 			# Human Fallen Empires
 			is_country_type = hfe_pirate
 			# More Corporate Authorities
-			has_civic = civic_galactic_sovereign_megacorp
+			has_valid_civic = civic_galactic_sovereign_megacorp
 			# Arknights Near Future
-			has_civic = civic_business_union
+			has_valid_civic = civic_business_union
 		}
 	}
 }
@@ -3197,7 +3197,7 @@ can_support_branch_offices = {
 			# Warship Girls R And MIST Species
 			has_authority = auth_azur_dictatorial
 			# Girls Frontline
-			has_civic = civic_gk
+			has_valid_civic = civic_gk
 		}
 	}
 	custom_tooltip = {
@@ -3209,7 +3209,7 @@ can_support_branch_offices = {
 				has_authority = auth_shenhai
 				OR = {
 					has_country_flag = pantsu_shop_origin
-					has_civic = civic_sh_criminal_syndicate
+					has_valid_civic = civic_sh_criminal_syndicate
 				}
 			}
 			# Azur Lane Stellaris DLC
@@ -3217,9 +3217,9 @@ can_support_branch_offices = {
 			# Reworked Advanced Ascension
 			is_subject_type = subsidiary2
 			# More Corporate Authorities
-			has_civic = civic_galactic_sovereign_megacorp
+			has_valid_civic = civic_galactic_sovereign_megacorp
 			# Arknights Near Future
-			has_civic = civic_business_union
+			has_valid_civic = civic_business_union
 		}
 	}
 	custom_tooltip = {
@@ -3252,7 +3252,7 @@ can_build_branch_office_on_planet = {
 		owner = {
 			OR = {
 				is_same_species = root
-				NOT = { has_civic = civic_fanatic_purifiers }
+				NOT = { has_valid_civic = civic_fanatic_purifiers }
 			}
 		}
 	}
@@ -3282,7 +3282,7 @@ can_build_branch_office_on_planet = {
 				root = {
 					OR = {
 						has_country_flag = pantsu_shop_origin
-						has_civic = civic_sh_criminal_syndicate
+						has_valid_civic = civic_sh_criminal_syndicate
 					}
 				}
 			}
@@ -3327,7 +3327,7 @@ can_build_branch_office_on_planet = {
 				overlord = { is_same_value = root }
 			}
 			AND = {
-				root = { has_civic = civic_galactic_sovereign_megacorp }
+				root = { has_valid_civic = civic_galactic_sovereign_megacorp }
 				owner = { is_galactic_community_member = yes }
 			}
 			AND = {
@@ -3400,7 +3400,7 @@ can_build_branch_office_on_planet = {
 					has_authority = auth_shenhai
 					OR = {
 						has_country_flag = pantsu_shop_origin
-						has_civic = civic_sh_criminal_syndicate
+						has_valid_civic = civic_sh_criminal_syndicate
 					}
 				}
 			}
@@ -3504,9 +3504,9 @@ can_use_galactic_market = {
 		}
 	}
 	NOR = {
-		has_civic = civic_fanatic_purifiers
-		has_civic = civic_hive_devouring_swarm
-		has_civic = civic_machine_terminator
+		has_valid_civic = civic_fanatic_purifiers
+		has_valid_civic = civic_hive_devouring_swarm
+		has_valid_civic = civic_machine_terminator
 		# Underground Realms
 		has_country_flag = dark_side
 	}
@@ -3615,9 +3615,9 @@ can_be_part_of_galactic_community = {
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
 		NOR = {
-			has_civic = civic_fanatic_purifiers
-			has_civic = civic_hive_devouring_swarm
-			has_civic = civic_machine_terminator
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_hive_devouring_swarm
+			has_valid_civic = civic_machine_terminator
 			# Underground Realms
 			has_country_flag = dark_side
 		}
@@ -3647,9 +3647,9 @@ can_be_part_of_galactic_empire = {
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
 		NOR = {
-			has_civic = civic_fanatic_purifiers
-			has_civic = civic_hive_devouring_swarm
-			has_civic = civic_machine_terminator
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_hive_devouring_swarm
+			has_valid_civic = civic_machine_terminator
 			# Underground Realms
 			has_country_flag = dark_side
 		}
@@ -3696,9 +3696,9 @@ can_be_part_of_galactic_council = {
 		is_country_type = original_empire_active
 	}
 	NOR = {
-		has_civic = civic_fanatic_purifiers
-		has_civic = civic_hive_devouring_swarm
-		has_civic = civic_machine_terminator
+		has_valid_civic = civic_fanatic_purifiers
+		has_valid_civic = civic_hive_devouring_swarm
+		has_valid_civic = civic_machine_terminator
 		# Underground Realms
 		has_country_flag = dark_side
 	}
