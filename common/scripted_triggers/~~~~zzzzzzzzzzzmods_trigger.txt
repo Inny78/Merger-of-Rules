@@ -312,3 +312,18 @@ legw_is_wet = {
 legw_is_cold = {
 	has_climate = cold
 }
+
+# Real Space New Frontiers - Fixing and Merging
+is_moon_of_gas_giant = {
+	is_scope_type = planet
+    exists = orbit
+    orbit = {
+		OR = {
+			is_planet_class = pc_gas_giant
+			# Planetary Diversity
+			is_planet_class = pc_hot_gas_giant
+			is_planet_class = pc_cloudless_gas_giant
+			is_planet_class = pc_cold_gas_giant
+		}
+	}
+}

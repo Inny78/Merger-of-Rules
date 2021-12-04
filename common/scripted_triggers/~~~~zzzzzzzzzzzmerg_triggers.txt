@@ -515,6 +515,8 @@ has_phototrophic_energy_upkeep = {
 				planet = { is_planet_class = pc_ie_gateway }
 				# Giga Diversity
 				planet = { is_planet_class = pc_katzenland }
+				# Real Space
+				planet = { is_planet_class = pc_depleted }
 			}
 		}
 	}

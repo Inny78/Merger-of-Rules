@@ -122,7 +122,7 @@ has_upgraded_capital = {
 				has_building = building_dm_galactic_hive_capital
                	has_building = building_ae_galactic_hive_capital
 				has_building = building_stellarite_galactic_hive_capital
-				# All that is GRIMDARK
+				# All That Is GRIMDARK
 				has_building = building_hive_major_capital_sick
 			}
 		}
@@ -190,6 +190,8 @@ has_upgraded_capital = {
 				has_building = building_dm_galactic_machine_capital
    	            has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
+				# All That Is GRIMDARK
+				has_building = building_system_capital_gr
 			}
 		}
 	}
@@ -381,6 +383,8 @@ has_major_upgraded_capital = {
 				has_building = building_dm_galactic_machine_capital
                 has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
+				# All that is GRIMDARK
+				has_building = building_system_capital_gr
 			}
 		}
 	}
@@ -561,6 +565,8 @@ has_fully_upgraded_capital = {
 				has_building = building_dm_galactic_machine_capital
        	        has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
+				# All that is GRIMDARK
+				has_building = building_system_capital_gr
 			}
 		}
 	}
