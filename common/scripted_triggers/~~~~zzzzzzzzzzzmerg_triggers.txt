@@ -348,12 +348,12 @@ habitable_structure = {
 is_country_type_with_subjects = {
 	OR = {
 		is_country_type = default
+		is_country_type = awakened_fallen_empire
 		# ZOFE
 		is_country_type = ascended_empire
 		is_country_type = lost_empire
 		# The Empty Vagrant
 		is_country_type = default_ev
-		is_country_type = awakened_fallen_empire
 		# ACOT
 		is_country_type = original_empire
 		is_country_type = original_empire_passive

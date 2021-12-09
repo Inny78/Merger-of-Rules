@@ -77,6 +77,7 @@ merg_is_regular_empire = {
 merg_is_hab_ringworld = {
 	OR = {
 		is_planet_class = pc_ringworld_habitable
+		is_planet_class = pc_shattered_ring_habitable
 		# Gigastructural Engineering & More
 		is_planet_class = pc_gigaorbital_ring
 		is_planet_class = pc_interstellar_ringworld_habitable
@@ -102,25 +103,6 @@ merg_is_hab_ringworld = {
 		# Warship Girls and MIST species
 		is_planet_class = pc_ringworld_habitable_sh
 		is_planet_class = pc_ringworld_habitable_wsg
-
-		# Giga Diversity - these don't exist yet
-		# is_planet_class = pc_ringworld_necrocity
-		# is_planet_class = pc_ringworld_milarc
-		# is_planet_class = pc_ringworld_ecocity
-		# is_planet_class = pc_ringworld_bioforge
-		# is_planet_class = pc_ringworld_biofort
-		# is_planet_class = pc_ringworld_machine_factory
-		# is_planet_class = pc_ringworld_machine_fort
-		# is_planet_class = pc_ringworld_relic
-		# is_planet_class = pc_ringworld_milarc_relic
-		# is_planet_class = pc_shroudring
-		# is_planet_class = pc_aquaticring
-		# is_planet_class = pc_ringworld_methanecity
-		# is_planet_class = pc_ringworld_ammoniacity
-		# is_planet_class = pc_ringworld_ashcity
-		# is_planet_class = pc_ringworld_sulfurcity
-		# is_planet_class = pc_ringworld_aquaticcity
-		# is_planet_class = pc_ringworld_shroudcity
 	}
 }
 

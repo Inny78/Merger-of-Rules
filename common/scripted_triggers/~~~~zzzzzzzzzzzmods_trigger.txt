@@ -119,8 +119,8 @@ giga_habitable_structure = {
 	OR = {
 		uses_district_set = habitat
 		is_ringworld = yes
-		# Planetary Diversity
-		uses_district_set = pdplanethab
+		merg_is_habitat = yes
+		merg_is_hab_ringworld = yes
 		# Gigastructural Engineering & More
 		uses_district_set = giga_planet
 		uses_district_set = penrose_ring
@@ -132,19 +132,6 @@ giga_habitable_structure = {
 		uses_district_set = acot_giga_void_sphere
 		uses_district_set = giga_alderson
 		is_planet_class = pc_pouchkinn_black_hole
-		# Ancient Empire
-		uses_district_set = ag_ancient_ringworld
-		# Starborn: Improved Voidtouched
-		uses_district_set = starborn_start
-		# Twinks Atlantean
-		uses_district_set = skypalace
-		# More Events Mod
-		is_planet_class = pc_mem_vazuran_habitat
-		# Acquisition of Technology
-		uses_district_set = dm_habitat
-		uses_district_set = ae_habitat
-		uses_district_set = sigma_habitat
- 		# Giga Diversity - these don't exist yet
 	}
 }
 
@@ -154,31 +141,17 @@ is_memeable_space_habitat = {
 		uses_district_set = habitat
 		habitable_structure = yes
 		is_ringworld = yes
-		# Planetary Diversity
-		uses_district_set = pdplanethab
+		merg_is_habitat = yes
+		merg_is_hab_ringworld = yes
 		# Gigastructural Engineering & More
 		uses_district_set = giga_planet
 		uses_district_set = penrose_ring
-		uses_district_set = interstellar_ring
 		uses_district_set = giga_gas_giant_habitat
 		uses_district_set = giga_birch
 		uses_district_set = virtual_ring
 		uses_district_set = virtual_ring_industry
 		uses_district_set = acot_giga_void_sphere
 		uses_district_set = giga_alderson
-		# Ancient Empire
-		uses_district_set = ag_ancient_ringworld
-		# Starborn: Improved Voidtouched
-		uses_district_set = starborn_start
-		# Twinks Atlantean
-		uses_district_set = skypalace
-		# More Events Mod
-		is_planet_class = pc_mem_vazuran_habitat
-		# Acquisition of Technology
-		uses_district_set = dm_habitat
-		uses_district_set = ae_habitat
-		uses_district_set = sigma_habitat
- 		# Giga Diversity - these don't exist yet
 	}
 }
 
@@ -188,31 +161,16 @@ mem_is_spherical_world = {
 	NOR = {
 		uses_district_set = habitat
 		habitable_structure = yes
-		# Planetary Diversity
-		uses_district_set = pdplanethab
+		merg_is_habitat = yes
+		merg_is_hab_ringworld = yes
 		# Gigastructural Engineering & More
 		uses_district_set = giga_planet
-		uses_district_set = penrose_ring
-		uses_district_set = interstellar_ring
 		uses_district_set = giga_gas_giant_habitat
 		uses_district_set = giga_birch
 		uses_district_set = virtual_ring
 		uses_district_set = virtual_ring_industry
 		uses_district_set = acot_giga_void_sphere
 		uses_district_set = giga_alderson
-		# Ancient Empire
-		uses_district_set = ag_ancient_ringworld
-		# Starborn: Improved Voidtouched
-		uses_district_set = starborn_start
-		# Twinks Atlantean
-		uses_district_set = skypalace
-		# More Events Mod
-		is_planet_class = pc_mem_vazuran_habitat
-		# Acquisition of Technology
-		uses_district_set = dm_habitat
-		uses_district_set = ae_habitat
-		uses_district_set = sigma_habitat
- 		# Giga Diversity - these don't exist yet
 	}
 }
 
@@ -278,18 +236,8 @@ starborn_can_place_hab = {
 			is_planet_class = pc_ringworld_seam
 			is_planet_class = pc_ringworld_seam_damaged
 			is_planet_class = pc_habitat
-			# Planetary Diversity
-			uses_district_set = pdplanethab
-			# Gigastructural Engineering & More
-			is_planet_class = pc_interstellar_habitat
-			# More Events Mod
-			is_planet_class = pc_mem_vazuran_habitat
-			# Acquisition of Technology
-			uses_district_set = dm_habitat
-			uses_district_set = ae_habitat
-			uses_district_set = sigma_habitat
-			# Twinks Atlantean
-			uses_district_set = skypalace
+			merg_is_habitat = yes
+			merg_is_hab_ringworld = yes
 			# Gigastructural Engineering & More
 			AND = {
 				has_gigastructures = yes
