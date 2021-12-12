@@ -333,11 +333,6 @@ has_major_upgraded_capital = {
 	}
 	else_if = {
 		limit = { owner = { is_machine_empire = yes } }
-		limit = { 
-			owner = { 
-				is_machine_empire = yes 
-			} 
-		}
 		custom_tooltip = {
 			fail_text = "requires_building_machine_major_capital"
 			OR = {
