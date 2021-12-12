@@ -1230,6 +1230,7 @@ can_generate_leader_from_pop = {
 		# Expanded Events / Expanded Traits, Civics, Pops, and More
 		has_trait = trait_memorex_comatos
 		has_trait = trait_infested_basic
+		has_trait = trait_tree_caretaker
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
 		has_trait = trait_holodrone
 		# Expanded Gestalts
@@ -1386,6 +1387,7 @@ can_release_vassal_from_species = {
 			# Expanded Events / Expanded Traits, Civics, Pops, and More
 			has_trait = trait_memorex_comatos
 			has_trait = trait_infested_basic
+			has_trait = trait_tree_caretaker
 			AND = {
 				has_expanded_pops = yes
 				prev = { NOT = { has_technology = tech_synthetic_leaders } }
@@ -2186,6 +2188,18 @@ can_species_procreate = {
 			has_artificial_wombs = no
 		}
 	}
+	# Expanded Events
+	if = {
+		limit = {
+			has_trait = trait_tree_caretaker
+		}
+		root = {
+			OR = {
+				has_deposit = d_tree_of_life_colony
+				has_deposit = d_tree_of_life_home
+			}
+		}
+	}
 	# Vanilla
 	NOT = { has_species_flag = nivlac_no_procreation }
 	if = {
@@ -2256,6 +2270,22 @@ can_species_be_assembled = {
 					has_trait = trait_hive_mind
 					# Expanded Gestalts
 					NOT = { has_trait = trait_hive_mind_overlord }
+				}
+			}
+			# Expanded Traits, Civics, Pops, and More
+			else_if = {
+				limit = {
+					Root = {
+						owner = { has_origin = origin_sacred_tree }
+						OR = {
+							has_deposit = d_tree_of_life_home
+							has_deposit = is_for_colonizable
+						}
+					}
+				}
+				OR = {
+					has_trait = trait_tree_caretaker
+					merg_has_cloning_building = yes
 				}
 			}
 			# flourishing plantoids
@@ -3022,6 +3052,11 @@ can_resettle_pop = {
 		fail_text = "self_modified_refuse"
 		NOT = { has_trait = trait_self_modified }
 	}
+	# Expanded Events
+	custom_tooltip = {
+		fail_text = "caretaker_refuse"
+		NOT = { has_trait = trait_tree_caretaker }
+	}
 	#Done as an IF/ELSE so the tooltip isn't hideous and unreadable
 	# Diagraphers Trait Mod
 	if = {
@@ -3362,11 +3397,11 @@ can_build_branch_office_on_planet = {
 					is_at_war_with = root
 				}
 			}
-			# Azur Lane Stellaris DLC
-			root = { 
-				NOT = {
-					has_authority = auth_azur_lane_1
-				}
+		}
+		# Azur Lane Stellaris DLC
+		NOT = { 
+			root = {
+				has_authority = auth_azur_lane_1
 			}
 		}
 	}
@@ -3381,11 +3416,11 @@ can_build_branch_office_on_planet = {
 				}
 				NOT = { has_planet_flag = criminal_branch_closed_cooldown_planet@root }
 			}
-			# Azur Lane Stellaris DLC
-			root = { 
-				NOT = {
-					has_authority = auth_azur_lane_1
-				}
+		}
+		# Azur Lane Stellaris DLC
+		NOT = { 
+			root = {
+				has_authority = auth_azur_lane_1
 			}
 		}
 	}

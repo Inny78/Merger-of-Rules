@@ -37,7 +37,7 @@ shadowgate_is_ae = {
 	}
 }
 
-# Making Shadowgate acknowledge Underground Realms
+# Making Shadowgate acknowledge other mods
 shadowgate_is_purifier = {
     OR = {
         has_country_flag = shadowgate_ap_restricted
@@ -46,6 +46,8 @@ shadowgate_is_purifier = {
         has_valid_civic = civic_hive_devouring_swarm
 		# Underground Realms
 		has_country_flag = dark_side
+		# Expanded Traits, Civics, Pops, and More
+		has_valid_civic = civic_infestation
     }
 }
 
@@ -82,22 +84,6 @@ ehof_default_country = {
 		is_country_type = lost_empire
 		# The Empty Vagrant
 		is_country_type = default_ev
-	}
-}
-
-# ACOT/AOT/Twinks mods merging.
-has_advanced_fort = {
-	OR = {
-		# ACOT
-		has_building = building_dm_stronghold
-		has_building = building_fe_stronghold
-		has_building = building_ae_stronghold
-		# AOT
-		has_building = building_stellarite_stronghold
-		# Twinks Mods
-		has_building = building_precinct_house_at_b
-		has_building = building_tw_arcane_hold
-		# has_building = building_demon_fortress # For later
 	}
 }
 
@@ -273,5 +259,79 @@ is_moon_of_gas_giant = {
 			is_planet_class = pc_cloudless_gas_giant
 			is_planet_class = pc_cold_gas_giant
 		}
+	}
+}
+
+# Star Wars: Kuat Ancient Empire
+kuat_is_common_country = {
+	OR = {
+		is_country_type = default
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		is_country_type = awakened_marauders
+		is_country_type = primitive
+		is_country_type = ratlings
+		# is_country_type = prikki - they're now a default country
+		# ZOFE
+		is_country_type = lost_empire
+		# The Empty Vagrant
+		is_country_type = default_ev
+		is_country_type = fallen_empire_ev
+		# Human Fallen Empire
+		is_country_type = human_fallen_empire
+		is_country_type = hfe_pirate
+	}
+}
+
+# AOT Triggers
+is_memeable_ringworld = {
+	OR = {
+		is_planet_class = pc_ringworld_habitable
+		is_planet_class = pc_shattered_ring_habitable
+		# Gigastructural Engineering & More
+		is_planet_class = pc_gigaorbital_ring
+		is_planet_class = pc_interstellar_ringworld_habitable
+		is_planet_class = pc_ringworld_city
+		is_planet_class = pc_squareworld_habitable
+		is_planet_class = pc_giga_penrose_habitable
+		is_planet_class = pc_ringworld_machine
+		is_planet_class = pc_ringworld_hive
+		# Ancient Empire
+		# listed planet types are for colors only, they're all ideal
+		is_planet_class = pc_ag_ringworld_desert
+		is_planet_class = pc_ag_ringworld_arid
+		is_planet_class = pc_ag_ringworld_savannah
+		is_planet_class = pc_ag_ringworld_ocean
+		is_planet_class = pc_ag_ringworld_continental
+		is_planet_class = pc_ag_ringworld_tropical
+		is_planet_class = pc_ag_ringworld_tundra
+		is_planet_class = pc_ag_ringworld_arctic
+		is_planet_class = pc_ag_ringworld_alpine
+		is_planet_class = pc_ag_ringworld_machine
+		is_planet_class = pc_ag_ringworld_city
+		is_planet_class = pc_ag_ringworld_gaia
+		# Warship Girls and MIST species
+		is_planet_class = pc_ringworld_habitable_sh
+		is_planet_class = pc_ringworld_habitable_wsg
+	}
+}
+
+is_memeable_space_habitat = {
+	OR = {
+		is_planet_class = pc_habitat
+		# Planetary Diversity
+		uses_district_set = pdplanethab
+		# Gigastructural Engineering & More
+		is_planet_class = pc_interstellar_habitat
+		# More Events Mod
+		is_planet_class = pc_mem_vazuran_habitat
+		# Acquisition of Technology
+		uses_district_set = dm_habitat
+		uses_district_set = ae_habitat
+		uses_district_set = sigma_habitat
+		# Starborn: Improved Voidtouched
+		uses_district_set = starborn_start
+		# Twinks Atlantean
+		uses_district_set = skypalace
 	}
 }

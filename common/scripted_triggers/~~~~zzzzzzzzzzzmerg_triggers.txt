@@ -416,20 +416,22 @@ is_autocracy = { #Power of one
 }
 
 is_democracy = { #Power of many
-	has_authority = auth_democratic
-	AND = {
-		has_authority = auth_corporate
-		is_egalitarian = yes
+	OR = {
+		has_authority = auth_democratic
+		AND = {
+			has_authority = auth_corporate
+			is_egalitarian = yes
+		}
+		# More Authorities
+		has_authority = auth_strict_democratic
+		has_authority = auth_direct_democratic # Also used by Stellaris Evolved
+		AND = {
+			has_authority = auth_democratic_dictatorship
+			is_egalitarian = yes
+		}
+		# Expanded Traits, Civics, Pops, and More
+		has_authority = auth_cooperative
 	}
-	# More Authorities
-	has_authority = auth_strict_democratic
-	has_authority = auth_direct_democratic # Also used by Stellaris Evolved
-	AND = {
-		has_authority = auth_democratic_dictatorship
-		is_egalitarian = yes
-	}
-	# Expanded Traits, Civics, Pops, and More
-	has_authority = auth_cooperative
 }
 
 is_valid_refugee_pop = {
