@@ -335,3 +335,54 @@ is_memeable_space_habitat = {
 		uses_district_set = skypalace
 	}
 }
+
+CmtTriggerIsPlayableEmpire = {
+	OR = {
+		is_country_type = default
+		is_ai = no
+		# ZOFE
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+		# The Empty Vagrant
+		is_country_type = default_ev
+	}
+}
+
+CmtTriggerIsEmpire = {
+	OR = {
+		is_country_type = default
+		is_ai = no
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		# ZOFE
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+		# The Empty Vagrant
+		is_country_type = default_ev
+		is_country_type = fallen_empire_ev
+		is_country_type = awakened_fallen_empire_ev
+		# Human Fallen Empire
+		is_country_type = human_fallen_empire
+		is_country_type = hfe_pirate
+	}
+}
+
+CmtTriggerIsFallenEmpire = {
+	OR = {
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		# ZOFE
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+		# The Empty Vagrant
+		is_country_type = fallen_empire_ev
+		is_country_type = awakened_fallen_empire_ev
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_fallen_empire
+		# Human Fallen Empire
+		is_country_type = human_fallen_empire
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_awakened_fallen_empire
+		is_country_type = awakened_return_kuat_empire
+	}
+}

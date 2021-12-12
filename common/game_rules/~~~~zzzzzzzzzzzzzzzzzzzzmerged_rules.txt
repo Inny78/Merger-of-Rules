@@ -3226,19 +3226,25 @@ can_build_branch_offices = {
 can_support_branch_offices = {
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_FALLEN_EMPIRES
-		NOR = {
-			merg_is_fallen_empire = yes
-			merg_is_awakened_fe = yes
-			# Warship Girls R And MIST Species
-			has_authority = auth_azur_dictatorial
-			# Girls Frontline
-			has_valid_civic = civic_gk
+		AND = {
+			has_more_authorities = no
+			NOR = {
+				merg_is_fallen_empire = yes
+				merg_is_awakened_fe = yes
+				# Warship Girls R And MIST Species
+				has_authority = auth_azur_dictatorial
+				# Girls Frontline
+				has_valid_civic = civic_gk
+			}
 		}
 	}
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_ON_MEGACORP_PLANET
 		NOR = {
-			is_megacorp = yes
+			AND = {
+				has_more_authorities = no
+				is_megacorp = yes
+			}
 			# Warship Girls R And MIST Species
 			AND = {
 				has_authority = auth_shenhai
