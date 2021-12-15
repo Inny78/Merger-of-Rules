@@ -47,6 +47,11 @@ has_uac = {
 	has_global_flag = has_uac_mod
 }
 
+# Diagraphers Trait Mod
+has_diag_trait = {
+	has_global_flag = dtraits_randomization_flag
+}
+
 # Espionage Extended 2465577434
 has_espionage_extended = {
 	has_global_flag = has_mod_espionage_extended
@@ -105,6 +110,11 @@ has_gpm = {
 		has_global_flag = has_guillis_planet_modifiers_mod
 		has_global_flag = guillis_planet_modifiers_active
 	}
+}
+
+# Silfae's Portraits: Revisited - Holofrixit Revisited
+has_holofrixit = {
+	has_global_flag = holofrixit_revisited_installed
 }
 
 # Human Fallen Empire

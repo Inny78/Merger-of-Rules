@@ -138,6 +138,7 @@ is_memeable_space_habitat = {
 		uses_district_set = virtual_ring_industry
 		uses_district_set = acot_giga_void_sphere
 		uses_district_set = giga_alderson
+		is_planet_class = pc_flat_world
 	}
 }
 
@@ -157,6 +158,7 @@ mem_is_spherical_world = {
 		uses_district_set = virtual_ring_industry
 		uses_district_set = acot_giga_void_sphere
 		uses_district_set = giga_alderson
+		is_planet_class = pc_flat_world
 	}
 }
 
@@ -379,10 +381,9 @@ CmtTriggerIsFallenEmpire = {
 		is_country_type = awakened_fallen_empire_ev
 		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_fallen_empire
-		# Human Fallen Empire
-		is_country_type = human_fallen_empire
-		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_awakened_fallen_empire
 		is_country_type = awakened_return_kuat_empire
+		# Human Fallen Empire
+		is_country_type = human_fallen_empire
 	}
 }

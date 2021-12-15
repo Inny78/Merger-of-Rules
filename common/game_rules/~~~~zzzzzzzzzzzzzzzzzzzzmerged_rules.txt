@@ -237,7 +237,13 @@ can_get_claim_from_lost_system = {
 species_can_live_on_planet = {
 	exists = root
 	NAND = {
-		root = { is_planet_class = pc_machine }
+		root = {
+			OR = {
+				is_planet_class = pc_machine
+				# Origin - F.C.S.S & M.C.S.S
+				is_planet_class = pc_awaken_ai
+			}
+		}
 		NOR = {
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
@@ -1217,7 +1223,17 @@ species_can_live_on_planet = {
 #Root = country
 #This = pop
 can_generate_leader_from_pop = {
-	has_citizenship_rights = yes
+	OR = {
+		has_citizenship_rights = yes
+		# Holofrixit Revisited / Silfae's Portraits: Revisited
+		species = {
+			has_species_flag = allow_leaders_organic_advisors@prev.owner
+			has_citizenship_type = {
+				type = citizenship_organic_trophy
+				country = prev.owner
+			}
+		}
+	}
 	NOR = {
 		has_trait = trait_syncretic_proles
 		has_trait = trait_nerve_stapled
@@ -1258,6 +1274,8 @@ can_generate_leader_from_pop = {
 					NOT = { has_trait = trait_holofrixit }
 					has_trait = trait_holooverseer
 					has_trait = trait_hologanglion
+					has_trait = trait_holowarrior
+					has_trait = trait_holowarrior_2
 				}
 			}
 		}
@@ -2350,6 +2368,8 @@ can_species_be_assembled = {
 					# Warship Girls R and MIST species
 					is_archetype = WARSHIPGIRL
 					is_archetype = SHENHAI
+					# Star Wars: UnknownWorld Shipgirls Story
+					is_archetype = STARSHIPGIRLS
 				}
 			}
 			# Special Colonies Overhaul
@@ -3837,7 +3857,250 @@ can_planet_receive_auto_migration = {
 # can_use_envoys_to_lower_imperial_authority
 # should_planetary_automate
 # can_fill_drone_job
-# can_fill_worker_job
-# can_fill_specialist_job
-# can_fill_ruler_job
+
+#this/root = pop
+#checked if job's possible_precalc = can_fill_worker_job
+can_fill_worker_job = {
+	custom_tooltip = WORKER_JOB_TRIGGER
+	hidden_trigger = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		exists = owner
+		OR = {
+			is_being_purged = no
+			# Expanded Traits, Civics, Pops, and More
+			has_purge_type = { type = purge_displacement }
+			has_purge_type = { type = purge_neutering }
+		}
+		is_being_assimilated = no
+		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+		NAND = {
+			has_citizenship_type = { type = citizenship_slavery }
+			OR = {
+				has_slavery_type = { type = slavery_livestock }
+				has_slavery_type = { type = slavery_matrix }
+			}
+		}
+		if = {
+			limit = {
+				divinity_right_to_work_job_check_trigger_exempt = no
+			}
+			divinity_right_to_work_job_check_trigger_worker = yes
+		}
+		# Diagraphers Trait mod
+		if = {
+			limit = {
+				has_diag_trait = yes
+			}
+			OR = {
+				traits_restrict_worker_jobs = no
+				has_pop_flag = allow_technician_traits
+				has_pop_flag = allow_miner_traits
+				has_pop_flag = allow_farmer_traits
+				has_pop_flag = allow_clerk_traits
+				has_pop_flag = allow_soldier_traits
+				has_pop_flag = allow_crystal_miner_traits
+				has_pop_flag = allow_mote_harvester_traits
+				has_pop_flag = allow_gas_extractor_traits
+				has_pop_flag = allow_priest_traits
+				has_pop_flag = allow_bluelotus_technician_traits
+				has_pop_flag = allow_odd_factory_worker_traits
+				has_pop_flag = allow_cave_cleaner_traits
+				has_pop_flag = allow_titan_hunter_traits
+			}
+		}
+	}
+}
+
+#this/root = pop
+#checked if job's possible_precalc = can_fill_specialist_job
+can_fill_specialist_job = {
+	custom_tooltip = SPECIALIST_JOB_TRIGGER
+	hidden_trigger = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		exists = owner
+		OR = {
+			is_enslaved = no
+			has_slavery_type = { type = slavery_indentured }
+			# Expanded Traits, Civics, Pops, and More
+			AND = {
+				NOT = { host_has_dlc = "Utopia" }
+				is_same_species = owner_main_species
+				owner = {
+					OR = {
+						has_valid_civic = civic_indentured_assets
+						has_valid_civic = civic_slaver_guilds
+					}
+				}
+			}
+		}
+		is_being_purged = no
+		is_being_assimilated = no
+		NOR = {
+			has_trait = trait_syncretic_proles
+			has_trait = trait_nerve_stapled
+			has_trait = trait_presapient_docile_livestock
+			# Diagraphers Trait mod
+			has_trait = trait_subsapient_form
+			# Expanded Traits, Civics, Pops, and More
+			has_trait = trait_tree_caretaker
+		}
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			owner = { has_technology = tech_droid_workers }
+		}
+		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+		if = {
+			limit = {
+				divinity_right_to_work_job_check_trigger_exempt = no
+			}
+			divinity_right_to_work_job_check_trigger_specialist = yes
+		}
+		# Diagraphers Trait mod
+		if = {
+			limit = {
+				has_diag_trait = yes
+			}
+			OR = {
+				traits_restrict_specialist_jobs = no
+				has_pop_flag = allow_priest_traits
+				has_pop_flag = allow_researcher_traits
+				has_pop_flag = allow_foundry_traits
+				has_pop_flag = allow_enforcer_traits
+				has_pop_flag = allow_artisan_traits
+				has_pop_flag = allow_entertainer_traits
+				has_pop_flag = allow_duelist_traits
+				has_pop_flag = allow_culture_worker_traits
+				has_pop_flag = allow_bureaucrat_traits
+				has_pop_flag = allow_chemist_traits
+				has_pop_flag = allow_translucer_traits
+				has_pop_flag = allow_gas_refiner_traits
+				has_pop_flag = allow_roboticist_traits
+				has_pop_flag = allow_healthcare_traits
+				has_pop_flag = allow_manager_traits
+				has_pop_flag = allow_necromancer_traits
+				has_pop_flag = allow_underground_trade_worker_traits
+				has_pop_flag = allow_dimensional_portal_researcher_traits
+				has_pop_flag = allow_gas_plant_engineer_traits
+				has_pop_flag = allow_robot_caretaker_traits
+				planet = { has_building = building_colony_shelter }
+			}
+		}
+	}
+}
+
+#this/root = pop
+#checked if job's possible_precalc = can_fill_ruler_job
+can_fill_ruler_job = {
+	if = {
+		limit = {
+			exists = owner
+			owner = {
+				has_origin = origin_necrophage
+				has_trait = trait_necrophage
+			}
+		}
+		custom_tooltip = {
+			text = RULER_JOB_NECROPHAGE_TRIGGER
+			has_trait = trait_necrophage
+			is_enslaved = no
+			is_being_purged = no
+			is_being_assimilated = no
+			NOR = {
+				has_trait = trait_syncretic_proles
+				has_trait = trait_nerve_stapled
+				# Diagraphers Trait mod
+				has_trait = trait_subsapient_form
+			}
+		}
+	}
+	# Silfae's Portraits: Revisited - Holofrixit Revisited
+	else_if = {
+		limit = {
+			has_holofrixit = yes
+			exists = owner
+			owner = {
+				is_gestalt = no
+				has_origin = origin_holofrixit
+				has_trait = trait_holooverseer
+			}
+		}
+		can_fill_holosphere_ruler_job = yes
+	}
+	else_if = {
+		limit = {
+			has_holofrixit = yes
+			NAND = {
+				has_trait = trait_dimorphic_female
+				has_reproductive_politics = yes
+				owner = {
+					has_valid_civic = civic_patriarchy
+				}
+			}
+		}
+		OR = {
+			traits_restrict_specialist_jobs = no
+			has_pop_flag = allow_priest_traits
+			has_pop_flag = allow_researcher_traits
+			has_pop_flag = allow_administrator_traits
+			has_pop_flag = allow_merchant_traits
+			has_pop_flag = allow_executive_traits
+			owner = { has_valid_civic = civic_aristocratic_elite }
+		}
+	}
+	# Vanilla
+	else = {
+		custom_tooltip = RULER_JOB_TRIGGER
+		hidden_trigger = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			exists = owner
+			is_enslaved = no
+			is_being_purged = no
+			is_being_assimilated = no
+			NOR = {
+				has_trait = trait_syncretic_proles
+				has_trait = trait_nerve_stapled
+				has_trait = trait_presapient_docile_livestock
+				# Diagraphers Trait mod
+				has_trait = trait_subsapient_form
+				# Expanded Traits, Civics, Pops, and More
+				has_trait = trait_tree_caretaker
+			}
+			OR = {
+				NOT = { has_trait = trait_mechanical }
+				AND = {
+					owner = { has_technology = tech_synthetic_workers }
+					owner = { has_policy_flag = ai_full_rights }
+				}
+			}
+			NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+			if = {
+				limit = {
+					divinity_right_to_work_job_check_trigger_exempt = no
+				}
+				divinity_right_to_work_job_check_trigger_ruler = yes
+			}
+		}
+	}
+	# # Diagraphers Trait mod
+	# hidden_trigger = {
+	# 	has_diag_trait = yes
+	# 	NAND = {
+	# 		has_trait = trait_dimorphic_female
+	# 		has_reproductive_politics = yes
+	# 		owner = {
+	# 			has_valid_civic = civic_patriarchy
+	# 		}
+	# 	}
+	# 	OR = {
+	# 		traits_restrict_specialist_jobs = no
+	# 		has_pop_flag = allow_priest_traits
+	# 		has_pop_flag = allow_researcher_traits
+	# 		has_pop_flag = allow_administrator_traits
+	# 		has_pop_flag = allow_merchant_traits
+	# 		has_pop_flag = allow_executive_traits
+	# 		owner = { has_valid_civic = civic_aristocratic_elite }
+	# 	}
+	# }
+}
+
 # should_planetary_automate
