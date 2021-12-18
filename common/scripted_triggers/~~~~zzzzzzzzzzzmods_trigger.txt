@@ -338,6 +338,7 @@ is_memeable_space_habitat = {
 	}
 }
 
+# Crisis stuff
 CmtTriggerIsPlayableEmpire = {
 	OR = {
 		is_country_type = default
@@ -385,5 +386,23 @@ CmtTriggerIsFallenEmpire = {
 		is_country_type = awakened_return_kuat_empire
 		# Human Fallen Empire
 		is_country_type = human_fallen_empire
+	}
+}
+
+# Exalted Domination
+exalted_is_valid_as_vassal = {
+	OR = {
+		is_country_type = default
+		is_country_type = default_ev
+	}
+}
+
+# Expanded Traits, Civics, Pops, and More
+is_open_gestalt = {
+	OR = {
+		has_ai_personality = open_hive_mind
+		has_ai_personality = open_machine_intelligence
+		# Expanded Gestalts
+		has_valid_civic = civic_mutualistic_behavior
 	}
 }

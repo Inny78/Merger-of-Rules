@@ -266,7 +266,7 @@ diplomatic_stance = {
 				has_ethic = ethic_xenophile
 			}
 			modifier = {
-				factor = 1.3
+				factor = 1.5
 				OR = {
 					has_ethic = ethic_fanatic_pacifist
 					# Expanded Traits, Civics, Pops, and More
@@ -372,16 +372,27 @@ diplomatic_stance = {
 					has_ai_personality = fanatic_befrienders
 				}
 			}
-
 			modifier = {
 				factor = 100.0 # Inwards Perfection should almost always go isolationist
-				has_valid_civic = civic_inwards_perfection
-				# Ethics and Civics Alternative - Redux
-				AND = {
-					has_ethics_redux = yes
-					has_valid_civic = civic_isolationism
+				OR = {
+					has_valid_civic = civic_inwards_perfection
+					# Ethics and Civics Alternative - Redux
+					AND = {
+						has_ethics_redux = yes
+						has_valid_civic = civic_isolationism
+					}
+					# Expanded Traits, Civics, Pops, and More
+					AND = {
+						has_expanded_pops = yes
+						OR = {
+							has_valid_civic = civic_closed_collective
+							has_valid_civic = civic_closed_network
+							has_valid_civic = civic_pompous_purists
+						}
+					}
 				}
-			}
+		}
+
 
 			modifier = {
 				factor = 3.0
@@ -447,13 +458,24 @@ diplomatic_stance = {
 			weight = 10
 
 			modifier = {
-				factor = 2
-				NOT = { has_country_flag = has_encountered_other_empire }
+				factor = 0.01
+				has_ascension_perk = ap_become_the_crisis
 			}
 
 			modifier = {
-				factor = 0.01
-				has_ascension_perk = ap_become_the_crisis
+				factor = 2
+				NOT = { has_country_flag = has_encountered_other_empire }
+			}
+			# Expanded Traits, Civics, Pops, and More
+			modifier = {
+				factor = 1.5
+				has_ai_expansion_plan = yes
+			}
+			
+			modifier = {
+				factor = 3.0
+				has_ai_expansion_plan = yes
+				has_ai_personality_behaviour = propagator
 			}
 		}
 	}
@@ -477,15 +499,23 @@ diplomatic_stance = {
 			# Ethics and Civics Alternative - Redux / Classic / Bugged
 			OR = {
 				is_megacorp = yes
-				has_ethic = ethic_capitalism
-				has_ethic = ethic_fanatic_capitalism
+				is_capitalism = yes
 			}
-			NOR = { has_valid_civic = civic_inwards_perfection   }
+			NOR = { has_valid_civic = civic_inwards_perfection }
 		}
 
 		valid = {
 			NOR = {
 				has_valid_civic = civic_inwards_perfection
+				# Expanded Traits, Civics, Pops, and More
+				AND = {
+					has_expanded_pops = yes
+					OR = {
+						has_valid_civic = civic_closed_collective
+						has_valid_civic = civic_closed_network
+						has_valid_civic = civic_pompous_purists
+					}
+				}
 				# Ethics and Civics Alternative - Redux
 				AND = {
 					has_ethics_redux = yes
@@ -562,6 +592,11 @@ diplomatic_stance = {
 					has_valid_civic = civic_corp_security
 				}
 			}
+			# Expanded Traits, Civics, Pops, and More
+			modifier = {
+				factor = 2
+				has_civic = civic_merchant_guilds
+			}
 			# Espionage Extended
 			modifier = {
 				factor = 0.01
@@ -598,6 +633,14 @@ diplomatic_stance = {
 				AND = {
 					has_ethics_redux = yes
 					has_valid_civic = civic_isolationism
+				}
+				AND = {
+					has_expanded_pops = yes
+					OR = {
+						has_valid_civic = civic_closed_collective
+						has_valid_civic = civic_closed_network
+						has_valid_civic = civic_pompous_purists
+					}
 				}
 			}
 			is_homicidal = no
@@ -1335,8 +1378,7 @@ orbital_bombardment = {
 						}
 					}
 					# Ethics and Civics Classic
-					has_ethic = "ethic_green"
-					has_ethic = "ethic_fanatic_green"
+					is_green = yes
 				}
 			}
 		}
@@ -1513,8 +1555,7 @@ orbital_bombardment = {
 			NOR = {
 				is_pacifist = yes
 				# Ethics and Civics Classic
-				has_ethic = "ethic_green"
-				has_ethic = "ethic_fanatic_green"
+				is_green = yes
 				# Ethics and Civics Alternative - Redux
 				has_valid_civic = "civic_xeno_militarist"
 			}
@@ -1588,6 +1629,10 @@ interference = {
 				is_subject_type = signatory
 				has_valid_civic = "civic_fanatic_purifiers"
 				has_valid_civic = "civic_hive_devouring_swarm"
+				# Expanded Traits, Civics, Pops, and More
+				is_subject_type = scion_signatory			
+				has_valid_civic = civic_closed_collective
+				has_valid_civic = civic_closed_network
 			}
 		}
 
@@ -1624,7 +1669,14 @@ interference = {
 		potential = {
 		}
 		valid = {
-			NOT = { is_subject_type = signatory }
+			NOR = {
+				is_subject_type = signatory
+				# Expanded Traits, Civics, Pops, and More
+				is_subject_type = scion_signatory
+				has_valid_civic = civic_closed_collective
+				has_valid_civic = civic_closed_network
+
+			}
 			is_pacifist = no
 		}
 		on_enabled = {
@@ -1647,16 +1699,37 @@ interference = {
 					has_ai_personality_behaviour = dominator
 				}
 			}
+			# # Expanded Traits, Civics, Pops, and More
 			modifier = {
 				factor = 0
-				is_pacifist = yes
+				has_valid_ai_personality = yes
+				AND = {
+					has_valid_ai_personality = yes
+					has_expanded_pops = yes
+					NOT = { has_ai_personality_behaviour = infiltrator }
+				}
+			}
+			modifier = {
+				factor = 3
+				AND = {
+					has_valid_ai_personality = yes
+					has_expanded_pops = yes
+					has_ai_personality_behaviour = infiltrator
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_pacifist = yes
+					# Expanded Traits, Civics, Pops, and More
+					has_ai_personality = open_hive_mind
+					has_ai_personality = open_machine_intelligence
+				}
 			}
 		}
 	}
 }
-
 # enlightenment
-
 resettlement = {
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
@@ -1697,10 +1770,8 @@ resettlement = {
 		}
 	}
 }
-
 # appropriation
 # leader_enhancement
-
 first_contact_protocol = {
 
 	potential = {
@@ -1834,6 +1905,7 @@ first_contact_protocol = {
 					# Expanded Gestalts
 					NOT = { has_valid_civic = civic_mutualistic_behavior }
 					is_open_gestalt = no
+					NOT = { has_valid_civic = civic_machine_servitor }
 				}
 			}
 		}
@@ -1884,7 +1956,6 @@ first_contact_protocol = {
 		}
 	}
 }
-
 border_policy = {
 	potential = {
 		always = yes
@@ -1959,13 +2030,11 @@ border_policy = {
 		}
 	}
 }
-
 # food_policy
 # food_policy_gestalt
 # economic_policy
 # trade_policy
 # drone_policy
-
 artificial_intelligence_policy = {
 
 	potential = {
@@ -2208,9 +2277,7 @@ robot_pop_policy = {
 	}
 }
 # pre_sapients
-
 # refugees
-
 population_controls = {
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
@@ -2292,7 +2359,6 @@ population_controls = {
 		}
 	}
 }
-
 slavery = {
 	potential = {
 		NOT = { has_ethic = "ethic_gestalt_consciousness" }
