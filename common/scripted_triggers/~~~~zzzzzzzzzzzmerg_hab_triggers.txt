@@ -95,8 +95,8 @@ has_upgraded_capital = {
 				has_building = building_stellarite_control_center
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_palace
-				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_hive_cluster
+				has_building = building_phanon_control_center
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
