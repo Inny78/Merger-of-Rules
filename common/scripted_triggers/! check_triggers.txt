@@ -230,3 +230,8 @@ has_vassals_expanded = {
 has_warship_girls = {
 	has_global_flag = has_wsg_mod
 }
+
+# 
+has_fcss = {
+	has_global_flag = FCSS_has_host
+}

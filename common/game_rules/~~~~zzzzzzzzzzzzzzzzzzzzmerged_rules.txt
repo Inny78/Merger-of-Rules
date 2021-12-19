@@ -247,6 +247,10 @@ species_can_live_on_planet = {
 		NOR = {
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
+			AND = {
+				has_fcss = yes
+				has_trait = trait_cybernetic
+			}
 			# Girls Frontline
 			has_trait = trait_doll
 			AND = {
