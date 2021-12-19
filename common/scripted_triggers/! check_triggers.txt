@@ -64,14 +64,7 @@ has_ethics_bug = {
 
 # Ethics and Civics Classic 1100284147
 has_ethics_classic = {
-	AND = {
-		has_global_flag = cultural_overhaul_active
-  		NOR = {
-			has_global_flag = bugbranch_global_flag
-			has_global_flag = cultural_overhaul_redux_active
-			has_global_flag = ideological_revolution
-  		}
-	}
+	has_global_flag = ethic_civic_classic_active
 }
 
 # Ethics and Civics Redux 2387799348
