@@ -768,8 +768,6 @@ species_can_live_on_planet = {
 			NOR = {
 				has_trait = trait_pc_ammonia_preference
 				has_trait = trait_pc_ll_ammonia_preference
-			    #has_trait = trait_machine_unit
-				#has_trait = trait_mechanical 
 			}
 		}
 	}
@@ -918,8 +916,6 @@ species_can_live_on_planet = {
 			NOR = {
 				has_trait = trait_pc_sulfur_preference
 				has_trait = trait_pc_ll_sulfur_preference
-		    	#has_trait = trait_machine_unit
-				#has_trait = trait_mechanical
 			}
 		}
 	}
@@ -1066,8 +1062,6 @@ species_can_live_on_planet = {
 			NOR = {
 				has_trait = trait_pc_methane_preference
 				has_trait = trait_pc_ll_methane_preference
-			    #has_trait = trait_machine_unit
-				#has_trait = trait_mechanical
 			}
 		} 
 	}
@@ -1214,8 +1208,6 @@ species_can_live_on_planet = {
 			NOR = {
 				has_trait = trait_pc_ash_preference
 				has_trait = trait_pc_ll_ash_preference
-			    #has_trait = trait_machine_unit
-				#has_trait = trait_mechanical 
 			}
 		}
 	}

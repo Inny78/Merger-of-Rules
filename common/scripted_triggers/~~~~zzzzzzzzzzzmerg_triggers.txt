@@ -536,3 +536,25 @@ is_dry = {
 is_cold = {
 	has_climate = cold
 }
+
+# Merging and fixing
+default_endgame_early_start_triggers = {
+	OR = {
+		NOT = {
+			any_country = {
+				OR = {
+					merg_is_fallen_empire = yes
+					merg_is_awakened_fe = yes
+				}
+			}
+		}
+		has_global_flag = no_war_in_heaven
+		AND = {
+			has_global_flag = war_in_heaven_started
+			OR = {
+				has_global_flag = war_in_heaven_ended
+				NOT = { has_global_flag = war_in_heaven_recently_started }
+			}
+		}
+	}
+}
