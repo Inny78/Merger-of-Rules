@@ -848,7 +848,6 @@ diplomatic_stance = {
 
 		potential = {
 			has_utopia = yes
-			has_valid_civic = civic_fanatic_purifiers
 		}
 
 		valid = {
