@@ -556,5 +556,16 @@ default_endgame_early_start_triggers = {
 				NOT = { has_global_flag = war_in_heaven_recently_started }
 			}
 		}
+		# ACOT
+		AND = {
+			has_acot = yes
+			OR = {
+				has_global_flag = acot_dangerous_forbidden
+				NOR = {
+					has_global_flag = acot_war_in_hell_active
+					has_global_flag = active_sofe_crisis
+				}
+			}
+		}
 	}
 }
