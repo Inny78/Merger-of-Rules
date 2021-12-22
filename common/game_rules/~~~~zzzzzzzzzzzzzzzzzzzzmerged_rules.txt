@@ -2330,7 +2330,9 @@ can_species_be_assembled = {
 			}
 			# Plentiful Traditions - Extra Perks
 			else_if = {
-				limit = { root.owner = { has_ascension_perk = ap_total_assimilation } }
+				limit = {
+					root.owner = { has_ascension_perk = ap_total_assimilation }
+				}
 				has_trait = trait_plentiful_traditions_pt_cocoon
 			}
 			# The Dark Art of Necromancy
@@ -2348,16 +2350,8 @@ can_species_be_assembled = {
 				OR = {
 					root = {
 						merg_has_cloning_building = yes
-						OR = {
-							has_anz_cloning = no
-							# ANZ Advanced Cloning
-							AND = {
-								has_anz_cloning = yes
-								NOT = {
-									has_modifier = planet_cloning_limits
-								}
-							}
-						}
+						# ANZ Advanced Cloning
+						NOT = { has_modifier = planet_cloning_limits }
 					}
 					# The DAL Species Mod
 					is_archetype = DATEALIVE
@@ -2369,21 +2363,16 @@ can_species_be_assembled = {
 				}
 			}
 			# Special Colonies Overhaul
-			OR = {
-				has_special_colonies = no
-				AND = {
-					has_special_colonies = yes
-					NAND = {
-						root = { has_modifier = slave_colony }
-						NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
-						not = {
-							root = {
-								owner = {
-									or = {
-										has_valid_civic = civic_slaver_guilds
-										has_valid_civic = civic_indentured_assets
-									}
-								}
+			NAND = {
+				has_special_colonies = yes
+				root = { has_modifier = slave_colony }
+				NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
+				not = {
+					root = {
+						owner = {
+							or = {
+								has_valid_civic = civic_slaver_guilds
+								has_valid_civic = civic_indentured_assets
 							}
 						}
 					}
@@ -2405,14 +2394,11 @@ can_species_be_assembled = {
 			has_trait = trait_doll
 			root.owner = { has_authority = auth_commonwealth }
 		}
-		# Expanded Gestalts
-		AND = {
-			has_expanded_gestalts = yes
-			NAND = {
-				root = { owner = { has_valid_civic = civic_machine_replicators } }
-				has_trait = trait_machine_central
-			}
-		}
+	}
+	# Expanded Gestalts
+	NAND = {
+		root = { owner = { has_valid_civic = civic_machine_replicators } }
+		has_trait = trait_machine_central
 	}
 	# Vanilla
 	has_population_control = {
@@ -3380,13 +3366,9 @@ can_build_branch_office_on_planet = {
 			root = {
 				is_subject = yes
 				OR = {
-					OR = {
-						is_subject_type = subsidiary
-						# Reworked Advanced Ascension
-						is_subject_type = subsidiary2
-					}
-					# Warship Girls R And MIST Species
-					overlord = { has_authority = auth_warshipgirls }
+					is_subject_type = subsidiary
+					# Reworked Advanced Ascension
+					is_subject_type = subsidiary2
 				}
 				overlord = { is_same_value = prevprev.owner }
 			}
@@ -3396,6 +3378,8 @@ can_build_branch_office_on_planet = {
 					is_subject_type = subsidiary
 					# Reworked Advanced Ascension
 					is_subject_type = subsidiary2
+					# Warship Girls R And MIST Species
+					overlord = { has_authority = auth_warshipgirls }
 				}
 				overlord = { is_same_value = root }
 			}
