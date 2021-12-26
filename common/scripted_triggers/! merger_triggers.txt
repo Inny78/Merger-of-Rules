@@ -149,6 +149,8 @@ merg_is_habitat = {
 		uses_district_set = starborn_start
 		# Twinks Atlantean
 		uses_district_set = skypalace
+		# Plentiful Traditions
+		is_planet_class = pc_habitat_robot
 	}
 }
 
