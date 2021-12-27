@@ -91,7 +91,7 @@ ehof_default_country = {
 	}
 }
 
-# Overwriting this for ZOFE and comp mods to use my trigger instead.
+# Overwriting this for ZOFE and comp mods
 is_zofe_compatible = {
 	OR = {
 		is_country_type = default
@@ -310,7 +310,24 @@ kuat_is_defense_galaxy_fleet = {
 	}
 }
 
-# AOT Triggers
+# ACOT
+is_playable_country = {
+	OR = {
+		is_country_type = default
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		# ZOFE
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+		# ACOT
+		is_country_type = eternal_empire
+		is_country_type = original_empire_active
+		# The Empty Vagrant
+		is_country_type = default_ev
+	}
+}
+
+# AOT
 is_memeable_ringworld = {
 	OR = {
 		is_planet_class = pc_ringworld_habitable
@@ -340,26 +357,6 @@ is_memeable_ringworld = {
 		# Warship Girls and MIST species
 		is_planet_class = pc_ringworld_habitable_sh
 		is_planet_class = pc_ringworld_habitable_wsg
-	}
-}
-
-is_memeable_space_habitat = {
-	OR = {
-		is_planet_class = pc_habitat
-		# Planetary Diversity
-		uses_district_set = pdplanethab
-		# Gigastructural Engineering & More
-		is_planet_class = pc_interstellar_habitat
-		# More Events Mod
-		is_planet_class = pc_mem_vazuran_habitat
-		# Acquisition of Technology
-		uses_district_set = dm_habitat
-		uses_district_set = ae_habitat
-		uses_district_set = sigma_habitat
-		# Starborn: Improved Voidtouched
-		uses_district_set = starborn_start
-		# Twinks Atlantean
-		uses_district_set = skypalace
 	}
 }
 
@@ -505,5 +502,118 @@ is_habitat_wg = {
 		uses_district_set = skypalace
 		# Plentiful Traditions
 		is_planet_class = pc_habitat_robot
+	}
+}
+
+# Warship Girls R and MIST Species
+is_default_and_fallen_country = {
+	OR = {
+		is_country_type = default
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		# ZOFE
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+		# The Empty Vagrant
+		is_country_type = default_ev
+		is_country_type = fallen_empire_ev
+		is_country_type = awakened_fallen_empire_ev
+		# Human Fallen Empire
+		is_country_type = human_fallen_empire
+		is_country_type = hfe_pirate
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_fallen_empire
+		is_country_type = kuat_awakened_fallen_empire
+		is_country_type = awakened_return_kuat_empire
+		# A Deadly Tempest
+		is_country_type = awakened_gate_builders
+	}
+}
+
+is_default_country_wg = {
+	OR = {
+		is_country_type = default
+		is_country_type = default_ev
+		# ZOFE
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+	}
+}
+
+has_active_wg_foundry_building = {
+	OR = {
+		has_active_building = building_foundry_1 
+		has_active_building = building_foundry_2 
+		has_active_building = building_foundry_3
+		has_active_building = building_nano_forge
+		# Warship Girls R and MIST Species
+		has_active_building = building_sep_foundry
+		has_active_building = building_sep_foundry2
+		has_active_building = building_wsg_foundry
+		has_active_building = building_gray_nano_foundry
+		has_active_building = building_gray_nano_foundry2
+		# ACOT
+		has_active_building = building_fe_alloy_forge
+		has_active_building = building_ae_alloy_forge
+		has_active_building = building_ae_nano_forge
+		# AOT
+		has_active_building = building_fe_nano_forge
+		has_active_building = building_phanon_nano_forge
+		has_active_building = building_phanon_alloy_forge
+		has_active_building = building_stellarite_nano_forge
+		has_active_building = building_stellarite_alloy_forge
+	}
+}
+
+has_active_wg_foundry_building_lv_low = {
+	OR = {
+		has_active_building = building_foundry_1 
+		has_active_building = building_foundry_2
+		# Warship Girls R and MIST Species
+		has_active_building = building_sep_foundry
+		has_active_building = building_wsg_foundry
+		has_active_building = building_gray_nano_foundry
+	}
+}
+
+has_active_wg_foundry_building_lv_high = {
+	OR = {
+		has_active_building = building_foundry_3
+		has_active_building = building_nano_forge
+		# Warship Girls R and MIST Species
+		has_active_building = building_sep_foundry2
+		has_active_building = building_wsg_foundry
+		has_active_building = building_gray_nano_foundry2
+		# ACOT
+		has_active_building = building_fe_alloy_forge
+		has_active_building = building_ae_alloy_forge
+		# AOT
+		has_active_building = building_fe_nano_forge
+		has_active_building = building_phanon_nano_forge
+		has_active_building = building_phanon_alloy_forge
+		has_active_building = building_stellarite_nano_forge
+		has_active_building = building_stellarite_alloy_forge
+	}
+}
+
+has_active_wg_factory_building = {
+	OR = {
+		has_active_building = building_factory_1
+		has_active_building = building_factory_2
+		has_active_building = building_factory_3
+		has_active_building = building_affluence_center
+		# Warship Girls R and MIST Species
+		has_active_building = building_sep_foundry
+		has_active_building = building_gray_nano_factory
+		# ACOT
+		has_active_building = building_fe_factory
+		has_active_building = building_ae_factory
+		has_active_building = building_ae_affluence_center
+		# AOT
+		has_active_building = building_fe_affluence_center
+		has_active_building = building_phanon_affluence_center
+		has_active_building = building_phanon_civilian_factory
+		has_active_building = building_stellarite_affluence_center
+		has_active_building = building_stellarite_civilian_factory
 	}
 }

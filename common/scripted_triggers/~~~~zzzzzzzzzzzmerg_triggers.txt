@@ -150,7 +150,7 @@ is_organic_species = {
 			is_archetype = KANSEN
 			# Empire of Eeveelution
 			is_archetype = POKEMON
-			# AshArms Distant Future 2200
+			# AshArms Aquarius history
 			is_archetype = Dolls
 			# Expanded Traits, Civics, Pops, and More
 			is_archetype = HUMANOID
@@ -192,6 +192,8 @@ is_organic_species = {
                     has_trait = trait_holofrixigram_3
                 }
             }
+			# Cryogenesis Unofficial Species Pack
+			is_archetype = sm_ELEMENTAL
 		}
 	}
 }
