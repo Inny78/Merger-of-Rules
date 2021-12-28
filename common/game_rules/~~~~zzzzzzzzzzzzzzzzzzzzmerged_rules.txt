@@ -3216,7 +3216,24 @@ should_force_decline_species = {
 	# Rule rewritten by Rodahtnov
 	if = {
 		# Infertile Clone Army pops should decline if in Country that can't have Vats, or there is a Vat shortage.
-		limit = { from.owner = { has_origin = origin_clone_army } }
+		limit = {
+			from.owner = {
+                OR = {
+                    has_origin = origin_clone_army
+                    AND = {
+                        NOT = {
+                            has_origin = origin_clone_army
+                        }
+                        any_owned_species = {
+                            OR = {
+                                has_trait = trait_clone_soldier_infertile
+                                has_trait = trait_clone_soldier_infertile_full_potential
+                            }
+                        }
+                    }
+                }
+			}
+		}
 		custom_tooltip = {
 			success_text = CLONE_ARMY_FORCE_DECLINE
 			OR = {
@@ -3243,7 +3260,7 @@ should_force_decline_species = {
 		}
 	}
 	# Diagraphers Trait Mod
-	else_if = {
+	if = {
 		limit = {
 			has_trait = trait_sterile
 		}
@@ -3255,7 +3272,7 @@ should_force_decline_species = {
 			}
 		}
 	}
-	else_if = {
+	if = {
 		limit = { has_trait = trait_exotic_gas_dependency }
 		custom_tooltip = {
 			success_text = needs_exotic_gases
@@ -3265,7 +3282,7 @@ should_force_decline_species = {
 			}
 		}
 	}
-	else_if = {
+	if = {
 		limit = { has_trait = trait_delicate }
 		custom_tooltip = {
 			success_text = delicate_enslaved
@@ -3277,7 +3294,7 @@ should_force_decline_species = {
 		}
 	}
 	# Expanded Traits, Civics, Pops, and More
-	else_if = {
+	if = {
 		limit = { has_trait = trait_tree_caretaker }
 		custom_tooltip = {
 			success_text = TREEFOLK_FORCE_DECLINE
@@ -3291,7 +3308,7 @@ should_force_decline_species = {
 		}
 	}
 	# Cryogenesis Unofficial Species Pack
-	else_if = {
+	if = {
 		limit = { 
 			from.owner = {
 				has_origin = origin_sm_cryogenesis
