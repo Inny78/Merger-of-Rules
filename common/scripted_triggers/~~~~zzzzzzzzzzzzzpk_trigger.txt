@@ -337,12 +337,7 @@ can_destroy_planet_with_PLANET_KILLER_DELUGE = {
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
-		NOR = {
-			is_planet_class = pc_shielded
-			is_planet_class = pc_ringworld_shielded
-			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
-		}
+		NOT = { has_building = building_phanon_psg } # AOT
 	}
 	custom_tooltip = {
 		fail_text = is_not_oceanic
@@ -1974,12 +1969,7 @@ can_destroy_planet_with_PLANET_KILLER_SM_CRYORAY = {
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
-		NOR = {
-			is_planet_class = pc_shielded
-			is_planet_class = pc_ringworld_shielded
-			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
-		}
+		NOT = { has_building = building_phanon_psg } # AOT
 	}
 	custom_tooltip = {
 		NOT = { is_planet_class = pc_sm_cryoworld }
