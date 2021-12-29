@@ -498,10 +498,16 @@ diplomatic_stance = {
 			is_gestalt = no
 			# Ethics and Civics Alternative - Redux / Classic / Bugged
 			OR = {
-				is_megacorp = yes
-				is_capitalism = yes
+				has_any_ethics_mod = no
+				AND = {
+					has_any_ethics_mod = yes
+					OR = {
+						is_megacorp = yes
+						is_capitalism = yes
+					}
+					NOR = { has_valid_civic = civic_inwards_perfection }
+				}
 			}
-			NOR = { has_valid_civic = civic_inwards_perfection }
 		}
 
 		valid = {
@@ -540,8 +546,7 @@ diplomatic_stance = {
 				OR = {
 					has_valid_civic = civic_corporate_dominion
 					# Ethics and Civics Alternative - Redux
-					has_ethic = ethic_capitalism
-					has_ethic = ethic_fanatic_capitalism
+					is_capitalism = yes
 					# Expanded Traits, Civics, Pops, and More
 					has_valid_civic = civic_corporate_dominion
 					has_valid_civic = civic_merchant_guilds

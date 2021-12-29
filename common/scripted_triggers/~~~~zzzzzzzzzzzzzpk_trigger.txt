@@ -77,7 +77,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 			}
 			OR = {
 				# Rewriting this part for max compatibility, inspired by Planetary Diversity
-				habitable_planet = yes
+				colonizable_planet = yes
 				is_artificial = yes
 				merg_is_crackable_planet = yes
 			}
@@ -1625,8 +1625,7 @@ can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 				}
 			}
 			OR = {
-				habitable_planet = yes
-				is_artificial = yes
+				colonizable_planet = yes
 				merg_is_crackable_planet = yes
 			}
 		}
@@ -1717,8 +1716,7 @@ can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
 			}
 			OR = {
 				# Rewriting this part for max compatibility, inspired by Planetary Diversity
-				habitable_planet = yes
-				is_artificial = yes
+				colonizable_planet = yes
 				merg_is_crackable_planet = yes
 			}
 		}
@@ -1809,8 +1807,7 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 			}
 			OR = {
 				# Rewriting this part for max compatibility, inspired by Planetary Diversity
-				habitable_planet = yes
-				is_artificial = yes
+				colonizable_planet = yes
 				merg_is_crackable_planet = yes
 			}
 		}
@@ -1947,8 +1944,7 @@ can_destroy_planet_with_PLANET_KILLER_HARVESTER = {
 				}
 				OR = {
 					# Rewriting this part for max compatibility, inspired by Planetary Diversity
-					habitable_planet = yes
-					is_artificial = yes
+					colonizable_planet = yes
 					merg_is_crackable_planet = yes
 				}
 			}
