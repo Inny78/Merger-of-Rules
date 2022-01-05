@@ -2091,6 +2091,8 @@ merg_is_forbidden_target = {
 		# APSR
 		is_planet_class = pc_apsr_ancient
 		is_planet_class = pc_apsr_unique
+		# Gigastructural Engineering & More
+		has_planet_flag = cant_target_this_planet
 	}
 }
 

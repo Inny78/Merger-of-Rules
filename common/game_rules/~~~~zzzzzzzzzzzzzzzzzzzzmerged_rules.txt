@@ -3217,6 +3217,7 @@ should_force_decline_species = {
 	if = {
 		# Infertile Clone Army pops should decline if in Country that can't have Vats, or there is a Vat shortage.
 		limit = {
+			exists = owner
 			from.owner = {
                 OR = {
                     has_origin = origin_clone_army
@@ -3263,6 +3264,7 @@ should_force_decline_species = {
 	if = {
 		limit = {
 			has_trait = trait_sterile
+			from = { exists = owner }
 		}
 		custom_tooltip = {
 			success_text = sterile_force_decline
@@ -3273,7 +3275,10 @@ should_force_decline_species = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_exotic_gas_dependency }
+		limit = {
+			has_trait = trait_exotic_gas_dependency
+			from = { exists = owner }
+		}
 		custom_tooltip = {
 			success_text = needs_exotic_gases
 			has_trait = trait_exotic_gas_dependency
@@ -3283,7 +3288,10 @@ should_force_decline_species = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_delicate }
+		limit = {
+			has_trait = trait_delicate
+			from = { exists = owner }
+		}
 		custom_tooltip = {
 			success_text = delicate_enslaved
 			has_trait = trait_delicate
@@ -3295,7 +3303,10 @@ should_force_decline_species = {
 	}
 	# Expanded Traits, Civics, Pops, and More
 	if = {
-		limit = { has_trait = trait_tree_caretaker }
+		limit = {
+			has_trait = trait_tree_caretaker
+			from = { exists = owner }
+		}
 		custom_tooltip = {
 			success_text = TREEFOLK_FORCE_DECLINE
 			has_trait = trait_tree_caretaker
@@ -3310,8 +3321,11 @@ should_force_decline_species = {
 	# Cryogenesis Unofficial Species Pack
 	if = {
 		limit = { 
-			from.owner = {
-				has_origin = origin_sm_cryogenesis
+			from = {
+				exists = owner
+				owner = {
+					has_origin = origin_sm_cryogenesis
+				}
 			}
 		}
 		custom_tooltip = { # Cryospecies pack block
@@ -4072,6 +4086,8 @@ can_fill_specialist_job = {
 			has_trait = trait_subsapient_form
 			# Expanded Traits, Civics, Pops, and More
 			has_trait = trait_tree_caretaker
+			# Ethics and Civics Alternative - Redux
+			has_trait = trait_slave_gene
 		}
 		OR = {
 			NOT = { has_trait = trait_mechanical }
@@ -4139,6 +4155,9 @@ can_fill_ruler_job = {
 				has_trait = trait_nerve_stapled
 				# Diagraphers Trait mod
 				has_trait = trait_subsapient_form
+				# Ethics and Civics Alternative - Redux
+				has_trait = trait_symbiotic
+				has_trait = trait_slave_gene
 			}
 		}
 	}
@@ -4171,6 +4190,9 @@ can_fill_ruler_job = {
 				has_trait = trait_subsapient_form
 				# Expanded Traits, Civics, Pops, and More
 				has_trait = trait_tree_caretaker
+				# Ethics and Civics Alternative - Redux
+				has_trait = trait_symbiotic
+				has_trait = trait_slave_gene
 			}
 			OR = {
 				NOT = { has_trait = trait_mechanical }
