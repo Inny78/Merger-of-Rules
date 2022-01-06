@@ -3391,16 +3391,13 @@ can_build_branch_offices = {
 can_support_branch_offices = {
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_FALLEN_EMPIRES
-		AND = {
-			has_more_authorities = no
-			NOR = {
-				merg_is_fallen_empire = yes
-				merg_is_awakened_fe = yes
-				# Warship Girls R And MIST Species
-				has_authority = auth_azur_dictatorial
-				# Girls Frontline
-				has_valid_civic = civic_gk
-			}
+		NOR = {
+			merg_is_fallen_empire = yes
+			merg_is_awakened_fe = yes
+			# Warship Girls R And MIST Species
+			has_authority = auth_azur_dictatorial
+			# Girls Frontline
+			has_valid_civic = civic_gk
 		}
 	}
 	custom_tooltip = {
@@ -3664,12 +3661,15 @@ can_crossbreed_species_on_planet = {
 		count >= 2
 	}
 	# Warship Girls R And MIST Species
-	NAND = {
-		has_warship_girls = yes
-		any_owned_species = { has_wg_traits = yes }
+	any_owned_species = {
+		NOR = {
+			is_archetype = WARSHIPGIRL
+			is_archetype = SHENHAI
+			is_archetype = UNITED_FLEET 
+		}
 	}
 	# Red Light Demeanor
-	NOT = { has_country_flag = redlight_no_crossbreeding }
+	NOT = { owner = { has_country_flag = redlight_no_crossbreeding } }
 }
 
 # This = species one
