@@ -70,11 +70,6 @@ merg_is_awakened_fe = {
 	}
 }
 
-# If I forget that this is not a thing, then it will be a thing anyway
-merg_is_regular_empire = {
-	is_regular_empire = yes
-}
-
 # List of all habitable ringworld sections
 merg_is_hab_ringworld = {
 	OR = {
@@ -128,6 +123,12 @@ merg_has_cloning_building = {
 		# Ethics and Civics Bug Branch
 		has_building = building_evolution_monastery
 		has_building = building_evolution_monastery_two
+		# ACOT
+		has_building = building_fe_clone_vats
+		has_building = building_ae_clone_vats
+		# AOT
+		has_building = building_stellarite_clone_vats
+		has_building = building_phanon_clone_vats
 	}
 }
 

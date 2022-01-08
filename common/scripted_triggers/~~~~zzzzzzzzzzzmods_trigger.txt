@@ -193,6 +193,7 @@ has_gene_clinic = {
 		has_building = building_ae_hospital
 		# AOT
 		has_building = building_stellarite_hospital
+		has_building = building_phanon_hospital
 	}
 }
 
@@ -615,5 +616,40 @@ has_active_wg_factory_building = {
 		has_active_building = building_phanon_civilian_factory
 		has_active_building = building_stellarite_affluence_center
 		has_active_building = building_stellarite_civilian_factory
+	}
+}
+
+# Ancient Empire
+ag_is_gateway_megastructure = {
+	OR = {
+		is_megastructure_type = gateway_0
+		is_megastructure_type = gateway_ruined
+		is_megastructure_type = gateway_restored
+		is_megastructure_type = gateway_final
+		is_megastructure_type = lgate_base
+		# Ancient Empire
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_0
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_1
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_2
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_3
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_4
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_5
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_opening
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_opening_blue
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_closing
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_damaged
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_damaged_alt
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_closed
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_closed_alt
+		# Shadowgate
+		is_megastructure_type = shadowrift_a
+		is_megastructure_type = shadowrift_b
+		is_megastructure_type = shadowrift_c
+		is_megastructure_type = shadowrift_d
+		is_megastructure_type = shadowrift_e
+		is_megastructure_type = shadowrift_db
+		# ACOT
+		is_megastructure_type = sofe_inner_gate
+		is_megastructure_type = sofe_outer_gate
 	}
 }
