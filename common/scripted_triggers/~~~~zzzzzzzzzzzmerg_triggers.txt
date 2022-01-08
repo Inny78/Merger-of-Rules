@@ -108,6 +108,10 @@ is_crisis_faction = {
 	    is_country_type = original_empire
 		# Solar Storm
 		is_country_type = abyssal_host_invaders_type
+		# Shroud Rising
+		is_country_type = shroud_cult
+		is_country_type = shroud_entities
+		is_country_type = shroud_horrors
 	}
 }
 

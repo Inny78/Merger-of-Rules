@@ -2485,6 +2485,9 @@ can_orbital_bombard = {
 				is_country_type = abyssal_host_invaders_type
 				# Human Fallen Empires
 				is_country_type = human_fallen_empire
+				# Shroud Rising
+				is_country_type = shroud_horrors
+				is_country_type = shroud_cult
 			}
 		}
 		root.OWNER = {
@@ -2543,6 +2546,9 @@ can_orbital_bombard = {
 				is_country_type = abyssal_host_invaders_type
 				# Human Fallen Empires
 				is_country_type = human_fallen_empire
+				# Shroud Rising
+				is_country_type = shroud_horrors
+				is_country_type = shroud_cult
 			}
 		}
 		AND = {

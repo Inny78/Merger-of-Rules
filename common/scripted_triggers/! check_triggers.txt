@@ -189,6 +189,11 @@ has_shadowgate = {
 	has_global_flag = shadowgate_mod_active
 }
 
+# Shroud Rising
+has_shroud_rising = {
+	has_global_flag = shroud_rising_active
+}
+
 # Some Events of Outside Cluster
 has_seooc = {
 	has_global_flag = has_nsc_active
