@@ -1237,7 +1237,7 @@ can_generate_leader_from_pop = {
 		has_trait = trait_working_machine
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
-		# Ethics & Civics: Bug Branch
+		# Ethics & Civics: Bug Branch/Redux
 		has_trait = trait_slave_gene
 		# Expanded Events / Expanded Traits, Civics, Pops, and More
 		has_trait = trait_memorex_comatos
