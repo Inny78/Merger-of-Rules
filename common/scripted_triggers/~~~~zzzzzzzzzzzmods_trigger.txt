@@ -122,6 +122,8 @@ giga_habitable_structure = {
 		uses_district_set = acot_giga_void_sphere
 		uses_district_set = giga_alderson
 		is_planet_class = pc_pouchkinn_black_hole
+		# AOT
+		uses_district_set = phanon_macripp
 	}
 }
 
@@ -183,6 +185,7 @@ tc_element_shard_candidate = {
 	}
 }
 
+# Starborn
 # Expanding Starborn trigger with ACOT/AOT gene clinics
 has_gene_clinic = {
 	OR = {
@@ -307,6 +310,10 @@ kuat_is_defense_galaxy_fleet = {
 		    is_country_type = original_empire
 			# Solar Storm
 			is_country_type = abyssal_host_invaders_type
+			# Shroud Rising
+			is_country_type = shroud_cult
+			is_country_type = shroud_entities
+			is_country_type = shroud_horrors
 		}
 	}
 }

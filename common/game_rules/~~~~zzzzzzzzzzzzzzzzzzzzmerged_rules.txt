@@ -3211,7 +3211,26 @@ pop_generates_crime = {
 # can_pops_assemble_on_planet
 # can_pops_decline_on_planet
 # can_force_grow_on_planet
-# can_force_decline_on_planet
+
+# This = planet
+# Root = country
+can_force_decline_on_planet = {
+	custom_tooltip = {
+		fail_text = FORCE_DECLINE_NEEDS_POP_CONTROLS
+		exists = owner
+		owner = { NOT = { has_policy_flag = population_controls_not_allowed } }
+	}
+	custom_tooltip = {
+		fail_text = FORCED_DECLINE_ALREADY_PURGING
+		NOT = {
+			any_owned_species = {
+				has_citizenship_type = { type = citizenship_purge country = root }
+				NOT = { has_purge_type = { country = root type = purge_neutering } }
+			}
+		}
+	}
+}
+
 # can_force_decline_species
 
 ## If this returns true, the species will be set to decline even if it is not being purged
