@@ -1,0 +1,10 @@
+# Dummy personalities - to be overwritten by their respective mods.
+egalitarian_imperialists = { behaviour = { } allow = { always = no } }
+infested_hive_mind = { behaviour = { } allow = { always = no } }
+open_hive_mind = { behaviour = { } allow = { always = no } }
+open_machine_intelligence = { behaviour = { } allow = { always = no } }
+principled_rogues = { behaviour = { } allow = { always = no } }
+technological_warriors = { behaviour = { } allow = { always = no } }
+vb_ambitious_unifiers = { behaviour = { } allow = { always = no } }
+vb_keepers_of_peace = { behaviour = { } allow = { always = no } }
+vb_sneering_technocrats = { behaviour = { } allow = { always = no } }

@@ -1,0 +1,10 @@
+# Dummy origins - to be overwritten by their respective mods.
+origin_ev_both_choosen = { is_origin = yes potential = { always = no } }
+origin_hive_overmind = { is_origin = yes potential = { always = no } }
+origin_hive_queen = { is_origin = yes potential = { always = no } }
+origin_holofrixit = { is_origin = yes potential = { always = no } }
+origin_militarist = { is_origin = yes potential = { always = no } }
+origin_pd_tree_of_life = { is_origin = yes potential = { always = no } }
+origin_sacred_tree = { is_origin = yes potential = { always = no } }
+origin_sm_cryogenesis = { is_origin = yes potential = { always = no } }
+origin_vb_psi_soul_eater = { is_origin = yes potential = { always = no } }

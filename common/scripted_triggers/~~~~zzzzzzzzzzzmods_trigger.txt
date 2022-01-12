@@ -308,6 +308,10 @@ kuat_is_defense_galaxy_fleet = {
 			is_country_type = dormant_aeternum
 			# ACOT
 		    is_country_type = original_empire
+			# Ancient Empire
+			is_country_type = ag_ancient_gamma_guardian
+			is_country_type = ag_zeta_crisis_country
+			is_country_type = ag_ancient_primitive_crisis
 			# Solar Storm
 			is_country_type = abyssal_host_invaders_type
 			# Shroud Rising

@@ -1005,14 +1005,14 @@ war_philosophy = {
 				# Expanded Traits, Civics, Pops, and More
 				has_valid_civic = civic_closed_collective
 				has_valid_civic = civic_closed_network
-				has_valid_civic = "civic_harm_hive"
-				has_valid_civic = "civic_harm_machine"
+				has_valid_civic = civic_harm_hive
+				has_valid_civic = civic_harm_machine
 				AND = {
 					has_expanded_pops = yes
 					has_ai_personality = harmonious_hierarchy
 				}
 				# Expanded Gestalts
-				has_valid_civic = "civic_mutualistic_behavior"
+				has_valid_civic = civic_mutualistic_behavior
 			}
 		}
 
@@ -1422,10 +1422,10 @@ orbital_bombardment = {
 			is_pacifist = no
 			NOR = {
 				# Ethics and Civics Classic/Redux
-				has_valid_civic = "civic_xeno_militarist"
+				has_valid_civic = civic_xeno_militarist
 				# Ethics & Civics: Bug Branch
-				has_valid_civic = "civic_interventionalist"
-				has_valid_civic = "civic_interventionalist_corpo"
+				has_valid_civic = civic_interventionalist
+				has_valid_civic = civic_interventionalist_corpo
 				# Expanded Gestalts
 				has_valid_civic = civic_mutualistic_behavior
 			}
@@ -1562,7 +1562,7 @@ orbital_bombardment = {
 				# Ethics and Civics Classic
 				is_green = yes
 				# Ethics and Civics Alternative - Redux
-				has_valid_civic = "civic_xeno_militarist"
+				has_valid_civic = civic_xeno_militarist
 			}
 		}
 	}

@@ -2478,9 +2478,9 @@ can_orbital_bombard = {
 				is_country_type = awakened_return_kuat_empire
 				# Gigastructural Engineering & More
 				is_country_type = katzenartig_imperium
-				is_country_type = compound_empire
+				# is_country_type = compound_empire
 				# LEX
-				is_country_type = mem_ancestor_guardian
+				# is_country_type = mem_ancestor_guardian
 				# Solar Storm
 				is_country_type = abyssal_host_invaders_type
 				# Human Fallen Empires
@@ -2537,11 +2537,11 @@ can_orbital_bombard = {
 				# Gigastructural Engineering & More
 				is_country_type = katzenartig_imperium
 				is_country_type = acot_crazed_stellarite
-				is_country_type = compound_empire
+				# is_country_type = compound_empire
 				# The Empty Vagrant
 				is_country_type = default_ev
 				# LEX
-				is_country_type = mem_ancestor_guardian
+				# is_country_type = mem_ancestor_guardian
 				# Solar Storm
 				is_country_type = abyssal_host_invaders_type
 				# Human Fallen Empires
@@ -3635,7 +3635,6 @@ can_build_branch_office_on_planet = {
 	# More Corportate Authorities
 	# principled rogues won't build branch offices in countries they like
 	hidden_trigger = {
-		# has_global_flag = using_mod_more_corporate_authorities
 		OR = {
 			NOT = {
 				root = {

@@ -1,0 +1,15 @@
+# Dummy subjects - to be overwritten by their respective mods.
+banished_ascendancy = { potential = { always = no } }
+charter = { potential = { always = no } }
+duchy = { potential = { always = no } }
+fe_auxiliary = { potential = { always = no } }
+fe_clan_member = { potential = { always = no } }
+fe_demilitarized_state = { potential = { always = no } }
+pacified_race = { potential = { always = no } }
+promising_race = { potential = { always = no } }
+fe_symbiote = { potential = { always = no } }
+fe_union_state = { potential = { always = no } }
+object_use = { potential = { always = no } }
+scion_auxiliary = { potential = { always = no } }
+scion_signatory = { potential = { always = no } }
+subsidiary2 = { potential = { always = no } }
