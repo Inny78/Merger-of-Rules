@@ -10,6 +10,8 @@ promising_race = { potential = { always = no } }
 fe_symbiote = { potential = { always = no } }
 fe_union_state = { potential = { always = no } }
 object_use = { potential = { always = no } }
+origin_banished_ascendancy = { potential = { always = no } }
+origin_protectorate = { potential = { always = no } }
 scion_auxiliary = { potential = { always = no } }
 scion_signatory = { potential = { always = no } }
 subsidiary2 = { potential = { always = no } }

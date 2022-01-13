@@ -1,5 +1,10 @@
 # Dummy countries - to be overwritten by their respective mods.
+ag_can_be_orbital_bombardment_country = { always = no }
+ag_can_do_orbital_bombardment_country = { always = no }
 can_fill_holosphere_ruler_job = { always = no }
+cohesive_system = { always = no }
+everchanging_system = { always = no }
+katzen_jump_blocked_system = { always = no }
 has_apsr_modifiers = { always = no }
 has_artificial_wombs = { always = no }
 has_reproductive_politics = { always = no }
@@ -8,8 +13,10 @@ hfe_trigger_is_human_fallen = { always = no }
 hfe_trigger_unemployed_auto_migrate = { always = no }
 is_civic_materialist = { always = no }
 is_civic_militarist = { always = no }
+is_khan_country_type = { always = no }
 is_spy_empire = { always = no }
 is_xenophobic_isolationists = { always = no }
 prob_forced_armageddon_bombardment = { always = no }
 traits_restrict_specialist_jobs = { always = no }
 traits_restrict_worker_jobs = { always = no }
+urmazin_system = { always = no }
