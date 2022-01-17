@@ -1,34 +1,34 @@
 
-acot_precursor_colossus_base = { entity = "" possible = { always = no } }
-acot_precursor_colossus_stage_two = { entity = "" possible = { always = no } }
-acot_amerigo = { entity = "" possible = { always = no } }
-acot_amerigo_ae = { entity = "" possible = { always = no } }
-acot_amerigo_se = { entity = "" possible = { always = no } }
-acot_amerigo_oe = { entity = "" possible = { always = no } }
-acot_phanon_master_reactor_sphere = { entity = "" possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_0 = { entity = "" possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_1 = { entity = "" possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_2 = { entity = "" possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_3 = { entity = "" possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_4 = { entity = "" possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_5 = { entity = "" possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_opening = { entity = "" possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_opening_blue = { entity = "" possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_closing = { entity = "" possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_damaged = { entity = "" possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_damaged_alt = { entity = "" possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_closed = { entity = "" possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_closed_alt = { entity = "" possible = { always = no } }
-shadowrift_a = { entity = "" possible = { always = no } }
-shadowrift_b = { entity = "" possible = { always = no } }
-shadowrift_c = { entity = "" possible = { always = no } }
-shadowrift_d = { entity = "" possible = { always = no } }
-shadowrift_e = { entity = "" possible = { always = no } }
-shadowrift_db = { entity = "" possible = { always = no } }
-sofe_inner_gate = { entity = "" possible = { always = no } }
-sofe_omega_spy_orb_center = { entity = "" possible = { always = no } }
-sofe_outer_gate = { entity = "" possible = { always = no } }
-the_vat_1 = { entity = "" possible = { always = no } }
-the_vat_2 = { entity = "" possible = { always = no } }
-the_vat_3 = { entity = "" possible = { always = no } }
-the_vat_4 = { entity = "" possible = { always = no } }
+acot_precursor_colossus_base = { entity = "" potential = { always = no } possible = { always = no } }
+acot_precursor_colossus_stage_two = { entity = "" potential = { always = no } possible = { always = no } }
+acot_amerigo = { entity = "" potential = { always = no } possible = { always = no } }
+acot_amerigo_ae = { entity = "" potential = { always = no } possible = { always = no } }
+acot_amerigo_se = { entity = "" potential = { always = no } possible = { always = no } }
+acot_amerigo_oe = { entity = "" potential = { always = no } possible = { always = no } }
+acot_phanon_master_reactor_sphere = { entity = "" potential = { always = no } possible = { always = no } }
+ag_ancient_eta_gateway_megastructure_0 = { entity = "" potential = { always = no } possible = { always = no } }
+ag_ancient_eta_gateway_megastructure_1 = { entity = "" potential = { always = no } possible = { always = no } }
+ag_ancient_eta_gateway_megastructure_2 = { entity = "" potential = { always = no } possible = { always = no } }
+ag_ancient_eta_gateway_megastructure_3 = { entity = "" potential = { always = no } possible = { always = no } }
+ag_ancient_eta_gateway_megastructure_4 = { entity = "" potential = { always = no } possible = { always = no } }
+ag_ancient_eta_gateway_megastructure_5 = { entity = "" potential = { always = no } possible = { always = no } }
+ag_ancient_eta_gateway_megastructure_opening = { entity = "" potential = { always = no } possible = { always = no } }
+ag_ancient_eta_gateway_megastructure_opening_blue = { entity = "" potential = { always = no } possible = { always = no } }
+ag_ancient_eta_gateway_megastructure_closing = { entity = "" potential = { always = no } possible = { always = no } }
+ag_ancient_eta_gateway_megastructure_damaged = { entity = "" potential = { always = no } possible = { always = no } }
+ag_ancient_eta_gateway_megastructure_damaged_alt = { entity = "" potential = { always = no } possible = { always = no } }
+ag_ancient_eta_gateway_megastructure_closed = { entity = "" potential = { always = no } possible = { always = no } }
+ag_ancient_eta_gateway_megastructure_closed_alt = { entity = "" potential = { always = no } possible = { always = no } }
+shadowrift_a = { entity = "" potential = { always = no } possible = { always = no } }
+shadowrift_b = { entity = "" potential = { always = no } possible = { always = no } }
+shadowrift_c = { entity = "" potential = { always = no } possible = { always = no } }
+shadowrift_d = { entity = "" potential = { always = no } possible = { always = no } }
+shadowrift_e = { entity = "" potential = { always = no } possible = { always = no } }
+shadowrift_db = { entity = "" potential = { always = no } possible = { always = no } }
+sofe_inner_gate = { entity = "" potential = { always = no } possible = { always = no } }
+sofe_omega_spy_orb_center = { entity = "" potential = { always = no } possible = { always = no } }
+sofe_outer_gate = { entity = "" potential = { always = no } possible = { always = no } }
+the_vat_1 = { entity = "" potential = { always = no } possible = { always = no } }
+the_vat_2 = { entity = "" potential = { always = no } possible = { always = no } }
+the_vat_3 = { entity = "" potential = { always = no } possible = { always = no } }
+the_vat_4 = { entity = "" potential = { always = no } possible = { always = no } }
