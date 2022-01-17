@@ -701,5 +701,17 @@ check_subject_join_wars = {
 		is_subject_type = machine_follower
 		is_subject_type = perfect_vassal
 		is_subject_type = space_dimestication
+		# ACOT
+		is_subject_type = origin_protectorate
+		is_subject_type = origin_banished_ascendancy
+		# Human Fallen Empire
+		is_subject_type = hfe_vassal_future
+		is_subject_type = hfe_vassal_egypt
+		# The Empty Vagrant
+		is_subject_type = ev_vassal
+		is_subject_type = ev_protect
+		is_subject_type = ev_satrapy
+		# Gigastructural Engineering & More
+		is_subject_type = katzprotektorat
 	}
 }
