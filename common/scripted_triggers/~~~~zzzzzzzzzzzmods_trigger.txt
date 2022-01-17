@@ -664,3 +664,42 @@ ag_is_gateway_megastructure = {
 		is_megastructure_type = sofe_outer_gate
 	}
 }
+
+# Viable Feudalism and Imperialism - Empire Federation
+check_subject_join_wars = {
+	OR = {
+		is_subject_type = tributary
+		is_subject_type = protectorate
+		# Vassals Expanded and Reworked
+		is_subject_type = verautonomous
+		is_subject_type = verbeneficiary
+		is_subject_type = verserf
+		is_subject_type = vertributary
+		# Exalted Domination
+		is_subject_type = exalted_subject_cultural_conservation
+		is_subject_type = exalted_subject_exarchate
+		is_subject_type = exalted_subject_xenoharvest
+		is_subject_type = exalted_subject_special_administrative_region
+		is_subject_type = exalted_subject_automated_assembler
+		is_subject_type = exalted_subject_remote_archive
+		is_subject_type = exalted_subject_pet
+		is_subject_type = exalted_subject_satellite
+		is_subject_type = exalted_subject_signatory
+		is_subject_type = exalted_subject_thrall
+		# Fatal Foundations Story Pack
+		is_subject_type = plague_vassal
+		# Nirvana Empire Project
+		is_subject_type = nirvana_fallen_servent
+		# The Zenith of Fallen Empires
+		is_subject_type = scion
+		is_subject_type = fe_clan_member
+		is_subject_type = fe_demilitarized_state
+		is_subject_type = fe_puppet_state
+		is_subject_type = fe_symbiote
+		is_subject_type = fe_auxiliary
+		# Unique Ascension Perks
+		is_subject_type = machine_follower
+		is_subject_type = perfect_vassal
+		is_subject_type = space_dimestication
+	}
+}

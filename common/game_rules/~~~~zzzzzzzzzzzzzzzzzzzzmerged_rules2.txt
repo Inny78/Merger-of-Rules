@@ -2026,7 +2026,7 @@ should_force_decline_species = {
 	if = {
 		# Infertile Clone Army pops should decline if in Country that can't have Vats, or there is a Vat shortage.
 		limit = {
-			exists = owner
+			exists = from.owner
 			from.owner = {
                 OR = {
                     has_origin = origin_clone_army

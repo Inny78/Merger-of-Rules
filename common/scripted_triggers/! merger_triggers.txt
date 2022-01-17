@@ -129,6 +129,9 @@ merg_has_cloning_building = {
 		# AOT
 		has_building = building_stellarite_clone_vats
 		has_building = building_phanon_clone_vats
+		# The Dark Arts of Necromancy
+		has_building = building_house_of_the_fleshsculpter
+		has_building = building_summoner_site
 	}
 }
 
@@ -194,4 +197,27 @@ is_green = {
  		has_ethic = ethic_fanatic_green
  		has_ethic = ethic_green
  	}
+}
+
+# List of subject types
+merg_is_subject = {
+	OR = {
+		is_subject_type = "vassal"
+		is_subject_type = "protectorate"
+		is_subject_type = "signatory"
+		# ACOT / ZOFE
+		is_subject_type = "fe_clan_member"
+		is_subject_type = "fe_demilitarized_state"
+		is_subject_type = "fe_union_state"
+		is_subject_type = "fe_symbiote"
+		is_subject_type = "fe_auxiliary"
+		is_subject_type = "banished_ascendancy"
+		is_subject_type = "promising_race"
+		is_subject_type = "pacified_race"
+		is_subject_type = "object_use"
+		# Expanded Traits, Civics, Pops, and More
+		is_subject_type = "duchy"
+		is_subject_type = "charter"
+		is_subject_type = "scion_signatory"
+	}
 }

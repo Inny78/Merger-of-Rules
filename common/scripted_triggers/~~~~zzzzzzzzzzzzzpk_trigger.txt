@@ -13,7 +13,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	OR = {
@@ -130,7 +130,7 @@ can_destroy_planet_with_PLANET_KILLER_SHIELDER = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 }
@@ -152,7 +152,7 @@ can_destroy_planet_with_PLANET_KILLER_NEUTRON = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	custom_tooltip = {
@@ -214,7 +214,7 @@ can_destroy_planet_with_PLANET_KILLER_GODRAY = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	custom_tooltip = {
@@ -285,7 +285,7 @@ can_destroy_planet_with_PLANET_KILLER_NANOBOTS = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	custom_tooltip = {
@@ -337,7 +337,7 @@ can_destroy_planet_with_PLANET_KILLER_DELUGE = {
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
-		NOT = { has_building = building_phanon_psg } # AOT
+		NOT = { has_active_building = building_phanon_psg } # AOT
 	}
 	custom_tooltip = {
 		fail_text = is_not_oceanic
@@ -409,7 +409,7 @@ can_destroy_planet_with_PLANET_KILLER_EOE = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	custom_tooltip = {
@@ -455,7 +455,7 @@ can_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	#custom_tooltip = {
@@ -571,7 +571,7 @@ can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 		OR = {
@@ -772,7 +772,7 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	custom_tooltip = {
@@ -845,7 +845,7 @@ can_destroy_planet_with_PLANET_KILLER_OVO = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	custom_tooltip = {
@@ -900,7 +900,7 @@ can_destroy_planet_with_PLANET_KILLER_PSH = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	custom_tooltip = {
@@ -965,7 +965,7 @@ can_destroy_planet_with_PLANET_KILLER_CM = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	custom_tooltip = {
@@ -1058,7 +1058,7 @@ can_destroy_planet_with_PLANET_KILLER_WATERB = {
 					is_planet_class = pc_shielded
 					is_planet_class = pc_ringworld_shielded
 					is_planet_class = pc_habitat_shielded
-					has_building = building_phanon_psg # AOT
+					has_active_building = building_phanon_psg # AOT
 				}
 			}
 			custom_tooltip = {
@@ -1115,7 +1115,7 @@ wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	#custom_tooltip = {
@@ -1218,7 +1218,7 @@ can_destroy_planet_with_PLANET_KILLER_SHROUDER = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 }
@@ -1236,7 +1236,7 @@ can_destroy_planet_with_PLANET_KILLER_EDEN = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	custom_tooltip = {
@@ -1295,7 +1295,7 @@ can_destroy_planet_with_PLANET_KILLER_NEP_UGO = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	custom_tooltip = {
@@ -1315,7 +1315,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
 			is_planet_class = pc_asteroid
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 		merg_is_forbidden_target = no
 		is_star = no
@@ -1399,7 +1399,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
 			is_planet_class = pc_asteroid
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 		merg_is_forbidden_target = no
 		is_star = no
@@ -1504,7 +1504,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 }
@@ -1536,7 +1536,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM_TURRET = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 }
@@ -1554,7 +1554,7 @@ can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	OR = {
@@ -1644,7 +1644,7 @@ can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	OR = {
@@ -1735,7 +1735,7 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	OR = {
@@ -1827,7 +1827,7 @@ can_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	custom_tooltip = {
@@ -1878,7 +1878,7 @@ can_destroy_planet_with_PLANET_KILLER_HARVESTER = {
 			is_planet_class = pc_shielded
 			is_planet_class = pc_ringworld_shielded
 			is_planet_class = pc_habitat_shielded
-			has_building = building_phanon_psg # AOT
+			has_active_building = building_phanon_psg # AOT
 		}
 	}
 	#custom_tooltip = {
@@ -1965,7 +1965,7 @@ can_destroy_planet_with_PLANET_KILLER_SM_CRYORAY = {
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
-		NOT = { has_building = building_phanon_psg } # AOT
+		NOT = { has_active_building = building_phanon_psg } # AOT
 	}
 	custom_tooltip = {
 		NOT = { is_planet_class = pc_sm_cryoworld }
