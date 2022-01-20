@@ -2066,6 +2066,8 @@ artificial_intelligence_policy = {
 				has_valid_civic = civic_machine_cult_corpo
 				# Girls Frontline
 				has_authority = auth_gf_commonwealth
+				# Empires Expanded
+				has_valid_civic = civic_engineering_cult
 			}
 		}
 		policy_flags = {
@@ -2084,6 +2086,14 @@ artificial_intelligence_policy = {
 			modifier = {
 				factor = 5
 				is_spiritualist = yes
+			}
+			# Empires Expanded
+			modifier = {
+				factor = 0
+				OR = {
+					has_valid_civic = civic_physics_cult
+					has_valid_civic = civic_engineering_cult
+				}
 			}
 			# Vanilla			
 			modifier = {
@@ -2109,6 +2119,8 @@ artificial_intelligence_policy = {
 				has_valid_civic = civic_machine_cult_corpo
 				# Girls Frontline
 				has_authority = auth_gf_commonwealth
+				# Empires Expanded
+				has_valid_civic = civic_engineering_cult
 			}
 			custom_tooltip = {
 				fail_text = is_a_synthetic_empire_fail
@@ -2174,6 +2186,8 @@ artificial_intelligence_policy = {
 					has_valid_civic = civic_machine_cult
 					# Ethics & Civics: Bug Branch
 					has_valid_civic = civic_machine_cult_corpo
+					# Empires Expanded
+					has_country_flag = cult_empire
 				}
 			}
 			NOT = { has_policy_flag = robots_outlawed }
@@ -2201,6 +2215,31 @@ artificial_intelligence_policy = {
 			modifier = {
 				factor = 0
 				is_spiritualist = yes
+			}
+		}
+	}
+	option = { # METAL IS ETERNAL
+		name = "ai_worshipped"
+		potential = {
+			has_empires_exp = yes
+		}
+		valid = {
+			has_valid_civic = civic_engineering_cult
+			NOT = { has_policy_flag = robots_outlawed }
+		}
+		policy_flags = {
+			ai_full_rights
+			ai_worshipped
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.10
+			#planet_jobs_robotic_produces_mult = 0.05
+			planet_pops_robotics_upkeep_mult = 0.05
+		}
+		AI_weight = {
+			modifier = {
+				factor = 10
+				always = yes 
 			}
 		}
 	}
@@ -2232,6 +2271,8 @@ robot_pop_policy = {
 				has_valid_civic = civic_machine_cult_corpo
 				# Girls Frontline
 				has_authority = auth_gf_commonwealth
+				# Empires Expanded
+				has_valid_civic = civic_engineering_cult
 			}
 			NOT = { has_policy_flag = ai_full_rights }
 		}

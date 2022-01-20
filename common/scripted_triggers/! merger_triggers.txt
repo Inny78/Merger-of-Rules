@@ -199,25 +199,19 @@ is_green = {
  	}
 }
 
-# List of subject types
-merg_is_subject = {
+# List of void systems
+merg_is_void_system = {
 	OR = {
-		is_subject_type = "vassal"
-		is_subject_type = "protectorate"
-		is_subject_type = "signatory"
-		# ACOT / ZOFE
-		is_subject_type = "fe_clan_member"
-		is_subject_type = "fe_demilitarized_state"
-		is_subject_type = "fe_union_state"
-		is_subject_type = "fe_symbiote"
-		is_subject_type = "fe_auxiliary"
-		is_subject_type = "banished_ascendancy"
-		is_subject_type = "promising_race"
-		is_subject_type = "pacified_race"
-		is_subject_type = "object_use"
-		# Expanded Traits, Civics, Pops, and More
-		is_subject_type = "duchy"
-		is_subject_type = "charter"
-		is_subject_type = "scion_signatory"
+		# Ancient Empire
+		is_star_class = pc_ag_void_star
+		# Wild Space
+		is_star_class = sc_dn
+		# ACOT
+		is_star_class = sofe_outer_class
+		is_star_class = sofe_inner_class
+		# History of the Lost Empire
+		is_star_class = sc_empty_space
+		# Some Events of Outside Cluster
+		is_star_class = sc_void_dummy
 	}
 }

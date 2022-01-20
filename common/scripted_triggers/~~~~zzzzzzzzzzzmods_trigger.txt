@@ -72,6 +72,8 @@ shadowgate_is_military_fleet = {
 				is_ship_size = precursor_colossus
 				# Giga Stellar Manipulation
 				is_ship_size = giga_o_systemcraft
+				# ZOFE
+				is_ship_size = fe_goliath
 			}
 		}
     }
@@ -89,6 +91,45 @@ ehof_default_country = {
 		# The Empty Vagrant
 		is_country_type = default_ev
 	}
+}
+
+can_use_ehof = {
+	NOR = {
+		is_constructing = mining_station
+		is_constructing = research_station
+		is_constructing = observation_post
+		is_constructing = megastructure
+		is_constructing = starbase
+		is_ship_class = shipclass_military_station
+		is_ship_class = shipclass_mining_station
+		is_ship_class = shipclass_research_station
+		is_ship_class = shipclass_observation_station
+		AND = {
+			is_ship_class = shipclass_starbase
+			NOR = {
+				is_ship_size = juggernaut
+				# Gigastructural Engineering & More
+				is_ship_size = giga_systemcraft
+				# AOT
+				is_ship_size = ascended_juggernaut
+				is_ship_size = precursor_juggernaut
+				# ACOT
+				is_ship_size = precursor_colossus
+				# Giga Stellar Manipulation
+				is_ship_size = giga_o_systemcraft
+				# ZOFE
+				is_ship_size = fe_goliath
+			}
+		}
+	}
+}
+
+giga_valid_planet_wrecked_ship = {
+	solar_system = {
+		merg_is_void_system = no
+	}
+	is_star = no
+	NOT = { has_planet_flag = has_giga_wrecked_ship }
 }
 
 # Overwriting this for ZOFE and comp mods

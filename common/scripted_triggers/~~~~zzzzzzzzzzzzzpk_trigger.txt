@@ -2026,6 +2026,91 @@ can_destroy_planet_with_PLANET_KILLER_SM_CRYORAY = {
 	}
 }
 
+can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		is_a_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+			NOT = { has_active_building = building_phanon_psg } # AOT
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_already_corrupt
+		NOT = { is_planet_class = pc_corrupted }
+	}
+		OR = {
+			custom_tooltip = {
+				text = is_not_hostile_cracker
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+								is_country_type = master_ai_country #based
+							}
+						}
+					}
+					AND = { # colony
+						exists = owner
+						owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+								is_country_type = primitive
+								is_country_type = master_ai_country #based
+							}
+						}
+					}
+					AND = { # primitive
+						exists = space_owner
+						exists = owner
+						owner = {
+							is_primitive = yes
+						}
+						space_owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+								is_country_type = master_ai_country #based
+							}
+						}
+					}
+				}
+			}
+		custom_tooltip = {
+			fail_text = is_not_hostile
+			OR = {
+				planet_is_hostile_or_crisis = yes
+				AND = {
+					exists = owner
+					owner = { is_at_war_with = from.owner }
+				}
+			}
+		}
+	}
+}
+
 # Vanilla triggers
 is_a_planet = {
 	is_star = no

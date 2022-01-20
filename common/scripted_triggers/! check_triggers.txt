@@ -52,6 +52,11 @@ has_diag_trait = {
 	has_global_flag = dtraits_randomization_flag
 }
 
+# Empires Expanded
+has_empires_exp = {
+	has_global_flag = emex_active
+}
+
 # Espionage Extended 2465577434
 has_espionage_extended = {
 	has_global_flag = has_mod_espionage_extended
