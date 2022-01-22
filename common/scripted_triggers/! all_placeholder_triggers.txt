@@ -1,4 +1,4 @@
-# Dummy countries - to be overwritten by their respective mods.
+# Dummy triggers - to be overwritten by their respective mods.
 ag_can_be_orbital_bombardment_country = { always = no }
 ag_can_do_orbital_bombardment_country = { always = no }
 can_fill_holosphere_ruler_job = { always = no }

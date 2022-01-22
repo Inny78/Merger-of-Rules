@@ -17,6 +17,7 @@ can_generate_leader_from_pop = {
 	NOR = {
 		has_trait = trait_syncretic_proles
 		has_trait = trait_nerve_stapled
+		has_trait = trait_zombie
 		# Rogue Maid (Rogue Servitor Completely Remake)
 		has_trait = trait_working_machine
 		# Plentiful Perks
@@ -178,6 +179,7 @@ can_release_vassal_from_species = {
 			has_trait = trait_hive_mind
 			has_trait = trait_mechanical
 			has_trait = trait_nerve_stapled
+			has_trait = trait_zombie
 			# Plentiful Perks
 			has_trait = trait_plentiful_traditions_pt_cocoon
 			# Girls Frontline
@@ -819,6 +821,7 @@ species_has_happiness = {
 		has_trait = trait_machine_unit
 		has_trait = trait_hive_mind
 		has_trait = trait_nerve_stapled
+		has_trait = trait_zombie
 		# Warship Girls R And MIST Species
 		has_trait = sh_trait_shenhai
 		has_trait = sh_trait_shenhai1
@@ -2961,6 +2964,7 @@ can_fill_ruler_job = {
 			NOR = {
 				has_trait = trait_syncretic_proles
 				has_trait = trait_nerve_stapled
+				has_trait = trait_zombie
 				# Diagraphers Trait mod
 				has_trait = trait_subsapient_form
 				# Ethics and Civics Alternative - Redux

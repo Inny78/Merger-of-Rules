@@ -288,6 +288,7 @@ starborn_can_place_hab = {
 # Overwriting with vanilla for a correct use of the triggers
 legw_is_dry = {
 	has_climate = dry
+	NOT = { is_planet_class = pc_city }
 }
 
 legw_is_wet = {

@@ -1,4 +1,4 @@
-
+# Dummy megastructures - to be overwritten by their respective mods.
 acot_precursor_colossus_base = { entity = "" potential = { always = no } possible = { always = no } }
 acot_precursor_colossus_stage_two = { entity = "" potential = { always = no } possible = { always = no } }
 acot_amerigo = { entity = "" potential = { always = no } possible = { always = no } }

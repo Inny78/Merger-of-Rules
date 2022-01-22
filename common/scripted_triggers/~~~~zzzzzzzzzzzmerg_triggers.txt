@@ -445,6 +445,7 @@ is_valid_refugee_pop = {
 	NOR = {
 		has_trait = trait_hive_mind
 		has_trait = trait_nerve_stapled
+		has_trait = trait_zombie
 		# Expanded Gestalts
 		has_trait = trait_machine_digital
 	}
@@ -537,6 +538,7 @@ is_wet = {
 
 is_dry = {
 	has_climate = dry
+	NOT = { is_planet_class = pc_city }
 }
 
 is_cold = {
