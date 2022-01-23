@@ -43,8 +43,6 @@ can_generate_leader_from_pop = {
 				has_technology = tech_synthetic_leaders
 				has_authority = auth_machine_intelligence
 				is_mechanical_empire = yes
-				# Girls Frontline
-				root = { has_technology = tech_mind_plus }
 			}
 		}
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
@@ -101,8 +99,6 @@ can_generate_military_leader_from_pop = {
 				has_technology = tech_synthetic_leaders
 				has_authority = auth_machine_intelligence
 				is_mechanical_empire = yes
-				# Girls Frontline
-				root = { has_technology = tech_mind_plus }
 				# Holofrixit Revisited / Silfae's Portraits: Revisited
 				AND = {
 					has_origin = origin_holofrixit
@@ -182,8 +178,6 @@ can_release_vassal_from_species = {
 			has_trait = trait_zombie
 			# Plentiful Perks
 			has_trait = trait_plentiful_traditions_pt_cocoon
-			# Girls Frontline
-			has_trait = trait_doll
 			# Expanded Events / Expanded Traits, Civics, Pops, and More
 			has_trait = trait_memorex_comatos
 			has_trait = trait_infested_basic
@@ -569,9 +563,6 @@ can_declare_war = {
 					is_subject_type = "fe_symbiote"
 					is_subject_type = "fe_auxiliary"
 					is_subject_type = "banished_ascendancy"
-					is_subject_type = "promising_race"
-					is_subject_type = "pacified_race"
-					is_subject_type = "object_use"
 					# Expanded Traits, Civics, Pops, and More
 					is_subject_type = "duchy"
 					is_subject_type = "charter"
@@ -937,8 +928,6 @@ can_species_procreate = {
 			root = { owner = { has_origin = origin_hive_queen } }
 			has_trait = trait_hive_mind
 		}
-		# Girls Frontline
-		has_trait = trait_doll
 		# Human Fallen Empires
 		has_trait = hfe_species_trait_brainworm
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
@@ -1053,8 +1042,6 @@ can_species_be_assembled = {
 						has_authority = auth_azur_lane_1
 						has_authority = auth_azur_lane_2
 						has_authority = auth_azur_lane_K
-						# Girls Frontline
-						has_authority = auth_commonwealth
 					}
 				}
 			}
@@ -1175,11 +1162,6 @@ can_species_be_assembled = {
 					value > 0
 				}
 			}
-		}
-		# Girls Frontline
-		AND = {
-			has_trait = trait_doll
-			root.owner = { has_authority = auth_commonwealth }
 		}
 	}
 	# Expanded Gestalts
@@ -2187,8 +2169,6 @@ can_build_branch_offices = {
 			has_authority = auth_azur_lane_1
 			has_authority = auth_azur_lane_2
 			has_authority = auth_azur_lane_K
-			# Girls Frontline
-			has_valid_civic = civic_gk
 			# Human Fallen Empires
 			is_country_type = hfe_pirate
 			# More Corporate Authorities
@@ -2208,8 +2188,6 @@ can_support_branch_offices = {
 			merg_is_awakened_fe = yes
 			# Warship Girls R And MIST Species
 			has_authority = auth_azur_dictatorial
-			# Girls Frontline
-			has_valid_civic = civic_gk
 		}
 	}
 	custom_tooltip = {
@@ -2230,7 +2208,7 @@ can_support_branch_offices = {
 			# Azur Lane Stellaris DLC
 			has_authority = auth_azur_lane_1
 			# Reworked Advanced Ascension
-			is_subject_type = subsidiary2
+			is_subject_type = AAR_SBJ_subsidiary
 			# More Corporate Authorities
 			has_valid_civic = civic_galactic_sovereign_megacorp
 			# Arknights Near Future
@@ -2324,7 +2302,7 @@ can_build_branch_office_on_planet = {
 				OR = {
 					is_subject_type = subsidiary
 					# Reworked Advanced Ascension
-					is_subject_type = subsidiary2
+					is_subject_type = AAR_SBJ_subsidiary
 				}
 				overlord = { is_same_value = prevprev.owner }
 			}
@@ -2333,7 +2311,7 @@ can_build_branch_office_on_planet = {
 				OR = {
 					is_subject_type = subsidiary
 					# Reworked Advanced Ascension
-					is_subject_type = subsidiary2
+					is_subject_type = AAR_SBJ_subsidiary
 					# Warship Girls R And MIST Species
 					overlord = { has_authority = auth_warshipgirls }
 				}

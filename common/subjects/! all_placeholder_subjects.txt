@@ -1,4 +1,5 @@
 # Dummy subjects - to be overwritten by their respective mods.
+AAR_SBJ_subsidiary = { potential = { always = no } }
 banished_ascendancy = { potential = { always = no } }
 charter = { potential = { always = no } }
 duchy = { potential = { always = no } }
@@ -24,7 +25,7 @@ fe_union_state = { potential = { always = no } }
 hfe_vassal_egypt = { potential = { always = no } }
 hfe_vassal_future = { potential = { always = no } }
 katzprotektorat = { potential = { always = no } }
-machine_follower= { potential = { always = no } }
+machine_follower = { potential = { always = no } }
 nirvana_fallen_servent = { potential = { always = no } }
 object_use = { potential = { always = no } }
 origin_banished_ascendancy = { potential = { always = no } }
@@ -36,8 +37,7 @@ promising_race = { potential = { always = no } }
 scion = { potential = { always = no } }
 scion_auxiliary = { potential = { always = no } }
 scion_signatory = { potential = { always = no } }
-space_dimestication= { potential = { always = no } }
-subsidiary2 = { potential = { always = no } }
+space_dimestication = { potential = { always = no } }
 verautonomous = { potential = { always = no } }
 verbeneficiary = { potential = { always = no } }
 verserf = { potential = { always = no } }

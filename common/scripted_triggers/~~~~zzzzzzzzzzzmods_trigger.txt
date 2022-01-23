@@ -374,7 +374,6 @@ is_playable_country = {
 		is_country_type = ascended_empire
 		is_country_type = lost_empire
 		# ACOT
-		is_country_type = eternal_empire
 		is_country_type = original_empire_active
 		# The Empty Vagrant
 		is_country_type = default_ev
@@ -755,5 +754,32 @@ check_subject_join_wars = {
 		is_subject_type = ev_satrapy
 		# Gigastructural Engineering & More
 		is_subject_type = katzprotektorat
+	}
+}
+
+# Reworked Advanced Ascension
+# Fixing the trigger and removing obsolete code
+AAR_trgr_cntr_playable = {
+	OR = {
+		is_country_type = default
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		# The Empty Vagrant
+		is_country_type = fallen_empire_ev
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_fallen_empire
+		is_country_type = kuat_awakened_fallen_empire
+		is_country_type = awakened_return_kuat_empire
+		# Human Fallen Empire
+		is_country_type = human_fallen_empire
+		# A Deadly Tempest
+		is_country_type = awakened_gate_builders
+		# ACOT
+		is_country_type = original_empire
+		is_country_type = original_empire_passive
+		is_country_type = original_empire_active
+		# ZOFE
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
 	}
 }

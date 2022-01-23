@@ -4,7 +4,6 @@ civic_beacon_of_liberty_corpo = { potential = { always = no } }
 civic_bringers_of_death = { potential = { always = no } }
 civic_business_union = { potential = { always = no } }
 civic_caste_system = { potential = { always = no } }
-civic_city_enterprise = { potential = { always = no } }
 civic_closed_collective = { potential = { always = no } }
 civic_closed_network = { potential = { always = no } }
 civic_corp_security = { potential = { always = no } }
@@ -15,7 +14,6 @@ civic_ev_criminal_ship = { potential = { always = no } }
 civic_evolutionary_architects = { potential = { always = no } }
 civic_evolutionary_architects_corpo = { potential = { always = no } }
 civic_galactic_superpower = { potential = { always = no } }
-civic_gk = { potential = { always = no } }
 civic_harm_hive = { potential = { always = no } }
 civic_harm_machine = { potential = { always = no } }
 civic_hive_strong_connection = { potential = { always = no } }
@@ -27,7 +25,6 @@ civic_living_hosts = { potential = { always = no } }
 civic_machine_cult = { potential = { always = no } }
 civic_machine_cult_corpo = { potential = { always = no } }
 civic_machine_emotions = { potential = { always = no } }
-civic_machine_trading = { potential = { always = no } }
 civic_megastore = { potential = { always = no } }
 civic_memorialist_corp = { potential = { always = no } }
 civic_mutualistic_behavior = { potential = { always = no } }
