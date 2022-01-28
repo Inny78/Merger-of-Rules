@@ -18,6 +18,7 @@ dormant_aeternum = { ai = { enabled = no } }
 eternal_empire = { ai = { enabled = no } }
 ev_leviathans_crisis = { ai = { enabled = no } }
 fallen_empire_ev = { ai = { enabled = no } }
+hfe_features_exodus = { ai = { enabled = no } }
 hfe_pirate = { ai = { enabled = no } }
 human_fallen_empire = { ai = { enabled = no } }
 katzenartig_imperium = { ai = { enabled = no } }
@@ -33,6 +34,7 @@ nep_phantom_passive = { ai = { enabled = no } }
 original_empire = { ai = { enabled = no } }
 original_empire_active = { ai = { enabled = no } }
 original_empire_passive = { ai = { enabled = no } }
+pg_last_hope = { ai = { enabled = no } }
 planet_state = { ai = { enabled = no } }
 void_lifeforms_1 = { ai = { enabled = no } }
 void_lifeforms_2 = { ai = { enabled = no } }

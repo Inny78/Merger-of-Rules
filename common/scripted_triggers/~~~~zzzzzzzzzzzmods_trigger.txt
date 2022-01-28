@@ -701,8 +701,34 @@ ag_is_gateway_megastructure = {
 		is_megastructure_type = shadowrift_e
 		is_megastructure_type = shadowrift_db
 		# ACOT
+		is_megastructure_type = acot_phanon_dimensional_portal
 		is_megastructure_type = sofe_inner_gate
 		is_megastructure_type = sofe_outer_gate
+		# AOT
+		is_megastructure_type = dimensional_mirror_0
+		is_megastructure_type = dimensional_mirror_final
+		# Gigastructural Engineering & More
+		is_megastructure_type = ehof_megastructure_ruined_origin
+		is_megastructure_type = ehof_megastructure_restored_origin
+		is_megastructure_type = ehof_megastructure_phase0
+		is_megastructure_type = ehof_megastructure_phase1_idle
+		is_megastructure_type = ehof_megastructure_phase2_idle
+		is_megastructure_type = ehof_megastructure_phase3_idle
+		is_megastructure_type = ehof_megastructure_phase4_idle
+		is_megastructure_type = ehof_megastructure_ruined
+		is_megastructure_type = ehof_megastructure_restored
+		is_megastructure_type = ehof_megastructure_phase1_activating
+		is_megastructure_type = ehof_megastructure_phase2_activating
+		is_megastructure_type = ehof_megastructure_phase3_activating
+		is_megastructure_type = ehof_megastructure_phase4_activating
+		is_megastructure_type = ehof_megastructure_phase1_active
+		is_megastructure_type = ehof_megastructure_phase2_active
+		is_megastructure_type = ehof_megastructure_phase3_active
+		is_megastructure_type = ehof_megastructure_phase4_active
+		is_megastructure_type = ehof_megastructure_phase1_decommissioned
+		is_megastructure_type = ehof_megastructure_phase2_decommissioned
+		is_megastructure_type = ehof_megastructure_phase3_decommissioned
+		is_megastructure_type = ehof_megastructure_phase4_decommissioned
 	}
 }
 

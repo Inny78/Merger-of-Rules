@@ -82,7 +82,7 @@ can_generate_leader_from_species = {
 		}
 		has_citizenship_type = { type = citizenship_full country = root }
 		# ThaumStellaris
-		NOT = { has_trait = "tc_trait_golem" }
+		NOT = { has_trait = tc_trait_golem }
 	}
 }
 
@@ -2115,10 +2115,21 @@ should_force_decline_species = {
 	# Cryogenesis Unofficial Species Pack
 	if = {
 		limit = { 
-			from = {
-				exists = owner
-				owner = {
+			exists = from.owner
+			from.owner = {
+				OR = {
 					has_origin = origin_sm_cryogenesis
+					AND = {
+						NOT = {
+							has_origin = origin_sm_cryogenesis
+						}
+						any_owned_species = {
+							OR = {
+								has_trait = trait_pc_sm_cryoworld_preference
+								has_trait = trait_sm_cryogenesis_machine
+							}
+						}
+					}
 				}
 			}
 		}

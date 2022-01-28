@@ -574,3 +574,75 @@ default_endgame_early_start_triggers = {
 		}
 	}
 }
+
+has_total_war_cb = {
+	OR = {
+		#attacker checks
+		AND = {
+			OR = {
+				merg_is_default_empire = yes
+				is_country_type = awakened_fallen_empire
+				is_country_type = fallen_empire
+				# ACOT
+				is_country_type = original_empire
+				is_country_type = original_empire_passive
+				is_country_type = original_empire_active
+			}
+			OR = {
+				is_country_type = awakened_fallen_empire
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_assimilator
+				# Expanded Traits, Civics, Pops, and More
+				has_valid_civic = civic_infestation
+				# ACOT
+				is_country_type = original_empire
+				is_country_type = original_empire_passive
+				is_country_type = original_empire_active
+				# Vanilla
+				AND = {
+					has_valid_civic = civic_machine_terminator
+					from = {
+						NOR = {
+							has_country_flag = synthetic_empire
+							has_authority = auth_machine_intelligence
+						}
+					}
+				}
+				AND = {
+					has_valid_civic = civic_fanatic_purifiers
+					NOT = { is_same_species = from }
+				}
+			}
+		}
+		#end threat checks
+		AND = {
+			OR = {
+				merg_is_default_empire = yes
+				# ACOT
+				is_country_type = original_empire
+				is_country_type = original_empire_passive
+				is_country_type = original_empire_active
+			}				
+			NOR = {
+				is_country_type = awakened_fallen_empire
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_assimilator
+				has_valid_civic = civic_machine_terminator
+				# Expanded Traits, Civics, Pops, and More
+				has_valid_civic = civic_infestation
+			}
+			from = {
+				OR = {
+					is_country_type = awakened_fallen_empire
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_hive_devouring_swarm
+					has_valid_civic = civic_machine_assimilator
+					has_valid_civic = civic_machine_terminator
+					# Expanded Traits, Civics, Pops, and More
+					has_valid_civic = civic_infestation
+				}
+			}
+		}
+	}
+}

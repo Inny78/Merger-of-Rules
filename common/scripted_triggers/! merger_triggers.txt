@@ -203,7 +203,7 @@ is_green = {
 merg_is_void_system = {
 	OR = {
 		# Ancient Empire
-		is_star_class = pc_ag_void_star
+		is_star_class = sc_ag_void
 		# Wild Space
 		is_star_class = sc_dn
 		# ACOT
