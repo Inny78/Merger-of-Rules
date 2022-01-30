@@ -43,9 +43,7 @@ shadowgate_is_ae = {
 shadowgate_is_purifier = {
     OR = {
         has_country_flag = shadowgate_ap_restricted
-        has_valid_civic = civic_fanatic_purifiers
-        has_valid_civic = civic_machine_terminator
-        has_valid_civic = civic_hive_devouring_swarm
+        is_homicidal = yes
 		# Underground Realms
 		has_country_flag = dark_side
 		# Expanded Traits, Civics, Pops, and More
@@ -252,7 +250,7 @@ starborn_can_place_hab = {
 	}
 	custom_tooltip = {
 		fail_text = "requires_no_anomaly"
-		NOT = { has_anomaly = yes }
+		has_anomaly = no
 	}
 	custom_tooltip = {
 		fail_text = "requires_no_existing_megastructure"
@@ -729,6 +727,24 @@ ag_is_gateway_megastructure = {
 		is_megastructure_type = ehof_megastructure_phase2_decommissioned
 		is_megastructure_type = ehof_megastructure_phase3_decommissioned
 		is_megastructure_type = ehof_megastructure_phase4_decommissioned
+		is_megastructure_type = ehof_pgate_unknown
+		is_megastructure_type = ehof_pgate_gateway
+		is_megastructure_type = ehof_trader_wormhole_01
+		is_megastructure_type = ehof_trader_wormhole_external
+		#Blorg
+		is_megastructure_type = Transwarp_hub_1
+		is_megastructure_type = Transwarp_hub_2
+		is_megastructure_type = Transwarp_hub_3
+		is_megastructure_type = Transwarp_hub_4
+		is_megastructure_type = Transwarp_hub_5
+		# Unique Ascension Perks
+		is_megastructure_type = nanite_gateway
+		is_megastructure_type = emergency_gateway
+		#MEM
+		is_megastructure_type = mem_vazuran_gateway_nexus
+		is_megastructure_type = mem_vazuran_gateway
+		is_megastructure_type = mem_sadrell_gateway_inactive
+		is_megastructure_type = mem_sadrell_gateway_active
 	}
 }
 
@@ -808,4 +824,32 @@ AAR_trgr_cntr_playable = {
 		is_country_type = ascended_empire
 		is_country_type = lost_empire
 	}
+}
+
+# The Empty Vagrant
+can_be_ev_investment_country = {
+	is_country_type = default
+	is_hive_empire = no
+	is_machine_empire = no
+	num_owned_planets > 0
+	opinion = {
+		who = root
+		value > -99
+	}
+	NOT = {
+		is_at_war_with = root
+	}
+	NOR = {
+		has_ethic = ethic_fanatic_xenophobe
+		is_homicidal = yes
+		# Underground Realms
+		has_country_flag = dark_side
+		# Expanded Traits, Civics, Pops, and More
+		has_valid_civic = civic_infestation
+	}
+	has_communications = ROOT
+	NOT = {
+		has_country_flag = ev_received_an_investment
+	}
+	is_ai = yes
 }

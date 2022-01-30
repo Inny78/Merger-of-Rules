@@ -816,6 +816,6 @@ has_advanced_fort = {
 		# Twinks Mods
 		has_building = building_precinct_house_at_b
 		has_building = building_tw_arcane_hold
-		# has_building = building_demon_fortress # For later
+		# has_building = building_demon_fortress
 	}
 }

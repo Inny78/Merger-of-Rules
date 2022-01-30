@@ -602,10 +602,7 @@ has_total_war_cb = {
 				AND = {
 					has_valid_civic = civic_machine_terminator
 					from = {
-						NOR = {
-							has_country_flag = synthetic_empire
-							has_authority = auth_machine_intelligence
-						}
+						is_synthetic_empire = no
 					}
 				}
 				AND = {
@@ -625,24 +622,30 @@ has_total_war_cb = {
 			}				
 			NOR = {
 				is_country_type = awakened_fallen_empire
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_hive_devouring_swarm
+				is_homicidal = yes
 				has_valid_civic = civic_machine_assimilator
-				has_valid_civic = civic_machine_terminator
 				# Expanded Traits, Civics, Pops, and More
 				has_valid_civic = civic_infestation
 			}
 			from = {
 				OR = {
 					is_country_type = awakened_fallen_empire
-					has_valid_civic = civic_fanatic_purifiers
-					has_valid_civic = civic_hive_devouring_swarm
+					is_homicidal = yes
 					has_valid_civic = civic_machine_assimilator
-					has_valid_civic = civic_machine_terminator
 					# Expanded Traits, Civics, Pops, and More
 					has_valid_civic = civic_infestation
 				}
 			}
 		}
+	}
+}
+
+is_unfriendly = {
+	OR = {
+		is_homicidal = yes
+		has_valid_civic = civic_barbaric_despoilers
+		# Expanded Traits, Civics, Pops, and More
+		has_valid_civic = civic_living_hosts
+		has_valid_civic = civic_infestation
 	}
 }

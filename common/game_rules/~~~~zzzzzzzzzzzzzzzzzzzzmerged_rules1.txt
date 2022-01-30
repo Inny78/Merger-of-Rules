@@ -50,9 +50,9 @@ can_add_claim = {
 					# Expanded Traits, Civics, Pops, and More
 					AND = {
 						has_expanded_pops = yes
-						OR = {
-							NOT = { has_valid_civic = civic_closed_collective }
-							NOT = { has_valid_civic = civic_closed_network }
+						NOR = {
+							has_valid_civic = civic_closed_collective
+							has_valid_civic = civic_closed_network
 						}
 					}
 				}
@@ -153,9 +153,7 @@ can_add_claim = {
 			exists = owner
 			owner = {
 				OR = {
-					has_valid_civic = civic_hive_devouring_swarm
-					has_valid_civic = civic_fanatic_purifiers
-					has_valid_civic = civic_machine_terminator
+					is_homicidal = yes
 					has_valid_civic = civic_machine_assimilator
 					# Expanded Traits, Civics, Pops, and More
 					has_valid_civic = civic_infestation
@@ -163,9 +161,7 @@ can_add_claim = {
 			}
 			root = {
 				NOR = {
-					has_valid_civic = civic_hive_devouring_swarm
-					has_valid_civic = civic_fanatic_purifiers
-					has_valid_civic = civic_machine_terminator
+					is_homicidal = yes
 					has_valid_civic = civic_machine_assimilator
 					# Expanded Traits, Civics, Pops, and More
 					has_valid_civic = civic_infestation

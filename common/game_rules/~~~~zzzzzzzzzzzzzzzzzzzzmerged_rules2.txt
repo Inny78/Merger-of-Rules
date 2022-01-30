@@ -192,11 +192,7 @@ can_release_vassal_from_species = {
 			limit = {
 				has_expanded_pops = yes
 				prev = {
-					OR = {
-						has_valid_civic = civic_fanatic_purifiers
-						has_valid_civic = civic_machine_assimilator
-						has_valid_civic = civic_hive_devouring_swarm
-					}
+					is_homicidal = yes
 				}
 			}
 			is_same_species = prev
@@ -286,7 +282,7 @@ can_take_hostile_actions = {
 	# Origins of Civilization
 	else_if = {
 		limit = {
-			ROOT = { is_country_type = default }
+			ROOT = { merg_is_default_empire = yes }
 			is_country_type = mpo_lost_spacefarers
 		}
 		hidden_trigger = {
@@ -2058,7 +2054,7 @@ should_force_decline_species = {
 	if = {
 		limit = {
 			has_trait = trait_sterile
-			from = { exists = owner }
+			exists = from.owner
 		}
 		custom_tooltip = {
 			success_text = sterile_force_decline
@@ -2071,7 +2067,7 @@ should_force_decline_species = {
 	if = {
 		limit = {
 			has_trait = trait_exotic_gas_dependency
-			from = { exists = owner }
+			exists = from.owner
 		}
 		custom_tooltip = {
 			success_text = needs_exotic_gases
@@ -2084,7 +2080,7 @@ should_force_decline_species = {
 	if = {
 		limit = {
 			has_trait = trait_delicate
-			from = { exists = owner }
+			exists = from.owner
 		}
 		custom_tooltip = {
 			success_text = delicate_enslaved
@@ -2099,7 +2095,7 @@ should_force_decline_species = {
 	if = {
 		limit = {
 			has_trait = trait_tree_caretaker
-			from = { exists = owner }
+			exists = from.owner
 		}
 		custom_tooltip = {
 			success_text = TREEFOLK_FORCE_DECLINE
@@ -2140,7 +2136,6 @@ should_force_decline_species = {
 				has_trait = trait_sm_cryogenesis_machine
 			}
 			from = {
-				exists = owner
 				owner = {	# Extracheck
 					has_origin = origin_sm_cryogenesis
 				}
@@ -2503,14 +2498,13 @@ can_use_galactic_market = {
 		# ACOT
 		is_country_type = original_empire_active
 		# The Empty Vagrant
-		NOT = {
-			has_policy_flag = ev_no_use_galactic_market
+		AND = {
+			is_country_type = default_ev
+			NOT = { has_policy_flag = ev_no_use_galactic_market }
 		}
 	}
 	NOR = {
-		has_valid_civic = civic_fanatic_purifiers
-		has_valid_civic = civic_hive_devouring_swarm
-		has_valid_civic = civic_machine_terminator
+		is_homicidal = yes
 		# Underground Realms
 		has_country_flag = dark_side
 	}
@@ -2619,9 +2613,7 @@ can_be_part_of_galactic_community = {
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
 		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
+			is_homicidal = yes
 			# Underground Realms
 			has_country_flag = dark_side
 		}
@@ -2651,9 +2643,7 @@ can_be_part_of_galactic_empire = {
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
 		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
+			is_homicidal = yes
 			# Underground Realms
 			has_country_flag = dark_side
 		}
@@ -2700,9 +2690,7 @@ can_be_part_of_galactic_council = {
 		is_country_type = original_empire_active
 	}
 	NOR = {
-		has_valid_civic = civic_fanatic_purifiers
-		has_valid_civic = civic_hive_devouring_swarm
-		has_valid_civic = civic_machine_terminator
+		is_homicidal = yes
 		# Underground Realms
 		has_country_flag = dark_side
 	}
