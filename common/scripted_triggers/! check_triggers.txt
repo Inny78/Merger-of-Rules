@@ -1,6 +1,11 @@
 # Checking for mod presence
 # These triggers are also meant as a library for modders who want to reuse them in their own mods.
 
+# Aggressive Crisis Engine
+has_ace_mod = {
+	has_global_flag = acemod_installed
+}
+
 # A Deadly Tempest 2028826064
 has_deadly_tempest = {
 	has_global_flag = CmtFlagActivated

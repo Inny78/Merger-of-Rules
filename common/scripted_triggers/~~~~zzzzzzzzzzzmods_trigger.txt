@@ -731,7 +731,7 @@ ag_is_gateway_megastructure = {
 		is_megastructure_type = ehof_pgate_gateway
 		is_megastructure_type = ehof_trader_wormhole_01
 		is_megastructure_type = ehof_trader_wormhole_external
-		#Blorg
+		# Blorg
 		is_megastructure_type = Transwarp_hub_1
 		is_megastructure_type = Transwarp_hub_2
 		is_megastructure_type = Transwarp_hub_3
@@ -740,7 +740,7 @@ ag_is_gateway_megastructure = {
 		# Unique Ascension Perks
 		is_megastructure_type = nanite_gateway
 		is_megastructure_type = emergency_gateway
-		#MEM
+		# MEM
 		is_megastructure_type = mem_vazuran_gateway_nexus
 		is_megastructure_type = mem_vazuran_gateway
 		is_megastructure_type = mem_sadrell_gateway_inactive

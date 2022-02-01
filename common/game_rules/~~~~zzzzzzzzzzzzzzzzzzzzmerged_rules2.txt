@@ -2003,157 +2003,94 @@ can_force_decline_on_planet = {
 # From = planet
 ## Note: success text tooltips are shown in alert_pops_declining alert.
 should_force_decline_species = {
-	# Rule rewritten by Rodahtnov
-	if = {
-		# Infertile Clone Army pops should decline if in Country that can't have Vats, or there is a Vat shortage.
-		limit = {
-			exists = from.owner
-			from.owner = {
-                OR = {
-                    has_origin = origin_clone_army
-                    AND = {
-                        NOT = {
-                            has_origin = origin_clone_army
-                        }
-                        any_owned_species = {
-                            OR = {
-                                has_trait = trait_clone_soldier_infertile
-                                has_trait = trait_clone_soldier_infertile_full_potential
-                            }
-                        }
-                    }
-                }
-			}
+	# Infertile Clone Army pops should decline if in Country that can't have Vats, or there is a Vat shortage.
+	custom_tooltip = {
+		success_text = CLONE_ARMY_FORCE_DECLINE
+		OR = {
+			has_trait = trait_clone_soldier_infertile
+			has_trait = trait_clone_soldier_infertile_full_potential
 		}
-		custom_tooltip = {
-			success_text = CLONE_ARMY_FORCE_DECLINE
+		from = {
 			OR = {
-				has_trait = trait_clone_soldier_infertile
-				has_trait = trait_clone_soldier_infertile_full_potential
-			}
-			from = {
-				OR = {
-					# Check if country is unable to build Vats for this species.
-					AND = {
-						exists = owner
-						owner = {
-							OR = {
-								NOT = { has_origin = origin_clone_army }					# Can't have Vats.
-								has_country_flag = clone_army_fertility_unlocked			# Can't have Vats anymore.
-								NOT = { owner_main_species = { is_same_species = root } }	# Our Vats can't build this species.
-							}
+				# Check if country is unable to build Vats for this species.
+				AND = {
+					exists = owner
+					owner = {
+						OR = {
+							NOT = { has_origin = origin_clone_army }					# Can't have Vats.
+							has_country_flag = clone_army_fertility_unlocked			# Can't have Vats anymore.
+							NOT = { owner_main_species = { is_same_species = root } }	# Our Vats can't build this species.
 						}
 					}
-					# Vats check out, but are there more pops than Vats support?
-					check_variable = { which = clone_pops_missing value < 0 }
 				}
+				# Vats check out, but are there more pops than Vats support?
+				check_variable = { which = clone_pops_missing value < 0 }
 			}
 		}
 	}
 	# Diagraphers Trait Mod
-	if = {
-		limit = {
-			has_trait = trait_sterile
-			exists = from.owner
-		}
-		custom_tooltip = {
-			success_text = sterile_force_decline
-			has_trait = trait_sterile
-			from.owner = {
-				has_artificial_wombs = no
-			}
+	custom_tooltip = {
+		success_text = sterile_force_decline
+		has_trait = trait_sterile
+		from.owner = {
+			has_artificial_wombs = no
 		}
 	}
-	if = {
-		limit = {
-			has_trait = trait_exotic_gas_dependency
-			exists = from.owner
-		}
-		custom_tooltip = {
-			success_text = needs_exotic_gases
-			has_trait = trait_exotic_gas_dependency
-			from.owner = {
-				has_deficit = exotic_gases
-			}
+	custom_tooltip = {
+		success_text = needs_exotic_gases
+		has_trait = trait_exotic_gas_dependency
+		from.owner = {
+			has_deficit = exotic_gases
 		}
 	}
-	if = {
-		limit = {
-			has_trait = trait_delicate
-			exists = from.owner
-		}
-		custom_tooltip = {
-			success_text = delicate_enslaved
-			has_trait = trait_delicate
-			has_citizenship_type = {
-				type = citizenship_slavery
-				country = from.owner
-			}
+	custom_tooltip = {
+		success_text = delicate_enslaved
+		has_trait = trait_delicate
+		has_citizenship_type = {
+			type = citizenship_slavery
+			country = from.owner
 		}
 	}
 	# Expanded Traits, Civics, Pops, and More
-	if = {
-		limit = {
-			has_trait = trait_tree_caretaker
-			exists = from.owner
-		}
-		custom_tooltip = {
-			success_text = TREEFOLK_FORCE_DECLINE
-			has_trait = trait_tree_caretaker
-			from = {
-				NOR = {
-					has_deposit = d_tree_of_life_colony
-					has_deposit = d_tree_of_life_home
-				}
+	# Caretakers die without the Tree of Life
+	custom_tooltip = {
+		success_text = TREEFOLK_FORCE_DECLINE
+		has_trait = trait_tree_caretaker
+		from = {
+			NOR = {
+				has_deposit = d_tree_of_life_colony
+				has_deposit = d_tree_of_life_home
 			}
 		}
 	}
 	# Cryogenesis Unofficial Species Pack
-	if = {
-		limit = { 
-			exists = from.owner
-			from.owner = {
+	custom_tooltip = {
+		success_text = SM_ICEPOPS_DIE_WITHOUT_COLD
+		from = {
+			exists = owner
+			owner = {
 				OR = {
 					has_origin = origin_sm_cryogenesis
 					AND = {
-						NOT = {
-							has_origin = origin_sm_cryogenesis
-						}
-						any_owned_species = {
-							OR = {
-								has_trait = trait_pc_sm_cryoworld_preference
-								has_trait = trait_sm_cryogenesis_machine
-							}
+						NOT = { has_origin = origin_sm_cryogenesis }
+						OR = {
+							has_trait = trait_pc_sm_cryoworld_preference
+							has_trait = trait_sm_cryogenesis_machine
 						}
 					}
 				}
 			}
-		}
-		custom_tooltip = { # Cryospecies pack block
-			success_text = SM_ICEPOPS_DIE_WITHOUT_COLD
 			OR = {
-				has_trait = trait_pc_sm_cryoworld_preference
-				has_trait = trait_sm_cryogenesis_machine
+				is_dry = yes
+				is_wet = yes
 			}
-			from = {
-				owner = {	# Extracheck
-					has_origin = origin_sm_cryogenesis
-				}
-				OR = {	# Bad climate
-					is_dry = yes
-					is_wet = yes
-				}
-				NOR = {	# Is becoming a cryoworld
-					has_modifier = pm_sm_cryogenesis_1	# 1 year
-					has_modifier = pm_sm_cryogenesis_2	# 5 year
-					has_modifier = pm_sm_cryogenesis_3	# 10 year
-				}
+			NOR = {
+				has_modifier = pm_sm_cryogenesis_1
+				has_modifier = pm_sm_cryogenesis_2
+				has_modifier = pm_sm_cryogenesis_3
 			}
-		}	
-	}
-	else = {
-		always = no
-	}
+		}
+	}	
 }
 
 # This = country
