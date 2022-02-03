@@ -1115,6 +1115,19 @@ can_species_be_assembled = {
 					}
 				}
 			}
+			# Nirvana Empire Project
+			else_if = {
+				limit = {
+					root.owner = {
+						OR = {
+							has_valid_civic = civic_nirvana_empire_dragon
+							has_valid_civic = civic_nirvana_empire_council
+						}
+					}
+					is_same_species = root.owner
+				}
+				root = { check_modifier_value = { modifier = planet_pop_assembly_organic_add value > 0 } }
+			}
 			# Vanilla
 			else = {
 				OR = {

@@ -694,7 +694,8 @@ species_can_live_on_planet = {
 				is_planet_class = pc_nuked
 				is_planet_class = pc_pdshroud
 				is_planet_class = pc_gaia
-				is_planet_class = pc_sulfur
+				is_planet_class = pc_hot_gaia
+				is_planet_class = pc_cold_gaia
 				#Giga
 				is_planet_class = pc_ll_temperate
 				is_planet_class = pc_ll_foggy
@@ -989,6 +990,8 @@ species_can_live_on_planet = {
 				is_planet_class = pc_sulfur
 				is_planet_class = pc_ash
 				is_planet_class = pc_gaia
+				is_planet_class = pc_hot_gaia
+				is_planet_class = pc_cold_gaia
 				is_planet_class = pc_nuked
 				is_planet_class = pc_pdshroud
 				#Giga
@@ -1135,6 +1138,8 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ammonia
 				is_planet_class = pc_sulfur
 				is_planet_class = pc_gaia
+				is_planet_class = pc_hot_gaia
+				is_planet_class = pc_cold_gaia
 				is_planet_class = pc_nuked
 				is_planet_class = pc_pdshroud
 				#Giga

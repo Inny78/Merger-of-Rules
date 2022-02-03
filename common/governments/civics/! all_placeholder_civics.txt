@@ -29,6 +29,8 @@ civic_machine_replicators = { potential = { always = no } }
 civic_megastore = { potential = { always = no } }
 civic_memorialist_corp = { potential = { always = no } }
 civic_mutualistic_behavior = { potential = { always = no } }
+civic_nirvana_empire_council = { potential = { always = no } }
+civic_nirvana_empire_dragon = { potential = { always = no } }
 civic_parliamentary_system_corp = { potential = { always = no } }
 civic_patriarchy = { potential = { always = no } }
 civic_physics_cult = { potential = { always = no } }

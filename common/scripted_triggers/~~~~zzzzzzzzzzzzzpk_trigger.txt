@@ -1,4 +1,7 @@
-# scripted triggers for planet killers
+# Check if a planet can be targetd by a planet killer weapon
+# Scope:
+#	this = planet being targeted
+#	from = fleet
 
 # Vanilla
 can_destroy_planet_with_PLANET_KILLER_CRACKER = {
@@ -25,11 +28,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 					space_owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -38,11 +37,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 					owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -55,11 +50,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 					space_owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -177,11 +168,7 @@ can_destroy_planet_with_PLANET_KILLER_NEUTRON = {
 				space_owner = {
 					OR = {
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -469,11 +456,7 @@ can_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 						space_owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 							}
 						}
 					}
@@ -482,11 +465,7 @@ can_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 						owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 							}
 						}
 					}
@@ -499,11 +478,7 @@ can_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 						space_owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 							}
 						}
 					}
@@ -519,10 +494,7 @@ can_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 						space_owner = { is_same_empire = from.owner }
 					}
 				}
-				OR = {
-					uninhabitable_regular_planet = yes						
-					merg_is_crackable_planet = yes
-				}
+				merg_is_crackable_planet = yes
 			}
 		}
 	#}
@@ -583,11 +555,7 @@ can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 						space_owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 								is_same_value = from.owner # added condition if you own it								  
 							}
 						}
@@ -597,11 +565,7 @@ can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 						owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 								is_same_value = from.owner # added condition if you own it								  
 							}
 						}
@@ -615,11 +579,7 @@ can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 						space_owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 								is_same_value = from.owner # added condition if you own it								  
 							}
 						}
@@ -1135,11 +1095,7 @@ wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 						space_owner = {
 							OR = {
 								is_at_war_with = root.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 							}
 						}
 					}
@@ -1148,11 +1104,7 @@ wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 						owner = {
 							OR = {
 								is_at_war_with = root.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 							}
 						}
 					}
@@ -1165,11 +1117,7 @@ wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 						space_owner = {
 							OR = {
 								is_at_war_with = root.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 							}
 						}
 					}
@@ -1351,11 +1299,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 							space_owner = {
 								OR = {
 									is_at_war_with = from.owner
-									is_country_type = swarm
-									is_country_type = extradimensional
-									is_country_type = extradimensional_2
-									is_country_type = extradimensional_3
-									is_country_type = ai_empire
+									is_crisis_faction = yes
 								}
 							}
 						}
@@ -1364,11 +1308,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 							owner = {
 								OR = {
 									is_at_war_with = from.owner
-									is_country_type = swarm
-									is_country_type = extradimensional
-									is_country_type = extradimensional_2
-									is_country_type = extradimensional_3
-									is_country_type = ai_empire
+									is_crisis_faction = yes
 								}
 							}
 						}
@@ -1381,11 +1321,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 							space_owner = {
 								OR = {
 									is_at_war_with = from.owner
-									is_country_type = swarm
-									is_country_type = extradimensional
-									is_country_type = extradimensional_2
-									is_country_type = extradimensional_3
-									is_country_type = ai_empire
+									is_crisis_faction = yes
 								}
 							}
 						}
@@ -1437,11 +1373,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 							space_owner = {
 								OR = {
 									is_at_war_with = from.owner
-									is_country_type = swarm
-									is_country_type = extradimensional
-									is_country_type = extradimensional_2
-									is_country_type = extradimensional_3
-									is_country_type = ai_empire
+									is_crisis_faction = yes
 								}
 							}
 						}
@@ -1450,11 +1382,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 							owner = {
 								OR = {
 									is_at_war_with = from.owner
-									is_country_type = swarm
-									is_country_type = extradimensional
-									is_country_type = extradimensional_2
-									is_country_type = extradimensional_3
-									is_country_type = ai_empire
+									is_crisis_faction = yes
 								}
 							}
 						}
@@ -1467,11 +1395,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 							space_owner = {
 								OR = {
 									is_at_war_with = from.owner
-									is_country_type = swarm
-									is_country_type = extradimensional
-									is_country_type = extradimensional_2
-									is_country_type = extradimensional_3
-									is_country_type = ai_empire
+									is_crisis_faction = yes
 								}
 							}
 						}
@@ -1571,11 +1495,7 @@ can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 					space_owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -1585,11 +1505,7 @@ can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 					owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -1603,11 +1519,7 @@ can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 					space_owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -1661,11 +1573,7 @@ can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
 					space_owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -1675,11 +1583,7 @@ can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
 					owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -1693,11 +1597,7 @@ can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
 					space_owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -1752,11 +1652,7 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 					space_owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -1766,11 +1662,7 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 					owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -1784,11 +1676,7 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 					space_owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -1897,11 +1785,7 @@ can_destroy_planet_with_PLANET_KILLER_HARVESTER = {
 						space_owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 							}
 						}
 					}
@@ -1910,11 +1794,7 @@ can_destroy_planet_with_PLANET_KILLER_HARVESTER = {
 						owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 							}
 						}
 					}
@@ -1927,11 +1807,7 @@ can_destroy_planet_with_PLANET_KILLER_HARVESTER = {
 						space_owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 							}
 						}
 					}
@@ -1986,11 +1862,7 @@ can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
 						space_owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 								is_country_type = master_ai_country #based
 							}
 						}
@@ -2000,11 +1872,7 @@ can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
 						owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 								is_country_type = primitive
 								is_country_type = master_ai_country #based
 							}
@@ -2019,11 +1887,7 @@ can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
 						space_owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 								is_country_type = master_ai_country #based
 							}
 						}
@@ -2146,11 +2010,7 @@ can_destroy_planet_with_planet_killer_kancolle_kari = {
 						space_owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 							}
 						}
 					}
@@ -2159,11 +2019,7 @@ can_destroy_planet_with_planet_killer_kancolle_kari = {
 						owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 							}
 						}
 					}
@@ -2176,11 +2032,7 @@ can_destroy_planet_with_planet_killer_kancolle_kari = {
 						space_owner = {
 							OR = {
 								is_at_war_with = from.owner
-								is_country_type = swarm
-								is_country_type = extradimensional
-								is_country_type = extradimensional_2
-								is_country_type = extradimensional_3
-								is_country_type = ai_empire
+								is_crisis_faction = yes
 							}
 						}
 					}
@@ -2309,11 +2161,7 @@ can_destroy_planet_with_PLANET_KILLER_TAKING = {
 					space_owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -2323,11 +2171,7 @@ can_destroy_planet_with_PLANET_KILLER_TAKING = {
 					owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -2341,11 +2185,7 @@ can_destroy_planet_with_PLANET_KILLER_TAKING = {
 					space_owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -2365,11 +2205,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER_ARCANE = {
 					OR = {
 						is_same_value = from.owner
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -2390,11 +2226,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER_ARCANE = {
 				space_owner = {
 					OR = {
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -2430,11 +2262,7 @@ can_destroy_planet_with_azur_shippart_W2_T4 = {
 				space_owner = {
 					OR = {
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -2447,11 +2275,7 @@ can_destroy_planet_with_azur_shippart_W2_T4 = {
 				space_owner = {
 					OR = {
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -2470,11 +2294,7 @@ can_destroy_planet_with_milky_way_terminal_test_1 = {
 				space_owner = {
 					OR = {
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -2487,11 +2307,7 @@ can_destroy_planet_with_milky_way_terminal_test_1 = {
 				space_owner = {
 					OR = {
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -2510,11 +2326,7 @@ can_destroy_planet_with_milky_way_terminal_test_2 = {
 				space_owner = {
 					OR = {
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -2527,11 +2339,7 @@ can_destroy_planet_with_milky_way_terminal_test_2 = {
 				space_owner = {
 					OR = {
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -2557,11 +2365,7 @@ can_destroy_planet_with_azur_shippart_W3_T3 = {
 				space_owner = {
 					OR = {
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -2574,11 +2378,7 @@ can_destroy_planet_with_azur_shippart_W3_T3 = {
 				space_owner = {
 					OR = {
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -2610,30 +2410,45 @@ can_destroy_planet_general = {
 	}
 }
 
+# Turning this into a dynamic trigger
+planet_is_hostile_or_crisis = {
+	exists = owner
+	owner = {
+		OR = {
+			is_at_war_with = from.owner
+			is_crisis_faction = yes
+			# Aggressive Crisis Engine
+            from.owner = {
+                is_hostile = prev                # Fix for empires which cannot be at war (crises).
+                OR = {
+                    has_country_flag = acemod_can_target_hostile_with_colossus                    # Fallback flag in case needed.
+                    is_crisis_faction = yes                    # Narrow down to just crises as to not alter more than needed.
+                }
+            }
+		}
+	}
+}
+
 # Merger of Rules
 # List of uninhabitable planets for the planet cracker's test fire.
 merg_is_crackable_planet = {
 	OR = {
 		uninhabitable_regular_planet = yes
 		# Planetary Diversity
-		is_planet_class = pc_acid
-		is_planet_class = pc_ammonia
-		is_planet_class = pc_ash
-		is_planet_class = pc_carbon
-		is_planet_class = pc_chthonian
-		is_planet_class = pc_crystal
-		is_planet_class = pc_diamond
-		is_planet_class = pc_ethane_ocean
-		is_planet_class = pc_floating
-		is_planet_class = pc_graveyard
-		is_planet_class = pc_hydrocarbon
-		is_planet_class = pc_iron
-		is_planet_class = pc_irradiated
-		is_planet_class = pc_methane
-		is_planet_class = pc_subglacial
-		is_planet_class = pc_sulfur
-		is_planet_class = pc_technoorganic
-		is_planet_class = pc_volcanic
+		AND = {
+			has_planetary_diversity = yes
+			OR = {
+				is_pd_exotic = yes
+				is_pd_unique = yes
+				is_planet_class = pc_diamond
+				is_planet_class = pc_volcanic
+				is_planet_class = pc_chthonian
+				is_planet_class = pc_ethane_ocean
+				is_planet_class = pc_hydrocarbon
+				is_planet_class = pc_subglacial
+				is_planet_class = pc_iron
+			}
+		}
 		# Gigastructural Engineering & More
 		is_planet_class = pc_red_toxic
 	}

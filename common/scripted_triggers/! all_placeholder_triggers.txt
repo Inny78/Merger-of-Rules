@@ -14,6 +14,8 @@ hfe_trigger_unemployed_auto_migrate = { always = no }
 is_civic_materialist = { always = no }
 is_civic_militarist = { always = no }
 is_khan_country_type = { always = no }
+is_pd_exotic = { always = no }
+is_pd_unique = { always = no }
 is_spy_empire = { always = no }
 is_xenophobic_isolationists = { always = no }
 prob_forced_armageddon_bombardment = { always = no }

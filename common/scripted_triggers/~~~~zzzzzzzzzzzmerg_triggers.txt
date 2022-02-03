@@ -294,6 +294,8 @@ habitable_planet = {
 		is_planet_class = pc_biofort
 		is_planet_class = pc_tidallygaia
 		is_planet_class = pc_tidallyaquatic
+		is_planet_class = pc_hot_gaia
+		is_planet_class = pc_cold_gaia
 		# Warship Girls R And MIST Species
 		is_planet_class = pc_wsg_port
 		is_planet_class = pc_shenhai
