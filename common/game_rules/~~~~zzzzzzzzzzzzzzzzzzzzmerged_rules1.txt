@@ -266,6 +266,11 @@ species_can_live_on_planet = {
 		}
 		has_trait = trait_machine_digital
 	}
+	# Human Fallen Empire
+	NAND = {
+		exists = root.controller
+		root.controller = { is_country_type = hfe_plague_zombie }
+	}
 	# Vanilla
 	if = {
 		limit = {
@@ -696,6 +701,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_gaia
 				is_planet_class = pc_hot_gaia
 				is_planet_class = pc_cold_gaia
+				is_planet_class = pc_sulfur
 				#Giga
 				is_planet_class = pc_ll_temperate
 				is_planet_class = pc_ll_foggy
@@ -844,7 +850,9 @@ species_can_live_on_planet = {
 				is_planet_class = pc_nuked
 				is_planet_class = pc_pdshroud
 				is_planet_class = pc_gaia
-				#Giga
+				is_planet_class = pc_hot_gaia
+				is_planet_class = pc_cold_gaia
+					#Giga
 				is_planet_class = pc_ll_temperate
 				is_planet_class = pc_ll_foggy
 				is_planet_class = pc_ll_torrid
