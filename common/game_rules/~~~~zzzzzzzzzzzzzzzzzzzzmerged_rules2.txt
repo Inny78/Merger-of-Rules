@@ -23,7 +23,7 @@ can_generate_leader_from_pop = {
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
 		# Ethics & Civics: Bug Branch/Redux
-		has_trait = trait_slave_gene
+		has_trait = trait_bugged_slave_gene
 		# Expanded Events / Expanded Traits, Civics, Pops, and More
 		has_trait = trait_memorex_comatos
 		has_trait = trait_infested_basic
@@ -712,7 +712,10 @@ can_colonize_with_pop = {
 	# Vanilla
 	if = {
 		limit = {
-			is_sapient = no
+			OR = { 
+				is_sapient = no
+				has_trait = trait_zombie
+			}
 		}
 		custom_tooltip = {
 			always = no
@@ -1129,6 +1132,14 @@ can_species_be_assembled = {
 				root = { check_modifier_value = { modifier = planet_pop_assembly_organic_add value > 0 } }
 			}
 			# Vanilla
+			else_if = {
+				limit = {
+					root.owner = { has_civic = civic_permanent_employment }
+				}
+				root = {
+					has_building = building_posthumous_employment_center
+				}
+			}
 			else = {
 				OR = {
 					root = {
@@ -1829,6 +1840,7 @@ can_enter_system_by_jump = {
 							everchanging_system = yes
 							katzen_jump_blocked_system = yes
 							has_star_flag = maginot_anti_jump_star
+							has_star_flag = siegfried_anti_jump_star
 						}
 					}
 					# Some Events of Outside Cluster
@@ -2174,6 +2186,11 @@ can_support_branch_offices = {
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_REGULAR_EMPIRE
 		is_regular_empire = yes
+		# Merger of Rules
+		NOR = {
+			is_country_type = gate_builders
+			is_country_type = awakened_marauders
+		}
 	}
 	# More Authorities
 	# As some mods allow megacorps to build branch offices in other megacorps, we need to check that we're not building one on our own empire.
@@ -2379,13 +2396,11 @@ can_build_branch_office_on_planet = {
 # This = country
 # Checked by is_criminal_syndicate trigger
 is_criminal_syndicate_rule = {
-	AND = {
-		is_megacorp = yes
-		OR = {
-			has_valid_civic = civic_criminal_heritage
-			# The Empty Vagrant
-			has_valid_civic = civic_ev_criminal_ship
-		}
+	is_megacorp = yes
+	OR = {
+		has_valid_civic = civic_criminal_heritage
+		# The Empty Vagrant
+		has_valid_civic = civic_ev_criminal_ship
 	}
 }
 
@@ -2974,3 +2989,4 @@ can_fill_ruler_job = {
 }
 
 # should_planetary_automate
+# can_dismiss_leader

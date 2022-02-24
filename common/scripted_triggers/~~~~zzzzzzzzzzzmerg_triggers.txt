@@ -10,9 +10,11 @@ is_megacorp = {
 		# Stellaris Evolved
 		has_authority = auth_tec_patrocorporate
 		# More Authorities
+		has_government = gov_imperial_domain_megacorp
 		has_authority = auth_corporate_imperial # Also in E&C Bug Branch
 		# Ethics and Civics - Bug Branch
-		has_authority = auth_corporate_democratic
+		has_authority = auth_bugged_corporate_democratic
+		has_authority = auth_bugged_corporate_imperial
 		# Expanded Traits, Civics, Pops, and More
 		has_authority = auth_private
 		has_authority = auth_cooperative # Also More Corporate Authorities
@@ -38,6 +40,10 @@ is_regular_empire = {
 		# Human Fallen Empire
 		is_country_type = human_fallen_empire
 		is_country_type = hfe_pirate
+		# Merger of Rules
+		# prevents these special countries from destroying their own buildings and districts in their colonies
+		is_country_type = gate_builders
+		is_country_type = awakened_marauders
 	}
 	NOT = { has_ethic = ethic_gestalt_consciousness }
 }
@@ -134,9 +140,8 @@ has_encountered_other_species = {
 		has_valid_civic = civic_symbiotic_race
 		has_valid_civic = civic_slave_race
 		# Ethics & Civics: Bug Branch
-		has_valid_civic = civic_evolutionary_architects
-		has_valid_civic = civic_slave_race_corpo
-		has_valid_civic = civic_evolutionary_architects_corpo
+		is_bugged_evolutionary_architects = yes
+		is_bugged_slave_race = yes
 		# Vanilla
 		num_communications > 0
 		any_owned_pop = {
@@ -430,6 +435,8 @@ is_autocracy = { #Power of one
 		has_authority = auth_private
 		# More Corporate Authorities
 		has_authority = auth_corporate_fiefdom
+		# Ethics and Civics Bug Branch
+		has_authority = auth_bugged_corporate_imperial
 	}
 }
 
@@ -449,6 +456,9 @@ is_democracy = { #Power of many
 		}
 		# Expanded Traits, Civics, Pops, and More
 		has_authority = auth_cooperative
+		# Ethics and Civics Bug Branch
+		has_authority = auth_bugged_direct_democratic
+		has_authority = auth_bugged_corporate_democratic
 	}
 }
 
@@ -587,6 +597,14 @@ default_endgame_early_start_triggers = {
 				}
 			}
 		}
+		NOR = {
+			# Nirvana Empire Project
+			has_global_flag = difficult_exe_invasion
+			# Star Wars: UnknownWorld Shipgirls Story
+			has_global_flag = afk_crisis_real
+			# Warship Girls R And MIST Species
+			has_global_flag = wg_crisis_insane
+		}
 	}
 }
 
@@ -652,15 +670,5 @@ has_total_war_cb = {
 				}
 			}
 		}
-	}
-}
-
-is_unfriendly = {
-	OR = {
-		is_homicidal = yes
-		has_valid_civic = civic_barbaric_despoilers
-		# Expanded Traits, Civics, Pops, and More
-		has_valid_civic = civic_living_hosts
-		has_valid_civic = civic_infestation
 	}
 }

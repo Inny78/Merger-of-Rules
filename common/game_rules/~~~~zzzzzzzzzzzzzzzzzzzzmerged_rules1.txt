@@ -278,7 +278,7 @@ species_can_live_on_planet = {
 		}
 		OR = {
 			has_trait = trait_hive_mind
-			has_trait = trait_happy_hive # Ethics & Civics Bug Branch
+			has_trait = trait_bugged_happy_hive # Ethics & Civics Bug Branch
 			AND = { #Necrophage Hive Mind can have Necrophytes
 				exists = root.owner
 				root.owner = {

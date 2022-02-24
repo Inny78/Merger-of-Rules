@@ -853,3 +853,12 @@ can_be_ev_investment_country = {
 	}
 	is_ai = yes
 }
+
+# Exalted Domination
+exalted_is_valid_as_vassal = {
+	OR = {
+		is_country_type = default
+		# The Empty Vagrant
+		is_country_type = default_ev
+	}
+}
