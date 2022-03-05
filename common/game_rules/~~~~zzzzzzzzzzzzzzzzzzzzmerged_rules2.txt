@@ -2437,7 +2437,6 @@ can_crossbreed_species_on_planet = {
 		NOR = {
 			is_archetype = WARSHIPGIRL
 			is_archetype = SHENHAI
-			is_archetype = UNITED_FLEET 
 		}
 	}
 	# Red Light Demeanor

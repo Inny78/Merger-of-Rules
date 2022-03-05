@@ -1,0 +1,49 @@
+# Dummy archetypes - to be overwritten by their respective mods.
+# Warship Girls R And MIST Species
+WARSHIPGIRL = { uses_modifiers = no }
+SHENHAI = { uses_modifiers = no }
+# SW:UnknownWorld Shipgirls Story
+STARSHIPGIRLS = { uses_modifiers = no }
+# Kancolle
+KANMUSU = { uses_modifiers = no }
+# Azur Lane Stellaris DLC
+KANSEN = { uses_modifiers = no }
+# Empire of Eeveelution
+POKEMON = { uses_modifiers = no }
+# AshArms Aquarius history
+Dolls = { uses_modifiers = no }
+# Expanded Traits, Civics, Pops, and More
+HUMANOID = { uses_modifiers = no }
+MAMMALIAN = { uses_modifiers = no }
+REPTILIAN = { uses_modifiers = no }
+AVIAN = { uses_modifiers = no }
+ARTHROPOID = { uses_modifiers = no }
+MOLUSCOID = { uses_modifiers = no }
+FUNGOID = { uses_modifiers = no }
+PLANTOID = { uses_modifiers = no }
+NECROID = { uses_modifiers = no }
+half_species = { uses_modifiers = no }
+half_species_special = { uses_modifiers = no }
+half_aberration = { uses_modifiers = no }
+half_perfect = { uses_modifiers = no }
+half_amalgamated = { uses_modifiers = no }
+# Aquatic Portraits mod
+JAYPEES_AQUATIC = { uses_modifiers = no }
+JAYPEES_BRAIN = { uses_modifiers = no }
+JAYPEES_CRAB = { uses_modifiers = no }
+JAYPEES_DOLPHIN = { uses_modifiers = no }
+JAYPEES_DUMBO = { uses_modifiers = no }
+JAYPEES_ELESQUID = { uses_modifiers = no }
+JAYPEES_FISH = { uses_modifiers = no }
+JAYPEES_HAIRTENTACLE = { uses_modifiers = no }
+JAYPEES_SEAL = { uses_modifiers = no }
+JAYPEES_SQUID = { uses_modifiers = no }
+JAYPEES_TURTLEHORSE = { uses_modifiers = no }
+# The DAL Species Mod
+DATEALIVE = { uses_modifiers = no }
+# Nyto Species Events Pack
+NYTO = { uses_modifiers = no }
+# Silfae's Portrait Revisited
+HOLOARCH = { uses_modifiers = no }
+# Cryogenesis Unofficial Species Pack
+sm_ELEMENTAL = { uses_modifiers = no }
