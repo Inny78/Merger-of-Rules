@@ -2776,8 +2776,13 @@ can_fill_worker_job = {
 		OR = {
 			is_being_purged = no
 			# Expanded Traits, Civics, Pops, and More
-			has_purge_type = { type = purge_displacement }
-			has_purge_type = { type = purge_neutering }
+			AND = {
+				has_expanded_pops = yes
+				OR = {
+					has_purge_type = { type = purge_displacement }
+					has_purge_type = { type = purge_neutering }
+				}
+			}
 		}
 		is_being_assimilated = no
 		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
@@ -2831,6 +2836,7 @@ can_fill_specialist_job = {
 			has_slavery_type = { type = slavery_indentured }
 			# Expanded Traits, Civics, Pops, and More
 			AND = {
+				has_expanded_pops = yes
 				NOT = { host_has_dlc = "Utopia" }
 				is_same_species = owner_main_species
 				owner = {
@@ -2940,7 +2946,7 @@ can_fill_ruler_job = {
 		}
 		can_fill_holosphere_ruler_job = yes
 	}
-	else_if = {
+	else = {
 		custom_tooltip = RULER_JOB_TRIGGER
 		hidden_trigger = {
 			NOT = { has_ethic = ethic_gestalt_consciousness }
@@ -2977,25 +2983,23 @@ can_fill_ruler_job = {
 		}
 	}
 	# Diagraphers Trait mod
-	else = {
-		hidden_trigger = {
-			has_holofrixit = yes
-			NAND = {
-				has_trait = trait_dimorphic_female
-				has_reproductive_politics = yes
-				owner = {
-					has_valid_civic = civic_patriarchy
-				}
+	hidden_trigger = {
+		has_holofrixit = yes
+		NAND = {
+			has_trait = trait_dimorphic_female
+			has_reproductive_politics = yes
+			owner = {
+				has_valid_civic = civic_patriarchy
 			}
-			OR = {
-				traits_restrict_specialist_jobs = no
-				has_pop_flag = allow_priest_traits
-				has_pop_flag = allow_researcher_traits
-				has_pop_flag = allow_administrator_traits
-				has_pop_flag = allow_merchant_traits
-				has_pop_flag = allow_executive_traits
-				owner = { has_valid_civic = civic_aristocratic_elite }
-			}
+		}
+		OR = {
+			traits_restrict_specialist_jobs = no
+			has_pop_flag = allow_priest_traits
+			has_pop_flag = allow_researcher_traits
+			has_pop_flag = allow_administrator_traits
+			has_pop_flag = allow_merchant_traits
+			has_pop_flag = allow_executive_traits
+			owner = { has_valid_civic = civic_aristocratic_elite }
 		}
 	}
 }
