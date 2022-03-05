@@ -43,6 +43,8 @@ can_generate_leader_from_pop = {
 				has_technology = tech_synthetic_leaders
 				has_authority = auth_machine_intelligence
 				is_mechanical_empire = yes
+				# Girls Frontline
+				has_technology = tech_gf_mind_upgrade_1
 			}
 		}
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
@@ -99,6 +101,8 @@ can_generate_military_leader_from_pop = {
 				has_technology = tech_synthetic_leaders
 				has_authority = auth_machine_intelligence
 				is_mechanical_empire = yes
+				# Girls Frontline
+				has_technology = tech_gf_mind_upgrade_1
 				# Holofrixit Revisited / Silfae's Portraits: Revisited
 				AND = {
 					has_origin = origin_holofrixit
@@ -178,6 +182,8 @@ can_release_vassal_from_species = {
 			has_trait = trait_zombie
 			# Plentiful Perks
 			has_trait = trait_plentiful_traditions_pt_cocoon
+			# Girls Frontline
+			has_trait = trait_doll
 			# Expanded Events / Expanded Traits, Civics, Pops, and More
 			has_trait = trait_memorex_comatos
 			has_trait = trait_infested_basic
@@ -935,6 +941,8 @@ can_species_procreate = {
 		has_trait = trait_hive_mind_overlord
 		# Diagraphers Trait Mod
 		has_trait = trait_dimorphic_male
+		# Girls Frontline
+		has_trait = trait_doll
 	}
 	NAND = {
 		root = { has_modifier = slave_colony }
@@ -2143,6 +2151,8 @@ can_build_branch_offices = {
 			has_valid_civic = civic_galactic_sovereign_megacorp
 			# Arknights Near Future
 			has_valid_civic = civic_business_union
+			# Girls Frontline
+			has_civic = civic_gf_GK
 		}
 	}
 }
@@ -2181,6 +2191,8 @@ can_support_branch_offices = {
 			has_valid_civic = civic_galactic_sovereign_megacorp
 			# Arknights Near Future
 			has_valid_civic = civic_business_union
+			# Girls Frontline
+			has_civic = civic_gf_GK
 		}
 	}
 	custom_tooltip = {

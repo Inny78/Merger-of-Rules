@@ -14,6 +14,7 @@ civic_ev_criminal_ship = { potential = { always = no } }
 civic_evolutionary_architects = { potential = { always = no } }
 civic_evolutionary_architects_corpo = { potential = { always = no } }
 civic_galactic_superpower = { potential = { always = no } }
+civic_gf_GK = { potential = { always = no } }
 civic_harm_hive = { potential = { always = no } }
 civic_harm_machine = { potential = { always = no } }
 civic_hive_strong_connection = { potential = { always = no } }

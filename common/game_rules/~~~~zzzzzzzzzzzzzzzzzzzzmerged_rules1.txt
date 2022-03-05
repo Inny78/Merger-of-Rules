@@ -243,6 +243,7 @@ species_can_live_on_planet = {
 		NOR = {
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
+			has_trait = trait_doll # Girls Frontline
 			AND = {
 				has_fcss = yes
 				has_trait = trait_cybernetic
@@ -302,6 +303,8 @@ species_can_live_on_planet = {
 			has_trait = trait_pc_ll_ammonia_preference
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
+			# Girls Frontline
+			has_trait = trait_doll
 		}
 	}
 	NAND = {
@@ -316,6 +319,8 @@ species_can_live_on_planet = {
 			has_trait = trait_pc_ll_sulfur_preference
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
+			# Girls Frontline
+			has_trait = trait_doll
 		}
 	}
 	NAND = {
@@ -371,6 +376,8 @@ species_can_live_on_planet = {
 			has_trait = trait_pc_ll_ammonia_preference
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
+			# Girls Frontline
+			has_trait = trait_doll
 		}
 	}
 	NAND = {
@@ -426,6 +433,8 @@ species_can_live_on_planet = {
 			has_trait = trait_pc_ll_sulfur_preference
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
+			# Girls Frontline
+			has_trait = trait_doll
 		}
 	}
 	NAND = {
@@ -434,6 +443,8 @@ species_can_live_on_planet = {
 			has_trait = trait_pc_acid_preference 
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
+			# Girls Frontline
+			has_trait = trait_doll
 		}
 	}
 	NAND = {
@@ -484,6 +495,8 @@ species_can_live_on_planet = {
 			has_trait = trait_pc_acid_preference
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
+			# Girls Frontline
+			has_trait = trait_doll
 		}
 	}
 	NAND = {
@@ -498,6 +511,8 @@ species_can_live_on_planet = {
 			has_trait = trait_pc_ll_methane_preference
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
+			# Girls Frontline
+			has_trait = trait_doll
 		}
 	}
 	NAND = {
@@ -553,6 +568,8 @@ species_can_live_on_planet = {
 			has_trait = trait_pc_ll_methane_preference
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
+			# Girls Frontline
+			has_trait = trait_doll
 		}
 	}
 	NAND = {
@@ -567,6 +584,8 @@ species_can_live_on_planet = {
 			has_trait = trait_pc_ll_ash_preference
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
+			# Girls Frontline
+			has_trait = trait_doll
 		}
 	}
 	NAND = {
@@ -622,6 +641,8 @@ species_can_live_on_planet = {
 			has_trait = trait_pc_ll_ash_preference
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
+			# Girls Frontline
+			has_trait = trait_doll
 		}
 	}
 	NAND = {
