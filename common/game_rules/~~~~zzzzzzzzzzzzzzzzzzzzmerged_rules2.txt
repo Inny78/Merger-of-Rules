@@ -373,6 +373,17 @@ can_take_hostile_actions = {
 			always = no
 		}
 	}
+	else_if = {
+		limit = {
+			exists = overlord
+			overlord = { is_same_value = root }
+			is_subject_type = satrapy
+		}
+		custom_tooltip = {
+			text = "CAN_TAKE_HOSTILE_ACTION_OVERLORD"
+			always = no
+		}
+	}
 	# ACOT
 	else_if = {
 		limit = {
@@ -2906,7 +2917,31 @@ can_fill_specialist_job = {
 #this/root = pop
 #checked if job's possible_precalc = can_fill_ruler_job
 can_fill_ruler_job = {
+	# Diagraphers Trait mod
 	if = {
+		limit = {
+			has_holofrixit = yes
+		}
+		hidden_trigger = {
+			NAND = {
+				has_trait = trait_dimorphic_female
+				has_reproductive_politics = yes
+				owner = {
+					has_valid_civic = civic_patriarchy
+				}
+			}
+			OR = {
+				traits_restrict_specialist_jobs = no
+				has_pop_flag = allow_priest_traits
+				has_pop_flag = allow_researcher_traits
+				has_pop_flag = allow_administrator_traits
+				has_pop_flag = allow_merchant_traits
+				has_pop_flag = allow_executive_traits
+				owner = { has_valid_civic = civic_aristocratic_elite }
+			}
+		}
+	}
+	else_if = {
 		limit = {
 			exists = owner
 			owner = {
@@ -2979,26 +3014,6 @@ can_fill_ruler_job = {
 				}
 				divinity_right_to_work_job_check_trigger_ruler = yes
 			}
-		}
-	}
-	# Diagraphers Trait mod
-	hidden_trigger = {
-		has_holofrixit = yes
-		NAND = {
-			has_trait = trait_dimorphic_female
-			has_reproductive_politics = yes
-			owner = {
-				has_valid_civic = civic_patriarchy
-			}
-		}
-		OR = {
-			traits_restrict_specialist_jobs = no
-			has_pop_flag = allow_priest_traits
-			has_pop_flag = allow_researcher_traits
-			has_pop_flag = allow_administrator_traits
-			has_pop_flag = allow_merchant_traits
-			has_pop_flag = allow_executive_traits
-			owner = { has_valid_civic = civic_aristocratic_elite }
 		}
 	}
 }
