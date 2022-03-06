@@ -45,7 +45,7 @@ is_regular_empire = {
 		is_country_type = gate_builders
 		is_country_type = awakened_marauders
 	}
-	NOT = { has_ethic = ethic_gestalt_consciousness }
+	is_gestalt = no
 }
 
 is_fallen_empire = {

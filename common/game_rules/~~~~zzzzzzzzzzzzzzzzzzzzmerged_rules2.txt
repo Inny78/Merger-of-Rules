@@ -2920,29 +2920,6 @@ can_fill_ruler_job = {
 	# Diagraphers Trait mod
 	if = {
 		limit = {
-			has_holofrixit = yes
-		}
-		hidden_trigger = {
-			NAND = {
-				has_trait = trait_dimorphic_female
-				has_reproductive_politics = yes
-				owner = {
-					has_valid_civic = civic_patriarchy
-				}
-			}
-			OR = {
-				traits_restrict_specialist_jobs = no
-				has_pop_flag = allow_priest_traits
-				has_pop_flag = allow_researcher_traits
-				has_pop_flag = allow_administrator_traits
-				has_pop_flag = allow_merchant_traits
-				has_pop_flag = allow_executive_traits
-				owner = { has_valid_civic = civic_aristocratic_elite }
-			}
-		}
-	}
-	else_if = {
-		limit = {
 			exists = owner
 			owner = {
 				has_origin = origin_necrophage
@@ -2979,6 +2956,29 @@ can_fill_ruler_job = {
 			}
 		}
 		can_fill_holosphere_ruler_job = yes
+	}
+	else_if = {
+		limit = {
+			has_holofrixit = yes
+		}
+		hidden_trigger = {
+			NAND = {
+				has_trait = trait_dimorphic_female
+				has_reproductive_politics = yes
+				owner = {
+					has_valid_civic = civic_patriarchy
+				}
+			}
+			OR = {
+				traits_restrict_specialist_jobs = no
+				has_pop_flag = allow_priest_traits
+				has_pop_flag = allow_researcher_traits
+				has_pop_flag = allow_administrator_traits
+				has_pop_flag = allow_merchant_traits
+				has_pop_flag = allow_executive_traits
+				owner = { has_valid_civic = civic_aristocratic_elite }
+			}
+		}
 	}
 	else = {
 		custom_tooltip = RULER_JOB_TRIGGER
