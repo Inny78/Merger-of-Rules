@@ -177,21 +177,6 @@ merg_is_doomed_planet = {
 	}
 }
 
-# Ethics & Civics stuff for compatibility
-is_socialism = {
-	OR = {
-		has_ethic = ethic_fanatic_socialism
-		has_ethic = ethic_socialism
-	}
-}
-
-is_capitalism = {
-	OR = {
-		has_ethic = ethic_fanatic_capitalism
-		has_ethic = ethic_capitalism
-	}
-}
-
 is_green = {
  	OR = {
  		has_ethic = ethic_fanatic_green
