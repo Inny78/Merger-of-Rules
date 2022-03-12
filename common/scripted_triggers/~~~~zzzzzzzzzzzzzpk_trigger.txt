@@ -2386,6 +2386,24 @@ can_destroy_planet_with_azur_shippart_W3_T3 = {
 	}
 }
 
+# Nyto Species Pack
+can_destroy_planet_with_tech_GFnyto_accelerating_coil3= {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		is_a_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+			has_active_building = building_phanon_psg # AOT
+		}
+	}
+}
+
 # Vanilla triggers
 is_a_planet = {
 	is_star = no

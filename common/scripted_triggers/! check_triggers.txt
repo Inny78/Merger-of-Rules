@@ -52,6 +52,11 @@ has_uac = {
 	has_global_flag = has_uac_mod
 }
 
+# Coop: Start in Teams
+has_coop_teams = {
+	has_global_flag = coop_base_mod
+}
+
 # Diagraphers Trait Mod
 has_diag_trait = {
 	has_global_flag = dtraits_randomization_flag

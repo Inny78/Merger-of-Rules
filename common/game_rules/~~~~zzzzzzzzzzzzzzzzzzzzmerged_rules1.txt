@@ -169,6 +169,11 @@ can_add_claim = {
 			}
 		}
 	}
+	# Reworked Advanced Ascension
+	custom_tooltip = {
+		fail_text = AAR_failtips_no_claim
+		NOT = { root = { has_country_flag = AAR_flg_cntr_no_claim } }
+	}
 }
 
 # Root = taker country
@@ -489,7 +494,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_giga_maginot_world
 				is_planet_class = pc_giga_maginot_gas_giant
 			}
-			has_building = building_acid_maker
+			has_active_building = building_acid_maker
 		}
 		NOR = { 
 			has_trait = trait_pc_acid_preference

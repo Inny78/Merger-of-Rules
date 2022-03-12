@@ -710,8 +710,24 @@ can_colonize_outside_borders = {
 	}
 	exists = solar_system
 	solar_system = {
-		not = {
-			exists = owner
+		OR = {
+			NAND = {
+				has_coop_teams = yes
+				exists = owner
+			}
+			AND = {
+				has_coop_teams = yes
+				exists = solar_system
+				solar_system = {
+					exists = owner
+					owner = {
+						has_country_flag = is_in_coop_with@root
+						#is_in_federation_with = root
+						has_policy_flag = coop_colony_policy_yes
+						not = { has_global_flag = prevent_colony_outside }
+					}
+				}
+			}
 		}
 	}
 }
@@ -2156,6 +2172,10 @@ can_enter_system_by_jump = {
 					}
 				}
 			}
+			# Reworked Advanced Ascension
+			root = {
+				has_country_flag = AAR_flg_cntr_JUMP_webway_TGT
+			}
 		}
 	}
 }
@@ -2511,8 +2531,6 @@ can_support_branch_offices = {
 			}
 			# Azur Lane Stellaris DLC
 			has_authority = auth_azur_lane_1
-			# Reworked Advanced Ascension
-			is_subject_type = AAR_SBJ_subsidiary
 			# More Corporate Authorities
 			has_valid_civic = civic_galactic_sovereign_megacorp
 			# Arknights Near Future

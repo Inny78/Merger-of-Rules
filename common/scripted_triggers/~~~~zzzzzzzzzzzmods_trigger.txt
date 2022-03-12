@@ -77,6 +77,14 @@ shadowgate_is_military_fleet = {
     }
 }
 
+shadowgate_aggressor_is_valid_cb_target = {
+    NOR = { is_in_federation_with = root.from is_hostile = root.from has_casus_belli = { type = cb_shadowrift_attacked target = root.from } }
+    root.from = { OR = { merg_is_default_empire = yes shadowgate_is_fe = yes shadowgate_is_ae = yes } }
+    OR = { is_subject = no overlord = { NOT = { is_same_value = root.from } } }
+    root.fromfrom.solar_system = { has_access_fleet = event_target:shadowgate_assaulted_owner }
+    has_communications = root.from
+}
+
 # Expanding a bit the country list of Gigastructural Engineering & More
 ehof_default_country = {
 	OR = {
@@ -887,5 +895,16 @@ exalted_is_valid_as_vassal = {
 		is_country_type = default
 		# The Empty Vagrant
 		is_country_type = default_ev
+	}
+}
+
+# New Enclaves
+is_genocidal = {
+	OR = {
+		has_valid_civic = civic_fanatic_purifiers
+		has_valid_civic = civic_hive_devouring_swarm
+		has_valid_civic = civic_machine_terminator
+		# Expanded Traits, Civics, Pops, and More
+		has_valid_civic = civic_infestation
 	}
 }
