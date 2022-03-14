@@ -700,6 +700,7 @@ can_colonize_outside_borders = {
 	exists = root
 	root = {
 		OR = {
+			has_coop_teams = yes
 			# Human Fallen Empires
 			is_country_type = hfe_features_exodus
 			# The Empty Vagrant
@@ -717,14 +718,13 @@ can_colonize_outside_borders = {
 			}
 			AND = {
 				has_coop_teams = yes
-				exists = solar_system
-				solar_system = {
-					exists = owner
-					owner = {
-						has_country_flag = is_in_coop_with@root
-						#is_in_federation_with = root
-						has_policy_flag = coop_colony_policy_yes
-						not = { has_global_flag = prevent_colony_outside }
+				exists = owner
+				owner = {
+					has_country_flag = is_in_coop_with@root
+					#is_in_federation_with = root
+					has_policy_flag = coop_colony_policy_yes
+					not = {
+						has_global_flag = prevent_colony_outside
 					}
 				}
 			}
