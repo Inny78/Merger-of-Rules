@@ -988,7 +988,7 @@ species_has_happiness = {
 				}
 				AND = {
 					has_animated_synth = yes
-					NOT = {
+					NAND = {
 						from = {
 							has_authority = auth_machine_intelligence
 						}
