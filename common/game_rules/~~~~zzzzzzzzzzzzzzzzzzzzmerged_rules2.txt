@@ -1259,7 +1259,11 @@ can_species_be_assembled = {
 					}
 				}
 				AND = {
-					has_trait = trait_hive_mind
+					OR = {
+						has_trait = trait_hive_mind
+						# Ethics and Civics - Bug Branch
+						has_trait = trait_bugged_happy_hive
+					}
 					# Expanded Gestalts
 					NOT = {
 						has_trait = trait_hive_mind_overlord

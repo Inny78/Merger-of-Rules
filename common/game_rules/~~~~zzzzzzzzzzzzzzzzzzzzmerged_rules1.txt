@@ -2,14 +2,15 @@
 #There are still multiple hard-coded rules that apply in addition to these.
 #If rules here evaluate to true, there might still be other rules that make the action unavailable.
 #If a rule here evaluates to false the action will become unavailable
-
 # Root = target country
 # This = country
 is_valid_rival = {
 	# Powerful & Realistic Orbital Bombardments
 	hidden_trigger = {
 		if = {
-			limit = { has_power_bombard = yes }
+			limit = {
+				has_power_bombard = yes
+			}
 			always = yes
 		}
 	}
@@ -22,8 +23,14 @@ is_valid_rival = {
 					merg_is_default_empire = no
 				}
 				AND = {
-					relative_power = { who = prev value >= inferior }
-					relative_power = { who = prev value <= superior }
+					relative_power = {
+						who = prev
+						value >= inferior
+					}
+					relative_power = {
+						who = prev
+						value <= superior
+					}
 				}
 			}
 		}
@@ -36,7 +43,9 @@ can_add_claim = {
 	hidden_trigger = {
 		if = {
 			limit = {
-				root = { merg_is_default_empire = no }
+				root = {
+					merg_is_default_empire = no
+				}
 			}
 			always = yes
 		}
@@ -57,7 +66,8 @@ can_add_claim = {
 					}
 				}
 			}
-			AND = { # Expanded Traits, Civics, Pops, and More
+			AND = {
+				# Expanded Traits, Civics, Pops, and More
 				has_expanded_pops = yes
 				root = {
 					has_policy_flag = liberation_wars
@@ -65,19 +75,33 @@ can_add_claim = {
 					has_valid_ai_personality = yes
 					has_ai_personality = democratic_crusaders
 				}
-				owner = { NOT = { has_authority = auth_democratic } }
-				owner = { NOT = { has_authority = auth_cooperative } }
+				owner = {
+					NOT = {
+						has_authority = auth_democratic
+					}
+				}
+				owner = {
+					NOT = {
+						has_authority = auth_cooperative
+					}
+				}
 			}
 			AND = {
 				exists = owner
-				owner = { is_gestalt = yes }
+				owner = {
+					is_gestalt = yes
+				}
 			}
 			AND = {
 				exists = owner
 				owner = {
 					any_war = {
-						any_attacker = { is_same_value = prevprev }
-						any_defender = { is_same_value = root }
+						any_attacker = {
+							is_same_value = prevprev
+						}
+						any_defender = {
+							is_same_value = root
+						}
 					}
 				}
 			}
@@ -94,7 +118,7 @@ can_add_claim = {
 					is_country_type = awakened_fallen_empire
 					# ACOT
 					is_country_type = original_empire_active
-					is_country_type = sofe_light_seeker					
+					is_country_type = sofe_light_seeker
 				}
 			}
 		}
@@ -102,15 +126,23 @@ can_add_claim = {
 	custom_tooltip = {
 		fail_text = CANNOT_ADD_CLAIM_DEVOURING_SWARM
 		NAND = {
-			root = { has_valid_civic = civic_hive_devouring_swarm }
-			root = { is_lithoid_empire = no }
+			root = {
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+			root = {
+				is_lithoid_empire = no
+			}
 		}
 	}
 	custom_tooltip = {
 		fail_text = CANNOT_ADD_CLAIM_DEVOURING_SWARM_LITHOID
 		NAND = {
-			root = { has_valid_civic = civic_hive_devouring_swarm }
-			root = { is_lithoid_empire = yes }
+			root = {
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+			root = {
+				is_lithoid_empire = yes
+			}
 		}
 	}
 	custom_tooltip = {
@@ -129,15 +161,23 @@ can_add_claim = {
 		fail_text = CANNOT_ADD_CLAIM_PURIFIERS
 		NAND = {
 			exists = owner
-			root = { has_valid_civic = civic_fanatic_purifiers }
-			NOT = {	owner = { is_same_species = root } }
+			root = {
+				has_valid_civic = civic_fanatic_purifiers
+			}
+			NOT = {
+				owner = {
+					is_same_species = root
+				}
+			}
 		}
 	}
 	custom_tooltip = {
 		fail_text = CANNOT_ADD_CLAIM_EXTERMINATOR
 		NAND = {
 			exists = owner
-			root = { has_valid_civic = civic_machine_terminator }
+			root = {
+				has_valid_civic = civic_machine_terminator
+			}
 			owner = {
 				NOR = {
 					is_same_species = root
@@ -172,7 +212,11 @@ can_add_claim = {
 	# Reworked Advanced Ascension
 	custom_tooltip = {
 		fail_text = AAR_failtips_no_claim
-		NOT = { root = { has_country_flag = AAR_flg_cntr_no_claim } }
+		NOT = {
+			root = {
+				has_country_flag = AAR_flg_cntr_no_claim
+			}
+		}
 	}
 }
 
@@ -188,7 +232,7 @@ can_get_claim_from_lost_system = {
 			# ACOT
 			is_country_type = ascended_empire
 			is_country_type = original_empire_active
-			is_country_type = sofe_light_seeker			
+			is_country_type = sofe_light_seeker
 		}
 		root = {
 			OR = {
@@ -198,23 +242,29 @@ can_get_claim_from_lost_system = {
 				# ACOT
 				is_country_type = ascended_empire
 				is_country_type = original_empire_active
-				is_country_type = sofe_light_seeker				
+				is_country_type = sofe_light_seeker
 			}
 		}
 	}
 	custom_tooltip = {
 		fail_text = CANNOT_ADD_CLAIM_DEVOURING_SWARM
-		NOT = { has_valid_civic = civic_hive_devouring_swarm }
+		NOT = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
 	}
 	custom_tooltip = {
 		fail_text = CANNOT_ADD_CLAIM_ASSIMILATOR
-		NOT = { has_valid_civic = civic_machine_assimilator }
+		NOT = {
+			has_valid_civic = civic_machine_assimilator
+		}
 	}
 	custom_tooltip = {
 		fail_text = CANNOT_ADD_CLAIM_PURIFIERS
 		NAND = {
 			has_valid_civic = civic_fanatic_purifiers
-			NOT = {	is_same_species = root }
+			NOT = {
+				is_same_species = root
+			}
 		}
 	}
 	custom_tooltip = {
@@ -232,7 +282,6 @@ can_get_claim_from_lost_system = {
 
 # species_has_citizenship
 # should_abduct_pop
-
 #Root = planet
 #This = species
 species_can_live_on_planet = {
@@ -248,7 +297,7 @@ species_can_live_on_planet = {
 		NOR = {
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
-			has_trait = trait_doll # Girls Frontline
+			has_trait = trait_doll			# Girls Frontline
 			AND = {
 				has_fcss = yes
 				has_trait = trait_cybernetic
@@ -260,7 +309,7 @@ species_can_live_on_planet = {
 				exists = root.owner
 				root.owner = {
 					has_authority = auth_machine_intelligence
-					has_valid_civic = civic_machine_assimilator # Assimilator empire
+					has_valid_civic = civic_machine_assimilator					# Assimilator empire
 				}
 			}
 		}
@@ -268,29 +317,38 @@ species_can_live_on_planet = {
 	# Expanded Gestalts
 	NAND = {
 		root = {
-			NOT = { is_planet_class = pc_matryoshka }
+			NOT = {
+				is_planet_class = pc_matryoshka
+			}
 		}
 		has_trait = trait_machine_digital
 	}
 	# Human Fallen Empire
 	NAND = {
 		exists = root.controller
-		root.controller = { is_country_type = hfe_plague_zombie }
+		root.controller = {
+			is_country_type = hfe_plague_zombie
+		}
 	}
 	# Vanilla
 	if = {
 		limit = {
-			root = { is_planet_class = pc_hive }
+			root = {
+				is_planet_class = pc_hive
+			}
 		}
 		OR = {
 			has_trait = trait_hive_mind
-			has_trait = trait_bugged_happy_hive # Ethics & Civics Bug Branch
-			AND = { #Necrophage Hive Mind can have Necrophytes
+			has_trait = trait_bugged_happy_hive			# Ethics & Civics Bug Branch
+			AND = {
+				#Necrophage Hive Mind can have Necrophytes
 				exists = root.owner
 				root.owner = {
 					is_hive_empire = yes
 					has_origin = origin_necrophage
-					prev = { species_can_be_necrophaged = yes }
+					prev = {
+						species_can_be_necrophaged = yes
+					}
 				}
 			}
 		}
@@ -303,7 +361,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ll_ammonia
 			}
 		}
-		NOR = { 
+		NOR = {
 			has_trait = trait_pc_ammonia_preference
 			has_trait = trait_pc_ll_ammonia_preference
 			has_trait = trait_machine_unit
@@ -319,7 +377,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ll_sulfur
 			}
 		}
-		NOR = { 
+		NOR = {
 			has_trait = trait_pc_sulfur_preference
 			has_trait = trait_pc_ll_sulfur_preference
 			has_trait = trait_machine_unit
@@ -329,54 +387,33 @@ species_can_live_on_planet = {
 		}
 	}
 	NAND = {
-		root = { 
+		root = {
 			OR = {
-			is_planet_class = pc_habitat 
-			is_planet_class = pc_ringworld_habitable
-			is_planet_class = pc_relic
-			is_planet_class = pc_milarc_relic
-			is_planet_class = pc_pd_barren_hab
-			is_planet_class = pc_pd_barren_cold_hab
-			is_planet_class = pc_pd_frozen_hab
-			is_planet_class = pc_pd_molten_hab
-			is_planet_class = pc_pd_hothouse_hab
-			is_planet_class = pc_pd_toxic_hab
-			is_planet_class = pc_pd_gas_giant_hab
-			is_planet_class = pc_pd_asteroid_hab
-			is_planet_class = pc_ecocity
-			is_planet_class = pc_corpoarc
-			is_planet_class = pc_palacearc
-			is_planet_class = pc_capitalarc
-			is_planet_class = pc_necropolis
-			is_planet_class = pc_machine_necropolis
-			is_planet_class = pc_necrohive
-			is_planet_class = pc_milarc
-			is_planet_class = pc_city
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_graveyard
-			is_planet_class = pc_technoorganic
-			#Giga
-			is_planet_class = pc_ringworld_city
-			is_planet_class = pc_squareworld_habitable
-			is_planet_class = pc_equatorial_shipyard
-			is_planet_class = pc_giga_penrose_habitable
-			is_planet_class = pc_gigaorbital_ring
-			is_planet_class = pc_interstellar_habitat
-			is_planet_class = pc_interstellar_ringworld_habitable
-			is_planet_class = pc_giga_planetary_computer
-			is_planet_class = pc_habitable_gas_giant
-			is_planet_class = pc_ehof_habitat
-			is_planet_class = pc_alderson_slice_ecu
-			is_planet_class = pc_alderson_slice_pc
-			is_planet_class = pc_alderson_slice_hive
-			is_planet_class = pc_ringworld_hive
-			is_planet_class = pc_giga_maginot_world
-			is_planet_class = pc_giga_maginot_gas_giant
+				is_planet_class = pc_habitat
+				is_planet_class = pc_ringworld_habitable
+				is_planet_class = pc_relic
+				is_planet_class = pc_city
+				# Planetary Diversity
+				is_planet_class = pc_milarc_relic
+				is_planet_class = pc_ecocity
+				is_planet_class = pc_corpoarc
+				is_planet_class = pc_palacearc
+				is_planet_class = pc_capitalarc
+				is_planet_class = pc_necropolis
+				is_planet_class = pc_machine_necropolis
+				is_planet_class = pc_necrohive
+				is_planet_class = pc_milarc
+				is_planet_class = pc_floating
+				is_planet_class = pc_crystal
+				is_planet_class = pc_graveyard
+				is_planet_class = pc_technoorganic
+				is_pd_habitat = yes
+				# Gigastructural Engineering & More
+				giga_habitable_structure = yes
 			}
-			has_modifier = pdammoniaatmosphere 
+			has_modifier = pdammoniaatmosphere
 		}
-		NOR = { 
+		NOR = {
 			has_trait = trait_pc_ammonia_preference
 			has_trait = trait_pc_ll_ammonia_preference
 			has_trait = trait_machine_unit
@@ -386,20 +423,14 @@ species_can_live_on_planet = {
 		}
 	}
 	NAND = {
-		root = { 
+		root = {
 			OR = {
 				is_planet_class = pc_habitat
 				is_planet_class = pc_ringworld_habitable
 				is_planet_class = pc_relic
+				is_planet_class = pc_city
+				# Planetary Diversity
 				is_planet_class = pc_milarc_relic
-				is_planet_class = pc_pd_barren_hab
-				is_planet_class = pc_pd_barren_cold_hab
-				is_planet_class = pc_pd_frozen_hab
-				is_planet_class = pc_pd_molten_hab
-				is_planet_class = pc_pd_hothouse_hab
-				is_planet_class = pc_pd_toxic_hab
-				is_planet_class = pc_pd_gas_giant_hab
-				is_planet_class = pc_pd_asteroid_hab
 				is_planet_class = pc_ecocity
 				is_planet_class = pc_corpoarc
 				is_planet_class = pc_palacearc
@@ -408,32 +439,17 @@ species_can_live_on_planet = {
 				is_planet_class = pc_machine_necropolis
 				is_planet_class = pc_necrohive
 				is_planet_class = pc_milarc
-				is_planet_class = pc_city
 				is_planet_class = pc_floating
 				is_planet_class = pc_crystal
 				is_planet_class = pc_graveyard
 				is_planet_class = pc_technoorganic
-				#Giga
-				is_planet_class = pc_ringworld_city
-				is_planet_class = pc_squareworld_habitable
-				is_planet_class = pc_equatorial_shipyard
-				is_planet_class = pc_giga_penrose_habitable
-				is_planet_class = pc_gigaorbital_ring
-				is_planet_class = pc_interstellar_habitat
-				is_planet_class = pc_interstellar_ringworld_habitable
-				is_planet_class = pc_giga_planetary_computer
-				is_planet_class = pc_habitable_gas_giant
-				is_planet_class = pc_ehof_habitat
-				is_planet_class = pc_alderson_slice_ecu
-				is_planet_class = pc_alderson_slice_pc
-				is_planet_class = pc_alderson_slice_hive
-				is_planet_class = pc_ringworld_hive
-				is_planet_class = pc_giga_maginot_world
-				is_planet_class = pc_giga_maginot_gas_giant
+				is_pd_habitat = yes
+				# Gigastructural Engineering & More
+				giga_habitable_structure = yes
 			}
-			has_modifier = pdsulfuratmosphere 
+			has_modifier = pdsulfuratmosphere
 		}
-		NOR = { 
+		NOR = {
 			has_trait = trait_pc_sulfur_preference
 			has_trait = trait_pc_ll_sulfur_preference
 			has_trait = trait_machine_unit
@@ -443,9 +459,11 @@ species_can_live_on_planet = {
 		}
 	}
 	NAND = {
-		root = { is_planet_class = pc_acid }
-		NOR = { 
-			has_trait = trait_pc_acid_preference 
+		root = {
+			is_planet_class = pc_acid
+		}
+		NOR = {
+			has_trait = trait_pc_acid_preference
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
 			# Girls Frontline
@@ -453,20 +471,14 @@ species_can_live_on_planet = {
 		}
 	}
 	NAND = {
-		root = { 
+		root = {
 			OR = {
-				is_planet_class = pc_habitat 
+				is_planet_class = pc_habitat
 				is_planet_class = pc_ringworld_habitable
 				is_planet_class = pc_relic
+				is_planet_class = pc_city
+				# Planetary Diversity
 				is_planet_class = pc_milarc_relic
-				is_planet_class = pc_pd_barren_hab
-				is_planet_class = pc_pd_barren_cold_hab
-				is_planet_class = pc_pd_frozen_hab
-				is_planet_class = pc_pd_molten_hab
-				is_planet_class = pc_pd_hothouse_hab
-				is_planet_class = pc_pd_toxic_hab
-				is_planet_class = pc_pd_gas_giant_hab
-				is_planet_class = pc_pd_asteroid_hab
 				is_planet_class = pc_ecocity
 				is_planet_class = pc_corpoarc
 				is_planet_class = pc_palacearc
@@ -475,28 +487,13 @@ species_can_live_on_planet = {
 				is_planet_class = pc_machine_necropolis
 				is_planet_class = pc_necrohive
 				is_planet_class = pc_milarc
-				is_planet_class = pc_city
-				#Giga
-				is_planet_class = pc_ringworld_city
-				is_planet_class = pc_squareworld_habitable
-				is_planet_class = pc_equatorial_shipyard
-				is_planet_class = pc_giga_penrose_habitable
-				is_planet_class = pc_gigaorbital_ring
-				is_planet_class = pc_interstellar_habitat
-				is_planet_class = pc_interstellar_ringworld_habitable
-				is_planet_class = pc_giga_planetary_computer
-				is_planet_class = pc_habitable_gas_giant
-				is_planet_class = pc_ehof_habitat
-				is_planet_class = pc_alderson_slice_ecu
-				is_planet_class = pc_alderson_slice_pc
-				is_planet_class = pc_alderson_slice_hive
-				is_planet_class = pc_ringworld_hive
-				is_planet_class = pc_giga_maginot_world
-				is_planet_class = pc_giga_maginot_gas_giant
+				is_pd_habitat = yes
+				# Gigastructural Engineering & More
+				giga_habitable_structure = yes
 			}
 			has_active_building = building_acid_maker
 		}
-		NOR = { 
+		NOR = {
 			has_trait = trait_pc_acid_preference
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
@@ -511,7 +508,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ll_methane
 			}
 		}
-		NOR = { 
+		NOR = {
 			has_trait = trait_pc_methane_preference
 			has_trait = trait_pc_ll_methane_preference
 			has_trait = trait_machine_unit
@@ -521,20 +518,14 @@ species_can_live_on_planet = {
 		}
 	}
 	NAND = {
-		root = { 
+		root = {
 			OR = {
-				is_planet_class = pc_habitat 
+				is_planet_class = pc_habitat
 				is_planet_class = pc_ringworld_habitable
-				is_planet_class = pc_relic 
+				is_planet_class = pc_relic
+				is_planet_class = pc_city
+				# Planetary Diversity
 				is_planet_class = pc_milarc_relic
-				is_planet_class = pc_pd_barren_hab
-				is_planet_class = pc_pd_barren_cold_hab
-				is_planet_class = pc_pd_frozen_hab
-				is_planet_class = pc_pd_molten_hab
-				is_planet_class = pc_pd_hothouse_hab
-				is_planet_class = pc_pd_toxic_hab
-				is_planet_class = pc_pd_gas_giant_hab
-				is_planet_class = pc_pd_asteroid_hab
 				is_planet_class = pc_ecocity
 				is_planet_class = pc_corpoarc
 				is_planet_class = pc_palacearc
@@ -543,32 +534,17 @@ species_can_live_on_planet = {
 				is_planet_class = pc_machine_necropolis
 				is_planet_class = pc_necrohive
 				is_planet_class = pc_milarc
-				is_planet_class = pc_city
 				is_planet_class = pc_floating
 				is_planet_class = pc_crystal
 				is_planet_class = pc_graveyard
 				is_planet_class = pc_technoorganic
-				#Giga
-				is_planet_class = pc_ringworld_city
-				is_planet_class = pc_squareworld_habitable
-				is_planet_class = pc_equatorial_shipyard
-				is_planet_class = pc_giga_penrose_habitable
-				is_planet_class = pc_gigaorbital_ring
-				is_planet_class = pc_interstellar_habitat
-				is_planet_class = pc_interstellar_ringworld_habitable
-				is_planet_class = pc_giga_planetary_computer
-				is_planet_class = pc_habitable_gas_giant
-				is_planet_class = pc_ehof_habitat
-				is_planet_class = pc_alderson_slice_ecu
-				is_planet_class = pc_alderson_slice_pc
-				is_planet_class = pc_alderson_slice_hive
-				is_planet_class = pc_ringworld_hive
-				is_planet_class = pc_giga_maginot_world
-				is_planet_class = pc_giga_maginot_gas_giant
+				is_pd_habitat = yes
+				# Gigastructural Engineering & More
+				giga_habitable_structure = yes
 			}
-			has_modifier = pdmethaneatmosphere 
+			has_modifier = pdmethaneatmosphere
 		}
-		NOR = { 
+		NOR = {
 			has_trait = trait_pc_methane_preference
 			has_trait = trait_pc_ll_methane_preference
 			has_trait = trait_machine_unit
@@ -584,7 +560,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ll_ash
 			}
 		}
-		NOR = { 
+		NOR = {
 			has_trait = trait_pc_ash_preference
 			has_trait = trait_pc_ll_ash_preference
 			has_trait = trait_machine_unit
@@ -594,20 +570,14 @@ species_can_live_on_planet = {
 		}
 	}
 	NAND = {
-		root = { 
+		root = {
 			OR = {
-				is_planet_class = pc_habitat 
+				is_planet_class = pc_habitat
 				is_planet_class = pc_ringworld_habitable
-				is_planet_class = pc_relic 
+				is_planet_class = pc_relic
+				is_planet_class = pc_city
+				# Planetary Diversity
 				is_planet_class = pc_milarc_relic
-				is_planet_class = pc_pd_barren_hab
-				is_planet_class = pc_pd_barren_cold_hab
-				is_planet_class = pc_pd_frozen_hab
-				is_planet_class = pc_pd_molten_hab
-				is_planet_class = pc_pd_hothouse_hab
-				is_planet_class = pc_pd_toxic_hab
-				is_planet_class = pc_pd_gas_giant_hab
-				is_planet_class = pc_pd_asteroid_hab
 				is_planet_class = pc_ecocity
 				is_planet_class = pc_corpoarc
 				is_planet_class = pc_palacearc
@@ -616,32 +586,17 @@ species_can_live_on_planet = {
 				is_planet_class = pc_machine_necropolis
 				is_planet_class = pc_necrohive
 				is_planet_class = pc_milarc
-				is_planet_class = pc_city
 				is_planet_class = pc_floating
 				is_planet_class = pc_crystal
 				is_planet_class = pc_graveyard
 				is_planet_class = pc_technoorganic
-				#Giga
-				is_planet_class = pc_ringworld_city
-				is_planet_class = pc_squareworld_habitable
-				is_planet_class = pc_equatorial_shipyard
-				is_planet_class = pc_giga_penrose_habitable
-				is_planet_class = pc_gigaorbital_ring
-				is_planet_class = pc_interstellar_habitat
-				is_planet_class = pc_interstellar_ringworld_habitable
-				is_planet_class = pc_giga_planetary_computer
-				is_planet_class = pc_habitable_gas_giant
-				is_planet_class = pc_ehof_habitat
-				is_planet_class = pc_alderson_slice_ecu
-				is_planet_class = pc_alderson_slice_pc
-				is_planet_class = pc_alderson_slice_hive
-				is_planet_class = pc_ringworld_hive
-				is_planet_class = pc_giga_maginot_world
-				is_planet_class = pc_giga_maginot_gas_giant
+				is_pd_habitat = yes
+				# Gigastructural Engineering & More
+				giga_habitable_structure = yes
 			}
-			has_modifier = pdashatmosphere 
+			has_modifier = pdashatmosphere
 		}
-		NOR = { 
+		NOR = {
 			has_trait = trait_pc_ash_preference
 			has_trait = trait_pc_ll_ash_preference
 			has_trait = trait_machine_unit
@@ -651,7 +606,7 @@ species_can_live_on_planet = {
 		}
 	}
 	NAND = {
-		root = { 
+		root = {
 			OR = {
 				is_planet_class = pc_desert
 				is_planet_class = pc_tropical
@@ -662,6 +617,9 @@ species_can_live_on_planet = {
 				is_planet_class = pc_continental
 				is_planet_class = pc_alpine
 				is_planet_class = pc_savannah
+				is_planet_class = pc_gaia
+				is_planet_class = pc_nuked
+				# Planetary Diversity
 				is_planet_class = pc_sandsea
 				is_planet_class = pc_oasis
 				is_planet_class = pc_mesa
@@ -698,37 +656,17 @@ species_can_live_on_planet = {
 				is_planet_class = pc_frozen_desert
 				is_planet_class = pc_boreal
 				is_planet_class = pc_glacial
-				is_planet_class = pc_geothermal
-				is_planet_class = pc_karst
-				is_planet_class = pc_reef
-				is_planet_class = pc_primal
-				is_planet_class = pc_salt
-				is_planet_class = pc_aquifer
-				is_planet_class = pc_coral
-				is_planet_class = pc_storm
-				is_planet_class = pc_rogue
-				is_planet_class = pc_lichen
-				is_planet_class = pc_eyeball
-				is_planet_class = pc_glacio
-				is_planet_class = pc_lanthanide
-				is_planet_class = pc_megaflora
 				is_planet_class = pc_megaflorahive
 				is_planet_class = pc_megafloratol
-				is_planet_class = pc_aquatic
-				is_planet_class = pc_biolumen
-				is_planet_class = pc_superhabitable
-				is_planet_class = pc_tidallylocked
-				is_planet_class = pc_supercon
 				is_planet_class = pc_irradiated
 				is_planet_class = pc_methane
 				is_planet_class = pc_ash
-				is_planet_class = pc_nuked
 				is_planet_class = pc_pdshroud
-				is_planet_class = pc_gaia
 				is_planet_class = pc_hot_gaia
 				is_planet_class = pc_cold_gaia
 				is_planet_class = pc_sulfur
-				#Giga
+				is_pd_rare = yes
+				# Gigastructural Engineering & More
 				is_planet_class = pc_ll_temperate
 				is_planet_class = pc_ll_foggy
 				is_planet_class = pc_ll_torrid
@@ -745,14 +683,10 @@ species_can_live_on_planet = {
 				AND = {
 					OR = {
 						is_planet_class = pc_habitat
-						is_planet_class = pc_pd_barren_hab
-						is_planet_class = pc_pd_barren_cold_hab
-						is_planet_class = pc_pd_frozen_hab
-						is_planet_class = pc_pd_molten_hab
-						is_planet_class = pc_pd_hothouse_hab
-						is_planet_class = pc_pd_toxic_hab
-						is_planet_class = pc_pd_gas_giant_hab
-						is_planet_class = pc_pd_asteroid_hab
+						is_planet_class = pc_city
+						is_planet_class = pc_ringworld_habitable
+						is_planet_class = pc_relic
+						# Planetary Diversity
 						is_planet_class = pc_ecocity
 						is_planet_class = pc_corpoarc
 						is_planet_class = pc_palacearc
@@ -761,39 +695,22 @@ species_can_live_on_planet = {
 						is_planet_class = pc_machine_necropolis
 						is_planet_class = pc_necrohive
 						is_planet_class = pc_milarc
-						is_planet_class = pc_city
-						is_planet_class = pc_ringworld_habitable
-						is_planet_class = pc_relic
 						is_planet_class = pc_milarc_relic
 						is_planet_class = pc_floating
 						is_planet_class = pc_crystal
 						is_planet_class = pc_graveyard
 						is_planet_class = pc_technoorganic
-						#Giga
-						is_planet_class = pc_ringworld_city
-						is_planet_class = pc_squareworld_habitable
-						is_planet_class = pc_equatorial_shipyard
-						is_planet_class = pc_giga_penrose_habitable
-						is_planet_class = pc_gigaorbital_ring
-						is_planet_class = pc_interstellar_habitat
-						is_planet_class = pc_interstellar_ringworld_habitable
-						is_planet_class = pc_giga_planetary_computer
-						is_planet_class = pc_habitable_gas_giant
-						is_planet_class = pc_ehof_habitat
-						is_planet_class = pc_alderson_slice_ecu
-						is_planet_class = pc_alderson_slice_pc
-						is_planet_class = pc_alderson_slice_hive
-						is_planet_class = pc_ringworld_hive
-						is_planet_class = pc_giga_maginot_world
-						is_planet_class = pc_giga_maginot_gas_giant
+						is_pd_habitat = yes
+						# Gigastructural Engineering & More
+						giga_habitable_structure = yes
 					}
-					NOR = { 
-						has_modifier = pdammoniaatmosphere 
+					NOR = {
+						has_modifier = pdammoniaatmosphere
 					}
 				}
 			}
 		}
-		NOR = { 
+		NOR = {
 			NOR = {
 				has_trait = trait_pc_ammonia_preference
 				has_trait = trait_pc_ll_ammonia_preference
@@ -801,7 +718,7 @@ species_can_live_on_planet = {
 		}
 	}
 	NAND = {
-		root = { 
+		root = {
 			OR = {
 				is_planet_class = pc_desert
 				is_planet_class = pc_tropical
@@ -812,6 +729,9 @@ species_can_live_on_planet = {
 				is_planet_class = pc_continental
 				is_planet_class = pc_alpine
 				is_planet_class = pc_savannah
+				is_planet_class = pc_gaia
+				is_planet_class = pc_nuked
+				# Planetary Diversity
 				is_planet_class = pc_sandsea
 				is_planet_class = pc_oasis
 				is_planet_class = pc_mesa
@@ -848,37 +768,17 @@ species_can_live_on_planet = {
 				is_planet_class = pc_frozen_desert
 				is_planet_class = pc_boreal
 				is_planet_class = pc_glacial
-				is_planet_class = pc_geothermal
-				is_planet_class = pc_karst
-				is_planet_class = pc_reef
-				is_planet_class = pc_primal
-				is_planet_class = pc_salt
-				is_planet_class = pc_aquifer
-				is_planet_class = pc_coral
-				is_planet_class = pc_storm
-				is_planet_class = pc_rogue
-				is_planet_class = pc_lichen
-				is_planet_class = pc_eyeball
-				is_planet_class = pc_glacio
-				is_planet_class = pc_lanthanide
-				is_planet_class = pc_megaflora
 				is_planet_class = pc_megaflorahive
 				is_planet_class = pc_megafloratol
-				is_planet_class = pc_aquatic
-				is_planet_class = pc_biolumen
-				is_planet_class = pc_superhabitable
-				is_planet_class = pc_tidallylocked
-				is_planet_class = pc_supercon
 				is_planet_class = pc_irradiated
 				is_planet_class = pc_methane
 				is_planet_class = pc_ash
 				is_planet_class = pc_ammonia
-				is_planet_class = pc_nuked
 				is_planet_class = pc_pdshroud
-				is_planet_class = pc_gaia
 				is_planet_class = pc_hot_gaia
 				is_planet_class = pc_cold_gaia
-					#Giga
+				is_pd_rare = yes
+				# Gigastructural Engineering & More
 				is_planet_class = pc_ll_temperate
 				is_planet_class = pc_ll_foggy
 				is_planet_class = pc_ll_torrid
@@ -895,14 +795,10 @@ species_can_live_on_planet = {
 				AND = {
 					OR = {
 						is_planet_class = pc_habitat
-						is_planet_class = pc_pd_barren_hab
-						is_planet_class = pc_pd_barren_cold_hab
-						is_planet_class = pc_pd_frozen_hab
-						is_planet_class = pc_pd_molten_hab
-						is_planet_class = pc_pd_hothouse_hab
-						is_planet_class = pc_pd_toxic_hab
-						is_planet_class = pc_pd_gas_giant_hab
-						is_planet_class = pc_pd_asteroid_hab
+						is_planet_class = pc_city
+						is_planet_class = pc_ringworld_habitable
+						is_planet_class = pc_relic
+						# Planetary Diversity
 						is_planet_class = pc_ecocity
 						is_planet_class = pc_corpoarc
 						is_planet_class = pc_palacearc
@@ -911,39 +807,22 @@ species_can_live_on_planet = {
 						is_planet_class = pc_machine_necropolis
 						is_planet_class = pc_necrohive
 						is_planet_class = pc_milarc
-						is_planet_class = pc_city
-						is_planet_class = pc_ringworld_habitable
-						is_planet_class = pc_relic
 						is_planet_class = pc_milarc_relic
 						is_planet_class = pc_floating
 						is_planet_class = pc_crystal
 						is_planet_class = pc_graveyard
 						is_planet_class = pc_technoorganic
-						#Giga
-						is_planet_class = pc_ringworld_city
-						is_planet_class = pc_squareworld_habitable
-						is_planet_class = pc_equatorial_shipyard
-						is_planet_class = pc_giga_penrose_habitable
-						is_planet_class = pc_gigaorbital_ring
-						is_planet_class = pc_interstellar_habitat
-						is_planet_class = pc_interstellar_ringworld_habitable
-						is_planet_class = pc_giga_planetary_computer
-						is_planet_class = pc_habitable_gas_giant
-						is_planet_class = pc_ehof_habitat
-						is_planet_class = pc_alderson_slice_ecu
-						is_planet_class = pc_alderson_slice_pc
-						is_planet_class = pc_alderson_slice_hive
-						is_planet_class = pc_ringworld_hive
-						is_planet_class = pc_giga_maginot_world
-						is_planet_class = pc_giga_maginot_gas_giant
+						is_pd_habitat = yes
+						# Gigastructural Engineering & More
+						giga_habitable_structure = yes
 					}
-					NOR = { 
-						has_modifier = pdsulfuratmosphere 
+					NOR = {
+						has_modifier = pdsulfuratmosphere
 					}
 				}
 			}
 		}
-		NOR = { 
+		NOR = {
 			NOR = {
 				has_trait = trait_pc_sulfur_preference
 				has_trait = trait_pc_ll_sulfur_preference
@@ -951,7 +830,7 @@ species_can_live_on_planet = {
 		}
 	}
 	NAND = {
-		root = { 
+		root = {
 			OR = {
 				is_planet_class = pc_desert
 				is_planet_class = pc_tropical
@@ -962,6 +841,9 @@ species_can_live_on_planet = {
 				is_planet_class = pc_continental
 				is_planet_class = pc_alpine
 				is_planet_class = pc_savannah
+				is_planet_class = pc_gaia
+				is_planet_class = pc_nuked
+				# Planetary Diversity
 				is_planet_class = pc_sandsea
 				is_planet_class = pc_oasis
 				is_planet_class = pc_mesa
@@ -998,37 +880,17 @@ species_can_live_on_planet = {
 				is_planet_class = pc_frozen_desert
 				is_planet_class = pc_boreal
 				is_planet_class = pc_glacial
-				is_planet_class = pc_geothermal
-				is_planet_class = pc_karst
-				is_planet_class = pc_reef
-				is_planet_class = pc_primal
-				is_planet_class = pc_salt
-				is_planet_class = pc_aquifer
-				is_planet_class = pc_coral
-				is_planet_class = pc_storm
-				is_planet_class = pc_rogue
-				is_planet_class = pc_lichen
-				is_planet_class = pc_eyeball
-				is_planet_class = pc_glacio
-				is_planet_class = pc_lanthanide
-				is_planet_class = pc_megaflora
 				is_planet_class = pc_megaflorahive
 				is_planet_class = pc_megafloratol
-				is_planet_class = pc_aquatic
-				is_planet_class = pc_biolumen
-				is_planet_class = pc_superhabitable
-				is_planet_class = pc_tidallylocked
-				is_planet_class = pc_supercon
 				is_planet_class = pc_irradiated
 				is_planet_class = pc_ammonia
 				is_planet_class = pc_sulfur
 				is_planet_class = pc_ash
-				is_planet_class = pc_gaia
 				is_planet_class = pc_hot_gaia
 				is_planet_class = pc_cold_gaia
-				is_planet_class = pc_nuked
 				is_planet_class = pc_pdshroud
-				#Giga
+				is_pd_rare = yes
+				# Gigastructural Engineering & More
 				is_planet_class = pc_ll_temperate
 				is_planet_class = pc_ll_foggy
 				is_planet_class = pc_ll_torrid
@@ -1046,16 +908,9 @@ species_can_live_on_planet = {
 					OR = {
 						is_planet_class = pc_ringworld_habitable
 						is_planet_class = pc_relic
-						is_planet_class = pc_milarc_relic
+						is_planet_class = pc_city
 						is_planet_class = pc_habitat
-						is_planet_class = pc_pd_barren_hab
-						is_planet_class = pc_pd_barren_cold_hab
-						is_planet_class = pc_pd_frozen_hab
-						is_planet_class = pc_pd_molten_hab
-						is_planet_class = pc_pd_hothouse_hab
-						is_planet_class = pc_pd_toxic_hab
-						is_planet_class = pc_pd_gas_giant_hab
-						is_planet_class = pc_pd_asteroid_hab
+						is_planet_class = pc_milarc_relic
 						is_planet_class = pc_ecocity
 						is_planet_class = pc_corpoarc
 						is_planet_class = pc_palacearc
@@ -1064,42 +919,29 @@ species_can_live_on_planet = {
 						is_planet_class = pc_machine_necropolis
 						is_planet_class = pc_necrohive
 						is_planet_class = pc_milarc
-						is_planet_class = pc_city
 						is_planet_class = pc_floating
 						is_planet_class = pc_crystal
 						is_planet_class = pc_graveyard
 						is_planet_class = pc_technoorganic
-						#Giga
-						is_planet_class = pc_ringworld_city
-						is_planet_class = pc_squareworld_habitable
-						is_planet_class = pc_equatorial_shipyard
-						is_planet_class = pc_giga_penrose_habitable
-						is_planet_class = pc_gigaorbital_ring
-						is_planet_class = pc_interstellar_habitat
-						is_planet_class = pc_interstellar_ringworld_habitable
-						is_planet_class = pc_giga_planetary_computer
-						is_planet_class = pc_habitable_gas_giant
-						is_planet_class = pc_ehof_habitat
-						is_planet_class = pc_alderson_slice_ecu
-						is_planet_class = pc_alderson_slice_pc
-						is_planet_class = pc_alderson_slice_hive
-						is_planet_class = pc_ringworld_hive
-						is_planet_class = pc_giga_maginot_world
-						is_planet_class = pc_giga_maginot_gas_giant
+						is_pd_habitat = yes
+						# Gigastructural Engineering & More
+						giga_habitable_structure = yes
 					}
-					NOT = { has_modifier = pdmethaneatmosphere }
+					NOT = {
+						has_modifier = pdmethaneatmosphere
+					}
 				}
 			}
 		}
-		NOR = { 
+		NOR = {
 			NOR = {
 				has_trait = trait_pc_methane_preference
 				has_trait = trait_pc_ll_methane_preference
 			}
-		} 
+		}
 	}
 	NAND = {
-		root = { 
+		root = {
 			OR = {
 				is_planet_class = pc_desert
 				is_planet_class = pc_tropical
@@ -1110,6 +952,9 @@ species_can_live_on_planet = {
 				is_planet_class = pc_continental
 				is_planet_class = pc_alpine
 				is_planet_class = pc_savannah
+				is_planet_class = pc_gaia
+				is_planet_class = pc_nuked
+				# Planetary Diversity
 				is_planet_class = pc_sandsea
 				is_planet_class = pc_oasis
 				is_planet_class = pc_mesa
@@ -1146,37 +991,16 @@ species_can_live_on_planet = {
 				is_planet_class = pc_frozen_desert
 				is_planet_class = pc_boreal
 				is_planet_class = pc_glacial
-				is_planet_class = pc_geothermal
-				is_planet_class = pc_karst
-				is_planet_class = pc_reef
-				is_planet_class = pc_primal
-				is_planet_class = pc_salt
-				is_planet_class = pc_aquifer
-				is_planet_class = pc_coral
-				is_planet_class = pc_storm
-				is_planet_class = pc_rogue
-				is_planet_class = pc_lichen
-				is_planet_class = pc_eyeball
-				is_planet_class = pc_glacio
-				is_planet_class = pc_lanthanide
-				is_planet_class = pc_megaflora
 				is_planet_class = pc_megaflorahive
-				is_planet_class = pc_megafloratol
-				is_planet_class = pc_aquatic
-				is_planet_class = pc_biolumen
-				is_planet_class = pc_superhabitable
-				is_planet_class = pc_tidallylocked
-				is_planet_class = pc_supercon
 				is_planet_class = pc_irradiated
 				is_planet_class = pc_methane
 				is_planet_class = pc_ammonia
 				is_planet_class = pc_sulfur
-				is_planet_class = pc_gaia
 				is_planet_class = pc_hot_gaia
 				is_planet_class = pc_cold_gaia
-				is_planet_class = pc_nuked
 				is_planet_class = pc_pdshroud
-				#Giga
+				is_pd_rare = yes
+				# Gigastructural Engineering & More
 				is_planet_class = pc_ll_temperate
 				is_planet_class = pc_ll_foggy
 				is_planet_class = pc_ll_torrid
@@ -1194,16 +1018,10 @@ species_can_live_on_planet = {
 					OR = {
 						is_planet_class = pc_ringworld_habitable
 						is_planet_class = pc_relic
-						is_planet_class = pc_milarc_relic
+						is_planet_class = pc_city
 						is_planet_class = pc_habitat
-						is_planet_class = pc_pd_barren_hab
-						is_planet_class = pc_pd_barren_cold_hab
-						is_planet_class = pc_pd_frozen_hab
-						is_planet_class = pc_pd_molten_hab
-						is_planet_class = pc_pd_hothouse_hab
-						is_planet_class = pc_pd_toxic_hab
-						is_planet_class = pc_pd_gas_giant_hab
-						is_planet_class = pc_pd_asteroid_hab
+						# Planetary Diversity
+						is_planet_class = pc_milarc_relic
 						is_planet_class = pc_ecocity
 						is_planet_class = pc_corpoarc
 						is_planet_class = pc_palacearc
@@ -1212,30 +1030,17 @@ species_can_live_on_planet = {
 						is_planet_class = pc_machine_necropolis
 						is_planet_class = pc_necrohive
 						is_planet_class = pc_milarc
-						is_planet_class = pc_city
 						is_planet_class = pc_floating
 						is_planet_class = pc_crystal
 						is_planet_class = pc_graveyard
 						is_planet_class = pc_technoorganic
-						#Giga
-						is_planet_class = pc_ringworld_city
-						is_planet_class = pc_squareworld_habitable
-						is_planet_class = pc_equatorial_shipyard
-						is_planet_class = pc_giga_penrose_habitable
-						is_planet_class = pc_gigaorbital_ring
-						is_planet_class = pc_interstellar_habitat
-						is_planet_class = pc_interstellar_ringworld_habitable
-						is_planet_class = pc_giga_planetary_computer
-						is_planet_class = pc_habitable_gas_giant
-						is_planet_class = pc_ehof_habitat
-						is_planet_class = pc_alderson_slice_ecu
-						is_planet_class = pc_alderson_slice_pc
-						is_planet_class = pc_alderson_slice_hive
-						is_planet_class = pc_ringworld_hive
-						is_planet_class = pc_giga_maginot_world
-						is_planet_class = pc_giga_maginot_gas_giant
+						is_pd_habitat = yes
+						# Gigastructural Engineering & More
+						giga_habitable_structure = yes
 					}
-					NOT = { has_modifier = pdashatmosphere }
+					NOT = {
+						has_modifier = pdashatmosphere
+					}
 				}
 			}
 		}

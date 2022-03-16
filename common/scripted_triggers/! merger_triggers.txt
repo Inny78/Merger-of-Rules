@@ -177,13 +177,6 @@ merg_is_doomed_planet = {
 	}
 }
 
-is_green = {
- 	OR = {
- 		has_ethic = ethic_fanatic_green
- 		has_ethic = ethic_green
- 	}
-}
-
 # List of void systems
 merg_is_void_system = {
 	OR = {
