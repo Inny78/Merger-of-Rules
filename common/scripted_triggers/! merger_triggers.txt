@@ -149,6 +149,7 @@ merg_is_habitat = {
 		is_planet_class = pc_dm_habitat
 		is_planet_class = pc_ae_habitat
 		is_planet_class = pc_sigma_habitat
+		is_planet_class = pc_sigma_deepspace_habitat
 		# Starborn: Improved Voidtouched
 		uses_district_set = starborn_start
 		# Twinks Atlantean
