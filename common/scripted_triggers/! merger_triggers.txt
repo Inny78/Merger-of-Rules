@@ -140,7 +140,7 @@ merg_is_habitat = {
 	OR = {
 		is_planet_class = pc_habitat
 		# Planetary Diversity
-		uses_district_set = pdplanethab
+		is_pd_habitat = yes
 		# Gigastructural Engineering & More
 		is_planet_class = pc_interstellar_habitat
 		# More Events Mod

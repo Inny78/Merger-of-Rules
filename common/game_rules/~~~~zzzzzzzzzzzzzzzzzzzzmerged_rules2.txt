@@ -3507,4 +3507,19 @@ can_fill_ruler_job = {
 }
 
 # should_planetary_automate
-# can_dismiss_leader
+
+# this = leader
+can_dismiss_leader = {
+	custom_tooltip = {
+		fail_text = "requires_actor_not_feudal_society"
+		exists = owner
+		owner = {
+			NOT = { has_valid_civic = civic_feudal_realm }
+		}
+	}
+	# Warship Girls R And MIST Species
+	custom_tooltip = {
+		fail_text = "cannot_fire_wg_leader"
+		NOT = { has_leader_flag = wsg_event_leader }
+	}
+}

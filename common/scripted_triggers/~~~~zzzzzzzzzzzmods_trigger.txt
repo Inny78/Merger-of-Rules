@@ -908,3 +908,15 @@ is_genocidal = {
 		has_valid_civic = civic_infestation
 	}
 }
+
+# The DAL Species Mod
+is_special_colony_planet_class = {
+	OR = {
+		is_planet_class = pc_city
+		is_planet_class = pc_cybrex
+		merg_is_habitat = yes
+		merg_is_hab_ringworld = yes
+		# Gigastructural Engineering & More
+		giga_habitable_structure = yes
+	}
+}
