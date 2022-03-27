@@ -7,8 +7,7 @@ merg_is_standard_empire = {
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		is_zofe_country = yes
 		# The Empty Vagrant
 		is_country_type = default_ev
 		is_country_type = fallen_empire_ev
@@ -24,8 +23,7 @@ merg_is_default_empire = {
 	OR = {
 		is_country_type = default
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		is_zofe_country = yes
 		# The Empty Vagrant
 		is_country_type = default_ev
 	}
@@ -83,6 +81,7 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_giga_penrose_habitable
 		is_planet_class = pc_ringworld_machine
 		is_planet_class = pc_ringworld_hive
+		is_planet_class = pc_giga_maginot_ringworld
 		# Ancient Empire
 		# listed planet types are for colors only, they're all ideal
 		is_planet_class = pc_ag_ringworld_desert
@@ -100,6 +99,11 @@ merg_is_hab_ringworld = {
 		# Warship Girls and MIST species
 		is_planet_class = pc_ringworld_habitable_sh
 		is_planet_class = pc_ringworld_habitable_wsg
+		# Planetary Diversity
+		is_planet_class = pc_ammoniaring
+		is_planet_class = pc_ashring
+		is_planet_class = pc_methanering
+		is_planet_class = pc_sulfurring
 	}
 }
 
@@ -156,6 +160,8 @@ merg_is_habitat = {
 		uses_district_set = skypalace
 		# Plentiful Traditions
 		is_planet_class = pc_habitat_robot
+		# Giga Diversity
+		is_planet_class = pc_pd_toxic_hab
 	}
 }
 

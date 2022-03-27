@@ -22,6 +22,7 @@ is_pd_rare = { always = no }
 is_pd_unique = { always = no }
 is_spy_empire = { always = no }
 is_xenophobic_isolationists = { always = no }
+is_zofe_country = { always = no }
 katzen_jump_blocked_system = { always = no }
 prob_forced_armageddon_bombardment = { always = no }
 traits_restrict_specialist_jobs = { always = no }

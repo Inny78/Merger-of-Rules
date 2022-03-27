@@ -2699,6 +2699,15 @@ can_build_branch_office_on_planet = {
 					}
 				}
 			}
+			# Unique Ascension Perks
+			AND = {
+				owner = { merg_is_default_empire = yes }
+				root = { has_ascension_perk = ap_megacorp }
+			}
+			AND = {
+				owner = { is_gestalt = yes }
+				root = { has_ascension_perk = ap_megacorp }
+			}
 		}
 	}
 	custom_tooltip = {

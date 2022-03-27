@@ -92,8 +92,7 @@ ehof_default_country = {
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		is_zofe_country = yes
 		# The Empty Vagrant
 		is_country_type = default_ev
 	}
@@ -404,8 +403,7 @@ is_playable_country = {
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		is_zofe_country = yes
 		# ACOT
 		is_country_type = original_empire_active
 		# The Empty Vagrant
@@ -452,8 +450,7 @@ CmtTriggerIsPlayableEmpire = {
 		is_country_type = default
 		is_ai = no
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		is_zofe_country = yes
 		# The Empty Vagrant
 		is_country_type = default_ev
 	}
@@ -466,8 +463,7 @@ CmtTriggerIsEmpire = {
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		is_zofe_country = yes
 		# The Empty Vagrant
 		is_country_type = default_ev
 		is_country_type = fallen_empire_ev
@@ -483,8 +479,7 @@ CmtTriggerIsFallenEmpire = {
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		is_zofe_country = yes
 		# The Empty Vagrant
 		is_country_type = fallen_empire_ev
 		is_country_type = awakened_fallen_empire_ev
@@ -598,8 +593,7 @@ is_default_and_fallen_country = {
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		is_zofe_country = yes
 		# The Empty Vagrant
 		is_country_type = default_ev
 		is_country_type = fallen_empire_ev
@@ -621,8 +615,7 @@ is_default_country_wg = {
 		is_country_type = default
 		is_country_type = default_ev
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		is_zofe_country = yes
 	}
 }
 
@@ -856,8 +849,7 @@ AAR_trgr_cntr_playable = {
 		is_country_type = original_empire_passive
 		is_country_type = original_empire_active
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		is_zofe_country = yes
 	}
 }
 
