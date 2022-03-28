@@ -1355,6 +1355,21 @@ can_species_be_assembled = {
 					}
 				}
 			}
+			# Planetary Diversity
+			else_if = {
+				limit = {
+					has_trait = trait_organic_fourschildren
+				}
+				root = {
+					has_building = building_techno_04_clone_vat
+					NOT = {
+						check_variable = {
+							which = techno_pops_missing
+							value = 0
+						}
+					}
+				}
+			}
 			# Vanilla
 			else_if = {
 				limit = {
@@ -1420,6 +1435,8 @@ can_species_be_assembled = {
 				}
 			}
 		}
+		# Steven Universe Homeworld Gems
+		has_trait = trait_geoloid
 	}
 	# Expanded Gestalts
 	NAND = {
@@ -2473,6 +2490,34 @@ should_force_decline_species = {
 				}
 			}
 		}
+		# Planetary Diversity
+		custom_tooltip = {
+			success_text = UNIT04CHILDREN_FORCE_DECLINE
+			has_trait = trait_organic_fourschildren
+			from = {
+				OR = {
+					AND = {
+						exists = owner
+						owner = {
+							OR = {
+								NOT = {
+									has_origin = origin_techno_world
+								}
+								NOT = {
+									owner_main_species = {
+										is_same_species = root
+									}
+								}
+							}
+						}
+					}
+					check_variable = {
+						which = techno_pops_missing
+						value < 0
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -3013,6 +3058,8 @@ can_be_sold_on_slave_market = {
 		}
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_cocoon
+		# Planetary Diversity
+		has_trait = trait_organic_fourschildren
 	}
 }
 

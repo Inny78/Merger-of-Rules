@@ -19,6 +19,7 @@ is_khan_country_type = { always = no }
 is_pd_exotic = { always = no }
 is_pd_habitat = { always = no }
 is_pd_rare = { always = no }
+is_pd_regular = { always = no }
 is_pd_unique = { always = no }
 is_spy_empire = { always = no }
 is_xenophobic_isolationists = { always = no }
