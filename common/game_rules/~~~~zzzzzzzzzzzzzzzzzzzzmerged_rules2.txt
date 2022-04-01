@@ -1358,7 +1358,10 @@ can_species_be_assembled = {
 			# Planetary Diversity
 			else_if = {
 				limit = {
-					has_trait = trait_organic_fourschildren
+					OR = {
+						has_trait = trait_organic_fourschildren
+						has_trait = trait_organic_fourschildren_2
+					}
 				}
 				root = {
 					has_building = building_techno_04_clone_vat
@@ -2493,7 +2496,10 @@ should_force_decline_species = {
 		# Planetary Diversity
 		custom_tooltip = {
 			success_text = UNIT04CHILDREN_FORCE_DECLINE
-			has_trait = trait_organic_fourschildren
+			OR = {
+				has_trait = trait_organic_fourschildren
+				has_trait = trait_organic_fourschildren_2
+			}
 			from = {
 				OR = {
 					AND = {
@@ -3060,6 +3066,7 @@ can_be_sold_on_slave_market = {
 		has_trait = trait_plentiful_traditions_cocoon
 		# Planetary Diversity
 		has_trait = trait_organic_fourschildren
+		has_trait = trait_organic_fourschildren_2
 	}
 }
 
