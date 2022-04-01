@@ -42,7 +42,7 @@ can_generate_leader_from_pop = {
 		root = {
 			OR = {
 				has_technology = tech_synthetic_leaders
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_mechanical_empire = yes
 				# Girls Frontline
 				has_technology = tech_gf_mind_upgrade_1
@@ -110,7 +110,7 @@ can_generate_military_leader_from_pop = {
 		root = {
 			OR = {
 				has_technology = tech_synthetic_leaders
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_mechanical_empire = yes
 				# Girls Frontline
 				has_technology = tech_gf_mind_upgrade_1
@@ -237,7 +237,7 @@ can_release_vassal_from_species = {
 			limit = {
 				has_expanded_pops = yes
 				prev = {
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 				}
 			}
 			OR = {
@@ -252,7 +252,7 @@ can_release_vassal_from_species = {
 			limit = {
 				has_expanded_pops = yes
 				prev = {
-					has_authority = auth_hive_mind
+					is_hive_empire = yes
 				}
 			}
 			OR = {
@@ -979,7 +979,7 @@ species_has_happiness = {
 				AND = {
 					has_animated_synth = yes
 					from = {
-						has_authority = auth_machine_intelligence
+						is_machine_empire = yes
 					}
 					has_trait = trait_extsynth_synthetic
 					NOT = {
@@ -990,7 +990,7 @@ species_has_happiness = {
 					has_animated_synth = yes
 					NAND = {
 						from = {
-							has_authority = auth_machine_intelligence
+							is_machine_empire = yes
 						}
 						has_trait = trait_extsynth_synthetic
 					}
@@ -1002,7 +1002,7 @@ species_has_happiness = {
 					exists = from
 				}
 				from = {
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 				}
 				from = {
 					NOT = {
@@ -1018,7 +1018,7 @@ species_has_happiness = {
 			has_trait = trait_cybernetic
 			exists = from
 			from = {
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				has_valid_civic = civic_machine_assimilator				# Assimilator empire
 			}
 		}

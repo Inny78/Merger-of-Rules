@@ -17,9 +17,13 @@ has_aot = {
 }
 
 # Ancient Cache of Technologies 1419304439
-# Ancient Cache of Technologies : Secrets Beyond The Gates 1481972266
 has_acot = {
 	has_global_flag = acot_activated
+}
+
+# Ancient Cache of Technologies : Secrets Beyond The Gates 1481972266
+has_sofe = {
+	has_global_flag = sofe_activated
 }
 
 # Ancient Empire

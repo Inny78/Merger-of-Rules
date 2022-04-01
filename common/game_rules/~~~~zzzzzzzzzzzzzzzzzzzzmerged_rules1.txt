@@ -182,7 +182,7 @@ can_add_claim = {
 				NOR = {
 					is_same_species = root
 					has_country_flag = synthetic_empire
-					has_authority = auth_machine_intelligence
+					is_hive_empire = yes
 				}
 			}
 		}
@@ -637,7 +637,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ll_torrid
 				is_planet_class = pc_katzenland
 				is_planet_class = pc_flat_world
-				#New GD Lifeless Worlds
+				# Giga Diversity
 				is_planet_class = pc_ll_methane
 				is_planet_class = pc_ll_ash
 				is_planet_class = pc_ll_sulfur
@@ -714,7 +714,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ll_torrid
 				is_planet_class = pc_katzenland
 				is_planet_class = pc_flat_world
-				#New GD Lifeless Worlds
+				# Giga Diversity
 				is_planet_class = pc_ll_methane
 				is_planet_class = pc_ll_ash
 				is_planet_class = pc_ll_ammonia
@@ -791,7 +791,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ll_torrid
 				is_planet_class = pc_katzenland
 				is_planet_class = pc_flat_world
-				#New GD Lifeless Worlds
+				# Giga Diversity
 				is_planet_class = pc_ll_ash
 				is_planet_class = pc_ll_sulfur
 				is_planet_class = pc_ll_ammonia
@@ -866,7 +866,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_ll_torrid
 				is_planet_class = pc_katzenland
 				is_planet_class = pc_flat_world
-				#New GD Lifeless Worlds
+				# Giga Diversity
 				is_planet_class = pc_ll_methane
 				is_planet_class = pc_ll_sulfur
 				is_planet_class = pc_ll_ammonia
