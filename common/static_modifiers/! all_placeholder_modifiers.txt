@@ -1,0 +1,11 @@
+# Dummy modifiers - to be overwritten by their respective mods.
+apocalypse = { }
+catastrophe_approach = { }
+deteriorating_ecosystem = { }
+mzilli_events_dying_world = { }
+pdammoniaatmosphere = { }
+pdashatmosphere = { }
+pdmethaneatmosphere = { }
+pdsulfuratmosphere = { }
+planet_active_worm = { }
+ravenous_locusts = { }

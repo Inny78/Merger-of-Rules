@@ -102,7 +102,7 @@ colonizable_planet = {
 		is_planet_class = pc_omega_ringworld_tech
 		is_planet_class = pc_goodman_gaia_world
         is_planet_class = pc_golden_fortress
-		is_planet_class = pc_sosi_proto_gaia_world	
+		is_planet_class = pc_sosi_proto_gaia_world
 	}
 }
 

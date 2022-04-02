@@ -1534,10 +1534,7 @@ can_orbital_bombard = {
 					}
 				}
 				# Ancient Empire
-				AND = {
-					has_ancient_empire = yes
-					ag_can_be_orbital_bombardment_country = yes
-				}
+				ag_can_be_orbital_bombardment_country = yes
 				# ACOT
 				is_country_type = original_empire
 				is_country_type = void_lifeforms_1
@@ -1579,20 +1576,12 @@ can_orbital_bombard = {
 					}
 				}
 				# Warship Girls R And MIST Species
-				AND = {
-					has_warship_girls = yes
-					OR = {
-						is_country_type = wg_crisis_country
-						is_khan_country_type = yes
-					}
-				}
+				is_country_type = wg_crisis_country
+				is_khan_country_type = yes
 				# Star Wars: UnknownWorld Shipgirls Story
 				is_country_type = afk_crisis_country
 				# Ancient Empire
-				AND = {
-					has_ancient_empire = yes
-					ag_can_do_orbital_bombardment_country = yes
-				}
+				ag_can_do_orbital_bombardment_country = yes
 				# ACOT
 				is_country_type = original_empire
 				is_country_type = void_lifeforms_1
