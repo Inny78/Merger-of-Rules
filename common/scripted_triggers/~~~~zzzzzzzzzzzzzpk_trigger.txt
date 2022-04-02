@@ -2453,8 +2453,7 @@ merg_is_crackable_planet = {
 	OR = {
 		uninhabitable_regular_planet = yes
 		# Planetary Diversity
-		is_pd_exotic = yes
-		is_pd_unique = yes
+		is_pd_planet_class_all = yes
 		is_planet_class = pc_diamond
 		is_planet_class = pc_volcanic
 		is_planet_class = pc_chthonian

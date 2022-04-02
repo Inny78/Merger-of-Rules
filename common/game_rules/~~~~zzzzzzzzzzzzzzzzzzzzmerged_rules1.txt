@@ -394,19 +394,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_relic
 				is_planet_class = pc_city
 				# Planetary Diversity
-				is_planet_class = pc_milarc_relic
-				is_planet_class = pc_ecocity
-				is_planet_class = pc_corpoarc
-				is_planet_class = pc_palacearc
-				is_planet_class = pc_capitalarc
-				is_planet_class = pc_necropolis
-				is_planet_class = pc_machine_necropolis
-				is_planet_class = pc_necrohive
-				is_planet_class = pc_milarc
-				is_planet_class = pc_floating
-				is_planet_class = pc_crystal
-				is_planet_class = pc_graveyard
-				is_planet_class = pc_technoorganic
+				merg_is_pd_planet_check = yes
 				is_pd_habitat = yes
 				# Gigastructural Engineering & More
 				giga_habitable_structure = yes
@@ -430,19 +418,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_relic
 				is_planet_class = pc_city
 				# Planetary Diversity
-				is_planet_class = pc_milarc_relic
-				is_planet_class = pc_ecocity
-				is_planet_class = pc_corpoarc
-				is_planet_class = pc_palacearc
-				is_planet_class = pc_capitalarc
-				is_planet_class = pc_necropolis
-				is_planet_class = pc_machine_necropolis
-				is_planet_class = pc_necrohive
-				is_planet_class = pc_milarc
-				is_planet_class = pc_floating
-				is_planet_class = pc_crystal
-				is_planet_class = pc_graveyard
-				is_planet_class = pc_technoorganic
+				merg_is_pd_planet_check = yes
 				is_pd_habitat = yes
 				# Gigastructural Engineering & More
 				giga_habitable_structure = yes
@@ -478,15 +454,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_relic
 				is_planet_class = pc_city
 				# Planetary Diversity
-				is_planet_class = pc_milarc_relic
-				is_planet_class = pc_ecocity
-				is_planet_class = pc_corpoarc
-				is_planet_class = pc_palacearc
-				is_planet_class = pc_capitalarc
-				is_planet_class = pc_necropolis
-				is_planet_class = pc_machine_necropolis
-				is_planet_class = pc_necrohive
-				is_planet_class = pc_milarc
+				merg_is_pd_planet_check = yes
 				is_pd_habitat = yes
 				# Gigastructural Engineering & More
 				giga_habitable_structure = yes
@@ -525,19 +493,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_relic
 				is_planet_class = pc_city
 				# Planetary Diversity
-				is_planet_class = pc_milarc_relic
-				is_planet_class = pc_ecocity
-				is_planet_class = pc_corpoarc
-				is_planet_class = pc_palacearc
-				is_planet_class = pc_capitalarc
-				is_planet_class = pc_necropolis
-				is_planet_class = pc_machine_necropolis
-				is_planet_class = pc_necrohive
-				is_planet_class = pc_milarc
-				is_planet_class = pc_floating
-				is_planet_class = pc_crystal
-				is_planet_class = pc_graveyard
-				is_planet_class = pc_technoorganic
+				merg_is_pd_planet_check = yes
 				is_pd_habitat = yes
 				# Gigastructural Engineering & More
 				giga_habitable_structure = yes
@@ -577,19 +533,7 @@ species_can_live_on_planet = {
 				is_planet_class = pc_relic
 				is_planet_class = pc_city
 				# Planetary Diversity
-				is_planet_class = pc_milarc_relic
-				is_planet_class = pc_ecocity
-				is_planet_class = pc_corpoarc
-				is_planet_class = pc_palacearc
-				is_planet_class = pc_capitalarc
-				is_planet_class = pc_necropolis
-				is_planet_class = pc_machine_necropolis
-				is_planet_class = pc_necrohive
-				is_planet_class = pc_milarc
-				is_planet_class = pc_floating
-				is_planet_class = pc_crystal
-				is_planet_class = pc_graveyard
-				is_planet_class = pc_technoorganic
+				merg_is_pd_planet_check = yes
 				is_pd_habitat = yes
 				# Gigastructural Engineering & More
 				giga_habitable_structure = yes
@@ -652,19 +596,7 @@ species_can_live_on_planet = {
 						is_planet_class = pc_ringworld_habitable
 						is_planet_class = pc_relic
 						# Planetary Diversity
-						is_planet_class = pc_ecocity
-						is_planet_class = pc_corpoarc
-						is_planet_class = pc_palacearc
-						is_planet_class = pc_capitalarc
-						is_planet_class = pc_necropolis
-						is_planet_class = pc_machine_necropolis
-						is_planet_class = pc_necrohive
-						is_planet_class = pc_milarc
-						is_planet_class = pc_milarc_relic
-						is_planet_class = pc_floating
-						is_planet_class = pc_crystal
-						is_planet_class = pc_graveyard
-						is_planet_class = pc_technoorganic
+						merg_is_pd_planet_check = yes
 						is_pd_habitat = yes
 						# Gigastructural Engineering & More
 						giga_habitable_structure = yes
@@ -729,19 +661,7 @@ species_can_live_on_planet = {
 						is_planet_class = pc_ringworld_habitable
 						is_planet_class = pc_relic
 						# Planetary Diversity
-						is_planet_class = pc_ecocity
-						is_planet_class = pc_corpoarc
-						is_planet_class = pc_palacearc
-						is_planet_class = pc_capitalarc
-						is_planet_class = pc_necropolis
-						is_planet_class = pc_machine_necropolis
-						is_planet_class = pc_necrohive
-						is_planet_class = pc_milarc
-						is_planet_class = pc_milarc_relic
-						is_planet_class = pc_floating
-						is_planet_class = pc_crystal
-						is_planet_class = pc_graveyard
-						is_planet_class = pc_technoorganic
+						merg_is_pd_planet_check = yes
 						is_pd_habitat = yes
 						# Gigastructural Engineering & More
 						giga_habitable_structure = yes
@@ -805,19 +725,8 @@ species_can_live_on_planet = {
 						is_planet_class = pc_relic
 						is_planet_class = pc_city
 						is_planet_class = pc_habitat
-						is_planet_class = pc_milarc_relic
-						is_planet_class = pc_ecocity
-						is_planet_class = pc_corpoarc
-						is_planet_class = pc_palacearc
-						is_planet_class = pc_capitalarc
-						is_planet_class = pc_necropolis
-						is_planet_class = pc_machine_necropolis
-						is_planet_class = pc_necrohive
-						is_planet_class = pc_milarc
-						is_planet_class = pc_floating
-						is_planet_class = pc_crystal
-						is_planet_class = pc_graveyard
-						is_planet_class = pc_technoorganic
+						# Planetary Diversity
+						merg_is_pd_planet_check = yes
 						is_pd_habitat = yes
 						# Gigastructural Engineering & More
 						giga_habitable_structure = yes
@@ -881,19 +790,7 @@ species_can_live_on_planet = {
 						is_planet_class = pc_city
 						is_planet_class = pc_habitat
 						# Planetary Diversity
-						is_planet_class = pc_milarc_relic
-						is_planet_class = pc_ecocity
-						is_planet_class = pc_corpoarc
-						is_planet_class = pc_palacearc
-						is_planet_class = pc_capitalarc
-						is_planet_class = pc_necropolis
-						is_planet_class = pc_machine_necropolis
-						is_planet_class = pc_necrohive
-						is_planet_class = pc_milarc
-						is_planet_class = pc_floating
-						is_planet_class = pc_crystal
-						is_planet_class = pc_graveyard
-						is_planet_class = pc_technoorganic
+						merg_is_pd_planet_check = yes
 						is_pd_habitat = yes
 						# Gigastructural Engineering & More
 						giga_habitable_structure = yes

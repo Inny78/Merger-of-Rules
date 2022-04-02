@@ -18,6 +18,7 @@ is_civic_militarist = { always = no }
 is_khan_country_type = { always = no }
 is_pd_exotic = { always = no }
 is_pd_habitat = { always = no }
+is_pd_planet_class_all = { always = no }
 is_pd_rare = { always = no }
 is_pd_regular = { always = no }
 is_pd_unique = { always = no }
