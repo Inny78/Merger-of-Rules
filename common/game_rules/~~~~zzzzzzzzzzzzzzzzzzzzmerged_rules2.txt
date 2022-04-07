@@ -93,10 +93,10 @@ can_generate_leader_from_species = {
 			type = citizenship_full
 			country = root
 		}
-		# ThaumStellaris
-		NOT = {
-			has_trait = tc_trait_golem
-		}
+	}
+	# ThaumStellaris
+	NOT = {
+		has_trait = tc_trait_golem
 	}
 }
 
@@ -700,7 +700,6 @@ can_colonize_outside_borders = {
 	exists = root
 	root = {
 		OR = {
-			has_coop_teams = yes
 			# Human Fallen Empires
 			is_country_type = hfe_features_exodus
 			# The Empty Vagrant

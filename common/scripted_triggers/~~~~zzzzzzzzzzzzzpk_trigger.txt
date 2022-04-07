@@ -2404,6 +2404,588 @@ can_destroy_planet_with_tech_GFnyto_accelerating_coil3= {
 	}
 }
 
+# Dead Space
+# kills only the pops and keeps the planet intact, so Gigastructure planets are a valid target
+can_destroy_planet_with_PLANET_KILLER_UPLOAD = {
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		is_a_habitable_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+			has_active_building = building_phanon_psg # AOT
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_not_hostile
+		OR = {
+			planet_is_hostile_or_crisis = yes
+			AND = {
+				exists = owner
+				owner = {
+					is_country_type = primitive
+				}
+			}
+			AND = { # at war with primitive space owner
+				exists = space_owner
+				exists = owner
+				owner = {
+					is_primitive = yes
+				}
+				space_owner = {
+					OR = {
+						is_at_war_with = from.owner
+						is_country_type = swarm
+						is_country_type = extradimensional
+						is_country_type = extradimensional_2
+						is_country_type = extradimensional_3
+						is_country_type = ai_empire
+					}
+				}
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_unpopulated
+		OR = {
+			num_pops > 0
+			is_planet_class = pc_infested
+		}
+	}
+}	
+
+# Deathstar perk
+can_destroy_planet_with_DS_DEATHSTAR_LANCE = {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		is_a_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded	# not all are shielded, but its easier to add invalid targets here
+		NOR = {
+			is_star = yes
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat
+			is_planet_class = pc_habitat_shielded
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_ringworld_habitable_damaged
+			is_planet_class = pc_ringworld_tech
+			is_planet_class = pc_ringworld_tech_damaged
+			is_planet_class = pc_ringworld_seam
+			is_planet_class = pc_ringworld_tech_damaged
+			is_planet_class = pc_shattered_ring_habitable
+			is_planet_class = pc_broken
+			is_planet_class = pc_shattered
+			is_planet_class = pc_gas_giant
+			is_planet_class = pc_kompass
+			# Gigastructures
+			has_planet_flag = cant_build_here
+			is_planet_class = pc_giga_penrose_habitable
+			is_planet_class = pc_interstellar_habitat
+			is_planet_class = pc_interstellar_ringworld_habitable
+			is_planet_class = pc_void_birch
+			is_planet_class = pc_ringworld_city
+			is_planet_class = pc_ringworld_machine
+			is_planet_class = pc_ringworld_hive
+			is_planet_class = pc_birch
+			is_planet_class = pc_alderson_slice_gaia
+			is_planet_class = pc_alderson_slice_gaia_shattered
+			is_planet_class = pc_alderson_slice_ecu
+			is_planet_class = pc_alderson_slice_hive
+			is_planet_class = pc_alderson_slice_machine
+			is_planet_class = pc_alderson_slice_pc
+			has_active_building = building_phanon_psg # AOT
+		}
+	}
+	#custom_tooltip = {
+		#fail_text = is_not_hostile
+		OR = {
+			custom_tooltip = {
+				text = is_not_hostile_cracker
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+							}
+						}
+					}
+					AND = { # colony
+						exists = owner
+						owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+							}
+						}
+					}
+					AND = { # primitive
+						exists = space_owner
+						exists = owner
+						owner = {
+							is_primitive = yes
+						}
+						space_owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+							}
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = not_barren_molten_frozen_toxic_test_fire
+				NOT = { exists = owner }
+				OR = {
+					NOT = { exists = space_owner }
+					AND = {
+						exists = space_owner
+						space_owner = { is_same_value = from.owner }
+					}
+				}
+				NOT = { has_planet_flag = cant_build_here }
+				OR = {
+					# the most are from the Planetary Diversity mod
+					is_planet_class = pc_machine			
+					is_planet_class = pc_infested			
+					is_planet_class = pc_immortal		
+					is_planet_class = pc_barren
+					is_planet_class = pc_barren_cold
+					is_planet_class = pc_frozen
+					is_planet_class = pc_molten
+					is_planet_class = pc_toxic
+					is_planet_class = pc_nuked
+					is_planet_class = pc_desert
+					is_planet_class = pc_tropical
+					is_planet_class = pc_arid
+					is_planet_class = pc_continental
+					is_planet_class = pc_ocean
+					is_planet_class = pc_tundra
+					is_planet_class = pc_arctic
+					is_planet_class = pc_alpine
+					is_planet_class = pc_savannah
+					is_planet_class = pc_gaia
+					is_planet_class = pc_relic
+					is_planet_class = pc_city
+					merg_is_crackable_planet = yes
+					is_pd_planet_class_all = yes
+				}
+			}
+		}
+	#}
+}
+
+# targets planets, terraforms them to habitable planets
+can_destroy_planet_with_PLANET_KILLER_SYNTHETIC_GODS_TERRA = {
+	custom_tooltip = {
+		text = must_be_uninhabitable_planet_or_shielded_or_hive
+		NOT = { exists = owner }
+		is_colonizable = no
+		merg_is_forbidden_target = no
+		NOR = { 
+			is_star = yes
+			is_planet_class = pc_kompass			
+			is_planet_class = pc_asteroid			
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat
+			is_planet_class = pc_habitat_shielded
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_ringworld_habitable_damaged
+			is_planet_class = pc_ringworld_tech
+			is_planet_class = pc_ringworld_tech_damaged
+			is_planet_class = pc_ringworld_seam
+			is_planet_class = pc_ringworld_tech_damaged
+			is_planet_class = pc_shattered_ring_habitable
+			is_planet_class = pc_broken
+			is_planet_class = pc_shattered
+			is_planet_class = pc_gas_giant
+			# Gigastructures
+			has_planet_flag = cant_build_here
+			is_planet_class = pc_giga_penrose_habitable
+			is_planet_class = pc_interstellar_habitat
+			is_planet_class = pc_interstellar_ringworld_habitable
+			is_planet_class = pc_void_birch
+			is_planet_class = pc_ringworld_city
+			is_planet_class = pc_ringworld_machine
+			is_planet_class = pc_ringworld_hive
+			is_planet_class = pc_birch
+			is_planet_class = pc_alderson_slice_gaia
+			is_planet_class = pc_alderson_slice_gaia_shattered
+			is_planet_class = pc_alderson_slice_ecu
+			is_planet_class = pc_alderson_slice_hive
+			is_planet_class = pc_alderson_slice_machine
+			is_planet_class = pc_alderson_slice_pc
+			has_active_building = building_phanon_psg # AOT
+		}
+	}
+}
+
+# targets stars, destroys only megastructures so new civs can repair them (optional, only for self-created balance!)
+can_destroy_planet_with_PLANET_KILLER_SYNTHETIC_GODS_MEGA= {
+	custom_tooltip = {
+		fail_text = is_not_star
+		is_star = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = star_owner_is_not_hostile
+		OR = {
+			NOT = { exists = space_owner }
+			space_owner = { is_hostile = from.owner }
+			space_owner = { is_same_value = from.owner }
+		}
+	}
+}
+
+# trigger for which planets can be targeted, spawns new civ
+# added some Gigastructure planets because to create an event for all new planets and districts would be too much right now
+can_destroy_planet_with_PLANET_KILLER_SYNTHETIC_GODS = {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		is_a_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		text = only_empty_habitable_planets
+		NOT = { exists = owner }
+		is_colonizable = yes
+	}
+	custom_tooltip = {
+		fail_text = is_shielded	# not all are shielded, but its easier to add other invalid targets here
+		NOR = {
+			is_planet_class = pc_kompass
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive		
+			# Gigastructures
+			is_planet_class = pc_giga_penrose_habitable
+			is_planet_class = pc_interstellar_habitat
+			is_planet_class = pc_interstellar_ringworld_habitable
+			is_planet_class = pc_void_birch
+			is_planet_class = pc_ringworld_city
+			is_planet_class = pc_ringworld_machine
+			is_planet_class = pc_ringworld_hive
+			is_planet_class = pc_birch
+			is_planet_class = pc_alderson_slice_gaia
+			is_planet_class = pc_alderson_slice_gaia_shattered
+			is_planet_class = pc_alderson_slice_ecu
+			is_planet_class = pc_alderson_slice_hive
+			is_planet_class = pc_alderson_slice_machine
+			is_planet_class = pc_alderson_slice_pc			
+		}
+	}
+}
+
+# Vi origin ship
+can_destroy_planet_with_PLANET_KILLER_SEELE = {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		is_a_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		text = must_be_ready_for_seele
+		NOT = { exists = owner }
+			OR = {
+				# the most are from the Planetary Diversity mod
+				is_planet_class = pc_barren
+				is_planet_class = pc_barren_cold
+				is_planet_class = pc_frozen
+				is_planet_class = pc_molten
+				is_planet_class = pc_toxic
+				is_planet_class = pc_nuked
+				is_planet_class = pc_desert
+				is_planet_class = pc_tropical
+				is_planet_class = pc_arid
+				is_planet_class = pc_continental
+				is_planet_class = pc_ocean
+				is_planet_class = pc_tundra
+				is_planet_class = pc_arctic
+				is_planet_class = pc_alpine
+				is_planet_class = pc_savannah
+				is_planet_class = pc_gaia
+				is_planet_class = pc_relic
+				is_planet_class = pc_city
+				is_pd_planet_class_all = yes
+				merg_is_crackable_planet = yes
+			}
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_kompass
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+			# Gigastructures
+			is_planet_class = pc_giga_penrose_habitable
+			is_planet_class = pc_interstellar_habitat
+			is_planet_class = pc_interstellar_ringworld_habitable
+			is_planet_class = pc_void_birch
+			is_planet_class = pc_ringworld_city
+			is_planet_class = pc_ringworld_machine
+			is_planet_class = pc_ringworld_hive
+			is_planet_class = pc_birch
+			is_planet_class = pc_alderson_slice_gaia
+			is_planet_class = pc_alderson_slice_gaia_shattered
+			is_planet_class = pc_alderson_slice_ecu
+			is_planet_class = pc_alderson_slice_hive
+			is_planet_class = pc_alderson_slice_machine
+			is_planet_class = pc_alderson_slice_pc
+		}
+	}
+}
+
+# Hivemoon attack!
+can_destroy_planet_with_PLANET_KILLER_PLAGUE = {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		is_a_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_not_hostile
+		OR = {
+			custom_tooltip = {
+				text = is_not_hostile_cracker
+				OR = {
+					AND = { # colony
+						exists = owner
+						owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+							}
+						}
+					}
+					AND = { # primitive
+						exists = space_owner
+						exists = owner
+						owner = {
+							is_primitive = yes
+						}
+						space_owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+							}
+						}
+					}
+				}
+			}
+		}
+	}	
+	custom_tooltip = {	
+		text = must_be_organic	
+		is_colony = yes
+	
+	}
+	custom_tooltip = {
+		fail_text = is_shielded	# shielded and other invalid targets
+		NOR = {
+			is_planet_class = pc_kompass
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_habitat
+			# Gigastructures + Planetary Diversity
+			has_planet_flag = cant_build_here
+			is_planet_class = pc_giga_penrose_habitable
+			is_planet_class = pc_interstellar_habitat
+			is_planet_class = pc_interstellar_ringworld_habitable
+			is_planet_class = pc_void_birch
+			is_planet_class = pc_ringworld_city
+			is_planet_class = pc_ringworld_machine
+			is_planet_class = pc_ringworld_hive
+			is_planet_class = pc_birch
+			is_planet_class = pc_alderson_slice_gaia
+			is_planet_class = pc_alderson_slice_gaia_shattered
+			is_planet_class = pc_alderson_slice_ecu
+			is_planet_class = pc_alderson_slice_hive
+			is_planet_class = pc_alderson_slice_machine
+			is_planet_class = pc_alderson_slice_pc
+		}
+	}	
+}
+
+# Replicators perk (Nanitar ship)
+can_destroy_planet_with_PLANET_KILLER_NANO = {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_kompass
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+		}
+	}
+	#custom_tooltip = {
+		#fail_text = is_not_hostile
+		OR = {
+			custom_tooltip = {
+				text = not_barren_molten_frozen_toxic_test_fire
+				NOT = { exists = owner }
+				OR = {
+					NOT = { exists = space_owner }
+					AND = {
+						exists = space_owner
+						space_owner = { is_same_value = from.owner }
+					}
+				}
+				OR = {
+					is_planet_class = pc_machine			
+					is_planet_class = pc_infested			
+					is_planet_class = pc_immortal		
+					is_planet_class = pc_stahl					
+					is_planet_class = pc_barren
+					is_planet_class = pc_barren_cold
+					is_planet_class = pc_frozen
+					is_planet_class = pc_molten
+					is_planet_class = pc_toxic
+					is_planet_class = pc_nuked
+					is_planet_class = pc_desert
+					is_planet_class = pc_tropical
+					is_planet_class = pc_arid
+					is_planet_class = pc_continental
+					is_planet_class = pc_ocean
+					is_planet_class = pc_tundra
+					is_planet_class = pc_arctic
+					is_planet_class = pc_alpine
+					is_planet_class = pc_savannah
+					is_planet_class = pc_gaia
+					is_planet_class = pc_relic
+					is_planet_class = pc_city
+					merg_is_crackable_planet = yes
+					is_pd_planet_class_all = yes
+				}
+			}
+		}
+	#}
+}
+
+# kills only the pops and keeps the planet intact, so Gigastructure planets are a valid target
+can_destroy_planet_with_PLANET_KILLER_HARBINGER = {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		is_a_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_not_hostile
+		OR = {
+			custom_tooltip = {
+				text = is_not_hostile_cracker
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+							}
+						}
+					}
+					AND = { # colony
+						exists = owner
+						owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+							}
+						}
+					}
+					AND = { # primitive
+						exists = space_owner
+						exists = owner
+						owner = {
+							is_primitive = yes
+						}
+						space_owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+							}
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = not_barren_molten_frozen_toxic_test_fire
+				NOT = { exists = owner }
+				OR = {
+					NOT = { exists = space_owner }
+					AND = {
+						exists = space_owner
+						space_owner = { is_same_value = from.owner }
+					}
+				}
+			is_colony = yes
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_kompass
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+		}
+	}
+}
+
+# PK Triggers here
 # Vanilla triggers
 is_a_planet = {
 	is_star = no
@@ -2463,6 +3045,8 @@ merg_is_crackable_planet = {
 		is_planet_class = pc_iron
 		# Gigastructural Engineering & More
 		is_planet_class = pc_red_toxic
+		# Dead Space
+		is_planet_class = pc_stahl
 	}
 }
 
@@ -2470,7 +3054,7 @@ merg_is_crackable_planet = {
 merg_is_forbidden_target = {
 	OR = {
 		# Merger of Rules
-		has_planet_flag = merg_forbidden_target # add this to your planet to dynamically exclude it.
+		has_planet_flag = merg_is_forbidden_target # add this to your planet to dynamically exclude it.
 		merg_is_dense_star = yes
 		merg_is_empty_space = yes
 		# MEM
