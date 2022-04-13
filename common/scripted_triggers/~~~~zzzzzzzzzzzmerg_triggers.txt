@@ -1,5 +1,4 @@
 # Vanilla scripted triggers
-
 # Expanded by me for more cross-mod comp and to ease the game rules coding.
 is_megacorp = {
 	OR = {
@@ -11,13 +10,13 @@ is_megacorp = {
 		has_authority = auth_tec_patrocorporate
 		# More Authorities
 		has_government = gov_imperial_domain_megacorp
-		has_authority = auth_corporate_imperial # Also in E&C Bug Branch
+		has_authority = auth_corporate_imperial		# Also in E&C Bug Branch
 		# Ethics and Civics - Bug Branch
 		has_authority = auth_bugged_corporate_democratic
 		has_authority = auth_bugged_corporate_imperial
 		# Expanded Traits, Civics, Pops, and More
 		has_authority = auth_private
-		has_authority = auth_cooperative # Also More Corporate Authorities
+		has_authority = auth_cooperative		# Also More Corporate Authorities
 		# Expanded Gestalts: Forgotten Queens
 		has_valid_civic = civic_mutualistic_behavior
 		# More Corporate Authorities
@@ -96,12 +95,12 @@ colonizable_planet = {
 		is_planet_class = pc_acot_enigmopolis
 		### SOFE
 		is_planet_class = pc_golden_world
-        is_planet_class = pc_golden_world_habitable
-        is_planet_class = pc_omega_ringworld_habitable
-        is_planet_class = pc_omega_ringworld_seam
+		is_planet_class = pc_golden_world_habitable
+		is_planet_class = pc_omega_ringworld_habitable
+		is_planet_class = pc_omega_ringworld_seam
 		is_planet_class = pc_omega_ringworld_tech
 		is_planet_class = pc_goodman_gaia_world
-        is_planet_class = pc_golden_fortress
+		is_planet_class = pc_golden_fortress
 		is_planet_class = pc_sosi_proto_gaia_world
 	}
 }
@@ -120,7 +119,7 @@ is_crisis_faction = {
 		is_country_type = katzenartig_imperium
 		is_country_type = dormant_aeternum
 		# ACOT
-	    is_country_type = original_empire
+		is_country_type = original_empire
 		# Solar Storm
 		is_country_type = abyssal_host_invaders_type
 		# Shroud Rising
@@ -155,7 +154,7 @@ has_encountered_other_species = {
 is_organic_species = {
 	species = {
 		OR = {
-			is_archetype = BIOLOGICAL # original trigger did not include pre-sapient classes
+			is_archetype = BIOLOGICAL			# original trigger did not include pre-sapient classes
 			is_archetype = LITHOID
 			# Warship Girls R And MIST Species
 			is_archetype = WARSHIPGIRL
@@ -202,14 +201,14 @@ is_organic_species = {
 			# Nyto Species Events Pack
 			is_archetype = NYTO
 			# Silfae's Portrait Revisited
-            AND = {
-                is_archetype = HOLOARCH
-                NOR = {
-                    has_trait = trait_holofrixigram
-                    has_trait = trait_holofrixigram_2
-                    has_trait = trait_holofrixigram_3
-                }
-            }
+			AND = {
+				is_archetype = HOLOARCH
+				NOR = {
+					has_trait = trait_holofrixigram
+					has_trait = trait_holofrixigram_2
+					has_trait = trait_holofrixigram_3
+				}
+			}
 			# Cryogenesis Unofficial Species Pack
 			is_archetype = sm_ELEMENTAL
 		}
@@ -281,8 +280,8 @@ uninhabitable_regular_planet = {
 is_a_habitable_planet_megastructure = {
 	OR = {
 		is_planet_class = pc_infested
-		is_planet_class = pc_matryoshka # Expanded Gestalts: Forgotten Queens
-		colonizable_planet = yes # Ariphaos patch
+		is_planet_class = pc_matryoshka		# Expanded Gestalts: Forgotten Queens
+		colonizable_planet = yes		# Ariphaos patch
 		habitable_structure = yes
 	}
 }
@@ -312,7 +311,7 @@ is_country_type_with_subjects = {
 }
 
 has_comms_with_alien_empire = {
-	any_relation = {	
+	any_relation = {
 		has_communications = root
 		OR = {
 			merg_is_default_empire = yes
@@ -328,7 +327,7 @@ has_comms_with_alien_empire = {
 }
 
 has_comms_with_alien_civilization = {
-	any_relation = {	
+	any_relation = {
 		has_communications = root
 		OR = {
 			merg_is_default_empire = yes
@@ -347,7 +346,8 @@ has_comms_with_alien_civilization = {
 	}
 }
 
-is_autocracy = { #Power of one
+is_autocracy = {
+	#Power of one
 	OR = {
 		has_ethic = ethic_gestalt_consciousness
 		has_authority = auth_imperial
@@ -367,7 +367,8 @@ is_autocracy = { #Power of one
 	}
 }
 
-is_democracy = { #Power of many
+is_democracy = {
+	#Power of many
 	OR = {
 		has_authority = auth_democratic
 		AND = {
@@ -376,7 +377,7 @@ is_democracy = { #Power of many
 		}
 		# More Authorities
 		has_authority = auth_strict_democratic
-		has_authority = auth_direct_democratic # Also used by Stellaris Evolved
+		has_authority = auth_direct_democratic		# Also used by Stellaris Evolved
 		AND = {
 			has_authority = auth_democratic_dictatorship
 			is_egalitarian = yes
@@ -401,23 +402,42 @@ is_valid_refugee_pop = {
 	owner = {
 		any_relation = {
 			merg_is_default_empire = yes
-			has_communications = prev #relations include countries that have made first contact but not established comms
+			has_communications = prev			#relations include countries that have made first contact but not established comms
 			OR = {
-				NOT = { has_policy_flag = refugees_not_allowed }
+				NOT = {
+					has_policy_flag = refugees_not_allowed
+				}
 				# Expanded Gestalts
 				has_valid_civic = civic_mutualistic_behavior
 			}
-			prevprev = { #this ensures Pop scope, as root will not always be pop scope
+			prevprev = {
+				#this ensures Pop scope, as root will not always be pop scope
 				OR = {
-					has_citizenship_type = { type = citizenship_full country = prev }
-					has_citizenship_type = { type = citizenship_caste_system country = prev }
+					has_citizenship_type = {
+						type = citizenship_full
+						country = prev
+					}
+					has_citizenship_type = {
+						type = citizenship_caste_system
+						country = prev
+					}
 					AND = {
-						has_citizenship_type = { type = citizenship_limited country = prev }
-						has_citizenship_type = { type = citizenship_caste_system_limited country = prev }
-						prev = { has_policy_flag = refugees_allowed }
+						has_citizenship_type = {
+							type = citizenship_limited
+							country = prev
+						}
+						has_citizenship_type = {
+							type = citizenship_caste_system_limited
+							country = prev
+						}
+						prev = {
+							has_policy_flag = refugees_allowed
+						}
 					}
 					# Expanded Gestalts
-					prev = { has_valid_civic = civic_mutualistic_behavior }
+					prev = {
+						has_valid_civic = civic_mutualistic_behavior
+					}
 				}
 			}
 			any_owned_planet = {
@@ -433,23 +453,41 @@ has_any_habitability = {
 	merg_is_default_empire = yes
 	has_communications = prev
 	OR = {
-		NOT = { has_policy_flag = refugees_not_allowed }
+		NOT = {
+			has_policy_flag = refugees_not_allowed
+		}
 		# Expanded Gestalts
 		has_valid_civic = civic_mutualistic_behavior
-	} 
+	}
 	event_target:refugee_pop = {
-		OR = { 
-			has_citizenship_type = { type = citizenship_full country = prev }
-			has_citizenship_type = { type = citizenship_caste_system country = prev }
+		OR = {
+			has_citizenship_type = {
+				type = citizenship_full
+				country = prev
+			}
+			has_citizenship_type = {
+				type = citizenship_caste_system
+				country = prev
+			}
 			AND = {
-				has_citizenship_type = { type = citizenship_limited country = prev }
-				has_citizenship_type = { type = citizenship_caste_system_limited country = prev }
-				prev = { has_policy_flag = refugees_allowed }
-			}	
+				has_citizenship_type = {
+					type = citizenship_limited
+					country = prev
+				}
+				has_citizenship_type = {
+					type = citizenship_caste_system_limited
+					country = prev
+				}
+				prev = {
+					has_policy_flag = refugees_allowed
+				}
+			}
 			# Expanded Gestalts
-			prev = { has_valid_civic = civic_mutualistic_behavior }
-		}		
-	}	
+			prev = {
+				has_valid_civic = civic_mutualistic_behavior
+			}
+		}
+	}
 	any_owned_planet = {
 		is_under_colonization = no
 		is_controlled_by = owner
@@ -466,15 +504,25 @@ has_phototrophic_energy_upkeep = {
 				has_trait = trait_harvested_radiotrophic
 			}
 			NOR = {
-				planet = { is_planet_class = pc_nuked }
+				planet = {
+					is_planet_class = pc_nuked
+				}
 				# Planetary Diversity
-				planet = { is_planet_class = pc_irradiated }
+				planet = {
+					is_planet_class = pc_irradiated
+				}
 				# Galaxius
-				planet = { is_planet_class = pc_ie_gateway }
+				planet = {
+					is_planet_class = pc_ie_gateway
+				}
 				# Giga Diversity
-				planet = { is_planet_class = pc_katzenland }
+				planet = {
+					is_planet_class = pc_katzenland
+				}
 				# Real Space
-				planet = { is_planet_class = pc_depleted }
+				planet = {
+					is_planet_class = pc_depleted
+				}
 			}
 		}
 	}
@@ -487,7 +535,9 @@ is_wet = {
 
 is_dry = {
 	has_climate = dry
-	NOT = { is_planet_class = pc_city }
+	NOT = {
+		is_planet_class = pc_city
+	}
 }
 
 is_cold = {
@@ -496,32 +546,33 @@ is_cold = {
 
 # Merging and fixing
 default_endgame_early_start_triggers = {
-	OR = {
-		NOT = {
-			any_country = {
-				OR = {
-					merg_is_fallen_empire = yes
-					merg_is_awakened_fe = yes
+	AND = {
+		OR = {
+			NOT = {
+				any_country = {
+					OR = {
+						merg_is_fallen_empire = yes
+						merg_is_awakened_fe = yes
+					}
 				}
 			}
-		}
-		has_global_flag = no_war_in_heaven
-		AND = {
-			has_global_flag = war_in_heaven_started
-			OR = {
-				has_global_flag = war_in_heaven_ended
-				NOT = { has_global_flag = war_in_heaven_recently_started }
+			has_global_flag = no_war_in_heaven
+			AND = {
+				has_global_flag = war_in_heaven_started
+				OR = {
+					has_global_flag = war_in_heaven_ended
+					NOT = {
+						has_global_flag = war_in_heaven_recently_started
+					}
+				}
 			}
 		}
 		# ACOT
-		AND = {
-			has_acot = yes
-			OR = {
-				has_global_flag = acot_dangerous_forbidden
-				NOR = {
-					has_global_flag = acot_war_in_hell_active
-					has_global_flag = active_sofe_crisis
-				}
+		OR = {
+			has_global_flag = acot_dangerous_forbidden
+			NOR = {
+				has_global_flag = acot_war_in_hell_active
+				has_global_flag = active_sofe_crisis
 			}
 		}
 		NOR = {
@@ -567,7 +618,9 @@ has_total_war_cb = {
 				}
 				AND = {
 					has_valid_civic = civic_fanatic_purifiers
-					NOT = { is_same_species = from }
+					NOT = {
+						is_same_species = from
+					}
 				}
 			}
 		}
@@ -579,7 +632,7 @@ has_total_war_cb = {
 				is_country_type = original_empire
 				is_country_type = original_empire_passive
 				is_country_type = original_empire_active
-			}				
+			}
 			NOR = {
 				is_country_type = awakened_fallen_empire
 				is_homicidal = yes

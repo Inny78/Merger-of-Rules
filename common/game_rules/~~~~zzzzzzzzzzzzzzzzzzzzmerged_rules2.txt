@@ -3212,11 +3212,13 @@ can_pop_auto_migrate = {
 			}
 		}
 	}
-	# Diagraphers Trait Mod
 	NOR = {
+		# Diagraphers Trait Mod
 		has_trait = trait_living_architecture
 		has_trait = trait_rooted_adults_rooted
 		has_trait = trait_presapient_earthbound
+		# Expanded Traits, Civics, Pops, and More
+		has_trait = trait_tree_caretaker
 	}
 }
 
@@ -3248,7 +3250,7 @@ can_planet_auto_migrate = {
 	}
 	exists = owner
 	owner = {
-		is_country_type_with_subjects = yes
+		merg_is_default_empire = yes
 	}
 	# Better Performance & Utilities
 	NOT = {
@@ -3378,6 +3380,7 @@ can_fill_specialist_job = {
 			has_trait = trait_syncretic_proles
 			has_trait = trait_nerve_stapled
 			has_trait = trait_presapient_docile_livestock
+			has_trait = trait_zombie
 			# Diagraphers Trait mod
 			has_trait = trait_subsapient_form
 			# Expanded Traits, Civics, Pops, and More
