@@ -4,7 +4,6 @@ ag_can_do_orbital_bombardment_country = { always = no }
 can_fill_holosphere_ruler_job = { always = no }
 cohesive_system = { always = no }
 everchanging_system = { always = no }
-giga_habitable_structure = { always = no }
 has_apsr_modifiers = { always = no }
 has_artificial_wombs = { always = no }
 has_reproductive_politics = { always = no }
