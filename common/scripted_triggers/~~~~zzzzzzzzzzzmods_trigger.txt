@@ -932,6 +932,16 @@ ag_is_gateway_megastructure = {
 		is_megastructure_type = AAR_MEGA_webway_NODE
 		is_megastructure_type = AAR_MEGA_webway_NEXUS
 		is_megastructure_type = AAR_MEGA_webway_CLOSE
+		# Some Events of Outside Cluster
+		is_megastructure_type = nep_sealgate_ruined
+		is_megastructure_type = nep_sealgate_restored
+		is_megastructure_type = nep_sealportal_node_ruined
+		is_megastructure_type = nep_sealportal_node
+		is_megastructure_type = nep_sealphantom_node_ruined
+		is_megastructure_type = nep_sealphantom_node
+		is_megastructure_type = nep_wormhole_deus_mega
+		is_megastructure_type = nep_wormhole_ugo_mega
+		is_megastructure_type = nep_wormhole_wohp_mega
 		# Star Wars: Kuat Ancient Empire
 		is_megastructure_type = exe_outer_gate_disable
 		is_megastructure_type = exe_outer_gate

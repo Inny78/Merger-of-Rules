@@ -145,6 +145,13 @@ merg_is_hab_type = {
 		is_megastructure_type = skypalace_0
 		# Nanite Machines & Distant Stars Overhaul
 		is_megastructure_type = nanite_habitat_0
+		# Starborn: Improved Voidtouched
+		is_megastructure_type = starborn_habitat4
+		is_megastructure_type = starborn_habitat5
+		is_megastructure_type = starborn_habitat6
+		is_megastructure_type = starborn_habitat_expander
+		is_megastructure_type = starborn_vanilla_habitat_big
+		is_megastructure_type = starborn_vanilla_habitat_very_big
 	}
 }
 
@@ -872,6 +879,60 @@ merg_is_fcss_type = {
 	}
 }
 
+# Acquisition of Technologies
+merg_is_aot_type = {
+	OR = {
+		is_megastructure_type = star_imploder_0
+		is_megastructure_type = star_imploder_1
+		is_megastructure_type = star_imploder_2
+		is_megastructure_type = star_imploder_3
+		is_megastructure_type = macripp_0
+		is_megastructure_type = macripp_1
+		is_megastructure_type = macripp_2
+		is_megastructure_type = macripp_3
+		is_megastructure_type = phanon_great_wall_0
+		is_megastructure_type = phanon_great_wall_1
+		is_megastructure_type = phanon_great_wall_2
+		is_megastructure_type = phanon_great_wall_3
+		is_megastructure_type = phanon_great_wall_4
+		is_megastructure_type = phanon_megaturret_intermediate_1
+		is_megastructure_type = phanon_megaturret_1
+		is_megastructure_type = phanon_megaturret_2
+		is_megastructure_type = phanon_megaturret_destroyed_0
+		is_megastructure_type = phanon_megaturret_destroyed_1
+		is_megastructure_type = aot_macripp_dark_matter_obelisk_core_se
+		is_megastructure_type = aot_macripp_dark_matter_obelisk_core_pe
+		is_megastructure_type = aot_macripp_dark_matter_obelisk_core_oe
+	}
+}
+
+# ACOT
+merg_is_acot_type = {
+	OR = {
+		is_megastructure_type = acot_dark_matter_obelisk_core
+		is_megastructure_type = acot_dark_matter_obelisk_core_ae
+		is_megastructure_type = acot_dark_matter_obelisk_core_se
+		is_megastructure_type = acot_dark_matter_obelisk_core_oe
+		is_megastructure_type = acot_dark_matter_obelisk_core_pe
+		is_megastructure_type = acot_amerigo
+		is_megastructure_type = acot_amerigo_ae
+		is_megastructure_type = acot_amerigo_se
+		is_megastructure_type = acot_amerigo_pe
+		is_megastructure_type = acot_amerigo_oe
+		is_megastructure_type = acot_precursor_citadel_site
+		is_megastructure_type = acot_precursor_citadel_base
+		is_megastructure_type = acot_precursor_sigma_citadel_site
+		is_megastructure_type = acot_precursor_sigma_citadel_base
+		is_megastructure_type = acot_precursor_phanon_citadel_site
+		is_megastructure_type = acot_precursor_colossus_site
+		is_megastructure_type = acot_precursor_colossus_base
+		is_megastructure_type = acot_precursor_colossus_stage_one
+		is_megastructure_type = acot_precursor_colossus_stage_two
+		is_megastructure_type = acot_precursor_colossus_final
+		is_megastructure_type = acot_phanon_master_reactor_sphere
+	}
+}
+
 #### This is where the real stuff is ####
 # Vanilla scripted triggers
 has_no_non_gate_megastructure = {
@@ -893,6 +954,8 @@ has_no_non_gate_megastructure = {
 					merg_is_kuat_type = yes
 					merg_is_thaum_type = yes
 					merg_is_fcss_type = yes
+					merg_is_aot_type = yes
+					merg_is_acot_type = yes
 					# GPM
 					is_megastructure_type = gpm_mega_shipyard_ruined_precursor
 					is_megastructure_type = gpm_mega_shipyard_restored_precursor
@@ -927,6 +990,13 @@ has_no_non_gate_megastructure = {
 					is_megastructure_type = tma_inhibitor_2
 					# Nanite Machines & Distant Stars Overhaul
 					is_megastructure_type = nanite_factory_station_0
+					# Some Events of Outside Cluster
+					is_megastructure_type = nep_station_whitegoo_mega
+					is_megastructure_type = nep_sealphantom_nexus
+					is_megastructure_type = nep_sealportal_nexus
+					# Star Wars: UnknownWorld Shipgirls Story
+					is_megastructure_type = swsg_mining_station
+					is_megastructure_type = swgs_star_hub
 					# Unique Ascension Perks
 					is_megastructure_type = utopia_site
 					is_megastructure_type = utopia_1
@@ -936,9 +1006,6 @@ has_no_non_gate_megastructure = {
 					is_megastructure_type = utopia_5
 					is_megastructure_type = nanite_factory_site
 					is_megastructure_type = nanite_factory
-					# Star Wars: UnknownWorld Shipgirls Story
-					is_megastructure_type = swsg_mining_station
-					is_megastructure_type = swgs_star_hub
 				}
 			}
 		}
@@ -959,6 +1026,8 @@ has_any_megastructure_in_empire = {
 		merg_is_kuat_type = yes
 		merg_is_thaum_type = yes
 		merg_is_fcss_type = yes
+		merg_is_aot_type = yes
+		merg_is_acot_type = yes
 		# GPM
 		is_megastructure_type = gpm_mega_shipyard_ruined_precursor
 		is_megastructure_type = gpm_mega_shipyard_restored_precursor
@@ -991,6 +1060,15 @@ has_any_megastructure_in_empire = {
 		is_megastructure_type = tma_core_2_contacted
 		is_megastructure_type = tma_inhibitor_1
 		is_megastructure_type = tma_inhibitor_2
+		# Nanite Machines & Distant Stars Overhaul
+		is_megastructure_type = nanite_factory_station_0
+		# Some Events of Outside Cluster
+		is_megastructure_type = nep_station_whitegoo_mega
+		is_megastructure_type = nep_sealphantom_nexus
+		is_megastructure_type = nep_sealportal_nexus
+		# Star Wars: UnknownWorld Shipgirls Story
+		is_megastructure_type = swsg_mining_station
+		is_megastructure_type = swgs_star_hub
 		# Unique Ascension Perks
 		is_megastructure_type = utopia_site
 		is_megastructure_type = utopia_1
@@ -1000,8 +1078,5 @@ has_any_megastructure_in_empire = {
 		is_megastructure_type = utopia_5
 		is_megastructure_type = nanite_factory_site
 		is_megastructure_type = nanite_factory
-		# Star Wars: UnknownWorld Shipgirls Story
-		is_megastructure_type = swsg_mining_station
-		is_megastructure_type = swgs_star_hub
 	}
 }
