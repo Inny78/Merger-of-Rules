@@ -808,7 +808,71 @@ merg_is_kuat_type = {
 	}
 }
 
-### This is where the real stuff is ###
+# ThaumStellaris
+merg_is_thaum_type = {
+	OR = {
+		is_megastructure_type = tc_ancient_alchemical_furnace_00
+		is_megastructure_type = tc_ancient_alchemical_furnace_01
+		is_megastructure_type = tc_ancient_alchemical_furnace_02
+		is_megastructure_type = tc_ancient_alchemical_furnace_03
+		is_megastructure_type = tc_ancient_alchemical_furnace_04
+		is_megastructure_type = tc_ancient_alchemical_furnace_complet
+		is_megastructure_type = tc_magic_hourglass_00
+		is_megastructure_type = tc_magic_hourglass_01
+		is_megastructure_type = tc_mega_arcane_bore_00
+		is_megastructure_type = tc_mega_arcane_bore_01
+		is_megastructure_type = tc_mega_arcane_bore_02
+		is_megastructure_type = tc_mega_arcane_bore_03
+		is_megastructure_type = tc_nethermind_00
+		is_megastructure_type = tc_nethermind_01
+		is_megastructure_type = tc_nethermind_02
+		is_megastructure_type = tc_nethermind_03
+		is_megastructure_type = tc_order_mind_00
+		is_megastructure_type = tc_order_mind_01_temp
+		is_megastructure_type = tc_order_mind_01
+		is_megastructure_type = tc_order_mind_01_research
+		is_megastructure_type = tc_order_mind_01_knowledge
+		is_megastructure_type = tc_order_mind_02
+		is_megastructure_type = tc_order_mind_02_research
+		is_megastructure_type = tc_order_mind_02_knowledge
+		is_megastructure_type = tc_order_mind_03
+		is_megastructure_type = tc_order_mind_03_research
+		is_megastructure_type = tc_order_mind_03_knowledge
+		is_megastructure_type = tc_osmotic_enchanter_00
+		is_megastructure_type = tc_osmotic_enchanter_01
+		is_megastructure_type = tc_osmotic_enchanter_02
+		is_megastructure_type = tc_osmotic_enchanter_03
+		is_megastructure_type = tc_osmotic_enchanter_start
+		is_megastructure_type = tc_stellar_node_generator_00
+		is_megastructure_type = tc_stellar_node_generator_01
+		is_megastructure_type = tc_stellar_node_generator_02
+		is_megastructure_type = tc_stellar_node_generator_03
+		is_megastructure_type = tc_stellar_node_generator_04
+		is_megastructure_type = tc_stellar_node_generator_05
+		is_megastructure_type = tc_stellar_node_generator_06
+	}
+}
+
+# Origin - F.C.S.S & M.C.S.S
+merg_is_fcss_type = {
+	OR = {
+		is_megastructure_type = BFS_capital_fantasmagoria
+		is_megastructure_type = BFS_standalone_Intercept_Fortress_I
+		is_megastructure_type = BFS_standalone_Intercept_Fortress_II
+		is_megastructure_type = BFS_standalone_Intercept_Fortress_III
+		is_megastructure_type = BFS_battleplanet_1
+		is_megastructure_type = BFS_battleplanet_2
+		is_megastructure_type = BFS_battleplanet_3
+		is_megastructure_type = BFS_battlesatellite_1
+		is_megastructure_type = BFS_MCSS_1
+		is_megastructure_type = BFS_MCSS_2
+		is_megastructure_type = BFS_MCSS_3
+		is_megastructure_type = BFS_MCSS_4
+		is_megastructure_type = BFS_MCSS_5
+	}
+}
+
+#### This is where the real stuff is ####
 # Vanilla scripted triggers
 has_no_non_gate_megastructure = {
 	OR = {
@@ -827,6 +891,8 @@ has_no_non_gate_megastructure = {
 					merg_is_wsg_type = yes
 					merg_is_giga_manip_type = yes
 					merg_is_kuat_type = yes
+					merg_is_thaum_type = yes
+					merg_is_fcss_type = yes
 					# GPM
 					is_megastructure_type = gpm_mega_shipyard_ruined_precursor
 					is_megastructure_type = gpm_mega_shipyard_restored_precursor
@@ -838,6 +904,12 @@ has_no_non_gate_megastructure = {
 					is_megastructure_type = GFnyto_beacon_weapon_03
 					is_megastructure_type = GFnyto_stions_fortress_base
 					is_megastructure_type = GFnyto_stions_fortress_up
+					# Omega's Stellaris Traditions
+					is_megastructure_type = planet_construction_0
+					is_megastructure_type = machine_assimilate_0
+					# Twinks Atlantean
+					is_megastructure_type = atlantis_oranos_world
+					is_megastructure_type = destruction_atlantis
 					# Twinks Kaldorei
 					is_megastructure_type = highborne_ward
 					is_megastructure_type = kaldorei_systemward
@@ -845,6 +917,7 @@ has_no_non_gate_megastructure = {
 					is_megastructure_type = arcane_sanctum_0
 					is_megastructure_type = arcane_sanctum_1
 					# Real Space - Planetary Station
+					is_megastructure_type = planet_crack_0
 					is_megastructure_type = planetary_station_0
 					# Empires Expanded
 					is_megastructure_type = tma_core_1
@@ -854,6 +927,18 @@ has_no_non_gate_megastructure = {
 					is_megastructure_type = tma_inhibitor_2
 					# Nanite Machines & Distant Stars Overhaul
 					is_megastructure_type = nanite_factory_station_0
+					# Unique Ascension Perks
+					is_megastructure_type = utopia_site
+					is_megastructure_type = utopia_1
+					is_megastructure_type = utopia_2
+					is_megastructure_type = utopia_3
+					is_megastructure_type = utopia_4
+					is_megastructure_type = utopia_5
+					is_megastructure_type = nanite_factory_site
+					is_megastructure_type = nanite_factory
+					# Star Wars: UnknownWorld Shipgirls Story
+					is_megastructure_type = swsg_mining_station
+					is_megastructure_type = swgs_star_hub
 				}
 			}
 		}
@@ -872,6 +957,8 @@ has_any_megastructure_in_empire = {
 		merg_is_wsg_type = yes
 		merg_is_giga_manip_type = yes
 		merg_is_kuat_type = yes
+		merg_is_thaum_type = yes
+		merg_is_fcss_type = yes
 		# GPM
 		is_megastructure_type = gpm_mega_shipyard_ruined_precursor
 		is_megastructure_type = gpm_mega_shipyard_restored_precursor
@@ -883,10 +970,20 @@ has_any_megastructure_in_empire = {
 		is_megastructure_type = GFnyto_beacon_weapon_03
 		is_megastructure_type = GFnyto_stions_fortress_base
 		is_megastructure_type = GFnyto_stions_fortress_up
+		# Omega's Stellaris Traditions
+		is_megastructure_type = planet_construction_0
+		is_megastructure_type = machine_assimilate_0
+		# Twinks Atlantean
+		is_megastructure_type = atlantis_oranos_world
+		is_megastructure_type = destruction_atlantis
+		# Twinks Kaldorei
+		is_megastructure_type = highborne_ward
+		is_megastructure_type = kaldorei_systemward
 		# Twinks Sin'dorei
 		is_megastructure_type = arcane_sanctum_0
 		is_megastructure_type = arcane_sanctum_1
 		# Real Space - Planetary Station
+		is_megastructure_type = planet_crack_0
 		is_megastructure_type = planetary_station_0
 		# Empires Expanded
 		is_megastructure_type = tma_core_1
@@ -894,5 +991,17 @@ has_any_megastructure_in_empire = {
 		is_megastructure_type = tma_core_2_contacted
 		is_megastructure_type = tma_inhibitor_1
 		is_megastructure_type = tma_inhibitor_2
+		# Unique Ascension Perks
+		is_megastructure_type = utopia_site
+		is_megastructure_type = utopia_1
+		is_megastructure_type = utopia_2
+		is_megastructure_type = utopia_3
+		is_megastructure_type = utopia_4
+		is_megastructure_type = utopia_5
+		is_megastructure_type = nanite_factory_site
+		is_megastructure_type = nanite_factory
+		# Star Wars: UnknownWorld Shipgirls Story
+		is_megastructure_type = swsg_mining_station
+		is_megastructure_type = swgs_star_hub
 	}
 }
