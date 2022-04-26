@@ -3093,6 +3093,8 @@ merg_is_dense_star = {
 		is_planet_class = pc_microquasar_2
 		# MEM
 		is_planet_class = pc_mem_micro_black_hole
+		# Darkspace
+		is_planet_class = pc_zeitriss
 	}
 }
 
@@ -3101,6 +3103,7 @@ merg_is_empty_space = {
 	OR = {
 		# Gigastructural Engineering & More
 		is_planet_class = giga_hidden
+		is_planet_class = pc_giga_empty_space_asteroid
 		# Ancient Empires
 		is_planet_class = pc_ag_void_star
 		is_planet_class = pc_ag_void_planet
@@ -3112,5 +3115,7 @@ merg_is_empty_space = {
 		is_planet_class = pc_star_void_dummy_01
 		# ThaumStellaris
 		is_planet_class = pc_tc_not_texture
+		# Darkspace
+		is_planet_class = pc_gc_star
 	}
 }

@@ -99,11 +99,49 @@ merg_is_hab_ringworld = {
 		# Warship Girls and MIST species
 		is_planet_class = pc_ringworld_habitable_sh
 		is_planet_class = pc_ringworld_habitable_wsg
+		is_planet_class = pc_ringworld_habitable_swim
+		is_planet_class = pc_ringworld_habitable_water
+		is_planet_class = pc_ringworld_habitable_uf
+		is_planet_class = pc_ringworld_habitable_auto_uf
+		is_planet_class = pc_dyson_ring
 		# Planetary Diversity
 		is_planet_class = pc_ammoniaring
 		is_planet_class = pc_ashring
 		is_planet_class = pc_methanering
 		is_planet_class = pc_sulfurring
+		# Darkspace
+		is_planet_class = pc_ancient_ringworld
+		is_planet_class = pc_ringworld_spectrals
+		# ZOFE
+		is_planet_class = pc_utopian_ringworld
+	}
+}
+
+# Listing habitats
+merg_is_habitat = {
+	OR = {
+		is_planet_class = pc_habitat
+		# Planetary Diversity
+		is_pd_habitat = yes
+		# Gigastructural Engineering & More
+		is_planet_class = pc_interstellar_habitat
+		# More Events Mod
+		is_planet_class = pc_mem_vazuran_habitat
+		# Acquisition of Technology
+		is_planet_class = pc_dm_habitat
+		is_planet_class = pc_ae_habitat
+		is_planet_class = pc_sigma_habitat
+		is_planet_class = pc_sigma_deepspace_habitat
+		# Starborn: Improved Voidtouched
+		uses_district_set = starborn_start
+		# Twinks Atlantean
+		uses_district_set = skypalace
+		# Plentiful Traditions
+		is_planet_class = pc_habitat_robot
+		# Giga Diversity
+		is_planet_class = pc_pd_toxic_hab
+		# Nyto Species Pack
+		is_planet_class = pc_GFnytp_habitis
 	}
 }
 
@@ -136,32 +174,6 @@ merg_has_cloning_building = {
 		# The Dark Arts of Necromancy
 		has_building = building_house_of_the_fleshsculpter
 		has_building = building_summoner_site
-	}
-}
-
-# Listing habitats
-merg_is_habitat = {
-	OR = {
-		is_planet_class = pc_habitat
-		# Planetary Diversity
-		is_pd_habitat = yes
-		# Gigastructural Engineering & More
-		is_planet_class = pc_interstellar_habitat
-		# More Events Mod
-		is_planet_class = pc_mem_vazuran_habitat
-		# Acquisition of Technology
-		is_planet_class = pc_dm_habitat
-		is_planet_class = pc_ae_habitat
-		is_planet_class = pc_sigma_habitat
-		is_planet_class = pc_sigma_deepspace_habitat
-		# Starborn: Improved Voidtouched
-		uses_district_set = starborn_start
-		# Twinks Atlantean
-		uses_district_set = skypalace
-		# Plentiful Traditions
-		is_planet_class = pc_habitat_robot
-		# Giga Diversity
-		is_planet_class = pc_pd_toxic_hab
 	}
 }
 
@@ -198,6 +210,8 @@ merg_is_void_system = {
 		is_star_class = sc_empty_space
 		# Some Events of Outside Cluster
 		is_star_class = sc_void_dummy
+		# Darkspace
+		is_star_class = sc_gc
 	}
 }
 
@@ -219,4 +233,3 @@ merg_is_pd_planet_check = {
 		is_planet_class = pc_technoorganic
 	}
 }
-

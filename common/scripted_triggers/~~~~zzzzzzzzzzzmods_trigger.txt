@@ -1,5 +1,5 @@
 # Scripted triggers from mods, expanded to acknowledge other mods.
-
+############################### Shadowgate ###############################
 # Making Shadowgate acknowledge mod-made Fallen Empires
 shadowgate_is_fe = {
 	OR = {
@@ -7,7 +7,9 @@ shadowgate_is_fe = {
 		# Human Fallen Empire
 		AND = {
 			is_country_type = human_fallen_empire
-			NOT = { has_civic = hfe_civic_egypt_fury }
+			NOT = {
+				has_civic = hfe_civic_egypt_fury
+			}
 		}
 		# History of the Lost Empire
 		is_country_type = LsE_fallen_empire
@@ -41,21 +43,21 @@ shadowgate_is_ae = {
 
 # Making Shadowgate acknowledge other mods
 shadowgate_is_purifier = {
-    OR = {
-        has_country_flag = shadowgate_ap_restricted
-        is_homicidal = yes
+	OR = {
+		has_country_flag = shadowgate_ap_restricted
+		is_homicidal = yes
 		# Underground Realms
 		has_country_flag = dark_side
 		# Expanded Traits, Civics, Pops, and More
 		has_valid_civic = civic_infestation
-    }
+	}
 }
 
 # Making Shadowgate acknowledge Starbase Ships.
 shadowgate_is_military_fleet = {
-    OR = {
-        has_fleet_flag = shadowgate_military_fleet
-        any_owned_ship = {
+	OR = {
+		has_fleet_flag = shadowgate_military_fleet
+		any_owned_ship = {
 			OR = {
 				is_ship_class = shipclass_military
 				is_ship_class = shipclass_military_special
@@ -74,18 +76,41 @@ shadowgate_is_military_fleet = {
 				is_ship_size = fe_goliath
 			}
 		}
-    }
+	}
 }
 
 shadowgate_aggressor_is_valid_cb_target = {
-    NOR = { is_in_federation_with = root.from is_hostile = root.from has_casus_belli = { type = cb_shadowrift_attacked target = root.from } }
-    root.from = { OR = { merg_is_default_empire = yes shadowgate_is_fe = yes shadowgate_is_ae = yes } }
-    OR = { is_subject = no overlord = { NOT = { is_same_value = root.from } } }
-    root.fromfrom.solar_system = { has_access_fleet = event_target:shadowgate_assaulted_owner }
-    has_communications = root.from
+	NOR = {
+		is_in_federation_with = root.from
+		is_hostile = root.from
+		has_casus_belli = {
+			type = cb_shadowrift_attacked
+			target = root.from
+		}
+	}
+	root.from = {
+		OR = {
+			merg_is_default_empire = yes
+			shadowgate_is_fe = yes
+			shadowgate_is_ae = yes
+		}
+	}
+	OR = {
+		is_subject = no
+		overlord = {
+			NOT = {
+				is_same_value = root.from
+			}
+		}
+	}
+	root.fromfrom.solar_system = {
+		has_access_fleet = event_target:shadowgate_assaulted_owner
+	}
+	has_communications = root.from
 }
 
-# Expanding a bit the country list of Gigastructural Engineering & More
+############################### Gigastructural Engineering & More ###############################
+# Expanding a bit the country list
 ehof_default_country = {
 	OR = {
 		is_country_type = default
@@ -98,6 +123,7 @@ ehof_default_country = {
 	}
 }
 
+# Making station-sized ships able to use the EHOF
 can_use_ehof = {
 	NOR = {
 		is_constructing = mining_station
@@ -160,23 +186,12 @@ giga_valid_planet_wrecked_ship = {
 		merg_is_void_system = no
 	}
 	is_star = no
-	NOT = { has_planet_flag = has_giga_wrecked_ship }
-}
-
-# Overwriting this for ZOFE and comp mods
-is_zofe_compatible = {
-	OR = {
-		is_country_type = default
-		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
-		# The Empty Vagrant
-		is_country_type = default_ev
+	NOT = {
+		has_planet_flag = has_giga_wrecked_ship
 	}
 }
 
 # Overwriting to give support to other ringworlds
-# Switching to district sets to reduce its size
 giga_habitable_structure = {
 	OR = {
 		uses_district_set = habitat
@@ -203,6 +218,108 @@ giga_habitable_structure = {
 	}
 }
 
+# extensible restriction list (can NOT build Maginots on these planet_classes)
+is_maginotable_restricted = {
+	OR = {
+		is_planet_class = pc_giga_planetary_computer
+		is_planet_class = pc_birch
+		# APSR
+		is_planet_class = pc_apsr_ancient
+		is_planet_class = pc_apsr_unique
+		# ACOT
+		is_planet_class = pc_acot_enigmopolis
+		# Ancient Empire
+		is_planet_class = pc_ag_ringworld_desert
+		is_planet_class = pc_ag_ringworld_arid
+		is_planet_class = pc_ag_ringworld_savannah
+		is_planet_class = pc_ag_ringworld_ocean
+		is_planet_class = pc_ag_ringworld_continental
+		is_planet_class = pc_ag_ringworld_tropical
+		is_planet_class = pc_ag_ringworld_tundra
+		is_planet_class = pc_ag_ringworld_arctic
+		is_planet_class = pc_ag_ringworld_alpine
+		is_planet_class = pc_ag_ringworld_machine
+		is_planet_class = pc_ag_ringworld_city
+		is_planet_class = pc_ag_ringworld_gaia
+		# Merger of Rules
+		has_planet_flag = merg_is_forbidden_target
+		# Warship Girls and MIST species
+		is_planet_class = pc_ringworld_habitable_sh
+		is_planet_class = pc_ringworld_habitable_wsg
+		is_planet_class = pc_ringworld_habitable_swim
+		is_planet_class = pc_ringworld_habitable_water
+		is_planet_class = pc_ringworld_habitable_uf
+		is_planet_class = pc_ringworld_habitable_auto_uf
+		is_planet_class = pc_dyson_ring
+		# Planetary Diversity
+		is_planet_class = pc_ammoniaring
+		is_planet_class = pc_ashring
+		is_planet_class = pc_methanering
+		is_planet_class = pc_sulfurring
+	}
+}
+
+is_giga_ringworld = {
+	is_planet_class = pc_ringworld_habitable
+	is_planet_class = pc_shattered_ring_habitable
+	# Gigastructural Engineering & More
+	is_planet_class = pc_gigaorbital_ring
+	is_planet_class = pc_interstellar_ringworld_habitable
+	is_planet_class = pc_ringworld_city
+	is_planet_class = pc_squareworld_habitable
+	is_planet_class = pc_giga_penrose_habitable
+	is_planet_class = pc_ringworld_machine
+	is_planet_class = pc_ringworld_hive
+	is_planet_class = pc_giga_maginot_ringworld
+	# Ancient Empire
+	is_planet_class = pc_ag_ringworld_desert
+	is_planet_class = pc_ag_ringworld_arid
+	is_planet_class = pc_ag_ringworld_savannah
+	is_planet_class = pc_ag_ringworld_ocean
+	is_planet_class = pc_ag_ringworld_continental
+	is_planet_class = pc_ag_ringworld_tropical
+	is_planet_class = pc_ag_ringworld_tundra
+	is_planet_class = pc_ag_ringworld_arctic
+	is_planet_class = pc_ag_ringworld_alpine
+	is_planet_class = pc_ag_ringworld_machine
+	is_planet_class = pc_ag_ringworld_city
+	is_planet_class = pc_ag_ringworld_gaia
+	# Warship Girls and MIST species
+	is_planet_class = pc_ringworld_habitable_sh
+	is_planet_class = pc_ringworld_habitable_wsg
+	is_planet_class = pc_ringworld_habitable_swim
+	is_planet_class = pc_ringworld_habitable_water
+	is_planet_class = pc_ringworld_habitable_uf
+	is_planet_class = pc_ringworld_habitable_auto_uf
+	is_planet_class = pc_dyson_ring
+	# Planetary Diversity
+	is_planet_class = pc_ammoniaring
+	is_planet_class = pc_ashring
+	is_planet_class = pc_methanering
+	is_planet_class = pc_sulfurring
+}
+
+is_giga_habitat = {
+	OR = {
+		merg_is_habitat = yes
+		is_planet_class = pc_flat_world
+	}
+}
+
+############################### Zenith of the Fallen Empires ###############################
+# Overwriting this for ZOFE and comp mods
+is_zofe_compatible = {
+	OR = {
+		is_country_type = default
+		# ZOFE
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+		# The Empty Vagrant
+		is_country_type = default_ev
+	}
+}
+
+############################### Acquisition of Technologies ###############################
 # AOT trigger disallowing planetary shields to be shown
 is_memeable_space_habitat = {
 	OR = {
@@ -216,7 +333,49 @@ is_memeable_space_habitat = {
 	}
 }
 
-# Doing the same for MEM shields
+is_memeable_ringworld = {
+	OR = {
+		is_planet_class = pc_ringworld_habitable
+		is_planet_class = pc_shattered_ring_habitable
+		# Gigastructural Engineering & More
+		is_planet_class = pc_gigaorbital_ring
+		is_planet_class = pc_interstellar_ringworld_habitable
+		is_planet_class = pc_ringworld_city
+		is_planet_class = pc_squareworld_habitable
+		is_planet_class = pc_giga_penrose_habitable
+		is_planet_class = pc_ringworld_machine
+		is_planet_class = pc_ringworld_hive
+		# Ancient Empire
+		# listed planet types are for colors only, they're all ideal
+		is_planet_class = pc_ag_ringworld_desert
+		is_planet_class = pc_ag_ringworld_arid
+		is_planet_class = pc_ag_ringworld_savannah
+		is_planet_class = pc_ag_ringworld_ocean
+		is_planet_class = pc_ag_ringworld_continental
+		is_planet_class = pc_ag_ringworld_tropical
+		is_planet_class = pc_ag_ringworld_tundra
+		is_planet_class = pc_ag_ringworld_arctic
+		is_planet_class = pc_ag_ringworld_alpine
+		is_planet_class = pc_ag_ringworld_machine
+		is_planet_class = pc_ag_ringworld_city
+		is_planet_class = pc_ag_ringworld_gaia
+		# Warship Girls and MIST species
+		is_planet_class = pc_ringworld_habitable_sh
+		is_planet_class = pc_ringworld_habitable_wsg
+		is_planet_class = pc_ringworld_habitable_swim
+		# Planetary Diversity
+		is_planet_class = pc_ammoniaring
+		is_planet_class = pc_ashring
+		is_planet_class = pc_methanering
+		is_planet_class = pc_sulfurring
+		# Darkspace
+		is_planet_class = pc_ancient_ringworld
+		is_planet_class = pc_ringworld_spectrals
+	}
+}
+
+############################### More Events Mod ###############################
+# disallowing MEM planetary shields to be shown 
 mem_is_spherical_world = {
 	is_ringworld = no
 	NOR = {
@@ -236,10 +395,12 @@ mem_is_spherical_world = {
 	}
 }
 
-# ThaumStellaris
+############################### ThaumStellaris ###############################
 # Expanding this with more desolate worlds
 tc_element_shard_candidate = {
-	NOT = { has_deposit_for = shipclass_research_station }
+	NOT = {
+		has_deposit_for = shipclass_research_station
+	}
 	OR = {
 		uninhabitable_regular_planet = yes
 		is_planet_class = pc_asteroid
@@ -253,7 +414,7 @@ tc_element_shard_candidate = {
 	}
 }
 
-# Starborn
+############################### Starborn ###############################
 # Expanding Starborn trigger with ACOT/AOT gene clinics
 has_gene_clinic = {
 	OR = {
@@ -272,7 +433,8 @@ has_gene_clinic = {
 starborn_can_place_hab = {
 	custom_tooltip = {
 		fail_text = "requires_surveyed_planet"
-		is_surveyed = {			# prevent leaking habitability information
+		is_surveyed = {
+			# prevent leaking habitability information
 			who = prev.from
 			status = yes
 		}
@@ -311,11 +473,36 @@ starborn_can_place_hab = {
 	}
 }
 
-# Legendary Worlds
-# Overwriting with vanilla for a correct use of the triggers
+############################### Legendary Worlds ###############################
+legw_planet_uninhabitable = {
+	colonizable_planet = no
+}
+
+legw_planet_habitable = {
+	AND = {
+		colonizable_planet = yes
+		is_artificial = no
+	}
+}
+
+legw_megaplanet = {
+	OR = {
+		is_artificial = yes
+		is_planet_class = pc_machine
+		is_planet_class = pc_cybrex
+		is_planet_class = pc_archive
+		# Gigastructural Engineering & More
+		is_planet_class = pc_giga_planetary_computer
+	}
+}
+
 legw_is_dry = {
-	has_climate = dry
-	NOT = { is_planet_class = pc_city }
+	AND = {
+		has_climate = dry
+		NOT = {
+			is_planet_class = pc_city
+		}
+	}
 }
 
 legw_is_wet = {
@@ -326,11 +513,29 @@ legw_is_cold = {
 	has_climate = cold
 }
 
-# Real Space New Frontiers - Fixing and Merging
+legw_fallen_empire_planet = {
+	owner = {
+		OR = {
+			merg_is_fallen_empire = yes
+			merg_is_awakened_fe = yes
+		}
+	}
+}
+
+legw_broken_megastructure = {
+	OR = {
+		is_planet_class = pc_ringworld_habitable_damaged
+		is_planet_class = pc_ringworld_tech_damaged
+		is_planet_class = pc_ringworld_seam_damaged
+	}
+}
+
+############################### Real Space New Frontiers ###############################
+# Fixing and Merging
 is_moon_of_gas_giant = {
 	is_scope_type = planet
-    exists = orbit
-    orbit = {
+	exists = orbit
+	orbit = {
 		OR = {
 			is_planet_class = pc_gas_giant
 			# Planetary Diversity
@@ -341,7 +546,7 @@ is_moon_of_gas_giant = {
 	}
 }
 
-# Star Wars: Kuat Ancient Empire
+############################### Star Wars: Kuat Ancient Empire ###############################
 kuat_is_common_country = {
 	OR = {
 		is_country_type = default
@@ -350,7 +555,6 @@ kuat_is_common_country = {
 		is_country_type = awakened_marauders
 		is_country_type = primitive
 		is_country_type = ratlings
-		# is_country_type = prikki - they're now a default country
 		# ZOFE
 		is_country_type = lost_empire
 		# The Empty Vagrant
@@ -365,33 +569,16 @@ kuat_is_common_country = {
 kuat_is_defense_galaxy_fleet = {
 	any_country = {
 		OR = {
-			is_country_type = ai_empire
-			is_country_type = extradimensional
-			is_country_type = extradimensional_2
-			is_country_type = extradimensional_3
-			is_country_type = swarm
-			is_country_type = wg_crisis_country
-			is_country_type = afk_crisis_country
-			# Gigastructural Engineering & More
-			is_country_type = katzenartig_imperium
-			is_country_type = dormant_aeternum
-			# ACOT
-		    is_country_type = original_empire
+			is_crisis_faction = yes
 			# Ancient Empire
 			is_country_type = ag_ancient_gamma_guardian
 			is_country_type = ag_zeta_crisis_country
 			is_country_type = ag_ancient_primitive_crisis
-			# Solar Storm
-			is_country_type = abyssal_host_invaders_type
-			# Shroud Rising
-			is_country_type = shroud_cult
-			is_country_type = shroud_entities
-			is_country_type = shroud_horrors
 		}
 	}
 }
 
-# ACOT
+############################### Ancient Caches of Technology ###############################
 is_playable_country = {
 	OR = {
 		is_country_type = default
@@ -406,44 +593,13 @@ is_playable_country = {
 	}
 }
 
-# AOT
-is_memeable_ringworld = {
-	OR = {
-		is_planet_class = pc_ringworld_habitable
-		is_planet_class = pc_shattered_ring_habitable
-		# Gigastructural Engineering & More
-		is_planet_class = pc_gigaorbital_ring
-		is_planet_class = pc_interstellar_ringworld_habitable
-		is_planet_class = pc_ringworld_city
-		is_planet_class = pc_squareworld_habitable
-		is_planet_class = pc_giga_penrose_habitable
-		is_planet_class = pc_ringworld_machine
-		is_planet_class = pc_ringworld_hive
-		# Ancient Empire
-		# listed planet types are for colors only, they're all ideal
-		is_planet_class = pc_ag_ringworld_desert
-		is_planet_class = pc_ag_ringworld_arid
-		is_planet_class = pc_ag_ringworld_savannah
-		is_planet_class = pc_ag_ringworld_ocean
-		is_planet_class = pc_ag_ringworld_continental
-		is_planet_class = pc_ag_ringworld_tropical
-		is_planet_class = pc_ag_ringworld_tundra
-		is_planet_class = pc_ag_ringworld_arctic
-		is_planet_class = pc_ag_ringworld_alpine
-		is_planet_class = pc_ag_ringworld_machine
-		is_planet_class = pc_ag_ringworld_city
-		is_planet_class = pc_ag_ringworld_gaia
-		# Warship Girls and MIST species
-		is_planet_class = pc_ringworld_habitable_sh
-		is_planet_class = pc_ringworld_habitable_wsg
-	}
-}
-
-# Crisis stuff
+############################### OldEnt's Crisis Mods ###############################
 CmtTriggerIsPlayableEmpire = {
 	OR = {
 		is_country_type = default
 		is_ai = no
+		# ACOT
+		is_country_type = original_empire_active
 		# ZOFE
 		is_zofe_country = yes
 		# The Empty Vagrant
@@ -457,6 +613,8 @@ CmtTriggerIsEmpire = {
 		is_ai = no
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
+		# ACOT
+		is_country_type = original_empire_active
 		# ZOFE
 		is_zofe_country = yes
 		# The Empty Vagrant
@@ -484,10 +642,12 @@ CmtTriggerIsFallenEmpire = {
 		is_country_type = awakened_return_kuat_empire
 		# Human Fallen Empire
 		is_country_type = human_fallen_empire
+		# History of the Lost Empire
+		is_country_type = LsE_fallen_empire
 	}
 }
 
-# Exalted Domination
+############################### Exalted Domination ###############################
 exalted_is_valid_as_vassal = {
 	OR = {
 		is_country_type = default
@@ -495,7 +655,7 @@ exalted_is_valid_as_vassal = {
 	}
 }
 
-# Expanded Traits, Civics, Pops, and More
+############################### Expanded Traits, Civics, Pops, and More ###############################
 is_open_gestalt = {
 	OR = {
 		has_ai_personality = open_hive_mind
@@ -505,7 +665,7 @@ is_open_gestalt = {
 	}
 }
 
-# History of the Lost Empire
+############################### History of the Lost Empire ###############################
 afk_target_planet = {
 	OR = {
 		is_planet_class = pc_city
@@ -513,7 +673,7 @@ afk_target_planet = {
 		is_planet_class = pc_nuked
 		is_planet_class = pc_hive
 		is_planet_class = pc_machine
-		habitable_structure = yes
+		colonizable_planet = yes
 		habitable_planet = yes
 		is_artificial = yes
 		uninhabitable_regular_planet = yes
@@ -533,8 +693,6 @@ afk_target_planet = {
 			has_apsr = yes
 			has_apsr_modifiers = yes
 		}
-		# Endless Frontier
-		is_planet_class = pc_mzilli_shadow
 		# Planetary Diversity
 		is_pd_planet_class_all = yes
 		# Gigastructural Engineering & More
@@ -542,6 +700,7 @@ afk_target_planet = {
 	}
 }
 
+############################### Warship Girls R and MIST Species ###############################
 is_habitat_wg = {
 	OR = {
 		is_planet_class = pc_habitat
@@ -564,7 +723,6 @@ is_habitat_wg = {
 	}
 }
 
-# Warship Girls R and MIST Species
 is_default_and_fallen_country = {
 	OR = {
 		is_country_type = default
@@ -599,8 +757,8 @@ is_default_country_wg = {
 
 has_active_wg_foundry_building = {
 	OR = {
-		has_active_building = building_foundry_1 
-		has_active_building = building_foundry_2 
+		has_active_building = building_foundry_1
+		has_active_building = building_foundry_2
 		has_active_building = building_foundry_3
 		has_active_building = building_nano_forge
 		# Warship Girls R and MIST Species
@@ -624,7 +782,7 @@ has_active_wg_foundry_building = {
 
 has_active_wg_foundry_building_lv_low = {
 	OR = {
-		has_active_building = building_foundry_1 
+		has_active_building = building_foundry_1
 		has_active_building = building_foundry_2
 		# Warship Girls R and MIST Species
 		has_active_building = building_sep_foundry
@@ -675,7 +833,7 @@ has_active_wg_factory_building = {
 	}
 }
 
-# Ancient Empire
+############################### Ancient Empire ###############################
 ag_is_gateway_megastructure = {
 	OR = {
 		is_megastructure_type = gateway_0
@@ -697,6 +855,22 @@ ag_is_gateway_megastructure = {
 		is_megastructure_type = ag_ancient_eta_gateway_megastructure_damaged_alt
 		is_megastructure_type = ag_ancient_eta_gateway_megastructure_closed
 		is_megastructure_type = ag_ancient_eta_gateway_megastructure_closed_alt
+		is_megastructure_type = ag_ancient_eta_gateway_megastructure_burst
+		is_megastructure_type = ag_ancient_eta_gateway_control_megastructure_0
+		is_megastructure_type = ag_ancient_eta_gateway_control_megastructure_1
+		is_megastructure_type = ag_ancient_eta_gateway_control_megastructure_2
+		is_megastructure_type = ag_ancient_eta_gateway_control_megastructure_3
+		is_megastructure_type = ag_ancient_eta_gateway_control_damaged
+		is_megastructure_type = ag_ancient_eta_gateway_control_restored
+		is_megastructure_type = ag_ancient_eta_gateway_control_restored_1
+		is_megastructure_type = ag_ancient_eta_gateway_control_restored_2
+		is_megastructure_type = ag_ancient_eta_gateway_galactic_gateway
+		is_megastructure_type = ag_ancient_eta_gateway_lgate
+		is_megastructure_type = ag_ancient_eta_gateway_ancient_gateway
+		is_megastructure_type = ag_ancient_eta_gateway_wormhole_temporary
+		is_megastructure_type = ag_ancient_eta_gateway_wormhole_temporary_alt
+		is_megastructure_type = ag_psionic_portal_megastructure
+		is_megastructure_type = ag_psionic_portal_stabled_megastructure
 		# Shadowgate
 		is_megastructure_type = shadowrift_a
 		is_megastructure_type = shadowrift_b
@@ -751,10 +925,45 @@ ag_is_gateway_megastructure = {
 		is_megastructure_type = mem_vazuran_gateway
 		is_megastructure_type = mem_sadrell_gateway_inactive
 		is_megastructure_type = mem_sadrell_gateway_active
+		# Darkspace
+		is_megastructure_type = ancient_relay_0
+		is_megastructure_type = ancient_relay_final
+		# Nyto Species Pack
+		is_megastructure_type = GFnyto_lgate_base
+		# WSG
+		is_megastructure_type = wg_khan_outer_gate
+		is_megastructure_type = wg_psionic_wormhole
+		is_megastructure_type = wg_fm_gateway_damaged
+		is_megastructure_type = wg_fm_gateway_01
+		is_megastructure_type = wg_fm_gateway_02
+		is_megastructure_type = wg_fm_gateway_03
+		is_megastructure_type = wg_fm_gateway_04
+		is_megastructure_type = wg_fm_gateway_05
+		is_megastructure_type = uf_mobile_portal
+		is_megastructure_type = uf_mobile_portal2
+		is_megastructure_type = uf_mobile_portal_temp
+		is_megastructure_type = uf_hyperlane_a
+		is_megastructure_type = uf_hyperlane_b
+		is_megastructure_type = uf_hyperlane_c
+		is_megastructure_type = uf_hyperlane_d
+		is_megastructure_type = uf_mega_habitat_gateway
+		# Reworked Advanced Ascension
+		is_megastructure_type = AAR_MEGA_webway_BASE
+		is_megastructure_type = AAR_MEGA_webway_NODE
+		is_megastructure_type = AAR_MEGA_webway_NEXUS
+		is_megastructure_type = AAR_MEGA_webway_CLOSE
+		# Twinks Atlanteans
+		is_megastructure_type = gateway_heaven
+		is_megastructure_type = gateway_titan
+		# Star Wars: Kuat Ancient Empire
+		is_megastructure_type = exe_outer_gate_disable
+		is_megastructure_type = exe_outer_gate
+		is_megastructure_type = exe_outer_gate_locked
+		is_megastructure_type = Shield_Gate
 	}
 }
 
-# Viable Feudalism and Imperialism - Empire Federation
+############################### Viable Feudalism and Imperialism - Empire Federation ###############################
 check_subject_join_wars = {
 	OR = {
 		is_subject_type = tributary
@@ -805,7 +1014,7 @@ check_subject_join_wars = {
 	}
 }
 
-# Reworked Advanced Ascension
+############################### Reworked Advanced Ascension ###############################
 # Fixing the trigger and removing obsolete code
 AAR_trgr_cntr_playable = {
 	OR = {
@@ -831,7 +1040,7 @@ AAR_trgr_cntr_playable = {
 	}
 }
 
-# The Empty Vagrant
+############################### The Empty Vagrant ###############################
 can_be_ev_investment_country = {
 	is_country_type = default
 	is_hive_empire = no
@@ -859,7 +1068,7 @@ can_be_ev_investment_country = {
 	is_ai = yes
 }
 
-# Exalted Domination
+############################### Exalted Domination ###############################
 exalted_is_valid_as_vassal = {
 	OR = {
 		is_country_type = default
@@ -868,7 +1077,7 @@ exalted_is_valid_as_vassal = {
 	}
 }
 
-# New Enclaves
+############################### New Enclaves ###############################
 is_genocidal = {
 	OR = {
 		has_valid_civic = civic_fanatic_purifiers
@@ -879,7 +1088,7 @@ is_genocidal = {
 	}
 }
 
-# The DAL Species Mod
+############################### The DAL Species Mod ###############################
 is_special_colony_planet_class = {
 	OR = {
 		is_planet_class = pc_city
@@ -888,5 +1097,62 @@ is_special_colony_planet_class = {
 		merg_is_hab_ringworld = yes
 		# Gigastructural Engineering & More
 		giga_habitable_structure = yes
+	}
+}
+
+############################### Darkspace ###############################
+ds_hyperlane_create = {
+	NOR = {
+		is_same_value = prev
+		has_hyperlane_to = prev
+		has_star_flag = ds_galactic_core
+		has_star_flag = empire_home_system
+		has_star_flag = marauder_system
+		has_star_flag = marauder_capital_1
+		has_star_flag = empire_cluster
+		has_star_flag = fallen_shrouded
+		has_star_flag = fallen_shielded_1
+		has_star_flag = fallen_shielded_2
+		has_star_flag = fallen_shielded_3
+		has_star_flag = holy_system_1
+		has_star_flag = holy_system_2
+		has_star_flag = holy_system_3
+		has_star_flag = holy_system_4
+		has_star_flag = holy_system_5
+		has_star_flag = fe_xeno_zoo
+		has_star_flag = fallen_shield_world
+		has_star_flag = fallen_empire_world
+		has_star_flag = sealed_system
+		has_star_flag = lcluster
+		# Gigastructures		
+		has_star_flag = giga_inner
+		has_star_flag = giga_galactic_center
+		has_star_flag = Paluush_system
+		has_star_flag = giga_system_six
+		has_star_flag = abandoned_gateway
+		has_star_flag = giga_outer_01
+		has_star_flag = giga_outer_02
+		has_star_flag = giga_outer_03
+		has_star_flag = giga_core_03
+		# Ancient Empire
+		has_star_flag = ag_no_jump_in_system
+		# ACOT
+		has_star_flag = outercluster
+		# Warship Girls R And MIST Species
+		has_star_flag = wg_sealed_system
+		has_star_flag = wg_psionic_systems
+		# SW:Kuat Ancient Empire
+		has_star_flag = Kuat_system
+		has_star_flag = Kuat_system_1
+		has_star_flag = Kuat_system_2
+		has_star_flag = Kuat_system_3
+		has_star_flag = kuat_initial_system
+		has_star_flag = Kuat_system_int
+		has_star_flag = Kuat_system_int_1
+		has_star_flag = Kuat_system_int_2
+		has_star_flag = Kuat_system_int_3
+		has_star_flag = Kuat_system_int_4
+		has_star_flag = nep_Krahen_cluster
+		has_star_flag = nep_Scrus_cluster
 	}
 }

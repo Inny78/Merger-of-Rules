@@ -58,6 +58,8 @@ is_fallen_empire = {
 		is_country_type = awakened_gate_builders
 		# Human Fallen Empire
 		is_country_type = human_fallen_empire
+		# History of the Lost Empire
+		is_country_type = LsE_fallen_empire
 	}
 }
 
@@ -154,7 +156,7 @@ has_encountered_other_species = {
 is_organic_species = {
 	species = {
 		OR = {
-			is_archetype = BIOLOGICAL			# original trigger did not include pre-sapient classes
+			is_archetype = BIOLOGICAL
 			is_archetype = LITHOID
 			# Warship Girls R And MIST Species
 			is_archetype = WARSHIPGIRL
