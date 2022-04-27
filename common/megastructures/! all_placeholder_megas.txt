@@ -51,14 +51,9 @@ ag_ancient_eta_gateway_megastructure_4 = { entity = "" potential = { always = no
 ag_ancient_eta_gateway_megastructure_5 = { entity = "" potential = { always = no } possible = { always = no } }
 ag_ancient_eta_gateway_megastructure_burst = { entity = "" potential = { always = no } possible = { always = no } }
 ag_ancient_eta_gateway_megastructure_closed = { entity = "" potential = { always = no } possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_closed = { entity = "" potential = { always = no } possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_closed_alt = { entity = "" potential = { always = no } possible = { always = no } }
 ag_ancient_eta_gateway_megastructure_closed_alt = { entity = "" potential = { always = no } possible = { always = no } }
 ag_ancient_eta_gateway_megastructure_closing = { entity = "" potential = { always = no } possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_closing = { entity = "" potential = { always = no } possible = { always = no } }
 ag_ancient_eta_gateway_megastructure_damaged = { entity = "" potential = { always = no } possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_damaged = { entity = "" potential = { always = no } possible = { always = no } }
-ag_ancient_eta_gateway_megastructure_damaged_alt = { entity = "" potential = { always = no } possible = { always = no } }
 ag_ancient_eta_gateway_megastructure_damaged_alt = { entity = "" potential = { always = no } possible = { always = no } }
 ag_ancient_eta_gateway_megastructure_opening = { entity = "" potential = { always = no } possible = { always = no } }
 ag_ancient_eta_gateway_megastructure_opening_blue = { entity = "" potential = { always = no } possible = { always = no } }
