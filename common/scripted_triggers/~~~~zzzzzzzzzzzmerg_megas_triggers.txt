@@ -109,6 +109,15 @@ merg_is_ringworld_type = {
 		is_megastructure_type = uf_ring_shipyard_3
 		is_megastructure_type = uf_hm_ring
 		is_megastructure_type = uf_hm_ring_1
+		# Azur Lane Stellaris DLC
+		is_megastructure_type = azur_01_ring_world_1
+		is_megastructure_type = azur_01_ring_world_2
+		is_megastructure_type = azur_01_ring_world_2_intermediate
+		is_megastructure_type = azur_01_ring_world_3_intermediate
+		is_megastructure_type = azur_02_ring_world_1
+		is_megastructure_type = azur_02_ring_world_2
+		is_megastructure_type = azur_02_ring_world_2_intermediate
+		is_megastructure_type = azur_02_ring_world_3_intermediate
 	}
 }
 
@@ -122,10 +131,12 @@ merg_is_hab_type = {
 		is_megastructure_type = interstellar_habitat_3
 		is_megastructure_type = interstellar_habitat_4
 		is_megastructure_type = interstellar_habitat_5
+		# Nanite Machines & Distant Stars Overhaul
+		is_megastructure_type = nanite_habitat_0
 		# Nyto Species Pack
 		is_megastructure_type = GFnyto_habitat_01
 		is_megastructure_type = GFnyto_habitat_02
-		# PD - Planetary habs
+		# Planetary Diversity - Planetary habs
 		is_megastructure_type = pd_asteroid_hab_0
 		is_megastructure_type = pd_barren_hab_0
 		is_megastructure_type = pd_frozen_hab_0
@@ -133,6 +144,17 @@ merg_is_hab_type = {
 		is_megastructure_type = pd_hothouse_hab_0
 		is_megastructure_type = pd_molten_hab_0
 		is_megastructure_type = pd_toxic_hab_0
+		# Starborn: Improved Voidtouched
+		is_megastructure_type = starborn_habitat4
+		is_megastructure_type = starborn_habitat5
+		is_megastructure_type = starborn_habitat6
+		is_megastructure_type = starborn_habitat_expander
+		is_megastructure_type = starborn_vanilla_habitat_big
+		is_megastructure_type = starborn_vanilla_habitat_very_big
+		# The Empty Vagrant
+		is_megastructure_type = temporary_habitat_0
+		# Twinks Atlanteans
+		is_megastructure_type = skypalace_0
 		# Warship Girls R and MIST Species
 		is_megastructure_type = uf_mega_habitat_0
 		is_megastructure_type = uf_mega_habitat_0_1
@@ -141,17 +163,264 @@ merg_is_hab_type = {
 		is_megastructure_type = uf_mega_habitat_3
 		is_megastructure_type = uf_mega_habitat_4
 		is_megastructure_type = uf_mega_habitat_5
-		# Twinks Atlanteans
-		is_megastructure_type = skypalace_0
-		# Nanite Machines & Distant Stars Overhaul
-		is_megastructure_type = nanite_habitat_0
-		# Starborn: Improved Voidtouched
-		is_megastructure_type = starborn_habitat4
-		is_megastructure_type = starborn_habitat5
-		is_megastructure_type = starborn_habitat6
-		is_megastructure_type = starborn_habitat_expander
-		is_megastructure_type = starborn_vanilla_habitat_big
-		is_megastructure_type = starborn_vanilla_habitat_very_big
+	}
+}
+
+# ACOT
+merg_is_acot_type = {
+	OR = {
+		is_megastructure_type = acot_dark_matter_obelisk_core
+		is_megastructure_type = acot_dark_matter_obelisk_core_ae
+		is_megastructure_type = acot_dark_matter_obelisk_core_se
+		is_megastructure_type = acot_dark_matter_obelisk_core_oe
+		is_megastructure_type = acot_dark_matter_obelisk_core_pe
+		is_megastructure_type = acot_amerigo
+		is_megastructure_type = acot_amerigo_ae
+		is_megastructure_type = acot_amerigo_se
+		is_megastructure_type = acot_amerigo_pe
+		is_megastructure_type = acot_amerigo_oe
+		is_megastructure_type = acot_precursor_citadel_site
+		is_megastructure_type = acot_precursor_citadel_base
+		is_megastructure_type = acot_precursor_sigma_citadel_site
+		is_megastructure_type = acot_precursor_sigma_citadel_base
+		is_megastructure_type = acot_precursor_phanon_citadel_site
+		is_megastructure_type = acot_precursor_colossus_site
+		is_megastructure_type = acot_precursor_colossus_base
+		is_megastructure_type = acot_precursor_colossus_stage_one
+		is_megastructure_type = acot_precursor_colossus_stage_two
+		is_megastructure_type = acot_precursor_colossus_final
+		is_megastructure_type = acot_phanon_master_reactor_sphere
+	}
+}
+
+# Acquisition of Technologies
+merg_is_aot_type = {
+	OR = {
+		is_megastructure_type = star_imploder_0
+		is_megastructure_type = star_imploder_1
+		is_megastructure_type = star_imploder_2
+		is_megastructure_type = star_imploder_3
+		is_megastructure_type = macripp_0
+		is_megastructure_type = macripp_1
+		is_megastructure_type = macripp_2
+		is_megastructure_type = macripp_3
+		is_megastructure_type = phanon_great_wall_0
+		is_megastructure_type = phanon_great_wall_1
+		is_megastructure_type = phanon_great_wall_2
+		is_megastructure_type = phanon_great_wall_3
+		is_megastructure_type = phanon_great_wall_4
+		is_megastructure_type = phanon_megaturret_intermediate_1
+		is_megastructure_type = phanon_megaturret_1
+		is_megastructure_type = phanon_megaturret_2
+		is_megastructure_type = phanon_megaturret_destroyed_0
+		is_megastructure_type = phanon_megaturret_destroyed_1
+		is_megastructure_type = aot_macripp_dark_matter_obelisk_core_se
+		is_megastructure_type = aot_macripp_dark_matter_obelisk_core_pe
+		is_megastructure_type = aot_macripp_dark_matter_obelisk_core_oe
+	}
+}
+
+# Ancient Empire
+merg_is_ancient_empire_type = {
+	OR = {
+		is_megastructure_type = ag_ancient_construction_section
+		is_megastructure_type = ag_ancient_construction_section_megashipyard
+		is_megastructure_type = ag_beta_station_type1_megastructure
+		is_megastructure_type = ag_beta_station_type2_megastructure
+		is_megastructure_type = ag_beta_station_type2_megastructure_1
+		is_megastructure_type = ag_psionic_inhibition_station
+		is_megastructure_type = ag_beta_station_type1_megastructure_dummy
+		is_megastructure_type = ag_delta_platform_megastructure
+		is_megastructure_type = ag_delta_titan_megastructure_0
+		is_megastructure_type = ag_delta_titan_megastructure_1
+		is_megastructure_type = ag_delta_titan_megastructure_2
+		is_megastructure_type = ag_epsilon_titan_station_actived_0
+		is_megastructure_type = ag_epsilon_titan_station_actived_1
+		is_megastructure_type = ag_epsilon_titan_station_actived_2
+		is_megastructure_type = ag_epsilon_titan_station_actived_3
+		is_megastructure_type = ag_epsilon_obelisk_0
+		is_megastructure_type = ag_epsilon_obelisk_1
+		is_megastructure_type = ag_epsilon_obelisk_2
+		is_megastructure_type = ag_epsilon_obelisk_3
+		is_megastructure_type = ag_epsilon_obelisk_4
+		is_megastructure_type = ag_epsilon_obelisk_5
+		is_megastructure_type = ag_epsilon_titan_megastructure_0
+		is_megastructure_type = ag_epsilon_titan_megastructure_1
+		is_megastructure_type = ag_epsilon_titan_megastructure_2
+		is_megastructure_type = ag_epsilon_titan_megastructure_3
+		is_megastructure_type = ag_epsilon_psionic_beacon
+		is_megastructure_type = ag_epsilon_suppression_station
+		is_megastructure_type = ag_eta_titan_megastructure_0
+		is_megastructure_type = ag_eta_titan_megastructure_1
+		is_megastructure_type = ag_eta_titan_megastructure_2
+		is_megastructure_type = ag_eta_titan_megastructure_3
+		is_megastructure_type = ag_eta_titan_megastructure_4
+		is_megastructure_type = ag_gamma_station_megastructure_0
+		is_megastructure_type = ag_gamma_station_megastructure_1
+		is_megastructure_type = ag_gamma_station_megastructure_2
+		is_megastructure_type = ag_gamma_station_megastructure_3
+		is_megastructure_type = ag_gamma_station_megastructure_4
+		is_megastructure_type = ag_gamma_station_megastructure_5
+		is_megastructure_type = ag_gamma_station_megastructure_6
+		is_megastructure_type = ag_gamma_station_megastructure_7
+		is_megastructure_type = ag_gamma_station_megastructure_8
+		is_megastructure_type = ag_gamma_station_megastructure_9
+		is_megastructure_type = ag_gamma_titan_megastructure_0
+		is_megastructure_type = ag_gamma_titan_megastructure_1
+		is_megastructure_type = ag_gamma_battlecruiser_megastructure
+		is_megastructure_type = ag_gamma_escort_megastructure
+		is_megastructure_type = ag_ancient_astronomy_station
+		is_megastructure_type = ag_ancient_anchor_station_0
+		is_megastructure_type = ag_ancient_anchor_station_1
+		is_megastructure_type = ag_ancient_anchor_station_2
+		is_megastructure_type = ag_ancient_wandering_ship_megastructure_0
+		is_megastructure_type = ag_ancient_wandering_ship_megastructure_1
+		is_megastructure_type = ag_ancient_wandering_ship_megastructure_2
+		is_megastructure_type = ag_ancient_wandering_ship_megastructure_3
+		is_megastructure_type = ag_ancient_wandering_ship_megastructure_4
+		is_megastructure_type = ag_ancient_wandering_ship_megastructure_5
+		is_megastructure_type = ag_ancient_anchor_station_player
+		is_megastructure_type = ag_zeta_titan_megastructure_0
+		is_megastructure_type = ag_zeta_titan_megastructure_1
+		is_megastructure_type = ag_zeta_battleship_megastructure
+		is_megastructure_type = ag_zeta_destroyer_megastructure
+	}
+}
+
+# Azur Lane Stellaris DLC
+merg_is_azur_type = {
+	OR = {
+		is_megastructure_type = azur_matter_decompressor_0
+		is_megastructure_type = azur_matter_decompressor_1
+		is_megastructure_type = azur_matter_decompressor_2
+		is_megastructure_type = azur_matter_decompressor_3
+		is_megastructure_type = azur_matter_decompressor_4
+		is_megastructure_type = azur_matter_decompressor_5
+		is_megastructure_type = azur_matter_decompressor_6
+		is_megastructure_type = azur_dyson_sphere_1
+		is_megastructure_type = azur_dyson_sphere_2
+		is_megastructure_type = azur_dyson_sphere_3
+		is_megastructure_type = azur_dyson_sphere_4
+		is_megastructure_type = azur_dyson_sphere_5
+		is_megastructure_type = azur_dyson_sphere_6
+	}
+}
+
+# Giga Diversity
+merg_is_gd_type = {
+	OR = {
+		is_megastructure_type = terraform_toxic_to_ammonia_0
+		is_megastructure_type = terraform_toxic_to_ammonia_1
+		is_megastructure_type = terraform_toxic_to_ammonia_2
+		is_megastructure_type = terraform_toxic_to_ammonia_3
+		is_megastructure_type = terraform_barren_to_ammonia_0
+		is_megastructure_type = terraform_barren_to_ammonia_1
+		is_megastructure_type = terraform_barren_to_ammonia_2
+		is_megastructure_type = terraform_barren_to_ammonia_3
+		is_megastructure_type = terraform_barren_to_ammonia_2_disabled
+		is_megastructure_type = terraform_barren_to_ammonia_3_restored
+		is_megastructure_type = terraform_molten_to_ammonia_0
+		is_megastructure_type = terraform_molten_to_ammonia_1
+		is_megastructure_type = terraform_molten_to_ammonia_2
+		is_megastructure_type = terraform_molten_to_ammonia_3
+		is_megastructure_type = terraform_toxic_to_ash_0
+		is_megastructure_type = terraform_toxic_to_ash_1
+		is_megastructure_type = terraform_toxic_to_ash_2
+		is_megastructure_type = terraform_toxic_to_ash_3
+		is_megastructure_type = terraform_barren_to_ash_0
+		is_megastructure_type = terraform_barren_to_ash_1
+		is_megastructure_type = terraform_barren_to_ash_2
+		is_megastructure_type = terraform_barren_to_ash_3
+		is_megastructure_type = terraform_barren_to_ash_2_disabled
+		is_megastructure_type = terraform_barren_to_ash_3_restored
+		is_megastructure_type = terraform_molten_to_ash_0
+		is_megastructure_type = terraform_molten_to_ash_1
+		is_megastructure_type = terraform_molten_to_ash_2
+		is_megastructure_type = terraform_molten_to_ash_3
+		is_megastructure_type = terraform_toxic_to_methane_0
+		is_megastructure_type = terraform_toxic_to_methane_1
+		is_megastructure_type = terraform_toxic_to_methane_2
+		is_megastructure_type = terraform_toxic_to_methane_3
+		is_megastructure_type = terraform_barren_to_methane_0
+		is_megastructure_type = terraform_barren_to_methane_1
+		is_megastructure_type = terraform_barren_to_methane_2
+		is_megastructure_type = terraform_barren_to_methane_3
+		is_megastructure_type = terraform_barren_to_methane_2_disabled
+		is_megastructure_type = terraform_barren_to_methane_3_restored
+		is_megastructure_type = terraform_molten_to_methane_0
+		is_megastructure_type = terraform_molten_to_methane_1
+		is_megastructure_type = terraform_molten_to_methane_2
+		is_megastructure_type = terraform_molten_to_methane_3
+		is_megastructure_type = terraform_toxic_to_ocean_0
+		is_megastructure_type = terraform_toxic_to_ocean_1
+		is_megastructure_type = terraform_toxic_to_ocean_2
+		is_megastructure_type = terraform_toxic_to_ocean_3
+		is_megastructure_type = terraform_barren_to_ocean_0
+		is_megastructure_type = terraform_barren_to_ocean_1
+		is_megastructure_type = terraform_barren_to_ocean_2
+		is_megastructure_type = terraform_barren_to_ocean_3
+		is_megastructure_type = terraform_barren_to_ocean_2_disabled
+		is_megastructure_type = terraform_barren_to_ocean_3_restored
+		is_megastructure_type = terraform_molten_to_ocean_0
+		is_megastructure_type = terraform_molten_to_ocean_1
+		is_megastructure_type = terraform_molten_to_ocean_2
+		is_megastructure_type = terraform_molten_to_ocean_3
+		is_megastructure_type = terraform_toxic_to_sulfur_0
+		is_megastructure_type = terraform_toxic_to_sulfur_1
+		is_megastructure_type = terraform_toxic_to_sulfur_2
+		is_megastructure_type = terraform_toxic_to_sulfur_3
+		is_megastructure_type = terraform_barren_to_sulfur_0
+		is_megastructure_type = terraform_barren_to_sulfur_1
+		is_megastructure_type = terraform_barren_to_sulfur_2
+		is_megastructure_type = terraform_barren_to_sulfur_3
+		is_megastructure_type = terraform_barren_to_sulfur_2_disabled
+		is_megastructure_type = terraform_barren_to_sulfur_3_restored
+		is_megastructure_type = terraform_molten_to_sulfur_0
+		is_megastructure_type = terraform_molten_to_sulfur_1
+		is_megastructure_type = terraform_molten_to_sulfur_2
+		is_megastructure_type = terraform_molten_to_sulfur_3
+		is_megastructure_type = terraform_toxic_to_tidallylocked_0
+		is_megastructure_type = terraform_toxic_to_tidallylocked_1
+		is_megastructure_type = terraform_toxic_to_tidallylocked_2
+		is_megastructure_type = terraform_toxic_to_tidallylocked_3
+		is_megastructure_type = terraform_barren_to_tidallylocked_0
+		is_megastructure_type = terraform_barren_to_tidallylocked_1
+		is_megastructure_type = terraform_barren_to_tidallylocked_2
+		is_megastructure_type = terraform_barren_to_tidallylocked_3
+		is_megastructure_type = terraform_barren_to_tidallylocked_2_disabled
+		is_megastructure_type = terraform_barren_to_tidallylocked_3_restored
+		is_megastructure_type = terraform_molten_to_tidallylocked_0
+		is_megastructure_type = terraform_molten_to_tidallylocked_1
+		is_megastructure_type = terraform_molten_to_tidallylocked_2
+		is_megastructure_type = terraform_molten_to_tidallylocked_3
+	}
+}
+
+# Giga Stellar Manipulation
+merg_is_giga_manip_type = {
+	OR = {
+		is_megastructure_type = stellar_manipulator_0
+		is_megastructure_type = stellar_manipulator_1
+		is_megastructure_type = stellar_manipulator_2
+		is_megastructure_type = stellar_manipulator_3
+		is_megastructure_type = stellar_manipulator_o_1
+		is_megastructure_type = stellar_manipulator_o_2
+		is_megastructure_type = stellar_manipulator_off
+		is_megastructure_type = stellar_manipulator_on
+		is_megastructure_type = systemcraft_assembler_0
+		is_megastructure_type = systemcraft_assembler_1
+		is_megastructure_type = systemcraft_assembler_2
+		is_megastructure_type = systemcraft_assembler_3
+		is_megastructure_type = systemcraft_assembler_4
+		is_megastructure_type = systemcraft_assembler_5
+		is_megastructure_type = systemcraft_assembler_make_system
+		is_megastructure_type = systemcraft_assembler_make_o_system
+		is_megastructure_type = war_system_o_0
+		is_megastructure_type = war_system_o_1
+		is_megastructure_type = war_system_o_2
+		is_megastructure_type = war_system_o_3
+		is_megastructure_type = war_system_o_4
+		is_megastructure_type = war_system_o_5
 	}
 }
 
@@ -513,160 +782,157 @@ merg_is_gigas_type = {
 	}
 }
 
-# Giga Diversity
-merg_is_gd_type = {
+# Origin - F.C.S.S & M.C.S.S
+merg_is_fcss_type = {
 	OR = {
-		is_megastructure_type = terraform_toxic_to_ammonia_0
-		is_megastructure_type = terraform_toxic_to_ammonia_1
-		is_megastructure_type = terraform_toxic_to_ammonia_2
-		is_megastructure_type = terraform_toxic_to_ammonia_3
-		is_megastructure_type = terraform_barren_to_ammonia_0
-		is_megastructure_type = terraform_barren_to_ammonia_1
-		is_megastructure_type = terraform_barren_to_ammonia_2
-		is_megastructure_type = terraform_barren_to_ammonia_3
-		is_megastructure_type = terraform_barren_to_ammonia_2_disabled
-		is_megastructure_type = terraform_barren_to_ammonia_3_restored
-		is_megastructure_type = terraform_molten_to_ammonia_0
-		is_megastructure_type = terraform_molten_to_ammonia_1
-		is_megastructure_type = terraform_molten_to_ammonia_2
-		is_megastructure_type = terraform_molten_to_ammonia_3
-		is_megastructure_type = terraform_toxic_to_ash_0
-		is_megastructure_type = terraform_toxic_to_ash_1
-		is_megastructure_type = terraform_toxic_to_ash_2
-		is_megastructure_type = terraform_toxic_to_ash_3
-		is_megastructure_type = terraform_barren_to_ash_0
-		is_megastructure_type = terraform_barren_to_ash_1
-		is_megastructure_type = terraform_barren_to_ash_2
-		is_megastructure_type = terraform_barren_to_ash_3
-		is_megastructure_type = terraform_barren_to_ash_2_disabled
-		is_megastructure_type = terraform_barren_to_ash_3_restored
-		is_megastructure_type = terraform_molten_to_ash_0
-		is_megastructure_type = terraform_molten_to_ash_1
-		is_megastructure_type = terraform_molten_to_ash_2
-		is_megastructure_type = terraform_molten_to_ash_3
-		is_megastructure_type = terraform_toxic_to_methane_0
-		is_megastructure_type = terraform_toxic_to_methane_1
-		is_megastructure_type = terraform_toxic_to_methane_2
-		is_megastructure_type = terraform_toxic_to_methane_3
-		is_megastructure_type = terraform_barren_to_methane_0
-		is_megastructure_type = terraform_barren_to_methane_1
-		is_megastructure_type = terraform_barren_to_methane_2
-		is_megastructure_type = terraform_barren_to_methane_3
-		is_megastructure_type = terraform_barren_to_methane_2_disabled
-		is_megastructure_type = terraform_barren_to_methane_3_restored
-		is_megastructure_type = terraform_molten_to_methane_0
-		is_megastructure_type = terraform_molten_to_methane_1
-		is_megastructure_type = terraform_molten_to_methane_2
-		is_megastructure_type = terraform_molten_to_methane_3
-		is_megastructure_type = terraform_toxic_to_ocean_0
-		is_megastructure_type = terraform_toxic_to_ocean_1
-		is_megastructure_type = terraform_toxic_to_ocean_2
-		is_megastructure_type = terraform_toxic_to_ocean_3
-		is_megastructure_type = terraform_barren_to_ocean_0
-		is_megastructure_type = terraform_barren_to_ocean_1
-		is_megastructure_type = terraform_barren_to_ocean_2
-		is_megastructure_type = terraform_barren_to_ocean_3
-		is_megastructure_type = terraform_barren_to_ocean_2_disabled
-		is_megastructure_type = terraform_barren_to_ocean_3_restored
-		is_megastructure_type = terraform_molten_to_ocean_0
-		is_megastructure_type = terraform_molten_to_ocean_1
-		is_megastructure_type = terraform_molten_to_ocean_2
-		is_megastructure_type = terraform_molten_to_ocean_3
-		is_megastructure_type = terraform_toxic_to_sulfur_0
-		is_megastructure_type = terraform_toxic_to_sulfur_1
-		is_megastructure_type = terraform_toxic_to_sulfur_2
-		is_megastructure_type = terraform_toxic_to_sulfur_3
-		is_megastructure_type = terraform_barren_to_sulfur_0
-		is_megastructure_type = terraform_barren_to_sulfur_1
-		is_megastructure_type = terraform_barren_to_sulfur_2
-		is_megastructure_type = terraform_barren_to_sulfur_3
-		is_megastructure_type = terraform_barren_to_sulfur_2_disabled
-		is_megastructure_type = terraform_barren_to_sulfur_3_restored
-		is_megastructure_type = terraform_molten_to_sulfur_0
-		is_megastructure_type = terraform_molten_to_sulfur_1
-		is_megastructure_type = terraform_molten_to_sulfur_2
-		is_megastructure_type = terraform_molten_to_sulfur_3
-		is_megastructure_type = terraform_toxic_to_tidallylocked_0
-		is_megastructure_type = terraform_toxic_to_tidallylocked_1
-		is_megastructure_type = terraform_toxic_to_tidallylocked_2
-		is_megastructure_type = terraform_toxic_to_tidallylocked_3
-		is_megastructure_type = terraform_barren_to_tidallylocked_0
-		is_megastructure_type = terraform_barren_to_tidallylocked_1
-		is_megastructure_type = terraform_barren_to_tidallylocked_2
-		is_megastructure_type = terraform_barren_to_tidallylocked_3
-		is_megastructure_type = terraform_barren_to_tidallylocked_2_disabled
-		is_megastructure_type = terraform_barren_to_tidallylocked_3_restored
-		is_megastructure_type = terraform_molten_to_tidallylocked_0
-		is_megastructure_type = terraform_molten_to_tidallylocked_1
-		is_megastructure_type = terraform_molten_to_tidallylocked_2
-		is_megastructure_type = terraform_molten_to_tidallylocked_3
+		is_megastructure_type = BFS_capital_fantasmagoria
+		is_megastructure_type = BFS_standalone_Intercept_Fortress_I
+		is_megastructure_type = BFS_standalone_Intercept_Fortress_II
+		is_megastructure_type = BFS_standalone_Intercept_Fortress_III
+		is_megastructure_type = BFS_battleplanet_1
+		is_megastructure_type = BFS_battleplanet_2
+		is_megastructure_type = BFS_battleplanet_3
+		is_megastructure_type = BFS_battlesatellite_1
+		is_megastructure_type = BFS_MCSS_1
+		is_megastructure_type = BFS_MCSS_2
+		is_megastructure_type = BFS_MCSS_3
+		is_megastructure_type = BFS_MCSS_4
+		is_megastructure_type = BFS_MCSS_5
 	}
 }
 
-# Ancient Empire
-merg_is_ancient_empire_type = {
+# Star Wars: Kuat Ancient Empire
+merg_is_kuat_type = {
 	OR = {
-		is_megastructure_type = ag_ancient_construction_section
-		is_megastructure_type = ag_ancient_construction_section_megashipyard
-		is_megastructure_type = ag_beta_station_type1_megastructure
-		is_megastructure_type = ag_beta_station_type2_megastructure
-		is_megastructure_type = ag_beta_station_type2_megastructure_1
-		is_megastructure_type = ag_psionic_inhibition_station
-		is_megastructure_type = ag_beta_station_type1_megastructure_dummy
-		is_megastructure_type = ag_delta_platform_megastructure
-		is_megastructure_type = ag_delta_titan_megastructure_0
-		is_megastructure_type = ag_delta_titan_megastructure_1
-		is_megastructure_type = ag_delta_titan_megastructure_2
-		is_megastructure_type = ag_epsilon_titan_station_actived_0
-		is_megastructure_type = ag_epsilon_titan_station_actived_1
-		is_megastructure_type = ag_epsilon_titan_station_actived_2
-		is_megastructure_type = ag_epsilon_titan_station_actived_3
-		is_megastructure_type = ag_epsilon_obelisk_0
-		is_megastructure_type = ag_epsilon_obelisk_1
-		is_megastructure_type = ag_epsilon_obelisk_2
-		is_megastructure_type = ag_epsilon_obelisk_3
-		is_megastructure_type = ag_epsilon_obelisk_4
-		is_megastructure_type = ag_epsilon_obelisk_5
-		is_megastructure_type = ag_epsilon_titan_megastructure_0
-		is_megastructure_type = ag_epsilon_titan_megastructure_1
-		is_megastructure_type = ag_epsilon_titan_megastructure_2
-		is_megastructure_type = ag_epsilon_titan_megastructure_3
-		is_megastructure_type = ag_epsilon_psionic_beacon
-		is_megastructure_type = ag_epsilon_suppression_station
-		is_megastructure_type = ag_eta_titan_megastructure_0
-		is_megastructure_type = ag_eta_titan_megastructure_1
-		is_megastructure_type = ag_eta_titan_megastructure_2
-		is_megastructure_type = ag_eta_titan_megastructure_3
-		is_megastructure_type = ag_eta_titan_megastructure_4
-		is_megastructure_type = ag_gamma_station_megastructure_0
-		is_megastructure_type = ag_gamma_station_megastructure_1
-		is_megastructure_type = ag_gamma_station_megastructure_2
-		is_megastructure_type = ag_gamma_station_megastructure_3
-		is_megastructure_type = ag_gamma_station_megastructure_4
-		is_megastructure_type = ag_gamma_station_megastructure_5
-		is_megastructure_type = ag_gamma_station_megastructure_6
-		is_megastructure_type = ag_gamma_station_megastructure_7
-		is_megastructure_type = ag_gamma_station_megastructure_8
-		is_megastructure_type = ag_gamma_station_megastructure_9
-		is_megastructure_type = ag_gamma_titan_megastructure_0
-		is_megastructure_type = ag_gamma_titan_megastructure_1
-		is_megastructure_type = ag_gamma_battlecruiser_megastructure
-		is_megastructure_type = ag_gamma_escort_megastructure
-		is_megastructure_type = ag_ancient_astronomy_station
-		is_megastructure_type = ag_ancient_anchor_station_0
-		is_megastructure_type = ag_ancient_anchor_station_1
-		is_megastructure_type = ag_ancient_anchor_station_2
-		is_megastructure_type = ag_ancient_wandering_ship_megastructure_0
-		is_megastructure_type = ag_ancient_wandering_ship_megastructure_1
-		is_megastructure_type = ag_ancient_wandering_ship_megastructure_2
-		is_megastructure_type = ag_ancient_wandering_ship_megastructure_3
-		is_megastructure_type = ag_ancient_wandering_ship_megastructure_4
-		is_megastructure_type = ag_ancient_wandering_ship_megastructure_5
-		is_megastructure_type = ag_ancient_anchor_station_player
-		is_megastructure_type = ag_zeta_titan_megastructure_0
-		is_megastructure_type = ag_zeta_titan_megastructure_1
-		is_megastructure_type = ag_zeta_battleship_megastructure
-		is_megastructure_type = ag_zeta_destroyer_megastructure
+		is_megastructure_type = exe_megastructure_starbase_platfrom
+		is_megastructure_type = exe_megastructure_starbase_skeletion
+		is_megastructure_type = exe_megastructure_starbase
+		is_megastructure_type = exe_black_hole_facility_platform
+		is_megastructure_type = exe_black_hole_facility_1
+		is_megastructure_type = exe_black_hole_facility_2
+		is_megastructure_type = exe_black_hole_facility_3
+		is_megastructure_type = exe_black_hole_facility
+		is_megastructure_type = exe_black_hole_damage
+		is_megastructure_type = exe_black_hole_restore
+		is_megastructure_type = StarForge_notrun
+		is_megastructure_type = StarForge_notrun_1
+		is_megastructure_type = StarForge
+		is_megastructure_type = kuat_starkillerbase_0
+		is_megastructure_type = kuat_starkillerbase_0_1
+		is_megastructure_type = kuat_starkillerbase_0_2
+		is_megastructure_type = kuat_starkillerbase_1
+		is_megastructure_type = kuat_starkillerbase_15
+		is_megastructure_type = kuat_starkillerbase_a
+		is_megastructure_type = kuat_starkillerbase_2
+		is_megastructure_type = kuat_sun_drain
+		is_megastructure_type = kuat_epsilon_obelisk_0
+		is_megastructure_type = kuat_epsilon_obelisk_1
+		is_megastructure_type = kuat_epsilon_obelisk_2
+		is_megastructure_type = kuat_epsilon_obelisk_3
+		is_megastructure_type = kuat_epsilon_obelisk_4
+		is_megastructure_type = kuat_epsilon_obelisk_5
+	}
+}
+
+# LEX
+merg_is_lex_type = {
+	OR = {
+		is_megastructure_type = bwm_ancient_weapon_project_00
+		is_megastructure_type = bwm_ancient_weapon_project_01
+		is_megastructure_type = bwm_ancient_weapon_project_02
+		is_megastructure_type = bwm_ancient_weapon_project_03
+		is_megastructure_type = bwm_ancient_weapon_project_04
+		is_megastructure_type = bwm_ancient_weapon_project_05
+		is_megastructure_type = bwm_ancient_weapon_project_06
+		is_megastructure_type = bwm_ancient_weapon_project_07
+		is_megastructure_type = bwm_ancient_weapon_project_08
+		is_megastructure_type = bwm_ancient_weapon_project_09
+		is_megastructure_type = bwm_ancient_weapon_project_10
+		is_megastructure_type = bwm_ancient_weapon_project_11
+		is_megastructure_type = bwm_ancient_weapon_project_12
+		is_megastructure_type = bwm_ancient_weapon_project_13
+		is_megastructure_type = bwm_ancient_weapon_project_14
+		is_megastructure_type = bwm_ancient_weapon_project_15
+		is_megastructure_type = bwm_ancient_weapon_project_16
+		is_megastructure_type = bwm_ancient_weapon_project_17
+		is_megastructure_type = bwm_ancient_weapon_project_18
+		is_megastructure_type = bwm_ancient_weapon_project_19
+		is_megastructure_type = bwm_ancient_weapon_project_20
+		is_megastructure_type = bwm_ancient_weapon_project_21
+		is_megastructure_type = bwm_ancient_weapon_project_22
+		is_megastructure_type = bwm_ancient_weapon_project_23
+		is_megastructure_type = bwm_ancient_weapon_project_24
+		is_megastructure_type = bwm_ancient_weapon_project_25
+		is_megastructure_type = bwm_conduit_converter_00
+		is_megastructure_type = bwm_conduit_converter_01
+		is_megastructure_type = bwm_conduit_converter_02
+		is_megastructure_type = bwm_conduit_converter_03
+		is_megastructure_type = bwm_conduit_converter_04
+		is_megastructure_type = bwm_conduit_converter_05
+		is_megastructure_type = bwm_conduit_converter_06
+		is_megastructure_type = bwm_conduit_converter_07
+		is_megastructure_type = bwm_conduit_converter_08
+		is_megastructure_type = bwm_conduit_shipyard_00
+		is_megastructure_type = bwm_conduit_shipyard_01
+		is_megastructure_type = bwm_conduit_shipyard_02
+		is_megastructure_type = bwm_conduit_shipyard_03
+		is_megastructure_type = bwm_conduit_shipyard_04
+		is_megastructure_type = bwm_conduit_shipyard_05
+		is_megastructure_type = bwm_conduit_shipyard_06
+		is_megastructure_type = bwm_conduit_shipyard_07
+		is_megastructure_type = bwm_conduit_shipyard_08
+		is_megastructure_type = bwm_conduit_shipyard_09
+		is_megastructure_type = bwm_magma_diver_project_00
+		is_megastructure_type = bwm_magma_diver_project_01
+		is_megastructure_type = bwm_solar_envoy_project_00
+		is_megastructure_type = bwm_solar_envoy_project_01
+		is_megastructure_type = bwm_gravekeeper_project_00
+		is_megastructure_type = bwm_gravekeeper_project_01
+	}
+}
+
+# ThaumStellaris
+merg_is_thaum_type = {
+	OR = {
+		is_megastructure_type = tc_ancient_alchemical_furnace_00
+		is_megastructure_type = tc_ancient_alchemical_furnace_01
+		is_megastructure_type = tc_ancient_alchemical_furnace_02
+		is_megastructure_type = tc_ancient_alchemical_furnace_03
+		is_megastructure_type = tc_ancient_alchemical_furnace_04
+		is_megastructure_type = tc_ancient_alchemical_furnace_complet
+		is_megastructure_type = tc_magic_hourglass_00
+		is_megastructure_type = tc_magic_hourglass_01
+		is_megastructure_type = tc_mega_arcane_bore_00
+		is_megastructure_type = tc_mega_arcane_bore_01
+		is_megastructure_type = tc_mega_arcane_bore_02
+		is_megastructure_type = tc_mega_arcane_bore_03
+		is_megastructure_type = tc_nethermind_00
+		is_megastructure_type = tc_nethermind_01
+		is_megastructure_type = tc_nethermind_02
+		is_megastructure_type = tc_nethermind_03
+		is_megastructure_type = tc_order_mind_00
+		is_megastructure_type = tc_order_mind_01_temp
+		is_megastructure_type = tc_order_mind_01
+		is_megastructure_type = tc_order_mind_01_research
+		is_megastructure_type = tc_order_mind_01_knowledge
+		is_megastructure_type = tc_order_mind_02
+		is_megastructure_type = tc_order_mind_02_research
+		is_megastructure_type = tc_order_mind_02_knowledge
+		is_megastructure_type = tc_order_mind_03
+		is_megastructure_type = tc_order_mind_03_research
+		is_megastructure_type = tc_order_mind_03_knowledge
+		is_megastructure_type = tc_osmotic_enchanter_00
+		is_megastructure_type = tc_osmotic_enchanter_01
+		is_megastructure_type = tc_osmotic_enchanter_02
+		is_megastructure_type = tc_osmotic_enchanter_03
+		is_megastructure_type = tc_osmotic_enchanter_start
+		is_megastructure_type = tc_stellar_node_generator_00
+		is_megastructure_type = tc_stellar_node_generator_01
+		is_megastructure_type = tc_stellar_node_generator_02
+		is_megastructure_type = tc_stellar_node_generator_03
+		is_megastructure_type = tc_stellar_node_generator_04
+		is_megastructure_type = tc_stellar_node_generator_05
+		is_megastructure_type = tc_stellar_node_generator_06
 	}
 }
 
@@ -754,185 +1020,6 @@ merg_is_wsg_type = {
 	}
 }
 
-# Giga Stellar Manipulation
-merg_is_giga_manip_type = {
-	OR = {
-		is_megastructure_type = stellar_manipulator_0
-		is_megastructure_type = stellar_manipulator_1
-		is_megastructure_type = stellar_manipulator_2
-		is_megastructure_type = stellar_manipulator_3
-		is_megastructure_type = stellar_manipulator_o_1
-		is_megastructure_type = stellar_manipulator_o_2
-		is_megastructure_type = stellar_manipulator_off
-		is_megastructure_type = stellar_manipulator_on
-		is_megastructure_type = systemcraft_assembler_0
-		is_megastructure_type = systemcraft_assembler_1
-		is_megastructure_type = systemcraft_assembler_2
-		is_megastructure_type = systemcraft_assembler_3
-		is_megastructure_type = systemcraft_assembler_4
-		is_megastructure_type = systemcraft_assembler_5
-		is_megastructure_type = systemcraft_assembler_make_system
-		is_megastructure_type = systemcraft_assembler_make_o_system
-		is_megastructure_type = war_system_o_0
-		is_megastructure_type = war_system_o_1
-		is_megastructure_type = war_system_o_2
-		is_megastructure_type = war_system_o_3
-		is_megastructure_type = war_system_o_4
-		is_megastructure_type = war_system_o_5
-	}
-}
-
-# Star Wars: Kuat Ancient Empire
-merg_is_kuat_type = {
-	OR = {
-		is_megastructure_type = exe_megastructure_starbase_platfrom
-		is_megastructure_type = exe_megastructure_starbase_skeletion
-		is_megastructure_type = exe_megastructure_starbase
-		is_megastructure_type = exe_black_hole_facility_platform
-		is_megastructure_type = exe_black_hole_facility_1
-		is_megastructure_type = exe_black_hole_facility_2
-		is_megastructure_type = exe_black_hole_facility_3
-		is_megastructure_type = exe_black_hole_facility
-		is_megastructure_type = exe_black_hole_damage
-		is_megastructure_type = exe_black_hole_restore
-		is_megastructure_type = StarForge_notrun
-		is_megastructure_type = StarForge_notrun_1
-		is_megastructure_type = StarForge
-		is_megastructure_type = kuat_starkillerbase_0
-		is_megastructure_type = kuat_starkillerbase_0_1
-		is_megastructure_type = kuat_starkillerbase_0_2
-		is_megastructure_type = kuat_starkillerbase_1
-		is_megastructure_type = kuat_starkillerbase_15
-		is_megastructure_type = kuat_starkillerbase_a
-		is_megastructure_type = kuat_starkillerbase_2
-		is_megastructure_type = kuat_sun_drain
-		is_megastructure_type = kuat_epsilon_obelisk_0
-		is_megastructure_type = kuat_epsilon_obelisk_1
-		is_megastructure_type = kuat_epsilon_obelisk_2
-		is_megastructure_type = kuat_epsilon_obelisk_3
-		is_megastructure_type = kuat_epsilon_obelisk_4
-		is_megastructure_type = kuat_epsilon_obelisk_5
-	}
-}
-
-# ThaumStellaris
-merg_is_thaum_type = {
-	OR = {
-		is_megastructure_type = tc_ancient_alchemical_furnace_00
-		is_megastructure_type = tc_ancient_alchemical_furnace_01
-		is_megastructure_type = tc_ancient_alchemical_furnace_02
-		is_megastructure_type = tc_ancient_alchemical_furnace_03
-		is_megastructure_type = tc_ancient_alchemical_furnace_04
-		is_megastructure_type = tc_ancient_alchemical_furnace_complet
-		is_megastructure_type = tc_magic_hourglass_00
-		is_megastructure_type = tc_magic_hourglass_01
-		is_megastructure_type = tc_mega_arcane_bore_00
-		is_megastructure_type = tc_mega_arcane_bore_01
-		is_megastructure_type = tc_mega_arcane_bore_02
-		is_megastructure_type = tc_mega_arcane_bore_03
-		is_megastructure_type = tc_nethermind_00
-		is_megastructure_type = tc_nethermind_01
-		is_megastructure_type = tc_nethermind_02
-		is_megastructure_type = tc_nethermind_03
-		is_megastructure_type = tc_order_mind_00
-		is_megastructure_type = tc_order_mind_01_temp
-		is_megastructure_type = tc_order_mind_01
-		is_megastructure_type = tc_order_mind_01_research
-		is_megastructure_type = tc_order_mind_01_knowledge
-		is_megastructure_type = tc_order_mind_02
-		is_megastructure_type = tc_order_mind_02_research
-		is_megastructure_type = tc_order_mind_02_knowledge
-		is_megastructure_type = tc_order_mind_03
-		is_megastructure_type = tc_order_mind_03_research
-		is_megastructure_type = tc_order_mind_03_knowledge
-		is_megastructure_type = tc_osmotic_enchanter_00
-		is_megastructure_type = tc_osmotic_enchanter_01
-		is_megastructure_type = tc_osmotic_enchanter_02
-		is_megastructure_type = tc_osmotic_enchanter_03
-		is_megastructure_type = tc_osmotic_enchanter_start
-		is_megastructure_type = tc_stellar_node_generator_00
-		is_megastructure_type = tc_stellar_node_generator_01
-		is_megastructure_type = tc_stellar_node_generator_02
-		is_megastructure_type = tc_stellar_node_generator_03
-		is_megastructure_type = tc_stellar_node_generator_04
-		is_megastructure_type = tc_stellar_node_generator_05
-		is_megastructure_type = tc_stellar_node_generator_06
-	}
-}
-
-# Origin - F.C.S.S & M.C.S.S
-merg_is_fcss_type = {
-	OR = {
-		is_megastructure_type = BFS_capital_fantasmagoria
-		is_megastructure_type = BFS_standalone_Intercept_Fortress_I
-		is_megastructure_type = BFS_standalone_Intercept_Fortress_II
-		is_megastructure_type = BFS_standalone_Intercept_Fortress_III
-		is_megastructure_type = BFS_battleplanet_1
-		is_megastructure_type = BFS_battleplanet_2
-		is_megastructure_type = BFS_battleplanet_3
-		is_megastructure_type = BFS_battlesatellite_1
-		is_megastructure_type = BFS_MCSS_1
-		is_megastructure_type = BFS_MCSS_2
-		is_megastructure_type = BFS_MCSS_3
-		is_megastructure_type = BFS_MCSS_4
-		is_megastructure_type = BFS_MCSS_5
-	}
-}
-
-# Acquisition of Technologies
-merg_is_aot_type = {
-	OR = {
-		is_megastructure_type = star_imploder_0
-		is_megastructure_type = star_imploder_1
-		is_megastructure_type = star_imploder_2
-		is_megastructure_type = star_imploder_3
-		is_megastructure_type = macripp_0
-		is_megastructure_type = macripp_1
-		is_megastructure_type = macripp_2
-		is_megastructure_type = macripp_3
-		is_megastructure_type = phanon_great_wall_0
-		is_megastructure_type = phanon_great_wall_1
-		is_megastructure_type = phanon_great_wall_2
-		is_megastructure_type = phanon_great_wall_3
-		is_megastructure_type = phanon_great_wall_4
-		is_megastructure_type = phanon_megaturret_intermediate_1
-		is_megastructure_type = phanon_megaturret_1
-		is_megastructure_type = phanon_megaturret_2
-		is_megastructure_type = phanon_megaturret_destroyed_0
-		is_megastructure_type = phanon_megaturret_destroyed_1
-		is_megastructure_type = aot_macripp_dark_matter_obelisk_core_se
-		is_megastructure_type = aot_macripp_dark_matter_obelisk_core_pe
-		is_megastructure_type = aot_macripp_dark_matter_obelisk_core_oe
-	}
-}
-
-# ACOT
-merg_is_acot_type = {
-	OR = {
-		is_megastructure_type = acot_dark_matter_obelisk_core
-		is_megastructure_type = acot_dark_matter_obelisk_core_ae
-		is_megastructure_type = acot_dark_matter_obelisk_core_se
-		is_megastructure_type = acot_dark_matter_obelisk_core_oe
-		is_megastructure_type = acot_dark_matter_obelisk_core_pe
-		is_megastructure_type = acot_amerigo
-		is_megastructure_type = acot_amerigo_ae
-		is_megastructure_type = acot_amerigo_se
-		is_megastructure_type = acot_amerigo_pe
-		is_megastructure_type = acot_amerigo_oe
-		is_megastructure_type = acot_precursor_citadel_site
-		is_megastructure_type = acot_precursor_citadel_base
-		is_megastructure_type = acot_precursor_sigma_citadel_site
-		is_megastructure_type = acot_precursor_sigma_citadel_base
-		is_megastructure_type = acot_precursor_phanon_citadel_site
-		is_megastructure_type = acot_precursor_colossus_site
-		is_megastructure_type = acot_precursor_colossus_base
-		is_megastructure_type = acot_precursor_colossus_stage_one
-		is_megastructure_type = acot_precursor_colossus_stage_two
-		is_megastructure_type = acot_precursor_colossus_final
-		is_megastructure_type = acot_phanon_master_reactor_sphere
-	}
-}
-
 #### This is where the real stuff is ####
 # Vanilla scripted triggers
 has_no_non_gate_megastructure = {
@@ -946,16 +1033,21 @@ has_no_non_gate_megastructure = {
 					merg_is_vanilla_type = yes
 					merg_is_hab_type = yes
 					merg_is_ringworld_type = yes
-					merg_is_gigas_type = yes
-					merg_is_gd_type = yes
 					merg_is_ancient_empire_type = yes
-					merg_is_wsg_type = yes
-					merg_is_giga_manip_type = yes
-					merg_is_kuat_type = yes
-					merg_is_thaum_type = yes
-					merg_is_fcss_type = yes
 					merg_is_aot_type = yes
 					merg_is_acot_type = yes
+					merg_is_azur_type = yes
+					merg_is_fcss_type = yes
+					merg_is_giga_manip_type = yes
+					merg_is_gigas_type = yes
+					merg_is_gd_type = yes
+					merg_is_kuat_type = yes
+					merg_is_lex_type = yes
+					merg_is_thaum_type = yes
+					merg_is_wsg_type = yes
+					# AshArms Aquarius History
+					is_megastructure_type = dyson_swarm
+					is_megastructure_type = adf_mining_station
 					# GPM
 					is_megastructure_type = gpm_mega_shipyard_ruined_precursor
 					is_megastructure_type = gpm_mega_shipyard_restored_precursor
@@ -988,6 +1080,33 @@ has_no_non_gate_megastructure = {
 					is_megastructure_type = tma_core_2_contacted
 					is_megastructure_type = tma_inhibitor_1
 					is_megastructure_type = tma_inhibitor_2
+					# Imperial Projects
+					is_megastructure_type = Biolab_0
+					is_megastructure_type = Biolab_1
+					is_megastructure_type = Biolab_2
+					is_megastructure_type = engineers_guild_0
+					is_megastructure_type = engineers_guild_1
+					is_megastructure_type = engineers_guild_2
+					is_megastructure_type = Throne_0
+					is_megastructure_type = Throne_1
+					is_megastructure_type = Tyanki_incubator_0
+					is_megastructure_type = Tyanki_incubator_1
+					is_megastructure_type = Tyanki_incubator_2
+					# Kancolle
+					is_megastructure_type = kancolle_consumer_goods_factory_0
+					is_megastructure_type = kancolle_consumer_goods_factory_1
+					is_megastructure_type = kancolle_consumer_goods_factory_2
+					is_megastructure_type = kancolle_consumer_goods_factory_3
+					is_megastructure_type = kancolle_consumer_goods_factory_4
+					is_megastructure_type = kancolle_dyson_bubble
+					is_megastructure_type = kancolle_minerals_factory
+					is_megastructure_type = kancolle_time_freeze_machine_00
+					is_megastructure_type = kancolle_time_freeze_machine_01
+					is_megastructure_type = kancolle_time_freeze_machine_02
+					is_megastructure_type = kancolle_time_freeze_machine_03
+					is_megastructure_type = kancolle_time_freeze_machine_start
+					is_megastructure_type = kancolle_wu_navy_factory_0
+					is_megastructure_type = kancolle_wu_navy_factory_1
 					# Nanite Machines & Distant Stars Overhaul
 					is_megastructure_type = nanite_factory_station_0
 					# Some Events of Outside Cluster
@@ -1018,16 +1137,21 @@ has_any_megastructure_in_empire = {
 		merg_is_vanilla_type = yes
 		merg_is_hab_type = yes
 		merg_is_ringworld_type = yes
-		merg_is_gigas_type = yes
-		merg_is_gd_type = yes
 		merg_is_ancient_empire_type = yes
-		merg_is_wsg_type = yes
-		merg_is_giga_manip_type = yes
-		merg_is_kuat_type = yes
-		merg_is_thaum_type = yes
-		merg_is_fcss_type = yes
 		merg_is_aot_type = yes
 		merg_is_acot_type = yes
+		merg_is_azur_type = yes
+		merg_is_fcss_type = yes
+		merg_is_giga_manip_type = yes
+		merg_is_gigas_type = yes
+		merg_is_gd_type = yes
+		merg_is_kuat_type = yes
+		merg_is_lex_type = yes
+		merg_is_thaum_type = yes
+		merg_is_wsg_type = yes
+		# AshArms Aquarius History
+		is_megastructure_type = dyson_swarm
+		is_megastructure_type = adf_mining_station
 		# GPM
 		is_megastructure_type = gpm_mega_shipyard_ruined_precursor
 		is_megastructure_type = gpm_mega_shipyard_restored_precursor
@@ -1060,6 +1184,33 @@ has_any_megastructure_in_empire = {
 		is_megastructure_type = tma_core_2_contacted
 		is_megastructure_type = tma_inhibitor_1
 		is_megastructure_type = tma_inhibitor_2
+		# Imperial Projects
+		is_megastructure_type = Biolab_0
+		is_megastructure_type = Biolab_1
+		is_megastructure_type = Biolab_2
+		is_megastructure_type = engineers_guild_0
+		is_megastructure_type = engineers_guild_1
+		is_megastructure_type = engineers_guild_2
+		is_megastructure_type = Throne_0
+		is_megastructure_type = Throne_1
+		is_megastructure_type = Tyanki_incubator_0
+		is_megastructure_type = Tyanki_incubator_1
+		is_megastructure_type = Tyanki_incubator_2
+		# Kancolle
+		is_megastructure_type = kancolle_consumer_goods_factory_0
+		is_megastructure_type = kancolle_consumer_goods_factory_1
+		is_megastructure_type = kancolle_consumer_goods_factory_2
+		is_megastructure_type = kancolle_consumer_goods_factory_3
+		is_megastructure_type = kancolle_consumer_goods_factory_4
+		is_megastructure_type = kancolle_dyson_bubble
+		is_megastructure_type = kancolle_minerals_factory
+		is_megastructure_type = kancolle_time_freeze_machine_00
+		is_megastructure_type = kancolle_time_freeze_machine_01
+		is_megastructure_type = kancolle_time_freeze_machine_02
+		is_megastructure_type = kancolle_time_freeze_machine_03
+		is_megastructure_type = kancolle_time_freeze_machine_start
+		is_megastructure_type = kancolle_wu_navy_factory_0
+		is_megastructure_type = kancolle_wu_navy_factory_1
 		# Nanite Machines & Distant Stars Overhaul
 		is_megastructure_type = nanite_factory_station_0
 		# Some Events of Outside Cluster

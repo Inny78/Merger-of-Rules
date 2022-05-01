@@ -841,6 +841,10 @@ ag_is_gateway_megastructure = {
 		is_megastructure_type = gateway_restored
 		is_megastructure_type = gateway_final
 		is_megastructure_type = lgate_base
+		# ACOT
+		is_megastructure_type = acot_phanon_dimensional_portal
+		is_megastructure_type = sofe_inner_gate
+		is_megastructure_type = sofe_outer_gate
 		# Ancient Empire
 		is_megastructure_type = ag_ancient_eta_gateway_megastructure_0
 		is_megastructure_type = ag_ancient_eta_gateway_megastructure_1
@@ -871,20 +875,11 @@ ag_is_gateway_megastructure = {
 		is_megastructure_type = ag_ancient_eta_gateway_wormhole_temporary_alt
 		is_megastructure_type = ag_psionic_portal_megastructure
 		is_megastructure_type = ag_psionic_portal_stabled_megastructure
-		# Shadowgate
-		is_megastructure_type = shadowrift_a
-		is_megastructure_type = shadowrift_b
-		is_megastructure_type = shadowrift_c
-		is_megastructure_type = shadowrift_d
-		is_megastructure_type = shadowrift_e
-		is_megastructure_type = shadowrift_db
-		# ACOT
-		is_megastructure_type = acot_phanon_dimensional_portal
-		is_megastructure_type = sofe_inner_gate
-		is_megastructure_type = sofe_outer_gate
 		# AOT
 		is_megastructure_type = dimensional_mirror_0
 		is_megastructure_type = dimensional_mirror_final
+		# Archaeology Story Pack
+		is_megastructure_type = ASP_site_beyond_earth_purity_gateway
 		# Blorg
 		is_megastructure_type = Transwarp_hub_1
 		is_megastructure_type = Transwarp_hub_2
@@ -920,6 +915,10 @@ ag_is_gateway_megastructure = {
 		is_megastructure_type = ehof_pgate_gateway
 		is_megastructure_type = ehof_trader_wormhole_01
 		is_megastructure_type = ehof_trader_wormhole_external
+		# Imperial Projects
+		is_megastructure_type = Empyreal_Travel_Beacon_0
+		is_megastructure_type = Empyreal_Travel_Beacon_1
+		is_megastructure_type = Empyreal_Travel_Beacon_2
 		# MEM
 		is_megastructure_type = mem_vazuran_gateway_nexus
 		is_megastructure_type = mem_vazuran_gateway
@@ -932,6 +931,13 @@ ag_is_gateway_megastructure = {
 		is_megastructure_type = AAR_MEGA_webway_NODE
 		is_megastructure_type = AAR_MEGA_webway_NEXUS
 		is_megastructure_type = AAR_MEGA_webway_CLOSE
+		# Shadowgate
+		is_megastructure_type = shadowrift_a
+		is_megastructure_type = shadowrift_b
+		is_megastructure_type = shadowrift_c
+		is_megastructure_type = shadowrift_d
+		is_megastructure_type = shadowrift_e
+		is_megastructure_type = shadowrift_db
 		# Some Events of Outside Cluster
 		is_megastructure_type = nep_sealgate_ruined
 		is_megastructure_type = nep_sealgate_restored

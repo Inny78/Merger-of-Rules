@@ -73,6 +73,10 @@ colonizable_planet = {
 		habitable_structure = yes
 		habitable_planet = yes
 		is_artificial = yes
+		# ACOT
+		is_planet_class = pc_dark_fractured
+		is_planet_class = pc_dark_fractured_ae
+		is_planet_class = pc_acot_enigmopolis
 		# Planetary Diversity
 		is_planet_class = pc_pdshroud
 		is_planet_class = pc_irradiated
@@ -91,10 +95,6 @@ colonizable_planet = {
 		}
 		# Endless Frontier
 		is_planet_class = pc_mzilli_shadow
-		# ACOT
-		is_planet_class = pc_dark_fractured
-		is_planet_class = pc_dark_fractured_ae
-		is_planet_class = pc_acot_enigmopolis
 		### SOFE
 		is_planet_class = pc_golden_world
 		is_planet_class = pc_golden_world_habitable
@@ -104,6 +104,91 @@ colonizable_planet = {
 		is_planet_class = pc_goodman_gaia_world
 		is_planet_class = pc_golden_fortress
 		is_planet_class = pc_sosi_proto_gaia_world
+	}
+}
+
+habitable_planet = {
+	OR = {
+		is_planet_class = pc_desert
+		is_planet_class = pc_tropical
+		is_planet_class = pc_arid
+		is_planet_class = pc_continental
+		is_planet_class = pc_ocean
+		is_planet_class = pc_tundra
+		is_planet_class = pc_arctic
+		is_planet_class = pc_alpine
+		is_planet_class = pc_savannah
+		is_planet_class = pc_gaia
+		is_planet_class = pc_relic
+		is_planet_class = pc_city
+		is_planet_class = pc_hive
+		# Planetary Diversity
+		is_planet_class = pc_megaflorahive
+		is_planet_class = pc_megafloratol
+		is_planet_class = pc_pdhive1
+		is_planet_class = pc_pdhive2
+		is_planet_class = pc_bioforge
+		is_planet_class = pc_biocapital
+		is_planet_class = pc_biofort
+		is_pd_regular = yes
+		is_pd_gaia = yes
+		is_pd_rare = yes
+		# Warship Girls R And MIST Species
+		is_planet_class = pc_wsg_port
+		is_planet_class = pc_shenhai
+		# SW: UnknownWorld Shipgirls Story
+		is_planet_class = pc_swgs_engineer
+		is_planet_class = pc_swgs_engineer_ringworld_habitable
+		# Gigastructures
+		is_planet_class = pc_ll_temperate
+		is_planet_class = pc_ll_foggy
+		is_planet_class = pc_ll_torrid
+		# Real Space - New Frontiers / Expanded Gestalts: Forgotten Queens
+		is_planet_class = pc_hollow
+		# Giga Diversity
+		is_planet_class = pc_ll_methane
+		is_planet_class = pc_ll_ash
+		is_planet_class = pc_ll_sulfur
+		is_planet_class = pc_ll_ammonia
+		is_planet_class = pc_ll_ocean
+		is_planet_class = pc_ll_tidallylocked_cold
+		is_planet_class = pc_ll_tidallylocked
+		is_planet_class = pc_ll_rogue
+	}
+}
+
+uninhabitable_regular_planet = {
+	OR = {
+		is_planet_class = pc_molten
+		is_planet_class = pc_barren
+		is_planet_class = pc_barren_cold
+		is_planet_class = pc_toxic
+		is_planet_class = pc_frozen
+		# Planetary Diversity
+		is_planet_class = pc_hothouse
+	}
+}
+
+# Enforcing proper use of this trigger. You don't need to overwrite it since 3.0!
+habitable_structure = {
+	is_artificial = yes
+	OR = {
+		is_colony = yes
+		is_colonizable = yes
+	}
+}
+
+is_a_habitable_planet_megastructure = {
+	OR = {
+		is_planet_class = pc_infested
+		# Expanded Gestalts: Forgotten Queens
+		is_planet_class = pc_matryoshka
+		# ACOT
+		is_planet_class = pc_dark_fractured
+		is_planet_class = pc_dark_fractured_ae
+		is_planet_class = pc_acot_enigmopolis
+		colonizable_planet = yes		# Ariphaos patch
+		habitable_structure = yes
 	}
 }
 
@@ -214,86 +299,6 @@ is_organic_species = {
 			# Cryogenesis Unofficial Species Pack
 			is_archetype = sm_ELEMENTAL
 		}
-	}
-}
-
-habitable_planet = {
-	OR = {
-		is_planet_class = pc_desert
-		is_planet_class = pc_tropical
-		is_planet_class = pc_arid
-		is_planet_class = pc_continental
-		is_planet_class = pc_ocean
-		is_planet_class = pc_tundra
-		is_planet_class = pc_arctic
-		is_planet_class = pc_alpine
-		is_planet_class = pc_savannah
-		is_planet_class = pc_gaia
-		is_planet_class = pc_relic
-		is_planet_class = pc_city
-		is_planet_class = pc_hive
-		# Planetary Diversity
-		is_planet_class = pc_megaflorahive
-		is_planet_class = pc_megafloratol
-		is_planet_class = pc_pdhive1
-		is_planet_class = pc_pdhive2
-		is_planet_class = pc_bioforge
-		is_planet_class = pc_biocapital
-		is_planet_class = pc_biofort
-		is_pd_regular = yes
-		is_pd_gaia = yes
-		is_pd_rare = yes
-		# Warship Girls R And MIST Species
-		is_planet_class = pc_wsg_port
-		is_planet_class = pc_shenhai
-		# SW: UnknownWorld Shipgirls Story
-		is_planet_class = pc_swgs_engineer
-		is_planet_class = pc_swgs_engineer_ringworld_habitable
-		# Gigastructures
-		is_planet_class = pc_ll_temperate
-		is_planet_class = pc_ll_foggy
-		is_planet_class = pc_ll_torrid
-		# Real Space - New Frontiers / Expanded Gestalts: Forgotten Queens
-		is_planet_class = pc_hollow
-		# Giga Diversity
-		is_planet_class = pc_ll_methane
-		is_planet_class = pc_ll_ash
-		is_planet_class = pc_ll_sulfur
-		is_planet_class = pc_ll_ammonia
-		is_planet_class = pc_ll_ocean
-		is_planet_class = pc_ll_tidallylocked_cold
-		is_planet_class = pc_ll_tidallylocked
-		is_planet_class = pc_ll_rogue
-	}
-}
-
-uninhabitable_regular_planet = {
-	OR = {
-		is_planet_class = pc_molten
-		is_planet_class = pc_barren
-		is_planet_class = pc_barren_cold
-		is_planet_class = pc_toxic
-		is_planet_class = pc_frozen
-		# Planetary Diversity
-		is_planet_class = pc_hothouse
-	}
-}
-
-is_a_habitable_planet_megastructure = {
-	OR = {
-		is_planet_class = pc_infested
-		is_planet_class = pc_matryoshka		# Expanded Gestalts: Forgotten Queens
-		colonizable_planet = yes		# Ariphaos patch
-		habitable_structure = yes
-	}
-}
-
-# Enforcing proper use of this trigger. You don't need to overwrite it since 3.0!
-habitable_structure = {
-	is_artificial = yes
-	OR = {
-		is_colony = yes
-		is_colonizable = yes
 	}
 }
 
