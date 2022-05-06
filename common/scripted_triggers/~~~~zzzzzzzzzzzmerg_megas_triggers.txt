@@ -144,13 +144,6 @@ merg_is_hab_type = {
 		is_megastructure_type = pd_hothouse_hab_0
 		is_megastructure_type = pd_molten_hab_0
 		is_megastructure_type = pd_toxic_hab_0
-		# Starborn: Improved Voidtouched
-		is_megastructure_type = starborn_habitat4
-		is_megastructure_type = starborn_habitat5
-		is_megastructure_type = starborn_habitat6
-		is_megastructure_type = starborn_habitat_expander
-		is_megastructure_type = starborn_vanilla_habitat_big
-		is_megastructure_type = starborn_vanilla_habitat_very_big
 		# The Empty Vagrant
 		is_megastructure_type = temporary_habitat_0
 		# Twinks Atlanteans
