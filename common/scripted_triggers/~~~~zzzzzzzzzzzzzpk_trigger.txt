@@ -1502,7 +1502,6 @@ can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM = {
 	custom_tooltip = {
 		fail_text = is_shielded
 		merg_is_shielded = no
-		}
 	}
 }
 
