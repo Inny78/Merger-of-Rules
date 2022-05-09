@@ -207,6 +207,8 @@ is_crisis_faction = {
 		is_country_type = dormant_aeternum
 		# ACOT
 		is_country_type = original_empire
+		# Cruel Conquerers
+		is_cruel_abomination_country_type = yes
 		# Solar Storm
 		is_country_type = abyssal_host_invaders_type
 		# Shroud Rising

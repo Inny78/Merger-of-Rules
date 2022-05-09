@@ -1896,6 +1896,8 @@ can_orbital_bombard = {
 				is_country_type = original_empire
 				is_country_type = void_lifeforms_1
 				is_country_type = void_lifeforms_2
+				# Cruel Conquerers
+				is_cruel_abomination_country_type = yes
 				# Star Wars: Kuat Ancient Empire
 				is_country_type = kuat_fleet
 				is_country_type = awakened_return_kuat_empire
@@ -1903,7 +1905,7 @@ can_orbital_bombard = {
 				is_country_type = katzenartig_imperium
 				# is_country_type = compound_empire
 				# LEX
-				# is_country_type = mem_ancestor_guardian
+				is_country_type = mem_ancestor_guardian
 				# Solar Storm
 				is_country_type = abyssal_host_invaders_type
 				# Human Fallen Empires
@@ -1958,7 +1960,7 @@ can_orbital_bombard = {
 				# The Empty Vagrant
 				is_country_type = default_ev
 				# LEX
-				# is_country_type = mem_ancestor_guardian
+				is_country_type = mem_ancestor_guardian
 				# Solar Storm
 				is_country_type = abyssal_host_invaders_type
 				# Human Fallen Empires

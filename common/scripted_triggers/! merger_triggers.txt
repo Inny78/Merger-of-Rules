@@ -145,6 +145,31 @@ merg_is_habitat = {
 	}
 }
 
+merg_is_habitat_non_starborn = {
+	OR = {
+		is_planet_class = pc_habitat
+		# Planetary Diversity
+		is_pd_habitat = yes
+		# Gigastructural Engineering & More
+		is_planet_class = pc_interstellar_habitat
+		# More Events Mod
+		is_planet_class = pc_mem_vazuran_habitat
+		# Acquisition of Technology
+		is_planet_class = pc_dm_habitat
+		is_planet_class = pc_ae_habitat
+		is_planet_class = pc_sigma_habitat
+		is_planet_class = pc_sigma_deepspace_habitat
+		# Twinks Atlantean
+		uses_district_set = skypalace
+		# Plentiful Traditions
+		is_planet_class = pc_habitat_robot
+		# Giga Diversity
+		is_planet_class = pc_pd_toxic_hab
+		# Nyto Species Pack
+		is_planet_class = pc_GFnytp_habitis
+	}
+}
+
 merg_has_cloning_building = {
 	OR = {
 		# Vanilla
@@ -212,24 +237,5 @@ merg_is_void_system = {
 		is_star_class = sc_void_dummy
 		# Darkspace
 		is_star_class = sc_gc
-	}
-}
-
-# this is to simplify species_can_live_on_planet
-merg_is_pd_planet_check = {
-	OR = {
-		is_planet_class = pc_milarc_relic
-		is_planet_class = pc_ecocity
-		is_planet_class = pc_corpoarc
-		is_planet_class = pc_palacearc
-		is_planet_class = pc_capitalarc
-		is_planet_class = pc_necropolis
-		is_planet_class = pc_machine_necropolis
-		is_planet_class = pc_necrohive
-		is_planet_class = pc_milarc
-		is_planet_class = pc_floating
-		is_planet_class = pc_crystal
-		is_planet_class = pc_graveyard
-		is_planet_class = pc_technoorganic
 	}
 }
