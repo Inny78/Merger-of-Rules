@@ -13,6 +13,7 @@ awakened_fallen_empire_ev = { ai = { enabled = no } }
 awakened_gate_builders = { ai = { enabled = no } }
 awakened_marauders_ev = { ai = { enabled = no } }
 awakened_return_kuat_empire = { ai = { enabled = no } }
+blokkat_stripminers = { ai = { enabled = no } }
 default_ev = { ai = { enabled = no } }
 dormant_aeternum = { ai = { enabled = no } }
 eternal_empire = { ai = { enabled = no } }

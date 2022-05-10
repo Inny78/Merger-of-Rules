@@ -451,6 +451,81 @@ mega_blokkats_wont_stripmine = {
 	}
 }
 
+ndb_can_target_system = {
+	cohesive_system = no
+	# compound_cluster = no
+	annihilator_system = no
+	urmazin_system = no
+	everchanging_system = no
+	merg_is_void_system = no
+	NOT = { is_star_class = sc_black_hole }
+	NOT = { has_star_flag = blokkat_system_being_stripmined }
+	NOT = { has_star_flag = blokkat_stripmined_system }
+	NOT = { any_fleet_in_system = { owner = { is_country_type = blokkat_stripminers } } }
+	NOT = { any_ship_in_system = { is_ship_size = precursor_colossus } }
+	NOT = { any_ship_in_system = { is_ship_size = sofe_ancient_weapon } }
+	NOT = {
+		any_system_planet = {
+			ndb_can_target_planet = yes
+		}
+	}
+}
+
+ndb_can_target_planet = {
+	NOR = {
+		AND = {
+			is_capital = yes
+			exists = owner
+			owner = { is_same_value = root }
+		}
+		is_star = yes
+		is_planet_class = pc_birch
+		is_planet_class = pc_void_birch
+		is_planet_class = pc_alderson_slice_ecu
+		is_planet_class = pc_alderson_slice_hive
+		is_planet_class = pc_alderson_slice_machine
+		is_planet_class = pc_alderson_slice_gaia
+		is_planet_class = pc_alderson_slice_pc
+		is_planet_class = pc_ai
+		is_planet_class = pc_squareworld_habitable
+		has_planet_flag = cant_build_here
+		has_planet_flag = cant_target_this_planet
+		is_planet_class = pc_virtual_industry
+		is_planet_class = pc_virtual_reality
+		is_planet_class = pc_virtual_stellar_industry
+		# Merger of Rules
+		has_planet_flag = merg_is_forbidden_target
+		# ACOT
+		is_planet_class = pc_acot_enigmopolis
+	}
+}
+
+giga_gas_giant = {
+	OR = {
+		is_planet_class = pc_gas_giant
+		# Planetary Diversity
+		is_planet_class = pc_hot_gas_giant
+		is_planet_class = pc_cloudless_gas_giant
+		is_planet_class = pc_cold_gas_giant
+	}
+}
+
+giga_can_be_war_planet = {
+	NOT = { has_planet_flag = dormant_war_planet }
+	is_moon = no
+	has_anomaly = no
+	is_colony = no
+	prev = { NOT = { has_ethic = ethic_fanatic_spiritualist } }
+	OR = {
+		is_planet_class = pc_barren
+		is_planet_class = pc_barren_cold
+		is_planet_class = pc_molten
+		is_planet_class = pc_toxic
+		is_planet_class = pc_frozen
+		# Planetary Diversity
+		is_planet_class = pc_hothouse
+	}
+}
 
 ############################### Zenith of the Fallen Empires ###############################
 # Overwriting this for ZOFE and comp mods

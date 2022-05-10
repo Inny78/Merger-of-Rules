@@ -1,6 +1,7 @@
 # Dummy triggers - to be overwritten by their respective mods.
 ag_can_be_orbital_bombardment_country = { always = no }
 ag_can_do_orbital_bombardment_country = { always = no }
+annihilator_system = { always = no }
 can_fill_holosphere_ruler_job = { always = no }
 cohesive_system = { always = no }
 everchanging_system = { always = no }
