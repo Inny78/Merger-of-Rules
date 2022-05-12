@@ -512,6 +512,7 @@ nep_sealgate_ruined = { entity = "" potential = { always = no } possible = { alw
 nep_sealphantom_nexus = { entity = "" potential = { always = no } possible = { always = no } }
 nep_sealphantom_node = { entity = "" potential = { always = no } possible = { always = no } }
 nep_sealphantom_node_ruined = { entity = "" potential = { always = no } possible = { always = no } }
+nep_sealportal_nexus = { entity = "" potential = { always = no } possible = { always = no } }
 nep_sealportal_node = { entity = "" potential = { always = no } possible = { always = no } }
 nep_sealportal_node_ruined = { entity = "" potential = { always = no } possible = { always = no } }
 nep_station_whitegoo_mega = { entity = "" potential = { always = no } possible = { always = no } }
@@ -792,6 +793,7 @@ tc_stellar_node_generator_03 = { entity = "" potential = { always = no } possibl
 tc_stellar_node_generator_04 = { entity = "" potential = { always = no } possible = { always = no } }
 tc_stellar_node_generator_05 = { entity = "" potential = { always = no } possible = { always = no } }
 tc_stellar_node_generator_06 = { entity = "" potential = { always = no } possible = { always = no } }
+temporary_habitat_0 = { entity = "" potential = { always = no } possible = { always = no } }
 terraform_barren_0 = { entity = "" potential = { always = no } possible = { always = no } }
 terraform_barren_1 = { entity = "" potential = { always = no } possible = { always = no } }
 terraform_barren_2 = { entity = "" potential = { always = no } possible = { always = no } }
