@@ -308,6 +308,7 @@ is_country_type_with_subjects = {
 	OR = {
 		is_country_type = default
 		is_country_type = awakened_fallen_empire
+		is_country_type = awakened_marauders
 		# ZOFE
 		is_zofe_country = yes
 		# The Empty Vagrant
@@ -659,5 +660,94 @@ has_total_war_cb = {
 				}
 			}
 		}
+	}
+}
+
+can_think = {
+	NOR = {
+		has_trait = trait_nerve_stapled
+		has_trait = trait_zombie
+		# Expanded Events / Expanded Traits, Civics, Pops, and More
+		has_trait = trait_memorex_comatos
+	}
+}
+
+has_special_star_flag_trigger = {
+	OR = {
+		# Start System Flags
+		has_star_flag = empire_home_system
+		has_star_flag = neighbor_t1
+		has_star_flag = neighbor_t1_first_colony
+		has_star_flag = neighbor_t2
+		has_star_flag = neighbor_t2_second_colony
+		# Enclaves
+		has_star_flag = enclave
+		has_star_flag = caravaneer_home
+		# L-Gate
+		has_star_flag = lgate
+		has_star_flag = lcluster1
+		has_star_flag = lcluster2
+		has_star_flag = lcluster3
+		has_star_flag = lcluster4
+		has_star_flag = lcluster5
+		has_star_flag = lcluster_lgate
+		has_star_flag = lgateguaranteed
+		# Leviathans
+		has_star_flag = tiyanki_home_system
+		has_star_flag = amoeba_home_system
+		has_star_flag = crystal_system
+		has_star_flag = crystal_home_system
+		has_star_flag = drone_home_system
+		has_star_flag = crystal_splitter_starting_system
+		has_star_flag = crystal_splitter_destination_system
+		# Hostile Systems
+		has_star_flag = marauder_system
+		has_star_flag = hostile_system
+		has_star_flag = guardian
+		has_star_flag = sealed_system
+		# Megastructures
+		has_star_flag = abandoned_gateway
+		has_star_flag = ruined_mega_shipyard_system
+		has_star_flag = ruined_dyson_system
+		has_star_flag = ruined_catapult_system
+		has_star_flag = ruined_nexus_system
+		has_star_flag = ruined_orbital_ring_system
+		has_star_flag = ruined_sentry_system
+		has_star_flag = ruined_ring_system
+		# Others
+		has_star_flag = mechanocalibrator_system
+		has_star_flag = rubricator_system
+		has_star_flag = last_baol_system
+		has_star_flag = Zrocursor
+		has_star_flag = overlord_empire_flag
+		# Ancient Empire
+		has_star_flag = ag_no_jump_in_system
+		# ACOT
+		has_star_flag = outercluster
+		# Warship Girls R And MIST Species
+		has_star_flag = wg_sealed_system
+		has_star_flag = wg_psionic_systems
+		# SW:Kuat Ancient Empire
+		has_star_flag = Kuat_system
+		has_star_flag = Kuat_system_1
+		has_star_flag = Kuat_system_2
+		has_star_flag = Kuat_system_3
+		has_star_flag = kuat_initial_system
+		has_star_flag = Kuat_system_int
+		has_star_flag = Kuat_system_int_1
+		has_star_flag = Kuat_system_int_2
+		has_star_flag = Kuat_system_int_3
+		has_star_flag = Kuat_system_int_4
+		has_star_flag = starkiller_system
+		# Gigastructural Engineering and More
+		has_star_flag = giga_core_03
+		# Some Events of Outside Cluster
+		has_star_flag = nep_Krahen_cluster
+		has_star_flag = nep_Scrus_cluster
+		has_global_flag = nep_not_pass_Aemethms
+		has_star_flag = nep_dragon_system
+		has_star_flag = nep_heptagram_cluster
+		# Real Space
+		has_star_flag = star_disaster
 	}
 }

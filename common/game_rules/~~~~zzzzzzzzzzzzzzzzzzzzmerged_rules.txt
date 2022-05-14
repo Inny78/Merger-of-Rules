@@ -373,8 +373,7 @@ can_generate_leader_from_pop = {
 	}
 	NOR = {
 		has_trait = trait_syncretic_proles
-		has_trait = trait_nerve_stapled
-		has_trait = trait_zombie
+		can_think = yes
 		# Rogue Maid (Rogue Servitor Completely Remake)
 		has_trait = trait_working_machine
 		# Plentiful Perks
@@ -382,7 +381,6 @@ can_generate_leader_from_pop = {
 		# Ethics & Civics: Bug Branch/Redux
 		has_trait = trait_bugged_slave_gene
 		# Expanded Events / Expanded Traits, Civics, Pops, and More
-		has_trait = trait_memorex_comatos
 		has_trait = trait_infested_basic
 		has_trait = trait_tree_caretaker
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
@@ -452,9 +450,11 @@ can_generate_leader_from_species = {
 			country = root
 		}
 	}
-	# ThaumStellaris
-	NOT = {
+	NOR = {
+		# ThaumStellaris
 		has_trait = tc_trait_golem
+		# Ethics and Civics - Bug Branch
+		has_trait = "trait_bugged_symbiotic"
 	}
 }
 
@@ -560,16 +560,21 @@ can_release_vassal_from_species = {
 		is_sapient = yes
 		NOR = {
 			has_trait = trait_machine_unit
-			has_trait = trait_hive_mind
+			AND = {
+				has_trait = trait_hive_mind
+				NOT = { prev.this = { has_origin = origin_progenitor_hive } }
+			}
+			AND = {
+				NOT = { has_trait = trait_hive_mind }
+				prev.this = { has_authority = auth_hive_mind }
+			}
 			has_trait = trait_mechanical
-			has_trait = trait_nerve_stapled
-			has_trait = trait_zombie
+			can_think = no
 			# Plentiful Perks
 			has_trait = trait_plentiful_traditions_pt_cocoon
 			# Girls Frontline
 			has_trait = trait_doll
 			# Expanded Events / Expanded Traits, Civics, Pops, and More
-			has_trait = trait_memorex_comatos
 			has_trait = trait_infested_basic
 			has_trait = trait_tree_caretaker
 			AND = {
@@ -749,9 +754,7 @@ can_take_hostile_actions = {
 	}
 	else_if = {
 		limit = {
-			root = {
-				is_subject_type = satrapy
-			}
+			ROOT = { any_agreement = { agreement_preset = preset_satrapy } }
 			is_country_type = faction
 			root = {
 				any_owned_planet = {
@@ -769,9 +772,7 @@ can_take_hostile_actions = {
 	}
 	else_if = {
 		limit = {
-			root = {
-				is_subject_type = satrapy
-			}
+			ROOT = { any_agreement = { agreement_preset = preset_satrapy } }
 		}
 		custom_tooltip = {
 			text = "CAN_TAKE_HOSTILE_ACTION_SATRAPY"
@@ -784,7 +785,7 @@ can_take_hostile_actions = {
 			overlord = {
 				is_same_value = root
 			}
-			is_subject_type = satrapy
+			ROOT = { any_agreement = { agreement_preset = preset_satrapy } }
 		}
 		custom_tooltip = {
 			text = "CAN_TAKE_HOSTILE_ACTION_OVERLORD"
@@ -996,29 +997,7 @@ can_take_hostile_actions = {
 can_declare_war = {
 	custom_tooltip = {
 		fail_text = "ACTION_DECLARE_WAR_OVERLORD_ON_SUBJECT"
-		NOT = {
-			AND = {
-				OR = {
-					is_subject_type = "vassal"
-					is_subject_type = "protectorate"
-					is_subject_type = "signatory"
-					# ACOT / ZOFE
-					is_subject_type = "fe_clan_member"
-					is_subject_type = "fe_demilitarized_state"
-					is_subject_type = "fe_union_state"
-					is_subject_type = "fe_symbiote"
-					is_subject_type = "fe_auxiliary"
-					is_subject_type = "banished_ascendancy"
-					# Expanded Traits, Civics, Pops, and More
-					is_subject_type = "duchy"
-					is_subject_type = "charter"
-					is_subject_type = "scion_signatory"
-				}
-				overlord = {
-					is_same_value = root
-				}
-			}
-		}
+		NOT = { overlord = { is_same_value = root } }
 	}
 	if = {
 		limit = {
@@ -1306,16 +1285,13 @@ species_has_happiness = {
 	NOR = {
 		has_trait = trait_machine_unit
 		has_trait = trait_hive_mind
-		has_trait = trait_nerve_stapled
-		has_trait = trait_zombie
+		can_think = no
 		# Warship Girls R And MIST Species
 		has_trait = sh_trait_shenhai
 		has_trait = sh_trait_shenhai1
 		has_trait = sh_trait_shenhai2
 		has_trait = sh_trait_silent
 		has_trait = sh_trait_silent1
-		# Expanded Events
-		has_trait = trait_memorex_comatos
 		# Trait Diversity
 		has_trait = trait_td_multi_hiveminded
 		has_trait = trait_td_emotionless
@@ -1627,6 +1603,11 @@ can_species_be_assembled = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					root = { has_modifier = tiyanki_trophy }
+				}
+			}
 			# Expanded Traits, Civics, Pops, and More
 			else_if = {
 				limit = {
@@ -1820,56 +1801,54 @@ can_species_be_assembled = {
 can_orbital_bombard = {
 	exists = from.OWNER
 	NOR = {
-		any_owned_ship = {
+		any_controlled_ship = {
 			is_ship_size = colossus
 		}
 		# Real Space New Frontiers
-		# This will affect Expanded Gestalt's planet too, but there's only so much I can do
 		from = {
 			is_planet_class = pc_hollow
 		}
 	}
 	OR = {
 		AND = {
-			root.OWNER = {
+			root.CONTROLLER = {
 				NOT = {
 					has_communications = from.OWNER
 				}
 			}
-			from.OWNER = {
+			from.CONTROLLER = {
 				NOT = {
 					is_country_type = primitive
 				}
 			}
 		}
 		AND = {
-			root.OWNER = {
+			root.CONTROLLER = {
 				NOR = {
 					has_policy_flag = interference_passive
 					has_policy_flag = interference_active
 				}
 			}
-			from.OWNER = {
+			from.CONTROLLER = {
 				is_country_type = primitive
 			}
 		}
 		# Origins of Civilization
 		AND = {
-			ROOT.OWNER = {
+			ROOT.CONTROLLER = {
 				NOT = {
 					has_policy_flag = ai_full_rights
 				}
 			}
-			FROM.OWNER = {
+			FROM.CONTROLLER = {
 				is_country_type = vbp_machine
 			}
 		}
 		# Vanilla
-		ROOT.OWNER = {
+		ROOT.CONTROLLER = {
 			is_hostile = FROM.CONTROLLER
 		}
-		# Ariphaos patch - Risa Fix
-		root.OWNER = {
+		root.CONTROLLER = {
 			is_at_war_with = from.CONTROLLER
 		}
 		from = {
@@ -1886,7 +1865,7 @@ can_orbital_bombard = {
 				is_country_type = cybrex_empire
 				AND = {
 					is_country_type = awakened_marauders
-					root.OWNER = {
+					root.CONTROLLER = {
 						is_hostile = prev
 					}
 				}
@@ -1915,7 +1894,7 @@ can_orbital_bombard = {
 				is_country_type = shroud_cult
 			}
 		}
-		root.OWNER = {
+		root.CONTROLLER = {
 			OR = {
 				is_country_type = extradimensional
 				is_country_type = extradimensional_2
@@ -1974,18 +1953,18 @@ can_orbital_bombard = {
 			from.controller = {
 				is_country_type = faction
 				NOT = {
-					is_same_value = root.owner
+					is_same_value = root.CONTROLLER
 				}
 			}
 			from.owner = {
-				is_same_value = root.owner
+				is_same_value = root.CONTROLLER
 			}
 		}
 		# More Events Mod
 		AND = {
 			exists = root.OWNER
 			exists = from.CONTROLLER
-			root.OWNER = {
+			root.CONTROLLER = {
 				OR = {
 					is_country_type = mem_surveyor_country_red
 					is_country_type = mem_vazurans
@@ -1996,12 +1975,12 @@ can_orbital_bombard = {
 			}
 		}
 		# The Empty Vagrant
-		root.OWNER = {
+		root.CONTROLLER = {
 			is_country_type = ev_leviathans_crisis
 		}
 		# Eldar Revisited
 		AND = {
-			root.owner = {
+			root.CONTROLLER = {
 				is_country_type = shroud_spirits
 			}
 			from = {
@@ -2049,6 +2028,7 @@ can_orbitable_repair_ships = {
 			OR = {
 				has_starbase_size >= starbase_starport
 				has_starbase_size = juggernaut
+				has_starbase_size = enclave_mercenary_station
 				# ACOT
 				has_starbase_size >= ls_starbase_starport
 				has_starbase_size = origin_super_citadel_playable
@@ -2205,6 +2185,7 @@ ai_should_restrict_system = {
 				has_global_flag = katzenartig_improbable
 			}
 			has_star_flag = flusion_system
+			exists = event_target:gigaflusion
 			event_target:gigaflusion = {
 				exists = owner
 				owner = {
@@ -3036,31 +3017,25 @@ can_build_branch_office_on_planet = {
 				is_forced_friendly = prev.owner
 			}
 			# Vanilla
-			# allow branch offices in subsidiaries and vice versa
+			# allow branch offices in subsidiaries and vice versa (and fellow subjects)
 			root = {
 				is_subject = yes
-				OR = {
-					is_subject_type = subsidiary
-					# Reworked Advanced Ascension
-					is_subject_type = AAR_SBJ_subsidiary
-				}
+				is_megacorp = yes
 				overlord = {
-					is_same_value = prevprev.owner
+					OR = {
+						is_same_value = prevprev.owner
+						is_same_value = prevprev.owner.overlord
+					}
 				}
 			}
 			owner = {
 				is_subject = yes
-				OR = {
-					is_subject_type = subsidiary
-					# Reworked Advanced Ascension
-					is_subject_type = AAR_SBJ_subsidiary
-					# Warship Girls R And MIST Species
-					overlord = {
-						has_authority = auth_warshipgirls
-					}
-				}
 				overlord = {
-					is_same_value = root
+					OR = {
+						is_same_value = root
+						is_same_value = root.overlord
+					}
+					is_megacorp = yes
 				}
 			}
 			AND = {
@@ -3087,7 +3062,10 @@ can_build_branch_office_on_planet = {
 					root = {
 						is_subject = yes
 						overlord = {
-							is_same_value = prevprev.owner
+							OR = {
+								is_same_value = prevprev.owner
+								is_same_value = prevprev.owner.overlord
+							}
 						}
 					}
 					owner = {
@@ -3106,6 +3084,49 @@ can_build_branch_office_on_planet = {
 			AND = {
 				owner = { is_gestalt = yes }
 				root = { has_ascension_perk = ap_megacorp }
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_MEGACORP_OVERLORD
+		exists = owner
+		# failure message for having a corporate overlord
+
+		if = {
+			limit = {
+				OR = {
+					# Not valid if you aren't a subject.
+					root = {
+						is_subject = no
+					}
+					# Or if your overlord isn't a megacorp.
+					root = {
+						is_subject = yes
+						overlord = {
+							is_megacorp = no
+						}
+					}
+				}
+			}
+			always = yes
+		}
+		else = {
+			AND = {
+				root = {
+					is_subject = yes
+					overlord = {
+						is_megacorp = yes
+					}
+				}
+				owner = {
+					OR = {
+						is_subject = no
+						AND = {
+							is_subject = yes
+							overlord = { NOT = { is_same_value = root.overlord } }
+						}
+					}
+				}
 			}
 		}
 	}
@@ -3541,8 +3562,34 @@ can_be_part_of_galactic_council = {
 # This = pop
 # Purge, Sapience, Migration Controls policy (ignored by Gestalts and Synths), and target habitability are checked in code.
 can_pop_auto_migrate = {
+	hidden_trigger = { is_unemployed = yes } #this is always true where this tooltip is called
+	custom_tooltip = {
+		fail_text = AUTO_MIGRATE_ASSIMILATED
+		is_being_assimilated = no
+	}
+	if = {
+		limit = {
+			OR = {
+				is_shackled_robot = yes
+				is_enslaved = yes
+				# Human Fallen Empire
+				AND = {
+					has_human_fallen = yes
+					owner = {
+						or = {
+							is_country_type = hfe_pirate
+							hfe_trigger_is_human_fallen = yes
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = AUTO_MIGRATE_SLAVE_PROCESSING
+			planet = { has_building = building_slave_processing }
+		}
+	}
 	OR = {
-		is_unemployed = yes
 		# z Expanded Traits, Civics, Pops, and More
 		has_job = grunt
 		has_job = slave_toiler
@@ -3550,26 +3597,6 @@ can_pop_auto_migrate = {
 		AND = {
 			has_human_fallen = yes
 			hfe_trigger_unemployed_auto_migrate = yes
-		}
-	}
-	is_being_assimilated = no
-	OR = {
-		AND = {
-			is_shackled_robot = no
-			is_enslaved = no
-		}
-		planet = {
-			has_building = building_slave_processing
-		}
-		# Human Fallen Empire
-		AND = {
-			has_human_fallen = yes
-			owner = {
-				or = {
-					is_country_type = hfe_pirate
-					hfe_trigger_is_human_fallen = yes
-				}
-			}
 		}
 	}
 	NOR = {
@@ -3585,6 +3612,27 @@ can_pop_auto_migrate = {
 # This = planet
 # Checked before can_pop_auto_migrate to save performance
 can_planet_auto_migrate = {
+	custom_tooltip = {
+		fail_text = AUTO_MIGRATE_CULTURE_SHOCK
+		NOT = { has_modifier = planet_culture_shock }
+										  
+	}
+	custom_tooltip = {
+		fail_text = AUTO_MIGRATE_COLONY_TOO_NEW
+		OR = {
+			colony_age > 60
+			is_capital = yes # Don't break Doomsday!
+		}
+	}
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				merg_is_default_empire = yes
+				merg_is_awakened_fe = yes
+			}
+		}
+	}
 	# Production Revolution
 	NAND = {
 		exists = owner
@@ -3596,21 +3644,12 @@ can_planet_auto_migrate = {
 		}
 	}
 	# Vanilla
-	NOT = {
-		has_modifier = planet_culture_shock
-	}
 	OR = {
-		colony_age > 60
-		is_capital = yes		# Don't break Doomsday!
 		# z Expanded Traits, Civics, Pops, and More
 		has_planet_flag = void_dweller_habitat		# Don't break Void Dwellers!
 		# Planetary Diversity - Habitats
 		has_planet_flag = pd_habitat_start_luna
 		has_planet_flag = pd_habitat_start_mars
-	}
-	exists = owner
-	owner = {
-		merg_is_default_empire = yes
 	}
 	# Better Performance & Utilities
 	NOT = {
@@ -3822,8 +3861,7 @@ can_fill_ruler_job = {
 			is_being_assimilated = no
 			NOR = {
 				has_trait = trait_syncretic_proles
-				has_trait = trait_nerve_stapled
-				has_trait = trait_zombie
+				can_think = no
 				# Diagraphers Trait mod
 				has_trait = trait_subsapient_form
 				# Ethics and Civics Alternative - Redux
@@ -3935,5 +3973,78 @@ can_dismiss_leader = {
 	custom_tooltip = {
 		fail_text = "cannot_fire_wg_leader"
 		NOT = { has_leader_flag = wsg_event_leader }
+	}
+}
+
+# From = country, country that tries to connect using relay network
+# ROOT/This = country, target country to connect to using relay network
+can_country_connect_to_relay_network = {
+	AND = {
+		is_primitive = no
+		OR = {
+			merg_is_default_empire = yes
+			is_subject = yes
+			is_overlord = yes
+		}
+	}
+}
+
+# This = leader, leader we'd like to trade
+# Root = country, country that owns the leader currently
+# From = country, country that would receive the leader
+can_trade_leader = {
+	# The leader must have a trait from a specialist subject type.
+	this = { has_specialist_subject_leader_trait = yes }
+	# The subject and overlord must both be regular empires, machine intelligences or hive-minds.
+	OR = {
+		AND = {
+			ROOT = {
+				is_regular_empire = yes
+			}
+			FROM = {
+				is_regular_empire = yes
+			}
+		}
+		AND = {
+			ROOT = {
+				has_authority = auth_machine_intelligence
+			}
+			FROM = {
+				has_authority = auth_machine_intelligence
+			}
+		}
+		AND = {
+			ROOT = {
+				has_authority = auth_hive_mind
+			}
+			FROM = {
+				has_authority = auth_hive_mind
+			}
+		}
+	}
+	# The overlord can't be a fallen or awakened empire.
+	ROOT = {
+		NAND = {
+			is_overlord = yes
+			OR = {
+				merg_is_fallen_empire = yes
+				merg_is_awakened_fe = yes
+			}
+		}
+	}
+}
+
+# This = fleet, fleet we'd like to trade
+# Root = country, country that owns the fleet currently
+# From = country, country that would receive the fleet
+can_trade_fleet = {
+	ROOT = {
+		NAND = {
+			is_overlord = yes
+			OR = {
+				merg_is_fallen_empire = yes
+				merg_is_awakened_fe = yes
+			}
+		}
 	}
 }

@@ -29,6 +29,7 @@ kuat_fallen_empire = { ai = { enabled = no } }
 kuat_fleet = { ai = { enabled = no } }
 lost_empire = { ai = { enabled = no } }
 LsE_fallen_empire = { ai = { enabled = no } }
+mem_ancestor_guardian = { ai = { enabled = no } }
 mem_surveyor_country_red = { ai = { enabled = no } }
 mem_vazurans = { ai = { enabled = no } }
 mpo_lost_spacefarers = { ai = { enabled = no } }
