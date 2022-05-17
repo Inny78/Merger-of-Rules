@@ -153,6 +153,11 @@ has_kuat = {
 	has_global_flag = install_kuat_mod
 }
 
+# Lithoid Supremacy
+has_lithoid_sup = {
+	has_global_flag = lithoidsupremacy
+}
+
 # More Authorities
 has_more_authorities = {
 	has_global_flag = gf_moreauthorities_activated

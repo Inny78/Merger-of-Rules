@@ -1,0 +1,79 @@
+default = {
+    ship_of_size_limits = {
+        progenitor_ships_limit
+        titan_ships_limit
+        colossus_ships_limit
+        juggernaut_ships_limit
+        space_dragon_origin_babies_limit
+        # AOT
+        aot_gatekeeper_ships_limit
+        aot_juggernaut_ships_limit
+        aot_fe_juggernaut_ships_limit
+        # Azur Lane Stellaris Dlc
+        azur_flagship_limit
+        azur_nsc_battleship_S_limit
+        azur_nsc_carrier_S_limit
+        altair_flagship_limit
+        # Darkspace
+        ds_nomads_main_ships_limit
+        ds_nomads_ark_ships_limit
+        ds_nomads_res_ships_limit
+        ds_deathstar_ships_limit
+        ds_endzeit_ships_limit
+        ds_will_ships_limit
+        # Hypertraversal Manipulation Augur
+        htm_augur_ships_limit
+    }
+}
+
+# The Empty Vagrant
+default_ev = {
+	ship_of_size_limits = {
+		progenitor_ships_limit
+		titan_ships_limit
+		colossus_ships_limit
+		juggernaut_ships_limit
+		space_dragon_origin_babies_limit
+		homeless_ships_limit
+		megastructures_ships_limit
+		ambassador_ships_limit
+		# AOT
+        aot_gatekeeper_ships_limit
+        aot_juggernaut_ships_limit
+        aot_fe_juggernaut_ships_limit
+		# DarkSpace		
+		ds_nomads_main_ships_limit
+		ds_nomads_ark_ships_limit
+		ds_nomads_res_ships_limit
+		ds_deathstar_ships_limit
+		ds_endzeit_ships_limit
+		ds_will_ships_limit
+		# Hypertraversal Manipulation Augur
+		htm_augur_ships_limit
+	}
+}
+
+# Darkspace
+darkspace_ownership_limit = {
+	ship_of_size_limits = {
+		# Vanilla
+		progenitor_ships_limit
+		titan_ships_limit
+		colossus_ships_limit
+		juggernaut_ships_limit
+		space_dragon_origin_babies_limit
+		# DarkSpace		
+		ds_nomads_main_ships_limit
+		ds_nomads_ark_ships_limit
+		ds_nomads_res_ships_limit
+		ds_deathstar_ships_limit
+		ds_endzeit_ships_limit
+		ds_will_ships_limit
+		# AOT
+        aot_gatekeeper_ships_limit
+        aot_juggernaut_ships_limit
+        aot_fe_juggernaut_ships_limit
+		# Hypertraversal Manipulation Augur
+		htm_augur_ships_limit
+	}
+}

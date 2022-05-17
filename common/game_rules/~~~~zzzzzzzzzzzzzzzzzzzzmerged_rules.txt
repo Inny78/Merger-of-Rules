@@ -274,7 +274,7 @@ can_get_claim_from_lost_system = {
 			NOR = {
 				is_same_species = root
 				has_country_flag = synthetic_empire
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 			}
 		}
 	}
@@ -305,7 +305,7 @@ species_can_live_on_planet = {
 				has_trait = trait_cybernetic
 				exists = root.owner
 				root.owner = {
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 					has_valid_civic = civic_machine_assimilator					# Assimilator empire
 				}
 			}
@@ -392,6 +392,8 @@ can_generate_leader_from_pop = {
 		# Diagraphers Trait Mod
 		has_trait = trait_subsapient_form
 		has_trait = trait_living_architecture
+		# Lithoid Supremacy
+		has_trait = trait_pearl_born_drone
 	}
 	OR = {
 		is_robot_pop = no
@@ -566,7 +568,7 @@ can_release_vassal_from_species = {
 			}
 			AND = {
 				NOT = { has_trait = trait_hive_mind }
-				prev.this = { has_authority = auth_hive_mind }
+				prev.this = { is_hive_empire = yes }
 			}
 			has_trait = trait_mechanical
 			can_think = no
@@ -997,7 +999,9 @@ can_take_hostile_actions = {
 can_declare_war = {
 	custom_tooltip = {
 		fail_text = "ACTION_DECLARE_WAR_OVERLORD_ON_SUBJECT"
-		NOT = { overlord = { is_same_value = root } }
+		NOT = {
+			has_overlord = ROOT
+		}
 	}
 	if = {
 		limit = {
@@ -1258,6 +1262,13 @@ can_colonize_with_species = {
 		}
 		always = no
 	}
+	# Lithoid Supremacy
+	else_if = {
+		limit = { has_trait = trait_pearl_born_drone }
+		custom_tooltip = {
+			always = no
+		}
+	}
 	# Vanilla
 	else = {
 		always = yes
@@ -1451,6 +1462,8 @@ can_species_procreate = {
 		has_trait = trait_dimorphic_male
 		# Girls Frontline
 		has_trait = trait_doll
+		# Lithoid Supremacy
+		has_trait = trait_pearl_born_drone
 	}
 	NAND = {
 		root = {
@@ -1634,6 +1647,18 @@ can_species_be_assembled = {
 				root = {
 					any_owned_species = {
 						is_exact_same_species = prevprev
+					}
+				}
+			}
+			# Lithoid supremacy
+			else_if = {
+				limit = { has_trait = trait_pearl_born_royal }
+				root = {
+					any_owned_species = { 
+						OR = {
+							has_trait = trait_pearl_born_drone 
+							has_trait = trait_pearl_born_royal
+						}
 					}
 				}
 			}
@@ -3586,7 +3611,11 @@ can_pop_auto_migrate = {
 		}
 		custom_tooltip = {
 			fail_text = AUTO_MIGRATE_SLAVE_PROCESSING
-			planet = { has_building = building_slave_processing }
+			OR = {
+				planet = { has_building = building_slave_processing }
+				# Plentiful Traditions
+				planet = { has_building = building_plentiful_traditions_advanced_slave_processing }
+			}
 		}
 	}
 	OR = {
@@ -3622,6 +3651,11 @@ can_planet_auto_migrate = {
 		OR = {
 			colony_age > 60
 			is_capital = yes # Don't break Doomsday!
+			# z Expanded Traits, Civics, Pops, and More
+			has_planet_flag = void_dweller_habitat		# Don't break Void Dwellers!
+			# Planetary Diversity - Habitats
+			has_planet_flag = pd_habitat_start_luna
+			has_planet_flag = pd_habitat_start_mars
 		}
 	}
 	hidden_trigger = {
@@ -3642,14 +3676,6 @@ can_planet_auto_migrate = {
 		NOT = {
 			has_planet_flag = z_pr_flg_plnt_ignore
 		}
-	}
-	# Vanilla
-	OR = {
-		# z Expanded Traits, Civics, Pops, and More
-		has_planet_flag = void_dweller_habitat		# Don't break Void Dwellers!
-		# Planetary Diversity - Habitats
-		has_planet_flag = pd_habitat_start_luna
-		has_planet_flag = pd_habitat_start_mars
 	}
 	# Better Performance & Utilities
 	NOT = {
@@ -3865,8 +3891,13 @@ can_fill_ruler_job = {
 				# Diagraphers Trait mod
 				has_trait = trait_subsapient_form
 				# Ethics and Civics Alternative - Redux
-				has_trait = trait_symbiotic
+				AND = {
+					has_ethics_redux = yes # Bug Branch allows symbiotics to rule
+					has_trait = trait_symbiotic
+				}
 				has_trait = trait_slave_gene
+				# Lithoid Supremacy
+				has_trait = trait_pearl_born_drone
 			}
 		}
 	}
@@ -4007,18 +4038,18 @@ can_trade_leader = {
 		}
 		AND = {
 			ROOT = {
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 			}
 			FROM = {
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 			}
 		}
 		AND = {
 			ROOT = {
-				has_authority = auth_hive_mind
+				is_hive_empire = yes
 			}
 			FROM = {
-				has_authority = auth_hive_mind
+				is_hive_empire = yes
 			}
 		}
 	}

@@ -120,6 +120,8 @@ ehof_default_country = {
 		is_zofe_country = yes
 		# The Empty Vagrant
 		is_country_type = default_ev
+		# Darkspace
+		is_country_type = ds_nomads
 	}
 }
 
@@ -537,6 +539,8 @@ is_zofe_compatible = {
 		is_country_type = lost_empire
 		# The Empty Vagrant
 		is_country_type = default_ev
+		# Darkspace
+		is_country_type = ds_nomads
 	}
 }
 
@@ -779,6 +783,8 @@ kuat_is_common_country = {
 		# Human Fallen Empire
 		is_country_type = human_fallen_empire
 		is_country_type = hfe_pirate
+		# Darkspace
+		is_country_type = ds_nomads
 	}
 }
 
@@ -806,6 +812,8 @@ is_playable_country = {
 		is_country_type = original_empire_active
 		# The Empty Vagrant
 		is_country_type = default_ev
+		# Darkspace
+		is_country_type = ds_nomads
 	}
 }
 
@@ -820,6 +828,8 @@ CmtTriggerIsPlayableEmpire = {
 		is_zofe_country = yes
 		# The Empty Vagrant
 		is_country_type = default_ev
+		# Darkspace
+		is_country_type = ds_nomads
 	}
 }
 
@@ -840,6 +850,8 @@ CmtTriggerIsEmpire = {
 		# Human Fallen Empire
 		is_country_type = human_fallen_empire
 		is_country_type = hfe_pirate
+		# Darkspace
+		is_country_type = ds_nomads
 	}
 }
 
@@ -868,6 +880,8 @@ exalted_is_valid_as_vassal = {
 	OR = {
 		is_country_type = default
 		is_country_type = default_ev
+		# Darkspace
+		is_country_type = ds_nomads
 	}
 }
 
@@ -959,6 +973,8 @@ is_default_and_fallen_country = {
 		is_country_type = awakened_return_kuat_empire
 		# A Deadly Tempest
 		is_country_type = awakened_gate_builders
+		# Darkspace
+		is_country_type = ds_nomads
 	}
 }
 
@@ -968,6 +984,8 @@ is_default_country_wg = {
 		is_country_type = default_ev
 		# ZOFE
 		is_zofe_country = yes
+		# Darkspace
+		is_country_type = ds_nomads
 	}
 }
 
@@ -1208,57 +1226,6 @@ ag_is_gateway_megastructure = {
 	}
 }
 
-############################### Viable Feudalism and Imperialism - Empire Federation ###############################
-check_subject_join_wars = {
-	OR = {
-		is_subject_type = tributary
-		is_subject_type = protectorate
-		# Vassals Expanded and Reworked
-		is_subject_type = verautonomous
-		is_subject_type = verbeneficiary
-		is_subject_type = verserf
-		is_subject_type = vertributary
-		# Exalted Domination
-		is_subject_type = exalted_subject_cultural_conservation
-		is_subject_type = exalted_subject_exarchate
-		is_subject_type = exalted_subject_xenoharvest
-		is_subject_type = exalted_subject_special_administrative_region
-		is_subject_type = exalted_subject_automated_assembler
-		is_subject_type = exalted_subject_remote_archive
-		is_subject_type = exalted_subject_pet
-		is_subject_type = exalted_subject_satellite
-		is_subject_type = exalted_subject_signatory
-		is_subject_type = exalted_subject_thrall
-		# Fatal Foundations Story Pack
-		is_subject_type = plague_vassal
-		# Nirvana Empire Project
-		is_subject_type = nirvana_fallen_servent
-		# The Zenith of Fallen Empires
-		is_subject_type = scion
-		is_subject_type = fe_clan_member
-		is_subject_type = fe_demilitarized_state
-		is_subject_type = fe_puppet_state
-		is_subject_type = fe_symbiote
-		is_subject_type = fe_auxiliary
-		# Unique Ascension Perks
-		is_subject_type = machine_follower
-		is_subject_type = perfect_vassal
-		is_subject_type = space_dimestication
-		# ACOT
-		is_subject_type = origin_protectorate
-		is_subject_type = origin_banished_ascendancy
-		# Human Fallen Empire
-		is_subject_type = hfe_vassal_future
-		is_subject_type = hfe_vassal_egypt
-		# The Empty Vagrant
-		is_subject_type = ev_vassal
-		is_subject_type = ev_protect
-		is_subject_type = ev_satrapy
-		# Gigastructural Engineering & More
-		is_subject_type = katzprotektorat
-	}
-}
-
 ############################### Reworked Advanced Ascension ###############################
 # Fixing the trigger and removing obsolete code
 AAR_trgr_cntr_playable = {
@@ -1266,20 +1233,22 @@ AAR_trgr_cntr_playable = {
 		is_country_type = default
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
-		# The Empty Vagrant
-		is_country_type = fallen_empire_ev
-		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_fallen_empire
-		is_country_type = kuat_awakened_fallen_empire
-		is_country_type = awakened_return_kuat_empire
-		# Human Fallen Empire
-		is_country_type = human_fallen_empire
 		# A Deadly Tempest
 		is_country_type = awakened_gate_builders
 		# ACOT
 		is_country_type = original_empire
 		is_country_type = original_empire_passive
 		is_country_type = original_empire_active
+		# Darkspace
+		is_country_type = ds_nomads
+		# Human Fallen Empire
+		is_country_type = human_fallen_empire
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_fallen_empire
+		is_country_type = kuat_awakened_fallen_empire
+		is_country_type = awakened_return_kuat_empire
+		# The Empty Vagrant
+		is_country_type = fallen_empire_ev
 		# ZOFE
 		is_zofe_country = yes
 	}
@@ -1287,7 +1256,11 @@ AAR_trgr_cntr_playable = {
 
 ############################### The Empty Vagrant ###############################
 can_be_ev_investment_country = {
-	is_country_type = default
+	OR = {
+		is_country_type = default
+		# Darkspace
+		is_country_type = ds_nomads
+	}
 	is_hive_empire = no
 	is_machine_empire = no
 	num_owned_planets > 0
@@ -1319,6 +1292,8 @@ exalted_is_valid_as_vassal = {
 		is_country_type = default
 		# The Empty Vagrant
 		is_country_type = default_ev
+		# Darkspace
+		is_country_type = ds_nomads
 	}
 }
 
