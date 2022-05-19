@@ -119,6 +119,8 @@ can_add_claim = {
 					# ACOT
 					is_country_type = original_empire_active
 					is_country_type = sofe_light_seeker
+					# Twinks Eternal Empire
+					is_country_type = eternal_empire
 				}
 			}
 		}
@@ -233,6 +235,8 @@ can_get_claim_from_lost_system = {
 			is_country_type = ascended_empire
 			is_country_type = original_empire_active
 			is_country_type = sofe_light_seeker
+			# Twinks Eternal Empire
+			is_country_type = eternal_empire
 		}
 		root = {
 			OR = {
@@ -243,6 +247,8 @@ can_get_claim_from_lost_system = {
 				is_country_type = ascended_empire
 				is_country_type = original_empire_active
 				is_country_type = sofe_light_seeker
+				# Twinks Eternal Empire
+				is_country_type = eternal_empire
 			}
 		}
 	}
@@ -552,6 +558,11 @@ can_release_vassal = {
 			is_country_type = original_empire_active
 		}
 	}
+	# Twinks Eternal Empire
+	custom_tooltip = {
+		fail_text = default
+		NOT = { is_country_type = eternal_empire }
+	}	
 }
 
 #Root = species
@@ -2124,6 +2135,8 @@ can_spawn_debris = {
 			has_valid_civic = civic_tw_atlantis
 			# Expanded Gestalts
 			has_valid_civic = civic_hive_strong_connection
+			# Twinks Eternal Empire
+			has_government = gov_eternal_continuum
 		}
 	}
 }
@@ -2139,6 +2152,8 @@ ai_should_restrict_system = {
 				OR = {
 					merg_is_fallen_empire = yes
 					is_country_type = caravaneer_fleet
+					# Twinks Eternal Empire
+					is_country_type = eternal_empire
 				}
 			}
 			exists = owner

@@ -317,6 +317,8 @@ is_country_type_with_subjects = {
 		is_country_type = original_empire
 		is_country_type = original_empire_passive
 		is_country_type = original_empire_active
+		# Twinks Eternal Empire
+		is_country_type = eternal_empire
 	}
 }
 
@@ -332,6 +334,8 @@ has_comms_with_alien_empire = {
 			is_country_type = original_empire_passive
 			is_country_type = original_empire_active
 			is_country_type = sofe_light_seeker
+			# Twinks Eternal Empire
+			is_country_type = eternal_empire
 		}
 	}
 }
@@ -352,6 +356,8 @@ has_comms_with_alien_civilization = {
 			is_country_type = original_empire_passive
 			is_country_type = original_empire_active
 			is_country_type = sofe_light_seeker
+			# Twinks Eternal Empire
+			is_country_type = eternal_empire
 		}
 	}
 }
@@ -608,6 +614,8 @@ has_total_war_cb = {
 				is_country_type = original_empire
 				is_country_type = original_empire_passive
 				is_country_type = original_empire_active
+				# Twinks Eternal Empire
+				is_country_type = eternal_empire
 			}
 			OR = {
 				is_country_type = awakened_fallen_empire
@@ -619,6 +627,8 @@ has_total_war_cb = {
 				is_country_type = original_empire
 				is_country_type = original_empire_passive
 				is_country_type = original_empire_active
+				# Twinks Eternal Empire
+				is_country_type = eternal_empire
 				# Vanilla
 				AND = {
 					has_valid_civic = civic_machine_terminator
@@ -642,6 +652,8 @@ has_total_war_cb = {
 				is_country_type = original_empire
 				is_country_type = original_empire_passive
 				is_country_type = original_empire_active
+				# Twinks Eternal Empire
+				is_country_type = eternal_empire
 			}
 			NOR = {
 				is_country_type = awakened_fallen_empire
@@ -749,5 +761,23 @@ has_special_star_flag_trigger = {
 		has_star_flag = nep_heptagram_cluster
 		# Real Space
 		has_star_flag = star_disaster
+	}
+}
+
+planet_can_be_liberated_from_owner = {
+	owner = {
+		NOR = {
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence
+			is_country_type = awakened_fallen_empire
+			is_country_type = fallen_empire
+			is_country_type = ascended_empire
+			# ZOFE
+			is_country_type = lost_empire
+			# ACOT
+			is_country_type = original_empire_active	
+			# Twinks Eternal Empire
+			is_country_type = eternal_empire
+		}
 	}
 }
