@@ -1,6 +1,5 @@
 # Merger of Rules scripted triggers
 # These triggers are also meant as a library for modders who want to reuse them in their own mods.
-
 merg_is_standard_empire = {
 	OR = {
 		is_country_type = default
@@ -46,7 +45,9 @@ merg_is_fallen_empire = {
 		# Human Fallen Empire
 		AND = {
 			is_country_type = human_fallen_empire
-			NOT = { has_civic = hfe_civic_egypt_fury }
+			NOT = {
+				has_civic = hfe_civic_egypt_fury
+			}
 		}
 	}
 }
@@ -244,5 +245,29 @@ merg_is_void_system = {
 		is_star_class = sc_void_dummy
 		# Darkspace
 		is_star_class = sc_gc
+	}
+}
+
+merg_is_hive_world = {
+	OR = {
+		is_planet_class = pc_hive
+		# Gigastructural Engineering & More
+		is_planet_class = pc_ringworld_hive
+		# Planetary Diversity
+		is_planet_class = pc_pdhive1
+		is_planet_class = pc_pdhive2
+		is_planet_class = pc_necrohive
+	}
+}
+
+merg_has_hive_trait = {
+	OR = {
+		has_trait = trait_hive_mind
+		# Ethics and Civics - Bug Branch
+		has_trait = trait_bugged_happy_hive
+		# Trait Diversity
+		has_trait = trait_td_multi_hiveminded
+		# Diagraphers Trait Mod
+		has_trait = trait_multihive_drone
 	}
 }

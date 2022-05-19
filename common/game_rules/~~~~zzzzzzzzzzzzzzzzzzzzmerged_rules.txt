@@ -313,32 +313,15 @@ species_can_live_on_planet = {
 			has_trait = trait_doll
 		}
 	}
-	# Expanded Gestalts
-	NAND = {
-		root = {
-			NOT = {
-				is_planet_class = pc_matryoshka
-			}
-		}
-		has_trait = trait_machine_digital
-	}
-	# Human Fallen Empire
-	NAND = {
-		exists = root.controller
-		root.controller = {
-			is_country_type = hfe_plague_zombie
-		}
-	}
 	# Vanilla
 	if = {
 		limit = {
 			root = {
-				is_planet_class = pc_hive
+				merg_is_hive_world = yes
 			}
 		}
 		OR = {
-			has_trait = trait_hive_mind
-			has_trait = trait_bugged_happy_hive			# Ethics & Civics Bug Branch
+			merg_has_hive_trait = yes
 			AND = {
 				#Necrophage Hive Mind can have Necrophytes
 				exists = root.owner
@@ -348,6 +331,22 @@ species_can_live_on_planet = {
 					prev = {
 						species_can_be_necrophaged = yes
 					}
+				}
+			}
+			# ANZ Patch - Forgotten Queens
+			AND = { # Holobiont can have livestock
+				exists = root.owner
+				root.owner = {
+					is_hive_empire = yes
+					has_origin = origin_hive_cx_hive_world
+				}
+				has_citizenship_type = {
+					type = citizenship_slavery
+					country = root
+				}
+				has_slavery_type = {
+					type = slavery_livestock
+					country = root
 				}
 			}
 		}
