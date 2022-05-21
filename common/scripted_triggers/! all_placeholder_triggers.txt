@@ -23,10 +23,14 @@ is_pd_planet_class_all = { always = no }
 is_pd_rare = { always = no }
 is_pd_regular = { always = no }
 is_pd_unique = { always = no }
+is_special_affection_leader = { always = no }
 is_spy_empire = { always = no }
+is_wg_event_leader = { always = no }
+is_wg_event_limit_ships = { always = no }
 is_xenophobic_isolationists = { always = no }
 is_zofe_country = { always = no }
 katzen_jump_blocked_system = { always = no }
+kuat_is_flagship_system_protection = { always = no }
 prob_forced_armageddon_bombardment = { always = no }
 traits_restrict_specialist_jobs = { always = no }
 traits_restrict_worker_jobs = { always = no }

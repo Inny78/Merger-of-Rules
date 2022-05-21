@@ -340,7 +340,8 @@ species_can_live_on_planet = {
 				}
 			}
 			# ANZ Patch - Forgotten Queens
-			AND = { # Holobiont can have livestock
+			AND = {
+				# Holobiont can have livestock
 				exists = root.owner
 				root.owner = {
 					is_hive_empire = yes
@@ -360,7 +361,6 @@ species_can_live_on_planet = {
 }
 
 # can_vote_in_democratic_election
-
 #Checks whether any leaders (scientists etc) can be formed from this pop
 #Root = country
 #This = pop
@@ -561,8 +561,10 @@ can_release_vassal = {
 	# Twinks Eternal Empire
 	custom_tooltip = {
 		fail_text = default
-		NOT = { is_country_type = eternal_empire }
-	}	
+		NOT = {
+			is_country_type = eternal_empire
+		}
+	}
 }
 
 #Root = species
@@ -574,11 +576,19 @@ can_release_vassal_from_species = {
 			has_trait = trait_machine_unit
 			AND = {
 				has_trait = trait_hive_mind
-				NOT = { prev.this = { has_origin = origin_progenitor_hive } }
+				NOT = {
+					prev.this = {
+						has_origin = origin_progenitor_hive
+					}
+				}
 			}
 			AND = {
-				NOT = { has_trait = trait_hive_mind }
-				prev.this = { is_hive_empire = yes }
+				NOT = {
+					has_trait = trait_hive_mind
+				}
+				prev.this = {
+					is_hive_empire = yes
+				}
 			}
 			has_trait = trait_mechanical
 			can_think = no
@@ -766,7 +776,11 @@ can_take_hostile_actions = {
 	}
 	else_if = {
 		limit = {
-			ROOT = { any_agreement = { agreement_preset = preset_satrapy } }
+			ROOT = {
+				any_agreement = {
+					agreement_preset = preset_satrapy
+				}
+			}
 			is_country_type = faction
 			root = {
 				any_owned_planet = {
@@ -784,7 +798,11 @@ can_take_hostile_actions = {
 	}
 	else_if = {
 		limit = {
-			ROOT = { any_agreement = { agreement_preset = preset_satrapy } }
+			ROOT = {
+				any_agreement = {
+					agreement_preset = preset_satrapy
+				}
+			}
 		}
 		custom_tooltip = {
 			text = "CAN_TAKE_HOSTILE_ACTION_SATRAPY"
@@ -797,7 +815,11 @@ can_take_hostile_actions = {
 			overlord = {
 				is_same_value = root
 			}
-			ROOT = { any_agreement = { agreement_preset = preset_satrapy } }
+			ROOT = {
+				any_agreement = {
+					agreement_preset = preset_satrapy
+				}
+			}
 		}
 		custom_tooltip = {
 			text = "CAN_TAKE_HOSTILE_ACTION_OVERLORD"
@@ -1274,7 +1296,9 @@ can_colonize_with_species = {
 	}
 	# Lithoid Supremacy
 	else_if = {
-		limit = { has_trait = trait_pearl_born_drone }
+		limit = {
+			has_trait = trait_pearl_born_drone
+		}
 		custom_tooltip = {
 			always = no
 		}
@@ -1628,7 +1652,9 @@ can_species_be_assembled = {
 			}
 			else_if = {
 				limit = {
-					root = { has_modifier = tiyanki_trophy }
+					root = {
+						has_modifier = tiyanki_trophy
+					}
 				}
 			}
 			# Expanded Traits, Civics, Pops, and More
@@ -1662,11 +1688,13 @@ can_species_be_assembled = {
 			}
 			# Lithoid supremacy
 			else_if = {
-				limit = { has_trait = trait_pearl_born_royal }
+				limit = {
+					has_trait = trait_pearl_born_royal
+				}
 				root = {
-					any_owned_species = { 
+					any_owned_species = {
 						OR = {
-							has_trait = trait_pearl_born_drone 
+							has_trait = trait_pearl_born_drone
 							has_trait = trait_pearl_born_royal
 						}
 					}
@@ -3117,12 +3145,20 @@ can_build_branch_office_on_planet = {
 			}
 			# Unique Ascension Perks
 			AND = {
-				owner = { merg_is_default_empire = yes }
-				root = { has_ascension_perk = ap_megacorp }
+				owner = {
+					merg_is_default_empire = yes
+				}
+				root = {
+					has_ascension_perk = ap_megacorp
+				}
 			}
 			AND = {
-				owner = { is_gestalt = yes }
-				root = { has_ascension_perk = ap_megacorp }
+				owner = {
+					is_gestalt = yes
+				}
+				root = {
+					has_ascension_perk = ap_megacorp
+				}
 			}
 		}
 	}
@@ -3130,7 +3166,6 @@ can_build_branch_office_on_planet = {
 		fail_text = BRANCH_OFFICE_MEGACORP_OVERLORD
 		exists = owner
 		# failure message for having a corporate overlord
-
 		if = {
 			limit = {
 				OR = {
@@ -3162,7 +3197,11 @@ can_build_branch_office_on_planet = {
 						is_subject = no
 						AND = {
 							is_subject = yes
-							overlord = { NOT = { is_same_value = root.overlord } }
+							overlord = {
+								NOT = {
+									is_same_value = root.overlord
+								}
+							}
 						}
 					}
 				}
@@ -3601,7 +3640,9 @@ can_be_part_of_galactic_council = {
 # This = pop
 # Purge, Sapience, Migration Controls policy (ignored by Gestalts and Synths), and target habitability are checked in code.
 can_pop_auto_migrate = {
-	hidden_trigger = { is_unemployed = yes } #this is always true where this tooltip is called
+	hidden_trigger = {
+		is_unemployed = yes
+	}	#this is always true where this tooltip is called
 	custom_tooltip = {
 		fail_text = AUTO_MIGRATE_ASSIMILATED
 		is_being_assimilated = no
@@ -3626,9 +3667,13 @@ can_pop_auto_migrate = {
 		custom_tooltip = {
 			fail_text = AUTO_MIGRATE_SLAVE_PROCESSING
 			OR = {
-				planet = { has_building = building_slave_processing }
+				planet = {
+					has_building = building_slave_processing
+				}
 				# Plentiful Traditions
-				planet = { has_building = building_plentiful_traditions_advanced_slave_processing }
+				planet = {
+					has_building = building_plentiful_traditions_advanced_slave_processing
+				}
 			}
 		}
 	}
@@ -3657,16 +3702,17 @@ can_pop_auto_migrate = {
 can_planet_auto_migrate = {
 	custom_tooltip = {
 		fail_text = AUTO_MIGRATE_CULTURE_SHOCK
-		NOT = { has_modifier = planet_culture_shock }
-										  
+		NOT = {
+			has_modifier = planet_culture_shock
+		}
 	}
 	custom_tooltip = {
 		fail_text = AUTO_MIGRATE_COLONY_TOO_NEW
 		OR = {
 			colony_age > 60
-			is_capital = yes # Don't break Doomsday!
+			is_capital = yes			# Don't break Doomsday!
 			# z Expanded Traits, Civics, Pops, and More
-			has_planet_flag = void_dweller_habitat		# Don't break Void Dwellers!
+			has_planet_flag = void_dweller_habitat			# Don't break Void Dwellers!
 			# Planetary Diversity - Habitats
 			has_planet_flag = pd_habitat_start_luna
 			has_planet_flag = pd_habitat_start_mars
@@ -3906,7 +3952,7 @@ can_fill_ruler_job = {
 				has_trait = trait_subsapient_form
 				# Ethics and Civics Alternative - Redux
 				AND = {
-					has_ethics_redux = yes # Bug Branch allows symbiotics to rule
+					has_ethics_redux = yes					# Bug Branch allows symbiotics to rule
 					has_trait = trait_symbiotic
 				}
 				has_trait = trait_slave_gene
@@ -4004,20 +4050,24 @@ can_fill_ruler_job = {
 }
 
 # should_planetary_automate
-
 # this = leader
 can_dismiss_leader = {
 	custom_tooltip = {
 		fail_text = "requires_actor_not_feudal_society"
 		exists = owner
 		owner = {
-			NOT = { has_valid_civic = civic_feudal_realm }
+			NOT = {
+				has_valid_civic = civic_feudal_realm
+			}
 		}
 	}
 	# Warship Girls R And MIST Species
 	custom_tooltip = {
 		fail_text = "cannot_fire_wg_leader"
-		NOT = { has_leader_flag = wsg_event_leader }
+		NOT = {
+			has_leader_flag = wsg_event_leader
+		}
+		is_special_affection_leader = no
 	}
 }
 
@@ -4039,7 +4089,9 @@ can_country_connect_to_relay_network = {
 # From = country, country that would receive the leader
 can_trade_leader = {
 	# The leader must have a trait from a specialist subject type.
-	this = { has_specialist_subject_leader_trait = yes }
+	this = {
+		has_specialist_subject_leader_trait = yes
+	}
 	# The subject and overlord must both be regular empires, machine intelligences or hive-minds.
 	OR = {
 		AND = {
@@ -4077,6 +4129,12 @@ can_trade_leader = {
 			}
 		}
 	}
+	# Warship Girls R And MIST Species
+	custom_tooltip = {
+		fail_text = "cannot_sold_wg_leader"
+		is_special_affection_leader = no
+		is_wg_event_leader = no
+	}
 }
 
 # This = fleet, fleet we'd like to trade
@@ -4089,6 +4147,24 @@ can_trade_fleet = {
 			OR = {
 				merg_is_fallen_empire = yes
 				merg_is_awakened_fe = yes
+			}
+		}
+	}
+	# Warship Girls R And MIST Species
+	custom_tooltip = {
+		fail_text = "cannot_sold_wg_fleet"
+		NOT = {
+			any_owned_ship = {
+				is_wg_event_limit_ships = yes
+			}
+		}
+	}
+	# Star Wars: Kuat Ancient Empire
+	custom_tooltip = {
+		fail_text = "cannot_sold_kuat_fleet"
+		NOT = {
+			any_owned_ship = {
+				kuat_is_flagship_system_protection = yes
 			}
 		}
 	}

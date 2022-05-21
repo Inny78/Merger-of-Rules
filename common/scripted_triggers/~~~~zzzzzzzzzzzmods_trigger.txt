@@ -63,8 +63,6 @@ shadowgate_is_military_fleet = {
 				is_ship_class = shipclass_military_special
 				is_ship_class = shipclass_transport
 				is_ship_size = juggernaut
-				# Gigastructural Engineering & More
-				is_ship_size = giga_systemcraft
 				# AOT
 				is_ship_size = ascended_juggernaut
 				is_ship_size = precursor_juggernaut
@@ -141,8 +139,6 @@ can_use_ehof = {
 			is_ship_class = shipclass_starbase
 			NOR = {
 				is_ship_size = juggernaut
-				# Gigastructural Engineering & More
-				is_ship_size = giga_systemcraft
 				# AOT
 				is_ship_size = ascended_juggernaut
 				is_ship_size = precursor_juggernaut
