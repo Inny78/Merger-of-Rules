@@ -23,6 +23,9 @@ default = {
         ds_will_ships_limit
         # Hypertraversal Manipulation Augur
         htm_augur_ships_limit
+		# NSC
+		headquarters_ship_limit
+		explorationship_ship_limit
     }
 }
 
@@ -75,5 +78,8 @@ darkspace_ownership_limit = {
         aot_fe_juggernaut_ships_limit
 		# Hypertraversal Manipulation Augur
 		htm_augur_ships_limit
+		# NSC
+		headquarters_ship_limit
+		explorationship_ship_limit
 	}
 }
