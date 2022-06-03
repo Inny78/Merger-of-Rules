@@ -111,6 +111,11 @@ has_exalted_domination = {
 	has_global_flag = has_exalted_domination_mod
 }
 
+# Galaxius
+has_galaxius = {
+	has_global_flag = ie_flag
+}
+
 # Gigastructural Engineering and More 1121692237
 has_gigastructures = {
 	has_global_flag = gigastructures_enabled

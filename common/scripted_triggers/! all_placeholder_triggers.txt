@@ -4,6 +4,7 @@ ag_can_do_orbital_bombardment_country = { always = no }
 annihilator_system = { always = no }
 can_fill_holosphere_ruler_job = { always = no }
 cohesive_system = { always = no }
+compound_cluster = { always = no }
 everchanging_system = { always = no }
 has_apsr_modifiers = { always = no }
 has_artificial_wombs = { always = no }
@@ -17,6 +18,7 @@ is_cruel_abomination_country_type = { always = no }
 is_civic_materialist = { always = no }
 is_civic_militarist = { always = no }
 is_khan_country_type = { always = no }
+is_pd_arcology = { always = no }
 is_pd_exotic = { always = no }
 is_pd_habitat = { always = no }
 is_pd_planet_class_all = { always = no }

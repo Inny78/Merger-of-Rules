@@ -10,10 +10,10 @@ default = {
         aot_juggernaut_ships_limit
         aot_fe_juggernaut_ships_limit
         # Azur Lane Stellaris Dlc
-        azur_flagship_limit
-        azur_nsc_battleship_S_limit
-        azur_nsc_carrier_S_limit
-        altair_flagship_limit
+		azur_flagship_limit
+		azur_nsc_battleship_S_limit
+		azur_nsc_carrier_S_limit
+		altair_flagship_limit
         # Darkspace
         ds_nomads_main_ships_limit
         ds_nomads_ark_ships_limit

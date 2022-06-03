@@ -63,6 +63,16 @@ is_fallen_empire = {
 	}
 }
 
+is_homicidal = {
+	OR = {
+		has_valid_civic = civic_fanatic_purifiers
+		has_valid_civic = civic_machine_terminator
+		has_valid_civic = civic_hive_devouring_swarm
+		# Expanded Traits, Civics, Pops, and More
+		has_valid_civic = civic_infestation
+	}
+}
+
 colonizable_planet = {
 	OR = {
 		is_planet_class = pc_city
@@ -539,6 +549,10 @@ has_phototrophic_energy_upkeep = {
 				planet = {
 					is_planet_class = pc_depleted
 				}
+				# Galaxius
+				planet = {
+					is_planet_class = pc_ie_gateway
+				}
 			}
 		}
 	}
@@ -608,8 +622,7 @@ has_total_war_cb = {
 		AND = {
 			OR = {
 				merg_is_default_empire = yes
-				is_country_type = awakened_fallen_empire
-				is_country_type = fallen_empire
+				is_fallen_empire = yes
 				# ACOT
 				is_country_type = original_empire
 				is_country_type = original_empire_passive
@@ -618,7 +631,7 @@ has_total_war_cb = {
 				is_country_type = eternal_empire
 			}
 			OR = {
-				is_country_type = awakened_fallen_empire
+				merg_is_awakened_fe = yes
 				has_valid_civic = civic_hive_devouring_swarm
 				has_valid_civic = civic_machine_assimilator
 				# Expanded Traits, Civics, Pops, and More
@@ -664,7 +677,7 @@ has_total_war_cb = {
 			}
 			from = {
 				OR = {
-					is_country_type = awakened_fallen_empire
+					merg_is_awakened_fe = yes
 					is_homicidal = yes
 					has_valid_civic = civic_machine_assimilator
 					# Expanded Traits, Civics, Pops, and More
@@ -681,6 +694,8 @@ can_think = {
 		has_trait = trait_zombie
 		# Expanded Events
 		has_trait = trait_memorex_comatos
+		# Diagraphers Trait Mod
+		has_trait = trait_subsapient_form
 	}
 }
 
@@ -775,9 +790,54 @@ planet_can_be_liberated_from_owner = {
 			# ZOFE
 			is_country_type = lost_empire
 			# ACOT
-			is_country_type = original_empire_active	
+			is_country_type = original_empire_active
 			# Twinks Eternal Empire
 			is_country_type = eternal_empire
+		}
+	}
+}
+
+can_fill_specialist_job = {
+	custom_tooltip = SPECIALIST_JOB_TRIGGER
+	hidden_trigger = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+		exists = owner
+		OR = {
+			is_enslaved = no
+			has_slavery_type = {
+				type = slavery_indentured
+			}
+		}
+		is_being_purged = no
+		is_being_assimilated = no
+		NOR = {
+			has_trait = trait_syncretic_proles
+			# Expanded Traits, Civics, Pops, and More
+			has_trait = trait_tree_caretaker
+			# Ethics and Civics Alternative - Redux
+			has_trait = trait_slave_gene
+		}
+		can_think = yes
+		OR = {
+			NOT = {
+				has_trait = trait_mechanical
+			}
+			owner = {
+				has_technology = tech_droid_workers
+			}
+		}
+		NOT = {
+			has_citizenship_type = {
+				type = citizenship_organic_trophy
+			}
+		}
+		if = {
+			limit = {
+				divinity_right_to_work_job_check_trigger_exempt = no
+			}
+			divinity_right_to_work_job_check_trigger_specialist = yes
 		}
 	}
 }

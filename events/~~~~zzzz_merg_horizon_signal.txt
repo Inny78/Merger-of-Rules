@@ -1,0 +1,206 @@
+############################################
+# HORIZON SIGNAL - THE WORM-IN-WAITING		#
+# Written and designed by Alexis Kennedy	#
+# Scripted and edited by Maximilian Olbers #
+############################################
+
+namespace = akx
+
+# A lot of mods overwrite this event, let's make them cooperate.
+
+planet_event = {
+	id = akx.10020
+	title = akx.10020.name
+	desc = akx.10020.desc
+	picture = GFX_evt_black_hole
+	show_sound = event_activating_unknown_technology
+	location = root
+
+	is_triggered_only = yes
+
+	trigger = { owner = { is_ai = no } }
+
+	immediate = {
+		solar_system = {
+			every_system_planet = {
+				limit = {
+					NOR = {
+						is_planet_class = pc_ringworld_tech
+						is_planet_class = pc_ringworld_tech_damaged
+						is_planet_class = pc_ringworld_seam
+						is_planet_class = pc_ringworld_seam_damaged
+						is_planet_class = pc_city
+						is_planet_class = pc_relic
+						is_star = yes
+						# Merger of Rules
+						habitable_structure = yes
+						is_ringworld = yes
+						is_asteroid = yes
+						merg_is_hab_ringworld = yes
+						merg_is_habitat = yes
+						merg_is_gas_giant = yes
+						# Gigastructural Engineering & More
+						giga_habitable_structure = yes
+						# Madoka Magica
+						is_planet_class = pc_outpost
+						# Planetary Diversity
+						is_pd_arcology = yes
+						is_pd_unique = yes
+					    # Starborn
+					    is_planet_class = pc_starborn_habitat_start
+					    # Warship Girls R And MIST Species
+						has_planet_flag = port_home
+ 						has_planet_flag = clovertheater_future_flag
+ 					}
+				}
+				every_owned_pop = {
+					limit = {
+						is_robot_pop = no
+						is_sapient = yes
+					}
+					if = {
+						limit = { NOT = { has_trait = trait_natural_physicists } }
+						# remove opposite traits
+						if = {
+							limit = { has_trait = trait_natural_engineers }
+							modify_species = {
+								species = this
+								remove_trait = trait_natural_engineers
+							}
+						}
+						if = {
+							limit = { has_trait = trait_natural_sociologists }
+							modify_species = {
+								species = this
+								remove_trait = trait_natural_sociologists
+							}
+						}
+						if = {
+							limit = { has_trait = trait_nerve_stapled }
+							modify_species = {
+								species = this
+								remove_trait = trait_nerve_stapled
+							}
+						}
+						# add trait
+						modify_species = {
+							species = this
+							add_trait = trait_natural_physicists
+						}
+					}
+					if = {
+						limit = { NOT = { has_trait = trait_repugnant } }
+						# remove opposite traits
+						if = {
+							limit = { has_trait = trait_charismatic }
+							modify_species = {
+								species = this
+								remove_trait = trait_charismatic
+							}
+						}
+						# Expanded Traits, Civics, Pops, and More
+						if = {
+							limit = { has_trait = trait_pheremones }
+							modify_species = {
+								species = this
+								remove_trait = trait_pheremones
+							}
+						}
+						if = {
+							limit = { has_trait = trait_lithoid_shiny }
+							modify_species = {
+								species = this
+								remove_trait = trait_lithoid_shiny
+							}
+						}
+						# Vanilla
+						modify_species = {
+							species = this
+							add_trait = trait_repugnant
+						}
+					}
+					# Starborn
+					if = {
+						limit = { has_trait = trait_starborn_positive }
+						modify_species = {
+								species = this
+								remove_trait = trait_starborn_positive
+						}
+					}
+					if = {
+						limit = { has_trait = trait_starborn_negative_1 }
+						modify_species = {
+								species = this
+								remove_trait = trait_starborn_negative_1
+						}
+					}
+					if = {
+						limit = { has_trait = trait_starborn_negative_2 }
+						modify_species = {
+								species = this
+								remove_trait = trait_starborn_negative_2
+						}
+					}
+					if = {
+						limit = { has_trait = trait_starborn_negative_3 }
+						modify_species = {
+								species = this
+								remove_trait = trait_starborn_negative_3
+						}
+					}
+					# Vanilla
+					modify_species = {
+						species = this
+						ideal_planet_class = pc_nuked
+					}
+				}
+				# Ariphaos Patch
+				if = {
+					limit = {
+						habitable_planet = yes
+					}
+					change_pc = pc_nuked
+					set_planet_flag = nuked_planet_anomalies_disabled
+					# Planetary Diversity
+					if = {
+						limit = { has_building = building_hab_capital }
+						remove_building = building_hab_capital
+						add_building = building_capital		
+					}
+					if = {
+						limit = { has_building = building_hab_major_capital }
+						remove_building = building_hab_major_capital
+						add_building = building_major_capital		
+					}
+				}
+				else = {
+					change_pc = pc_nuked
+					set_planet_flag = nuked_planet_anomalies_disabled
+					reroll_planet = yes
+				}
+			}
+			every_system_planet = {
+				limit = { is_star = yes }
+				change_pc = pc_black_hole
+				reroll_planet = yes
+			}
+			set_star_class = sc_black_hole
+		}
+		owner = { observer_event = { id = observer.71 } }
+	}
+
+	after = {
+		hidden_effect = {
+			owner = {
+				remove_country_flag = worm_events_available
+				set_country_flag = worm_awaited
+				set_country_flag = worm_tomb_ending
+			}
+		}
+	}
+
+	option = {
+		name = akx.10020.a
+		owner = { end_event_chain = WORM_CHAIN_2 }
+	}
+}

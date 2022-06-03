@@ -207,6 +207,9 @@ merg_has_cloning_building = {
 		# Lithoid Supremacy
 		has_building = building_crystallization_facilities
 		has_building = building_ocean_spawning_pool
+		# Galaxius
+		has_building = building_ie_clone_vats
+		has_building = building_ie_spawning_pool
 	}
 }
 
@@ -269,5 +272,15 @@ merg_has_hive_trait = {
 		has_trait = trait_td_multi_hiveminded
 		# Diagraphers Trait Mod
 		has_trait = trait_multihive_drone
+	}
+}
+
+merg_is_gas_giant = {
+	OR = {
+		is_planet_class = pc_gas_giant
+		# Planetary Diversity
+		is_planet_class = pc_hot_gas_giant
+		is_planet_class = pc_cloudless_gas_giant
+		is_planet_class = pc_cold_gas_giant
 	}
 }

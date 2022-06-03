@@ -8,3 +8,4 @@ origin_pd_tree_of_life = { is_origin = yes potential = { always = no } }
 origin_sacred_tree = { is_origin = yes potential = { always = no } }
 origin_sm_cryogenesis = { is_origin = yes potential = { always = no } }
 origin_vb_psi_soul_eater = { is_origin = yes potential = { always = no } }
+origin_hive_cx_hive_world = { is_origin = yes potential = { always = no } }
