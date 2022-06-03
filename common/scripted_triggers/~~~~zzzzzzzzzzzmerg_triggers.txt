@@ -624,9 +624,7 @@ has_total_war_cb = {
 				merg_is_default_empire = yes
 				is_fallen_empire = yes
 				# ACOT
-				is_country_type = original_empire
-				is_country_type = original_empire_passive
-				is_country_type = original_empire_active
+				is_progenitor_empires = yes
 				# Twinks Eternal Empire
 				is_country_type = eternal_empire
 			}
@@ -637,9 +635,7 @@ has_total_war_cb = {
 				# Expanded Traits, Civics, Pops, and More
 				has_valid_civic = civic_infestation
 				# ACOT
-				is_country_type = original_empire
-				is_country_type = original_empire_passive
-				is_country_type = original_empire_active
+				is_progenitor_empires = yes
 				# Twinks Eternal Empire
 				is_country_type = eternal_empire
 				# Vanilla
@@ -662,9 +658,7 @@ has_total_war_cb = {
 			OR = {
 				merg_is_default_empire = yes
 				# ACOT
-				is_country_type = original_empire
-				is_country_type = original_empire_passive
-				is_country_type = original_empire_active
+				is_progenitor_empires = yes
 				# Twinks Eternal Empire
 				is_country_type = eternal_empire
 			}
@@ -682,6 +676,8 @@ has_total_war_cb = {
 					has_valid_civic = civic_machine_assimilator
 					# Expanded Traits, Civics, Pops, and More
 					has_valid_civic = civic_infestation
+					# ACOT
+					is_progenitor_empires = yes
 				}
 			}
 		}
