@@ -26,6 +26,9 @@ default = {
 		# NSC
 		headquarters_ship_limit
 		explorationship_ship_limit
+		# Unique Ascension Perks
+		civilian_factory_ships_limit
+		civilian_industrial_ships_limit
     }
 }
 
@@ -53,6 +56,9 @@ default_ev = {
 		ds_will_ships_limit
 		# Hypertraversal Manipulation Augur
 		htm_augur_ships_limit
+		# Unique Ascension Perks
+		civilian_factory_ships_limit
+		civilian_industrial_ships_limit
 	}
 }
 
@@ -81,5 +87,8 @@ darkspace_ownership_limit = {
 		# NSC
 		headquarters_ship_limit
 		explorationship_ship_limit
+		# Unique Ascension Perks
+		civilian_factory_ships_limit
+		civilian_industrial_ships_limit
 	}
 }
