@@ -41,18 +41,6 @@ shadowgate_is_ae = {
 	}
 }
 
-# Making Shadowgate acknowledge other mods
-shadowgate_is_purifier = {
-	OR = {
-		has_country_flag = shadowgate_ap_restricted
-		is_homicidal = yes
-		# Underground Realms
-		has_country_flag = dark_side
-		# Expanded Traits, Civics, Pops, and More
-		has_valid_civic = civic_infestation
-	}
-}
-
 # Making Shadowgate acknowledge Starbase Ships.
 shadowgate_is_military_fleet = {
 	OR = {
@@ -68,8 +56,6 @@ shadowgate_is_military_fleet = {
 				is_ship_size = precursor_juggernaut
 				# ACOT
 				is_ship_size = precursor_colossus
-				# Giga Stellar Manipulation
-				is_ship_size = giga_o_systemcraft
 				# ZOFE
 				is_ship_size = fe_goliath
 			}
@@ -144,8 +130,6 @@ can_use_ehof = {
 				is_ship_size = precursor_juggernaut
 				# ACOT
 				is_ship_size = precursor_colossus
-				# Giga Stellar Manipulation
-				is_ship_size = giga_o_systemcraft
 				# ZOFE
 				is_ship_size = fe_goliath
 			}
@@ -456,7 +440,7 @@ mega_blokkats_wont_stripmine = {
 
 ndb_can_target_system = {
 	cohesive_system = no
-	# compound_cluster = no
+	compound_cluster = no
 	annihilator_system = no
 	urmazin_system = no
 	everchanging_system = no
@@ -773,18 +757,11 @@ legw_broken_megastructure = {
 }
 
 ############################### Real Space New Frontiers ###############################
-# Fixing and Merging
 is_moon_of_gas_giant = {
 	is_scope_type = planet
 	exists = orbit
 	orbit = {
-		OR = {
-			is_planet_class = pc_gas_giant
-			# Planetary Diversity
-			is_planet_class = pc_hot_gas_giant
-			is_planet_class = pc_cloudless_gas_giant
-			is_planet_class = pc_cold_gas_giant
-		}
+		merg_is_gas_giant = yes
 	}
 }
 
@@ -941,10 +918,7 @@ afk_target_planet = {
 		is_planet_class = pc_wsg_port
 		is_planet_class = pc_shenhai
 		# APSR: Anomalies, Planetary and Space Resources
-		AND = {
-			has_apsr = yes
-			has_apsr_modifiers = yes
-		}
+		has_apsr_modifiers = yes
 		# Planetary Diversity
 		is_pd_planet_class_all = yes
 		# Gigastructural Engineering & More
@@ -1097,6 +1071,9 @@ ag_is_gateway_megastructure = {
 		is_megastructure_type = gateway_restored
 		is_megastructure_type = gateway_final
 		is_megastructure_type = lgate_base
+		is_megastructure_type = hyper_relay
+		is_megastructure_type = hyper_relay_restored
+		is_megastructure_type = hyper_relay_ruined
 		# ACOT
 		is_megastructure_type = acot_phanon_dimensional_portal
 		is_megastructure_type = sofe_inner_gate
@@ -1316,17 +1293,6 @@ exalted_is_valid_as_vassal = {
 		is_country_type = default_ev
 		# Darkspace
 		is_country_type = ds_nomads
-	}
-}
-
-############################### New Enclaves ###############################
-is_genocidal = {
-	OR = {
-		has_valid_civic = civic_fanatic_purifiers
-		has_valid_civic = civic_hive_devouring_swarm
-		has_valid_civic = civic_machine_terminator
-		# Expanded Traits, Civics, Pops, and More
-		has_valid_civic = civic_infestation
 	}
 }
 

@@ -125,28 +125,9 @@ merg_is_hab_ringworld = {
 # Listing habitats
 merg_is_habitat = {
 	OR = {
-		is_planet_class = pc_habitat
-		# Planetary Diversity
-		is_pd_habitat = yes
-		# Gigastructural Engineering & More
-		is_planet_class = pc_interstellar_habitat
-		# More Events Mod
-		is_planet_class = pc_mem_vazuran_habitat
-		# Acquisition of Technology
-		is_planet_class = pc_dm_habitat
-		is_planet_class = pc_ae_habitat
-		is_planet_class = pc_sigma_habitat
-		is_planet_class = pc_sigma_deepspace_habitat
+		merg_is_habitat_non_starborn = yes
 		# Starborn: Improved Voidtouched
 		uses_district_set = starborn_start
-		# Twinks Atlantean
-		uses_district_set = skypalace
-		# Plentiful Traditions
-		is_planet_class = pc_habitat_robot
-		# Giga Diversity
-		is_planet_class = pc_pd_toxic_hab
-		# Nyto Species Pack
-		is_planet_class = pc_GFnytp_habitis
 	}
 }
 
