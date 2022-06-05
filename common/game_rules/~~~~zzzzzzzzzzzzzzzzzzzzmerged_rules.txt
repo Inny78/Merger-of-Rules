@@ -825,29 +825,6 @@ can_take_hostile_actions = {
 			always = no
 		}
 	}
-	# ACOT
-	else_if = {
-		limit = {
-			root = {
-				is_subject_type = origin_protectorate
-			}
-		}
-		custom_tooltip = {
-			text = "CAN_TAKE_HOSTILE_ACTION_SATRAPY"
-			always = no
-		}
-	}
-	else_if = {
-		limit = {
-			root = {
-				is_subject_type = origin_banished_ascendancy
-			}
-		}
-		custom_tooltip = {
-			text = "CAN_TAKE_HOSTILE_ACTION_SATRAPY"
-			always = no
-		}
-	}
 	else_if = {
 		limit = {
 			this = {
@@ -1943,7 +1920,7 @@ can_orbital_bombard = {
 				is_country_type = awakened_return_kuat_empire
 				# Gigastructural Engineering & More
 				is_country_type = katzenartig_imperium
-				# is_country_type = compound_empire
+				is_country_type = compound_empire
 				# LEX
 				is_country_type = mem_ancestor_guardian
 				# Solar Storm
@@ -1996,7 +1973,7 @@ can_orbital_bombard = {
 				# Gigastructural Engineering & More
 				is_country_type = katzenartig_imperium
 				is_country_type = acot_crazed_stellarite
-				# is_country_type = compound_empire
+				is_country_type = compound_empire
 				# The Empty Vagrant
 				is_country_type = default_ev
 				# LEX

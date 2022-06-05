@@ -14,6 +14,7 @@ awakened_gate_builders = { ai = { enabled = no } }
 awakened_marauders_ev = { ai = { enabled = no } }
 awakened_return_kuat_empire = { ai = { enabled = no } }
 blokkat_stripminers = { ai = { enabled = no } }
+compound_empire = { ai = { enabled = no } }
 default_ev = { ai = { enabled = no } }
 dormant_aeternum = { ai = { enabled = no } }
 ds_nomads = { ai = { enabled = no } }

@@ -10,7 +10,7 @@ is_megacorp = {
 		has_authority = auth_tec_patrocorporate
 		# More Authorities
 		has_government = gov_imperial_domain_megacorp
-		has_authority = auth_corporate_imperial		# Also in E&C Bug Branch
+		has_authority = auth_corporate_imperial
 		# Ethics and Civics - Bug Branch
 		has_authority = auth_bugged_corporate_democratic
 		has_authority = auth_bugged_corporate_imperial
