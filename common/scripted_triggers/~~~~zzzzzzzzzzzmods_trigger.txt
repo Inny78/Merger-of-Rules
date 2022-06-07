@@ -4,13 +4,6 @@
 shadowgate_is_fe = {
 	OR = {
 		is_country_type = fallen_empire
-		# Human Fallen Empire
-		AND = {
-			is_country_type = human_fallen_empire
-			NOT = {
-				has_civic = hfe_civic_egypt_fury
-			}
-		}
 		# History of the Lost Empire
 		is_country_type = LsE_fallen_empire
 		# SW:KUAT ANCIENT EMPIRE
@@ -33,11 +26,6 @@ shadowgate_is_ae = {
 		is_country_type = awakened_gate_builders
 		# ZOFE
 		is_country_type = ascended_empire
-		# Human Fallen Empire
-		AND = {
-			is_country_type = human_fallen_empire
-			has_civic = hfe_civic_egypt_fury
-		}
 	}
 }
 
@@ -779,9 +767,6 @@ kuat_is_common_country = {
 		# The Empty Vagrant
 		is_country_type = default_ev
 		is_country_type = fallen_empire_ev
-		# Human Fallen Empire
-		is_country_type = human_fallen_empire
-		is_country_type = hfe_pirate
 		# Darkspace
 		is_country_type = ds_nomads
 	}
@@ -846,9 +831,6 @@ CmtTriggerIsEmpire = {
 		is_country_type = default_ev
 		is_country_type = fallen_empire_ev
 		is_country_type = awakened_fallen_empire_ev
-		# Human Fallen Empire
-		is_country_type = human_fallen_empire
-		is_country_type = hfe_pirate
 		# Darkspace
 		is_country_type = ds_nomads
 	}
@@ -867,8 +849,6 @@ CmtTriggerIsFallenEmpire = {
 		is_country_type = kuat_fallen_empire
 		is_country_type = kuat_awakened_fallen_empire
 		is_country_type = awakened_return_kuat_empire
-		# Human Fallen Empire
-		is_country_type = human_fallen_empire
 		# History of the Lost Empire
 		is_country_type = LsE_fallen_empire
 	}
@@ -960,9 +940,6 @@ is_default_and_fallen_country = {
 		is_country_type = default_ev
 		is_country_type = fallen_empire_ev
 		is_country_type = awakened_fallen_empire_ev
-		# Human Fallen Empire
-		is_country_type = human_fallen_empire
-		is_country_type = hfe_pirate
 		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_fallen_empire
 		is_country_type = kuat_awakened_fallen_empire
@@ -1240,8 +1217,6 @@ AAR_trgr_cntr_playable = {
 		is_country_type = original_empire_active
 		# Darkspace
 		is_country_type = ds_nomads
-		# Human Fallen Empire
-		is_country_type = human_fallen_empire
 		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_fallen_empire
 		is_country_type = kuat_awakened_fallen_empire

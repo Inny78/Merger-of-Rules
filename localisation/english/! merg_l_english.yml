@@ -101,3 +101,8 @@
  origin_sacred_tree: "Arborial Harmony"
  origin_sm_cryogenesis: "Cryogenesis"
  origin_vb_psi_soul_eater: "Soul Eaters"
+
+# Traits
+ trait_living_architecture: "Living Architecture (Rooted)"
+ trait_rooted_adults_rooted: "Rooted Adults (Rooted)"
+ trait_tree_caretaker: "Arborial Caretaker"

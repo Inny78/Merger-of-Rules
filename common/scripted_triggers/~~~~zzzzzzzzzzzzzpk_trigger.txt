@@ -3970,14 +3970,11 @@ can_destroy_planet_with_hyperspace_augur_beam = {
 # Vanilla triggers
 is_a_planet = {
 	is_star = no
-	AND = {
-		colonizable_planet = yes
-		NOR = {
-			is_artificial = yes
-			is_asteroid = yes
-			is_planet_class = pc_gas_giant
-			is_planet_class = pc_shrouded
-		}
+	NOR = {
+		is_artificial = yes
+		is_asteroid = yes
+		merg_is_gas_giant = yes
+		is_planet_class = pc_shrouded
 	}
 }
 

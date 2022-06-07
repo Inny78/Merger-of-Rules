@@ -1049,8 +1049,6 @@ can_colonize_outside_borders = {
 	exists = root
 	root = {
 		OR = {
-			# Human Fallen Empires
-			is_country_type = hfe_features_exodus
 			# The Empty Vagrant
 			is_country_type = ev_leviathans_crisis
 			# Project Gestalt
@@ -1461,8 +1459,6 @@ can_species_procreate = {
 			}
 			has_trait = trait_hive_mind
 		}
-		# Human Fallen Empires
-		has_trait = hfe_species_trait_brainworm
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
 		has_trait = trait_hologanglion
 		# Expanded Gestalts
@@ -1925,8 +1921,6 @@ can_orbital_bombard = {
 				is_country_type = mem_ancestor_guardian
 				# Solar Storm
 				is_country_type = abyssal_host_invaders_type
-				# Human Fallen Empires
-				is_country_type = human_fallen_empire
 				# Shroud Rising
 				is_country_type = shroud_horrors
 				is_country_type = shroud_cult
@@ -1980,8 +1974,6 @@ can_orbital_bombard = {
 				is_country_type = mem_ancestor_guardian
 				# Solar Storm
 				is_country_type = abyssal_host_invaders_type
-				# Human Fallen Empires
-				is_country_type = human_fallen_empire
 				# Shroud Rising
 				is_country_type = shroud_horrors
 				is_country_type = shroud_cult
@@ -2923,8 +2915,6 @@ can_build_branch_offices = {
 			has_authority = auth_azur_lane_1
 			has_authority = auth_azur_lane_2
 			has_authority = auth_azur_lane_K
-			# Human Fallen Empires
-			is_country_type = hfe_pirate
 			# More Corporate Authorities
 			has_valid_civic = civic_galactic_sovereign_megacorp
 			# Arknights Near Future
@@ -3058,11 +3048,6 @@ can_build_branch_office_on_planet = {
 					}
 					is_same_value = root
 				}
-			}
-			# Human Fallen Empires
-			root = {
-				is_country_type = hfe_pirate
-				is_forced_friendly = prev.owner
 			}
 			# Vanilla
 			# allow branch offices in subsidiaries and vice versa (and fellow subjects)
@@ -3622,8 +3607,15 @@ can_be_part_of_galactic_council = {
 # Purge, Sapience, Migration Controls policy (ignored by Gestalts and Synths), and target habitability are checked in code.
 can_pop_auto_migrate = {
 	hidden_trigger = {
-		is_unemployed = yes
-	}	#this is always true where this tooltip is called
+		OR = {
+			is_unemployed = yes
+			has_job = servant
+			has_job = slave_toiler
+			# Expanded Traits, Civics, Pops, and More
+			has_job = servant_noble
+			has_job = grunt
+		}
+	}
 	custom_tooltip = {
 		fail_text = AUTO_MIGRATE_ASSIMILATED
 		is_being_assimilated = no
@@ -3633,16 +3625,6 @@ can_pop_auto_migrate = {
 			OR = {
 				is_shackled_robot = yes
 				is_enslaved = yes
-				# Human Fallen Empire
-				AND = {
-					has_human_fallen = yes
-					owner = {
-						or = {
-							is_country_type = hfe_pirate
-							hfe_trigger_is_human_fallen = yes
-						}
-					}
-				}
 			}
 		}
 		custom_tooltip = {
@@ -3658,23 +3640,21 @@ can_pop_auto_migrate = {
 			}
 		}
 	}
-	OR = {
-		# z Expanded Traits, Civics, Pops, and More
-		has_job = grunt
-		has_job = slave_toiler
-		# Human Fallen Empire
-		AND = {
-			has_human_fallen = yes
-			hfe_trigger_unemployed_auto_migrate = yes
+	# Expanded Traits, Civics, Pops, and More
+	if = {
+		limit = {
+			has_trait = trait_tree_caretaker
+		}
+		custom_tooltip = {
+			fail_text = caretaker_refuse
+			always = no
 		}
 	}
+	# Diagraphers Trait Mod
 	NOR = {
-		# Diagraphers Trait Mod
 		has_trait = trait_living_architecture
 		has_trait = trait_rooted_adults_rooted
 		has_trait = trait_presapient_earthbound
-		# Expanded Traits, Civics, Pops, and More
-		has_trait = trait_tree_caretaker
 	}
 }
 

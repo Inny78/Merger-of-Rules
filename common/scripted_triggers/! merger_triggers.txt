@@ -11,9 +11,6 @@ merg_is_standard_empire = {
 		is_country_type = default_ev
 		is_country_type = fallen_empire_ev
 		is_country_type = awakened_fallen_empire_ev
-		# Human Fallen Empire
-		is_country_type = human_fallen_empire
-		is_country_type = hfe_pirate
 		# Darkspace
 		is_country_type = ds_nomads
 	}
@@ -42,13 +39,6 @@ merg_is_fallen_empire = {
 		is_country_type = fallen_empire_ev
 		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_fallen_empire
-		# Human Fallen Empire
-		AND = {
-			is_country_type = human_fallen_empire
-			NOT = {
-				has_civic = hfe_civic_egypt_fury
-			}
-		}
 	}
 }
 
@@ -65,11 +55,6 @@ merg_is_awakened_fe = {
 		is_country_type = ascended_empire
 		# The Empty Vagrant
 		is_country_type = awakened_fallen_empire_ev
-		# Human Fallen Empire
-		AND = {
-			is_country_type = human_fallen_empire
-			has_civic = hfe_civic_egypt_fury
-		}
 	}
 }
 
