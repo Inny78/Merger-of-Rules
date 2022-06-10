@@ -365,6 +365,7 @@ species_can_live_on_planet = {
 #Root = country
 #This = pop
 can_generate_leader_from_pop = {
+	can_think = yes
 	OR = {
 		has_citizenship_rights = yes
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
@@ -378,7 +379,6 @@ can_generate_leader_from_pop = {
 	}
 	NOR = {
 		has_trait = trait_syncretic_proles
-		can_think = yes
 		# Rogue Maid (Rogue Servitor Completely Remake)
 		has_trait = trait_working_machine
 		# Plentiful Perks
@@ -1643,7 +1643,7 @@ can_species_be_assembled = {
 				}
 				OR = {
 					has_trait = trait_tree_caretaker
-					merg_has_cloning_building = yes
+					root = { merg_has_cloning_building = yes }
 				}
 			}
 			# flourishing plantoids
