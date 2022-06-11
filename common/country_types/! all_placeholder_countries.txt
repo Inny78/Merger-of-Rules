@@ -13,6 +13,7 @@ awakened_fallen_empire_ev = { ai = { enabled = no } }
 awakened_gate_builders = { ai = { enabled = no } }
 awakened_marauders_ev = { ai = { enabled = no } }
 awakened_return_kuat_empire = { ai = { enabled = no } }
+berserker_awoken_hive = { ai = { enabled = no } }
 blokkat_stripminers = { ai = { enabled = no } }
 compound_empire = { ai = { enabled = no } }
 default_ev = { ai = { enabled = no } }
@@ -46,6 +47,7 @@ shroud_horrors = { ai = { enabled = no } }
 shroud_spirits = { ai = { enabled = no } }
 sofe_light_seeker = { ai = { enabled = no } }
 sofe_sentinel_active = { ai = { enabled = no } }
+the_sleeper_fallen = { ai = { enabled = no } }
 wg_crisis_country = { ai = { enabled = no } }
 wg_Khan_country_type = { ai = { enabled = no } }
 wg_Khan_country_type_auto_delete = { ai = { enabled = no } }
