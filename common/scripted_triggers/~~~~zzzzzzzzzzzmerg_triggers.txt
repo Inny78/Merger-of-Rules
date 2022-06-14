@@ -361,7 +361,7 @@ has_comms_with_alien_civilization = {
 is_autocracy = {
 	#Power of one
 	OR = {
-		has_ethic = ethic_gestalt_consciousness
+		is_gestalt = yes
 		has_authority = auth_imperial
 		has_authority = auth_dictatorial
 		# More Authorities
@@ -778,9 +778,7 @@ planet_can_be_liberated_from_owner = {
 can_fill_specialist_job = {
 	custom_tooltip = SPECIALIST_JOB_TRIGGER
 	hidden_trigger = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
+		is_gestalt = no
 		exists = owner
 		OR = {
 			is_enslaved = no

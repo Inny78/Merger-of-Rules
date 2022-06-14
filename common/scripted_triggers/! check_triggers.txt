@@ -8,7 +8,7 @@ has_ace_mod = {
 
 # A Deadly Tempest 2028826064
 has_deadly_tempest = {
-	has_global_flag = CmtFlagActivated
+	has_global_flag = a_deadly_tempest_mod_active
 }
 
 # Acquisition of Technologies 2178603631
@@ -248,6 +248,11 @@ has_zofe = {
 	has_global_flag = zofe_activated
 }
 
+# Unique Ascension Perks
+has_uap = {
+	has_global_flag = has_uap_mod
+}
+
 # Vassals Expanded and Reworked
 has_vassals_expanded = {
 	has_global_flag = gf_veru_activated
@@ -258,7 +263,7 @@ has_warship_girls = {
 	has_global_flag = has_wsg_mod
 }
 
-# 
+# FCSS
 has_fcss = {
 	has_global_flag = FCSS_has_host
 }

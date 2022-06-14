@@ -1903,6 +1903,7 @@ can_orbital_bombard = {
 						is_hostile = prev
 					}
 				}
+				has_country_flag = can_be_bombarded
 				# Ancient Empire
 				ag_can_be_orbital_bombardment_country = yes
 				# ACOT
@@ -1910,7 +1911,7 @@ can_orbital_bombard = {
 				is_country_type = void_lifeforms_1
 				is_country_type = void_lifeforms_2
 				# Cruel Conquerers
-				is_cruel_abomination_country_type = yes
+				is_cruel_abomination_crisis = yes
 				# Star Wars: Kuat Ancient Empire
 				is_country_type = kuat_fleet
 				is_country_type = awakened_return_kuat_empire
@@ -3793,9 +3794,7 @@ can_planet_receive_auto_migration = {
 can_fill_worker_job = {
 	custom_tooltip = WORKER_JOB_TRIGGER
 	hidden_trigger = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
+		is_gestalt = no
 		exists = owner
 		OR = {
 			is_being_purged = no
@@ -3939,9 +3938,7 @@ can_fill_ruler_job = {
 	else = {
 		custom_tooltip = RULER_JOB_TRIGGER
 		hidden_trigger = {
-			NOT = {
-				has_ethic = ethic_gestalt_consciousness
-			}
+			is_gestalt = no
 			exists = owner
 			is_enslaved = no
 			is_being_purged = no
@@ -4033,9 +4030,17 @@ can_trade_leader = {
 		AND = {
 			ROOT = {
 				is_regular_empire = yes
+				NOR = {
+					is_country_type = gate_builders
+					is_country_type = awakened_marauders
+				}
 			}
 			FROM = {
 				is_regular_empire = yes
+				NOR = {
+					is_country_type = gate_builders
+					is_country_type = awakened_marauders
+				}
 			}
 		}
 		AND = {
