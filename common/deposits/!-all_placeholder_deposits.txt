@@ -1,0 +1,2 @@
+d_heart_of_the_overmind = { is_null = yes potential = { always = no } drop_weight = 0 }
+d_ie_sa = { is_null = yes potential = { always = no } drop_weight = 0 }

@@ -95,10 +95,7 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_ringworld_habitable_auto_uf
 		is_planet_class = pc_dyson_ring
 		# Planetary Diversity
-		is_planet_class = pc_ammoniaring
-		is_planet_class = pc_ashring
-		is_planet_class = pc_methanering
-		is_planet_class = pc_sulfurring
+		is_planetary_diversity_ringworld = yes
 		# Darkspace
 		is_planet_class = pc_ancient_ringworld
 		is_planet_class = pc_ringworld_spectrals

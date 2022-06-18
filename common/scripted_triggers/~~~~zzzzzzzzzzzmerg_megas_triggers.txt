@@ -1053,6 +1053,8 @@ has_no_non_gate_megastructure = {
 					# AshArms Aquarius History
 					is_megastructure_type = dyson_swarm
 					is_megastructure_type = adf_mining_station
+					# Cruel Conquerers
+					is_cruel_mega = yes
 					# GPM
 					is_megastructure_type = gpm_mega_shipyard_ruined_precursor
 					is_megastructure_type = gpm_mega_shipyard_restored_precursor
@@ -1158,6 +1160,8 @@ has_any_megastructure_in_empire = {
 			# AshArms Aquarius History
 			is_megastructure_type = dyson_swarm
 			is_megastructure_type = adf_mining_station
+			# Cruel Conquerers
+			is_cruel_mega = yes
 			# GPM
 			is_megastructure_type = gpm_mega_shipyard_ruined_precursor
 			is_megastructure_type = gpm_mega_shipyard_restored_precursor

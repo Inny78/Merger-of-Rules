@@ -44,7 +44,6 @@ vbp_machine = { ai = { enabled = no } }
 shroud_cult = { ai = { enabled = no } }
 shroud_entities = { ai = { enabled = no } }
 shroud_horrors = { ai = { enabled = no } }
-shroud_spirits = { ai = { enabled = no } }
 sofe_light_seeker = { ai = { enabled = no } }
 sofe_sentinel_active = { ai = { enabled = no } }
 the_sleeper_fallen = { ai = { enabled = no } }

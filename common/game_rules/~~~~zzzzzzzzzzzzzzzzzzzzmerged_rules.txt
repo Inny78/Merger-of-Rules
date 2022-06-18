@@ -76,15 +76,17 @@ can_add_claim = {
 					has_ai_personality = democratic_crusaders
 				}
 				owner = {
-					NOT = {
+					NOR = {
+						has_authority = auth_cooperative
 						has_authority = auth_democratic
 					}
 				}
-				owner = {
-					NOT = {
-						has_authority = auth_cooperative
-					}
-				}
+			}
+			AND = {
+				# Expanded Traits, Civics, Pops, and More
+				has_expanded_pops = yes
+				root = { has_policy_flag = liberation_wars }
+				owner = { is_gestalt = yes }
 			}
 			AND = {
 				exists = owner
@@ -288,6 +290,7 @@ can_get_claim_from_lost_system = {
 
 # species_has_citizenship
 # should_abduct_pop
+
 #Root = planet
 #This = species
 species_can_live_on_planet = {
@@ -1469,6 +1472,21 @@ can_species_procreate = {
 		has_trait = trait_doll
 		# Lithoid Supremacy
 		has_trait = trait_pearl_born_drone
+		# Expanded Traits, Civics, Pops, and More
+		AND = {
+			has_trait = trait_clones
+			root = {
+				owner = {
+					OR = {
+						has_country_flag = clone_infertility_5
+						AND = {
+							NOT = { has_origin = origin_clones }
+							years_passed > 200
+						}
+					}
+				}
+			}
+		}
 	}
 	NAND = {
 		root = {
@@ -1637,7 +1655,7 @@ can_species_be_assembled = {
 						}
 						OR = {
 							has_deposit = d_tree_of_life_home
-							has_deposit = is_for_colonizable
+							has_deposit = d_tree_of_life_colony
 						}
 					}
 				}
