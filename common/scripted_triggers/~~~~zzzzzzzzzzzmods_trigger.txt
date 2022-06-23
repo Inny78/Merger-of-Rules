@@ -704,6 +704,7 @@ legw_megaplanet = {
 		is_artificial = yes
 		is_planet_class = pc_machine
 		is_planet_class = pc_cybrex
+		# Planetary Diversity
 		is_planet_class = pc_archive
 		# Gigastructural Engineering & More
 		is_planet_class = pc_giga_planetary_computer
@@ -733,14 +734,6 @@ legw_fallen_empire_planet = {
 			merg_is_fallen_empire = yes
 			merg_is_awakened_fe = yes
 		}
-	}
-}
-
-legw_broken_megastructure = {
-	OR = {
-		is_planet_class = pc_ringworld_habitable_damaged
-		is_planet_class = pc_ringworld_tech_damaged
-		is_planet_class = pc_ringworld_seam_damaged
 	}
 }
 

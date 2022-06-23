@@ -106,3 +106,6 @@
  trait_living_architecture: "Living Architecture (Rooted)"
  trait_rooted_adults_rooted: "Rooted Adults (Rooted)"
  trait_tree_caretaker: "Arborial Caretaker"
+
+# Tooltips and messages
+ AUTO_MIGRATE_ROBOT_DROIDS: "§RNon-sapient and shackled robots can only auto-migrate with the §Y$tech_droid_workers$§! technology.§!\n"

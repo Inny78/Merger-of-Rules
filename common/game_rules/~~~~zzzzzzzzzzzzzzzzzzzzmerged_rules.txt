@@ -908,6 +908,8 @@ can_take_hostile_actions = {
 					is_country_type = dormant_marauders
 					is_country_type = ruined_marauders
 					is_country_type = awakened_marauders
+					# The Empty Vagrant
+					is_country_type = awakened_marauders_ev
 				}
 			}
 		}
@@ -3361,6 +3363,8 @@ is_criminal_syndicate_rule = {
 		has_valid_civic = civic_criminal_heritage
 		# The Empty Vagrant
 		has_valid_civic = civic_ev_criminal_ship
+		# Cruel Conquerers
+		is_cruel_empire = yes
 	}
 }
 
@@ -3692,6 +3696,7 @@ can_be_part_of_galactic_council = {
 # must_be_advanced_empire
 # is_allowed_to_be_advanced_empire
 # has_enough_pops_for_necrophage_on_planet
+
 # Root = current planet
 # This = pop
 # Purge, Sapience, Migration Controls policy (ignored by Gestalts and Synths), and target habitability are checked in code.
@@ -3713,7 +3718,10 @@ can_pop_auto_migrate = {
 	if = {
 		limit = {
 			OR = {
-				is_shackled_robot = yes
+				AND = {
+					is_shackled_robot = yes
+					has_expanded_pops = no
+				}
 				is_enslaved = yes
 			}
 		}
@@ -3723,9 +3731,37 @@ can_pop_auto_migrate = {
 				planet = {
 					has_building = building_slave_processing
 				}
+				solar_system = {
+					count_starbase_buildings = {
+						type = transit_hub
+						count >= 1
+						include_being_constructed = no
+					}
+				}
 				# Plentiful Traditions
 				planet = {
 					has_building = building_plentiful_traditions_advanced_slave_processing
+				}
+			}
+		}
+	}
+	# Expanded Traits, Civics, Pops, and More
+	if = {
+		limit = {
+			is_shackled_robot = yes
+			has_expanded_pops = yes
+		}
+		custom_tooltip = {
+			fail_text = AUTO_MIGRATE_ROBOT_DROIDS
+			OR = {
+				planet = { owner = { has_authority = auth_machine_intelligence } }
+				planet = { owner = { has_technology = tech_droid_workers } }
+				solar_system = {
+					count_starbase_buildings = {
+						type = transit_hub
+						count >= 1
+						include_being_constructed = no
+					}
 				}
 			}
 		}

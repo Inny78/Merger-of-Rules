@@ -16,6 +16,7 @@ is_bugged_evolutionary_architects = { always = no }
 is_bugged_slave_race = { always = no }
 is_cruel_abomination_country_type = { always = no }
 is_cruel_abomination_crisis = { always = no }
+is_cruel_empire = { always = no }
 is_cruel_mega = { always = no }
 is_civic_materialist = { always = no }
 is_civic_militarist = { always = no }
