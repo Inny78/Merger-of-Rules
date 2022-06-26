@@ -153,6 +153,11 @@ has_kancolle = {
 	}
 }
 
+# Safety Off
+has_safety_off = {
+	has_global_flag = has_pk_safety_off
+}
+
 # Star Wars: Kuat Ancient Empire
 has_kuat = {
 	has_global_flag = install_kuat_mod

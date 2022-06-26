@@ -23,6 +23,11 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 						OR = {
 							is_at_war_with = from.owner
 							is_crisis_faction = yes
+							# Safety Off
+							AND = {
+								has_safety_off = yes
+								is_same_value = from.owner
+							}
 						}
 					}
 				}
@@ -33,6 +38,11 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 						OR = {
 							is_at_war_with = from.owner
 							is_crisis_faction = yes
+							# Safety Off
+							AND = {
+								has_safety_off = yes
+								is_same_value = from.owner
+							}
 						}
 					}
 				}
@@ -47,6 +57,11 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 						OR = {
 							is_at_war_with = from.owner
 							is_crisis_faction = yes
+							# Safety Off
+							AND = {
+								has_safety_off = yes
+								is_same_value = from.owner
+							}
 						}
 					}
 				}
@@ -126,11 +141,11 @@ can_destroy_planet_with_PLANET_KILLER_NEUTRON = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		OR = {
-			is_a_habitable_planet_megastructure = yes
+			AND = {
+				has_safety_off = no
+				is_a_habitable_planet_megastructure = yes
+			}
 			merg_is_forbidden_target = no
-			# APSR
-			# is_planet_class = pc_apsr_ancient
-			# is_planet_class = pc_apsr_unique
 		}
 	}
 	custom_tooltip = {
@@ -271,6 +286,10 @@ can_destroy_planet_with_PLANET_KILLER_NANOBOTS = {
 				owner = {
 					is_country_type = primitive
 				}
+			}
+			AND = {
+				has_safety_off = yes
+				is_same_value = from.owner
 			}
 		}
 	}
@@ -3721,6 +3740,11 @@ planet_is_hostile_or_crisis = {
 					has_country_flag = acemod_can_target_hostile_with_colossus					# Fallback flag in case needed.
 					is_crisis_faction = yes					# Narrow down to just crises as to not alter more than needed.
 				}
+			}
+			# Safety Off
+			AND = {
+				has_safety_off = yes
+				is_same_value = from.owner
 			}
 		}
 	}

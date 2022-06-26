@@ -4,3 +4,9 @@ on_game_start = {
 		merg.1
 	}
 }
+
+on_single_player_save_game_load = {
+	events = {
+		merg.1
+	}
+}
