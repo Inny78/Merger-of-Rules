@@ -3701,6 +3701,16 @@ can_destroy_planet_with_PLANET_KILLER_SLEEPER_HIVE_CREATOR = {
 	}
 }
 
+# Gigastructural Engineering & More
+can_destroy_planet_with_PLANET_KILLER_BLOKKAT_GENERATOR = {
+	is_colony = no
+	is_star = no
+	OR = {
+		uninhabitable_regular_planet = yes
+		is_asteroid = yes
+	}
+}
+
 # PK Triggers here
 # Vanilla triggers
 is_a_planet = {
