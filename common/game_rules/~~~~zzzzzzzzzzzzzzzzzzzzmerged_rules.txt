@@ -1006,46 +1006,7 @@ can_take_hostile_actions = {
 	}
 }
 
-#Root = country, attacker
-#This = country, target
-#This rule is a condition for declaring war
-can_declare_war = {
-	custom_tooltip = {
-		fail_text = "ACTION_DECLARE_WAR_OVERLORD_ON_SUBJECT"
-		NOT = {
-			has_overlord = ROOT
-		}
-	}
-	if = {
-		limit = {
-			exists = root
-			root = {
-				has_policy_flag = no_wars
-				OR = {
-					is_subject = no
-					overlord = {
-						is_same_value = root
-					}
-				}
-			}
-		}
-		custom_tooltip = {
-			text = "CAN_DECLARE_WAR_POLICY"
-			always = no
-		}
-	}
-	if = {
-		limit = {
-			exists = root
-			root = {
-				is_ai = yes
-			}
-		}
-		root = {
-			is_at_war = no
-		}
-	}
-}
+# can_declare_war
 
 # can_colonize_planet
 #Root = country
