@@ -1,4 +1,5 @@
 # Dummy archetypes - to be overwritten by their respective mods.
+# Irony this is a placeholder file please ignore it
 # Warship Girls R And MIST Species
 WARSHIPGIRL = { uses_modifiers = no }
 SHENHAI = { uses_modifiers = no }

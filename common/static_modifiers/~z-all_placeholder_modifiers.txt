@@ -1,4 +1,5 @@
 # Dummy modifiers - to be overwritten by their respective mods. File is FIOS!
+# Irony this is a placeholder file please ignore it
 apocalypse = { }
 catastrophe_approach = { }
 deteriorating_ecosystem = { }

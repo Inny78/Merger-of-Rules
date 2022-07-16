@@ -1,4 +1,5 @@
 # Dummy buildings - to be overwritten by their respective mods.
+# Irony this is a placeholder file please ignore it
 azur_building_mind_capital = { potential = { always = no } allow = { always = no } }
 azur_building_mind_net_capital = { potential = { always = no } allow = { always = no } }
 building_acid_maker = { potential = { always = no } allow = { always = no } }

@@ -1,4 +1,5 @@
 # Dummy personalities - to be overwritten by their respective mods.
+# Irony this is a placeholder file please ignore it
 egalitarian_imperialists = { behaviour = { } allow = { always = no } }
 infested_hive_mind = { behaviour = { } allow = { always = no } }
 open_hive_mind = { behaviour = { } allow = { always = no } }

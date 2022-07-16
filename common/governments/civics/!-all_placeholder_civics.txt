@@ -1,4 +1,5 @@
 # Dummy civics - to be overwritten by their respective mods.
+# Irony this is a placeholder file please ignore it
 civic_anarchy_ideals = { potential = { always = no } }
 civic_beacon_of_liberty_corpo = { potential = { always = no } }
 civic_bringers_of_death = { potential = { always = no } }

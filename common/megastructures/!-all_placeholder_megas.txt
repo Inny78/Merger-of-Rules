@@ -1,4 +1,5 @@
 # Dummy megastructures - to be overwritten by their respective mods.
+# Irony this is a placeholder file please ignore it
 a_gateway_0 = { entity = "" potential = { always = no } possible = { always = no } }
 a_gateway_final = { entity = "" potential = { always = no } possible = { always = no } }
 AAR_MEGA_webway_BASE = { entity = "" potential = { always = no } possible = { always = no } }

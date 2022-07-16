@@ -1,4 +1,5 @@
 # Dummy countries - to be overwritten by their respective mods.
+# Irony this is a placeholder file please ignore it
 abyssal_host_invaders_type = { ai = { enabled = no } }
 acot_crazed_stellarite = { ai = { enabled = no } }
 afk_crisis_country = { ai = { enabled = no } }
@@ -8,6 +9,8 @@ ag_ancient_epsilon_guardian = { ai = { enabled = no } }
 ag_ancient_eta_guardian = { ai = { enabled = no } }
 ag_zeta_crisis_country = { ai = { enabled = no } }
 ag_ancient_psi_guardian = { ai = { enabled = no } }
+ag_kae_ge_invasion_country = { ai = { enabled = no } }
+ag_kuat_invasion_country = { ai = { enabled = no } }
 ascended_empire = { ai = { enabled = no } }
 awakened_fallen_empire_ev = { ai = { enabled = no } }
 awakened_gate_builders = { ai = { enabled = no } }
@@ -26,6 +29,7 @@ katzenartig_imperium = { ai = { enabled = no } }
 kuat_awakened_fallen_empire = { ai = { enabled = no } }
 kuat_fallen_empire = { ai = { enabled = no } }
 kuat_fleet = { ai = { enabled = no } }
+kuat_fleet_hostile = { ai = { enabled = no } }
 lost_empire = { ai = { enabled = no } }
 LsE_fallen_empire = { ai = { enabled = no } }
 mem_ancestor_guardian = { ai = { enabled = no } }
