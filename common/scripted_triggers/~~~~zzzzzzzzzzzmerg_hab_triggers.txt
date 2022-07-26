@@ -552,7 +552,7 @@ has_fully_upgraded_capital = {
 	}
 	else = {
 		custom_tooltip = {
-			fail_text = "requires_building_major_capital"
+			fail_text = "requires_building_system_capital"
 			OR = {
 				has_building = building_system_capital
 				has_building = building_imperial_capital

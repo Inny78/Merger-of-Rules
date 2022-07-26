@@ -3578,6 +3578,13 @@ can_be_part_of_galactic_community = {
 			}
 		}
 	}
+	# B5 Species - Shadows
+	custom_tooltip = {
+		fail_text = "community_shadows_failtext"
+		NOR = {
+			has_civic = civic_shadows1
+		}
+	}
 }
 
 # This = country
