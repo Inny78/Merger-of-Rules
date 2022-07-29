@@ -472,6 +472,8 @@ ndb_can_target_system = {
 				has_planet_flag = merg_is_forbidden_target
 				# ACOT
 				is_planet_class = pc_acot_enigmopolis
+				# Void Birch Mod
+				is_planet_class = pc_void_birch
 			}
 		}
 	}
@@ -503,6 +505,25 @@ ndb_can_target_planet = {
 		has_planet_flag = merg_is_forbidden_target
 		# ACOT
 		is_planet_class = pc_acot_enigmopolis
+	}
+}
+
+is_ndb_immune_star_planet = {
+	OR = {
+		is_planet_class = pc_black_hole
+		has_planet_flag = ndb_immune_planet
+		solar_system = {
+			has_star_flag = ndb_immune_system
+		}
+		# Hypothetical Stars
+		is_planet_class = pc_white_hole
+		# Real Space
+		is_planet_class = pc_microquasar_1
+		is_planet_class = pc_microquasar_2
+		# MEM
+		is_planet_class = pc_mem_micro_black_hole
+		# Darkspace
+		is_planet_class = pc_zeitriss
 	}
 }
 

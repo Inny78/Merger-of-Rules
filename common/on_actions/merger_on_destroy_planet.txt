@@ -1,0 +1,387 @@
+# Custon on_actions for colossi
+# Scope:
+# this/root = planet that have been fired upon
+# from = fleet that fired
+
+# on_destroy_planet_with_PLANET_KILLER_SHIELDER = giga_paluush.101 giga_habcap.008 arknights_KWYATA.4 apsr.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12
+# on_destroy_planet_with_PLANET_KILLER_NEUTRON = giga_paluush.102 arknights_KWYATA.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12
+# on_destroy_planet_with_PLANET_KILLER_CRACKER = giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12
+# on_destroy_planet_with_PLANET_KILLER_GODRAY = giga_paluush.104 arknights_KWYATA.5 sleeper_dormant.12
+# on_destroy_planet_with_PLANET_KILLER_NANOBOTS = giga_paluush.105 anomalymod.73 sleeper_dormant.12
+
+
+# ACOT - no new event
+
+on_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
+	events = {
+		arknights_KWYATA.2
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_PLANET_KILLER_SHIELDER = {
+	events = {
+		arknights_KWYATA.4
+		apsr.3
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_PLANET_KILLER_NEUTRON = {
+	events = {
+		arknights_KWYATA.3
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = {
+	events = {
+		arknights_KWYATA.5
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = {
+	events = {
+		anomalymod.73
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
+	events = {
+		arknights_KWYATA.2
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_SE_PLANET_KILLER_SHIELDER = {
+	events = {
+		arknights_KWYATA.4
+		apsr.3
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_SE_PLANET_KILLER_NEUTRON = {
+	events = {
+		arknights_KWYATA.3
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_SE_PLANET_KILLER_GODRAY = {
+	events = {
+		arknights_KWYATA.5
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_SE_PLANET_KILLER_NANOBOTS = {
+	events = {
+		anomalymod.73
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
+	events = {
+		arknights_KWYATA.2
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_HE_PLANET_KILLER_SHIELDER = {
+	events = {
+		arknights_KWYATA.4
+		apsr.3
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_HE_PLANET_KILLER_NEUTRON = {
+	events = {
+		arknights_KWYATA.3
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_HE_PLANET_KILLER_GODRAY = {
+	events = {
+		arknights_KWYATA.5
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_HE_PLANET_KILLER_NANOBOTS = {
+	events = {
+		anomalymod.73
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_ACOT_HERCULEAN_PLANET_RESONANT_BEAM_8E = {
+	events = {
+	}
+}
+
+# Gigas - new events, already adds his to ACOT
+# giga_habcap.008
+
+on_destroy_planet_with_COMPOUND_HM_RESHAPER = { # Cracker
+	events = {
+		arknights_KWYATA.2
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_CRACKER_SYSTEMCRAFT = {
+	events = {
+		arknights_KWYATA.2
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_SHIELDER_SYSTEMCRAFT = {
+	events = {
+		arknights_KWYATA.4
+		apsr.3
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_NEUTRON_SYSTEMCRAFT = {
+	events = {
+		arknights_KWYATA.3
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_GODRAY_SYSTEMCRAFT = {
+	events = {
+		arknights_KWYATA.5
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_NANOBOTS_SYSTEMCRAFT = {
+	events = {
+		anomalymod.73
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = {
+	events = {
+		# giga_o_star.2001 #O stars
+	}
+}
+
+# Ancient Empire
+# Complicated, might need patching
+# on_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = { # Cracker/Starploder
+# 	events = {
+# 	}
+# }
+
+# Arknights Near Future
+on_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = { # Cracker
+	events = {
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+# Girls Frontline
+on_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = { # Cracker
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+#ThaumStellaris - all crackers
+on_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM = {
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM_TURRET = {
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_TC_PLANET_KILLER_FROST = {
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_TC_PLANET_KILLER_FROST_TURRET = {
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_TC_PLANET_KILLER_LIQUEFACTION = {
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_TC_PLANET_KILLER_LIQUEFACTION_TURRET = {
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+# Cruel Conquerers
+# Note from myself: Oh God
+
+# A Deadly Tempest
+on_destroy_planet_with_PLANET_KILLER_HARVESTER = { # Nanites
+	events = {
+		giga_paluush.105
+		anomalymod.73
+		sleeper_dormant.12
+	}
+}
+
+# Empire of Eveelution
+on_destroy_planet_with_PLANET_KILLER_EOE = { # Cracker
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_FIRE_EOE_SMALL = {
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+	}
+}
