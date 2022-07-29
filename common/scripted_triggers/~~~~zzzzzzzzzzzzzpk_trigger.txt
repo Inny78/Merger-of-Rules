@@ -3927,9 +3927,6 @@ merg_is_forbidden_target = {
 		merg_is_empty_space = yes
 		# MEM
 		is_planet_class = pc_mem_synthetic_sun
-		# APSR
-		is_planet_class = pc_apsr_ancient
-		is_planet_class = pc_apsr_unique
 		# ACOT
 		is_planet_class = pc_acot_enigmopolis
 	}

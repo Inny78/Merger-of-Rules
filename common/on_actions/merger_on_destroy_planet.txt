@@ -3,14 +3,15 @@
 # this/root = planet that have been fired upon
 # from = fleet that fired
 
-# on_destroy_planet_with_PLANET_KILLER_SHIELDER = giga_paluush.101 giga_habcap.008 arknights_KWYATA.4 apsr.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12
-# on_destroy_planet_with_PLANET_KILLER_NEUTRON = giga_paluush.102 arknights_KWYATA.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12
-# on_destroy_planet_with_PLANET_KILLER_CRACKER = giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12
-# on_destroy_planet_with_PLANET_KILLER_GODRAY = giga_paluush.104 arknights_KWYATA.5 sleeper_dormant.12
-# on_destroy_planet_with_PLANET_KILLER_NANOBOTS = giga_paluush.105 anomalymod.73 sleeper_dormant.12
-
-
-# ACOT - no new event
+# on_destroy_planet_with_PLANET_KILLER_SHIELDER = giga_paluush.101 giga_habcap.008 arknights_KWYATA.4 apsr.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 apsr_sao.1 apsr_sao.91
+#	mem_blacksite.1000 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 cruel_pk.1
+# on_destroy_planet_with_PLANET_KILLER_NEUTRON = giga_paluush.102 arknights_KWYATA.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 maginot_destruction.1002 ap_wg_crisis.12
+# 	aot_planetary_shields_event.1 cruel_pk.7
+# on_destroy_planet_with_PLANET_KILLER_CRACKER = giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+#	gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2
+# on_destroy_planet_with_PLANET_KILLER_GODRAY = giga_paluush.104 arknights_KWYATA.5 sleeper_dormant.12 cruel_pk.3
+# on_destroy_planet_with_PLANET_KILLER_NANOBOTS = giga_paluush.105 anomalymod.73 sleeper_dormant.12 maginot_destruction.1002 giga_katzen.0933 sofe_crisis.9800 ap_wg_crisis.12
+#	cruel_pk.4
 
 on_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 	events = {
@@ -19,6 +20,10 @@ on_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -26,9 +31,13 @@ on_destroy_planet_with_ACOT_PLANET_KILLER_SHIELDER = {
 	events = {
 		arknights_KWYATA.4
 		apsr.3
+		apsr_sao.1
+		apsr_sao.91
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		cruel_pk.1
 	}
 }
 
@@ -38,6 +47,8 @@ on_destroy_planet_with_ACOT_PLANET_KILLER_NEUTRON = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		ap_wg_crisis.12
+		cruel_pk.7
 	}
 }
 
@@ -45,6 +56,7 @@ on_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = {
 	events = {
 		arknights_KWYATA.5
 		sleeper_dormant.12
+		cruel_pk.3
 	}
 }
 
@@ -52,6 +64,8 @@ on_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = {
 	events = {
 		anomalymod.73
 		sleeper_dormant.12
+		ap_wg_crisis.12
+		cruel_pk.4
 	}
 }
 
@@ -62,6 +76,10 @@ on_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -69,9 +87,13 @@ on_destroy_planet_with_ACOT_SE_PLANET_KILLER_SHIELDER = {
 	events = {
 		arknights_KWYATA.4
 		apsr.3
+		apsr_sao.1
+		apsr_sao.91
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		cruel_pk.1
 	}
 }
 
@@ -81,6 +103,8 @@ on_destroy_planet_with_ACOT_SE_PLANET_KILLER_NEUTRON = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		ap_wg_crisis.12
+		cruel_pk.7
 	}
 }
 
@@ -88,6 +112,7 @@ on_destroy_planet_with_ACOT_SE_PLANET_KILLER_GODRAY = {
 	events = {
 		arknights_KWYATA.5
 		sleeper_dormant.12
+		cruel_pk.3
 	}
 }
 
@@ -95,6 +120,9 @@ on_destroy_planet_with_ACOT_SE_PLANET_KILLER_NANOBOTS = {
 	events = {
 		anomalymod.73
 		sleeper_dormant.12
+		sofe_crisis.9800
+		ap_wg_crisis.12
+		cruel_pk.4
 	}
 }
 
@@ -105,6 +133,11 @@ on_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		ap_wg_crisis.12
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -112,9 +145,14 @@ on_destroy_planet_with_ACOT_HE_PLANET_KILLER_SHIELDER = {
 	events = {
 		arknights_KWYATA.4
 		apsr.3
+		apsr_sao.1
+		apsr_sao.91
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		ap_wg_crisis.12
+		cruel_pk.1
 	}
 }
 
@@ -124,6 +162,8 @@ on_destroy_planet_with_ACOT_HE_PLANET_KILLER_NEUTRON = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		ap_wg_crisis.12
+		cruel_pk.7
 	}
 }
 
@@ -131,6 +171,7 @@ on_destroy_planet_with_ACOT_HE_PLANET_KILLER_GODRAY = {
 	events = {
 		arknights_KWYATA.5
 		sleeper_dormant.12
+		cruel_pk.3
 	}
 }
 
@@ -138,16 +179,18 @@ on_destroy_planet_with_ACOT_HE_PLANET_KILLER_NANOBOTS = {
 	events = {
 		anomalymod.73
 		sleeper_dormant.12
+		sofe_crisis.9800
+		ap_wg_crisis.12
+		cruel_pk.4
 	}
 }
 
-on_destroy_planet_with_ACOT_HERCULEAN_PLANET_RESONANT_BEAM_8E = {
-	events = {
-	}
-}
+# on_destroy_planet_with_ACOT_HERCULEAN_PLANET_RESONANT_BEAM_8E = {
+# 	events = {
+# 	}
+# }
 
 # Gigas - new events, already adds his to ACOT
-# giga_habcap.008
 
 on_destroy_planet_with_COMPOUND_HM_RESHAPER = { # Cracker
 	events = {
@@ -156,6 +199,12 @@ on_destroy_planet_with_COMPOUND_HM_RESHAPER = { # Cracker
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -166,6 +215,12 @@ on_destroy_planet_with_PLANET_KILLER_CRACKER_SYSTEMCRAFT = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -173,9 +228,15 @@ on_destroy_planet_with_PLANET_KILLER_SHIELDER_SYSTEMCRAFT = {
 	events = {
 		arknights_KWYATA.4
 		apsr.3
+		apsr_sao.1
+		apsr_sao.91
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		cruel_pk.1
 	}
 }
 
@@ -185,6 +246,9 @@ on_destroy_planet_with_PLANET_KILLER_NEUTRON_SYSTEMCRAFT = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		cruel_pk.7
 	}
 }
 
@@ -192,6 +256,7 @@ on_destroy_planet_with_PLANET_KILLER_GODRAY_SYSTEMCRAFT = {
 	events = {
 		arknights_KWYATA.5
 		sleeper_dormant.12
+		cruel_pk.3
 	}
 }
 
@@ -199,14 +264,17 @@ on_destroy_planet_with_PLANET_KILLER_NANOBOTS_SYSTEMCRAFT = {
 	events = {
 		anomalymod.73
 		sleeper_dormant.12
+		sofe_crisis.9800
+		ap_wg_crisis.12
+		cruel_pk.4
 	}
 }
 
-on_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = {
-	events = {
-		# giga_o_star.2001 #O stars
-	}
-}
+# on_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = {
+# 	events = {
+# 		# giga_o_star.2001 #O stars
+# 	}
+# }
 
 # Ancient Empire
 # Complicated, might need patching
@@ -224,6 +292,13 @@ on_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = { # Cracker
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -237,6 +312,13 @@ on_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = { # Cracker
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -250,6 +332,13 @@ on_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -262,6 +351,13 @@ on_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -274,6 +370,13 @@ on_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -286,6 +389,13 @@ on_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM_TURRET = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -298,6 +408,13 @@ on_destroy_planet_with_TC_PLANET_KILLER_FROST = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -310,6 +427,13 @@ on_destroy_planet_with_TC_PLANET_KILLER_FROST_TURRET = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -322,6 +446,13 @@ on_destroy_planet_with_TC_PLANET_KILLER_LIQUEFACTION = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -334,11 +465,15 @@ on_destroy_planet_with_TC_PLANET_KILLER_LIQUEFACTION_TURRET = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
-
-# Cruel Conquerers
-# Note from myself: Oh God
 
 # A Deadly Tempest
 on_destroy_planet_with_PLANET_KILLER_HARVESTER = { # Nanites
@@ -346,6 +481,11 @@ on_destroy_planet_with_PLANET_KILLER_HARVESTER = { # Nanites
 		giga_paluush.105
 		anomalymod.73
 		sleeper_dormant.12
+		maginot_destruction.1002
+		giga_katzen.0933
+		sofe_crisis.9800
+		ap_wg_crisis.12
+		cruel_pk.4
 	}
 }
 
@@ -359,6 +499,13 @@ on_destroy_planet_with_PLANET_KILLER_EOE = { # Cracker
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -371,6 +518,13 @@ on_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
 	}
 }
 
@@ -383,5 +537,78 @@ on_destroy_planet_with_PLANET_KILLER_FIRE_EOE_SMALL = {
 		anomalymod.73
 		expandedrelics.17
 		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
+	}
+}
+
+# Warship Girls
+on_destroy_planet_with_PLANET_KILLER_GRAYGOO_GRAY = { # Nanites
+	events = {
+		giga_paluush.105
+		anomalymod.73
+		sleeper_dormant.12
+		maginot_destruction.1002
+		giga_katzen.0933
+		sofe_crisis.9800
+		cruel_pk.4
+	}
+}
+
+# Twinks Kaldorei
+on_destroy_planet_with_PLANET_KILLER_CRACKER_ARCANE = { # Cracker
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
+	}
+}
+
+# Star Wars: UnknownWorld Shipgirls Story
+on_destroy_planet_with_PLANET_KILLER_JUMP_SWGS = { # Cracker
+	events = {
+		arknights_KWYATA.2
+		giga_paluush.103
+		giga_habcap.008
+		apsr.4
+		anomalymod.73
+		expandedrelics.17
+		sleeper_dormant.12
+		mem_blacksite.1000
+		gpm_planet_destruction.1
+		maginot_destruction.1002
+		ap_wg_crisis.12
+		aot_planetary_shields_event.1
+		osom_subterranean_change.1
+		cruel_pk.2
+	}
+}
+
+# Nanite Expansion
+on_destroy_planet_with_PLANET_KILLER_NANO = { # Nanites
+	events = {
+		giga_paluush.105
+		anomalymod.73
+		sleeper_dormant.12
+		maginot_destruction.1002
+		giga_katzen.0933
+		sofe_crisis.9800
+		cruel_pk.4
 	}
 }
