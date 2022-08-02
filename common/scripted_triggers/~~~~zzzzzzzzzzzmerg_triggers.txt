@@ -1,6 +1,7 @@
 # Vanilla scripted triggers
 # Expanded by me for more cross-mod comp and to ease the game rules coding.
 is_megacorp = {
+	optimize_memory
 	OR = {
 		has_authority = auth_corporate
 		has_valid_civic = civic_galactic_sovereign_megacorp
@@ -25,6 +26,7 @@ is_megacorp = {
 }
 
 is_regular_empire = {
+	optimize_memory
 	OR = {
 		is_country_type = default
 		is_country_type = fallen_empire
@@ -69,6 +71,7 @@ is_homicidal = {
 }
 
 colonizable_planet = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_city
 		is_planet_class = pc_relic
@@ -110,6 +113,7 @@ colonizable_planet = {
 }
 
 habitable_planet = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_desert
 		is_planet_class = pc_tropical

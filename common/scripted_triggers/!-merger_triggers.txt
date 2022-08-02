@@ -1,6 +1,7 @@
 # Merger of Rules scripted triggers
 # These triggers are also meant as a library for modders who want to reuse them in their own mods.
 merg_is_standard_empire = {
+	optimize_memory
 	OR = {
 		is_country_type = default
 		is_country_type = fallen_empire
@@ -18,6 +19,7 @@ merg_is_standard_empire = {
 
 # Expanded version of country_type = default
 merg_is_default_empire = {
+	optimize_memory
 	OR = {
 		is_country_type = default
 		# ZOFE
@@ -38,6 +40,7 @@ merg_is_playable_empire = {
 
 # List of dormant/standard Fallen Empires
 merg_is_fallen_empire = {
+	optimize_memory
 	OR = {
 		is_country_type = fallen_empire
 		# ZOFE
@@ -51,6 +54,7 @@ merg_is_fallen_empire = {
 
 # List of awakened Fallen Empires
 merg_is_awakened_fe = {
+	optimize_memory
 	OR = {
 		is_country_type = awakened_fallen_empire
 		# SW:KUAT ANCIENT EMPIRE
@@ -67,6 +71,7 @@ merg_is_awakened_fe = {
 
 # List of all habitable ringworld sections
 merg_is_hab_ringworld = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_ringworld_habitable
 		is_planet_class = pc_shattered_ring_habitable
@@ -113,6 +118,7 @@ merg_is_hab_ringworld = {
 
 # Listing habitats
 merg_is_habitat = {
+	optimize_memory
 	OR = {
 		merg_is_habitat_non_starborn = yes
 		# Starborn: Improved Voidtouched
@@ -121,6 +127,7 @@ merg_is_habitat = {
 }
 
 merg_is_habitat_non_starborn = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_habitat
 		# Planetary Diversity
@@ -146,6 +153,7 @@ merg_is_habitat_non_starborn = {
 }
 
 merg_has_cloning_building = {
+	optimize_memory
 	OR = {
 		# Vanilla
 		has_building = building_clone_vats
@@ -204,6 +212,7 @@ merg_is_doomed_planet = {
 
 # List of void systems
 merg_is_void_system = {
+	optimize_memory
 	OR = {
 		# Ancient Empire
 		is_star_class = sc_ag_void
