@@ -2089,55 +2089,6 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_NANOBOTS = {
 	}
 }
 
-can_destroy_planet_with_ACOT_HERCULEAN_PLANET_RESONANT_BEAM_8E = {
-	OR = {
-		custom_tooltip = {
-			text = is_not_hostile_cracker
-			OR = {
-				AND = {
-					exists = space_owner
-					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
-					}
-				}
-				AND = {
-					# colony
-					exists = owner
-					owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
-					}
-				}
-				AND = {
-					# primitive
-					exists = space_owner
-					exists = owner
-					owner = {
-						is_primitive = yes
-					}
-					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
-					}
-				}
-			}
-		}
-		exists = space_owner
-		space_owner = {
-			OR = {
-				is_same_value = from.owner
-			}
-		}
-	}
-}
-
 # ACOT (AOT overwrites)
 can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 	custom_tooltip = {

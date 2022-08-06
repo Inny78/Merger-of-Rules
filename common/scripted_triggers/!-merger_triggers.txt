@@ -118,7 +118,6 @@ merg_is_hab_ringworld = {
 
 # Listing habitats
 merg_is_habitat = {
-	optimize_memory
 	OR = {
 		merg_is_habitat_non_starborn = yes
 		# Starborn: Improved Voidtouched
