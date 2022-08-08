@@ -1817,12 +1817,17 @@ can_orbital_bombard = {
 	exists = from.OWNER
 	NOR = {
 		any_controlled_ship = {
-			is_ship_size = colossus
+			OR = {
+				is_ship_size = colossus
+				is_ship_size = fe_colossus
+			}
 		}
 		# Real Space New Frontiers
 		from = {
 			is_planet_class = pc_hollow
 		}
+		# Star Wars: Kuat Ancient Empire
+		FROM.OWNER = { is_country_type = kuat_fire_base_hositle }
 	}
 	OR = {
 		AND = {
@@ -1894,8 +1899,7 @@ can_orbital_bombard = {
 				# Cruel Conquerers
 				is_cruel_abomination_crisis = yes
 				# Star Wars: Kuat Ancient Empire
-				is_country_type = kuat_fleet
-				is_country_type = awakened_return_kuat_empire
+				kuat_can_be_orbital_bombarment_country = yes
 				# Gigastructural Engineering & More
 				is_country_type = katzenartig_imperium
 				is_country_type = compound_empire
@@ -1939,13 +1943,7 @@ can_orbital_bombard = {
 				is_country_type = void_lifeforms_1
 				is_country_type = void_lifeforms_2
 				# Star Wars: Kuat Ancient Empire
-				is_country_type = kuat_fleet
-				is_country_type = kuat_fleet_hostile
-				is_country_type = kuat_fallen_empire
-				is_country_type = kuat_awakened_fallen_empire
-				is_country_type = awakened_return_kuat_empire
-				is_country_type = ag_kuat_invasion_country
-				is_country_type = ag_kae_ge_invasion_country
+				kuat_can_do_bombarment_country = yes
 				# History of the Lost Empire
 				is_country_type = LsE_fallen_empire
 				# Gigastructural Engineering & More

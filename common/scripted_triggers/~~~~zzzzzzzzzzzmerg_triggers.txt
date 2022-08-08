@@ -796,7 +796,7 @@ can_fill_specialist_job = {
 			has_trait = trait_syncretic_proles
 			# Expanded Traits, Civics, Pops, and More
 			has_trait = trait_tree_caretaker
-			# Ethics and Civics Alternative - Redux
+			# Ethics and Civics Alternative - Redux / Classics
 			has_trait = trait_slave_gene
 		}
 		can_think = yes
