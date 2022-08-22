@@ -342,25 +342,22 @@ species_can_live_on_planet = {
 					}
 				}
 			}
-			# ANZ Patch - Forgotten Queens
-			AND = {
-				# Holobiont can have livestock
+			# Forgotten Queens
+			AND = { #Parasitic Embryos Necrophage Pops
 				exists = root.owner
 				root.owner = {
 					is_hive_empire = yes
-					has_origin = origin_hive_cx_hive_world
-				}
-				has_citizenship_type = {
-					type = citizenship_slavery
-					country = root
-				}
-				has_slavery_type = {
-					type = slavery_livestock
-					country = root
+					has_valid_civic = civic_hive_parasitic
+					prev = { has_job = purge_parasitic }
 				}
 			}
 		}
 	}
+	# Forgotten Queens
+	NAND = {
+		root = { NOT = { is_planet_class = pc_matryoshka } }
+		has_trait = trait_machine_digital
+	}	
 }
 
 # can_vote_in_democratic_election

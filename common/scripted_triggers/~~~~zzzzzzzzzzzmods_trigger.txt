@@ -193,8 +193,6 @@ giga_habitable_structure = {
 is_maginotable_restricted = {
 	OR = {
 		is_planet_class = pc_giga_planetary_computer
-		is_planet_class = pc_birch
-		is_planet_class = pc_void_birch
 		# APSR
 		is_planet_class = pc_apsr_ancient
 		is_planet_class = pc_apsr_unique
@@ -878,6 +876,35 @@ CmtTriggerIsFallenEmpire = {
 	}
 }
 
+# WIP
+CmtTriggerIsStarbase = {
+	optimize_memory		## Scope: this = ship
+	OR = {
+		is_ship_size = starbase_outpost
+		is_ship_size = starbase_starport
+		is_ship_size = starbase_starhold
+		is_ship_size = starbase_starfortress
+		is_ship_size = starbase_citadel
+		is_ship_size = starbase_swarm
+		is_ship_size = starbase_exd
+		is_ship_size = starbase_ai
+		is_ship_size = starbase_marauder
+		# ACOT/AOT
+		is_ship_size = acot_precusor_starbase
+		is_ship_size = acot_precusor_starfortress
+		is_ship_size = acot_precusor_starcitadel
+		is_ship_size = acot_precusor_sigma_starbase
+		is_ship_size = acot_precusor_sigma_starfortress
+		is_ship_size = acot_precusor_sigma_starcitadel
+		is_ship_size = acot_precusor_phanon_starbase
+		is_ship_size = acot_precusor_phanon_starfortress
+		is_ship_size = acot_precusor_phanon_starcitadel
+		is_ship_size = acot_precusor_theta_starbase
+		is_ship_size = acot_precusor_theta_starfortress
+		is_ship_size = acot_precusor_theta_starcitadel
+	}
+}
+
 ############################### Exalted Domination ###############################
 exalted_is_valid_as_vassal = {
 	OR = {
@@ -1411,3 +1438,33 @@ ds_hyperlane_create = {
 		has_star_flag = nep_Scrus_cluster
 	}
 }
+
+# Cruel Conquerers
+# WIP
+# cruel_has_shipyard = {
+# 	or = {
+# 		has_starbase_module = shipyard
+# 		has_starbase_module = cruel_pain_ship_labor_module
+# 		has_starbase_module = cruel_suffering_ship_labor_module
+# 		has_starbase_module = cruel_agony_ship_labor_module
+# 	}
+# }
+
+cruel_can_trade = {
+	OR = {
+		is_gestalt = no
+		AND = {
+			is_gestalt = yes
+			is_megacorp = yes
+		}
+	}
+}
+
+# country_can_purge_pops = {
+# 	OR = {
+# 		has_ethic = ethic_gestalt_consciousness
+# 		is_xenophobe = yes
+# 		has_menace_perk = menp_undertaker		# Unlocked with Crisis Level 1
+# 		is_cruel_empire = yes
+# 	}
+# }
