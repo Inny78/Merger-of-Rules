@@ -118,6 +118,7 @@ merg_is_hab_ringworld = {
 
 # Listing habitats
 merg_is_habitat = {
+	optimize_memory
 	OR = {
 		merg_is_habitat_non_starborn = yes
 		# Starborn: Improved Voidtouched
@@ -126,7 +127,6 @@ merg_is_habitat = {
 }
 
 merg_is_habitat_non_starborn = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_habitat
 		# Planetary Diversity

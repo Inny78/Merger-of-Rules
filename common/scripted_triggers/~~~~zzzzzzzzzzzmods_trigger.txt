@@ -1311,9 +1311,7 @@ AAR_trgr_cntr_playable = {
 		# A Deadly Tempest
 		is_country_type = awakened_gate_builders
 		# ACOT
-		is_country_type = original_empire
-		is_country_type = original_empire_passive
-		is_country_type = original_empire_active
+		is_progenitor_empires = yes
 		# Darkspace
 		is_country_type = ds_nomads
 		# SW:KUAT ANCIENT EMPIRE
@@ -1324,6 +1322,17 @@ AAR_trgr_cntr_playable = {
 		is_country_type = fallen_empire_ev
 		# ZOFE
 		is_zofe_country = yes
+	}
+}
+
+AAR_trgr_ship_SB_valid = {
+	OR = {
+		AND = {
+			is_ship_class = shipclass_starbase
+			fleet = { is_mobile = no }
+			NOT = { is_ship_size = starbase_outpost }
+		}
+		is_orbital_ring = yes
 	}
 }
 
@@ -1440,15 +1449,22 @@ ds_hyperlane_create = {
 }
 
 # Cruel Conquerers
-# WIP
-# cruel_has_shipyard = {
-# 	or = {
-# 		has_starbase_module = shipyard
-# 		has_starbase_module = cruel_pain_ship_labor_module
-# 		has_starbase_module = cruel_suffering_ship_labor_module
-# 		has_starbase_module = cruel_agony_ship_labor_module
-# 	}
-# }
+
+cruel_has_shipyard = {
+	or = {
+		has_starbase_module = shipyard
+		has_starbase_module = cruel_pain_ship_labor_module
+		has_starbase_module = cruel_suffering_ship_labor_module
+		has_starbase_module = cruel_agony_ship_labor_module
+		# ACOT/AOT/Secrets of the Shroud
+		has_starbase_module = acot_starbase_shipyard
+		has_starbase_module = acot_sigma_starbase_shipyard
+		has_starbase_module = acot_phanon_starbase_shipyard
+		has_starbase_module = acot_theta_starbase_shipyard
+		# Gigastructural Engineering & More
+		has_starbase_module = virtual_shipyard_uplink
+	}
+}
 
 cruel_can_trade = {
 	OR = {
@@ -1459,12 +1475,3 @@ cruel_can_trade = {
 		}
 	}
 }
-
-# country_can_purge_pops = {
-# 	OR = {
-# 		has_ethic = ethic_gestalt_consciousness
-# 		is_xenophobe = yes
-# 		has_menace_perk = menp_undertaker		# Unlocked with Crisis Level 1
-# 		is_cruel_empire = yes
-# 	}
-# }

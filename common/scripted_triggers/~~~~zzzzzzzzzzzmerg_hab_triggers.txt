@@ -65,12 +65,7 @@ has_upgraded_capital = {
 	}
 	else_if = {
 		limit = {
-			OR = {
-				is_planet_class = pc_habitat
-				# Workaround for special habitats
-				uses_district_set = habitat
-				uses_district_set = pdplanethab
-			}
+			uses_habitat_capitals = yes
 		}
 		custom_tooltip = {
 			fail_text = "requires_building_hab_capital"
@@ -266,13 +261,7 @@ has_major_upgraded_capital = {
 	}
 	else_if = {
 		limit = {
-			OR = {
-				is_planet_class = pc_habitat
-				# Workaround for special habitats
-				uses_district_set = habitat
-				# Planetary Diversity
-				uses_district_set = pdplanethab
-			}
+			uses_habitat_capitals = yes
 		}
 		custom_tooltip = {
 			fail_text = "requires_building_hab_major_capital"
@@ -460,13 +449,7 @@ has_fully_upgraded_capital = {
 	}
 	else_if = {
 		limit = {
-			OR = {
-				is_planet_class = pc_habitat
-				# Workaround for special habitats
-				uses_district_set = habitat
-				# Planetary Diversity
-				uses_district_set = pdplanethab
-			}
+			uses_habitat_capitals = yes
 		}
 		custom_tooltip = {
 			fail_text = "requires_building_hab_major_capital"
@@ -816,5 +799,14 @@ has_advanced_fort = {
 		# Twinks Mods
 		has_building = building_precinct_house_at_b
 		has_building = building_tw_arcane_hold
+	}
+}
+
+# Gigas
+uses_habitat_capitals = {
+	or = {
+		merg_is_habitat = yes
+		# gigas
+		is_planet_class = pc_giga_elysium
 	}
 }
