@@ -38,14 +38,10 @@ shadowgate_is_military_fleet = {
 				is_ship_class = shipclass_military
 				is_ship_class = shipclass_military_special
 				is_ship_class = shipclass_transport
-				is_ship_size = juggernaut
-				# AOT
-				is_ship_size = ascended_juggernaut
-				is_ship_size = precursor_juggernaut
-				# ACOT
-				is_ship_size = precursor_colossus
-				# ZOFE
-				is_ship_size = fe_goliath
+				AND = {
+					is_ship_class = shipclass_starbase
+					fleet = { is_mobile = yes }
+				}
 			}
 		}
 	}
@@ -111,16 +107,7 @@ can_use_ehof = {
 		is_ship_class = shipclass_observation_station
 		AND = {
 			is_ship_class = shipclass_starbase
-			NOR = {
-				is_ship_size = juggernaut
-				# AOT
-				is_ship_size = ascended_juggernaut
-				is_ship_size = precursor_juggernaut
-				# ACOT
-				is_ship_size = precursor_colossus
-				# ZOFE
-				is_ship_size = fe_goliath
-			}
+			fleet = { is_mobile = yes }
 		}
 	}
 }
@@ -1473,5 +1460,247 @@ cruel_can_trade = {
 			is_gestalt = yes
 			is_megacorp = yes
 		}
+	}
+}
+
+# Guilli's Planetary Modifiers
+# Credits for Tai_mao and Dragonwolf for their amazing work on Giga Diversity 
+gpm_is_planet_class_normal_uninhabitable = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_molten
+		is_planet_class = pc_toxic
+		is_planet_class = pc_frozen
+		is_planet_class = pc_barren
+		is_planet_class = pc_barren_cold
+		# Planetary Diversity
+		is_planet_class = pc_diamond
+		is_planet_class = pc_chthonian
+		is_planet_class = pc_volcanic
+		is_planet_class = pc_subglacial
+		is_planet_class = pc_hydrocarbon
+		is_planet_class = pc_hothouse
+		is_planet_class = pc_iron
+		is_planet_class = pc_carbon
+		# Gigastructural Engineering & More
+		is_planet_class = pc_melted_frozen
+	}
+}
+
+gpm_is_planet_class_molten = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_molten
+		# Planetary Diversity
+		is_planet_class = pc_volcanic
+	}
+}
+
+gpm_is_planet_class_toxic = {
+	OR = {
+		is_planet_class = pc_toxic
+		# Planetary Diversity
+		is_planet_class = pc_acid
+		is_planet_class = pc_methane
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_hothouse
+		is_planet_class = pc_ethane_ocean
+		is_planet_class = pc_sulfur
+		is_planet_class = pc_acid
+		is_planet_class = pc_lanthanide
+		# Gigastructural Engineering & More
+		is_planet_class = pc_red_toxic
+		# Planetary Diversity
+		is_planet_class = pc_ash
+		# Giga Diversity
+		is_planet_class = pc_ll_methane
+		is_planet_class = pc_ll_ash
+		is_planet_class = pc_ll_sulfur
+		is_planet_class = pc_ll_ammonia
+	}
+}
+
+gpm_is_planet_class_frozen = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_frozen
+		# Planetary Diversity
+		is_planet_class = pc_subglacial
+		is_planet_class = pc_hydrocarbon
+	}
+}
+
+gpm_is_planet_class_normal_habitable = {
+	habitable_planet = yes
+}
+
+gpm_is_planet_class_nuked = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_nuked
+		# Planetary Diversity
+		is_planet_class = pc_ash
+		is_planet_class = pc_irradiated
+		is_planet_class = pc_graveyard
+		is_planet_class = pc_eyeball
+		is_planet_class = pc_lanthanide
+		# Gigastructural Engineering & More
+		# is_planet_class = pc_katzenland # Removing it from Giga Diversity as the modifiers mess up with the scripts
+	}
+}
+
+gpm_is_planet_class_gas_giant = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_gas_giant
+		# Planetary Diversity
+		is_planet_class = pc_hot_gas_giant
+		is_planet_class = pc_cold_gas_giant
+		is_planet_class = pc_cloudless_gas_giant
+		is_planet_class = pc_pd_gas_giant_hab
+		# Gigastructural Engineering & More
+		is_planet_class = pc_habitable_gas_giant
+		is_planet_class = pc_giga_maginot_gas_giant		
+	}
+}
+
+gpm_is_planet_class_city = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_city
+		is_planet_class = pc_relic
+		# Planetary Diversity
+		is_planet_class = pc_aquaticcity
+		is_planet_class = pc_ammoniacity
+		is_planet_class = pc_methanecity
+		is_planet_class = pc_ashcity
+		is_planet_class = pc_ecocity
+		is_planet_class = pc_bioforge
+		is_planet_class = pc_biocapital
+		is_planet_class = pc_biofort
+		is_planet_class = pc_technoorganic
+		is_planet_class = pc_archive
+		is_planet_class = pc_necropolis
+		is_planet_class = pc_capitalarc
+		is_planet_class = pc_palacearc
+		is_planet_class = pc_milarc
+		is_planet_class = pc_milarc_relic
+		is_planet_class = pc_corpoarc
+		is_planet_class = pc_sulfurcity
+		is_planet_class = pc_shroudcity
+		is_planet_class = pc_shroudecocity
+		is_planet_class = pc_shroudmilarc
+		is_planet_class = pc_shroudcorpoarc
+		is_planet_class = pc_shroudcapitalarc
+		is_planet_class = pc_shroudpalacearc		
+	}
+}
+
+gpm_is_planet_class_machine = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_machine
+		is_planet_class = pc_ai
+		# Gigastructural Engineering & More
+		is_planet_class = pc_ringworld_machine
+		is_planet_class = pc_giga_planetary_computer
+		# Planetary Diversity
+		is_planet_class = pc_machine_factory
+		is_planet_class = pc_machine_fort
+		is_planet_class = pc_machine_necropolis
+		is_planet_class = pc_machine_capital
+	}
+}
+
+gpm_is_planet_class_hive = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_hive
+		# Planetary Diversity
+		is_planet_class = pc_pdhive1
+		is_planet_class = pc_pdhive2
+		is_planet_class = pc_megaflorahive
+		is_planet_class = pc_bioforge
+		is_planet_class = pc_biofort
+		is_planet_class = pc_biocapital
+		is_planet_class = pc_necrohive
+		is_planet_class = pc_megafloraforge
+		is_planet_class = pc_megaflorafort
+		is_planet_class = pc_megafloracapital
+		# Gigastructural Engineering & More
+		is_planet_class = pc_ringworld_hive	
+	}
+}
+
+gpm_is_planet_class_habitat = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_habitat
+		# Planetary Diversity
+		is_pd_habitat = yes
+		# Gigastructural Engineering & More
+		is_planet_class = pc_interstellar_habitat
+		# More Events Mod
+		is_planet_class = pc_mem_vazuran_habitat
+		# Acquisition of Technology
+		is_planet_class = pc_dm_habitat
+		is_planet_class = pc_ae_habitat
+		is_planet_class = pc_sigma_habitat
+		is_planet_class = pc_sigma_deepspace_habitat
+		# Twinks Atlantean
+		uses_district_set = skypalace
+		# Plentiful Traditions
+		is_planet_class = pc_habitat_robot
+		# Giga Diversity
+		is_planet_class = pc_pd_toxic_hab
+		# Nyto Species Pack
+		is_planet_class = pc_GFnytp_habitis
+	}
+}
+
+gpm_is_planet_class_ringworld = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_cybrex
+		is_planet_class = pc_ringworld_habitable
+		is_planet_class = pc_shattered_ring_habitable
+		# Gigastructural Engineering & More
+		is_planet_class = pc_gigaorbital_ring
+		is_planet_class = pc_interstellar_ringworld_habitable
+		is_planet_class = pc_ringworld_city
+		is_planet_class = pc_squareworld_habitable
+		is_planet_class = pc_giga_penrose_habitable
+		is_planet_class = pc_ringworld_machine
+		is_planet_class = pc_ringworld_hive
+		is_planet_class = pc_giga_maginot_ringworld
+		# Ancient Empire
+		# listed planet types are for colors only, they're all ideal
+		is_planet_class = pc_ag_ringworld_desert
+		is_planet_class = pc_ag_ringworld_arid
+		is_planet_class = pc_ag_ringworld_savannah
+		is_planet_class = pc_ag_ringworld_ocean
+		is_planet_class = pc_ag_ringworld_continental
+		is_planet_class = pc_ag_ringworld_tropical
+		is_planet_class = pc_ag_ringworld_tundra
+		is_planet_class = pc_ag_ringworld_arctic
+		is_planet_class = pc_ag_ringworld_alpine
+		is_planet_class = pc_ag_ringworld_machine
+		is_planet_class = pc_ag_ringworld_city
+		is_planet_class = pc_ag_ringworld_gaia
+		# Warship Girls and MIST species
+		is_planet_class = pc_ringworld_habitable_sh
+		is_planet_class = pc_ringworld_habitable_wsg
+		is_planet_class = pc_ringworld_habitable_swim
+		is_planet_class = pc_ringworld_habitable_water
+		is_planet_class = pc_ringworld_habitable_uf
+		is_planet_class = pc_ringworld_habitable_auto_uf
+		is_planet_class = pc_dyson_ring
+		# Planetary Diversity
+		is_planetary_diversity_ringworld = yes
+		# Darkspace
+		is_planet_class = pc_ancient_ringworld
+		is_planet_class = pc_ringworld_spectrals
+		# ZOFE
+		is_planet_class = pc_utopian_ringworld
 	}
 }

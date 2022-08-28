@@ -75,6 +75,7 @@ merg_is_hab_ringworld = {
 	OR = {
 		is_planet_class = pc_ringworld_habitable
 		is_planet_class = pc_shattered_ring_habitable
+		is_planet_class = pc_cybrex
 		# Gigastructural Engineering & More
 		is_planet_class = pc_gigaorbital_ring
 		is_planet_class = pc_interstellar_ringworld_habitable
@@ -113,6 +114,8 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_ringworld_spectrals
 		# ZOFE
 		is_planet_class = pc_utopian_ringworld
+		# Giga Diversity
+		is_planet_class = pc_giga_maginot_ringworld
 	}
 }
 
