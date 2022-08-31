@@ -621,15 +621,11 @@ has_total_war_cb = {
 				# Vanilla
 				AND = {
 					has_valid_civic = civic_machine_terminator
-					from = {
-						is_synthetic_empire = no
-					}
+					from = { is_synthetic_empire = no }
 				}
 				AND = {
 					has_valid_civic = civic_fanatic_purifiers
-					NOT = {
-						is_same_species = from
-					}
+					NOT = { is_same_species = from }
 				}
 			}
 		}
