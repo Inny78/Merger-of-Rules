@@ -1,0 +1,229 @@
+
+
+namespace = arknights_KWYATA
+planet_event = {
+	id = arknights_KWYATA.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = arknights_KWYATA.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = arknights_KWYATA.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = arknights_KWYATA.5
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = apsr
+planet_event = {
+	id = apsr.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = apsr.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = apsr_sao
+planet_event = {
+	id = apsr_sao.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = apsr_sao.91
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = anomalymod
+planet_event = {
+	id = anomalymod.73
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = expandedrelics
+planet_event = {
+	id = expandedrelics.17
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = sleeper_dormant
+planet_event = {
+	id = sleeper_dormant.12
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = mem_blacksite
+planet_event = {
+	id = mem_blacksite.1000
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = gpm_planet_destruction
+planet_event = {
+	id = gpm_planet_destruction.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = osom_subterranean_change
+planet_event = {
+	id = osom_subterranean_change.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = cruel_pk
+planet_event = {
+	id = cruel_pk.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = cruel_pk.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = cruel_pk.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = cruel_pk.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = cruel_pk.5
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = cruel_pk.6
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = cruel_pk.7
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = ap_wg_crisis
+planet_event = {
+	id = ap_wg_crisis.12
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = sofe_crisis
+planet_event = {
+	id = sofe_crisis.9800
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = aot_planetary_shields_event
+planet_event = {
+	id = aot_planetary_shields_event.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = giga_paluush
+planet_event = {
+	id = giga_paluush.103
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = giga_paluush.105
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = giga_habcap
+planet_event = {
+	id = giga_habcap.008
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = maginot_destruction
+planet_event = {
+	id = maginot_destruction.1002
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
