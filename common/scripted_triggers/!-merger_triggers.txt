@@ -238,9 +238,12 @@ merg_is_hive_world = {
 		# Gigastructural Engineering & More
 		is_planet_class = pc_ringworld_hive
 		# Planetary Diversity
+		is_planet_class = pc_hivetidallylocked
 		is_planet_class = pc_pdhive1
 		is_planet_class = pc_pdhive2
-		is_planet_class = pc_necrohive
+		is_planet_class = pc_bioforge
+		is_planet_class = pc_biocapital
+		is_planet_class = pc_biofort
 	}
 }
 
@@ -263,5 +266,22 @@ merg_is_gas_giant = {
 		is_planet_class = pc_hot_gas_giant
 		is_planet_class = pc_cloudless_gas_giant
 		is_planet_class = pc_cold_gas_giant
+	}
+}
+
+merg_is_machine_world = {
+	OR = {
+		is_planet_class = pc_machine
+		# Planetary Diversity
+		is_planet_class = pc_machinetidallylocked 
+		is_planet_class = pc_machine_factory 
+		is_planet_class = pc_machine_necropolis
+		is_planet_class = pc_machine_factory
+		is_planet_class = pc_machine_fort
+		is_planet_class = pc_machine_capital
+		# Gigastructural Engineering & More
+		is_planet_class = pc_ringworld_machine
+		# Origin - F.C.S.S & M.C.S.S
+		is_planet_class = pc_awaken_ai
 	}
 }

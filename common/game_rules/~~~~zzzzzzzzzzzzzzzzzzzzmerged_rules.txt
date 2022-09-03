@@ -297,11 +297,7 @@ species_can_live_on_planet = {
 	exists = root
 	NAND = {
 		root = {
-			OR = {
-				is_planet_class = pc_machine
-				# Origin - F.C.S.S & M.C.S.S
-				is_planet_class = pc_awaken_ai
-			}
+			merg_is_machine_world = yes
 		}
 		NOR = {
 			has_trait = trait_machine_unit
