@@ -3841,6 +3841,7 @@ merg_is_forbidden_target = {
 	OR = {
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target		# add this to your planet to dynamically exclude it.
+		has_planet_flag = cant_target_this_planet
 		merg_is_dense_star = yes
 		merg_is_empty_space = yes
 		# MEM

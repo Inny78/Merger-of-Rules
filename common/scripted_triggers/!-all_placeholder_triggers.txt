@@ -7,6 +7,7 @@ can_fill_holosphere_ruler_job = { always = no }
 cohesive_system = { always = no }
 compound_cluster = { always = no }
 everchanging_system = { always = no }
+giga_uses_habitat_capitals = { always = no }
 has_apsr_modifiers = { always = no }
 has_artificial_wombs = { always = no }
 has_reproductive_politics = { always = no }

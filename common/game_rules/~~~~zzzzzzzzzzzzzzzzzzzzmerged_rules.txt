@@ -652,6 +652,7 @@ can_release_vassal_from_species = {
 
 # can_generate_army_from_species
 # can_modify_species
+
 #This = country, suject
 #Root = country, overlord
 #From = target solar system

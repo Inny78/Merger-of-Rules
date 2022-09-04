@@ -807,6 +807,6 @@ uses_habitat_capitals = {
 	or = {
 		merg_is_habitat = yes
 		# gigas
-		is_planet_class = pc_giga_elysium
+		giga_uses_habitat_capitals = yes
 	}
 }

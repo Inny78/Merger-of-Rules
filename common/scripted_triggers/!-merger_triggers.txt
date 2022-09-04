@@ -1,5 +1,6 @@
 # Merger of Rules scripted triggers
 # These triggers are also meant as a library for modders who want to reuse them in their own mods.
+
 merg_is_standard_empire = {
 	optimize_memory
 	OR = {

@@ -107,7 +107,7 @@ can_use_ehof = {
 		is_ship_class = shipclass_observation_station
 		AND = {
 			is_ship_class = shipclass_starbase
-			fleet = { is_mobile = yes }
+			fleet = { is_mobile = no }
 		}
 	}
 }
@@ -262,6 +262,11 @@ is_giga_habitat = {
 	OR = {
 		merg_is_habitat = yes
 		is_planet_class = pc_flat_world
+		is_planet_class = pc_gigaorbital_ring
+		is_planet_class = pc_giga_elysium
+		is_planet_class = pc_giga_frameworld
+		is_planet_class = pc_giga_orbital
+		is_planet_class = pc_gigaorbital_ring_ruined
 	}
 }
 
@@ -539,6 +544,23 @@ giga_can_be_war_planet = {
 		is_planet_class = pc_frozen
 		# Planetary Diversity
 		is_planet_class = pc_hothouse
+	}
+}
+
+giga_planet_no_farming = {
+	OR = {
+		is_planet_class = pc_machine
+		# Planetary Diversity
+		is_planet_class = pc_machinetidallylocked 
+		is_planet_class = pc_machine_factory 
+		is_planet_class = pc_machine_necropolis
+		is_planet_class = pc_machine_factory
+		is_planet_class = pc_machine_fort
+		is_planet_class = pc_machine_capital
+		# Gigastructural Engineering & More
+		is_planet_class = pc_ringworld_machine
+		# Origin - F.C.S.S & M.C.S.S
+		is_planet_class = pc_awaken_ai
 	}
 }
 
