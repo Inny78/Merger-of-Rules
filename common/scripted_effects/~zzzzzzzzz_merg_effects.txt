@@ -20,6 +20,9 @@ remove_capital_building = {
 		building_ancient_palace_at = { remove_building = building_ancient_palace_at }
 		# Twinks Kaldorei
 		building_nightelf_palace = { remove_building = building_ancient_palace_at }
+		# Twinks Eternal
+		building_eternal_nexus_ai = { remove_building = building_eternal_nexus_ai }
+		building_eternal_palace = { remove_building = building_eternal_palace }
 		# Special Colonies Overhaul
 		building_SCO_resort_system_capital = { remove_building = building_SCO_resort_system_capital }
 		building_SCO_slave_system_capital = { remove_building = building_SCO_slave_system_capital }

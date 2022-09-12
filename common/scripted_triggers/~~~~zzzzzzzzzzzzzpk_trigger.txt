@@ -3770,7 +3770,115 @@ can_destroy_planet_with_PLANET_KILLER_GRAYGOO = {
 	}	
 }
 
+# Twinks Eternals
+can_destroy_planet_with_EE_PLANETKILLER_GAIA = {
+	custom_tooltip = {
+		fail_text = is_not_hostile
+		OR = {
+			AND = {
+				#exists = space_owner
+				space_owner = {
+					OR = {
+						is_same_value = from.owner
+						is_at_war_with = from.owner
+						is_country_type = swarm
+						is_country_type = extradimensional
+						is_country_type = extradimensional_2
+						is_country_type = extradimensional_3
+						is_country_type = ai_empire
+					}
+				}
+			}
+			AND = { # Ownelerless
+				NOT = {
+					exists = space_owner
+				}
+				NOT = {
+					is_at_war_with = from.owner
+				}
+			}
+			AND = { # primitive
+				exists = space_owner
+				exists = owner
+				owner = {
+					is_primitive = yes
+				}
+				space_owner = {
+					OR = {
+						is_at_war_with = from.owner
+						is_country_type = swarm
+						is_country_type = extradimensional
+						is_country_type = extradimensional_2
+						is_country_type = extradimensional_3
+						is_country_type = ai_empire
+					}
+				}
+			}
+		}
+		NOT = {
+			is_owned_by = event_target:origin_crisis_country		
+		}
+		NOT = { is_star = yes }
+		NOT = { is_planet_class = pc_asteroid }
+		merg_is_forbidden_target = no
+	}
+}
 
+
+can_destroy_planet_with_EE_PLANETKILLER_BARREN = {
+	custom_tooltip = {
+		fail_text = is_not_hostile
+		OR = {
+			AND = {
+				#exists = space_owner
+				space_owner = {
+					OR = {
+						is_same_value = from.owner
+						is_at_war_with = from.owner
+						is_country_type = swarm
+						is_country_type = extradimensional
+						is_country_type = extradimensional_2
+						is_country_type = extradimensional_3
+						is_country_type = ai_empire
+					}
+				}
+			}
+			AND = { # Ownelerless
+				NOT = {
+					exists = space_owner
+				}
+				NOT = {
+					is_at_war_with = from.owner
+				}
+			}
+			AND = { # primitive
+				exists = space_owner
+				exists = owner
+				owner = {
+					is_primitive = yes
+				}
+				space_owner = {
+					OR = {
+						is_at_war_with = from.owner
+						is_country_type = swarm
+						is_country_type = extradimensional
+						is_country_type = extradimensional_2
+						is_country_type = extradimensional_3
+						is_country_type = ai_empire
+					}
+				}
+			}
+		}
+		NOT = {
+			is_owned_by = event_target:origin_crisis_country		
+		}
+		NOT = { is_star = yes }
+		NOT = { is_planet_class = pc_asteroid }
+		merg_is_forbidden_target = no
+	}
+}
+
+# ===========================================================================================================================
 
 # PK Triggers here
 # Vanilla triggers

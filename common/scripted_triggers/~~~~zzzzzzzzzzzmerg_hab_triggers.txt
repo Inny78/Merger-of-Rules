@@ -98,6 +98,9 @@ has_upgraded_capital = {
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
+				# Twinks Eternal
+				has_building = building_eternal_nexus_ai
+				has_building = building_eternal_palace
 			}
 		}
 	}
@@ -152,6 +155,8 @@ has_upgraded_capital = {
 				has_building = building_dm_galactic_machine_capital
               	has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
+				# Twinks Eternal
+				has_building = building_eternal_nexus_ai
 			}
 		}
 	}
@@ -183,6 +188,8 @@ has_upgraded_capital = {
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
+				# Twinks Eternal
+				has_building = building_eternal_palace
 				# galacot
 				has_building = building_dm_galactic_capital
                 has_building = building_ae_galactic_capital
@@ -291,6 +298,9 @@ has_major_upgraded_capital = {
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
+				# Twinks Eternal
+				has_building = building_eternal_palace
+				has_building = building_eternal_nexus_ai
 			}
 		}
 	}
@@ -343,6 +353,8 @@ has_major_upgraded_capital = {
 				has_building = building_dm_galactic_machine_capital
            	    has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
+				# Twinks Eternal
+				has_building = building_eternal_nexus_ai
 			}
 		}
 	}
@@ -373,6 +385,8 @@ has_major_upgraded_capital = {
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
+				# Twinks Eternal
+				has_building = building_eternal_palace
 				# galacot
 				has_building = building_dm_galactic_capital
                	has_building = building_ae_galactic_capital
@@ -481,6 +495,9 @@ has_fully_upgraded_capital = {
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
+				# Twinks Eternal
+				has_building = building_eternal_nexus_ai
+				has_building = building_eternal_palace
 			}
 		}
 	}
@@ -530,6 +547,8 @@ has_fully_upgraded_capital = {
 				has_building = building_dm_galactic_machine_capital
                 has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
+				# Twinks Eternal
+				has_building = building_eternal_nexus_ai
 			}
 		}
 	}
@@ -557,6 +576,8 @@ has_fully_upgraded_capital = {
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
+				# Twinks Eternal
+				has_building = building_eternal_palace
 				# galacot
 				has_building = building_dm_galactic_capital
    	            has_building = building_ae_galactic_capital
@@ -611,6 +632,8 @@ has_enigmatic_capital = {
 				has_building = building_dm_galactic_machine_capital
                 has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
+				# Twinks Eternal
+				has_building = building_eternal_nexus_ai
 			}
 		}
 	}
@@ -629,6 +652,8 @@ has_enigmatic_capital = {
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
+				# Twinks Eternal
+				has_building = building_eternal_palace
 				# galacot
 				has_building = building_dm_galactic_capital
                 has_building = building_ae_galactic_capital
@@ -676,6 +701,8 @@ has_ascended_capital = {
 				# galacot
                 has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
+				# Twinks Eternal
+				has_building = building_eternal_nexus_ai
 			}
 		}
 	}
@@ -693,6 +720,8 @@ has_ascended_capital = {
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
+				# Twinks Eternal
+				has_building = building_eternal_palace
 				# galacot
                 has_building = building_ae_galactic_capital
 				has_building = building_stellarite_galactic_capital
@@ -705,7 +734,7 @@ has_ascended_capital = {
 	}	
 }
 
-# AOT/Twinks/galacot, minus the abandoned Eternals
+# AOT/Twinks/galacot/Eternals
 has_stellarite_capital = {
 	if = {
 		limit = {

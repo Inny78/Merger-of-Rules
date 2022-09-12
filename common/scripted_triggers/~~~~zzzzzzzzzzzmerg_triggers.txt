@@ -324,8 +324,6 @@ is_country_type_with_subjects = {
 		is_country_type = default_ev
 		# ACOT
 		is_progenitor_empires = yes
-		# Twinks Eternal Empire
-		is_country_type = eternal_empire
 	}
 }
 
@@ -339,8 +337,6 @@ has_comms_with_alien_empire = {
 			# ACOT
 			is_progenitor_empires = yes
 			is_country_type = sofe_light_seeker
-			# Twinks Eternal Empire
-			is_country_type = eternal_empire
 		}
 	}
 }
@@ -359,8 +355,6 @@ has_comms_with_alien_civilization = {
 			# ACOT
 			is_progenitor_empires = yes
 			is_country_type = sofe_light_seeker
-			# Twinks Eternal Empire
-			is_country_type = eternal_empire
 		}
 	}
 }
@@ -605,8 +599,6 @@ has_total_war_cb = {
 				is_fallen_empire = yes
 				# ACOT
 				is_progenitor_empires = yes
-				# Twinks Eternal Empire
-				is_country_type = eternal_empire
 			}
 			OR = {
 				merg_is_awakened_fe = yes
@@ -616,8 +608,6 @@ has_total_war_cb = {
 				has_valid_civic = civic_infestation
 				# ACOT
 				is_progenitor_empires = yes
-				# Twinks Eternal Empire
-				is_country_type = eternal_empire
 				# Vanilla
 				AND = {
 					has_valid_civic = civic_machine_terminator
@@ -635,8 +625,6 @@ has_total_war_cb = {
 				merg_is_default_empire = yes
 				# ACOT
 				is_progenitor_empires = yes
-				# Twinks Eternal Empire
-				is_country_type = eternal_empire
 			}
 			NOR = {
 				is_country_type = awakened_fallen_empire
@@ -763,8 +751,6 @@ planet_can_be_liberated_from_owner = {
 			is_country_type = lost_empire
 			# ACOT
 			is_progenitor_empires = yes
-			# Twinks Eternal Empire
-			is_country_type = eternal_empire
 		}
 	}
 }

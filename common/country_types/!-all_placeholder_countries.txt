@@ -22,7 +22,6 @@ compound_empire = { ai = { enabled = no } }
 default_ev = { ai = { enabled = no } }
 dormant_aeternum = { ai = { enabled = no } }
 ds_nomads = { ai = { enabled = no } }
-eternal_empire = { ai = { enabled = no } }
 ev_leviathans_crisis = { ai = { enabled = no } }
 fallen_empire_ev = { ai = { enabled = no } }
 katzenartig_imperium = { ai = { enabled = no } }
