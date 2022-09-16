@@ -3956,6 +3956,8 @@ merg_is_forbidden_target = {
 		is_planet_class = pc_mem_synthetic_sun
 		# ACOT
 		is_planet_class = pc_acot_enigmopolis
+		# Secrets of the Shroud
+		is_planet_class = pc_acot_soulsphere
 	}
 }
 
