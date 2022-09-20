@@ -2162,8 +2162,8 @@ has_no_non_gate_megastructure = {
 	OR = {
 		has_any_megastructure = no
 		NOT = {
-			any_system_megastructure = {
-				# exclude gateways
+			has_star_flag = ring_world_built
+			any_system_megastructure = { # exclude gateways
 				OR = {
 					# Merger
 					merg_is_vanilla_type = yes

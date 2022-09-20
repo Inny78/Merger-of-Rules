@@ -230,6 +230,8 @@ merg_is_void_system = {
 		is_star_class = sc_void_dummy
 		# Darkspace
 		is_star_class = sc_gc
+		# Gigas
+		is_star_class = sc_blokkat_stripmined
 	}
 }
 

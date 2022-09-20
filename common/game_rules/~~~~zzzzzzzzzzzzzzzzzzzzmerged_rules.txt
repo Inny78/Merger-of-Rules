@@ -1065,6 +1065,14 @@ can_terraform_planet = {
 			is_lithoid_devouring_swarm = no
 		}
 	}
+	custom_tooltip = {
+		fail_text = requires_not_relentless_industrialists_situation
+		NOT = {
+			any_targeting_situation = {
+				is_situation_type = relentless_industrialists_situation
+			}
+		}
+	}
 	# Planetary Diversity
 	custom_tooltip = {
 		fail_text = "requires_actor_not_pdtol"
@@ -1624,7 +1632,7 @@ can_species_be_assembled = {
 			# flourishing plantoids
 			else_if = {
 				limit = {
-					has_trait = trait_plantoid_budding
+					has_budding_trait = yes
 				}
 				root = {
 					any_owned_species = {
@@ -1721,24 +1729,19 @@ can_species_be_assembled = {
 				}
 			}
 			# Vanilla
-			else_if = {
-				limit = {
-					root.owner = {
-						has_civic = civic_permanent_employment
-					}
-				}
-				root = {
-					has_building = building_posthumous_employment_center
-				}
-			}
 			else = {
 				OR = {
 					root = {
 						merg_has_cloning_building = yes
 						# ANZ Advanced Cloning
-						NOT = {
-							has_modifier = planet_cloning_limits
+						NOT = { has_modifier = planet_cloning_limits }
+						has_modifier = tiyanki_trophy
+						owner = { has_modifier = syamelles_curse }
+						AND = {
+							has_building = building_posthumous_employment_center
+							owner = { has_civic = civic_permanent_employment }
 						}
+						has_planet_flag = can_organic_assemble_flag #for mod compatibility
 					}
 					# The DAL Species Mod
 					is_archetype = DATEALIVE
@@ -2033,6 +2036,7 @@ has_full_sensor_range = {
 # can_have_robot_pops
 # can_stop_purge_pop_manually
 # can_purge_pop_manually
+
 # fleet_uses_templates
 # this = starbase, megastructure or planet
 can_orbitable_repair_ships = {
@@ -3800,11 +3804,17 @@ can_planet_receive_auto_migration = {
 	}
 }
 
+# can_gene_mod_habitability
+# can_add_advanced_traits
+# can_add_negative_traits_organic
+# can_remove_positive_traits_organic
+# can_modify_organic_portraits
 # can_have_first_contact
 # can_use_envoys_to_raise_imperial_authority
 # can_use_envoys_to_lower_imperial_authority
 # should_planetary_automate
 # can_fill_drone_job
+
 #this/root = pop
 #checked if job's possible_precalc = can_fill_worker_job
 can_fill_worker_job = {
@@ -4007,6 +4017,22 @@ can_dismiss_leader = {
 		owner = {
 			NOT = {
 				has_valid_civic = civic_feudal_realm
+			}
+		}
+	}
+	if = {
+		limit = {
+			leader_class = admiral
+			is_idle = no
+		}
+		custom_tooltip = {
+			fail_text = "requires_fleet_control"
+			exists = fleet
+			fleet = {
+				controller = {
+					is_same_value = prev.owner
+					is_same_value = prevprev.owner
+				}
 			}
 		}
 	}

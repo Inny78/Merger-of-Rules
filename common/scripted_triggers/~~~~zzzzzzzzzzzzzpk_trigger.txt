@@ -409,6 +409,88 @@ can_destroy_planet_with_PLANET_KILLER_DELUGE = {
 	}
 }
 
+can_destroy_planet_with_PLANET_KILLER_TOXIFIER = {
+	custom_tooltip = {
+		fail_text = is_habitable_non_artificial
+		OR = {
+			is_colonizable = yes
+			is_colony = yes
+		}
+		merg_is_forbidden_target = no
+		is_artificial = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOT = {
+			# AOT
+			has_active_building = building_phanon_psg
+		}
+	}
+	OR = {
+		custom_tooltip = {
+			text = is_not_hostile_cracker
+			OR = {
+				AND = {
+					exists = space_owner
+					space_owner = {
+						OR = {
+							is_at_war_with = from.owner
+							is_country_type = swarm
+							is_country_type = extradimensional
+							is_country_type = extradimensional_2
+							is_country_type = extradimensional_3
+							is_country_type = ai_empire
+						}
+					}
+				}
+				AND = { # colony
+					exists = owner
+					owner = {
+						OR = {
+							is_at_war_with = from.owner
+							is_country_type = swarm
+							is_country_type = extradimensional
+							is_country_type = extradimensional_2
+							is_country_type = extradimensional_3
+							is_country_type = ai_empire
+						}
+					}
+				}
+				AND = { # primitive
+					exists = space_owner
+					exists = owner
+					owner = {
+						is_primitive = yes
+					}
+					space_owner = {
+						OR = {
+							is_at_war_with = from.owner
+							is_country_type = swarm
+							is_country_type = extradimensional
+							is_country_type = extradimensional_2
+							is_country_type = extradimensional_3
+							is_country_type = ai_empire
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = is_not_owned_or_claimed
+			NOR = {
+				exists = owner
+				exists = space_owner
+			}
+		}
+		custom_tooltip = {
+			text = is_uninhabited_within_borders
+			exists = space_owner
+			space_owner = { is_same_value = from.owner }
+			is_colony = no
+		}
+	}
+}
+
 # Empire of Eveelution
 can_destroy_planet_with_PLANET_KILLER_EOE = {
 	custom_tooltip = {
@@ -3570,6 +3652,21 @@ can_destroy_planet_with_PLANET_KILLER_BLOKKAT_GENERATOR = {
 	}
 }
 
+can_destroy_planet_with_PLANET_KILLER_BLOKKAT_HARVESTER = {
+	custom_tooltip = {
+		fail_text = "needs_regular_star_blokkat_harvest"
+		is_star = yes
+		solar_system = {
+			systems_blokkats_wont_stripmine = no
+			merg_is_void_system = no
+			NOR = {
+				is_star_class = sc_blokkat_stripmined
+				is_star_class = sc_empty_space
+			}
+		}
+	}
+}
+
 # Planetary Diversity
 can_destroy_planet_with_PLANET_KILLER_METHANE_FREEZE_RAY = {
 	custom_tooltip = {
@@ -3658,7 +3755,7 @@ can_destroy_planet_with_PLANET_KILLER_PD_NECRO_RAY = {
 	}
 	custom_tooltip = {
 		fail_text = is_not_necro
-		NOT = { is_planet_class = pc_pd_necro }
+		is_pd_necro_world = no
 	}
 	if = {
 		limit = { is_inside_border = from.owner }
@@ -3949,7 +4046,6 @@ merg_is_forbidden_target = {
 	OR = {
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target		# add this to your planet to dynamically exclude it.
-		has_planet_flag = cant_target_this_planet
 		merg_is_dense_star = yes
 		merg_is_empty_space = yes
 		# MEM
@@ -3958,6 +4054,9 @@ merg_is_forbidden_target = {
 		is_planet_class = pc_acot_enigmopolis
 		# Secrets of the Shroud
 		is_planet_class = pc_acot_soulsphere
+		# ACOT/Gigas
+		has_planet_flag = cant_target_this_planet
+		has_planet_flag = cant_build_here
 	}
 }
 
