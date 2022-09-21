@@ -1750,6 +1750,10 @@ can_species_be_assembled = {
 					is_archetype = SHENHAI
 					# Star Wars: UnknownWorld Shipgirls Story
 					is_archetype = STARSHIPGIRLS
+					# Misc
+					is_archetype = NANITES_CROP
+					is_archetype = UNITED_FLEET
+					is_archetype = ASCENDED
 				}
 			}
 			# Special Colonies Overhaul
@@ -3382,17 +3386,19 @@ can_crossbreed_species = {
 		}
 	}
 	# Warship Girls R And MIST Species
-	NAND = {
-		has_warship_girls = yes
-		any_owned_species = {
-			has_wg_traits = yes
+	any_owned_species = {
+		OR = {
+			has_wg_traits = no
+			is_archetype = NANITES_CROP
+			is_archetype = UNITED_FLEET 
 		}
 	}
 	root = {
-		NAND = {
-			has_warship_girls = yes
-			any_owned_species = {
-				has_wg_traits = yes
+		any_owned_species = {
+			OR = {
+				has_wg_traits = no
+				is_archetype = NANITES_CROP
+				is_archetype = UNITED_FLEET 
 			}
 		}
 	}

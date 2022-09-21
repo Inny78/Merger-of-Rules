@@ -48,3 +48,7 @@ NYTO = { uses_modifiers = no }
 HOLOARCH = { uses_modifiers = no }
 # Cryogenesis Unofficial Species Pack
 sm_ELEMENTAL = { uses_modifiers = no }
+# Misc
+NANITES_CROP = { uses_modifiers = no }
+UNITED_FLEET = { uses_modifiers = no }
+ASCENDED = { uses_modifiers = no }

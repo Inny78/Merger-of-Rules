@@ -839,5 +839,7 @@ uses_habitat_capitals = {
 		merg_is_habitat = yes
 		# gigas
 		giga_uses_habitat_capitals = yes
+		#misc compat
+		has_planet_flag = giga_habitat_capital_compat
 	}
 }
