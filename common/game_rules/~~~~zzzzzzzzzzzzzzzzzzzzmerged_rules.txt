@@ -1729,12 +1729,10 @@ can_species_be_assembled = {
 				}
 			}
 			# Vanilla
-			else = {
+			else_if = {
 				OR = {
 					root = {
 						merg_has_cloning_building = yes
-						# ANZ Advanced Cloning
-						NOT = { has_modifier = planet_cloning_limits }
 						has_modifier = tiyanki_trophy
 						owner = { has_modifier = syamelles_curse }
 						AND = {
@@ -1742,7 +1740,14 @@ can_species_be_assembled = {
 							owner = { has_civic = civic_permanent_employment }
 						}
 						has_planet_flag = can_organic_assemble_flag #for mod compatibility
+						# ANZ Advanced Cloning
 					}
+				}
+				NOT = { root = { has_modifier = planet_cloning_limits } }
+			}
+			# MISC
+			else = {
+				OR = {
 					# The DAL Species Mod
 					is_archetype = DATEALIVE
 					# Warship Girls R and MIST species

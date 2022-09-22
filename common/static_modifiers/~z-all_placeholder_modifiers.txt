@@ -10,3 +10,4 @@ pdmethaneatmosphere = { }
 pdsulfuratmosphere = { }
 planet_active_worm = { }
 ravenous_locusts = { }
+planet_cloning_limits = { }
