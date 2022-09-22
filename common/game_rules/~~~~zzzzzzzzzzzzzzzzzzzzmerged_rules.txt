@@ -1730,8 +1730,8 @@ can_species_be_assembled = {
 			}
 			# Vanilla
 			else_if = {
-				OR = {
-					root = {
+				root = {
+					OR = {
 						merg_has_cloning_building = yes
 						has_modifier = tiyanki_trophy
 						owner = { has_modifier = syamelles_curse }
@@ -1740,10 +1740,10 @@ can_species_be_assembled = {
 							owner = { has_civic = civic_permanent_employment }
 						}
 						has_planet_flag = can_organic_assemble_flag #for mod compatibility
-						# ANZ Advanced Cloning
 					}
+					# ANZ Advanced Cloning
+					NOT = { has_modifier = planet_cloning_limits }
 				}
-				NOT = { root = { has_modifier = planet_cloning_limits } }
 			}
 			# MISC
 			else = {
