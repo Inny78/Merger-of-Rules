@@ -29,24 +29,6 @@ shadowgate_is_ae = {
 	}
 }
 
-# Making Shadowgate acknowledge Starbase Ships.
-shadowgate_is_military_fleet = {
-	OR = {
-		has_fleet_flag = shadowgate_military_fleet
-		any_owned_ship = {
-			OR = {
-				is_ship_class = shipclass_military
-				is_ship_class = shipclass_military_special
-				is_ship_class = shipclass_transport
-				AND = {
-					is_ship_class = shipclass_starbase
-					fleet = { is_mobile = yes }
-				}
-			}
-		}
-	}
-}
-
 shadowgate_aggressor_is_valid_cb_target = {
 	NOR = {
 		is_in_federation_with = root.from

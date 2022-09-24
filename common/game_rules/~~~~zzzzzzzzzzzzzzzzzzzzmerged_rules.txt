@@ -4055,6 +4055,11 @@ can_dismiss_leader = {
 		}
 		is_special_affection_leader = no
 	}
+	# Civil Wars
+	custom_tooltip = {
+		fail_text = "cannot_fire_leader_during_crisis"
+		NOT = { has_leader_flag = cannot_be_fired }
+	}
 }
 
 # From = country, country that tries to connect using relay network
