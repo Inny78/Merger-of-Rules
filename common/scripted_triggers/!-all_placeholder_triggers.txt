@@ -22,6 +22,7 @@ is_cruel_empire = { always = no }
 is_cruel_mega = { always = no }
 is_civic_materialist = { always = no }
 is_civic_militarist = { always = no }
+is_giga_habitat = { always = no }
 is_khan_country_type = { always = no }
 is_pd_arcology = { always = no }
 is_pd_exotic = { always = no }

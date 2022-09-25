@@ -275,7 +275,7 @@ decision_boost_market_nomination = {
 	}
 }
 
-# Checks is_gestalt
+# check is_gestalt
 decision_introduce_chaos = {
 	owned_planets_only = yes
 	icon = decision_victorious_army

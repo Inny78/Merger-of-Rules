@@ -240,18 +240,6 @@ is_giga_ringworld = {
 	}
 }
 
-is_giga_habitat = {
-	OR = {
-		merg_is_habitat = yes
-		is_planet_class = pc_flat_world
-		is_planet_class = pc_gigaorbital_ring
-		is_planet_class = pc_giga_elysium
-		is_planet_class = pc_giga_frameworld
-		is_planet_class = pc_giga_orbital
-		is_planet_class = pc_gigaorbital_ring_ruined
-	}
-}
-
 mega_blokkats_wont_stripmine = {
 	OR = {
 		is_megastructure_type = blokkat_gigarelay_2

@@ -143,6 +143,11 @@ merg_is_hab_type = {
 		is_megastructure_type = interstellar_habitat_3
 		is_megastructure_type = interstellar_habitat_4
 		is_megastructure_type = interstellar_habitat_5
+		is_megastructure_type = stellar_ring_habitat_1
+		is_megastructure_type = stellar_ring_habitat_2
+		is_megastructure_type = stellar_ring_habitat_3
+		is_megastructure_type = stellar_ring_habitat_ruined
+		is_megastructure_type = stellar_ring_habitat_restored
 		# Nanite Machines & Distant Stars Overhaul
 		is_megastructure_type = nanite_habitat_0
 		# Nyto Species Pack
@@ -1222,6 +1227,11 @@ merg_has_hab_type = {
 		has_megastructure = interstellar_habitat_3
 		has_megastructure = interstellar_habitat_4
 		has_megastructure = interstellar_habitat_5
+		has_megastructure = stellar_ring_habitat_1
+		has_megastructure = stellar_ring_habitat_2
+		has_megastructure = stellar_ring_habitat_3
+		has_megastructure = stellar_ring_habitat_ruined
+		has_megastructure = stellar_ring_habitat_restored
 		# Nanite Machines & Distant Stars Overhaul
 		has_megastructure = nanite_habitat_0
 		# Nyto Species Pack

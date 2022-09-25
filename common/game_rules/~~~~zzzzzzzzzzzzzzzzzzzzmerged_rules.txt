@@ -1003,6 +1003,7 @@ can_take_hostile_actions = {
 # can_declare_war
 
 # can_colonize_planet
+
 #Root = country
 #This = planet
 can_colonize_outside_borders = {
@@ -1588,9 +1589,7 @@ can_species_be_assembled = {
 			# Hives can only clone drones
 			if = {
 				limit = {
-					root.owner = {
-						is_hive_empire = yes
-					}
+					root.owner = { is_hive_empire = yes }
 				}
 				AND = {
 					OR = {
@@ -1606,9 +1605,7 @@ can_species_be_assembled = {
 			}
 			else_if = {
 				limit = {
-					root = {
-						has_modifier = tiyanki_trophy
-					}
+					root = { has_modifier = tiyanki_trophy }
 				}
 			}
 			# Expanded Traits, Civics, Pops, and More
@@ -1676,9 +1673,7 @@ can_species_be_assembled = {
 			# Plentiful Traditions - Extra Perks
 			else_if = {
 				limit = {
-					root.owner = {
-						has_ascension_perk = ap_total_assimilation
-					}
+					root.owner = { has_ascension_perk = ap_total_assimilation }
 				}
 				has_trait = trait_plentiful_traditions_pt_cocoon
 			}
@@ -2450,6 +2445,25 @@ system_blocks_sensors = {
 				is_star_class = sc_p_purple
 				is_star_class = sc_p_green
 				is_star_class = sc_p_red
+				# Nebula
+				is_star_class = sc_p_purple
+				is_star_class = sc_p_green
+				is_star_class = sc_p_red
+				is_star_class = sc_nova_1
+				is_star_class = sc_nova_2
+				is_star_class = sc_w_azure
+				is_star_class = sc_w_red
+				is_star_class = sc_w_green
+				is_star_class = sc_w_purple
+				is_star_class = sc_lbv_blue
+				is_star_class = sc_lbv_green
+				is_star_class = sc_lbv_red
+				# Protoplanetary Disks
+				is_star_class = sc_protostar
+				is_star_class = sc_tt_red
+				is_star_class = sc_tt_orange
+				is_star_class = sc_tt_white
+				is_star_class = sc_ae
 			}
 			ROOT = {
 				NOT = {
