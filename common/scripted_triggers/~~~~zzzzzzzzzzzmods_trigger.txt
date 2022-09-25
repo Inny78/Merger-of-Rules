@@ -1242,6 +1242,9 @@ ag_is_habitat = {
 		is_pd_habitat = yes
 		# Gigastructural Engineering & More
 		is_planet_class = pc_interstellar_habitat
+		is_planet_class = pc_giga_elysium
+		is_planet_class = pc_ehof_habitat
+		is_planet_class = pc_giga_orbital
 		# More Events Mod
 		is_planet_class = pc_mem_vazuran_habitat
 		# Acquisition of Technology
