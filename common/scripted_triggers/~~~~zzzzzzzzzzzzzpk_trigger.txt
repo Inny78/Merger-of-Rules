@@ -4122,5 +4122,7 @@ merg_is_shielded = {
 		is_planet_class = pc_habitat_shielded
 		# AOT
 		has_active_building = building_phanon_psg
+		# Ancient Empire
+		is_planet_class = pc_ringworld_shielded
 	}
 }

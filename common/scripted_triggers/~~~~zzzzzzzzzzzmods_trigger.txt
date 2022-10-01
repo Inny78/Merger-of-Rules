@@ -1699,3 +1699,32 @@ gpm_is_planet_class_ringworld = {
 		is_planet_class = pc_utopian_ringworld
 	}
 }
+
+# Scripted Trigger Undercoat
+is_empire = { # merg_is_standard_empire
+	OR = {
+		is_country_type = default
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		# ZOFE
+		is_zofe_country = yes
+		# The Empty Vagrant
+		is_country_type = default_ev
+		is_country_type = fallen_empire_ev
+		is_country_type = awakened_fallen_empire_ev
+		# Darkspace
+		is_country_type = ds_nomads
+	}
+}
+
+is_playable = { # merg_is_default_empire
+	OR = {
+		is_country_type = default
+		# ZOFE
+		is_zofe_country = yes
+		# The Empty Vagrant
+		is_country_type = default_ev
+		# Darkspace
+		is_country_type = ds_nomads
+	}
+}
