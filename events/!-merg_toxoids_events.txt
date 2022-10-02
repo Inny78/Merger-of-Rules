@@ -24,6 +24,13 @@ planet_event = {
 			merg_is_habitat = yes
 			merg_is_hab_ringworld = yes
 			merg_is_forbidden_target = yes
+			is_pd_shroud_world = yes
+			is_pd_machine = yes
+			is_pd_hive_world = yes
+			is_pd_unique = yes
+			is_artificial = yes
+			is_pd_exotic = yes
+			habitable_structure = yes
 		}
 		exists = owner
 		owner = { is_relentless_industrialist_empire = yes }
