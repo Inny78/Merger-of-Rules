@@ -29,7 +29,7 @@ planet_event = {
 						is_planet_class = pc_ringworld_tech_damaged
 						is_planet_class = pc_ringworld_seam
 						is_planet_class = pc_ringworld_seam_damaged
-						is_planet_class = pc_city
+						is_planet_city = yes
 						is_planet_class = pc_relic
 						is_star = yes
 						# Merger of Rules
@@ -39,6 +39,8 @@ planet_event = {
 						merg_is_hab_ringworld = yes
 						merg_is_habitat = yes
 						merg_is_gas_giant = yes
+						merg_is_rad_planet = yes
+						merg_is_forbidden_target = no
 						# Gigastructural Engineering & More
 						giga_habitable_structure = yes
 						# Madoka Magica
@@ -180,7 +182,10 @@ planet_event = {
 				}
 			}
 			every_system_planet = {
-				limit = { is_star = yes }
+				limit = {
+					is_star = yes
+					merg_is_forbidden_target = no
+				}
 				change_pc = pc_black_hole
 				reroll_planet = yes
 			}

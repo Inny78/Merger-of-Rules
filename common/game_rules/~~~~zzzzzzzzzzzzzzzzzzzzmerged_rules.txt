@@ -2440,24 +2440,7 @@ system_blocks_sensors = {
 			OR = {
 				has_modifier = space_storm
 				is_inside_nebula = yes
-				# Real Space Nebulae
-				is_star_class = sc_collapsar
-				is_star_class = sc_p_purple
-				is_star_class = sc_p_green
-				is_star_class = sc_p_red
-				# Nebula
-				is_star_class = sc_p_purple
-				is_star_class = sc_p_green
-				is_star_class = sc_p_red
-				is_star_class = sc_nova_1
-				is_star_class = sc_nova_2
-				is_star_class = sc_w_azure
-				is_star_class = sc_w_red
-				is_star_class = sc_w_green
-				is_star_class = sc_w_purple
-				is_star_class = sc_lbv_blue
-				is_star_class = sc_lbv_green
-				is_star_class = sc_lbv_red
+				merg_is_nebulae = yes
 				# Protoplanetary Disks
 				is_star_class = sc_protostar
 				is_star_class = sc_tt_red

@@ -1728,3 +1728,11 @@ is_playable = { # merg_is_default_empire
 		is_country_type = ds_nomads
 	}
 }
+
+is_planet_city = {
+	OR = {
+		is_planet_class = pc_city
+		# Planetary Diversity
+		is_pd_arcology = yes
+	}
+}

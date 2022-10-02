@@ -1,0 +1,61 @@
+# Making the decision available on all modded habitats
+decision_consecrate_habitat_knights = {
+	owned_planets_only = yes
+
+	enactment_time = 360
+	
+	potential = {
+		owner = {
+			has_origin = origin_toxic_knights
+			has_relic = r_toxic_god
+		}
+		merg_is_habitat = yes
+		NOR = {
+			has_building = building_order_castle
+			has_building = building_order_keep
+		}
+	}
+	
+	allow = {
+		free_building_slots > 0
+		custom_tooltip = {
+			fail_text = requires_another_consecration
+			owner = {
+				check_variable = {
+					which = toxic_castles_available
+					value > 0
+				}
+			}
+		}
+	}
+	
+	on_queued = {
+		owner = {
+			change_variable = {
+				which = toxic_castles_available
+				value = 1
+			}
+		}
+	}
+	
+	on_unqueued = {
+		owner = {
+			change_variable = {
+				which = toxic_castles_available
+				value = -1
+			}
+		}
+	}
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+	}
+	
+	effect = {
+		add_building = building_order_castle
+		custom_tooltip = decision_consecrate_habitat_knights_effect
+	}
+}

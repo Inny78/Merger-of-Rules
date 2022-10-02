@@ -524,17 +524,7 @@ has_phototrophic_energy_upkeep = {
 				has_trait = trait_harvested_radiotrophic
 				has_trait = trait_radiotrophic_mutants
 			}
-			NOR = {
-				planet = { is_planet_class = pc_nuked }
-				# Planetary Diversity
-				planet = { is_planet_class = pc_irradiated }
-				# Galaxius
-				planet = { is_planet_class = pc_ie_gateway }
-				# Giga Diversity
-				planet = { is_planet_class = pc_katzenland }
-				# Real Space
-				planet = { is_planet_class = pc_depleted }
-			}
+			merg_is_rad_planet = no
 		}
 	}
 }
