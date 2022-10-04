@@ -3427,11 +3427,7 @@ can_use_galactic_market = {
 			}
 		}
 	}
-	NOR = {
-		is_homicidal = yes
-		# Underground Realms
-		has_country_flag = dark_side
-	}
+	is_homicidal = no
 }
 
 # root = country
@@ -3562,11 +3558,7 @@ can_be_part_of_galactic_community = {
 	}
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
-		NOR = {
-			is_homicidal = yes
-			# Underground Realms
-			has_country_flag = dark_side
-		}
+		is_homicidal = no
 	}
 	custom_tooltip = {
 		fail_text = "community_declared_crisis_failtext"
@@ -3591,9 +3583,7 @@ can_be_part_of_galactic_community = {
 	# B5 Species - Shadows
 	custom_tooltip = {
 		fail_text = "community_shadows_failtext"
-		NOR = {
-			has_civic = civic_shadows1
-		}
+		NOT = { has_civic = civic_shadows1 }
 	}
 }
 
@@ -3605,11 +3595,7 @@ can_be_part_of_galactic_empire = {
 	}
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
-		NOR = {
-			is_homicidal = yes
-			# Underground Realms
-			has_country_flag = dark_side
-		}
+		is_homicidal = no
 	}
 	custom_tooltip = {
 		fail_text = "community_declared_crisis_failtext"
@@ -3638,8 +3624,6 @@ can_see_galactic_community = {
 		has_country_flag = galcom_form_aye
 		has_country_flag = galcom_form_nay
 		is_galactic_community_member = yes
-		# Underground Realms
-		has_country_flag = dark_side
 		# ACOT
 		is_country_type = original_empire_active
 		# ZOFE
@@ -3660,11 +3644,7 @@ can_be_part_of_galactic_council = {
 		# ACOT
 		is_country_type = original_empire_active
 	}
-	NOR = {
-		is_homicidal = yes
-		# Underground Realms
-		has_country_flag = dark_side
-	}
+	is_homicidal = no
 	custom_tooltip = {
 		fail_text = "community_declared_crisis_failtext"
 		NOT = {

@@ -272,6 +272,8 @@ merg_is_gas_giant = {
 		is_planet_class = pc_hot_gas_giant
 		is_planet_class = pc_cloudless_gas_giant
 		is_planet_class = pc_cold_gas_giant
+		# Expanded Events
+		is_planet_class = pc_ice_giant
 	}
 }
 
