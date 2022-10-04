@@ -794,3 +794,13 @@ can_fill_specialist_job = {
 		}
 	}
 }
+
+mineral_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		is_asteroid = yes
+		uninhabitable_regular_planet = yes
+		# Real Space
+		is_planet_class = pc_c_giant_star
+	}
+}

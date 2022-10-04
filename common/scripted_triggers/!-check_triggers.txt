@@ -111,6 +111,11 @@ has_exalted_domination = {
 	has_global_flag = has_exalted_domination_mod
 }
 
+# Galactic Imperium Origins
+has_gal_imperium = {
+	has_global_flag = imperium_origins_active
+}
+
 # Galaxius
 has_galaxius = {
 	has_global_flag = ie_flag
@@ -127,11 +132,6 @@ has_gpm = {
 		has_global_flag = has_guillis_planet_modifiers_mod
 		has_global_flag = guillis_planet_modifiers_active
 	}
-}
-
-# Silfae's Portraits: Revisited - Holofrixit Revisited
-has_holofrixit = {
-	has_global_flag = holofrixit_revisited_installed
 }
 
 # Human Fallen Empire
@@ -156,6 +156,11 @@ has_kancolle = {
 # Safety Off
 has_safety_off = {
 	has_global_flag = has_pk_safety_off
+}
+
+# Silfae's Portraits: Revisited - Holofrixit Revisited
+has_holofrixit = {
+	has_global_flag = holofrixit_revisited_installed
 }
 
 # Star Wars: Kuat Ancient Empire

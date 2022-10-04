@@ -186,6 +186,8 @@ can_destroy_planet_with_PLANET_KILLER_NEUTRON = {
 		OR = {
 			num_pops > 0
 			is_planet_class = pc_infested
+			# Expanded Events
+			has_modifier = planet_active_worm
 		}
 	}
 }
