@@ -296,9 +296,7 @@ can_get_claim_from_lost_system = {
 species_can_live_on_planet = {
 	exists = root
 	NAND = {
-		root = {
-			merg_is_machine_world = yes
-		}
+		root = { merg_is_machine_world = yes }
 		NOR = {
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
@@ -321,9 +319,7 @@ species_can_live_on_planet = {
 	# Vanilla
 	if = {
 		limit = {
-			root = {
-				merg_is_hive_world = yes
-			}
+			root = { merg_is_hive_world = yes }
 		}
 		OR = {
 			merg_has_hive_trait = yes
@@ -333,9 +329,7 @@ species_can_live_on_planet = {
 				root.owner = {
 					is_hive_empire = yes
 					has_origin = origin_necrophage
-					prev = {
-						species_can_be_necrophaged = yes
-					}
+					prev = { species_can_be_necrophaged = yes }
 				}
 			}
 			# Forgotten Queens
@@ -353,7 +347,46 @@ species_can_live_on_planet = {
 	NAND = {
 		root = { NOT = { is_planet_class = pc_matryoshka } }
 		has_trait = trait_machine_digital
-	}	
+	}
+	# Planetary Population Restrictions
+	custom_tooltip = {
+		fail_text = RESIDENT_LIVING_RESTRICTED
+		NAND = {
+            exists = root.owner
+			root.owner = {
+				has_policy_flag = residentliving_restricted
+			}
+			root = { has_planet_flag = limited_rights_living_banned }
+			has_citizenship_type = { type = citizenship_limited country = root.owner }
+		}
+		NAND = {
+			exists = root.owner
+			root.owner = {
+				has_policy_flag = residentliving_restricted_habs
+			}
+			root = { habitable_structure = yes }
+			has_citizenship_type = { type = citizenship_limited country = root.owner }
+		}
+	}
+	custom_tooltip = {
+		fail_text = SLAVE_LIVING_RESTRICTED
+		NAND = {
+            exists = root.owner
+			root.owner = {
+				has_policy_flag = slaveliving_restricted
+			}
+			root = { has_planet_flag = slave_living_banned }
+			has_citizenship_type = { type = citizenship_slavery country = root.owner }
+		}
+		NAND = {
+			exists = root.owner
+			root.owner = {
+				has_policy_flag = slaveliving_restricted_habs
+			}
+			root = { habitable_structure = yes }
+			has_citizenship_type = { type = citizenship_slavery country = root.owner }
+		}
+	}
 }
 
 # can_vote_in_democratic_election
@@ -568,22 +601,13 @@ can_release_vassal_from_species = {
 	root = {
 		is_sapient = yes
 		NOR = {
-			has_trait = trait_machine_unit
 			AND = {
 				has_trait = trait_hive_mind
-				NOT = {
-					prev.this = {
-						has_origin = origin_progenitor_hive
-					}
-				}
+				NOT = { prev.this = { has_origin = origin_progenitor_hive } }
 			}
 			AND = {
-				NOT = {
-					has_trait = trait_hive_mind
-				}
-				prev.this = {
-					is_hive_empire = yes
-				}
+				NOT = { has_trait = trait_hive_mind }
+				prev.this = { has_authority = auth_hive_mind }
 			}
 			has_trait = trait_mechanical
 			can_think = no
@@ -591,61 +615,17 @@ can_release_vassal_from_species = {
 			has_trait = trait_plentiful_traditions_pt_cocoon
 			# Girls Frontline
 			has_trait = trait_doll
-			# Expanded Events / Expanded Traits, Civics, Pops, and More
+			# Expanded Traits, Civics, Pops, and More
+			AND = {
+				has_trait = trait_machine_unit
+				NOT = { prev.this = { has_origin = origin_master_computer } }
+			}
+			AND = {
+				NOT = { has_trait = trait_machine_unit }
+				prev.this = { has_authority = auth_machine_intelligence }
+			}
 			has_trait = trait_infested_basic
 			has_trait = trait_tree_caretaker
-			AND = {
-				has_expanded_pops = yes
-				prev = {
-					NOT = {
-						has_technology = tech_synthetic_leaders
-					}
-				}
-				has_trait = trait_mechanical
-			}
-		}
-		# Expanded Traits, Civics, Pops, and More
-		if = {
-			limit = {
-				has_expanded_pops = yes
-				prev = {
-					OR = {
-						is_homicidal = yes
-						has_valid_civic = civic_infestation
-					}
-				}
-			}
-			is_same_species = prev
-		}
-		if = {
-			limit = {
-				has_expanded_pops = yes
-				prev = {
-					is_machine_empire = yes
-				}
-			}
-			OR = {
-				has_trait = trait_machine_unit
-				has_citizenship_rights = yes
-				has_citizenship_type = {
-					type = citizenship_limited
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_expanded_pops = yes
-				prev = {
-					is_hive_empire = yes
-				}
-			}
-			OR = {
-				has_trait = trait_hive_mind
-				has_citizenship_rights = yes
-				has_citizenship_type = {
-					type = citizenship_limited
-				}
-			}
 		}
 	}
 }
@@ -1350,56 +1330,38 @@ species_has_happiness = {
 #This rule is a condition for determining if a country is hostile towards another. not to be confused with can_take_hostile_action
 can_be_hostile_towards = {
 	if = {
-		limit = {
-			is_primitive = yes
-		}
+		limit = { is_primitive = yes }
 		root = {
-			NOT = {
-				has_policy_flag = interference_passive
-			}
+			NOT = { has_policy_flag = interference_passive }
 		}
 	}
 	else_if = {
 		limit = {
-			root = {
-				is_primitive = yes
-			}
+			root = { is_primitive = yes }
 		}
-		NOT = {
-			has_policy_flag = interference_passive
-		}
+		NOT = { has_policy_flag = interference_passive }
 	}
 	else_if = {
-		limit = {
-			is_country_type = ratlings
-		}
+		limit = { is_country_type = ratlings }
 		always = yes
 	}
 	# ACOT
 	else_if = {
 		limit = {
-			is_country_type = void_lifeforms_1
-		}
-		always = yes
-	}
-	else_if = {
-		limit = {
-			root = {
+			OR = {
 				is_country_type = void_lifeforms_1
+				is_country_type = void_lifeforms_2
 			}
 		}
 		always = yes
 	}
 	else_if = {
 		limit = {
-			is_country_type = void_lifeforms_2
-		}
-		always = yes
-	}
-	else_if = {
-		limit = {
 			root = {
-				is_country_type = void_lifeforms_2
+				OR = {
+					is_country_type = void_lifeforms_1
+					is_country_type = void_lifeforms_2
+				}
 			}
 		}
 		always = yes
@@ -1414,31 +1376,6 @@ can_species_procreate = {
 	NOR = {
 		has_trait = trait_machine_unit
 		has_trait = trait_mechanical
-		# Plentiful Traditions - Extra Perks
-		has_trait = trait_plentiful_traditions_pt_cocoon
-		# Madoka Magica NEW
-		has_trait = trait_mahoshoujo
-		# Expanded Events
-		has_trait = trait_memorex_comatos
-		AND = {
-			root = {
-				owner = {
-					has_origin = origin_hive_queen
-				}
-			}
-			has_trait = trait_hive_mind
-		}
-		# Holofrixit Revisited / Silfae's Portraits: Revisited
-		has_trait = trait_hologanglion
-		# Expanded Gestalts
-		has_trait = trait_hive_mind_overlord
-		# Diagraphers Trait Mod
-		has_trait = trait_dimorphic_male
-		# Girls Frontline
-		has_trait = trait_doll
-		# Lithoid Supremacy
-		has_trait = trait_pearl_born_drone
-		# Expanded Traits, Civics, Pops, and More
 		AND = {
 			has_trait = trait_clones
 			root = {
@@ -1453,11 +1390,33 @@ can_species_procreate = {
 				}
 			}
 		}
+		# Plentiful Traditions - Extra Perks
+		has_trait = trait_plentiful_traditions_pt_cocoon
+		# Madoka Magica NEW
+		has_trait = trait_mahoshoujo
+		# Expanded Events
+		has_trait = trait_memorex_comatos
+		AND = {
+			root = {
+				owner = { has_origin = origin_hive_queen }
+			}
+			has_trait = trait_hive_mind
+		}
+		# Holofrixit Revisited / Silfae's Portraits: Revisited
+		has_trait = trait_hologanglion
+		# Expanded Gestalts
+		has_trait = trait_hive_mind_overlord
+		# Diagraphers Trait Mod
+		has_trait = trait_dimorphic_male
+		# Girls Frontline
+		has_trait = trait_doll
+		# Lithoid Supremacy
+		has_trait = trait_pearl_born_drone
+		# Expanded Traits, Civics, Pops, and More
+		has_trait = trait_memorex_comatos
 	}
 	NAND = {
-		root = {
-			has_modifier = slave_colony
-		}
+		root = { has_modifier = slave_colony }
 		NOT = {
 			has_citizenship_type = {
 				type = citizenship_slavery
@@ -1507,9 +1466,7 @@ can_species_procreate = {
 	}
 	# Expanded Events
 	if = {
-		limit = {
-			has_trait = trait_tree_caretaker
-		}
+		limit = { has_trait = trait_tree_caretaker }
 		root = {
 			OR = {
 				has_deposit = d_tree_of_life_colony
@@ -1517,14 +1474,55 @@ can_species_procreate = {
 			}
 		}
 	}
+	# Planetary Population Restrictions
+	NAND = {
+		root = { has_modifier = slave_colony }
+		NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
+	}
+	NAND = {
+		root.owner = {
+			has_policy_flag = residentbreeding_restricted
+		}
+		root = { has_planet_flag = limited_rights_breeding_banned }
+		has_citizenship_type = { type = citizenship_limited country = root.owner }
+	}
+	NAND = {
+		root.owner = {
+			has_policy_flag = residentbreeding_restricted_habs
+		}
+		root = { habitable_structure = yes }
+		has_citizenship_type = { type = citizenship_limited country = root.owner }
+	}
+	NAND = {
+		root.owner = {
+			has_policy_flag = slavebreeding_restricted
+		}
+		root = { 
+			NOR = {
+				has_planet_flag = slave_breeding_allowed
+				has_modifier = slave_colony
+			}			
+		}
+		has_citizenship_type = { type = citizenship_slavery country = root.owner }
+	}
+	NAND = {
+		root.owner = {
+			has_policy_flag = slavebreeding_restricted_habs
+		}
+		root = { 
+			NOR = {
+				habitable_structure = no
+				has_modifier = slave_colony
+			}			
+		}
+		has_citizenship_type = { type = citizenship_slavery country = root.owner }
+	}
 	# Vanilla
 	NOT = {
 		has_species_flag = nivlac_no_procreation
 	}
 	if = {
-		limit = {
-			has_trait = trait_necrophage
-		}
+		limit = { has_trait = trait_necrophage }
 		NOT = {
 			root = {
 				any_owned_species = {
@@ -1544,10 +1542,8 @@ can_species_procreate = {
 # Root = Planet
 can_species_be_assembled = {
 	is_sapient = yes
-	NOT = {
-		has_trait = trait_holodrone
-	}
 	# Holofrixit Revisited / Silfae's Portraits: Revisited
+	NOT = { has_trait = trait_holodrone }
 	OR = {
 		# Robots
 		AND = {
@@ -1612,9 +1608,7 @@ can_species_be_assembled = {
 			else_if = {
 				limit = {
 					Root = {
-						owner = {
-							has_origin = origin_sacred_tree
-						}
+						owner = { has_origin = origin_sacred_tree }
 						OR = {
 							has_deposit = d_tree_of_life_home
 							has_deposit = d_tree_of_life_colony
@@ -1623,7 +1617,18 @@ can_species_be_assembled = {
 				}
 				OR = {
 					has_trait = trait_tree_caretaker
-					root = { merg_has_cloning_building = yes }
+					ROOT = {
+						OR = {
+							merg_has_cloning_building = yes
+							has_modifier = tiyanki_trophy
+							owner = { has_modifier = syamelles_curse }
+							AND = {
+								has_building = building_posthumous_employment_center
+								owner = { has_civic = civic_permanent_employment }
+							}
+							has_planet_flag = can_organic_assemble_flag #for mod compatibility
+						}
+					}
 				}
 			}
 			# flourishing plantoids
@@ -2647,9 +2652,7 @@ can_resettle_pop = {
 	# Expanded Events
 	custom_tooltip = {
 		fail_text = "caretaker_refuse"
-		NOT = {
-			has_trait = trait_tree_caretaker
-		}
+		NOT = { has_trait = trait_tree_caretaker }
 	}
 	#Done as an IF/ELSE so the tooltip isn't hideous and unreadable
 	# Diagraphers Trait Mod
@@ -2664,48 +2667,36 @@ can_resettle_pop = {
 	}
 	# Vanilla
 	else_if = {
+		limit = { is_shackled_robot = yes }
+		always = yes
+	}
+	else_if = {
 		limit = {
-			is_shackled_robot = yes
+			planet = { merg_is_doomed_planet = yes }
 		}
 		always = yes
 	}
 	else_if = {
 		limit = {
-			planet = {
-				merg_is_doomed_planet = yes
-			}
-		}
-		always = yes
-	}
-	else_if = {
-		limit = {
-			planet = {
-				has_modifier = planet_culture_shock
-			}
+			planet = { has_modifier = planet_culture_shock }
 		}
 		OR = {
 			is_same_species = planet.owner
 			planet = {
-				NOT = {
-					has_modifier = planet_culture_shock
-				}
+				NOT = { has_modifier = planet_culture_shock }
 			}
 		}
 	}
 	else_if = {
 		limit = {
-			owner = {
-				is_gestalt = yes
-			}
+			owner = { is_gestalt = yes }
 		}
 		always = yes
 	}
 	else = {
 		custom_tooltip = {
 			fail_text = RESETTLEMENT_POLICY_FAIL
-			owner = {
-				has_policy_flag = resettlement_allowed
-			}
+			owner = { has_policy_flag = resettlement_allowed }
 		}
 	}
 }
@@ -3449,19 +3440,12 @@ can_be_sold_on_slave_market = {
 	}
 	# Expanded Traits, Civics, Pops, and More
 	NOT = {
-		owner = {
-			has_country_flag = gai_machines_have_organics
-		}
+		owner = { has_country_flag = gai_machines_have_organics }
 	}
 	OR = {
-		ROOT = {
-			is_ai = no
-		}
+		ROOT = { is_ai = no }
 		AND = {
-			OR = {
-				is_unemployed = yes
-				has_job = servant_noble
-			}
+			OR = { is_unemployed = yes has_job = servant_noble }
 			planet = {
 				count_owned_pop = {
 					count > 2
@@ -3479,10 +3463,7 @@ can_be_sold_on_slave_market = {
 			}
 		}
 		AND = {
-			OR = {
-				has_job = servant
-				has_job = servant_noble
-			}
+			OR = { has_job = servant has_job = servant_noble }
 			planet = {
 				free_amenities > 20
 			}
@@ -3490,9 +3471,7 @@ can_be_sold_on_slave_market = {
 	}
 	# Vanilla
 	OR = {
-		root = {
-			is_ai = no
-		}
+		root = { is_ai = no }
 		# has_citizenship_rights = no # Ariphaos Patch
 		AND = {
 			is_unemployed = yes
@@ -3503,26 +3482,18 @@ can_be_sold_on_slave_market = {
 		}
 		# Ariphaos Patch
 		OR = {
-			NOT = {
-				has_trait = trait_syncretic_proles
-			}
+			NOT = { has_trait = trait_syncretic_proles }
 			ROOT = {
-				NOT = {
-					has_origin = origin_syncretic_evolution
-				}
+				NOT = { has_origin = origin_syncretic_evolution }
 			}
 		}
 	}
 	if = {
-		limit = {
-			has_global_flag = organic_slave_trade_banned_flag
-		}
+		limit = { has_global_flag = organic_slave_trade_banned_flag }
 		is_organic_species = no
 	}
 	if = {
-		limit = {
-			has_global_flag = sentient_slave_trade_banned_flag
-		}
+		limit = { has_global_flag = sentient_slave_trade_banned_flag }
 		is_sapient = no
 	}
 	# Vanilla
@@ -3822,45 +3793,29 @@ can_fill_worker_job = {
 			AND = {
 				has_expanded_pops = yes
 				OR = {
-					has_purge_type = {
-						type = purge_displacement
-					}
-					has_purge_type = {
-						type = purge_neutering
-					}
+					has_purge_type = { type = purge_displacement }
+					has_purge_type = { type = purge_neutering }
 				}
 			}
 		}
 		is_being_assimilated = no
 		NOT = {
-			has_citizenship_type = {
-				type = citizenship_organic_trophy
-			}
+			has_citizenship_type = { type = citizenship_organic_trophy }
 		}
 		NAND = {
-			has_citizenship_type = {
-				type = citizenship_slavery
-			}
+			has_citizenship_type = { type = citizenship_slavery }
 			OR = {
-				has_slavery_type = {
-					type = slavery_livestock
-				}
-				has_slavery_type = {
-					type = slavery_matrix
-				}
+				has_slavery_type = { type = slavery_livestock }
+				has_slavery_type = { type = slavery_matrix }
 			}
 		}
 		if = {
-			limit = {
-				divinity_right_to_work_job_check_trigger_exempt = no
-			}
+			limit = { divinity_right_to_work_job_check_trigger_exempt = no }
 			divinity_right_to_work_job_check_trigger_worker = yes
 		}
 		# Diagraphers Trait mod
 		if = {
-			limit = {
-				has_diag_trait = yes
-			}
+			limit = { has_diag_trait = yes }
 			OR = {
 				traits_restrict_worker_jobs = no
 				has_pop_flag = allow_technician_traits

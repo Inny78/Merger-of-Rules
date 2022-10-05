@@ -200,11 +200,7 @@ merg_has_cloning_building = {
 # Planet is doomed, check for resettle rules
 merg_is_doomed_planet = {
 	OR = {
-		has_modifier = doomsday_1
-		has_modifier = doomsday_2
-		has_modifier = doomsday_3
-		has_modifier = doomsday_4
-		has_modifier = doomsday_5
+		is_doomsday_planet = yes
 		# Expanded Events
 		has_modifier = deteriorating_ecosystem
 		has_modifier = catastrophe_approach

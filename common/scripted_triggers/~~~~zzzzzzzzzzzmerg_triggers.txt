@@ -759,8 +759,17 @@ can_fill_specialist_job = {
 		exists = owner
 		OR = {
 			is_enslaved = no
-			has_slavery_type = {
-				type = slavery_indentured
+			has_slavery_type = { type = slavery_indentured }
+			# Expanded Traits, Civics, Pops, and More
+			AND = {
+				NOT = { host_has_dlc = "Utopia" }
+				is_same_species = owner_main_species
+				owner = {
+					OR = {
+						has_valid_civic = civic_indentured_assets
+						has_valid_civic = civic_slaver_guilds
+					}
+				}
 			}
 		}
 		is_being_purged = no
@@ -769,27 +778,20 @@ can_fill_specialist_job = {
 			has_trait = trait_syncretic_proles
 			# Expanded Traits, Civics, Pops, and More
 			has_trait = trait_tree_caretaker
+			has_trait = trait_presapient_docile_livestock
 			# Ethics and Civics Alternative - Redux / Classics
 			has_trait = trait_slave_gene
 		}
 		can_think = yes
 		OR = {
-			NOT = {
-				has_trait = trait_mechanical
-			}
-			owner = {
-				has_technology = tech_droid_workers
-			}
+			NOT = { has_trait = trait_mechanical }
+			owner = { has_technology = tech_droid_workers }
 		}
 		NOT = {
-			has_citizenship_type = {
-				type = citizenship_organic_trophy
-			}
+			has_citizenship_type = { type = citizenship_organic_trophy }
 		}
 		if = {
-			limit = {
-				divinity_right_to_work_job_check_trigger_exempt = no
-			}
+			limit = { divinity_right_to_work_job_check_trigger_exempt = no }
 			divinity_right_to_work_job_check_trigger_specialist = yes
 		}
 	}
@@ -802,5 +804,36 @@ mineral_candidate = {
 		uninhabitable_regular_planet = yes
 		# Real Space
 		is_planet_class = pc_c_giant_star
+	}
+}
+
+is_crossbreeding_possible = {
+	is_sapient = yes
+	NOR = {
+		has_trait = trait_machine_unit
+		has_trait = trait_mechanical
+		has_trait = trait_hive_mind
+		has_trait = trait_self_modified
+		has_trait = trait_clone_soldier_infertile
+		has_trait = trait_clone_soldier_infertile_full_potential
+		# Planetary Diversity - Unique Worlds
+		has_trait = trait_organic_fourschildren
+		has_trait = trait_organic_fourschildren_2
+		# Expanded Traits, Civics, Pops, and More
+		has_trait = trait_clones
+		AND = {
+			is_half_species = any
+			# Expanded Gestalts: Forgotten Queens
+			NOT = { has_species_flag = "tmp_main_species" }
+		}
+		AND = {
+			has_expanded_pops = yes
+			count_galaxy_species = {
+				count > 7
+				limit = {
+					is_half_species = PREV
+				}
+			}
+		}
 	}
 }
