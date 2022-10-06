@@ -431,11 +431,7 @@ can_destroy_planet_with_PLANET_KILLER_TOXIFIER = {
 					space_owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -444,11 +440,7 @@ can_destroy_planet_with_PLANET_KILLER_TOXIFIER = {
 					owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -461,11 +453,7 @@ can_destroy_planet_with_PLANET_KILLER_TOXIFIER = {
 					space_owner = {
 						OR = {
 							is_at_war_with = from.owner
-							is_country_type = swarm
-							is_country_type = extradimensional
-							is_country_type = extradimensional_2
-							is_country_type = extradimensional_3
-							is_country_type = ai_empire
+							is_crisis_faction = yes
 						}
 					}
 				}
@@ -3864,11 +3852,7 @@ can_destroy_planet_with_EE_PLANETKILLER_GAIA = {
 					OR = {
 						is_same_value = from.owner
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -3889,11 +3873,7 @@ can_destroy_planet_with_EE_PLANETKILLER_GAIA = {
 				space_owner = {
 					OR = {
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -3918,11 +3898,7 @@ can_destroy_planet_with_EE_PLANETKILLER_BARREN = {
 					OR = {
 						is_same_value = from.owner
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -3943,11 +3919,7 @@ can_destroy_planet_with_EE_PLANETKILLER_BARREN = {
 				space_owner = {
 					OR = {
 						is_at_war_with = from.owner
-						is_country_type = swarm
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = ai_empire
+						is_crisis_faction = yes
 					}
 				}
 			}
@@ -4001,6 +3973,51 @@ can_destroy_planet_with_slgt_planet_killer_knid = {
 	custom_tooltip = {
 		fail_text = is_shielded
 		merg_is_shielded = no
+	}
+}
+
+# Electroids
+can_destroy_planet_with_PLANET_KILLER_ELEC_FOCUS = {
+	custom_tooltip = {
+		fail_text = elec_must_be_colony
+		merg_is_forbidden_target = no
+		is_colony = yes
+	}	
+	custom_tooltip = {
+		fail_text = is_shielded
+		merg_is_shielded = no
+	}
+	custom_tooltip = {
+		fail_text = is_not_hostile
+		OR = {
+			custom_tooltip = {
+				text = is_not_hostile_cracker
+				OR = {
+					AND = { # colony
+						exists = owner
+						owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_crisis_faction = yes
+							}
+						}
+					}
+					AND = { # primitive
+						exists = space_owner
+						exists = owner
+						owner = {
+							is_primitive = yes
+						}
+						space_owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_crisis_faction = yes
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 

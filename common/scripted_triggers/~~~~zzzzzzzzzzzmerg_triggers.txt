@@ -837,3 +837,27 @@ is_crossbreeding_possible = {
 		}
 	}
 }
+
+is_unfriendly = {
+	OR = {
+		is_homicidal = yes
+		has_valid_civic = civic_barbaric_despoilers
+		# Expanded Traits, Civics, Pops, and More
+		has_valid_civic = civic_living_hosts
+		has_valid_civic = civic_infestation
+		# Electroids
+		has_valid_civic = civic_elec_stellar_devourers
+	}
+}
+
+allows_purge = {
+	OR = {
+		has_valid_civic = civic_fanatic_purifiers
+		has_policy_flag = purge_allowed
+		has_policy_flag = purge_displacement_only
+		# Expanded Gestalts: Forgotten Queens
+		NOT = {  has_valid_civic = civic_mutualistic_behavior }
+		# Electroids
+		has_valid_civic = civic_elec_stellar_devourers
+	}	
+}
