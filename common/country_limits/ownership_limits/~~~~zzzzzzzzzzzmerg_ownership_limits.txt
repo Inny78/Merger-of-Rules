@@ -29,6 +29,8 @@ default = {
 		# Unique Ascension Perks
 		civilian_factory_ships_limit
 		civilian_industrial_ships_limit
+		# Wiirlak Additional Civics & Origins
+		wiirlak_ac_flotilla_ship_ships_limit
     }
 }
 
@@ -59,6 +61,8 @@ default_ev = {
 		# Unique Ascension Perks
 		civilian_factory_ships_limit
 		civilian_industrial_ships_limit
+		# Wiirlak Additional Civics & Origins
+		wiirlak_ac_flotilla_ship_ships_limit
 	}
 }
 
@@ -90,5 +94,7 @@ darkspace_ownership_limit = {
 		# Unique Ascension Perks
 		civilian_factory_ships_limit
 		civilian_industrial_ships_limit
+		# Wiirlak Additional Civics & Origins
+		wiirlak_ac_flotilla_ship_ships_limit
 	}
 }
