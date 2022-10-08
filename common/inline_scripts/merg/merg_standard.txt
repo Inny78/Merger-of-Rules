@@ -1,0 +1,6 @@
+inline_script = "merg/merg_default"
+is_country_type = fallen_empire
+is_country_type = awakened_fallen_empire
+# The Empty Vagrant
+is_country_type = fallen_empire_ev
+is_country_type = awakened_fallen_empire_ev

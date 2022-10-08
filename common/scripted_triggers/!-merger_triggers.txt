@@ -4,17 +4,7 @@
 merg_is_standard_empire = {
 	optimize_memory
 	OR = {
-		is_country_type = default
-		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire
-		# ZOFE
-		is_zofe_country = yes
-		# The Empty Vagrant
-		is_country_type = default_ev
-		is_country_type = fallen_empire_ev
-		is_country_type = awakened_fallen_empire_ev
-		# Darkspace
-		is_country_type = ds_nomads
+		inline_script = "merg/merg_standard"
 	}
 }
 
@@ -22,13 +12,7 @@ merg_is_standard_empire = {
 merg_is_default_empire = {
 	optimize_memory
 	OR = {
-		is_country_type = default
-		# ZOFE
-		is_zofe_country = yes
-		# The Empty Vagrant
-		is_country_type = default_ev
-		# Darkspace
-		is_country_type = ds_nomads
+	inline_script = "merg/merg_default"
 	}
 }
 
@@ -236,16 +220,7 @@ merg_is_void_system = {
 
 merg_is_hive_world = {
 	OR = {
-		is_planet_class = pc_hive
-		# Gigastructural Engineering & More
-		is_planet_class = pc_ringworld_hive
-		# Planetary Diversity
-		is_planet_class = pc_hivetidallylocked
-		is_planet_class = pc_pdhive1
-		is_planet_class = pc_pdhive2
-		is_planet_class = pc_bioforge
-		is_planet_class = pc_biocapital
-		is_planet_class = pc_biofort
+		inline_script = "merg/merg_hive"
 	}
 }
 
@@ -275,18 +250,7 @@ merg_is_gas_giant = {
 
 merg_is_machine_world = {
 	OR = {
-		is_planet_class = pc_machine
-		# Planetary Diversity
-		is_planet_class = pc_machinetidallylocked 
-		is_planet_class = pc_machine_factory 
-		is_planet_class = pc_machine_necropolis
-		is_planet_class = pc_machine_factory
-		is_planet_class = pc_machine_fort
-		is_planet_class = pc_machine_capital
-		# Gigastructural Engineering & More
-		is_planet_class = pc_ringworld_machine
-		# Origin - F.C.S.S & M.C.S.S
-		is_planet_class = pc_awaken_ai
+		inline_script = "merg/merg_machine"
 	}
 }
 

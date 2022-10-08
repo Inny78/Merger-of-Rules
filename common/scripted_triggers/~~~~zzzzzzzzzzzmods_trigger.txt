@@ -63,15 +63,7 @@ shadowgate_aggressor_is_valid_cb_target = {
 # Expanding a bit the country list
 ehof_default_country = {
 	OR = {
-		is_country_type = default
-		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire
-		# ZOFE
-		is_zofe_country = yes
-		# The Empty Vagrant
-		is_country_type = default_ev
-		# Darkspace
-		is_country_type = ds_nomads
+		inline_script = "merg/merg_standard"
 	}
 }
 
@@ -191,10 +183,7 @@ is_maginotable_restricted = {
 		is_planet_class = pc_ringworld_habitable_auto_uf
 		is_planet_class = pc_dyson_ring
 		# Planetary Diversity
-		is_planet_class = pc_ammoniaring
-		is_planet_class = pc_ashring
-		is_planet_class = pc_methanering
-		is_planet_class = pc_sulfurring
+		is_planetary_diversity_ringworld = yes
 	}
 }
 
@@ -233,10 +222,7 @@ is_giga_ringworld = {
 		is_planet_class = pc_ringworld_habitable_auto_uf
 		is_planet_class = pc_dyson_ring
 		# Planetary Diversity
-		is_planet_class = pc_ammoniaring
-		is_planet_class = pc_ashring
-		is_planet_class = pc_methanering
-		is_planet_class = pc_sulfurring
+		is_planetary_diversity_ringworld = yes
 	}
 }
 
@@ -497,9 +483,11 @@ giga_gas_giant = {
 		is_planet_class = pc_hot_gas_giant
 		is_planet_class = pc_cloudless_gas_giant
 		is_planet_class = pc_cold_gas_giant
+		# Expanded Events
+		is_planet_class = pc_ice_giant
 	}
 }
-
+ 
 giga_can_be_war_planet = {
 	NOT = { has_planet_flag = dormant_war_planet }
 	is_moon = no
@@ -538,14 +526,7 @@ giga_planet_no_farming = {
 # Overwriting this for ZOFE and comp mods
 is_zofe_compatible = {
 	OR = {
-		is_country_type = default
-		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
-		# The Empty Vagrant
-		is_country_type = default_ev
-		# Darkspace
-		is_country_type = ds_nomads
+	inline_script = "merg/merg_default"
 	}
 }
 
@@ -713,9 +694,18 @@ legw_megaplanet = {
 		is_planet_class = pc_machine
 		is_planet_class = pc_cybrex
 		# Planetary Diversity
+		# Planetary Diversity
+		is_planet_class = pc_machinetidallylocked 
+		is_planet_class = pc_machine_factory 
+		is_planet_class = pc_machine_necropolis
+		is_planet_class = pc_machine_factory
+		is_planet_class = pc_machine_fort
+		is_planet_class = pc_machine_capital
 		is_planet_class = pc_archive
 		# Gigastructural Engineering & More
 		is_planet_class = pc_giga_planetary_computer
+		# Origin - F.C.S.S & M.C.S.S
+		is_planet_class = pc_awaken_ai
 	}
 }
 
@@ -757,19 +747,10 @@ is_moon_of_gas_giant = {
 ############################### Star Wars: Kuat Ancient Empire ###############################
 kuat_is_common_country = {
 	OR = {
-		is_country_type = default
-		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire
+		inline_script = "merg/merg_standard"
 		is_country_type = awakened_marauders
 		is_country_type = primitive
 		is_country_type = ratlings
-		# ZOFE
-		is_country_type = lost_empire
-		# The Empty Vagrant
-		is_country_type = default_ev
-		is_country_type = fallen_empire_ev
-		# Darkspace
-		is_country_type = ds_nomads
 	}
 }
 
@@ -788,52 +769,26 @@ kuat_is_defense_galaxy_fleet = {
 ############################### Ancient Caches of Technology ###############################
 is_playable_country = {
 	OR = {
-		is_country_type = default
-		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire
-		# ZOFE
-		is_zofe_country = yes
-		# ACOT
-		is_country_type = original_empire_active
-		# The Empty Vagrant
-		is_country_type = default_ev
-		# Darkspace
-		is_country_type = ds_nomads
+		inline_script = "merg/merg_standard"
 	}
 }
 
 ############################### OldEnt's Crisis Mods ###############################
 CmtTriggerIsPlayableEmpire = {
 	OR = {
-		is_country_type = default
+		iinline_script = "merg/merg_default"
 		is_ai = no
 		# ACOT
 		is_country_type = original_empire_active
-		# ZOFE
-		is_zofe_country = yes
-		# The Empty Vagrant
-		is_country_type = default_ev
-		# Darkspace
-		is_country_type = ds_nomads
 	}
 }
 
 CmtTriggerIsEmpire = {
 	OR = {
-		is_country_type = default
+		inline_script = "merg/merg_standard"
 		is_ai = no
-		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire
 		# ACOT
 		is_country_type = original_empire_active
-		# ZOFE
-		is_zofe_country = yes
-		# The Empty Vagrant
-		is_country_type = default_ev
-		is_country_type = fallen_empire_ev
-		is_country_type = awakened_fallen_empire_ev
-		# Darkspace
-		is_country_type = ds_nomads
 	}
 }
 
@@ -907,18 +862,18 @@ is_open_gestalt = {
 ############################### History of the Lost Empire ###############################
 afk_target_planet = {
 	OR = {
-		is_planet_class = pc_city
+		is_planet_city = yes
 		is_planet_class = pc_relic
 		is_planet_class = pc_nuked
 		is_planet_class = pc_hive
-		is_planet_class = pc_machine
+		merg_is_machine_world = yes
 		colonizable_planet = yes
 		habitable_planet = yes
 		is_artificial = yes
 		uninhabitable_regular_planet = yes
 		# Planetary Diversity
 		is_planet_class = pc_pdshroud
-		is_planet_class = pc_irradiated
+		merg_is_rad_planet = yes
 		# Gigastructures
 		is_planet_class = pc_katzenland
 		# SW:UnknownWorld Shipgirls Story
@@ -939,56 +894,27 @@ afk_target_planet = {
 ############################### Warship Girls R and MIST Species ###############################
 is_habitat_wg = {
 	OR = {
-		is_planet_class = pc_habitat
-		# Planetary Diversity
-		uses_district_set = pdplanethab
-		# Gigastructural Engineering & More
-		is_planet_class = pc_interstellar_habitat
-		# More Events Mod
-		is_planet_class = pc_mem_vazuran_habitat
-		# Acquisition of Technology
-		uses_district_set = dm_habitat
-		uses_district_set = ae_habitat
-		uses_district_set = sigma_habitat
+		merg_is_habitat_non_starborn = yes
 		# Starborn: Improved Voidtouched
 		uses_district_set = starborn_start
-		# Twinks Atlantean
-		uses_district_set = skypalace
-		# Plentiful Traditions
-		is_planet_class = pc_habitat_robot
 	}
 }
 
 is_default_and_fallen_country = {
 	OR = {
-		is_country_type = default
-		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire
-		# ZOFE
-		is_zofe_country = yes
-		# The Empty Vagrant
-		is_country_type = default_ev
-		is_country_type = fallen_empire_ev
-		is_country_type = awakened_fallen_empire_ev
+		inline_script = "merg/merg_standard"
 		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_fallen_empire
 		is_country_type = kuat_awakened_fallen_empire
 		is_country_type = awakened_return_kuat_empire
 		# A Deadly Tempest
 		is_country_type = awakened_gate_builders
-		# Darkspace
-		is_country_type = ds_nomads
 	}
 }
 
 is_default_country_wg = {
 	OR = {
-		is_country_type = default
-		is_country_type = default_ev
-		# ZOFE
-		is_zofe_country = yes
-		# Darkspace
-		is_country_type = ds_nomads
+		inline_script = "merg/merg_default"
 	}
 }
 
@@ -1237,29 +1163,7 @@ ag_is_gateway_megastructure = {
 ag_is_habitat = {
 	optimize_memory
 	OR = {
-		is_planet_class = pc_habitat
-		# Planetary Diversity
-		is_pd_habitat = yes
-		# Gigastructural Engineering & More
-		is_planet_class = pc_interstellar_habitat
-		is_planet_class = pc_giga_elysium
-		is_planet_class = pc_ehof_habitat
-		is_planet_class = pc_giga_orbital
-		# More Events Mod
-		is_planet_class = pc_mem_vazuran_habitat
-		# Acquisition of Technology
-		is_planet_class = pc_dm_habitat
-		is_planet_class = pc_ae_habitat
-		is_planet_class = pc_sigma_habitat
-		is_planet_class = pc_sigma_deepspace_habitat
-		# Twinks Atlantean
-		uses_district_set = skypalace
-		# Plentiful Traditions
-		is_planet_class = pc_habitat_robot
-		# Giga Diversity
-		is_planet_class = pc_pd_toxic_hab
-		# Nyto Species Pack
-		is_planet_class = pc_GFnytp_habitis
+		merg_is_habitat_non_starborn = yes
 		# Starborn: Improved Voidtouched
 		uses_district_set = starborn_start
 	}
@@ -1287,23 +1191,15 @@ ag_is_compact_star = {
 # Fixing the trigger and removing obsolete code
 AAR_trgr_cntr_playable = {
 	OR = {
-		is_country_type = default
-		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire
+		inline_script = "merg/merg_standard"
 		# A Deadly Tempest
 		is_country_type = awakened_gate_builders
 		# ACOT
 		is_progenitor_empires = yes
-		# Darkspace
-		is_country_type = ds_nomads
 		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_fallen_empire
 		is_country_type = kuat_awakened_fallen_empire
 		is_country_type = awakened_return_kuat_empire
-		# The Empty Vagrant
-		is_country_type = fallen_empire_ev
-		# ZOFE
-		is_zofe_country = yes
 	}
 }
 
@@ -1362,7 +1258,7 @@ exalted_is_valid_as_vassal = {
 ############################### The DAL Species Mod ###############################
 is_special_colony_planet_class = {
 	OR = {
-		is_planet_class = pc_city
+		is_planet_city = yes
 		is_planet_class = pc_cybrex
 		merg_is_habitat = yes
 		merg_is_hab_ringworld = yes
@@ -1545,11 +1441,8 @@ gpm_is_planet_class_nuked = {
 gpm_is_planet_class_gas_giant = {
 	optimize_memory
 	OR = {
-		is_planet_class = pc_gas_giant
+		merg_is_gas_giant = yes
 		# Planetary Diversity
-		is_planet_class = pc_hot_gas_giant
-		is_planet_class = pc_cold_gas_giant
-		is_planet_class = pc_cloudless_gas_giant
 		is_planet_class = pc_pd_gas_giant_hab
 		# Gigastructural Engineering & More
 		is_planet_class = pc_habitable_gas_giant
@@ -1560,68 +1453,22 @@ gpm_is_planet_class_gas_giant = {
 gpm_is_planet_class_city = {
 	optimize_memory
 	OR = {
-		is_planet_class = pc_city
+		is_planet_city = yes
 		is_planet_class = pc_relic
-		# Planetary Diversity
-		is_planet_class = pc_aquaticcity
-		is_planet_class = pc_ammoniacity
-		is_planet_class = pc_methanecity
-		is_planet_class = pc_ashcity
-		is_planet_class = pc_ecocity
-		is_planet_class = pc_bioforge
-		is_planet_class = pc_biocapital
-		is_planet_class = pc_biofort
-		is_planet_class = pc_technoorganic
-		is_planet_class = pc_archive
-		is_planet_class = pc_necropolis
-		is_planet_class = pc_capitalarc
-		is_planet_class = pc_palacearc
-		is_planet_class = pc_milarc
-		is_planet_class = pc_milarc_relic
-		is_planet_class = pc_corpoarc
-		is_planet_class = pc_sulfurcity
-		is_planet_class = pc_shroudcity
-		is_planet_class = pc_shroudecocity
-		is_planet_class = pc_shroudmilarc
-		is_planet_class = pc_shroudcorpoarc
-		is_planet_class = pc_shroudcapitalarc
-		is_planet_class = pc_shroudpalacearc		
 	}
 }
 
 gpm_is_planet_class_machine = {
 	optimize_memory
 	OR = {
-		is_planet_class = pc_machine
-		is_planet_class = pc_ai
-		# Gigastructural Engineering & More
-		is_planet_class = pc_ringworld_machine
-		is_planet_class = pc_giga_planetary_computer
-		# Planetary Diversity
-		is_planet_class = pc_machine_factory
-		is_planet_class = pc_machine_fort
-		is_planet_class = pc_machine_necropolis
-		is_planet_class = pc_machine_capital
+		inline_script = "merg/merg_machine"
 	}
 }
 
 gpm_is_planet_class_hive = {
 	optimize_memory
 	OR = {
-		is_planet_class = pc_hive
-		# Planetary Diversity
-		is_planet_class = pc_pdhive1
-		is_planet_class = pc_pdhive2
-		is_planet_class = pc_megaflorahive
-		is_planet_class = pc_bioforge
-		is_planet_class = pc_biofort
-		is_planet_class = pc_biocapital
-		is_planet_class = pc_necrohive
-		is_planet_class = pc_megafloraforge
-		is_planet_class = pc_megaflorafort
-		is_planet_class = pc_megafloracapital
-		# Gigastructural Engineering & More
-		is_planet_class = pc_ringworld_hive	
+		inline_script = "merg/merg_hive"
 	}
 }
 
@@ -1701,29 +1548,13 @@ gpm_is_planet_class_ringworld = {
 # Scripted Trigger Undercoat
 is_empire = { # merg_is_standard_empire
 	OR = {
-		is_country_type = default
-		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire
-		# ZOFE
-		is_zofe_country = yes
-		# The Empty Vagrant
-		is_country_type = default_ev
-		is_country_type = fallen_empire_ev
-		is_country_type = awakened_fallen_empire_ev
-		# Darkspace
-		is_country_type = ds_nomads
+		inline_script = "merg/merg_standard"
 	}
 }
 
 is_playable = { # merg_is_default_empire
 	OR = {
-		is_country_type = default
-		# ZOFE
-		is_zofe_country = yes
-		# The Empty Vagrant
-		is_country_type = default_ev
-		# Darkspace
-		is_country_type = ds_nomads
+		inline_script = "merg/merg_default"
 	}
 }
 

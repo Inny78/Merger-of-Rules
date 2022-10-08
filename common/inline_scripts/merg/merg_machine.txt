@@ -1,0 +1,12 @@
+is_planet_class = pc_machine
+# Planetary Diversity
+is_planet_class = pc_machinetidallylocked 
+is_planet_class = pc_machine_factory 
+is_planet_class = pc_machine_necropolis
+is_planet_class = pc_machine_factory
+is_planet_class = pc_machine_fort
+is_planet_class = pc_machine_capital
+# Gigastructural Engineering & More
+is_planet_class = pc_ringworld_machine
+# Origin - F.C.S.S & M.C.S.S
+is_planet_class = pc_awaken_ai
