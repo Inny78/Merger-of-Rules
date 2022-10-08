@@ -73,11 +73,11 @@ is_homicidal = {
 colonizable_planet = {
 	optimize_memory
 	OR = {
-		is_planet_class = pc_city
 		is_planet_class = pc_relic
-		is_planet_class = pc_nuked
-		is_planet_class = pc_hive
-		is_planet_class = pc_machine
+		is_planet_city = yes
+		merg_is_rad_planet = yes
+		merg_is_hive_world = yes
+		merg_is_machine_world = yes
 		habitable_structure = yes
 		habitable_planet = yes
 		is_artificial = yes
@@ -88,8 +88,6 @@ colonizable_planet = {
 		# Planetary Diversity
 		is_planet_class = pc_pdshroud
 		is_planet_class = pc_irradiated
-		# Gigastructures
-		is_planet_class = pc_katzenland
 		# SW:UnknownWorld Shipgirls Story
 		is_planet_class = pc_swgs_engineer
 		is_planet_class = pc_swgs_engineer_ringworld_habitable
@@ -117,9 +115,7 @@ habitable_planet = {
 	OR = {
 		habitable_planet_not_urban = yes
 		is_planet_class = pc_relic
-		is_planet_class = pc_city
-		# Planetary Diversity
-		is_pd_arcology = yes
+		is_planet_city = yes
 	}
 }
 
