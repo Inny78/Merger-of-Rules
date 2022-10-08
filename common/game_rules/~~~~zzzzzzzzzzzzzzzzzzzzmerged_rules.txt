@@ -3377,29 +3377,22 @@ can_crossbreed_species = {
 	is_crossbreeding_possible = yes
 	root = {
 		is_crossbreeding_possible = yes
-	}
-	NOR = {
-		is_subspecies = root
-		root = {
-			is_subspecies = prev
-		}
-	}
-	# Warship Girls R And MIST Species
-	any_owned_species = {
-		OR = {
-			has_wg_traits = no
+		NOR = {
+			# Warship Girls R And MIST Species
+			has_wg_traits = yes
+			# Misc
 			is_archetype = NANITES_CROP
 			is_archetype = UNITED_FLEET 
 		}
 	}
-	root = {
-		any_owned_species = {
-			OR = {
-				has_wg_traits = no
-				is_archetype = NANITES_CROP
-				is_archetype = UNITED_FLEET 
-			}
-		}
+	NOR = {
+		is_subspecies = root
+		root = { is_subspecies = prev }
+		# Warship Girls R And MIST Species
+		has_wg_traits = yes
+		# Misc
+		is_archetype = NANITES_CROP
+		is_archetype = UNITED_FLEET 
 	}
 }
 
