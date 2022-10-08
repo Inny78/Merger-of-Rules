@@ -146,6 +146,7 @@ habitable_planet_not_urban = {
 		is_pd_regular = yes
 		is_pd_gaia = yes
 		is_pd_rare = yes
+		is_pd_exotic = yes
 		# Warship Girls R And MIST Species
 		is_planet_class = pc_wsg_port
 		is_planet_class = pc_shenhai
