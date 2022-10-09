@@ -43,9 +43,7 @@ can_add_claim = {
 	hidden_trigger = {
 		if = {
 			limit = {
-				root = {
-					merg_is_default_empire = no
-				}
+				root = { merg_is_default_empire = no }
 			}
 			always = yes
 		}
@@ -3736,16 +3734,6 @@ can_planet_auto_migrate = {
 				merg_is_default_empire = yes
 				merg_is_awakened_fe = yes
 			}
-		}
-	}
-	# Production Revolution
-	NAND = {
-		exists = owner
-		owner = {
-			has_country_flag = z_pr_flg_cntr_reg
-		}
-		NOT = {
-			has_planet_flag = z_pr_flg_plnt_ignore
 		}
 	}
 	# Better Performance & Utilities

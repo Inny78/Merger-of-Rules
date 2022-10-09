@@ -1,7 +1,0 @@
-	is_country_type = default
-	# ZOFE
-	is_zofe_country = yes
-	# The Empty Vagrant
-	is_country_type = default_ev
-	# Darkspace
-	is_country_type = ds_nomads

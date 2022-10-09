@@ -62,9 +62,7 @@ shadowgate_aggressor_is_valid_cb_target = {
 ############################### Gigastructural Engineering & More ###############################
 # Expanding a bit the country list
 ehof_default_country = {
-	OR = {
-		inline_script = "merg/merg_standard"
-	}
+	merg_is_standard_empire = yes
 }
 
 # Making station-sized ships able to use the EHOF
@@ -188,9 +186,7 @@ is_maginotable_restricted = {
 }
 
 is_giga_ringworld = {
-	OR = {
-		inline_script = "merg/merg_ring"
-	}
+	merg_is_hab_ringworld = yes
 }
 
 mega_blokkats_wont_stripmine = {
@@ -473,17 +469,13 @@ giga_can_be_war_planet = {
 }
 
 giga_planet_no_farming = {
-	OR = {
-		inline_script = "merg/merg_machine"
-	}
+	merg_is_machine_world = yes
 }
 
 ############################### Zenith of the Fallen Empires ###############################
 # Overwriting this for ZOFE and comp mods
 is_zofe_compatible = {
-	OR = {
-	inline_script = "merg/merg_default"
-	}
+	merg_is_default_empire = yes
 }
 
 ############################### Acquisition of Technologies ###############################
@@ -501,9 +493,7 @@ is_memeable_space_habitat = {
 }
 
 is_memeable_ringworld = {
-	OR = {
-		inline_script = "merg/merg_ring"
-	}
+	merg_is_hab_ringworld = yes
 }
 
 ############################### More Events Mod ###############################
@@ -668,7 +658,7 @@ is_moon_of_gas_giant = {
 ############################### Star Wars: Kuat Ancient Empire ###############################
 kuat_is_common_country = {
 	OR = {
-		inline_script = "merg/merg_standard"
+		merg_is_standard_empire = yes
 		is_country_type = awakened_marauders
 		is_country_type = primitive
 		is_country_type = ratlings
@@ -689,15 +679,13 @@ kuat_is_defense_galaxy_fleet = {
 
 ############################### Ancient Caches of Technology ###############################
 is_playable_country = {
-	OR = {
-		inline_script = "merg/merg_standard"
-	}
+	merg_is_standard_empire = yes
 }
 
 ############################### OldEnt's Crisis Mods ###############################
 CmtTriggerIsPlayableEmpire = {
 	OR = {
-		inline_script = "merg/merg_default"
+		merg_is_default_empire = yes
 		is_ai = no
 		# ACOT
 		is_country_type = original_empire_active
@@ -706,7 +694,7 @@ CmtTriggerIsPlayableEmpire = {
 
 CmtTriggerIsEmpire = {
 	OR = {
-		inline_script = "merg/merg_standard"
+		merg_is_standard_empire = yes
 		is_ai = no
 		# ACOT
 		is_country_type = original_empire_active
@@ -715,48 +703,8 @@ CmtTriggerIsEmpire = {
 
 CmtTriggerIsFallenEmpire = {
 	OR = {
-		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire
-		# ZOFE
-		is_zofe_country = yes
-		# The Empty Vagrant
-		is_country_type = fallen_empire_ev
-		is_country_type = awakened_fallen_empire_ev
-		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_fallen_empire
-		is_country_type = kuat_awakened_fallen_empire
-		is_country_type = awakened_return_kuat_empire
-		# History of the Lost Empire
-		is_country_type = LsE_fallen_empire
-	}
-}
-
-# WIP
-CmtTriggerIsStarbase = {
-	optimize_memory		## Scope: this = ship
-	OR = {
-		is_ship_size = starbase_outpost
-		is_ship_size = starbase_starport
-		is_ship_size = starbase_starhold
-		is_ship_size = starbase_starfortress
-		is_ship_size = starbase_citadel
-		is_ship_size = starbase_swarm
-		is_ship_size = starbase_exd
-		is_ship_size = starbase_ai
-		is_ship_size = starbase_marauder
-		# ACOT/AOT
-		is_ship_size = acot_precusor_starbase
-		is_ship_size = acot_precusor_starfortress
-		is_ship_size = acot_precusor_starcitadel
-		is_ship_size = acot_precusor_sigma_starbase
-		is_ship_size = acot_precusor_sigma_starfortress
-		is_ship_size = acot_precusor_sigma_starcitadel
-		is_ship_size = acot_precusor_phanon_starbase
-		is_ship_size = acot_precusor_phanon_starfortress
-		is_ship_size = acot_precusor_phanon_starcitadel
-		is_ship_size = acot_precusor_theta_starbase
-		is_ship_size = acot_precusor_theta_starfortress
-		is_ship_size = acot_precusor_theta_starcitadel
+		merg_is_fallen_empire = yes
+		merg_is_awakened_fe = yes
 	}
 }
 
@@ -823,20 +771,14 @@ is_habitat_wg = {
 
 is_default_and_fallen_country = {
 	OR = {
-		inline_script = "merg/merg_standard"
-		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_fallen_empire
-		is_country_type = kuat_awakened_fallen_empire
-		is_country_type = awakened_return_kuat_empire
-		# A Deadly Tempest
-		is_country_type = awakened_gate_builders
+		merg_is_default_empire = yes
+		merg_is_fallen_empire = yes
+		merg_is_awakened_fe = yes
 	}
 }
 
 is_default_country_wg = {
-	OR = {
-		inline_script = "merg/merg_default"
-	}
+	merg_is_default_empire = yes
 }
 
 has_active_wg_foundry_building = {
@@ -1112,15 +1054,9 @@ ag_is_compact_star = {
 # Fixing the trigger and removing obsolete code
 AAR_trgr_cntr_playable = {
 	OR = {
-		inline_script = "merg/merg_standard"
-		# A Deadly Tempest
-		is_country_type = awakened_gate_builders
-		# ACOT
-		is_progenitor_empires = yes
-		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_fallen_empire
-		is_country_type = kuat_awakened_fallen_empire
-		is_country_type = awakened_return_kuat_empire
+		merg_is_default_empire = yes
+		merg_is_fallen_empire = yes
+		merg_is_awakened_fe = yes
 	}
 }
 
@@ -1370,17 +1306,11 @@ gpm_is_planet_class_city = {
 }
 
 gpm_is_planet_class_machine = {
-	optimize_memory
-	OR = {
-		inline_script = "merg/merg_machine"
-	}
+	merg_is_machine_world = yes
 }
 
 gpm_is_planet_class_hive = {
-	optimize_memory
-	OR = {
-		inline_script = "merg/merg_hive"
-	}
+	merg_is_hive_world = yes
 }
 
 gpm_is_planet_class_habitat = {
@@ -1393,10 +1323,7 @@ gpm_is_planet_class_habitat = {
 }
 
 gpm_is_planet_class_ringworld = {
-	optimize_memory
-	OR = {
-		inline_script = "merg/merg_ring"
-	}
+	merg_is_hab_ringworld = yes
 }
 
 gpm_is_planet_fallen_empire = {
@@ -1423,15 +1350,11 @@ gpm_is_fallen_empire_space_owner = {
 
 # Scripted Trigger Undercoat
 is_empire = { # merg_is_standard_empire
-	OR = {
-		inline_script = "merg/merg_standard"
-	}
+	merg_is_standard_empire = yes
 }
 
-is_playable = { # merg_is_default_empire
-	OR = {
-		inline_script = "merg/merg_default"
-	}
+is_playable = {
+	merg_is_default_empire = yes
 }
 
 is_planet_city = {

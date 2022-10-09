@@ -4,7 +4,17 @@
 merg_is_standard_empire = {
 	optimize_memory
 	OR = {
-		inline_script = "merg/merg_standard"
+		is_country_type = default
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		# The Empty Vagrant
+		is_country_type = default_ev
+		is_country_type = fallen_empire_ev
+		is_country_type = awakened_fallen_empire_ev
+		# ZOFE
+		is_zofe_country = yes
+		# Darkspace
+		is_country_type = ds_nomads
 	}
 }
 
@@ -12,7 +22,13 @@ merg_is_standard_empire = {
 merg_is_default_empire = {
 	optimize_memory
 	OR = {
-	inline_script = "merg/merg_default"
+		is_country_type = default
+		# ZOFE
+		is_zofe_country = yes
+		# The Empty Vagrant
+		is_country_type = default_ev
+		# Darkspace
+		is_country_type = ds_nomads
 	}
 }
 
@@ -58,7 +74,49 @@ merg_is_awakened_fe = {
 merg_is_hab_ringworld = {
 	optimize_memory
 	OR = {
-		inline_script = "merg/merg_ring"
+		is_planet_class = pc_ringworld_habitable
+		is_planet_class = pc_shattered_ring_habitable
+		is_planet_class = pc_cybrex
+		# Gigastructural Engineering & More
+		is_planet_class = pc_gigaorbital_ring
+		is_planet_class = pc_interstellar_ringworld_habitable
+		is_planet_class = pc_ringworld_city
+		is_planet_class = pc_squareworld_habitable
+		is_planet_class = pc_giga_penrose_habitable
+		is_planet_class = pc_ringworld_machine
+		is_planet_class = pc_ringworld_hive
+		is_planet_class = pc_giga_maginot_ringworld
+		# Ancient Empire
+		# listed planet types are for colors only, they're all ideal
+		is_planet_class = pc_ag_ringworld_desert
+		is_planet_class = pc_ag_ringworld_arid
+		is_planet_class = pc_ag_ringworld_savannah
+		is_planet_class = pc_ag_ringworld_ocean
+		is_planet_class = pc_ag_ringworld_continental
+		is_planet_class = pc_ag_ringworld_tropical
+		is_planet_class = pc_ag_ringworld_tundra
+		is_planet_class = pc_ag_ringworld_arctic
+		is_planet_class = pc_ag_ringworld_alpine
+		is_planet_class = pc_ag_ringworld_machine
+		is_planet_class = pc_ag_ringworld_city
+		is_planet_class = pc_ag_ringworld_gaia
+		# Warship Girls and MIST species
+		is_planet_class = pc_ringworld_habitable_sh
+		is_planet_class = pc_ringworld_habitable_wsg
+		is_planet_class = pc_ringworld_habitable_swim
+		is_planet_class = pc_ringworld_habitable_water
+		is_planet_class = pc_ringworld_habitable_uf
+		is_planet_class = pc_ringworld_habitable_auto_uf
+		is_planet_class = pc_dyson_ring
+		# Planetary Diversity
+		is_planetary_diversity_ringworld = yes
+		# Darkspace
+		is_planet_class = pc_ancient_ringworld
+		is_planet_class = pc_ringworld_spectrals
+		# ZOFE
+		is_planet_class = pc_utopian_ringworld
+		# Giga Diversity
+		is_planet_class = pc_giga_maginot_ringworld
 	}
 }
 
@@ -178,7 +236,16 @@ merg_is_void_system = {
 
 merg_is_hive_world = {
 	OR = {
-		inline_script = "merg/merg_hive"
+		is_planet_class = pc_hive
+		# Gigastructural Engineering & More
+		is_planet_class = pc_ringworld_hive
+		# Planetary Diversity
+		is_planet_class = pc_hivetidallylocked
+		is_planet_class = pc_pdhive1
+		is_planet_class = pc_pdhive2
+		is_planet_class = pc_bioforge
+		is_planet_class = pc_biocapital
+		is_planet_class = pc_biofort
 	}
 }
 
@@ -208,7 +275,18 @@ merg_is_gas_giant = {
 
 merg_is_machine_world = {
 	OR = {
-		inline_script = "merg/merg_machine"
+		is_planet_class = pc_machine
+		# Planetary Diversity
+		is_planet_class = pc_machinetidallylocked 
+		is_planet_class = pc_machine_factory 
+		is_planet_class = pc_machine_necropolis
+		is_planet_class = pc_machine_factory
+		is_planet_class = pc_machine_fort
+		is_planet_class = pc_machine_capital
+		# Gigastructural Engineering & More
+		is_planet_class = pc_ringworld_machine
+		# Origin - F.C.S.S & M.C.S.S
+		is_planet_class = pc_awaken_ai
 	}
 }
 
