@@ -1,0 +1,259 @@
+namespace = crisis
+
+# Purge Complete
+planet_event = {
+	id = crisis.202
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		num_pops = 1 # Last Pop is still alive when this event is fired
+		exists = controller
+		controller = { is_country_type = "swarm" }
+	}
+
+	immediate = {
+		controller = { save_event_target_as = swarm }
+		if = {
+			limit = {
+				is_artificial = no
+			}
+			change_pc = pc_infested
+			set_owner = event_target:swarm
+			planet_event = { id = crisis.215 }
+			planet_event = { id = gpm_crisis.2 }
+		}
+		else_if = {
+			# Habitable Ring Worlds can't be infested...
+			# they are destroyed instead
+			limit = {
+				merg_is_true_ringworld = yes
+			}
+			destroy_colony = yes
+			change_pc = pc_ringworld_habitable_damaged
+			reset_planet = yes
+		}
+		# Ariphaos Patch, expanded
+		else_if = {
+			limit = { merg_is_habitat_non_PD = yes }
+			save_event_target_as = habitat_to_remove
+			solar_system= { 
+				random_system_planet = { 
+				limit = { any_moon = { is_planet = event_target:habitat_to_remove } } 
+					remove_planet_flag = has_megastructure 
+				} 
+			}
+			destroy_colony = yes
+			remove_planet = yes
+		}
+		# Special artificial colonies can't be infested
+		else_if = {
+			limit = {
+				merg_is_special_colony = yes
+			}
+			destroy_colony = yes
+			reset_planet = yes
+		}
+		solar_system = {
+			if = { # Build starbase if no other colonies are left
+				limit = {
+					NOT = {
+						exists = starbase
+						any_system_planet = {
+							has_owner = yes
+							owner = {
+								NOT = { is_same_value = event_target:swarm }
+							}
+						}
+					}
+				}
+				create_starbase = {
+					size = starbase_swarm
+					owner = event_target:swarm
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_system_ambient_object = { has_ambient_object_flag = swarm_system_effect }
+						}
+					}
+					star = {
+						create_ambient_object = {
+							type = "swarm_1"
+							location = this
+						}
+						last_created_ambient_object = {
+							set_ambient_object_flag = swarm_system_effect
+							set_location = {
+								target = prev
+								distance = 0
+								angle = random
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Planet Colonized
+planet_event = {
+	id = crisis.203
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_country_type = "swarm" }
+	}
+
+	immediate = {
+		every_owned_pop = { kill_pop = yes }
+		if = {
+			limit = {
+				is_artificial = no
+			}
+			change_pc = pc_infested
+			reset_planet = yes
+			planet_event = { id = crisis.215 }
+			planet_event = { id = gpm_crisis.3 }
+		}
+		else_if = {
+			# Habitable Ring Worlds can't be infested...
+			# they are destroyed instead
+			limit = {
+				merg_is_true_ringworld = yes
+			}
+			change_pc = pc_ringworld_habitable_damaged
+			reset_planet = yes
+		}
+		else_if = {
+			limit = { merg_is_habitat_non_PD = yes }
+			save_event_target_as = habitat_to_remove
+			solar_system= { 
+				random_system_planet = { 
+				limit = { any_moon = { is_planet = event_target:habitat_to_remove } } 
+					remove_planet_flag = has_megastructure 
+				} 
+			}
+			destroy_colony = yes
+			remove_planet = yes
+		}
+		# Special artificial colonies can't be infested
+		else_if = {
+			limit = {
+				merg_is_special_colony = yes
+			}
+			destroy_colony = yes
+			reset_planet = yes
+		}
+	}
+}
+
+# Prethoryn Defeated
+country_event = {
+	id = crisis.211
+	title = "crisis.211.name"
+	desc = "crisis.211.desc"
+	picture = GFX_evt_crisis_defeated
+	show_sound = event_celebration
+
+	is_triggered_only = yes
+
+	option = { # Spiritualist Response
+		name = crisis.211.a
+		trigger = {
+			merg_has_spiritualist_government = yes
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	option = { # Militarist Response
+		name = crisis.211.b
+		trigger = {
+			merg_has_militarist_government = yes
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	option = { # Materialist Response
+		name = crisis.211.c
+		trigger = {
+			merg_has_materialist_government = yes
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	option = { # Pacifist Response
+		name = crisis.211.d
+		trigger = {
+			merg_has_pacifist_government = yes
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	option = { # Corporate Response
+		name = crisis.211.e
+		trigger = {
+			OR = {
+				has_government = gov_megacorporation
+				has_government = gov_trade_league
+				is_megacorp = yes
+			}
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	option = { # Default Response
+		name = crisis.211.f
+		trigger = {
+			NOR = {
+				has_spiritualist_government = yes
+				has_militarist_government = yes
+				has_materialist_government = yes
+				has_pacifist_government = yes
+				has_government = gov_megacorporation
+				has_government = gov_trade_league
+				is_megacorp = yes
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	option = { # Xenophobe Response
+		name = crisis.211.g
+		trigger = {
+			has_ethic = "ethic_fanatic_xenophobe"
+		}
+	}
+	option = { # Xenophile Response
+		name = crisis.211.h
+		trigger = {
+			has_ethic = "ethic_fanatic_xenophile"
+		}
+	}
+	# Risa fix: Support other government types.
+	after = {
+		add_modifier = {
+			modifier = "prethoryn_defeated"
+			days = 3600
+		}
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier5unityreward
+		}
+		end_event_chain = "prethoryn_scourge_chain"
+	}
+}

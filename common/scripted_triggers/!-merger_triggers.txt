@@ -120,6 +120,51 @@ merg_is_hab_ringworld = {
 	}
 }
 
+# Crisis trigger
+merg_is_true_ringworld = {
+	OR = {
+		is_planet_class = pc_ringworld_habitable
+		is_planet_class = pc_shattered_ring_habitable
+		is_planet_class = pc_cybrex
+		# Gigastructural Engineering & More
+		is_planet_class = pc_ringworld_city
+		is_planet_class = pc_ringworld_machine
+		is_planet_class = pc_ringworld_hive
+		is_planet_class = pc_giga_maginot_ringworld
+		# Ancient Empire
+		# listed planet types are for colors only, they're all ideal
+		is_planet_class = pc_ag_ringworld_desert
+		is_planet_class = pc_ag_ringworld_arid
+		is_planet_class = pc_ag_ringworld_savannah
+		is_planet_class = pc_ag_ringworld_ocean
+		is_planet_class = pc_ag_ringworld_continental
+		is_planet_class = pc_ag_ringworld_tropical
+		is_planet_class = pc_ag_ringworld_tundra
+		is_planet_class = pc_ag_ringworld_arctic
+		is_planet_class = pc_ag_ringworld_alpine
+		is_planet_class = pc_ag_ringworld_machine
+		is_planet_class = pc_ag_ringworld_city
+		is_planet_class = pc_ag_ringworld_gaia
+		# Warship Girls and MIST species
+		is_planet_class = pc_ringworld_habitable_sh
+		is_planet_class = pc_ringworld_habitable_wsg
+		is_planet_class = pc_ringworld_habitable_swim
+		is_planet_class = pc_ringworld_habitable_water
+		is_planet_class = pc_ringworld_habitable_uf
+		is_planet_class = pc_ringworld_habitable_auto_uf
+		is_planet_class = pc_dyson_ring
+		# Planetary Diversity
+		is_planetary_diversity_ringworld = yes
+		# Darkspace
+		is_planet_class = pc_ancient_ringworld
+		is_planet_class = pc_ringworld_spectrals
+		# ZOFE
+		is_planet_class = pc_utopian_ringworld
+		# Giga Diversity
+		is_planet_class = pc_giga_maginot_ringworld
+	}
+}
+
 # Listing habitats
 merg_is_habitat = {
 	optimize_memory
@@ -155,6 +200,65 @@ merg_is_habitat_non_starborn = {
 		is_planet_class = pc_pd_toxic_hab
 		# Nyto Species Pack
 		is_planet_class = pc_GFnytp_habitis
+	}
+}
+
+# Crisis triggers
+merg_is_habitat_non_PD = {
+	OR = {
+		is_planet_class = pc_habitat
+		# Gigastructural Engineering & More
+		is_planet_class = pc_giga_elysium
+		is_planet_class = pc_giga_orbital
+		# More Events Mod
+		is_planet_class = pc_mem_vazuran_habitat
+		# Acquisition of Technology
+		is_planet_class = pc_dm_habitat
+		is_planet_class = pc_ae_habitat
+		is_planet_class = pc_sigma_habitat
+		is_planet_class = pc_sigma_deepspace_habitat
+		# Twinks Atlantean
+		uses_district_set = skypalace
+		# Plentiful Traditions
+		is_planet_class = pc_habitat_robot
+		# Giga Diversity
+		is_planet_class = pc_pd_toxic_hab
+		# Nyto Species Pack
+		is_planet_class = pc_GFnytp_habitis
+		# Starborn: Improved Voidtouched
+		uses_district_set = starborn_start
+	}
+}
+
+# These can't be infested by the Prethoryn
+merg_is_special_colony = {
+	OR = {
+		# Planetary Diversity
+		is_pd_habitat = yes
+		# Gigastructural Engineering & More
+		is_planet_class = pc_ehof_habitat
+		is_planet_class = pc_giga_maginot_world
+		is_planet_class = pc_giga_maginot_gas_giant
+		is_planet_class = pc_giga_planetary_computer
+		is_planet_class = pc_virtual_reality
+		is_planet_class = pc_virtual_industry
+		is_planet_class = pc_virtual_stellar_industry
+		is_planet_class = pc_habitable_gas_giant
+		is_planet_class = pc_flat_world
+		is_planet_class = pc_interstellar_ringworld_habitable
+		is_planet_class = pc_interstellar_habitat
+		is_planet_class = pc_gigaorbital_ring
+		is_planet_class = pc_giga_penrose_habitable
+		is_planet_class = pc_equatorial_shipyard
+		is_planet_class = pc_squareworld_habitable
+		is_planet_class = pc_alderson_slice_gaia
+		is_planet_class = pc_alderson_slice_ecu
+		is_planet_class = pc_alderson_slice_pc
+		is_planet_class = pc_alderson_slice_hive
+		is_planet_class = pc_alderson_slice_machine
+		# ACOT
+		is_planet_class = pc_birch
+		is_planet_class = pc_void_birch
 	}
 }
 
@@ -424,5 +528,46 @@ merg_is_rad_planet = {
 		planet = { is_planet_class = pc_katzenland }
 		# Real Space
 		planet = { is_planet_class = pc_depleted }
+	}
+}
+
+# ZOFE support
+merg_has_pacifist_government = {
+	OR = {
+		has_pacifist_government = yes
+		AND = {
+			merg_is_default_empire = yes
+			has_ethic = "ethic_fanatic_pacifist"
+		}
+	}
+}
+
+merg_has_militarist_government = {
+	OR = {
+		has_militarist_government = yes
+		AND = {
+			merg_is_default_empire = yes
+			has_ethic = "ethic_fanatic_militarist"
+		}
+	}
+}
+
+merg_has_spiritualist_government = {
+	OR = {
+		has_spiritualist_government = yes
+		AND = {
+			merg_is_default_empire = yes
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+	}
+}
+
+merg_has_materialist_government = {
+	OR = {
+		has_mmaterialist_government = yes
+		AND = {
+			merg_is_default_empire = yes
+			has_ethic = "ethic_fanatic_materialist"
+		}
 	}
 }

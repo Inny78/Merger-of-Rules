@@ -220,6 +220,27 @@ can_add_claim = {
 			}
 		}
 	}
+	# StarnetAI/StarTech
+	custom_tooltip = {
+        fail_text = CANNOT_ADD_CLAIM_NOT_VALID_EMPIRE
+        NAND = {
+            exists = owner
+            root = {
+                is_ai = yes
+            }
+            owner = {
+                OR = {
+                    merg_is_fallen_empire = yes
+                    merg_is_awakened_fe = yes
+                }
+                relative_power = {
+                    who = root
+                    category = fleet
+                    value >= equivalent
+                }
+            }
+        }
+    }
 }
 
 # Root = taker country
@@ -492,6 +513,7 @@ can_generate_leader_from_species = {
 }
 
 # can_create_espionage_asset_from_species
+
 #Root = country
 #This = pop
 can_generate_military_leader_from_pop = {
@@ -980,7 +1002,28 @@ can_take_hostile_actions = {
 
 # can_declare_war
 
-# can_colonize_planet
+#Root = country
+#This = planet
+can_colonize_planet = {
+	# StarnetAI/StarTech
+	if = {
+		limit = {
+			has_modifier = "holy_planet"
+			root = {
+				is_ai = yes
+				NOT = {
+					has_relic = r_severed_head
+				}
+			}
+			any_country = {
+				has_ai_personality_behaviour = holy_planets
+			}
+		}
+		always = no
+	}
+	# Vanilla
+	else = { always = yes }
+}
 
 #Root = country
 #This = planet
