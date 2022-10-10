@@ -219,9 +219,41 @@ planet_event = {
 	}
 }
 
+namespace = giga_katzen
+event = {
+	id = giga_katzen.0933
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
 namespace = maginot_destruction
 planet_event = {
 	id = maginot_destruction.1002
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+namespace = gpm_crisis
+planet_event = {
+	id = gpm_crisis.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = gpm_crisis.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+planet_event = {
+	id = gpm_crisis.3
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {

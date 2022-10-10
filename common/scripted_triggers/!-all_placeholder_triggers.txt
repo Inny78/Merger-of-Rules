@@ -28,10 +28,13 @@ is_pd_arcology = { always = no }
 is_pd_exotic = { always = no }
 is_pd_gaia = { always = no }
 is_pd_habitat = { always = no }
+is_pd_hive_world = { always = no }
+is_pd_machine = { always = no }
 is_pd_necro_world = { always = no }
 is_pd_planet_class_all = { always = no }
 is_pd_rare = { always = no }
 is_pd_regular = { always = no }
+is_pd_shroud_world = { always = no }
 is_pd_unique = { always = no }
 is_planetary_diversity_ringworld = { always = no }
 is_progenitor_empires = { always = no }
