@@ -76,6 +76,11 @@ has_espionage_extended = {
 	has_global_flag = has_mod_espionage_extended
 }
 
+# Ethical Gestalts
+has_ethical_gestalts = {
+	has_global_flag = using_mod_ethical_gestalts
+}
+
 # Ethics and Civics Bug Branch 2517213262
 has_ethics_bug = {
 	has_global_flag = bugbranch_global_flag

@@ -1,0 +1,7 @@
+# Dummy effects - to be overwritten by their respective mods.
+# Irony this is a placeholder file please ignore it
+gpm_purge_all_planetary_modifiers = { }
+gpm_purge_all_core_modifiers = { }
+gpm_roll_machine_world_modifiers = { }
+gpm_remove_planetary_features = { }
+gpm_roll_planetary_features = { }

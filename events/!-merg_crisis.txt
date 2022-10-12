@@ -257,3 +257,160 @@ country_event = {
 		end_event_chain = "prethoryn_scourge_chain"
 	}
 }
+
+# First Machine World (HIDDEN)
+planet_event = {
+	id = crisis.2025
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_crisis_sound = ai_empire_ambient_stage_1
+		set_crisis_stage_1 = yes
+		create_species = {
+			name = "NAME_Custodian_Bot"
+			class = "ROBOT"
+			namelist = "AI"
+			portrait = "hum_robot_red"
+			traits = {
+				trait = "trait_mechanical"
+			}
+			effect = { save_global_event_target_as = custodian_bot }
+		}
+		create_species = {
+			name = "NAME_Contingency"
+			class = "ROBOT"
+			namelist = "AI"
+			portrait = "ai_crisis_1"
+			immortal = yes
+			traits = {
+				trait = "trait_mechanical"
+			}
+			effect = { save_global_event_target_as = contingency_bot }
+		}
+		create_country = {
+			name = NAME_Contingency
+			species = event_target:custodian_bot # for pops
+			#species = ROBOT_POP_SPECIES_3
+			authority = auth_ancient_machine_intelligence
+			ethos = {
+				ethic = ethic_gestalt_consciousness
+			}
+			civics = {
+				civic = civic_machine_terminator
+				civic = civic_machine_warbots
+			}
+			type = "ai_empire"
+			name_list = "AI"
+			flag = {
+				icon= {
+					category = "special"
+					file = "ai_01.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "circle.dds"
+				}
+				colors={
+					"black"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				create_leader = {
+					class = ruler
+					species = event_target:contingency_bot
+					name = random
+					effect = {
+						save_event_target_as = contingency_ruler
+					}
+				}
+				set_leader = event_target:contingency_ruler
+				create_ship_design = { design = "NAME_AI_Transport" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_AI_Constructor" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_AI_1" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_AI_2" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_AI_STARBASE" }
+				add_ship_design = last_created_design
+				save_event_target_as = AI_crisis
+			}
+		}
+		every_owned_pop = { kill_pop = yes }
+		change_pc = pc_ai
+		reset_planet = yes
+		# GPM
+		if = {
+			limit = { has_gpm = yes }
+			gpm_purge_all_planetary_modifiers = yes
+			gpm_purge_all_core_modifiers = yes
+			gpm_roll_machine_world_modifiers = yes
+			gpm_remove_planetary_features = yes
+			gpm_roll_planetary_features = yes
+		}
+		# Vanilla
+		set_name = "NAME_Sterilization_Hub_1"
+		set_owner = event_target:AI_crisis
+		set_controller = event_target:AI_crisis
+		create_ai_planet_defense = yes
+		create_ai_fleet = yes
+		create_ai_fleet = yes
+		random_country = { observer_event = { id = observer.45 } }
+		every_country = {
+			limit = { is_ai = no }
+			country_event = { id = crisis.2030 }
+		}
+		every_country = {
+			limit = {
+				merg_is_default_empire = yes
+			}
+			establish_communications_no_message = event_target:AI_crisis
+		}
+		planet_event = { id = crisis.2050 } # Start Fleet reinforcement cycle
+		planet_event = { id = crisis.2052 } # Start Army reinforcement cycle
+		every_country = {
+			limit = { has_event_chain = "ai_crisis_chain" }
+			add_event_chain_counter = {
+				event_chain = "ai_crisis_chain"
+				counter = "active_machine_worlds"
+				amount = 1
+			}
+		}
+		awaken_guardians_of_the_galaxy = yes
+		awaken_fallen_machine_empire = yes
+		set_global_flag = ai_invasion_ongoing
+		set_global_flag = synth_terror
+
+		solar_system = {
+			if = {
+				limit = { exists = starbase }
+				starbase = {
+					fleet = {
+						destroy_fleet = this
+					}
+				}
+			}
+			create_contingency_starbase = yes
+			star = {
+				create_ambient_object = {
+					type = "contingency_1"
+					location = this
+				}
+				last_created_ambient_object = {
+					set_ambient_object_flag = contingency_system_effect
+					set_location = {
+						target = prev
+						distance = 0
+						angle = random
+					}
+				}
+			}
+		}
+	}
+}

@@ -176,15 +176,6 @@ planet_event = {
 	}
 }
 
-namespace = sofe_crisis
-planet_event = {
-	id = sofe_crisis.9800
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-	}
-}
-
 namespace = aot_planetary_shields_event
 planet_event = {
 	id = aot_planetary_shields_event.1

@@ -301,21 +301,6 @@ merg_has_cloning_building = {
 	}
 }
 
-# Planet is doomed, check for resettle rules
-merg_is_doomed_planet = {
-	OR = {
-		is_doomsday_planet = yes
-		# Expanded Events
-		has_modifier = deteriorating_ecosystem
-		has_modifier = catastrophe_approach
-		has_modifier = apocalypse
-		has_modifier = ravenous_locusts
-		has_modifier = planet_active_worm
-		# Endless Frontier: An Event Mod
-		has_modifier = mzilli_events_dying_world
-	}
-}
-
 # List of void systems
 merg_is_void_system = {
 	optimize_memory
