@@ -1055,17 +1055,13 @@ can_colonize_with_species = {
 		has_trait = tc_trait_golem
 	}
 	OR = {
-		NOT = {
-			has_trait = trait_self_modified
-		}
+		NOT = { has_trait = trait_self_modified }
 		is_same_species = root
 	}
 	# The Empty Vagrant
 	Root = {
 		OR = {
-			NOT = {
-				is_country_type = default_ev
-			}
+			NOT = { is_country_type = default_ev }
 			AND = {
 				is_country_type = default_ev
 				OR = {
@@ -1078,48 +1074,33 @@ can_colonize_with_species = {
 	# Vanilla
 	if = {
 		limit = {
-			is_sapient = no
+			OR = {
+				is_sapient = no
+				has_trait = trait_zombie
+			}
 		}
-		custom_tooltip = {
-			always = no
-		}
+		custom_tooltip = { always = no }
 	}
 	else_if = {
-		limit = {
-			has_trait = trait_hive_mind
-		}
-		root = {
-			is_hive_empire = yes
-		}
+		limit = { has_trait = trait_hive_mind }
+		root = { is_hive_empire = yes }
 	}
 	else_if = {
-		limit = {
-			has_trait = trait_machine_unit
-		}
-		root = {
-			is_machine_empire = yes
-		}
+		limit = { has_trait = trait_machine_unit }
+		root = { is_machine_empire = yes }
 	}
 	# Nyto Species Event Pack
 	else_if = {
-		limit = {
-			has_species_flag = GF_nyto_not_coloniz
-		}
+		limit = { has_species_flag = GF_nyto_not_coloniz }
 		always = no
 	}
 	# Lithoid Supremacy
 	else_if = {
-		limit = {
-			has_trait = trait_pearl_born_drone
-		}
-		custom_tooltip = {
-			always = no
-		}
+		limit = { has_trait = trait_pearl_born_drone }
+		always = no
 	}
 	# Vanilla
-	else = {
-		always = yes
-	}
+	else = { always = yes }
 }
 
 # Root = Pop
@@ -1128,9 +1109,7 @@ can_colonize_with_species = {
 # NOTE: species_has_happiness is also checked for this
 pop_has_random_ethics = {
 	NOR = {
-		has_citizenship_type = {
-			type = citizenship_organic_trophy
-		}
+		has_citizenship_type = { type = citizenship_organic_trophy }
 		# Diagraphers Trait Mod
 		has_trait = trait_subsapient_form
 	}
@@ -1173,35 +1152,25 @@ species_has_happiness = {
 						is_machine_empire = yes
 					}
 					has_trait = trait_extsynth_synthetic
-					NOT = {
-						has_trait = trait_psionic
-					}
+					NOT = { has_trait = trait_psionic }
 				}
 				AND = {
 					has_animated_synth = yes
 					NAND = {
-						from = {
-							is_machine_empire = yes
-						}
+						from = { is_machine_empire = yes }
 						has_trait = trait_extsynth_synthetic
 					}
 				}
 			}
 			# Vanilla
 			OR = {
-				NOT = {
-					exists = from
-				}
+				NOT = { exists = from }
 				from = {
-					is_machine_empire = yes
-				}
-				from = {
-					NOT = {
-						has_technology = tech_synthetic_workers
+					OR = {
+						is_machine_empire = yes
+						NOT = { has_technology = tech_synthetic_workers }
+						has_policy_flag = ai_outlawed
 					}
-				}
-				from = {
-					has_policy_flag = ai_outlawed
 				}
 			}
 		}

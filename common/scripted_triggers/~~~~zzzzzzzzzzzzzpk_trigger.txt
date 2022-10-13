@@ -50,18 +50,12 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 					# primitive
 					exists = space_owner
 					exists = owner
-					owner = {
-						is_primitive = yes
-					}
+					owner = { is_primitive = yes }
 					space_owner = {
 						OR = {
+							is_same_value = from.owner
 							is_at_war_with = from.owner
 							is_crisis_faction = yes
-							# Safety Off
-							AND = {
-								has_safety_off = yes
-								is_same_value = from.owner
-							}
 						}
 					}
 				}

@@ -14,6 +14,7 @@ default = {
 		azur_nsc_battleship_S_limit
 		azur_nsc_carrier_S_limit
 		altair_flagship_limit
+		azur_super_battale_ship_limit
         # Darkspace
         ds_nomads_main_ships_limit
         ds_nomads_ark_ships_limit
