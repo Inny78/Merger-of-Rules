@@ -103,7 +103,6 @@ reshaper_eligible = {
 		is_planet_class = pc_ringworld_seam
 		is_planet_class = pc_ringworld_seam_damaged
 		# Merger of Rules edits
-		is_ringworld = yes
 		merg_is_habitat = yes
 		merg_is_hab_ringworld = yes
 		merg_is_forbidden_target = yes
@@ -124,7 +123,6 @@ giga_valid_planet_wrecked_ship = {
 giga_habitable_structure = {
 	OR = {
 		uses_district_set = habitat
-		is_ringworld = yes
 		merg_is_habitat = yes
 		merg_is_hab_ringworld = yes
 		# Gigastructural Engineering & More
@@ -484,7 +482,6 @@ is_memeable_space_habitat = {
 	OR = {
 		uses_district_set = habitat
 		habitable_structure = yes
-		is_ringworld = yes
 		merg_is_habitat = yes
 		merg_is_hab_ringworld = yes
 		# Gigastructural Engineering & More
@@ -499,7 +496,6 @@ is_memeable_ringworld = {
 ############################### More Events Mod ###############################
 # disallowing MEM planetary shields to be shown 
 mem_is_spherical_world = {
-	is_ringworld = no
 	NOR = {
 		uses_district_set = habitat
 		habitable_structure = yes
@@ -573,7 +569,6 @@ starborn_can_place_hab = {
 			solar_system = {
 				has_star_flag = ring_world_built
 			}
-			is_ringworld = yes
 			is_planet_class = pc_ringworld_habitable_damaged
 			is_planet_class = pc_ringworld_tech
 			is_planet_class = pc_ringworld_tech_damaged
