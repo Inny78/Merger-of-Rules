@@ -438,15 +438,7 @@ is_ndb_immune_star_planet = {
 }
 
 giga_gas_giant = {
-	OR = {
-		is_planet_class = pc_gas_giant
-		# Planetary Diversity
-		is_planet_class = pc_hot_gas_giant
-		is_planet_class = pc_cloudless_gas_giant
-		is_planet_class = pc_cold_gas_giant
-		# Expanded Events
-		is_planet_class = pc_ice_giant
-	}
+	merg_is_gas_giant = yes
 }
  
 giga_can_be_war_planet = {
@@ -455,19 +447,40 @@ giga_can_be_war_planet = {
 	has_anomaly = no
 	is_colony = no
 	prev = { NOT = { has_ethic = ethic_fanatic_spiritualist } }
-	OR = {
-		is_planet_class = pc_barren
-		is_planet_class = pc_barren_cold
-		is_planet_class = pc_molten
-		is_planet_class = pc_toxic
-		is_planet_class = pc_frozen
-		# Planetary Diversity
-		is_planet_class = pc_hothouse
-	}
+	uninhabitable_regular_planet = yes
 }
 
 giga_planet_no_farming = {
 	merg_is_machine_world = yes
+}
+
+is_valid_kaiser_moon_candidate = {
+	OR = {
+		is_planet_class = pc_barren
+		is_planet_class = pc_barren_cold
+		is_planet_class = pc_molten
+		is_planet_class = pc_frozen
+		# Giga Diversity
+		is_planet_class = pc_core_mined
+		#Added PD wolds
+		is_planet_class = pc_carbon
+		# All These Worlds
+		is_planet_class = orbit_molten
+		is_planet_class = orbit_icy
+		is_planet_class = orbit_chthonian
+		is_planet_class = orbit_dusty_telluric
+		is_planet_class = orbit_iron_telluric
+		is_planet_class = orbit_silicate_telluric
+		is_planet_class = orbit_volcanic_telluric
+		is_planet_class = orbit_frozen_telluric
+	}
+	OR = {
+		planet_size = 4
+		planet_size = 5
+		planet_size = 6
+		planet_size = 7
+		planet_size = 8
+	}
 }
 
 ############################### Zenith of the Fallen Empires ###############################
@@ -645,8 +658,9 @@ legw_fallen_empire_planet = {
 is_moon_of_gas_giant = {
 	is_scope_type = planet
 	exists = orbit
-	orbit = {
-		merg_is_gas_giant = yes
+	OR = {
+		orbit = { merg_is_gas_giant = yes }
+		has_planet_flag = gas_giant_moon
 	}
 }
 
@@ -1436,5 +1450,57 @@ is_spy_empire = {
 		has_valid_civic = civic_self_experimentation
 		# Espionage Extended
 		has_valid_civic = civic_shadow_state
+	}
+}
+
+# All these worlds
+is_fallen_empire_planet = {
+	owner = {
+		OR = {
+			merg_is_fallen_empire = yes
+			merg_is_awakened_fe = yes
+		}
+	}
+}	
+
+exists_collapsed_star = {
+	solar_system = { any_system_planet = { merg_is_standard_dense_star = yes } }
+}
+
+is_collapsed_star = {
+	merg_is_standard_dense_star = yes
+}
+
+# THE ABYSS CONTRACT
+TAC_is_common_country = {
+	optimize_memory
+	OR = {
+		is_country_type = default
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		is_country_type = awakened_marauders
+		is_country_type = primitive
+		is_country_type = swarm
+		is_country_type = extradimensional
+		is_country_type = extradimensional_2
+		is_country_type = extradimensional_3
+		is_country_type = ai_empire
+		is_country_type = gate_builders
+		is_country_type = gray_goo
+		# The Empty Vagrant
+		is_country_type = default_ev
+		# ZOFE
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+		# Darkspace
+		is_country_type = ds_nomads
+	}
+}
+
+TAC_is_sc_void = {
+	optimize_memory
+	OR = {
+		merg_is_void_system = yes
+		NOT = { exists = star }
 	}
 }

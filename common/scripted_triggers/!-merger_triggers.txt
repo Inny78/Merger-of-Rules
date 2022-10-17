@@ -359,6 +359,18 @@ merg_is_gas_giant = {
 		is_planet_class = pc_cold_gas_giant
 		# Expanded Events
 		is_planet_class = pc_ice_giant
+		# All these worlds
+		is_planet_class = orbit_super_giant
+		is_planet_class = orbit_ammonia-clouded_giant
+		is_planet_class = orbit_water-clouded_giant
+		is_planet_class = orbit_cloudless_giant
+		is_planet_class = orbit_alkaline_giant
+		is_planet_class = orbit_silicate_giant
+		is_planet_class = orbit_frigid_giant
+		is_planet_class = orbit_methane_giant
+		is_planet_class = orbit_turbulent_giant
+		is_planet_class = orbit_temperate_giant
+		is_planet_class = orbit_helium_giant
 	}
 }
 
@@ -413,6 +425,21 @@ merg_is_crackable_planet = {
 		is_planet_class = pc_red_toxic
 		# Dead Space
 		is_planet_class = pc_stahl
+		# All these worlds
+		is_planet_class = orbit_molten
+		is_planet_class = orbit_icy
+		is_planet_class = orbit_chthonian
+		is_planet_class = orbit_dusty_telluric
+		is_planet_class = orbit_iron_telluric
+		is_planet_class = orbit_silicate_telluric
+		is_planet_class = orbit_volcanic_telluric
+		is_planet_class = orbit_frozen_telluric
+		is_planet_class = orbit_methane_toxic
+		is_planet_class = orbit_hothouse_toxic
+		is_planet_class = orbit_carbonyl_toxic
+		is_planet_class = orbit_water_panthalassic
+		is_planet_class = orbit_ammonia_panthalassic
+		is_planet_class = orbit_methane_panthalassic
 	}
 }
 
@@ -468,6 +495,17 @@ merg_is_dense_star = {
 	}
 }
 
+merg_is_standard_dense_star = {
+	OR = {
+		is_planet_class = pc_black_hole
+		is_planet_class = pc_neutron_star
+		is_planet_class = pc_pulsar
+		# Real Space
+		is_planet_class = pc_collapsar
+		is_planet_class = pc_magnetar
+	}
+}
+
 # List of void stars and planet for planet killers
 merg_is_empty_space = {
 	OR = {
@@ -504,15 +542,17 @@ merg_is_shielded = {
 
 merg_is_rad_planet = {
 	OR = {
-		planet = { is_planet_class = pc_nuked }
+		is_planet_class = pc_nuked
 		# Planetary Diversity
-		planet = { is_planet_class = pc_irradiated }
+		is_planet_class = pc_irradiated
 		# Galaxius
-		planet = { is_planet_class = pc_ie_gateway }
+		is_planet_class = pc_ie_gateway
 		# Giga Diversity
-		planet = { is_planet_class = pc_katzenland }
+		is_planet_class = pc_katzenland
 		# Real Space
-		planet = { is_planet_class = pc_depleted }
+		is_planet_class = pc_depleted
+		# All these worlds
+		is_planet_class = orbit_nuked 
 	}
 }
 

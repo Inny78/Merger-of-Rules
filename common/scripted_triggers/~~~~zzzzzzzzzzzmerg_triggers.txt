@@ -114,6 +114,7 @@ habitable_planet = {
 	optimize_memory
 	OR = {
 		habitable_planet_not_urban = yes
+		galactic_diversity_habitable_planet = yes
 		is_planet_class = pc_relic
 		is_planet_city = yes
 	}
@@ -176,6 +177,16 @@ uninhabitable_regular_planet = {
 		is_planet_class = pc_frozen
 		# Planetary Diversity
 		is_planet_class = pc_hothouse
+		# All these worlds
+		is_planet_class = orbit_icy
+		is_planet_class = orbit_chthonian
+		is_planet_class = orbit_iron_telluric
+		is_planet_class = orbit_volcanic_telluric
+		is_planet_class = orbit_hothouse_toxic
+		is_planet_class = orbit_carbonyl_toxic
+		is_planet_class = orbit_water_panthalassic
+		is_planet_class = orbit_ammonia_panthalassic
+		is_planet_class = orbit_methane_panthalassic
 	}
 }
 
@@ -190,15 +201,12 @@ habitable_structure = {
 
 is_a_habitable_planet_megastructure = {
 	OR = {
-		is_planet_class = pc_infested
-		# Expanded Gestalts: Forgotten Queens
-		is_planet_class = pc_matryoshka
-		# ACOT
-		is_planet_class = pc_dark_fractured
-		is_planet_class = pc_dark_fractured_ae
-		is_planet_class = pc_acot_enigmopolis
-		colonizable_planet = yes		# Ariphaos patch
+		colonizable_planet = yes
 		habitable_structure = yes
+		# Expanded Gestalts: Forgotten Queens
+		is_planet_class = pc_infested
+		is_planet_class = pc_matryoshka
+		merg_is_rad_planet = yes
 	}
 }
 
@@ -886,5 +894,101 @@ is_doomsday_planet = {
 		has_modifier = planet_active_worm
 		# Endless Frontier: An Event Mod
 		has_modifier = mzilli_events_dying_world
+	}
+}
+
+NOR = {
+	has_deposit_for = shipclass_research_station
+	has_planet_flag = has_dark_matter_deposit
+	has_planet_flag = has_negative_mass_deposit
+	has_planet_flag = has_zro_deposit
+	has_planet_flag = has_living_metal_deposit
+	has_planet_flag = has_physics_deposit
+	has_planet_flag = has_society_deposit
+	has_planet_flag = has_engineering_deposit
+
+	event_target:current_system_creator = { NOT = { has_technology = tech_mine_rare_crystals } }
+	merg_is_gas_giant = yes
+	is_star = yes
+}
+
+eligible_for_volatile_motes = {
+	NOR = {
+		has_deposit_for = shipclass_research_station
+		has_planet_flag = has_dark_matter_deposit
+		has_planet_flag = has_negative_mass_deposit
+		has_planet_flag = has_zro_deposit
+		has_planet_flag = has_living_metal_deposit
+		has_planet_flag = has_physics_deposit
+		has_planet_flag = has_society_deposit
+		has_planet_flag = has_engineering_deposit
+
+		event_target:current_system_creator = { NOT = { has_technology = tech_mine_volatile_motes } }
+		merg_is_gas_giant = yes
+		is_star = yes
+	}
+}
+
+eligible_for_alloys = {
+	NOR = {
+		has_deposit_for = shipclass_research_station
+		has_planet_flag = has_dark_matter_deposit
+		has_planet_flag = has_negative_mass_deposit
+		has_planet_flag = has_zro_deposit
+		has_planet_flag = has_living_metal_deposit
+		has_planet_flag = has_physics_deposit
+		has_planet_flag = has_society_deposit
+		has_planet_flag = has_engineering_deposit
+
+		merg_is_gas_giant = yes
+		is_star = yes
+	}
+}
+
+eligible_for_zro = {
+	NOR = {
+		has_deposit_for = shipclass_research_station
+		solar_system = {
+			NOT = {
+				any_system_planet = {
+					OR = {
+						has_planet_flag = has_living_metal_deposit
+						has_planet_flag = has_zro_deposit
+					}
+				}
+			}
+		}
+		event_target:current_system_creator = { NOT = { has_technology = tech_mine_zro } }
+		event_target:current_system_creator = { has_country_flag = recently_spawned_zro }
+		has_planet_flag = has_dark_matter_deposit
+		has_planet_flag = has_negative_mass_deposit
+		has_planet_flag = has_living_metal_deposit
+
+		merg_is_gas_giant = yes
+		is_star = yes
+	}
+}
+
+eligible_for_living_metal = {
+	NOR = {
+		has_deposit_for = shipclass_research_station
+		solar_system = {
+			NOT = {
+				any_system_planet = {
+					OR = {
+						has_planet_flag = has_living_metal_deposit
+						has_planet_flag = has_zro_deposit
+					}
+				}
+			}
+		}
+		event_target:current_system_creator = { NOT = { has_technology = tech_mine_living_metal } }
+		event_target:current_system_creator = { has_country_flag = recently_spawned_lm }
+		has_planet_flag = has_zro_deposit
+		has_planet_flag = has_dark_matter_deposit
+		has_planet_flag = has_negative_mass_deposit
+
+		merg_is_gas_giant = yes
+		is_star = yes
 	}
 }
