@@ -1504,3 +1504,16 @@ TAC_is_sc_void = {
 		NOT = { exists = star }
 	}
 }
+
+# NSC
+nsc_mothball_target_fleet_requirement = {
+	owner = { is_same_value = prev.owner }
+	OR = {
+		is_ship_class = shipclass_military
+		is_ship_class = shipclass_military_special
+        AND = {
+            is_ship_class = shipclass_starbase
+            fleet = { is_mobile = yes }
+        }
+	}
+}

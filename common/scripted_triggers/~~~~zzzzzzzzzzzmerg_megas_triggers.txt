@@ -2275,6 +2275,15 @@ has_no_non_gate_megastructure = {
 					is_megastructure_type = nanite_factory
 					# Sensible Late Game Techs
 					is_megastructure_type = slgt_central_mining_station
+					# NSC
+					is_megastructure_type = nsc_strategic_resource_factory_0
+					is_megastructure_type = nsc_strategic_resource_factory_1
+					is_megastructure_type = nsc_hospital_0
+					is_megastructure_type = nsc_hospital_1
+					is_megastructure_type = nsc_hospital_2
+					is_megastructure_type = nsc_hospital_3
+					is_megastructure_type = nsc_galactic_mall_0
+					is_megastructure_type = nsc_galactic_mall_1
 				}
 			}
 		}
@@ -2384,6 +2393,15 @@ has_any_megastructure_in_empire = {
 			has_megastructure = nanite_factory
 			# Sensible Late Game Techs
 			has_megastructure = slgt_central_mining_station
+			# NSC
+			has_megastructure = nsc_strategic_resource_factory_0
+			has_megastructure = nsc_strategic_resource_factory_1
+			has_megastructure = nsc_hospital_0
+			has_megastructure = nsc_hospital_1
+			has_megastructure = nsc_hospital_2
+			has_megastructure = nsc_hospital_3
+			has_megastructure = nsc_galactic_mall_0
+			has_megastructure = nsc_galactic_mall_1
 		}
 	}
 }
