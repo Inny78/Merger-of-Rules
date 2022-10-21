@@ -11,6 +11,7 @@ galactic_diversity_habitable_planet = { always = no }
 giga_uses_habitat_capitals = { always = no }
 has_apsr_modifiers = { always = no }
 has_artificial_wombs = { always = no }
+has_mod_reproductive_tech_and_politics = { always = no }
 has_reproductive_politics = { always = no }
 has_wg_traits = { always = no }
 hfe_trigger_is_human_fallen = { always = no }

@@ -158,6 +158,11 @@ has_kancolle = {
 	}
 }
 
+# Reproductive Technology and Politics
+has_diag_rtp_mod = {
+	has_mod_reproductive_tech_and_politics = yes
+}
+
 # Safety Off
 has_safety_off = {
 	has_global_flag = has_pk_safety_off

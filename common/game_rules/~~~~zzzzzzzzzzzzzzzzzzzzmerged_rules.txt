@@ -1409,26 +1409,16 @@ can_species_be_assembled = {
 		AND = {
 			is_robotic = yes
 			# Azur lane Stellaris DLC
-			NOT = {
-				has_trait = trait_robot_mind_relic_core
-			}
+			NOT = { has_trait = trait_robot_mind_relic_core }
 			# Diagraphers Trait Mod
 			NAND = {
 				has_trait = trait_robot_rare_crystal_components
 				exists = root.owner
-				root.owner = {
-					resource_stockpile_compare = {
-						resource = rare_crystals
-						value <= 0
-					}
-				}
+				root.owner = { resource_stockpile_compare = { resource = rare_crystals value <= 0 } }
 			}
 			# Vanilla
 			root = {
-				check_modifier_value = {
-					modifier = planet_pop_assembly_add
-					value > 0
-				}
+				check_modifier_value = { modifier = planet_pop_assembly_add value > 0 }
 				owner = {
 					NOR = {
 						# Azur lane Stellaris DLC
@@ -1444,7 +1434,7 @@ can_species_be_assembled = {
 			is_organic_species = yes
 			# Hives can only clone drones
 			if = {
-				limit = { 	root.owner = { is_hive_empire = yes } }
+				limit = { root.owner = { is_hive_empire = yes } }
 				AND = {
 					OR = {
 						has_trait = trait_hive_mind
@@ -1520,12 +1510,7 @@ can_species_be_assembled = {
 							}
 						}
 					}
-					NOT = {
-						check_variable = {
-							which = clone_pops_missing
-							value = 0
-						}
-					}
+					NOT = { check_variable = { which = clone_pops_missing value = 0 } }
 				}
 			}
 			# Plentiful Traditions - Extra Perks
@@ -1554,12 +1539,7 @@ can_species_be_assembled = {
 					}
 					is_same_species = root.owner
 				}
-				root = {
-					check_modifier_value = {
-						modifier = planet_pop_assembly_organic_add
-						value > 0
-					}
-				}
+				root = { check_modifier_value = { modifier = planet_pop_assembly_organic_add value > 0 } }
 			}
 			# Planetary Diversity
 			else_if = {
@@ -1571,19 +1551,27 @@ can_species_be_assembled = {
 				}
 				root = {
 					has_building = building_techno_04_clone_vat
-					NOT = {
-						check_variable = {
-							which = techno_pops_missing
-							value = 0
-						}
-					}
+					NOT = { check_variable = { which = techno_pops_missing value = 0 } }
 				}
 			}
 			# Vanilla
 			else_if = {
 				root = {
 					OR = {
-						merg_has_cloning_building = yes
+						AND = {
+							has_diag_rtp_mod = no
+							merg_has_cloning_building = yes
+						}
+						# Reproductive Technology and Politics
+						AND = {
+							has_diag_rtp_mod = yes
+							merg_has_cloning_building = yes
+							any_owned_species = {
+								is_same_species = prevprev
+								NOT = { is_exact_same_species = prevprev }
+							}
+						}
+						# Vanilla
 						has_modifier = tiyanki_trophy
 						owner = { has_modifier = syamelles_curse }
 						AND = {
@@ -2617,6 +2605,19 @@ can_force_decline_on_planet = {
 ## Note: success text tooltips are shown in alert_pops_declining alert.
 should_force_decline_species = {
 	OR = {
+		if = {
+			limit = { has_diag_rtp_mod = yes }
+			custom_tooltip = {
+				success_text = modification_assembly_force_decline
+				from = {
+					merg_has_cloning_building = yes
+					assembling_species = {
+						is_same_species = prevprev
+						NOT = { is_exact_same_species = prevprev }					
+					}
+				}
+			}
+		}
 		# Infertile Clone Army pops should decline if in Country that can't have Vats, or there is a Vat shortage.
 		custom_tooltip = {
 			success_text = CLONE_ARMY_FORCE_DECLINE
@@ -2642,10 +2643,7 @@ should_force_decline_species = {
 						}
 					}
 					# Vats check out, but are there more pops than Vats support?
-					check_variable = {
-						which = clone_pops_missing
-						value < 0
-					}
+					check_variable = { which = clone_pops_missing value < 0 }
 				}
 			}
 		}
@@ -2726,10 +2724,7 @@ should_force_decline_species = {
 							}
 						}
 					}
-					check_variable = {
-						which = techno_pops_missing
-						value < 0
-					}
+					check_variable = { which = techno_pops_missing value < 0 }
 				}
 			}
 		}

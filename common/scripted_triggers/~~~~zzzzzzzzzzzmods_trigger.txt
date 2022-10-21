@@ -1461,7 +1461,7 @@ is_fallen_empire_planet = {
 			merg_is_awakened_fe = yes
 		}
 	}
-}	
+}
 
 exists_collapsed_star = {
 	solar_system = { any_system_planet = { merg_is_standard_dense_star = yes } }
