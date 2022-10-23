@@ -771,15 +771,11 @@ can_take_hostile_actions = {
 		limit = {
 			OR = {
 				AND = {
-					root = {
-						has_country_flag = nep_gaia_assist_war
-					}
+					root = { has_country_flag = nep_gaia_assist_war }
 					has_country_flag = nep_highlander_country
 				}
 				AND = {
-					root = {
-						has_country_flag = nep_highlander_assist_war
-					}
+					root = { has_country_flag = nep_highlander_assist_war }
 					has_country_flag = nep_gaia_country
 				}
 			}
@@ -789,11 +785,7 @@ can_take_hostile_actions = {
 	else_if = {
 		# SEoOC_phantom
 		limit = {
-			root = {
-				NOT = {
-					has_technology = tech_nep_phantom_phase_shift
-				}
-			}
+			root = { NOT = { has_technology = tech_nep_phantom_phase_shift } }
 			is_country_type = nep_phantom_passive
 		}
 		custom_tooltip = {
@@ -809,34 +801,24 @@ can_take_hostile_actions = {
 			}
 			OR = {
 				AND = {
-					root = {
-						has_country_flag = nep_gaia_assist_war
-					}
+					root = { has_country_flag = nep_gaia_assist_war }
 					has_country_flag = nep_gaia_country
 				}
 				AND = {
 					has_country_flag = nep_gaia_assist_war
-					root = {
-						has_country_flag = nep_gaia_country
-					}
+					root = { has_country_flag = nep_gaia_country }
 				}
 				AND = {
-					root = {
-						has_country_flag = nep_highlander_assist_war
-					}
+					root = { has_country_flag = nep_highlander_assist_war }
 					has_country_flag = nep_highlander_country
 				}
 				AND = {
 					has_country_flag = nep_highlander_assist_war
-					root = {
-						has_country_flag = nep_highlander_country
-					}
+					root = { has_country_flag = nep_highlander_country }
 				}
 				AND = {
 					has_country_flag = nep_gpc_country
-					root = {
-						has_country_flag = nep_caravaneer_fleet_country
-					}
+					root = { has_country_flag = nep_caravaneer_fleet_country }
 				}
 				AND = {
 					root = { has_country_flag = nep_gpc_country }
@@ -901,9 +883,7 @@ can_colonize_outside_borders = {
 					has_country_flag = is_in_coop_with@root
 					#is_in_federation_with = root
 					has_policy_flag = coop_colony_policy_yes
-					not = {
-						has_global_flag = prevent_colony_outside
-					}
+					not = { has_global_flag = prevent_colony_outside }
 				}
 			}
 		}
@@ -916,42 +896,28 @@ can_terraform_planet = {
 	custom_tooltip = {
 		fail_text = terraform_fail_no_presapient_protection_or_no_presapients
 		NAND = {
-			root = {
-				has_policy_flag = pre_sapients_protect
-			}
-			any_owned_pop = {
-				is_sapient = no
-			}
+			root = { has_policy_flag = pre_sapients_protect }
+			any_owned_pop = { is_sapient = no }
 		}
 	}
 	# Planetary Diversity
-	NAND = {
-		root = {
-			has_origin = origin_pd_tree_of_life
-		}
-	}
+	NOT = { root = { has_origin = origin_pd_tree_of_life } }
 	# Vanilla
 	custom_tooltip = {
 		fail_text = "requires_actor_not_devouring_swarm_lithoid"
-		root = {
-			is_lithoid_devouring_swarm = no
-		}
+		root = { is_lithoid_devouring_swarm = no }
 	}
 	custom_tooltip = {
 		fail_text = requires_not_relentless_industrialists_situation
 		NOT = {
-			any_targeting_situation = {
-				is_situation_type = relentless_industrialists_situation
-			}
+			any_targeting_situation = { is_situation_type = relentless_industrialists_situation }
 		}
 	}
 	# Planetary Diversity
 	custom_tooltip = {
 		fail_text = "requires_actor_not_pdtol"
 		root = {
-			NOT = {
-				has_origin = origin_pd_tree_of_life
-			}
+			NOT = { has_origin = origin_pd_tree_of_life }
 		}
 	}
 	# Real Space New Frontiers
@@ -961,9 +927,7 @@ can_terraform_planet = {
 			has_real_new_frontiers = no
 			AND = {
 				has_real_new_frontiers = yes				# Let's not affect Expanded Gestalt's own pc_hollow
-				NOT = {
-					is_planet_class = pc_hollow
-				}
+				NOT = { is_planet_class = pc_hollow }
 			}
 		}
 	}
@@ -973,9 +937,7 @@ can_terraform_planet = {
 			has_real_new_frontiers = no
 			AND = {
 				has_real_new_frontiers = yes				# to avoid a bug
-				NOT = {
-					has_deposit = d_heart_of_the_overmind
-				}
+				NOT = { has_deposit = d_heart_of_the_overmind }
 			}
 		}
 	}
@@ -989,17 +951,13 @@ can_colonize_with_pop = {
 		country = root
 	}
 	OR = {
-		NOT = {
-			has_trait = trait_self_modified
-		}
+		NOT = { has_trait = trait_self_modified }
 		is_same_species = root
 	}
 	# The Empty Vagrant
 	Root = {
 		OR = {
-			NOT = {
-				is_country_type = default_ev
-			}
+			NOT = { is_country_type = default_ev }
 			AND = {
 				is_country_type = default_ev
 				OR = {
@@ -1032,9 +990,7 @@ can_colonize_with_pop = {
 			always = no
 		}
 	}
-	else = {
-		always = yes
-	}
+	else = { always = yes }
 }
 
 #Root = country
@@ -1575,8 +1531,6 @@ can_species_be_assembled = {
 			}
 			# Vanilla
 			else = {
-				# ANZ Advanced Cloning
-				root = { NOT = { has_modifier = planet_cloning_limits } }
 				OR = {
 					# The DAL Species Mod
 					is_archetype = DATEALIVE
@@ -1612,6 +1566,8 @@ can_species_be_assembled = {
 							}
 							has_planet_flag = can_organic_assemble_flag #for mod compatibility
 						}
+						# ANZ Advanced Cloning
+						NOT = { has_modifier = planet_cloning_limits }
 					}
 				}
 			}
