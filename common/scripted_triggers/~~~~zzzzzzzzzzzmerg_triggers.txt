@@ -113,7 +113,7 @@ colonizable_planet = {
 habitable_planet = {
 	OR = {
 		habitable_planet_not_urban = yes
-#		galactic_diversity_habitable_planet = yes
+		galactic_diversity_habitable_planet = yes
 		is_planet_class = pc_relic
 		is_planet_city = yes
 	}

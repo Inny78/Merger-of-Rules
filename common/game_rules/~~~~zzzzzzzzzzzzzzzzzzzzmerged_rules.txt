@@ -104,10 +104,12 @@ can_add_claim = {
 					is_country_type = sofe_light_seeker
 					# Twinks Eternal Empire
 					is_country_type = eternal_empire
+					# ZOFE
+					is_zofe_oe = yes
 				}
 			}
 		}
-	}
+	} 
 	custom_tooltip = {
 		fail_text = CANNOT_ADD_CLAIM_DEVOURING_SWARM
 		NAND = {
@@ -219,6 +221,8 @@ can_get_claim_from_lost_system = {
 			is_country_type = sofe_light_seeker
 			# Twinks Eternal Empire
 			is_country_type = eternal_empire
+			# ZOFE
+			is_zofe_oe = yes
 		}
 		root = {
 			OR = {
@@ -231,6 +235,8 @@ can_get_claim_from_lost_system = {
 				is_country_type = sofe_light_seeker
 				# Twinks Eternal Empire
 				is_country_type = eternal_empire
+				# ZOFE
+				is_zofe_oe = yes
 			}
 		}
 	}
@@ -2163,6 +2169,7 @@ can_spawn_occupation_armies = {
 		is_country_type = original_empire_passive
 		is_country_type = original_empire_active
 		is_country_type = sofe_light_seeker
+		is_zofe_oe = yes
 	}
 }
 
@@ -2445,6 +2452,9 @@ pop_generates_crime = {
 		has_trait = kancolle_trait_kanmusu2
 		# AshArms Aquarius history
 		has_trait = adf_trait_dolls
+		# MISC
+		is_archetype = UNITED_FLEET
+		is_archetype = NANITES_CROP
 	}
 }
 
@@ -2591,7 +2601,7 @@ should_force_decline_species = {
 		custom_tooltip = {
 			success_text = modification_assembly_force_decline
 			has_diag_rtp_mod = yes
-			is_organic_species = yes
+			is_robotic_species = no
 			from = {
 				merg_has_cloning_building = yes
 				assembling_species = {
@@ -3028,6 +3038,8 @@ can_use_galactic_market = {
 				has_policy_flag = ev_no_use_galactic_market
 			}
 		}
+		# ZOFE
+		is_zofe_oe = yes
 	}
 	is_homicidal = no
 }
@@ -3129,6 +3141,8 @@ can_be_part_of_galactic_community = {
 			merg_is_default_empire = yes
 			# ACOT
 			is_country_type = original_empire_active
+			# ZOFE
+			is_zofe_oe = yes
 		}
 	}
 	custom_tooltip = {
@@ -3167,6 +3181,7 @@ can_be_part_of_galactic_empire = {
 	custom_tooltip = {
 		fail_text = "community_default_failtext"
 		merg_is_default_empire = yes
+		is_zofe_oe = yes
 	}
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
@@ -3199,6 +3214,7 @@ can_see_galactic_community = {
 		is_country_type = original_empire_active
 		# ZOFE
 		is_country_type = lost_empire
+		is_zofe_oe = yes
 	}
 	custom_tooltip = {
 		fail_text = "community_declared_crisis_failtext"
@@ -3212,6 +3228,8 @@ can_be_part_of_galactic_council = {
 		merg_is_default_empire = yes
 		# ACOT
 		is_country_type = original_empire_active
+		# ZOFE
+		is_zofe_oe = yes
 	}
 	is_homicidal = no
 	custom_tooltip = {
