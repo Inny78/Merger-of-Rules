@@ -72,7 +72,6 @@ merg_is_awakened_fe = {
 
 # List of all habitable ringworld sections
 merg_is_hab_ringworld = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_ringworld_habitable
 		is_planet_class = pc_shattered_ring_habitable
@@ -117,6 +116,11 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_utopian_ringworld
 		# Giga Diversity
 		is_planet_class = pc_giga_maginot_ringworld
+		# Planetary Ringworlds
+		is_planet_class = pc_planetary_ringworld
+		is_planet_class = pc_planetary_ringworld_machine
+		is_planet_class = pc_planetary_ringworld_hive
+		is_planet_class = pc_planetary_ringworld_city
 	}
 }
 
@@ -132,7 +136,6 @@ merg_is_true_ringworld = {
 		is_planet_class = pc_ringworld_hive
 		is_planet_class = pc_giga_maginot_ringworld
 		# Ancient Empire
-		# listed planet types are for colors only, they're all ideal
 		is_planet_class = pc_ag_ringworld_desert
 		is_planet_class = pc_ag_ringworld_arid
 		is_planet_class = pc_ag_ringworld_savannah
@@ -162,6 +165,11 @@ merg_is_true_ringworld = {
 		is_planet_class = pc_utopian_ringworld
 		# Giga Diversity
 		is_planet_class = pc_giga_maginot_ringworld
+		# Planetary Ringworlds
+		is_planet_class = pc_planetary_ringworld
+		is_planet_class = pc_planetary_ringworld_machine
+		is_planet_class = pc_planetary_ringworld_hive
+		is_planet_class = pc_planetary_ringworld_city
 	}
 }
 
@@ -200,6 +208,12 @@ merg_is_habitat_non_starborn = {
 		is_planet_class = pc_pd_toxic_hab
 		# Nyto Species Pack
 		is_planet_class = pc_GFnytp_habitis
+		# NSC2 Modjam Freebooters Origin
+		uses_district_set = nsc_freebooter_habitat
+		# Habitation
+		has_planet_flag = hab_init
+		# Living Space
+		has_planet_flag = stpg_planetary_habitat
 	}
 }
 
@@ -227,6 +241,12 @@ merg_is_habitat_non_PD = {
 		is_planet_class = pc_GFnytp_habitis
 		# Starborn: Improved Voidtouched
 		uses_district_set = starborn_start
+		# NSC2 Modjam Freebooters Origin
+		uses_district_set = nsc_freebooter_habitat
+		# Habitation
+		has_planet_flag = hab_init
+		# Living Space
+		has_planet_flag = stpg_planetary_habitat
 	}
 }
 

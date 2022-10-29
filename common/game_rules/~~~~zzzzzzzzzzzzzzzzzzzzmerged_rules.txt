@@ -510,28 +510,11 @@ can_release_vassal = {
 	}
 	custom_tooltip = {
 		fail_text = default
-		NOT = { has_valid_civic = civic_fanatic_purifiers }
-	}
-	custom_tooltip = {
-		fail_text = default
-		NOT = { has_valid_civic = civic_machine_terminator }
+		is_homicidal = no
 	}
 	custom_tooltip = {
 		fail_text = default
 		NOT = { has_valid_civic = civic_machine_assimilator }
-	}
-	custom_tooltip = {
-		fail_text = default
-		NOT = { has_valid_civic = civic_hive_devouring_swarm }
-	}
-	# ACOT
-	custom_tooltip = {
-		fail_text = default
-		NOT = { is_country_type = ascended_empire }
-	}
-	custom_tooltip = {
-		fail_text = default
-		NOT = { is_country_type = original_empire_active }
 	}
 	# Twinks Eternal Empire
 	custom_tooltip = {
