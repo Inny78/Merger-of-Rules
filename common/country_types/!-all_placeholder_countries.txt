@@ -51,6 +51,8 @@ shroud_entities = { ai = { enabled = no } }
 shroud_horrors = { ai = { enabled = no } }
 sofe_light_seeker = { ai = { enabled = no } }
 sofe_sentinel_active = { ai = { enabled = no } }
+TAC_debris_ship_country = { ai = { enabled = no } }
+TAC_machine_crisis_country = { ai = { enabled = no } }
 the_sleeper_fallen = { ai = { enabled = no } }
 wg_crisis_country = { ai = { enabled = no } }
 wg_Khan_country_type = { ai = { enabled = no } }
