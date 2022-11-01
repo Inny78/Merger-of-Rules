@@ -42,6 +42,8 @@ building_dm_galactic_capital = { potential = { always = no } allow = { always = 
 building_dm_galactic_hive_capital = { potential = { always = no } allow = { always = no } }
 building_dm_galactic_machine_capital = { potential = { always = no } allow = { always = no } }
 building_dm_stronghold = { potential = { always = no } allow = { always = no } }
+building_eternal_nexus_ai = { potential = { always = no } allow = { always = no } }
+building_eternal_palace = { potential = { always = no } allow = { always = no } }
 building_fe_affluence_center = { potential = { always = no } allow = { always = no } }
 building_fe_alloy_forge = { potential = { always = no } allow = { always = no } }
 building_fe_clone_vats = { potential = { always = no } allow = { always = no } }
