@@ -1939,6 +1939,32 @@ ai_should_restrict_system = {
 				owner = { is_country_type = guardian_fortress }
 			}
 		}
+		# SirBlackAxe's Unofficial Bug Patch
+		AND = {
+			root = {
+				OR = {
+					merg_is_fallen_empire = yes
+					is_country_type = marauder_raiders
+					is_country_type = caravaneer_fleet
+				}
+			}
+			OR = {
+				has_star_flag = lgate
+				has_star_flag = lcluster
+			}
+			has_global_flag = gray_goo_crisis_active
+		}
+		AND = {
+			root = {
+				merg_is_default_empire = yes
+				fleet_power < 30000
+			}
+			OR = {
+				has_star_flag = lgate
+				has_star_flag = lcluster
+			}
+			has_global_flag = gray_goo_crisis_active
+		}
 		# Gigastructural Engineering & More
 		AND = {
 			has_gigastructures = yes
@@ -3568,7 +3594,18 @@ can_country_connect_to_relay_network = {
 			merg_is_default_empire = yes
 			is_subject = yes
 			is_overlord = yes
+			# SirBlackAxe's Unofficial Bug Patch
+			merg_is_fallen_empire = yes
+			merg_is_awakened_fe = yes
+			from = { is_same_value = root }
+			is_in_federation_with = from
 		}
+		# SirBlackAxe's Unofficial Bug Patch
+		NAND = {
+			has_closed_borders = from
+			can_control_access_for = from
+		}
+		NOT = { is_at_war_with = from }
 	}
 }
 
