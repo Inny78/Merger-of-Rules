@@ -860,7 +860,10 @@ allows_purge = {
 		has_policy_flag = purge_allowed
 		has_policy_flag = purge_displacement_only
 		# Expanded Gestalts: Forgotten Queens
-		NOT = {  has_valid_civic = civic_mutualistic_behavior }
+		AND = {
+			is_gestalt = yes
+			NOT = {  has_valid_civic = civic_mutualistic_behavior }
+		}
 		# Electroids
 		has_valid_civic = civic_elec_stellar_devourers
 	}	

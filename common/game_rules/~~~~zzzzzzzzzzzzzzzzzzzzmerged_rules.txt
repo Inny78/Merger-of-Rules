@@ -825,6 +825,31 @@ can_take_hostile_actions = {
 #Root = country
 #This = planet
 can_colonize_planet = {
+	# Diagrapher's Factions and Ethics Mod
+	hidden_trigger = {
+		OR = {
+			has_diag_fact = no
+			NAND = {
+				root = {
+					is_ai = yes
+					OR = {
+						has_origin = origin_life_seeded
+						has_origin = origin_ocean_paradise
+						has_origin = origin_shattered_ring
+					}
+					is_spiritualist = yes
+					exists = home_planet
+					home_planet = { is_owned_by = root }
+				}
+				NOR = {
+					has_planet_flag = consecrated
+					solar_system = {
+						is_same_value = root.home_planet.solar_system
+					}
+				}
+			}
+		}
+	}
 	# StarnetAI/StarTech
 	if = {
 		limit = {
@@ -1598,6 +1623,26 @@ can_species_be_assembled = {
 #From = planet, potential target
 can_orbital_bombard = {
 	exists = from.OWNER
+	# Diagrapher's Factions and Ethics Mod
+	hidden_trigger = {
+		OR = {
+			has_diag_fact = no
+			root.owner = {
+				NAND = {
+					is_ai = yes
+					has_civic = civic_warrior_culture
+					is_spiritualist = yes
+					NOR = {
+						has_valid_civic = civic_barbaric_despoilers
+						has_ascension_perk = ap_nihilistic_acquisition
+						is_homicidal = yes
+					}
+				}
+			}	
+			from.owner = { is_crisis_faction = yes }
+		}
+	}
+	# Vanilla
 	NOR = {
 		any_controlled_ship = {
 			OR = {

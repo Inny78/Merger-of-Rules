@@ -61,7 +61,12 @@ has_coop_teams = {
 	has_global_flag = coop_base_mod
 }
 
-# Diagraphers Trait Mod
+# Diagrapher's Factions and Ethics Mod
+has_diag_fact = {
+	has_global_flag = using_mod_dfactions
+}
+
+# Diagrapher's Trait Mod
 has_diag_trait = {
 	has_global_flag = dtraits_randomization_flag
 }
