@@ -1939,6 +1939,8 @@ ai_should_restrict_system = {
 					is_country_type = awakened_marauders
 					# Ariphaos Patch
 					is_country_type = dormant_marauders
+					# The Empty Vagrant
+					is_country_type = awakened_marauders_ev
 				}
 			}
 		}
@@ -1949,6 +1951,8 @@ ai_should_restrict_system = {
 					is_country_type = awakened_marauders
 					# Ariphaos Patch
 					is_country_type = marauder_raiders
+					# The Empty Vagrant
+					is_country_type = awakened_marauders_ev
 				}
 			}
 			exists = owner
@@ -1961,6 +1965,8 @@ ai_should_restrict_system = {
 					is_country_type = awakened_marauders
 					is_country_type = marauder_raiders
 					is_country_type = caravaneer_fleet
+					# The Empty Vagrant
+					is_country_type = awakened_marauders_ev
 				}
 			}
 			has_star_flag = guardian
