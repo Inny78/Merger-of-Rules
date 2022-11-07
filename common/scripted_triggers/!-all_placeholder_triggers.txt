@@ -16,6 +16,7 @@ has_reproductive_politics = { always = no }
 has_wg_traits = { always = no }
 hfe_trigger_is_human_fallen = { always = no }
 hfe_trigger_unemployed_auto_migrate = { always = no }
+ideological_discomfort = { always = no }
 is_bugged_evolutionary_architects = { always = no }
 is_bugged_slave_race = { always = no }
 is_cruel_abomination_country_type = { always = no }

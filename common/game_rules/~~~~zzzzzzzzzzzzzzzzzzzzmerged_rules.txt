@@ -412,9 +412,7 @@ can_generate_leader_from_pop = {
 			has_origin = origin_holofrixit
 			PREV.species = {
 				OR = {
-					NOT = {
-						has_trait = trait_holofrixit
-					}
+					NOT = { has_trait = trait_holofrixit }
 					has_trait = trait_holooverseer
 					has_trait = trait_hologanglion
 					has_trait = trait_holowarrior
@@ -1025,7 +1023,7 @@ can_colonize_with_species = {
 		is_same_species = root
 	}
 	# The Empty Vagrant
-	Root = {
+	root = {
 		OR = {
 			NOT = { is_country_type = default_ev }
 			AND = {
@@ -3295,7 +3293,7 @@ can_be_part_of_galactic_council = {
 # Root = current planet
 # This = pop
 # Purge, Sapience, Migration Controls policy (ignored by Gestalts and Synths), and target habitability are checked in code.
-can_pop_auto_migrate = {
+can_pop_auto_migrate = { 
 	hidden_trigger = {
 		OR = {
 			is_unemployed = yes
@@ -3304,6 +3302,12 @@ can_pop_auto_migrate = {
 			# Expanded Traits, Civics, Pops, and More
 			has_job = servant_noble
 			has_job = grunt
+			# Diagrapher's Factions and Ethics Mod
+			AND = {
+				has_diag_fact = yes
+				ideological_discomfort = yes
+				is_enslaved = yes
+			}
 		}
 	}
 	custom_tooltip = {
@@ -3324,7 +3328,11 @@ can_pop_auto_migrate = {
 			fail_text = AUTO_MIGRATE_SLAVE_PROCESSING
 			OR = {
 				planet = {
-					has_building = building_slave_processing
+					OR = {
+						has_building = building_slave_processing
+						# Plentiful Traditions
+						has_building = building_plentiful_traditions_advanced_slave_processing
+					}
 				}
 				solar_system = {
 					count_starbase_buildings = {
@@ -3332,10 +3340,6 @@ can_pop_auto_migrate = {
 						count >= 1
 						include_being_constructed = no
 					}
-				}
-				# Plentiful Traditions
-				planet = {
-					has_building = building_plentiful_traditions_advanced_slave_processing
 				}
 			}
 		}
@@ -3349,7 +3353,7 @@ can_pop_auto_migrate = {
 		custom_tooltip = {
 			fail_text = AUTO_MIGRATE_ROBOT_DROIDS
 			OR = {
-				planet = { owner = { has_authority = auth_machine_intelligence } }
+				planet = { owner = { is_machine_empire = yes } }
 				planet = { owner = { has_technology = tech_droid_workers } }
 				solar_system = {
 					count_starbase_buildings = {
@@ -3382,15 +3386,13 @@ can_pop_auto_migrate = {
 can_planet_auto_migrate = {
 	custom_tooltip = {
 		fail_text = AUTO_MIGRATE_CULTURE_SHOCK
-		NOT = {
-			has_modifier = planet_culture_shock
-		}
+		NOT = { has_modifier = planet_culture_shock }
 	}
 	custom_tooltip = {
 		fail_text = AUTO_MIGRATE_COLONY_TOO_NEW
 		OR = {
 			colony_age > 60
-			is_capital = yes			# Don't break Doomsday!
+			is_capital = yes								# Don't break Doomsday!
 			# z Expanded Traits, Civics, Pops, and More
 			has_planet_flag = void_dweller_habitat			# Don't break Void Dwellers!
 			# Planetary Diversity - Habitats
@@ -3408,9 +3410,9 @@ can_planet_auto_migrate = {
 		}
 	}
 	# Better Performance & Utilities
-	NOT = {
-		has_global_flag = z_pf2_flg_vam_disabled
-	}
+	NOT = { has_global_flag = z_pf2_flg_vam_disabled }
+	# SirBlackAxe's Unofficial Bug Patch
+	num_pops > 1
 }
 
 can_planet_receive_auto_migration = {
@@ -3451,9 +3453,7 @@ can_fill_worker_job = {
 			}
 		}
 		is_being_assimilated = no
-		NOT = {
-			has_citizenship_type = { type = citizenship_organic_trophy }
-		}
+		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
 		NAND = {
 			has_citizenship_type = { type = citizenship_slavery }
 			OR = {
@@ -3543,9 +3543,7 @@ can_fill_ruler_job = {
 			NAND = {
 				has_trait = trait_dimorphic_female
 				has_reproductive_politics = yes
-				owner = {
-					has_valid_civic = civic_patriarchy
-				}
+				owner = { has_valid_civic = civic_patriarchy }
 			}
 			OR = {
 				traits_restrict_specialist_jobs = no
@@ -3723,19 +3721,11 @@ can_trade_fleet = {
 	# Warship Girls R And MIST Species
 	custom_tooltip = {
 		fail_text = "cannot_sold_wg_fleet"
-		NOT = {
-			any_owned_ship = {
-				is_wg_event_limit_ships = yes
-			}
-		}
+		any_owned_ship = { is_wg_event_limit_ships = no }
 	}
 	# Star Wars: Kuat Ancient Empire
 	custom_tooltip = {
 		fail_text = "cannot_sold_kuat_fleet"
-		NOT = {
-			any_owned_ship = {
-				kuat_is_flagship_system_protection = yes
-			}
-		}
+		any_owned_ship = { kuat_is_flagship_system_protection = no }
 	}
 }

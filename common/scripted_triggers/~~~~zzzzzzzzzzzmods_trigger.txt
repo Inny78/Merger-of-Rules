@@ -141,6 +141,7 @@ giga_habitable_structure = {
 		is_planet_class = pc_pouchkinn_black_hole
 		is_planet_class = pc_flat_world
 		is_planet_class = pc_giga_frameworld
+		is_planet_class = pc_equatorial_shipyard
 		# AOT
 		uses_district_set = phanon_macripp
 	}
