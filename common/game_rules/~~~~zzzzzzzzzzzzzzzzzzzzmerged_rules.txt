@@ -1112,9 +1112,7 @@ species_has_happiness = {
 				has_animated_synth = no
 				AND = {
 					has_animated_synth = yes
-					from = {
-						is_machine_empire = yes
-					}
+					from = { is_machine_empire = yes }
 					has_trait = trait_extsynth_synthetic
 					NOT = { has_trait = trait_psionic }
 				}
@@ -1155,14 +1153,10 @@ species_has_happiness = {
 can_be_hostile_towards = {
 	if = {
 		limit = { is_primitive = yes }
-		root = {
-			NOT = { has_policy_flag = interference_passive }
-		}
+		root = { NOT = { has_policy_flag = interference_passive } }
 	}
 	else_if = {
-		limit = {
-			root = { is_primitive = yes }
-		}
+		limit = { root = { is_primitive = yes } }
 		NOT = { has_policy_flag = interference_passive }
 	}
 	else_if = {
@@ -1221,9 +1215,7 @@ can_species_procreate = {
 		# Expanded Events
 		has_trait = trait_memorex_comatos
 		AND = {
-			root = {
-				owner = { has_origin = origin_hive_queen }
-			}
+			root = { owner = { has_origin = origin_hive_queen } }
 			has_trait = trait_hive_mind
 		}
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
@@ -1241,12 +1233,7 @@ can_species_procreate = {
 	}
 	NAND = {
 		root = { has_modifier = slave_colony }
-		NOT = {
-			has_citizenship_type = {
-				type = citizenship_slavery
-				country = root.owner
-			}
-		}
+		NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
 		# Special Colonies Overhaul
 		AND = {
 			has_special_colonies = yes
@@ -1266,27 +1253,17 @@ can_species_procreate = {
 	NAND = {
 		has_trait = trait_exotic_gas_dependency
 		exists = root.owner
-		root.owner = {
-			resource_stockpile_compare = {
-				resource = exotic_gases
-				value <= 0
-			}
-		}
+		root.owner = { resource_stockpile_compare = { resource = exotic_gases value <= 0 } }
 	}
 	NAND = {
 		has_trait = trait_delicate
 		exists = root.owner
-		has_citizenship_type = {
-			type = citizenship_slavery
-			country = root.owner
-		}
+		has_citizenship_type = { type = citizenship_slavery country = root.owner }
 	}
 	NAND = {
 		has_trait = trait_sterile
 		exists = root.owner
-		root.owner = {
-			has_artificial_wombs = no
-		}
+		root.owner = { 	has_artificial_wombs = no }
 	}
 	# Expanded Events
 	if = {
@@ -1304,23 +1281,17 @@ can_species_procreate = {
 		NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
 	}
 	NAND = {
-		root.owner = {
-			has_policy_flag = residentbreeding_restricted
-		}
+		root.owner = { has_policy_flag = residentbreeding_restricted }
 		root = { has_planet_flag = limited_rights_breeding_banned }
 		has_citizenship_type = { type = citizenship_limited country = root.owner }
 	}
 	NAND = {
-		root.owner = {
-			has_policy_flag = residentbreeding_restricted_habs
-		}
+		root.owner = { has_policy_flag = residentbreeding_restricted_habs }
 		root = { habitable_structure = yes }
 		has_citizenship_type = { type = citizenship_limited country = root.owner }
 	}
 	NAND = {
-		root.owner = {
-			has_policy_flag = slavebreeding_restricted
-		}
+		root.owner = { has_policy_flag = slavebreeding_restricted }
 		root = { 
 			NOR = {
 				has_planet_flag = slave_breeding_allowed
@@ -1330,9 +1301,7 @@ can_species_procreate = {
 		has_citizenship_type = { type = citizenship_slavery country = root.owner }
 	}
 	NAND = {
-		root.owner = {
-			has_policy_flag = slavebreeding_restricted_habs
-		}
+		root.owner = { has_policy_flag = slavebreeding_restricted_habs }
 		root = { 
 			NOR = {
 				habitable_structure = no
@@ -1350,10 +1319,7 @@ can_species_procreate = {
 		NOT = {
 			root = {
 				any_owned_species = {
-					has_population_control = {
-						country = root.owner
-						value = no
-					}
+					has_population_control = { country = root.owner value = no }
 					species_can_be_necrophaged = yes
 				}
 			}
@@ -1373,9 +1339,7 @@ can_species_be_assembled = {
 		AND = {
 			is_robotic = yes
 			# Azur lane Stellaris DLC
-			NOT = {
-				has_trait = trait_robot_mind_relic_core
-			}
+			NOT = { has_trait = trait_robot_mind_relic_core }
 			# Diagraphers Trait Mod
 			NAND = {
 				has_trait = trait_robot_rare_crystal_components
@@ -1418,9 +1382,7 @@ can_species_be_assembled = {
 						has_trait = trait_bugged_happy_hive
 					}
 					# Expanded Gestalts
-					NOT = {
-						has_trait = trait_hive_mind_overlord
-					}
+					NOT = { has_trait = trait_hive_mind_overlord }
 				}
 			}
 			# Expanded Traits, Civics, Pops, and More
