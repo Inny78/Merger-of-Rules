@@ -121,6 +121,11 @@ has_exalted_domination = {
 	has_global_flag = has_exalted_domination_mod
 }
 
+# FCSS
+has_fcss = {
+	has_global_flag = FCSS_has_host
+}
+
 # Galactic Imperium Origins
 has_gal_imperium = {
 	has_global_flag = imperium_origins_active
@@ -163,29 +168,14 @@ has_kancolle = {
 	}
 }
 
-# Reproductive Technology and Politics
-has_diag_rtp_mod = {
-	has_mod_reproductive_tech_and_politics = yes
-}
-
-# Safety Off
-has_safety_off = {
-	has_global_flag = has_pk_safety_off
-}
-
-# Silfae's Portraits: Revisited - Holofrixit Revisited
-has_holofrixit = {
-	has_global_flag = holofrixit_revisited_installed
+# Lithoid Supremacy
+has_lithoid_sup = {
+	has_global_flag = lithoidsupremacy
 }
 
 # Star Wars: Kuat Ancient Empire
 has_kuat = {
 	has_global_flag = install_kuat_mod
-}
-
-# Lithoid Supremacy
-has_lithoid_sup = {
-	has_global_flag = lithoidsupremacy
 }
 
 # More Authorities
@@ -233,6 +223,16 @@ has_real_new_frontiers = {
 	has_global_flag = has_new_frontiers_mod
 }
 
+# Reproductive Technology and Politics
+has_diag_rtp_mod = {
+	has_mod_reproductive_tech_and_politics = yes
+}
+
+# Safety Off
+has_safety_off = {
+	has_global_flag = has_pk_safety_off
+}
+
 # Sensor Expansion
 has_sensor_expansion = {
 	has_global_flag = ariphaos_sensors_installed
@@ -246,6 +246,11 @@ has_shadowgate = {
 # Shroud Rising
 has_shroud_rising = {
 	has_global_flag = shroud_rising_active
+}
+
+# Silfae's Portraits: Revisited - Holofrixit Revisited
+has_holofrixit = {
+	has_global_flag = holofrixit_revisited_installed
 }
 
 # Some Events of Outside Cluster
@@ -288,7 +293,7 @@ has_warship_girls = {
 	has_global_flag = has_wsg_mod
 }
 
-# FCSS
-has_fcss = {
-	has_global_flag = FCSS_has_host
+# Wild Space
+has_wild_space = {
+	has_global_flag = has_wild_space_mod
 }

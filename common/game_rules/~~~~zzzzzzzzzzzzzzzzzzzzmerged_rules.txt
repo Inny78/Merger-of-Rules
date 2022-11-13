@@ -2199,6 +2199,8 @@ system_blocks_sensors = {
 				has_modifier = space_storm
 				is_inside_nebula = yes
 				merg_is_nebulae = yes
+				# Wild Space
+				is_ws_system = yes
 				# Protoplanetary Disks
 				is_star_class = sc_protostar
 				is_star_class = sc_tt_red
@@ -2206,7 +2208,14 @@ system_blocks_sensors = {
 				is_star_class = sc_tt_white
 				is_star_class = sc_ae
 			}
-			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_nebula } }
+			ROOT = {
+				NOR = {
+					# Ariphaos Sensor Expansion
+					has_technology = tech_ariphaos_sensors_nebula
+					# Wild Space
+					has_technology = tech_WS_sensors_nebula_1
+				}
+			}
 		}
 		AND = {
 			OR = {
@@ -2250,9 +2259,17 @@ system_blocks_sensors = {
 			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_pulsar } }
 		}
 		AND = {
-			has_sensor_expansion = yes
+			OR = {
+				has_sensor_expansion = yes
+				has_wild_space = yes
+			}
 			has_natural_wormhole = yes
-			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_wormhole } }
+			ROOT = {
+				NOR = {
+					has_technology = tech_ariphaos_sensors_wormhole
+					has_technology = tech_WS_sensors_wormhole
+				}
+			}
 		}
 		AND = {
 			has_sensor_expansion = yes

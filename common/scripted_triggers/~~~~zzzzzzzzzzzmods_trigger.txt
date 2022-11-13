@@ -1210,3 +1210,26 @@ nsc_mothball_target_fleet_requirement = {
         }
 	}
 }
+
+# Wild Space
+is_nebula_star = {
+	Or = {
+		is_star_class = sc_collapsar
+		is_star_class = sc_p_purple
+		is_star_class = sc_p_green
+		is_star_class = sc_p_red
+		# Misc Nebulae
+		is_star_class = sc_p_purple
+		is_star_class = sc_p_green
+		is_star_class = sc_p_red
+		is_star_class = sc_nova_1
+		is_star_class = sc_nova_2
+		is_star_class = sc_w_azure
+		is_star_class = sc_w_red
+		is_star_class = sc_w_green
+		is_star_class = sc_w_purple
+		is_star_class = sc_lbv_blue
+		is_star_class = sc_lbv_green
+		is_star_class = sc_lbv_red
+	}
+}
