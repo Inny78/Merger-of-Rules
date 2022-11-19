@@ -44,6 +44,7 @@ is_progenitor_empires = { always = no }
 is_sleeper = { always = no }
 is_special_affection_leader = { always = no }
 is_spy_empire = { always = no }
+is_valid_GF_OGAS_subnet = { always = no }
 is_wg_event_leader = { always = no }
 is_wg_event_limit_ships = { always = no }
 is_ws_system = { always = no }

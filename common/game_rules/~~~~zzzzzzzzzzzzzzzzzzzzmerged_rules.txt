@@ -289,11 +289,11 @@ species_can_live_on_planet = {
 				exists = root.owner
 				root.owner = {
 					is_machine_empire = yes
-					has_valid_civic = civic_machine_assimilator					# Assimilator empire
+					has_valid_civic = civic_machine_assimilator
 				}
 			}
 			# Girls Frontline
-			has_trait = trait_doll
+			has_trait = GF_trait_doll
 		}
 	}
 	# Vanilla
@@ -403,8 +403,6 @@ can_generate_leader_from_pop = {
 				has_technology = tech_synthetic_leaders
 				is_machine_empire = yes
 				is_mechanical_empire = yes
-				# Girls Frontline
-				has_technology = tech_gf_mind_upgrade_1
 			}
 		}
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
@@ -417,6 +415,16 @@ can_generate_leader_from_pop = {
 					has_trait = trait_hologanglion
 					has_trait = trait_holowarrior
 					has_trait = trait_holowarrior_2
+				}
+			}
+		}
+		# Girls Frontline
+		AND = {
+			has_trait = GF_trait_doll
+			root = {
+				OR = {
+					has_policy_flag = GF_doll_right_full
+					has_policy_flag = GF_doll_right_limited
 				}
 			}
 		}
@@ -468,8 +476,6 @@ can_generate_military_leader_from_pop = {
 				has_technology = tech_synthetic_leaders
 				is_machine_empire = yes
 				is_mechanical_empire = yes
-				# Girls Frontline
-				has_technology = tech_gf_mind_upgrade_1
 				# Holofrixit Revisited / Silfae's Portraits: Revisited
 				AND = {
 					has_origin = origin_holofrixit
@@ -479,6 +485,16 @@ can_generate_military_leader_from_pop = {
 							has_trait = trait_holowarrior_2
 						}
 					}
+				}
+			}
+		}
+		# Girls Frontline
+		AND = {
+			has_trait = GF_trait_doll
+			root = {
+				OR = {
+					has_policy_flag = GF_doll_right_full
+					has_policy_flag = GF_doll_right_limited
 				}
 			}
 		}
@@ -1225,7 +1241,7 @@ can_species_procreate = {
 		# Diagraphers Trait Mod
 		has_trait = trait_dimorphic_male
 		# Girls Frontline
-		has_trait = trait_doll
+		has_trait = GF_trait_doll
 		# Lithoid Supremacy
 		has_trait = trait_pearl_born_drone
 		# Expanded Traits, Civics, Pops, and More
@@ -1348,6 +1364,16 @@ can_species_be_assembled = {
 					resource_stockpile_compare = {
 						resource = rare_crystals
 						value <= 0
+					}
+				}
+			}
+			# Girls Frontline
+			if = {
+				limit = { has_trait = GF_trait_doll }
+				root.owner = {
+					OR = {
+						has_authority = GF_auth_commonwealth
+						is_valid_GF_OGAS_subnet = yes
 					}
 				}
 			}
@@ -1499,7 +1525,6 @@ can_species_be_assembled = {
 					}
 				}
 			}
-			# Vanilla
 			else = {
 				OR = {
 					# The DAL Species Mod
@@ -1816,6 +1841,7 @@ can_orbitable_repair_ships = {
 				has_starbase_size >= acot_precusor_starbase
 				has_starbase_size >= acot_precusor_sigma_starbase
 				has_starbase_size >= acot_precusor_phanon_starcitadel
+				has_starbase_size >= acot_precusor_theta_starcitadel
 				has_starbase_size >= precursor_colossus
 				has_starbase_size >= acot_star_commander
 				# ZOFE
@@ -3030,6 +3056,8 @@ can_crossbreed_species_on_planet = {
 		is_planet_class = pc_pb_pleasure
         owner = { has_ascension_perk = ap_xeno_compatibility }
     }
+	# Girls Frontline
+	NOT = { has_trait = GF_trait_doll }
 }
 
 # This = species one
@@ -3475,7 +3503,21 @@ can_fill_worker_job = {
 
 #this/root = pop
 #checked if job's possible_precalc = can_fill_specialist_job
-can_fill_specialist_job = { can_fill_specialist_job = yes }
+can_fill_specialist_job = {
+	can_fill_specialist_job = yes
+	# Girls Frontline
+	if = {
+		limit = { has_trait = GF_trait_doll }
+		owner = {
+			OR = {
+				NOT = { has_authority = GF_auth_commonwealth }
+				has_policy_flag = GF_doll_work_policy_high
+				has_policy_flag = GF_doll_work_policy_free
+				has_policy_flag = GF_doll_work_policy_middle
+			}
+		}
+	}
+}
 
 #this/root = pop
 #checked if job's possible_precalc = can_fill_ruler_job
@@ -3573,6 +3615,17 @@ can_fill_ruler_job = {
 				divinity_right_to_work_job_check_trigger_ruler = yes
 			}
 		}
+		# Girls Frontline
+		if = {
+			limit = { has_trait = GF_trait_doll }
+			owner = {
+				OR = {
+					NOT = { has_authority = GF_auth_commonwealth }
+					has_policy_flag = GF_doll_work_policy_high
+					has_policy_flag = GF_doll_work_policy_free
+				}
+			}
+		}
 	}
 }
 
@@ -3642,9 +3695,7 @@ can_country_connect_to_relay_network = {
 # From = country, country that would receive the leader
 can_trade_leader = {
 	# The leader must have a trait from a specialist subject type.
-	this = {
-		has_specialist_subject_leader_trait = yes
-	}
+	this = { has_specialist_subject_leader_trait = yes }
 	# The subject and overlord must both be regular empires, machine intelligences or hive-minds.
 	OR = {
 		AND = {
@@ -3670,6 +3721,15 @@ can_trade_leader = {
 		AND = {
 			ROOT = { is_hive_empire = yes }
 			FROM = { is_hive_empire = yes }
+		}
+		# Girls Frontline
+		AND = {
+			ROOT = { is_valid_GF_OGAS_subnet = yes }
+			FROM = {
+				is_overlord_to = ROOT
+				has_authority = GF_auth_commonwealth
+			}
+			this = { species = { is_robotic = yes } }
 		}
 	}
 	# The overlord can't be a fallen or awakened empire.
