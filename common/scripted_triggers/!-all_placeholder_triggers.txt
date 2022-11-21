@@ -14,6 +14,7 @@ has_artificial_wombs = { always = no }
 has_mod_reproductive_tech_and_politics = { always = no }
 has_reproductive_politics = { always = no }
 has_wg_traits = { always = no }
+has_zofe_mc = { always = no }
 hfe_trigger_is_human_fallen = { always = no }
 hfe_trigger_unemployed_auto_migrate = { always = no }
 ideological_discomfort = { always = no }

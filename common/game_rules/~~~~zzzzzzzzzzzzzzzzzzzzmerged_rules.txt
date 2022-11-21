@@ -2512,8 +2512,8 @@ pop_generates_crime = {
 		# AshArms Aquarius history
 		has_trait = adf_trait_dolls
 		# MISC
-		is_archetype = UNITED_FLEET
-		is_archetype = NANITES_CROP
+		species = { is_archetype = UNITED_FLEET }
+		species = { is_archetype = NANITES_CROP }
 	}
 }
 
@@ -2761,6 +2761,11 @@ can_support_branch_offices = {
 			}
 		}
 	}
+	# ZOFE Megacorp
+	custom_tooltip = {
+		fail_text = COUNTRY_IS_ASCENDED_EMPIRE
+		is_zofe_country = no
+	}
 }
 
 # This = planet
@@ -2785,6 +2790,11 @@ can_build_branch_office_on_planet = {
 					is_criminal_syndicate = yes
 					# Azur Lane Stellaris DLC
 					has_authority = auth_azur_lane_1
+					# ZOFE Megacorp
+					AND = {
+						is_zofe_country = yes
+						is_megacorp = yes
+					}
 				}
 			}
 			owner = { has_commercial_pact = root }
@@ -2957,6 +2967,24 @@ can_build_branch_office_on_planet = {
 		}
 		# Azur Lane Stellaris DLC
 		NOT = { root = { has_authority = auth_azur_lane_1 } }
+	}
+	# ZOFE Megacorp
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_NOT_ON_MEGACORP_PLANET
+		OR = {
+			has_zofe_mc = no
+			owner = { is_megacorp = no }
+			root = { is_zofe_country = yes }
+		}
+	}
+	custom_tooltip = {
+		fail_text = {
+			text = COUNTRY_CLOSED_BORDERS
+			OR = {
+				has_zofe_mc = no
+				NOT = { owner = { has_closed_borders = root } }
+			}
+		}
 	}
 	# Warship Girls R And MIST Species
 	custom_tooltip = {
