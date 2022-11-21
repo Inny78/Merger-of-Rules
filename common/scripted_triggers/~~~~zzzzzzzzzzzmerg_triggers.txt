@@ -899,18 +899,20 @@ is_doomsday_planet = {
 	}
 }
 
-NOR = {
-	has_deposit_for = shipclass_research_station
-	has_planet_flag = has_dark_matter_deposit
-	has_planet_flag = has_negative_mass_deposit
-	has_planet_flag = has_zro_deposit
-	has_planet_flag = has_living_metal_deposit
-	has_planet_flag = has_physics_deposit
-	has_planet_flag = has_society_deposit
-	has_planet_flag = has_engineering_deposit
-	event_target:current_system_creator = { NOT = { has_technology = tech_mine_rare_crystals } }
-	merg_is_gas_giant = yes
-	is_star = yes
+eligible_for_rare_crystals = {
+	NOR = {
+		has_deposit_for = shipclass_research_station
+		has_planet_flag = has_dark_matter_deposit
+		has_planet_flag = has_negative_mass_deposit
+		has_planet_flag = has_zro_deposit
+		has_planet_flag = has_living_metal_deposit
+		has_planet_flag = has_physics_deposit
+		has_planet_flag = has_society_deposit
+		has_planet_flag = has_engineering_deposit
+		event_target:current_system_creator = { NOT = { has_technology = tech_mine_rare_crystals } }
+		merg_is_gas_giant = yes
+		is_star = yes
+	}
 }
 
 eligible_for_volatile_motes = {
