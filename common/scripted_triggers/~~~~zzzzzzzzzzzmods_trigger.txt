@@ -1253,22 +1253,26 @@ can_build_precursor_ship = {
 				is_megastructure_type = acot_amerigo_oe
 				is_megastructure_type = acot_amerigo_pe
 				is_megastructure_type = acot_phanon_master_reactor_sphere
+                is_megastructure_type = universal_gateway_origin_demiurge_forge_8
+                is_megastructure_type = universal_gateway_origin_demiurge_forge_9
+                is_megastructure_type = universal_gateway_origin_demiurge_forge_9_2
 			}
 		}
 		AND = {
 			is_scope_type = starbase
 			OR = {
-				has_starbase_size >= juggernaut ### Even if no one's gonna use it ever.
-				has_starbase_module = virtual_shipyard_uplink ### Gigaman X6
+				has_starbase_size >= juggernaut
+				has_starbase_module = virtual_shipyard_uplink
 				has_starbase_building = acot_precursor_database	
 				has_starbase_size >= acot_precusor_starbase
 				has_starbase_size >= acot_precusor_sigma_starbase		
 				has_starbase_size >= acot_precusor_phanon_starcitadel			
 				has_starbase_size >= acot_precusor_theta_starcitadel
-				has_starbase_size >= precursor_colossus ### Actually is Herculean	
+				has_starbase_size >= precursor_colossus
 				has_starbase_size >= origin_super_citadel_playable	
-				has_starbase_size >= acot_star_commander #### Phanonmercy
-				has_starbase_size >= precursor_juggernaut # AoT Warbarge
+				has_starbase_size >= acot_star_commander
+				has_starbase_size >= precursor_juggernaut
+                has_starbase_size >= universal_gateway_citadel
 			}
 		}
 	}

@@ -1091,3 +1091,6 @@ TACgate_opened_C = { entity = "" potential = { always = no } possible = { always
 TACgate_system_01_C = { entity = "" potential = { always = no } possible = { always = no } }
 TAC_gateway_control_01 = { entity = "" potential = { always = no } possible = { always = no } }
 TAC_gateway_control_02 = { entity = "" potential = { always = no } possible = { always = no } }
+universal_gateway_origin_demiurge_forge_8 = { entity = "" potential = { always = no } possible = { always = no } }
+universal_gateway_origin_demiurge_forge_9 = { entity = "" potential = { always = no } possible = { always = no } }
+universal_gateway_origin_demiurge_forge_9_2 = { entity = "" potential = { always = no } possible = { always = no } }
