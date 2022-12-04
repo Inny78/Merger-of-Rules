@@ -47,16 +47,26 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 					}
 				}
 				AND = {
-					# primitive
-					exists = space_owner
-					exists = owner
-					owner = { is_primitive = yes }
-					space_owner = {
-						OR = {
-							is_same_value = from.owner
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
+					# primitive target
+					custom_tooltip = {
+						text = cannot_crack_pre_ftl_planet_ownership
+						exists = space_owner
+						exists = owner
+						owner = { is_primitive = yes }
+						space_owner = {
+							OR = {
+								is_same_value = from.owner
+								is_at_war_with = from.owner
+								is_crisis_faction = yes
+							}
 						}
+					}
+					custom_tooltip = {
+						text = cannot_crack_pre_ftl_planet_interference
+						# primitive
+						exists = owner
+						owner = { is_primitive = yes }
+						from.owner = { has_policy_flag = interference_full }
 					}
 				}
 			}
@@ -2168,6 +2178,11 @@ can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 						OR = {
 							is_at_war_with = from.owner
 							is_crisis_faction = yes
+							# Safety Off
+							AND = {
+								has_safety_off = yes
+								is_same_value = from.owner
+							}
 						}
 					}
 				}
@@ -2178,21 +2193,35 @@ can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 						OR = {
 							is_at_war_with = from.owner
 							is_crisis_faction = yes
+							# Safety Off
+							AND = {
+								has_safety_off = yes
+								is_same_value = from.owner
+							}
 						}
 					}
 				}
 				AND = {
-					# primitive
-					exists = space_owner
-					exists = owner
-					owner = {
-						is_primitive = yes
-					}
-					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
+					# primitive target
+					custom_tooltip = {
+						text = cannot_crack_pre_ftl_planet_ownership
+						exists = space_owner
+						exists = owner
+						owner = { is_primitive = yes }
+						space_owner = {
+							OR = {
+								is_same_value = from.owner
+								is_at_war_with = from.owner
+								is_crisis_faction = yes
+							}
 						}
+					}
+					custom_tooltip = {
+						text = cannot_crack_pre_ftl_planet_interference
+						# primitive
+						exists = owner
+						owner = { is_primitive = yes }
+						from.owner = { has_policy_flag = interference_full }
 					}
 				}
 			}
@@ -2214,7 +2243,9 @@ can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 				}
 			}
 			OR = {
+				# Rewriting this part for max compatibility, inspired by Planetary Diversity
 				colonizable_planet = yes
+				is_artificial = yes
 				merg_is_crackable_planet = yes
 			}
 		}
@@ -2241,6 +2272,11 @@ can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
 						OR = {
 							is_at_war_with = from.owner
 							is_crisis_faction = yes
+							# Safety Off
+							AND = {
+								has_safety_off = yes
+								is_same_value = from.owner
+							}
 						}
 					}
 				}
@@ -2251,21 +2287,35 @@ can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
 						OR = {
 							is_at_war_with = from.owner
 							is_crisis_faction = yes
+							# Safety Off
+							AND = {
+								has_safety_off = yes
+								is_same_value = from.owner
+							}
 						}
 					}
 				}
 				AND = {
-					# primitive
-					exists = space_owner
-					exists = owner
-					owner = {
-						is_primitive = yes
-					}
-					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
+					# primitive target
+					custom_tooltip = {
+						text = cannot_crack_pre_ftl_planet_ownership
+						exists = space_owner
+						exists = owner
+						owner = { is_primitive = yes }
+						space_owner = {
+							OR = {
+								is_same_value = from.owner
+								is_at_war_with = from.owner
+								is_crisis_faction = yes
+							}
 						}
+					}
+					custom_tooltip = {
+						text = cannot_crack_pre_ftl_planet_interference
+						# primitive
+						exists = owner
+						owner = { is_primitive = yes }
+						from.owner = { has_policy_flag = interference_full }
 					}
 				}
 			}
@@ -2289,6 +2339,7 @@ can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
 			OR = {
 				# Rewriting this part for max compatibility, inspired by Planetary Diversity
 				colonizable_planet = yes
+				is_artificial = yes
 				merg_is_crackable_planet = yes
 			}
 		}
@@ -2315,6 +2366,11 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 						OR = {
 							is_at_war_with = from.owner
 							is_crisis_faction = yes
+							# Safety Off
+							AND = {
+								has_safety_off = yes
+								is_same_value = from.owner
+							}
 						}
 					}
 				}
@@ -2325,21 +2381,35 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 						OR = {
 							is_at_war_with = from.owner
 							is_crisis_faction = yes
+							# Safety Off
+							AND = {
+								has_safety_off = yes
+								is_same_value = from.owner
+							}
 						}
 					}
 				}
 				AND = {
-					# primitive
-					exists = space_owner
-					exists = owner
-					owner = {
-						is_primitive = yes
-					}
-					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
+					# primitive target
+					custom_tooltip = {
+						text = cannot_crack_pre_ftl_planet_ownership
+						exists = space_owner
+						exists = owner
+						owner = { is_primitive = yes }
+						space_owner = {
+							OR = {
+								is_same_value = from.owner
+								is_at_war_with = from.owner
+								is_crisis_faction = yes
+							}
 						}
+					}
+					custom_tooltip = {
+						text = cannot_crack_pre_ftl_planet_interference
+						# primitive
+						exists = owner
+						owner = { is_primitive = yes }
+						from.owner = { has_policy_flag = interference_full }
 					}
 				}
 			}
@@ -2363,6 +2433,7 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 			OR = {
 				# Rewriting this part for max compatibility, inspired by Planetary Diversity
 				colonizable_planet = yes
+				is_artificial = yes
 				merg_is_crackable_planet = yes
 			}
 		}
@@ -4135,4 +4206,13 @@ planet_is_hostile_or_crisis = {
 	}
 }
 
-# the others triggers have moved to !-merger_triggers.txt
+is_a_habitable_planet_megastructure = {
+	OR = {
+		colonizable_planet = yes
+		habitable_structure = yes
+		# Expanded Gestalts: Forgotten Queens
+		is_planet_class = pc_infested
+		is_planet_class = pc_matryoshka
+		merg_is_rad_planet = yes
+	}
+}

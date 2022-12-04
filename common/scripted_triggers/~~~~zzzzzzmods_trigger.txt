@@ -1022,11 +1022,7 @@ gpm_is_planet_class_hive = {
 
 gpm_is_planet_class_habitat = {
 	optimize_memory
-	OR = {
-		merg_is_habitat_non_starborn = yes
-		# Starborn: Improved Voidtouched
-		uses_district_set = starborn_start
-	}
+	merg_is_habitat = yes
 }
 
 gpm_is_planet_class_ringworld = {
@@ -1052,6 +1048,99 @@ gpm_is_fallen_empire_space_owner = {
 			merg_is_fallen_empire = yes
 			merg_is_awakened_fe = yes
 		}
+	}
+}
+
+eligible_for_rare_crystals = {
+	NOR = {
+		has_deposit_for = shipclass_research_station
+		has_planet_flag = has_dark_matter_deposit
+		has_planet_flag = has_negative_mass_deposit
+		has_planet_flag = has_zro_deposit
+		has_planet_flag = has_living_metal_deposit
+		has_planet_flag = has_physics_deposit
+		has_planet_flag = has_society_deposit
+		has_planet_flag = has_engineering_deposit
+		event_target:current_system_creator = { NOT = { has_technology = tech_mine_rare_crystals } }
+		merg_is_gas_giant = yes
+		is_star = yes
+	}
+}
+
+eligible_for_volatile_motes = {
+	NOR = {
+		has_deposit_for = shipclass_research_station
+		has_planet_flag = has_dark_matter_deposit
+		has_planet_flag = has_negative_mass_deposit
+		has_planet_flag = has_zro_deposit
+		has_planet_flag = has_living_metal_deposit
+		has_planet_flag = has_physics_deposit
+		has_planet_flag = has_society_deposit
+		has_planet_flag = has_engineering_deposit
+		event_target:current_system_creator = { NOT = { has_technology = tech_mine_volatile_motes } }
+		merg_is_gas_giant = yes
+		is_star = yes
+	}
+}
+
+eligible_for_alloys = {
+	NOR = {
+		has_deposit_for = shipclass_research_station
+		has_planet_flag = has_dark_matter_deposit
+		has_planet_flag = has_negative_mass_deposit
+		has_planet_flag = has_zro_deposit
+		has_planet_flag = has_living_metal_deposit
+		has_planet_flag = has_physics_deposit
+		has_planet_flag = has_society_deposit
+		has_planet_flag = has_engineering_deposit
+		merg_is_gas_giant = yes
+		is_star = yes
+	}
+}
+
+eligible_for_zro = {
+	NOR = {
+		has_deposit_for = shipclass_research_station
+		solar_system = {
+			NOT = {
+				any_system_planet = {
+					OR = {
+						has_planet_flag = has_living_metal_deposit
+						has_planet_flag = has_zro_deposit
+					}
+				}
+			}
+		}
+		event_target:current_system_creator = { NOT = { has_technology = tech_mine_zro } }
+		event_target:current_system_creator = { has_country_flag = recently_spawned_zro }
+		has_planet_flag = has_dark_matter_deposit
+		has_planet_flag = has_negative_mass_deposit
+		has_planet_flag = has_living_metal_deposit
+		merg_is_gas_giant = yes
+		is_star = yes
+	}
+}
+
+eligible_for_living_metal = {
+	NOR = {
+		has_deposit_for = shipclass_research_station
+		solar_system = {
+			NOT = {
+				any_system_planet = {
+					OR = {
+						has_planet_flag = has_living_metal_deposit
+						has_planet_flag = has_zro_deposit
+					}
+				}
+			}
+		}
+		event_target:current_system_creator = { NOT = { has_technology = tech_mine_living_metal } }
+		event_target:current_system_creator = { has_country_flag = recently_spawned_lm }
+		has_planet_flag = has_zro_deposit
+		has_planet_flag = has_dark_matter_deposit
+		has_planet_flag = has_negative_mass_deposit
+		merg_is_gas_giant = yes
+		is_star = yes
 	}
 }
 

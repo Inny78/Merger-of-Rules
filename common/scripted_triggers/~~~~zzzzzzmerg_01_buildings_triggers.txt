@@ -1,8 +1,4 @@
-# Vanilla scripted triggers
-
-# 01_scripted_triggers_buildings has been completely rewritten in 3.1 and so far no modders has correctly updated them.
-# And nope, I won't do their job for them.
-# So I will only merge correctly updated triggers here.
+# Vanilla scripted triggers from 01_scripted_triggers_buildings.txt
 
 has_upgraded_capital = {
 	if = {
@@ -795,7 +791,6 @@ has_stellarite_capital = {
 	}
 }
 
-# Vanilla
 uses_district_industrial = {
 	OR = {
 		uses_district_set = standard
@@ -803,7 +798,7 @@ uses_district_industrial = {
 		uses_district_set = machine_world
 		uses_district_set = shattered_ring_world
 		# Gigastructures
-		uses_district_set = giga_planet
+		giga_uses_industrial_district = yes
 		# All That Is GRIMDARK
 		uses_district_set = infected_world
 	}
@@ -845,9 +840,8 @@ has_advanced_fort = {
 uses_habitat_capitals = {
 	or = {
 		merg_is_habitat = yes
-		# gigas
+		# Gigastructural Engineering & More
 		giga_uses_habitat_capitals = yes
-		#misc compat
 		has_planet_flag = giga_habitat_capital_compat
 	}
 }

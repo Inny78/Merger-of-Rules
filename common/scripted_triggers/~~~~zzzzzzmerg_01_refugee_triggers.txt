@@ -1,0 +1,71 @@
+# Vanilla scripted triggers from 01_scripted_triggers_refugees.txt
+is_valid_refugee_pop = {
+	is_robot_pop = no
+	NOR = {
+		can_think = no
+		# Expanded Gestalts
+		has_trait = trait_machine_digital
+	}
+	owner = {
+		any_relation = {
+			merg_is_default_empire = yes
+			has_communications = prev			#relations include countries that have made first contact but not established comms
+			OR = {
+				NOT = { has_policy_flag = refugees_not_allowed }
+				# Expanded Gestalts
+				has_valid_civic = civic_mutualistic_behavior
+			}
+			prevprev = {
+				#this ensures Pop scope, as root will not always be pop scope
+				OR = {
+					has_citizenship_type = { type = citizenship_full country = prev }
+					AND = {
+						OR = {
+							has_citizenship_type = { type = citizenship_limited country = prev }
+							# SirBlackAxe's Unofficial Bug Patch
+							has_citizenship_type = { type = citizenship_assimilation country = prev }
+						}
+						prev = { has_policy_flag = refugees_allowed }
+					}
+					# Expanded Gestalts
+					prev = { has_valid_civic = civic_mutualistic_behavior }
+				}
+			}
+			any_owned_planet = {
+				is_under_colonization = no
+				is_controlled_by = owner
+				has_orbital_bombardment = no
+			}
+		}
+	}
+}
+
+has_any_habitability = {
+	merg_is_default_empire = yes
+	has_communications = prev
+	OR = {
+		NOT = { has_policy_flag = refugees_not_allowed }
+		# Expanded Gestalts
+		has_valid_civic = civic_mutualistic_behavior
+	}
+	event_target:refugee_pop = {
+		OR = {
+			has_citizenship_type = { type = citizenship_full country = prev }
+			has_citizenship_type = {
+				type = citizenship_caste_system
+				country = prev
+			}
+			AND = {
+				has_citizenship_type = { type = citizenship_limited country = prev }
+				prev = { has_policy_flag = refugees_allowed }
+			}
+			# Expanded Gestalts
+			prev = { has_valid_civic = civic_mutualistic_behavior }
+		}
+	}
+	any_owned_planet = {
+		is_under_colonization = no
+		is_controlled_by = owner
+		has_orbital_bombardment = no
+	}
+}

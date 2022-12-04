@@ -1,0 +1,796 @@
+# Vanilla scripted triggers from 00_scripted_triggers.txt except megastructures ones
+uninhabitable_regular_planet = {
+	OR = {
+		is_planet_class = pc_molten
+		is_planet_class = pc_barren
+		is_planet_class = pc_barren_cold
+		is_planet_class = pc_toxic
+		is_planet_class = pc_frozen
+		# Planetary Diversity
+		is_planet_class = pc_hothouse
+		# All these worlds
+		is_planet_class = orbit_icy
+		is_planet_class = orbit_chthonian
+		is_planet_class = orbit_iron_telluric
+		is_planet_class = orbit_volcanic_telluric
+		is_planet_class = orbit_hothouse_toxic
+		is_planet_class = orbit_carbonyl_toxic
+		is_planet_class = orbit_water_panthalassic
+		is_planet_class = orbit_ammonia_panthalassic
+		is_planet_class = orbit_methane_panthalassic
+	}
+}
+
+colonizable_planet = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_relic
+		is_planet_city = yes
+		merg_is_rad_planet = yes
+		merg_is_hive_world = yes
+		merg_is_machine_world = yes
+		habitable_structure = yes
+		habitable_planet = yes
+		is_artificial = yes
+		# ACOT
+		is_planet_class = pc_dark_fractured
+		is_planet_class = pc_dark_fractured_ae
+		is_planet_class = pc_acot_enigmopolis
+		# Planetary Diversity
+		is_planet_class = pc_pdshroud
+		# SW:UnknownWorld Shipgirls Story
+		is_planet_class = pc_swgs_engineer
+		is_planet_class = pc_swgs_engineer_ringworld_habitable
+		# Warship Girls R And MIST Species
+		is_planet_class = pc_wsg_port
+		is_planet_class = pc_shenhai
+		# APSR: Anomalies, Planetary and Space Resources
+		has_apsr_modifiers = yes
+		# Endless Frontier
+		is_planet_class = pc_mzilli_shadow
+		### SOFE
+		is_planet_class = pc_golden_world
+		is_planet_class = pc_golden_world_habitable
+		is_planet_class = pc_omega_ringworld_habitable
+		is_planet_class = pc_omega_ringworld_seam
+		is_planet_class = pc_omega_ringworld_tech
+		is_planet_class = pc_goodman_gaia_world
+		is_planet_class = pc_golden_fortress
+		is_planet_class = pc_sosi_proto_gaia_world
+	}
+}
+
+habitable_planet = {
+	OR = {
+		habitable_planet_not_urban = yes
+		galactic_diversity_habitable_planet = yes
+		is_planet_class = pc_relic
+		is_planet_city = yes
+	}
+}
+
+habitable_planet_not_urban = {
+	OR = {
+		is_planet_class = pc_desert
+		is_planet_class = pc_tropical
+		is_planet_class = pc_arid
+		is_planet_class = pc_continental
+		is_planet_class = pc_ocean
+		is_planet_class = pc_tundra
+		is_planet_class = pc_arctic
+		is_planet_class = pc_alpine
+		is_planet_class = pc_savannah
+		is_planet_class = pc_gaia
+		# Planetary Diversity
+		is_planet_class = pc_megaflorahive
+		is_planet_class = pc_megafloratol
+		is_planet_class = pc_pdhive1
+		is_planet_class = pc_pdhive2
+		is_planet_class = pc_bioforge
+		is_planet_class = pc_biocapital
+		is_planet_class = pc_biofort
+		is_pd_regular = yes
+		is_pd_gaia = yes
+		is_pd_rare = yes
+		is_pd_exotic = yes
+		# Warship Girls R And MIST Species
+		is_planet_class = pc_wsg_port
+		is_planet_class = pc_shenhai
+		# SW: UnknownWorld Shipgirls Story
+		is_planet_class = pc_swgs_engineer
+		is_planet_class = pc_swgs_engineer_ringworld_habitable
+		# Gigastructures
+		is_planet_class = pc_ll_temperate
+		is_planet_class = pc_ll_foggy
+		is_planet_class = pc_ll_torrid
+		# Real Space - New Frontiers / Expanded Gestalts: Forgotten Queens
+		is_planet_class = pc_hollow
+		# Giga Diversity
+		is_planet_class = pc_ll_methane
+		is_planet_class = pc_ll_ash
+		is_planet_class = pc_ll_sulfur
+		is_planet_class = pc_ll_ammonia
+		is_planet_class = pc_ll_ocean
+		is_planet_class = pc_ll_tidallylocked_cold
+		is_planet_class = pc_ll_tidallylocked
+		is_planet_class = pc_ll_rogue
+	}
+}
+
+# Enforcing proper use of this trigger. You don't need to overwrite it since 3.0!
+habitable_structure = {
+	is_artificial = yes
+	OR = {
+		is_colony = yes
+		is_colonizable = yes
+	}
+}
+
+has_encountered_other_species = {
+	OR = {
+		has_origin = origin_syncretic_evolution
+		has_origin = origin_necrophage
+		has_valid_civic = civic_machine_servitor
+		# Ethics and Civics Classic and all its variants
+		has_valid_civic = civic_symbiotic_race
+		has_valid_civic = civic_slave_race
+		# Ethics & Civics: Bug Branch
+		is_bugged_evolutionary_architects = yes
+		is_bugged_slave_race = yes
+		# Vanilla
+		num_communications > 0
+		any_owned_pop = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				is_same_species = prev
+			}
+		}
+	}
+}
+
+allows_purge = {
+	OR = {
+		has_valid_civic = civic_fanatic_purifiers
+		has_policy_flag = purge_allowed
+		has_policy_flag = purge_displacement_only
+		# Expanded Gestalts: Forgotten Queens
+		AND = {
+			is_gestalt = yes
+			NOT = {  has_valid_civic = civic_mutualistic_behavior }
+		}
+		# Electroids
+		has_valid_civic = civic_elec_stellar_devourers
+	}	
+}
+
+#FOR CUSTODIAN
+is_crisis_faction = {
+	OR = {
+		is_country_type = swarm
+		is_country_type = extradimensional
+		is_country_type = extradimensional_2
+		is_country_type = extradimensional_3
+		is_country_type = ai_empire
+		is_country_type = gray_goo
+		is_country_type = awakened_marauders
+		# ACOT
+		is_country_type = original_empire
+		# Cruel Conquerers
+		is_cruel_abomination_country_type = yes
+		# Gigastructural Engineering & More
+		is_country_type = katzenartig_imperium
+		is_country_type = dormant_aeternum
+		# Solar Storm
+		is_country_type = abyssal_host_invaders_type
+		# Shroud Rising
+		is_country_type = shroud_cult
+		is_country_type = shroud_entities
+		is_country_type = shroud_horrors
+	}
+}
+
+planet_can_be_liberated_from_owner = {
+	owner = {
+		NOR = {
+			is_hive_empire = yes
+			is_machine_empire = yes
+			is_country_type = awakened_fallen_empire
+			is_country_type = fallen_empire
+			is_country_type = ascended_empire
+			# ZOFE
+			is_country_type = lost_empire
+			# ACOT
+			is_progenitor_empires = yes
+		}
+	}
+}
+
+is_country_type_with_subjects = {
+	OR = {
+		is_country_type = default
+		is_country_type = awakened_fallen_empire
+		is_country_type = awakened_marauders
+		# ZOFE
+		is_zofe_country = yes
+		# The Empty Vagrant
+		is_country_type = default_ev
+		# ACOT
+		is_progenitor_empires = yes
+	}
+}
+
+is_valid_target_fe_stop_atrocities = {
+	OR = {
+		allows_slavery = yes
+		allows_purge = yes
+	}
+	AND = {
+		has_ethical_gestalts = no
+		is_gestalt = no
+	}
+	is_homicidal = no
+}
+
+is_regular_empire = {
+	optimize_memory
+	OR = {
+		is_country_type = default
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		# ZOFE
+		is_zofe_country = yes
+		# The Empty Vagrant
+		is_country_type = default_ev
+		is_country_type = fallen_empire_ev
+		is_country_type = awakened_fallen_empire_ev
+		# Merger of Rules
+		# prevents these special countries from destroying their own buildings and districts in their colonies
+		is_country_type = gate_builders
+		is_country_type = awakened_marauders
+	}
+	is_gestalt = no
+}
+
+is_megacorp = {
+	optimize_memory
+	OR = {
+		has_authority = auth_corporate
+		has_valid_civic = civic_galactic_sovereign_megacorp
+		# Warship Girls R And MIST Species
+		has_authority = auth_warshipgirls
+		# Stellaris Evolved
+		has_authority = auth_tec_patrocorporate
+		# More Authorities
+		has_government = gov_imperial_domain_megacorp
+		has_authority = auth_corporate_imperial
+		# Ethics and Civics - Bug Branch
+		has_authority = auth_bugged_corporate_democratic
+		has_authority = auth_bugged_corporate_imperial
+		# Expanded Traits, Civics, Pops, and More
+		has_authority = auth_private
+		has_authority = auth_cooperative		# Also More Corporate Authorities
+		# Expanded Gestalts: Forgotten Queens
+		has_valid_civic = civic_mutualistic_behavior
+		# More Corporate Authorities
+		has_authority = auth_corporate_fiefdom
+	}
+}
+
+is_autocracy = {
+	#Power of one
+	OR = {
+		is_gestalt = yes
+		has_authority = auth_imperial
+		has_authority = auth_dictatorial
+		# More Authorities
+		has_authority = auth_corporate_imperial
+		AND = {
+			has_authority = auth_democratic_dictatorship
+			is_authoritarian = yes
+		}
+		# Expanded Traits, Civics, Pops, and More
+		has_authority = auth_private
+		# More Corporate Authorities
+		has_authority = auth_corporate_fiefdom
+		# Ethics and Civics Bug Branch
+		has_authority = auth_bugged_corporate_imperial
+	}
+}
+
+is_democracy = {
+	#Power of many
+	OR = {
+		has_authority = auth_democratic
+		AND = {
+			has_authority = auth_corporate
+			is_egalitarian = yes
+		}
+		# More Authorities
+		has_authority = auth_strict_democratic
+		has_authority = auth_direct_democratic		# Also used by Stellaris Evolved
+		AND = {
+			has_authority = auth_democratic_dictatorship
+			is_egalitarian = yes
+		}
+		# Expanded Traits, Civics, Pops, and More
+		has_authority = auth_cooperative
+		# Ethics and Civics Bug Branch
+		has_authority = auth_bugged_direct_democratic
+		has_authority = auth_bugged_corporate_democratic
+	}
+}
+
+has_comms_with_alien_empire = {
+	any_relation = {
+		has_communications = root
+		OR = {
+			merg_is_default_empire = yes
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			# ACOT
+			is_progenitor_empires = yes
+			is_country_type = sofe_light_seeker
+		}
+	}
+}
+
+has_comms_with_alien_civilization = {
+	any_relation = {
+		has_communications = root
+		OR = {
+			merg_is_default_empire = yes
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = enclave
+			is_country_type = nomad
+			is_country_type = dormant_marauders
+			is_country_type = awakened_marauders
+			# ACOT
+			is_progenitor_empires = yes
+			is_country_type = sofe_light_seeker
+		}
+	}
+}
+
+has_total_war_cb = {
+	OR = {
+		#attacker checks
+		AND = {
+			OR = {
+				merg_is_default_empire = yes
+				is_fallen_empire = yes
+				# ACOT
+				is_progenitor_empires = yes
+			}
+			OR = {
+				merg_is_awakened_fe = yes
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_assimilator
+				# Expanded Traits, Civics, Pops, and More
+				has_valid_civic = civic_infestation
+				# ACOT
+				is_progenitor_empires = yes
+				# Vanilla
+				AND = {
+					has_valid_civic = civic_machine_terminator
+					from = { is_synthetic_empire = no }
+				}
+				AND = {
+					has_valid_civic = civic_fanatic_purifiers
+					NOT = { is_same_species = from }
+				}
+			}
+		}
+		#end threat checks
+		AND = {
+			OR = {
+				merg_is_default_empire = yes
+				# ACOT
+				is_progenitor_empires = yes
+			}
+			NOR = {
+				is_country_type = awakened_fallen_empire
+				is_homicidal = yes
+				has_valid_civic = civic_machine_assimilator
+				# Expanded Traits, Civics, Pops, and More
+				has_valid_civic = civic_infestation
+			}
+			from = {
+				OR = {
+					merg_is_awakened_fe = yes
+					is_homicidal = yes
+					has_valid_civic = civic_machine_assimilator
+					# Expanded Traits, Civics, Pops, and More
+					has_valid_civic = civic_infestation
+					# ACOT
+					is_progenitor_empires = yes
+				}
+			}
+		}
+	}
+}
+
+is_homicidal = {
+	OR = {
+		has_valid_civic = civic_fanatic_purifiers
+		has_valid_civic = civic_machine_terminator
+		has_valid_civic = civic_hive_devouring_swarm
+		# Expanded Traits, Civics, Pops, and More
+		has_valid_civic = civic_infestation
+	}
+}
+
+is_unfriendly = {
+	OR = {
+		is_homicidal = yes
+		has_valid_civic = civic_barbaric_despoilers
+		# Expanded Traits, Civics, Pops, and More
+		has_valid_civic = civic_living_hosts
+		has_valid_civic = civic_infestation
+		# Electroids
+		has_valid_civic = civic_elec_stellar_devourers
+	}
+}
+
+# Overwriting with vanilla for a correct use of the triggers
+is_wet = {
+	has_climate = wet
+}
+
+# Overwriting with vanilla for a correct use of the triggers
+is_dry = {
+	has_climate = dry
+	is_planet_city = no
+}
+
+# Overwriting with vanilla for a correct use of the triggers
+is_cold = {
+	has_climate = cold
+}
+
+is_fallen_empire = {
+	OR = {
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_fallen_empire
+		is_country_type = kuat_awakened_fallen_empire
+		is_country_type = awakened_return_kuat_empire
+		# A Deadly Tempest
+		is_country_type = awakened_gate_builders
+		# History of the Lost Empire
+		is_country_type = LsE_fallen_empire
+	}
+}
+
+is_crossbreeding_possible = {
+	is_sapient = yes
+	NOR = {
+		has_trait = trait_machine_unit
+		has_trait = trait_mechanical
+		has_trait = trait_hive_mind
+		has_trait = trait_self_modified
+		has_trait = trait_clone_soldier_infertile
+		has_trait = trait_clone_soldier_infertile_full_potential
+		# Planetary Diversity - Unique Worlds
+		has_trait = trait_organic_fourschildren
+		has_trait = trait_organic_fourschildren_2
+		# Expanded Traits, Civics, Pops, and More
+		has_trait = trait_clones
+		AND = {
+			is_half_species = any
+			# Expanded Gestalts: Forgotten Queens
+			NOT = { has_species_flag = "tmp_main_species" }
+		}
+		AND = {
+			has_expanded_pops = yes
+			count_galaxy_species = {
+				count > 7
+				limit = { is_half_species = PREV }
+			}
+		}
+	}
+}
+
+# Merging and fixing
+default_endgame_early_start_triggers = {
+	AND = {
+		OR = {
+			NOT = {
+				any_country = {
+					OR = {
+						merg_is_fallen_empire = yes
+						merg_is_awakened_fe = yes
+					}
+				}
+			}
+			has_global_flag = no_war_in_heaven
+			AND = {
+				has_global_flag = war_in_heaven_started
+				OR = {
+					has_global_flag = war_in_heaven_ended
+					NOT = {
+						has_global_flag = war_in_heaven_recently_started
+					}
+				}
+			}
+		}
+		# ACOT
+		OR = {
+			has_global_flag = acot_dangerous_forbidden
+			NOR = {
+				has_global_flag = acot_war_in_hell_active
+				has_global_flag = active_sofe_crisis
+			}
+		}
+		NOR = {
+			# Nirvana Empire Project
+			has_global_flag = difficult_exe_invasion
+			# Star Wars: UnknownWorld Shipgirls Story
+			has_global_flag = afk_crisis_real
+			# Warship Girls R And MIST Species
+			has_global_flag = wg_crisis_insane
+		}
+	}
+}
+
+no_resource_for_component = {
+	merg_is_default_empire = yes
+	OR = {
+		NOT = { can_buy_on_market = $RESOURCE$ }
+		AND = {
+			is_ai = yes
+			has_monthly_income = { resource = $RESOURCE$ value < -2 }
+			resource_stockpile_compare = { resource = $RESOURCE$ value < 150 }
+		}
+	}
+}
+
+has_phototrophic_energy_upkeep = {
+	OR = {
+		has_trait = trait_plantoid_phototrophic
+		has_trait = trait_advanced_radiotrophic
+		AND = {
+			OR = {
+				has_trait = trait_plantoid_radiotrophic
+				has_trait = trait_advanced_radiotrophic
+				has_trait = trait_harvested_radiotrophic
+				has_trait = trait_lithoid_radiotrophic
+				# Planetary Diversity
+				has_trait = trait_radiotrophic_mutants
+			}
+			planet = { merg_is_rad_planet = no }
+		}
+	}
+}
+ 
+has_research_building = {
+	OR = {
+		has_building = building_research_lab_1
+		has_building = building_research_lab_2
+		has_building = building_research_lab_3
+		has_building = building_institute
+		has_building = building_supercomputer
+		# ACOT
+		has_building = building_enigmatic_lab
+		has_building = building_fe_institute
+		has_building = building_ae_enigmatic_lab
+		has_building = building_ae_institute
+		# AOT
+		has_building = building_phanon_enigmatic_lab
+		has_building = building_phanon_institute
+		has_building = building_stellarite_enigmatic_lab
+		has_building = building_stellarite_institute
+		# Gigastructural Engineering & More
+		giga_has_research_building = yes
+		# Ancient Empire
+		has_building = ag_ancient_structure
+		has_building = ag_ancient_lab
+		has_building = ag_ancient_lab_corp
+		has_building = ag_ancient_lab_overlord
+		# APSR (partial)
+		has_building = apsr6_building_part1
+		has_building = apsr6_building_part2
+		has_building = apsr6_building_part3
+		has_building = apsr6_building_part4
+		has_building = apsr9_building_part1
+		has_building = apsr9_building_part2
+		has_building = apsr16_building_part1
+		has_building = apsr16_building_part2
+		has_building = apsr16_building_part3
+		has_building = apsr3_building_part1
+		has_building = apsr3_building_part2
+		has_building = apsr3_building_part3
+		has_building = apsr3_building_part4
+		# Plentiful Traditions
+		has_building = building_plentiful_traditions_university_of_wisdom
+		has_building = building_plentiful_traditions_cybernetics_facility
+		has_building = building_plentiful_traditions_experimental_weapons_facility
+		has_building = building_plentiful_traditions_biogenesis_lab
+		# EUTAB
+		has_building = building_institute
+		has_building = building_supercomputer
+		# Kancolle
+		has_building = building_kancolle_yubari_research1
+		has_building = building_kancolle_yubari_research2
+		has_building = building_kancolle_yubari_research3
+		# Planetary Diversity
+		has_building = building_storm_lab
+	}
+}
+
+has_any_industry_district = {
+    OR = {
+        has_district = district_industrial
+        has_district = district_hab_industrial
+        has_district = district_rw_industrial
+        has_district = district_arcology_arms_industry
+        has_district = district_arcology_civilian_industry
+		# Gigastructures
+        giga_has_any_industrial_district = yes
+		# Production Revolution
+		has_district = PR_DSTR_city_forge
+		has_district = PR_DSTR_city_catalytic
+		has_district = PR_DSTR_arcology_arms_industry
+		has_district = PR_DSTR_arcology_catalytic
+		has_district = PR_DSTR_rw_forge
+		has_district = PR_DSTR_rw_catalytic
+		has_district = PR_DSTR_city_industrial
+		has_district = PR_DSTR_city_crafter
+		has_district = PR_DSTR_arcology_civilian_industry
+		has_district = PR_DSTR_arcology_crafter
+		has_district = PR_DSTR_rw_industrial
+		has_district = PR_DSTR_rw_crafter
+		has_district = PR_DSTR_hab_industrial
+		has_district = PR_DSTR_hab_crafter
+		has_district = PR_DSTR_hab_forge
+		has_district = PR_DSTR_hab_catalytic
+		# Nanite Machines & Distant Stars Overhaul
+		has_district = district_nanite_forgeworld_industry
+    }
+}
+
+has_any_farming_district_or_buildings = {
+    OR = {
+		has_district = district_farming
+		has_district = district_rw_farming
+		has_district = district_farming_uncapped
+		has_building = building_hydroponics_farm
+		# Gigastructures
+        giga_has_any_farming_district_or_buildings = yes
+		# Production Revolution
+		has_building = PR_BLDN_Res_food_farm_T4
+		has_district = PR_DSTR_farming
+		has_district = PR_DSTR_farming_uncapped
+		has_district = PR_DSTR_rw_farming
+		# Plentiful Traditions
+		has_building = building_plentiful_traditions_pillar_of_affliction
+		has_building = building_plentiful_traditions_advanced_pillar_of_affliction
+		# EUTAB
+		has_building = building_hydroponics_farm
+    }
+}
+
+has_any_mining_district = {
+    OR = {
+        has_district = district_mining
+        has_district = district_hab_mining
+        has_district = district_mining_uncapped
+		# Gigastructures
+        gigas_has_any_mining_district = yes
+ 		# Production Revolution
+		has_district = PR_DSTR_mining
+		has_district = PR_DSTR_mining_uncapped
+		has_district = PR_DSTR_rw_mining
+		has_district = PR_DSTR_hab_mining
+	}
+}
+
+has_any_generator_district_or_building = {
+    OR = {
+        has_district = district_generator
+        has_district = district_hab_energy
+        has_district = district_generator_uncapped
+        has_district = district_rw_generator
+        has_building = building_betharian_power_plant
+		has_building = building_waste_reprocessing_center
+		# Gigastructures
+        gigas_has_any_generator_district_or_building = yes
+ 		# Production Revolution
+		has_district = PR_DSTR_generator
+		has_district = PR_DSTR_generator_uncapped
+		has_district = PR_DSTR_rw_generator
+		has_district = PR_DSTR_hab_energy
+		# Plentiful Traditions
+		has_building = building_plentiful_traditions_trading_depot
+	}
+}
+
+has_special_star_flag_trigger = {
+	OR = {
+		# Start System Flags
+		has_star_flag = empire_home_system
+		has_star_flag = neighbor_t1
+		has_star_flag = neighbor_t1_first_colony
+		has_star_flag = neighbor_t2
+		has_star_flag = neighbor_t2_second_colony
+		# Enclaves
+		has_star_flag = enclave
+		has_star_flag = caravaneer_home
+		# L-Gate
+		has_star_flag = lgate
+		has_star_flag = lcluster1
+		has_star_flag = lcluster2
+		has_star_flag = lcluster3
+		has_star_flag = lcluster4
+		has_star_flag = lcluster5
+		has_star_flag = lcluster_lgate
+		has_star_flag = lgateguaranteed
+		# Leviathans
+		has_star_flag = tiyanki_home_system
+		has_star_flag = amoeba_home_system
+		has_star_flag = crystal_system
+		has_star_flag = crystal_splitter_starting_system
+		has_star_flag = crystal_splitter_destination_system
+		# Hostile Systems
+		has_star_flag = marauder_system
+		has_star_flag = hostile_system
+		has_star_flag = guardian
+		has_star_flag = sealed_system
+		# Megastructures
+		has_star_flag = abandoned_gateway
+		has_star_flag = ruined_mega_shipyard_system
+		has_star_flag = ruined_dyson_system
+		has_star_flag = ruined_catapult_system
+		has_star_flag = ruined_nexus_system
+		has_star_flag = ruined_orbital_ring_system
+		has_star_flag = ruined_sentry_system
+		has_star_flag = ruined_ring_system
+		# Others
+		has_star_flag = mechanocalibrator_system
+		has_star_flag = rubricator_system
+		has_star_flag = last_baol_system
+		has_star_flag = Zrocursor
+		has_star_flag = overlord_empire_flag
+		# Ancient Empire
+		has_star_flag = ag_no_jump_in_system
+		# ACOT
+		has_star_flag = outercluster
+		# Warship Girls R And MIST Species
+		has_star_flag = wg_sealed_system
+		has_star_flag = wg_psionic_systems
+		# SW:Kuat Ancient Empire
+		has_star_flag = Kuat_system
+		has_star_flag = Kuat_system_1
+		has_star_flag = Kuat_system_2
+		has_star_flag = Kuat_system_3
+		has_star_flag = kuat_initial_system
+		has_star_flag = Kuat_system_int
+		has_star_flag = Kuat_system_int_1
+		has_star_flag = Kuat_system_int_2
+		has_star_flag = Kuat_system_int_3
+		has_star_flag = Kuat_system_int_4
+		has_star_flag = starkiller_system
+		# Gigastructural Engineering and More
+		has_star_flag = giga_core_03
+		# Some Events of Outside Cluster
+		has_star_flag = nep_Krahen_cluster
+		has_star_flag = nep_Scrus_cluster
+		has_global_flag = nep_not_pass_Aemethms
+		has_star_flag = nep_dragon_system
+		has_star_flag = nep_heptagram_cluster
+		# Real Space
+		has_star_flag = star_disaster
+	}
+}
+
+can_think = {
+	NOR = {
+		has_trait = trait_nerve_stapled
+		has_trait = trait_zombie
+		# Expanded Events
+		has_trait = trait_memorex_comatos
+		# Diagraphers Trait Mod
+		has_trait = trait_subsapient_form
+	}
+}

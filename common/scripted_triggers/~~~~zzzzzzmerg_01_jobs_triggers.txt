@@ -1,0 +1,113 @@
+# Vanilla scripted triggers from 01_scripted_triggers_jobs.txt
+
+can_fill_specialist_job = {
+	custom_tooltip = SPECIALIST_JOB_TRIGGER
+	hidden_trigger = {
+		is_gestalt = no
+		exists = owner
+		OR = {
+			is_enslaved = no
+			has_slavery_type = { type = slavery_indentured }
+			# Expanded Traits, Civics, Pops, and More
+			AND = {
+				NOT = { host_has_dlc = "Utopia" }
+				is_same_species = owner_main_species
+				owner = {
+					OR = {
+						has_valid_civic = civic_indentured_assets
+						has_valid_civic = civic_slaver_guilds
+					}
+				}
+			}
+		}
+		is_being_purged = no
+		is_being_assimilated = no
+		NOR = {
+			has_trait = trait_syncretic_proles
+			# Expanded Traits, Civics, Pops, and More
+			has_trait = trait_tree_caretaker
+			has_trait = trait_presapient_docile_livestock
+			# Ethics and Civics Alternative - Redux / Classics
+			has_trait = trait_slave_gene
+		}
+		can_think = yes
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			owner = { has_technology = tech_droid_workers }
+		}
+		NOT = {
+			has_citizenship_type = { type = citizenship_organic_trophy }
+		}
+		if = {
+			limit = { divinity_right_to_work_job_check_trigger_exempt = no }
+			divinity_right_to_work_job_check_trigger_specialist = yes
+		}
+	}
+}
+
+is_organic_species = {
+	species = {
+		OR = {
+			is_archetype = BIOLOGICAL
+			is_archetype = LITHOID
+			# Warship Girls R And MIST Species
+			is_archetype = WARSHIPGIRL
+			is_archetype = SHENHAI
+			# SW:UnknownWorld Shipgirls Story
+			is_archetype = STARSHIPGIRLS
+			# Kancolle
+			is_archetype = KANMUSU
+			# Azur Lane Stellaris DLC
+			is_archetype = KANSEN
+			# Empire of Eeveelution
+			is_archetype = POKEMON
+			# AshArms Aquarius history
+			is_archetype = Dolls
+			# Expanded Traits, Civics, Pops, and More
+			is_archetype = HUMANOID
+			is_archetype = MAMMALIAN
+			is_archetype = REPTILIAN
+			is_archetype = AVIAN
+			is_archetype = ARTHROPOID
+			is_archetype = MOLUSCOID
+			is_archetype = FUNGOID
+			is_archetype = PLANTOID
+			is_archetype = NECROID
+			is_archetype = half_species
+			is_archetype = half_species_special
+			is_archetype = half_aberration
+			is_archetype = half_perfect
+			is_archetype = half_amalgamated
+			# Aquatic Portraits mod
+			is_archetype = JAYPEES_AQUATIC
+			is_archetype = JAYPEES_BRAIN
+			is_archetype = JAYPEES_CRAB
+			is_archetype = JAYPEES_DOLPHIN
+			is_archetype = JAYPEES_DUMBO
+			is_archetype = JAYPEES_ELESQUID
+			is_archetype = JAYPEES_FISH
+			is_archetype = JAYPEES_HAIRTENTACLE
+			is_archetype = JAYPEES_SEAL
+			is_archetype = JAYPEES_SQUID
+			is_archetype = JAYPEES_TURTLEHORSE
+			# The DAL Species Mod
+			is_archetype = DATEALIVE
+			# Nyto Species Events Pack
+			is_archetype = NYTO
+			# Silfae's Portrait Revisited
+			AND = {
+				is_archetype = HOLOARCH
+				NOR = {
+					has_trait = trait_holofrixigram
+					has_trait = trait_holofrixigram_2
+					has_trait = trait_holofrixigram_3
+				}
+			}
+			# Cryogenesis Unofficial Species Pack
+			is_archetype = sm_ELEMENTAL
+			# Others
+			is_archetype = UNITED_FLEET
+			is_archetype = NANITES_CROP
+		}
+	}
+}

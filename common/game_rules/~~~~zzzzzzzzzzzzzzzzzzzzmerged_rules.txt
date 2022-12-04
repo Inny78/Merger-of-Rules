@@ -920,7 +920,10 @@ can_terraform_planet = {
 	custom_tooltip = {
 		fail_text = terraform_fail_no_presapient_protection_or_no_presapients
 		NAND = {
-			root = { has_policy_flag = pre_sapients_protect }
+			AND = {
+				exists = root
+				root = { has_policy_flag = pre_sapients_protect }
+			}
 			any_owned_pop = { is_sapient = no }
 		}
 	}
@@ -929,6 +932,7 @@ can_terraform_planet = {
 	# Vanilla
 	custom_tooltip = {
 		fail_text = "requires_actor_not_devouring_swarm_lithoid"
+		exists = root
 		root = { is_lithoid_devouring_swarm = no }
 	}
 	custom_tooltip = {
@@ -971,7 +975,7 @@ can_terraform_planet = {
 #This = pop
 can_colonize_with_pop = {
 	has_colonization_control = {
-		value = no
+		type = colonization_control_no
 		country = root
 	}
 	OR = {
@@ -1021,7 +1025,7 @@ can_colonize_with_pop = {
 #This = species
 can_colonize_with_species = {
 	has_colonization_control = {
-		value = no
+		type = colonization_control_no
 		country = root
 	}
 	NOR = {
@@ -1335,7 +1339,7 @@ can_species_procreate = {
 		NOT = {
 			root = {
 				any_owned_species = {
-					has_population_control = { country = root.owner value = no }
+					has_population_control = { country = root.owner type = no }
 					species_can_be_necrophaged = yes
 				}
 			}
@@ -1442,6 +1446,21 @@ can_species_be_assembled = {
 			else_if = {
 				limit = { has_budding_trait = yes }
 				root = { any_owned_species = { is_exact_same_species = prevprev } }
+			}
+			else_if = {
+				limit = { has_trait = trait_tiyanki }
+				root = {
+					any_owned_species = { is_exact_same_species = prevprev }
+				}
+			}
+			else_if = {
+				limit = {
+					root.owner = {
+						has_tradition = tr_cybernetics_assembly_standards
+						has_policy_flag = roboticist_output_build_cyborgs
+					}
+				}
+				has_trait = trait_cybernetic
 			}
 			# Lithoid supremacy
 			else_if = {
@@ -1597,10 +1616,7 @@ can_species_be_assembled = {
 		has_trait = trait_machine_central
 	}
 	# Vanilla
-	has_population_control = {
-		value = no
-		country = root.owner
-	}
+	has_population_control = { country = root.owner type = no }
 }
 
 #This rule is a condition for bombarding planets
@@ -2806,9 +2822,7 @@ can_build_branch_office_on_planet = {
 			}
 			# Warship Girls R And MIST Species
 			AND = {
-				owner = {
-					has_country_flag = lose_wg_shop_war
-				}
+				owner = { has_country_flag = lose_wg_shop_war }
 				root = {
 					OR = {
 						has_country_flag = pantsu_shop_origin
@@ -2850,20 +2864,12 @@ can_build_branch_office_on_planet = {
 				}
 			}
 			AND = {
-				root = {
-					has_valid_civic = civic_galactic_sovereign_megacorp
-				}
-				owner = {
-					is_galactic_community_member = yes
-				}
+				root = { has_valid_civic = civic_galactic_sovereign_megacorp }
+				owner = { is_galactic_community_member = yes }
 			}
 			AND = {
-				root = {
-					has_modifier = imperial_charter
-				}
-				owner = {
-					is_galactic_community_member = yes
-				}
+				root = { has_modifier = imperial_charter }
+				owner = { is_galactic_community_member = yes }
 			}
 			# Vassals Expanded and Reworked
 			# allow branch offices in all subjects and vice versa
@@ -2881,20 +2887,14 @@ can_build_branch_office_on_planet = {
 					}
 					owner = {
 						is_subject = yes
-						overlord = {
-							is_same_value = root
-						}
+						overlord = { is_same_value = root }
 					}
 				}
 			}
 			# Unique Ascension Perks
 			AND = {
-				owner = {
-					merg_is_default_empire = yes
-				}
-				root = {
-					has_ascension_perk = ap_megacorp
-				}
+				owner = { merg_is_default_empire = yes }
+				root = { has_ascension_perk = ap_megacorp }
 			}
 			AND = {
 				owner = { is_gestalt = yes }
@@ -2931,9 +2931,7 @@ can_build_branch_office_on_planet = {
 						is_subject = no
 						AND = {
 							is_subject = yes
-							overlord = {
-								NOT = { is_same_value = root.overlord }
-							}
+							overlord = { NOT = { is_same_value = root.overlord } }
 						}
 					}
 				}
@@ -2978,12 +2976,10 @@ can_build_branch_office_on_planet = {
 		}
 	}
 	custom_tooltip = {
-		fail_text = {
-			text = COUNTRY_CLOSED_BORDERS
-			OR = {
-				has_zofe_mc = no
-				NOT = { owner = { has_closed_borders = root } }
-			}
+		fail_text = COUNTRY_CLOSED_BORDERS
+		OR = {
+			has_zofe_mc = no
+			NOT = { owner = { has_closed_borders = root } }
 		}
 	}
 	# Warship Girls R And MIST Species
@@ -3084,8 +3080,6 @@ can_crossbreed_species_on_planet = {
 		is_planet_class = pc_pb_pleasure
         owner = { has_ascension_perk = ap_xeno_compatibility }
     }
-	# Girls Frontline
-	NOT = { has_trait = GF_trait_doll }
 }
 
 # This = species one
@@ -3109,7 +3103,9 @@ can_crossbreed_species = {
 		has_wg_traits = yes
 		# Misc
 		is_archetype = NANITES_CROP
-		is_archetype = UNITED_FLEET 
+		is_archetype = UNITED_FLEET
+		# Girls Frontline
+		has_trait = GF_trait_doll
 	}
 }
 
@@ -3370,9 +3366,20 @@ can_pop_auto_migrate = {
 			OR = {
 				planet = {
 					OR = {
-						has_building = building_slave_processing
-						# Plentiful Traditions
-						has_building = building_plentiful_traditions_advanced_slave_processing
+						OR = {
+							has_building = building_slave_processing
+							# Plentiful Traditions
+							has_building = building_plentiful_traditions_advanced_slave_processing
+						}
+						AND = {
+							exists = orbital_defence
+							orbital_defence = {
+								exists = starbase
+								starbase = {
+									has_starbase_building = ring_slave_processing_facility
+								}
+							}
+						}
 					}
 				}
 				solar_system = {
@@ -3441,6 +3448,10 @@ can_planet_auto_migrate = {
 			has_planet_flag = pd_habitat_start_mars
 		}
 	}
+	custom_tooltip = {
+		fail_text = AUTO_MIGRATE_ONLY_HAS_ONE_POP
+		num_sapient_pops > 1 
+	}
 	hidden_trigger = {
 		exists = owner
 		owner = {
@@ -3452,8 +3463,6 @@ can_planet_auto_migrate = {
 	}
 	# Better Performance & Utilities
 	NOT = { has_global_flag = z_pf2_flg_vam_disabled }
-	# SirBlackAxe's Unofficial Bug Patch
-	num_pops > 1
 }
 
 can_planet_receive_auto_migration = {
@@ -3802,3 +3811,6 @@ can_trade_fleet = {
 		any_owned_ship = { kuat_is_flagship_system_protection = no }
 	}
 }
+
+# is_terraforming_candidate
+# has_ascension_for_terraforming_candidate

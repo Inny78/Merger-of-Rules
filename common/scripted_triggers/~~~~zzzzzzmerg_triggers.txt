@@ -1,0 +1,28 @@
+# Misc vanilla scripted triggers
+mineral_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		is_asteroid = yes
+		uninhabitable_regular_planet = yes
+		# Real Space
+		is_planet_class = pc_c_giant_star
+	}
+}
+
+is_doomsday_planet = {
+	OR = {
+		has_modifier = doomsday_1
+		has_modifier = doomsday_2
+		has_modifier = doomsday_3
+		has_modifier = doomsday_4
+		has_modifier = doomsday_5
+		# Expanded Events
+		has_modifier = deteriorating_ecosystem
+		has_modifier = catastrophe_approach
+		has_modifier = apocalypse
+		has_modifier = ravenous_locusts
+		has_modifier = planet_active_worm
+		# Endless Frontier: An Event Mod
+		has_modifier = mzilli_events_dying_world
+	}
+}
