@@ -2,3 +2,5 @@
 # Irony this is a placeholder file please ignore it
 ap_megacorp = { potential = { always = no } possible = { always = no } }
 ap_total_assimilation = { potential = { always = no } possible = { always = no } }
+ap_expactriate_service = { potential = { always = no } possible = { always = no } }
+ap_BA_new_frontier = { potential = { always = no } possible = { always = no } }

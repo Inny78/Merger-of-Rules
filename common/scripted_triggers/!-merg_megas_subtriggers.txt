@@ -2375,5 +2375,7 @@ merg_is_gate_mega = {
 		is_megastructure_type = TACgate_system_01_C
 		is_megastructure_type = TAC_gateway_control_01
 		is_megastructure_type = TAC_gateway_control_02
+		# Blue Archive
+		is_megastructure_type = Dgate_base
 	}
 }

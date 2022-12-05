@@ -105,6 +105,8 @@ is_organic_species = {
 			}
 			# Cryogenesis Unofficial Species Pack
 			is_archetype = sm_ELEMENTAL
+			# BlueArchive species pack
+			is_archetype = Schale
 			# Others
 			is_archetype = UNITED_FLEET
 			is_archetype = NANITES_CROP

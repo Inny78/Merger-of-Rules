@@ -588,7 +588,7 @@ has_research_building = {
 		has_building = ag_ancient_lab
 		has_building = ag_ancient_lab_corp
 		has_building = ag_ancient_lab_overlord
-		# APSR (partial)
+		# APSR
 		has_building = apsr6_building_part1
 		has_building = apsr6_building_part2
 		has_building = apsr6_building_part3
@@ -602,6 +602,7 @@ has_research_building = {
 		has_building = apsr3_building_part2
 		has_building = apsr3_building_part3
 		has_building = apsr3_building_part4
+		has_building = apsr15_building_part22
 		# Plentiful Traditions
 		has_building = building_plentiful_traditions_university_of_wisdom
 		has_building = building_plentiful_traditions_cybernetics_facility
@@ -668,6 +669,12 @@ has_any_farming_district_or_buildings = {
 		has_building = building_plentiful_traditions_advanced_pillar_of_affliction
 		# EUTAB
 		has_building = building_hydroponics_farm
+		# APSR
+		has_building = apsr15_building_part32
+		has_building = apsr15_building_part33
+		has_building = apsr19_building_part_b1
+		has_building = apsr19_building_part_b2
+		has_building = apsr19_building_part_b3
     }
 }
 
@@ -677,7 +684,7 @@ has_any_mining_district = {
         has_district = district_hab_mining
         has_district = district_mining_uncapped
 		# Gigastructures
-        gigas_has_any_mining_district = yes
+        giga_has_any_mining_district = yes
  		# Production Revolution
 		has_district = PR_DSTR_mining
 		has_district = PR_DSTR_mining_uncapped
@@ -695,7 +702,7 @@ has_any_generator_district_or_building = {
         has_building = building_betharian_power_plant
 		has_building = building_waste_reprocessing_center
 		# Gigastructures
-        gigas_has_any_generator_district_or_building = yes
+        giga_has_any_generator_district_or_building = yes
  		# Production Revolution
 		has_district = PR_DSTR_generator
 		has_district = PR_DSTR_generator_uncapped
@@ -703,6 +710,15 @@ has_any_generator_district_or_building = {
 		has_district = PR_DSTR_hab_energy
 		# Plentiful Traditions
 		has_building = building_plentiful_traditions_trading_depot
+		# APSR
+		has_building = apsr15_building_part21
+		has_building = apsr15_building_part31
+		has_building = apsr17_building_part1
+		has_building = apsr17_building_part2
+		has_building = apsr17_building_part3
+		has_building = apsr19_building_part_m1
+		has_building = apsr19_building_part_m2
+		has_building = apsr19_building_part_m3
 	}
 }
 

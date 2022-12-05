@@ -116,6 +116,16 @@ has_no_non_gate_megastructure = {
 					is_megastructure_type = nsc_hospital_3
 					is_megastructure_type = nsc_galactic_mall_0
 					is_megastructure_type = nsc_galactic_mall_1
+					# Blue Archive
+					is_megastructure_type = BA_Mega_pyroxenes_base_0
+					is_megastructure_type = BA_Mega_pyroxenes_base_1
+					is_megastructure_type = BA_Mega_pyroxenes_base_2
+					is_megastructure_type = BA_Mega_pyroxenes_base_3
+					is_megastructure_type = BA_Mega_pyroxenes_base_4
+					is_megastructure_type = BA_Mega_keystone_base_0
+					is_megastructure_type = BA_Mega_keystone_base_1
+					is_megastructure_type = BA_Mega_keystone_base_2
+					is_megastructure_type = BA_Mega_keystone_base_3
 				}
 			}
 		}
@@ -234,6 +244,16 @@ has_any_megastructure_in_empire = {
 			has_megastructure = nsc_hospital_3
 			has_megastructure = nsc_galactic_mall_0
 			has_megastructure = nsc_galactic_mall_1
+			# Blue Archive
+			has_megastructure = BA_Mega_pyroxenes_base_0
+			has_megastructure = BA_Mega_pyroxenes_base_1
+			has_megastructure = BA_Mega_pyroxenes_base_2
+			has_megastructure = BA_Mega_pyroxenes_base_3
+			has_megastructure = BA_Mega_pyroxenes_base_4
+			has_megastructure = BA_Mega_keystone_base_0
+			has_megastructure = BA_Mega_keystone_base_1
+			has_megastructure = BA_Mega_keystone_base_2
+			has_megastructure = BA_Mega_keystone_base_3
 		}
 	}
 }
