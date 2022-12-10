@@ -1,0 +1,74 @@
+# Vanilla scripted triggers from 00_scripted_triggers_ai.txt
+
+districts_good_energy = {
+	planet = {
+		OR = {
+			has_modifier = hazardous_weather
+			has_modifier = divine_algorithm
+			has_modifier = energy_relic
+			has_modifier = gas_rich_planet_fo_realz
+			has_planet_flag = buildings_good_energy
+		}
+	}
+}
+
+districts_good_minerals = {
+	planet = {
+		NOT = { has_modifier = pm_wenkwort_custodian }
+		OR = {
+			has_modifier = extensive_moon_system
+			has_modifier = carbon_world
+			has_modifier = mineral_rich
+			has_modifier = ultra_rich
+			has_modifier = asteroid_belt
+			has_modifier = minerals_relic
+			has_planet_flag = buildings_good_minerals
+		}
+		# SirBlackAxe's Unofficial Bug Patch
+		NOT = { has_modifier = pm_wenkwort_custodian }
+	}
+}
+
+districts_good_food = {
+	planet = {
+		OR = {
+			has_modifier = lush_planet
+			has_planet_flag = buildings_good_food
+			# SirBlackAxe's Unofficial Bug Patch
+			has_modifier = paradise_planet
+			has_modifier = ancient_harvesters
+			has_modifier = eat_the_titans
+		}
+	}
+}
+
+jobs_any_research = {
+	planet = {
+		any_owned_pop = {
+			OR = {
+				has_job = head_researcher
+				has_job = researcher
+				has_job = brain_drone
+				has_job = calculator
+				has_job = dimensional_portal_researcher
+				has_job = dimensional_portal_researcher_gestalt
+				# ACOT
+				has_job = acot_researcher
+				has_job = acot_researcher_drone
+				has_job = acot_priest
+				has_job = acot_voidsphere_labman
+				has_job = acot_voidsphere_labdrone
+				# AOT
+				has_job = ae_researcher
+				has_job = ae_researcher_drone
+				has_job = phanon_researcher
+				has_job = phanon_researcher_drone
+				has_job = phanon_priest
+				has_job = stellarite_researcher
+				has_job = stellarite_researcher_drone
+				has_job = stellarite_priest
+				has_job = stellarite_bureaucrat
+			}
+		}
+	}
+}

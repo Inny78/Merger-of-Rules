@@ -572,7 +572,20 @@ can_release_vassal_from_species = {
 	}
 }
 
-# can_generate_army_from_species
+# Root = species
+# This = country
+# Fixing prev position
+can_generate_army_from_species = {
+    root = {
+	    exists = prev
+        OR = {
+            has_military_service_type = { type = military_service_full country = prev }
+            has_military_service_type = { type = military_service_limited country = prev }
+            prev = { is_primitive = yes }
+        }
+    }
+}
+
 # can_modify_species
 
 #This = country, suject
@@ -1073,31 +1086,22 @@ can_colonize_with_species = {
 		limit = { has_trait = trait_machine_unit }
 		root = { is_machine_empire = yes }
 	}
-	# Nyto Species Event Pack
 	else_if = {
-		limit = { has_species_flag = GF_nyto_not_coloniz }
-		always = no
-	}
-	# Lithoid Supremacy
-	else_if = {
-		limit = { has_trait = trait_pearl_born_drone }
+		limit = {
+			OR = {
+				# Nyto Species Event Pack
+				has_species_flag = GF_nyto_not_coloniz
+				# Lithoid Supremacy
+				has_trait = trait_pearl_born_drone
+			}
+		}
 		always = no
 	}
 	# Vanilla
 	else = { always = yes }
 }
 
-# Root = Pop
-# From = Country
-# This = Pop
-# NOTE: species_has_happiness is also checked for this
-pop_has_random_ethics = {
-	NOR = {
-		has_citizenship_type = { type = citizenship_organic_trophy }
-		# Diagraphers Trait Mod
-		has_trait = trait_subsapient_form
-	}
-}
+# pop_has_random_ethics
 
 # Root = Species
 # From = Country
@@ -1464,13 +1468,16 @@ can_species_be_assembled = {
 			}
 			# Lithoid supremacy
 			else_if = {
-				limit = {
+				limit = { 
+					OR = {
+					has_trait = trait_pearl_born_drone 
 					has_trait = trait_pearl_born_royal
-				}
+				} 
+			}
 				root = {
-					any_owned_species = {
+					any_owned_species = { 
 						OR = {
-							has_trait = trait_pearl_born_drone
+							has_trait = trait_pearl_born_drone 
 							has_trait = trait_pearl_born_royal
 						}
 					}
@@ -2239,7 +2246,7 @@ can_spawn_occupation_armies = {
 system_blocks_sensors = {
 	# Vanilla, includes code from Ariphaos' Sensor Expansion
 	OR = {
-		AND = {
+		AND = { # Nebulae
 			OR = {
 				has_modifier = space_storm
 				is_inside_nebula = yes
@@ -2262,10 +2269,12 @@ system_blocks_sensors = {
 				}
 			}
 		}
-		AND = {
+		AND = { # Clusters, Sealed systems
 			OR = {
 				has_star_flag = lcluster
 				has_star_flag = sealed_system
+				# Ariphaos Sensor Expansion
+				has_star_flag = surveillance_supercomputer_system
 			}
 			# Making sure modded hidden systems will work as intended if Sensor Expansion is installed
 			NOR = {
@@ -2287,7 +2296,7 @@ system_blocks_sensors = {
 		# Solar Storm
 		has_star_flag = ss_abyssal_shockwave
 		# Sensor Expansion
-		AND = {
+		AND = { # Neutron stars
 			has_sensor_expansion = yes
 			OR = {
 				is_star_class = sc_binary_2
@@ -2295,15 +2304,20 @@ system_blocks_sensors = {
 			}
 			ROOT = { NOT = { has_technology = tech_sensors_4 } }
 		}
-		AND = {
+		AND = { # Pulsars
 			has_sensor_expansion = yes
 			OR = {
 				is_star_class = sc_binary_1
 				is_star_class = sc_pulsar
+				# Real Space
+				is_star_class = sc_collapsar
+				is_star_class = sc_magnetar
+				is_star_class = sc_binary_pl_pl
+				is_star_class = sc_binary_pl_n
 			}
 			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_pulsar } }
 		}
-		AND = {
+		AND = { # Wormholes
 			OR = {
 				has_sensor_expansion = yes
 				has_wild_space = yes
@@ -2316,12 +2330,24 @@ system_blocks_sensors = {
 				}
 			}
 		}
-		AND = {
+		AND = { # Black Holes
 			has_sensor_expansion = yes
-			is_star_class = sc_black_hole
+			OR = {
+				is_star_class = sc_black_hole
+				# Real Space
+				is_star_class = sc_microquasar_1
+				is_star_class = sc_microquasar_2
+				# Gigastructural Engineering & More
+				is_star_class = sc_birch
+				is_star_class = sc_birch_built
+				is_star_class = sc_void_birch_built
+				is_star_class = sc_quasar
+				is_star_class = sc_ehof_black_hole
+				is_star_class = sc_white_hole
+			}
 			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_black_hole } }
 		}
-		AND = {
+		AND = { # Jammer
 			exists = starbase
 			starbase = {
 				has_starbase_building = ariphaos_sensors_jammer_starbase

@@ -151,6 +151,7 @@ giga_habitable_structure = {
 is_maginotable_restricted = {
 	OR = {
 		is_planet_class = pc_giga_planetary_computer
+		has_planet_flag = has_planet_pc_mega
 		# APSR
 		is_planet_class = pc_apsr_ancient
 		is_planet_class = pc_apsr_unique

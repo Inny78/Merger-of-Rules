@@ -325,28 +325,6 @@ merg_has_cloning_building = {
 	}
 }
 
-# List of void systems
-merg_is_void_system = {
-	optimize_memory
-	OR = {
-		# Ancient Empire
-		is_star_class = sc_ag_void
-		# Wild Space
-		is_star_class = sc_dn
-		# ACOT
-		is_star_class = sofe_outer_class
-		is_star_class = sofe_inner_class
-		# History of the Lost Empire
-		is_star_class = sc_empty_space
-		# Some Events of Outside Cluster
-		is_star_class = sc_void_dummy
-		# Darkspace
-		is_star_class = sc_gc
-		# Gigas
-		is_star_class = sc_blokkat_stripmined
-	}
-}
-
 merg_is_hive_world = {
 	OR = {
 		is_planet_class = pc_hive
@@ -483,6 +461,7 @@ merg_is_forbidden_target = {
 		# ACOT/Gigas
 		has_planet_flag = cant_target_this_planet
 		has_planet_flag = cant_build_here
+		is_planet_class = pc_ehof_cplanet
 	}
 }
 
@@ -535,6 +514,7 @@ merg_is_empty_space = {
 	OR = {
 		# Gigastructural Engineering & More
 		is_planet_class = giga_hidden
+		is_planet_class = pc_giga_empty_space
 		is_planet_class = pc_giga_empty_space_asteroid
 		# Ancient Empires
 		is_planet_class = pc_ag_void_star
@@ -549,6 +529,28 @@ merg_is_empty_space = {
 		is_planet_class = pc_tc_not_texture
 		# Darkspace
 		is_planet_class = pc_gc_star
+	}
+}
+
+# List of void systems
+merg_is_void_system = {
+	optimize_memory
+	OR = {
+		# Ancient Empire
+		is_star_class = sc_ag_void
+		# Wild Space
+		is_star_class = sc_dn
+		# ACOT
+		is_star_class = sofe_outer_class
+		is_star_class = sofe_inner_class
+		# History of the Lost Empire/Gigas
+		is_star_class = sc_empty_space
+		# Some Events of Outside Cluster
+		is_star_class = sc_void_dummy
+		# Darkspace
+		is_star_class = sc_gc
+		# Gigas
+		is_star_class = sc_blokkat_stripmined
 	}
 }
 
