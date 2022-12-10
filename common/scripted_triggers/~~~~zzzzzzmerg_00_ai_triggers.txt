@@ -14,7 +14,6 @@ districts_good_energy = {
 
 districts_good_minerals = {
 	planet = {
-		NOT = { has_modifier = pm_wenkwort_custodian }
 		OR = {
 			has_modifier = extensive_moon_system
 			has_modifier = carbon_world

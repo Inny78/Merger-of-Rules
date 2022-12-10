@@ -1,104 +1,157 @@
 # Dummy buildings - to be overwritten by their respective mods.
 # Irony this is a placeholder file please ignore it
-# azur_building_mind_capital = { potential = { always = no } allow = { always = no } }
-# azur_building_mind_net_capital = { potential = { always = no } allow = { always = no } }
-# building_acid_maker = { potential = { always = no } allow = { always = no } }
-# building_ae_affluence_center = { potential = { always = no } allow = { always = no } }
-# building_ae_alloy_forge = { potential = { always = no } allow = { always = no } }
-# building_ae_ancient_control_center = { potential = { always = no } allow = { always = no } }
-# building_ae_ancient_hive_cluster = { potential = { always = no } allow = { always = no } }
-# building_ae_ancient_palace = { potential = { always = no } allow = { always = no } }
-# building_ae_clone_vats = { potential = { always = no } allow = { always = no } }
-# building_ae_factory = { potential = { always = no } allow = { always = no } }
-# building_ae_galactic_capital = { potential = { always = no } allow = { always = no } }
-# building_ae_galactic_hive_capital = { potential = { always = no } allow = { always = no } }
-# building_ae_galactic_machine_capital = { potential = { always = no } allow = { always = no } }
-# building_ae_hospital = { potential = { always = no } allow = { always = no } }
-# building_ae_nano_forge = { potential = { always = no } allow = { always = no } }
-# building_ae_stronghold = { potential = { always = no } allow = { always = no } }
-# building_ancient_palace = { potential = { always = no } allow = { always = no } }
-# building_ancient_palace_at = { potential = { always = no } allow = { always = no } }
-# building_brothel_house = { potential = { always = no } allow = { always = no } }
-# building_brothel_house_branch_office = { potential = { always = no } allow = { always = no } }
-# building_bugged_life_monastery = { potential = { always = no } allow = { always = no } }
-# building_bugged_life_monastery_two = { potential = { always = no } allow = { always = no } }
-# building_clone_vats_advanced_asim = { potential = { always = no } allow = { always = no } }
-# building_clone_vats_advanced_organic = { potential = { always = no } allow = { always = no } }
-# building_clone_vats_advanced_serv = { potential = { always = no } allow = { always = no } }
-# building_clone_vats_augmented_asim = { potential = { always = no } allow = { always = no } }
-# building_clone_vats_augmented_organic = { potential = { always = no } allow = { always = no } }
-# building_clone_vats_augmented_serv = { potential = { always = no } allow = { always = no } }
-# building_clone_vats_basic_asim = { potential = { always = no } allow = { always = no } }
-# building_clone_vats_basic_organic = { potential = { always = no } allow = { always = no } }
-# building_clone_vats_basic_serv = { potential = { always = no } allow = { always = no } }
-# building_clone_vats_improved_asim = { potential = { always = no } allow = { always = no } }
-# building_clone_vats_improved_organic = { potential = { always = no } allow = { always = no } }
-# building_clone_vats_improved_serv = { potential = { always = no } allow = { always = no } }
-# building_crystallization_facilities = { potential = { always = no } allow = { always = no } }
-# building_dm_ancient_control_center = { potential = { always = no } allow = { always = no } }
-# building_dm_ancient_hive_cluster = { potential = { always = no } allow = { always = no } }
-# building_dm_ancient_palace = { potential = { always = no } allow = { always = no } }
-# building_dm_galactic_capital = { potential = { always = no } allow = { always = no } }
-# building_dm_galactic_hive_capital = { potential = { always = no } allow = { always = no } }
-# building_dm_galactic_machine_capital = { potential = { always = no } allow = { always = no } }
-# building_dm_stronghold = { potential = { always = no } allow = { always = no } }
-# building_eternal_nexus_ai = { potential = { always = no } allow = { always = no } }
-# building_eternal_palace = { potential = { always = no } allow = { always = no } }
-# building_fe_affluence_center = { potential = { always = no } allow = { always = no } }
-# building_fe_alloy_forge = { potential = { always = no } allow = { always = no } }
-# building_fe_clone_vats = { potential = { always = no } allow = { always = no } }
-# building_fe_factory = { potential = { always = no } allow = { always = no } }
-# building_fe_hospital = { potential = { always = no } allow = { always = no } }
-# building_fe_nano_forge = { potential = { always = no } allow = { always = no } }
-# building_giga_fortress = { potential = { always = no } allow = { always = no } }
-# building_giga_fortress_array = { potential = { always = no } allow = { always = no } }
-# building_giga_fortress_fe = { potential = { always = no } allow = { always = no } }
-# building_giga_fortress_lab = { potential = { always = no } allow = { always = no } }
-# building_giga_fortress_obelisk = { potential = { always = no } allow = { always = no } }
-# building_gray_nano_factory = { potential = { always = no } allow = { always = no } }
-# building_gray_nano_foundry = { potential = { always = no } allow = { always = no } }
-# building_gray_nano_foundry2 = { potential = { always = no } allow = { always = no } }
-# building_heaven_sanctuary = { potential = { always = no } allow = { always = no } }
-# building_hive_major_capital_sick = { potential = { always = no } allow = { always = no } }
-# building_house_of_the_fleshsculpter = { potential = { always = no } allow = { always = no } }
-# building_kuat_command_center = { potential = { always = no } allow = { always = no } }
-# building_nightelf_palace = { potential = { always = no } allow = { always = no } }
-# building_nirvana_empire_palace = { potential = { always = no } allow = { always = no } }
-# building_ocean_spawning_pool = { potential = { always = no } allow = { always = no } }
-# building_phanon_affluence_center = { potential = { always = no } allow = { always = no } }
-# building_phanon_alloy_forge = { potential = { always = no } allow = { always = no } }
-# building_phanon_civilian_factory = { potential = { always = no } allow = { always = no } }
-# building_phanon_clone_vats = { potential = { always = no } allow = { always = no } }
-# building_phanon_control_center = { potential = { always = no } allow = { always = no } }
-# building_phanon_hive_cluster = { potential = { always = no } allow = { always = no } }
-# building_phanon_hospital = { potential = { always = no } allow = { always = no } }
-# building_phanon_nano_forge = { potential = { always = no } allow = { always = no } }
-# building_phanon_palace = { potential = { always = no } allow = { always = no } }
-# building_phanon_psg = { potential = { always = no } allow = { always = no } }
-# building_phanon_stronghold = { potential = { always = no } allow = { always = no } }
-# building_phanon_tower = { potential = { always = no } allow = { always = no } }
-# building_plentiful_traditions_advanced_slave_processing = { potential = { always = no } allow = { always = no } }
-# building_precinct_house_at_b = { potential = { always = no } allow = { always = no } }
-# building_SCO_resort_system_capital = { potential = { always = no } allow = { always = no } }
-# building_SCO_slave_system_capital = { potential = { always = no } allow = { always = no } }
-# building_sep_foundry = { potential = { always = no } allow = { always = no } }
-# building_sep_foundry2 = { potential = { always = no } allow = { always = no } }
-# building_stellarite_affluence_center = { potential = { always = no } allow = { always = no } }
-# building_stellarite_alloy_forge = { potential = { always = no } allow = { always = no } }
-# building_stellarite_civilian_factory = { potential = { always = no } allow = { always = no } }
-# building_stellarite_clone_vats = { potential = { always = no } allow = { always = no } }
-# building_stellarite_control_center = { potential = { always = no } allow = { always = no } }
-# building_stellarite_galactic_capital = { potential = { always = no } allow = { always = no } }
-# building_stellarite_galactic_hive_capital = { potential = { always = no } allow = { always = no } }
-# building_stellarite_galactic_machine_capital = { potential = { always = no } allow = { always = no } }
-# building_stellarite_hive_cluster = { potential = { always = no } allow = { always = no } }
-# building_stellarite_hospital = { potential = { always = no } allow = { always = no } }
-# building_stellarite_nano_forge = { potential = { always = no } allow = { always = no } }
-# building_stellarite_palace = { potential = { always = no } allow = { always = no } }
-# building_stellarite_stronghold = { potential = { always = no } allow = { always = no } }
-# building_summoner_site = { potential = { always = no } allow = { always = no } }
-# building_system_capital_gr = { potential = { always = no } allow = { always = no } }
-# building_tw_arcane_hold = { potential = { always = no } allow = { always = no } }
-# building_wsg_foundry = { potential = { always = no } allow = { always = no } }
-# building_ie_clone_vats = { potential = { always = no } allow = { always = no } }
-# building_ie_spawning_pool = { potential = { always = no } allow = { always = no } }
+ag_ancient_lab = { potential = { always = no } allow = { always = no } }
+ag_ancient_lab_corp = { potential = { always = no } allow = { always = no } }
+ag_ancient_lab_overlord = { potential = { always = no } allow = { always = no } }
+ag_ancient_structure = { potential = { always = no } allow = { always = no } }
+apsr15_building_part21 = { potential = { always = no } allow = { always = no } }
+apsr15_building_part22 = { potential = { always = no } allow = { always = no } }
+apsr15_building_part31 = { potential = { always = no } allow = { always = no } }
+apsr15_building_part32 = { potential = { always = no } allow = { always = no } }
+apsr15_building_part33 = { potential = { always = no } allow = { always = no } }
+apsr16_building_part1 = { potential = { always = no } allow = { always = no } }
+apsr16_building_part2 = { potential = { always = no } allow = { always = no } }
+apsr16_building_part3 = { potential = { always = no } allow = { always = no } }
+apsr17_building_part1 = { potential = { always = no } allow = { always = no } }
+apsr17_building_part2 = { potential = { always = no } allow = { always = no } }
+apsr17_building_part3 = { potential = { always = no } allow = { always = no } }
+apsr19_building_part_b1 = { potential = { always = no } allow = { always = no } }
+apsr19_building_part_b2 = { potential = { always = no } allow = { always = no } }
+apsr19_building_part_b3 = { potential = { always = no } allow = { always = no } }
+apsr19_building_part_m1 = { potential = { always = no } allow = { always = no } }
+apsr19_building_part_m2 = { potential = { always = no } allow = { always = no } }
+apsr19_building_part_m3 = { potential = { always = no } allow = { always = no } }
+apsr3_building_part1 = { potential = { always = no } allow = { always = no } }
+apsr3_building_part2 = { potential = { always = no } allow = { always = no } }
+apsr3_building_part3 = { potential = { always = no } allow = { always = no } }
+apsr3_building_part4 = { potential = { always = no } allow = { always = no } }
+apsr6_building_part1 = { potential = { always = no } allow = { always = no } }
+apsr6_building_part2 = { potential = { always = no } allow = { always = no } }
+apsr6_building_part3 = { potential = { always = no } allow = { always = no } }
+apsr6_building_part4 = { potential = { always = no } allow = { always = no } }
+apsr9_building_part1 = { potential = { always = no } allow = { always = no } }
+apsr9_building_part2 = { potential = { always = no } allow = { always = no } }
+azur_building_mind_capital = { potential = { always = no } allow = { always = no } }
+azur_building_mind_net_capital = { potential = { always = no } allow = { always = no } }
+building_acid_maker = { potential = { always = no } allow = { always = no } }
+building_ae_affluence_center = { potential = { always = no } allow = { always = no } }
+building_ae_alloy_forge = { potential = { always = no } allow = { always = no } }
+building_ae_ancient_control_center = { potential = { always = no } allow = { always = no } }
+building_ae_ancient_hive_cluster = { potential = { always = no } allow = { always = no } }
+building_ae_ancient_palace = { potential = { always = no } allow = { always = no } }
+building_ae_clone_vats = { potential = { always = no } allow = { always = no } }
+building_ae_enigmatic_lab = { potential = { always = no } allow = { always = no } }
+building_ae_factory = { potential = { always = no } allow = { always = no } }
+building_ae_galactic_capital = { potential = { always = no } allow = { always = no } }
+building_ae_galactic_hive_capital = { potential = { always = no } allow = { always = no } }
+building_ae_galactic_machine_capital = { potential = { always = no } allow = { always = no } }
+building_ae_hospital = { potential = { always = no } allow = { always = no } }
+building_ae_institute = { potential = { always = no } allow = { always = no } }
+building_ae_nano_forge = { potential = { always = no } allow = { always = no } }
+building_ae_stronghold = { potential = { always = no } allow = { always = no } }
+building_ancient_palace = { potential = { always = no } allow = { always = no } }
+building_ancient_palace_at = { potential = { always = no } allow = { always = no } }
+building_brothel_house = { potential = { always = no } allow = { always = no } }
+building_brothel_house_branch_office = { potential = { always = no } allow = { always = no } }
+building_bugged_life_monastery = { potential = { always = no } allow = { always = no } }
+building_bugged_life_monastery_two = { potential = { always = no } allow = { always = no } }
+building_clone_vats_advanced_asim = { potential = { always = no } allow = { always = no } }
+building_clone_vats_advanced_organic = { potential = { always = no } allow = { always = no } }
+building_clone_vats_advanced_serv = { potential = { always = no } allow = { always = no } }
+building_clone_vats_augmented_asim = { potential = { always = no } allow = { always = no } }
+building_clone_vats_augmented_organic = { potential = { always = no } allow = { always = no } }
+building_clone_vats_augmented_serv = { potential = { always = no } allow = { always = no } }
+building_clone_vats_basic_asim = { potential = { always = no } allow = { always = no } }
+building_clone_vats_basic_organic = { potential = { always = no } allow = { always = no } }
+building_clone_vats_basic_serv = { potential = { always = no } allow = { always = no } }
+building_clone_vats_improved_asim = { potential = { always = no } allow = { always = no } }
+building_clone_vats_improved_organic = { potential = { always = no } allow = { always = no } }
+building_clone_vats_improved_serv = { potential = { always = no } allow = { always = no } }
+building_crystallization_facilities = { potential = { always = no } allow = { always = no } }
+building_dm_ancient_control_center = { potential = { always = no } allow = { always = no } }
+building_dm_ancient_hive_cluster = { potential = { always = no } allow = { always = no } }
+building_dm_ancient_palace = { potential = { always = no } allow = { always = no } }
+building_dm_galactic_capital = { potential = { always = no } allow = { always = no } }
+building_dm_galactic_hive_capital = { potential = { always = no } allow = { always = no } }
+building_dm_galactic_machine_capital = { potential = { always = no } allow = { always = no } }
+building_dm_stronghold = { potential = { always = no } allow = { always = no } }
+building_enigmatic_lab = { potential = { always = no } allow = { always = no } }
+building_eternal_nexus_ai = { potential = { always = no } allow = { always = no } }
+building_eternal_palace = { potential = { always = no } allow = { always = no } }
+building_fe_affluence_center = { potential = { always = no } allow = { always = no } }
+building_fe_alloy_forge = { potential = { always = no } allow = { always = no } }
+building_fe_clone_vats = { potential = { always = no } allow = { always = no } }
+building_fe_factory = { potential = { always = no } allow = { always = no } }
+building_fe_hospital = { potential = { always = no } allow = { always = no } }
+building_fe_institute = { potential = { always = no } allow = { always = no } }
+building_fe_nano_forge = { potential = { always = no } allow = { always = no } }
+building_giga_fortress = { potential = { always = no } allow = { always = no } }
+building_giga_fortress_array = { potential = { always = no } allow = { always = no } }
+building_giga_fortress_fe = { potential = { always = no } allow = { always = no } }
+building_giga_fortress_lab = { potential = { always = no } allow = { always = no } }
+building_giga_fortress_obelisk = { potential = { always = no } allow = { always = no } }
+building_gray_nano_factory = { potential = { always = no } allow = { always = no } }
+building_gray_nano_foundry = { potential = { always = no } allow = { always = no } }
+building_gray_nano_foundry2 = { potential = { always = no } allow = { always = no } }
+building_heaven_sanctuary = { potential = { always = no } allow = { always = no } }
+building_hive_major_capital_sick = { potential = { always = no } allow = { always = no } }
+building_house_of_the_fleshsculpter = { potential = { always = no } allow = { always = no } }
+building_hydroponics_farm = { potential = { always = no } allow = { always = no } }
+building_ie_clone_vats = { potential = { always = no } allow = { always = no } }
+building_ie_spawning_pool = { potential = { always = no } allow = { always = no } }
+building_institute = { potential = { always = no } allow = { always = no } }
+building_kancolle_yubari_research1 = { potential = { always = no } allow = { always = no } }
+building_kancolle_yubari_research2 = { potential = { always = no } allow = { always = no } }
+building_kancolle_yubari_research3 = { potential = { always = no } allow = { always = no } }
+building_kuat_command_center = { potential = { always = no } allow = { always = no } }
+building_nightelf_palace = { potential = { always = no } allow = { always = no } }
+building_nirvana_empire_palace = { potential = { always = no } allow = { always = no } }
+building_ocean_spawning_pool = { potential = { always = no } allow = { always = no } }
+building_phanon_affluence_center = { potential = { always = no } allow = { always = no } }
+building_phanon_alloy_forge = { potential = { always = no } allow = { always = no } }
+building_phanon_civilian_factory = { potential = { always = no } allow = { always = no } }
+building_phanon_clone_vats = { potential = { always = no } allow = { always = no } }
+building_phanon_control_center = { potential = { always = no } allow = { always = no } }
+building_phanon_enigmatic_lab = { potential = { always = no } allow = { always = no } }
+building_phanon_hive_cluster = { potential = { always = no } allow = { always = no } }
+building_phanon_hospital = { potential = { always = no } allow = { always = no } }
+building_phanon_institute = { potential = { always = no } allow = { always = no } }
+building_phanon_nano_forge = { potential = { always = no } allow = { always = no } }
+building_phanon_palace = { potential = { always = no } allow = { always = no } }
+building_phanon_psg = { potential = { always = no } allow = { always = no } }
+building_phanon_stronghold = { potential = { always = no } allow = { always = no } }
+building_phanon_tower = { potential = { always = no } allow = { always = no } }
+building_plentiful_traditions_advanced_pillar_of_affliction = { potential = { always = no } allow = { always = no } }
+building_plentiful_traditions_advanced_slave_processing = { potential = { always = no } allow = { always = no } }
+building_plentiful_traditions_biogenesis_lab = { potential = { always = no } allow = { always = no } }
+building_plentiful_traditions_cybernetics_facility = { potential = { always = no } allow = { always = no } }
+building_plentiful_traditions_experimental_weapons_facility = { potential = { always = no } allow = { always = no } }
+building_plentiful_traditions_pillar_of_affliction = { potential = { always = no } allow = { always = no } }
+building_plentiful_traditions_university_of_wisdom = { potential = { always = no } allow = { always = no } }
+building_precinct_house_at_b = { potential = { always = no } allow = { always = no } }
+building_SCO_resort_system_capital = { potential = { always = no } allow = { always = no } }
+building_SCO_slave_system_capital = { potential = { always = no } allow = { always = no } }
+building_sep_foundry = { potential = { always = no } allow = { always = no } }
+building_sep_foundry2 = { potential = { always = no } allow = { always = no } }
+building_stellarite_affluence_center = { potential = { always = no } allow = { always = no } }
+building_stellarite_alloy_forge = { potential = { always = no } allow = { always = no } }
+building_stellarite_civilian_factory = { potential = { always = no } allow = { always = no } }
+building_stellarite_clone_vats = { potential = { always = no } allow = { always = no } }
+building_stellarite_control_center = { potential = { always = no } allow = { always = no } }
+building_stellarite_enigmatic_lab = { potential = { always = no } allow = { always = no } }
+building_stellarite_galactic_capital = { potential = { always = no } allow = { always = no } }
+building_stellarite_galactic_hive_capital = { potential = { always = no } allow = { always = no } }
+building_stellarite_galactic_machine_capital = { potential = { always = no } allow = { always = no } }
+building_stellarite_hive_cluster = { potential = { always = no } allow = { always = no } }
+building_stellarite_hospital = { potential = { always = no } allow = { always = no } }
+building_stellarite_institute = { potential = { always = no } allow = { always = no } }
+building_stellarite_nano_forge = { potential = { always = no } allow = { always = no } }
+building_stellarite_palace = { potential = { always = no } allow = { always = no } }
+building_stellarite_stronghold = { potential = { always = no } allow = { always = no } }
+building_storm_lab = { potential = { always = no } allow = { always = no } }
+building_summoner_site = { potential = { always = no } allow = { always = no } }
+building_supercomputer = { potential = { always = no } allow = { always = no } }
+building_system_capital_gr = { potential = { always = no } allow = { always = no } }
+building_tw_arcane_hold = { potential = { always = no } allow = { always = no } }
+building_wsg_foundry = { potential = { always = no } allow = { always = no } }
+PR_BLDN_Res_food_farm_T4 = { potential = { always = no } allow = { always = no } }
