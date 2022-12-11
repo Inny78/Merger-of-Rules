@@ -1,6 +1,6 @@
-#### This is where the real stuff is ####
 # Vanilla scripted triggers
 has_no_non_gate_megastructure = {
+	optimize_memory
 	OR = {
 		has_any_megastructure = no
 		NOR = {
@@ -126,6 +126,16 @@ has_no_non_gate_megastructure = {
 					is_megastructure_type = BA_Mega_keystone_base_1
 					is_megastructure_type = BA_Mega_keystone_base_2
 					is_megastructure_type = BA_Mega_keystone_base_3
+					# Long Journey
+					is_megastructure_type = mega_KZ_VOY_hiawatha_fleet_yards_01
+					is_megastructure_type = mega_KZ_VOY_hiawatha_fleet_yards_02
+					is_megastructure_type = mega_KZ_VOY_hiawatha_fleet_yards_03
+					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_00
+					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_01
+					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_02
+					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_03
+					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_04
+					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_05
 				}
 			}
 		}
@@ -133,6 +143,7 @@ has_no_non_gate_megastructure = {
 }
 
 has_any_megastructure_in_empire = {
+	optimize_memory
 	any_system_within_border = {
 		OR = {
 			# Merger
@@ -254,6 +265,16 @@ has_any_megastructure_in_empire = {
 			has_megastructure = BA_Mega_keystone_base_1
 			has_megastructure = BA_Mega_keystone_base_2
 			has_megastructure = BA_Mega_keystone_base_3
+			# Long Journey
+			has_megastructure = mega_KZ_VOY_hiawatha_fleet_yards_01
+			has_megastructure = mega_KZ_VOY_hiawatha_fleet_yards_02
+			has_megastructure = mega_KZ_VOY_hiawatha_fleet_yards_03
+			has_megastructure = mega_KZ_VOY_hyperstructure_fornax_00
+			has_megastructure = mega_KZ_VOY_hyperstructure_fornax_01
+			has_megastructure = mega_KZ_VOY_hyperstructure_fornax_02
+			has_megastructure = mega_KZ_VOY_hyperstructure_fornax_03
+			has_megastructure = mega_KZ_VOY_hyperstructure_fornax_04
+			has_megastructure = mega_KZ_VOY_hyperstructure_fornax_05
 		}
 	}
 }

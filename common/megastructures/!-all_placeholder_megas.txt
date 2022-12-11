@@ -1104,3 +1104,13 @@ BA_Mega_keystone_base_0 = { entity = "" potential = { always = no } possible = {
 BA_Mega_keystone_base_1 = { entity = "" potential = { always = no } possible = { always = no } }
 BA_Mega_keystone_base_2 = { entity = "" potential = { always = no } possible = { always = no } }
 BA_Mega_keystone_base_3 = { entity = "" potential = { always = no } possible = { always = no } }
+KZ_VOY_terran_ancient_gateway = { entity = "" potential = { always = no } possible = { always = no } }
+mega_KZ_VOY_hiawatha_fleet_yards_01 = { entity = "" potential = { always = no } possible = { always = no } }
+mega_KZ_VOY_hiawatha_fleet_yards_02 = { entity = "" potential = { always = no } possible = { always = no } }
+mega_KZ_VOY_hiawatha_fleet_yards_03 = { entity = "" potential = { always = no } possible = { always = no } }
+mega_KZ_VOY_hyperstructure_fornax_00 = { entity = "" potential = { always = no } possible = { always = no } }
+mega_KZ_VOY_hyperstructure_fornax_01 = { entity = "" potential = { always = no } possible = { always = no } }
+mega_KZ_VOY_hyperstructure_fornax_02 = { entity = "" potential = { always = no } possible = { always = no } }
+mega_KZ_VOY_hyperstructure_fornax_03 = { entity = "" potential = { always = no } possible = { always = no } }
+mega_KZ_VOY_hyperstructure_fornax_04 = { entity = "" potential = { always = no } possible = { always = no } }
+mega_KZ_VOY_hyperstructure_fornax_05 = { entity = "" potential = { always = no } possible = { always = no } }

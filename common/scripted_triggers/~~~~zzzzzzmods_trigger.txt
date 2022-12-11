@@ -2,6 +2,7 @@
 ############################### Shadowgate ###############################
 # Making Shadowgate acknowledge mod-made Fallen Empires
 shadowgate_is_fe = {
+	optimize_memory
 	OR = {
 		is_country_type = fallen_empire
 		# History of the Lost Empire
@@ -17,6 +18,7 @@ shadowgate_is_fe = {
 
 # Making Shadowgate acknowledge mod-made Awakened Empires
 shadowgate_is_ae = {
+	optimize_memory
 	OR = {
 		is_country_type = awakened_fallen_empire
 		# SW:KUAT ANCIENT EMPIRE
@@ -30,6 +32,7 @@ shadowgate_is_ae = {
 }
 
 shadowgate_aggressor_is_valid_cb_target = {
+	optimize_memory
 	NOR = {
 		is_in_federation_with = root.from
 		is_hostile = root.from
@@ -62,11 +65,13 @@ shadowgate_aggressor_is_valid_cb_target = {
 ############################### Gigastructural Engineering & More ###############################
 # Expanding a bit the country list
 ehof_default_country = {
+	optimize_memory
 	merg_is_standard_empire = yes
 }
 
 # Making station-sized ships able to use the EHOF
 can_use_ehof = {
+	optimize_memory
 	NOR = {
 		is_constructing = mining_station
 		is_constructing = research_station
@@ -85,6 +90,7 @@ can_use_ehof = {
 }
 
 reshaper_eligible = {
+	optimize_memory
 	NOR = {
 		has_planet_flag = paluushia
 		is_planet_class = pc_core_black_hole
@@ -110,17 +116,15 @@ reshaper_eligible = {
 }
 
 giga_valid_planet_wrecked_ship = {
-	solar_system = {
-		merg_is_void_system = no
-	}
+	optimize_memory
+	solar_system = { merg_is_void_system = no }
 	is_star = no
-	NOT = {
-		has_planet_flag = has_giga_wrecked_ship
-	}
+	NOT = { has_planet_flag = has_giga_wrecked_ship }
 }
 
 # Overwriting to give support to other ringworlds
 giga_habitable_structure = {
+	optimize_memory
 	OR = {
 		uses_district_set = habitat
 		merg_is_habitat = yes
@@ -149,6 +153,7 @@ giga_habitable_structure = {
 
 # extensible restriction list (can NOT build Maginots on these planet_classes)
 is_maginotable_restricted = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_giga_planetary_computer
 		has_planet_flag = has_planet_pc_mega
@@ -186,14 +191,17 @@ is_maginotable_restricted = {
 }
 
 is_giga_ringworld = {
+	optimize_memory
 	merg_is_hab_ringworld = yes
 }
 
 mega_blokkats_wont_stripmine = {
+	optimize_memory
 	merg_is_gate_mega = yes
 }
 
 ndb_can_target_system = {
+	optimize_memory
 	cohesive_system = no
 	compound_cluster = no
 	annihilator_system = no
@@ -232,7 +240,7 @@ ndb_can_target_system = {
 				has_planet_flag = cant_build_here
 				has_planet_flag = cant_target_this_planet
 				# Merger of Rules
-				has_planet_flag = merg_is_forbidden_target
+				merg_is_untargetable = yes
 				# ACOT
 				is_planet_class = pc_acot_enigmopolis
 				# Void Birch Mod
@@ -243,6 +251,7 @@ ndb_can_target_system = {
 }
 
 ndb_can_target_planet = {
+	optimize_memory
 	NOR = {
 		AND = {
 			is_capital = yes
@@ -272,12 +281,11 @@ ndb_can_target_planet = {
 }
 
 is_ndb_immune_star_planet = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_black_hole
 		has_planet_flag = ndb_immune_planet
-		solar_system = {
-			has_star_flag = ndb_immune_system
-		}
+		solar_system = { has_star_flag = ndb_immune_system }
 		# Hypothetical Stars
 		is_planet_class = pc_white_hole
 		# Real Space
@@ -291,10 +299,12 @@ is_ndb_immune_star_planet = {
 }
 
 giga_gas_giant = {
+	optimize_memory
 	merg_is_gas_giant = yes
 }
  
 giga_can_be_war_planet = {
+	optimize_memory
 	NOT = { has_planet_flag = dormant_war_planet }
 	is_moon = no
 	has_anomaly = no
@@ -304,10 +314,12 @@ giga_can_be_war_planet = {
 }
 
 giga_planet_no_farming = {
+	optimize_memory
 	merg_is_machine_world = yes
 }
  
 is_valid_kaiser_moon_candidate = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_barren
 		is_planet_class = pc_barren_cold
@@ -339,10 +351,12 @@ is_valid_kaiser_moon_candidate = {
 ############################### Zenith of the Fallen Empires ###############################
 # Overwriting this for ZOFE and comp mods
 is_zofe_compatible = {
+	optimize_memory
 	merg_is_default_empire = yes
 }
 
 is_zofe_megacorp = {
+	optimize_memory
 	is_zofe_country = yes
 	is_megacorp = yes
 }
@@ -350,6 +364,7 @@ is_zofe_megacorp = {
 ############################### Acquisition of Technologies ###############################
 # AOT trigger disallowing planetary shields to be shown
 is_memeable_space_habitat = {
+	optimize_memory
 	OR = {
 		uses_district_set = habitat
 		habitable_structure = yes
@@ -361,14 +376,15 @@ is_memeable_space_habitat = {
 }
 
 is_memeable_ringworld = {
+	optimize_memory
 	merg_is_hab_ringworld = yes
 }
 
 ############################### More Events Mod ###############################
 # disallowing MEM planetary shields to be shown 
 mem_is_spherical_world = {
+	optimize_memory
 	NOR = {
-		uses_district_set = habitat
 		habitable_structure = yes
 		merg_is_habitat = yes
 		merg_is_hab_ringworld = yes
@@ -387,9 +403,8 @@ mem_is_spherical_world = {
 ############################### ThaumStellaris ###############################
 # Expanding this with more desolate worlds
 tc_element_shard_candidate = {
-	NOT = {
-		has_deposit_for = shipclass_research_station
-	}
+	optimize_memory
+	NOT = { has_deposit_for = shipclass_research_station }
 	OR = {
 		uninhabitable_regular_planet = yes
 		is_planet_class = pc_asteroid
@@ -406,6 +421,7 @@ tc_element_shard_candidate = {
 ############################### Starborn ###############################
 # Expanding Starborn trigger with ACOT/AOT gene clinics
 has_gene_clinic = {
+	optimize_memory
 	OR = {
 		has_building = building_hospital
 		has_building = building_clinic
@@ -420,6 +436,7 @@ has_gene_clinic = {
 
 # Adding support to other mods structures
 starborn_can_place_hab = {
+	optimize_memory
 	custom_tooltip = {
 		fail_text = "requires_surveyed_planet"
 		is_surveyed = {
@@ -455,10 +472,12 @@ starborn_can_place_hab = {
 
 ############################### Legendary Worlds ###############################
 legw_planet_uninhabitable = {
+	optimize_memory
 	colonizable_planet = no
 }
 
 legw_planet_habitable = {
+	optimize_memory
 	AND = {
 		colonizable_planet = yes
 		is_artificial = no
@@ -466,6 +485,7 @@ legw_planet_habitable = {
 }
 
 legw_megaplanet = {
+	optimize_memory
 	OR = {
 		is_artificial = yes
 		is_planet_class = pc_machine
@@ -487,23 +507,19 @@ legw_megaplanet = {
 }
 
 legw_is_dry = {
-	AND = {
-		has_climate = dry
-		NOT = {
-			is_planet_class = pc_city
-		}
-	}
+	is_dry = yes
 }
 
 legw_is_wet = {
-	has_climate = wet
+	is_wet = yes
 }
 
 legw_is_cold = {
-	has_climate = cold
+	is_cold = yes
 }
 
 legw_fallen_empire_planet = {
+	optimize_memory
 	owner = {
 		OR = {
 			merg_is_fallen_empire = yes
@@ -514,6 +530,7 @@ legw_fallen_empire_planet = {
 
 ############################### Real Space New Frontiers ###############################
 is_moon_of_gas_giant = {
+	optimize_memory
 	is_scope_type = planet
 	exists = orbit
 	OR = {
@@ -524,6 +541,7 @@ is_moon_of_gas_giant = {
 
 ############################### Star Wars: Kuat Ancient Empire ###############################
 kuat_is_common_country = {
+	optimize_memory
 	OR = {
 		merg_is_standard_empire = yes
 		is_country_type = awakened_marauders
@@ -533,6 +551,7 @@ kuat_is_common_country = {
 }
 
 kuat_is_defense_galaxy_fleet = {
+	optimize_memory
 	any_country = {
 		OR = {
 			is_crisis_faction = yes
@@ -546,11 +565,13 @@ kuat_is_defense_galaxy_fleet = {
 
 ############################### Ancient Caches of Technology ###############################
 is_playable_country = {
+	optimize_memory
 	merg_is_standard_empire = yes
 }
 
 ############################### OldEnt's Crisis Mods ###############################
 CmtTriggerIsPlayableEmpire = {
+	optimize_memory
 	OR = {
 		merg_is_default_empire = yes
 		is_ai = no
@@ -560,6 +581,7 @@ CmtTriggerIsPlayableEmpire = {
 }
 
 CmtTriggerIsEmpire = {
+	optimize_memory
 	OR = {
 		merg_is_standard_empire = yes
 		is_ai = no
@@ -569,6 +591,7 @@ CmtTriggerIsEmpire = {
 }
 
 CmtTriggerIsFallenEmpire = {
+	optimize_memory
 	OR = {
 		merg_is_fallen_empire = yes
 		merg_is_awakened_fe = yes
@@ -577,6 +600,7 @@ CmtTriggerIsFallenEmpire = {
 
 ############################### Exalted Domination ###############################
 exalted_is_valid_as_vassal = {
+	optimize_memory
 	OR = {
 		is_country_type = default
 		is_country_type = default_ev
@@ -587,6 +611,7 @@ exalted_is_valid_as_vassal = {
 
 ############################### Expanded Traits, Civics, Pops, and More ###############################
 is_open_gestalt = {
+	optimize_memory
 	OR = {
 		has_ai_personality = open_hive_mind
 		has_ai_personality = open_machine_intelligence
@@ -597,6 +622,7 @@ is_open_gestalt = {
 
 ############################### History of the Lost Empire ###############################
 afk_target_planet = {
+	optimize_memory
 	OR = {
 		is_planet_city = yes
 		is_planet_class = pc_relic
@@ -629,14 +655,12 @@ afk_target_planet = {
 
 ############################### Warship Girls R and MIST Species ###############################
 is_habitat_wg = {
-	OR = {
-		merg_is_habitat_non_starborn = yes
-		# Starborn: Improved Voidtouched
-		uses_district_set = starborn_start
-	}
+	optimize_memory
+	merg_is_habitat = yes
 }
 
 is_default_and_fallen_country = {
+	optimize_memory
 	OR = {
 		merg_is_default_empire = yes
 		merg_is_fallen_empire = yes
@@ -645,6 +669,7 @@ is_default_and_fallen_country = {
 }
 
 is_default_country_wg = {
+	optimize_memory
 	merg_is_default_empire = yes
 }
 
@@ -726,6 +751,11 @@ has_active_wg_factory_building = {
 	}
 }
 
+has_gate_megastructure = {
+	optimize_memory
+	merg_is_gate_mega = yes
+}
+
 ############################### Ancient Empire ###############################
 ag_is_gateway_megastructure = {
 	merg_is_gate_mega = yes
@@ -733,11 +763,7 @@ ag_is_gateway_megastructure = {
 
 ag_is_habitat = {
 	optimize_memory
-	OR = {
-		merg_is_habitat_non_starborn = yes
-		# Starborn: Improved Voidtouched
-		uses_district_set = starborn_start
-	}
+	merg_is_habitat = yes
 }
 
 ag_is_compact_star = {
@@ -761,6 +787,7 @@ ag_is_compact_star = {
 ############################### Reworked Advanced Ascension ###############################
 # Fixing the trigger and removing obsolete code
 AAR_trgr_cntr_playable = {
+	optimize_memory
 	OR = {
 		merg_is_default_empire = yes
 		merg_is_fallen_empire = yes
@@ -822,6 +849,7 @@ exalted_is_valid_as_vassal = {
 
 ############################### The DAL Species Mod ###############################
 is_special_colony_planet_class = {
+	optimize_memory
 	OR = {
 		is_planet_city = yes
 		is_planet_class = pc_cybrex
@@ -943,6 +971,7 @@ gpm_is_planet_class_molten = {
 }
 
 gpm_is_planet_class_toxic = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_toxic
 		# Planetary Diversity
@@ -975,6 +1004,7 @@ gpm_is_planet_class_frozen = {
 }
 
 gpm_is_planet_class_normal_habitable = {
+	optimize_memory
 	habitable_planet = yes
 }
 
@@ -1014,10 +1044,12 @@ gpm_is_planet_class_city = {
 }
 
 gpm_is_planet_class_machine = {
+	optimize_memory
 	merg_is_machine_world = yes
 }
 
 gpm_is_planet_class_hive = {
+	optimize_memory
 	merg_is_hive_world = yes
 }
 
@@ -1027,6 +1059,7 @@ gpm_is_planet_class_habitat = {
 }
 
 gpm_is_planet_class_ringworld = {
+	optimize_memory
 	merg_is_hab_ringworld = yes
 }
 
@@ -1053,6 +1086,7 @@ gpm_is_fallen_empire_space_owner = {
 }
 
 eligible_for_rare_crystals = {
+	optimize_memory
 	NOR = {
 		has_deposit_for = shipclass_research_station
 		has_planet_flag = has_dark_matter_deposit
@@ -1069,6 +1103,7 @@ eligible_for_rare_crystals = {
 }
 
 eligible_for_volatile_motes = {
+	optimize_memory
 	NOR = {
 		has_deposit_for = shipclass_research_station
 		has_planet_flag = has_dark_matter_deposit
@@ -1085,6 +1120,7 @@ eligible_for_volatile_motes = {
 }
 
 eligible_for_alloys = {
+	optimize_memory
 	NOR = {
 		has_deposit_for = shipclass_research_station
 		has_planet_flag = has_dark_matter_deposit
@@ -1100,6 +1136,7 @@ eligible_for_alloys = {
 }
 
 eligible_for_zro = {
+	optimize_memory
 	NOR = {
 		has_deposit_for = shipclass_research_station
 		solar_system = {
@@ -1123,6 +1160,7 @@ eligible_for_zro = {
 }
 
 eligible_for_living_metal = {
+	optimize_memory
 	NOR = {
 		has_deposit_for = shipclass_research_station
 		solar_system = {
@@ -1147,14 +1185,17 @@ eligible_for_living_metal = {
 
 # Scripted Trigger Undercoat
 is_empire = { # merg_is_standard_empire
-	merg_is_standard_empire = yes
+optimize_memory
+merg_is_standard_empire = yes
 }
 
 is_playable = {
+	optimize_memory
 	merg_is_default_empire = yes
 }
 
 is_planet_city = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_city
 		# Planetary Diversity
@@ -1164,6 +1205,7 @@ is_planet_city = {
 
 # Expanded Events
 is_regular_star = {
+	optimize_memory
 	is_star = yes
 	merg_is_forbidden_target = no
 	NOR = {
@@ -1184,6 +1226,7 @@ is_regular_star = {
 }
 
 terraforming_candidate_solar_system_check = {
+	optimize_memory
 	NOR = {
 		is_star_class = sc_black_hole
 		is_star_class = sc_neutron_star
@@ -1228,6 +1271,7 @@ terraforming_candidate_solar_system_check = {
 }
 
 is_spy_empire = {
+	optimize_memory
 	OR = {
 		has_valid_civic = civic_cutthroat_politics
 		has_valid_civic = civic_shadow_council
@@ -1243,6 +1287,7 @@ is_spy_empire = {
 
 # All these worlds
 is_fallen_empire_planet = {
+	optimize_memory
 	owner = {
 		OR = {
 			merg_is_fallen_empire = yes
@@ -1252,10 +1297,12 @@ is_fallen_empire_planet = {
 }
 
 exists_collapsed_star = {
+	optimize_memory
 	solar_system = { any_system_planet = { merg_is_standard_dense_star = yes } }
 }
 
 is_collapsed_star = {
+	optimize_memory
 	merg_is_standard_dense_star = yes
 }
 
@@ -1308,6 +1355,7 @@ nsc_mothball_target_fleet_requirement = {
 
 # Wild Space
 is_nebula_star = {
+	optimize_memory
 	Or = {
 		is_star_class = sc_collapsar
 		is_star_class = sc_p_purple
@@ -1331,6 +1379,7 @@ is_nebula_star = {
 
 # ACOT/AOT/SOS
 can_build_precursor_ship = {
+	optimize_memory
 	OR = {
 		AND = {
 			is_scope_type = megastructure
@@ -1370,6 +1419,7 @@ can_build_precursor_ship = {
 
 # Long Journey
 KZ_VOY_has_communications_normal_country = {
+	optimize_memory
 	OR = {
 		merg_is_default_empire = yes
 		merg_is_fallen_empire = yes

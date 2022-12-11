@@ -3618,6 +3618,7 @@ can_modify_organic_portraits = {
 	# Better Performances and Utilities
 	NOT = { has_country_flag = PF_flg_cntr_STOP_ai_species_mod }
 }
+
 # can_have_first_contact
 # can_use_envoys_to_raise_imperial_authority
 # can_use_envoys_to_lower_imperial_authority

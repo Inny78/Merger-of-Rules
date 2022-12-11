@@ -2209,6 +2209,7 @@ merg_has_abyss_contract_type = {
 
 # Gate Megastructures trigger
 merg_is_gate_mega = {
+	optimize_memory
 	OR = {
 		is_megastructure_type = blokkat_gigarelay_2
 		is_megastructure_type = compound_wormhole_portal
@@ -2358,6 +2359,9 @@ merg_is_gate_mega = {
 		is_megastructure_type = uf_hyperlane_c
 		is_megastructure_type = uf_hyperlane_d
 		is_megastructure_type = uf_mega_habitat_gateway
+		is_megastructure_type = monolith_crisis_gate_1
+		is_megastructure_type = monolith_crisis_gate_2
+		is_megastructure_type = monolith_crisis_gate_3
 		# THE ABYSS CONTRACT
 		is_megastructure_type = TACgate_opened
 		is_megastructure_type = TACgate_closed
@@ -2377,5 +2381,7 @@ merg_is_gate_mega = {
 		is_megastructure_type = TAC_gateway_control_02
 		# Blue Archive
 		is_megastructure_type = Dgate_base
+		# Long Journey
+		is_megastructure_type = KZ_VOY_terran_ancient_gateway
 	}
 }
