@@ -448,10 +448,15 @@ merg_is_crackable_planet = {
 # Used by Planet Killers to forbid them to destroy invalid targets
 merg_is_forbidden_target = {
 	OR = {
-		# Merger of Rules
-		has_planet_flag = merg_is_forbidden_target		# add this to your planet to dynamically exclude it.
 		merg_is_dense_star = yes
 		merg_is_empty_space = yes
+		merg_is_untargetable = yes
+	}
+}
+
+# restricted list
+merg_is_untargetable = {
+	OR = {
 		# MEM
 		is_planet_class = pc_mem_synthetic_sun
 		# ACOT
@@ -462,6 +467,10 @@ merg_is_forbidden_target = {
 		has_planet_flag = cant_target_this_planet
 		has_planet_flag = cant_build_here
 		is_planet_class = pc_ehof_cplanet
+		is_planet_class = pc_birch
+		is_planet_class = pc_void_birch
+		# Merger of Rules
+		has_planet_flag = merg_is_forbidden_target		# add this to your planet to dynamically exclude it.
 	}
 }
 

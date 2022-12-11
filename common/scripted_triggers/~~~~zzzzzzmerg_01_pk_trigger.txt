@@ -4154,6 +4154,28 @@ can_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = {
 	#}
 }
 
+# Long Journey
+KZ_VOY_can_not_destroy_by_planet_killer = {
+	custom_tooltip = {
+		fail_text = KZ_VOY_can_not_destroy_by_planet_killer
+		merg_is_untargetable = no
+		solar_system = {
+			NOR = {
+				has_star_flag = KZ_VOY_Alpha_Lupi_system_flag
+				has_star_flag = KZ_VOY_terran_system_flag
+				has_star_flag = KZ_VOY_TES_simulation_battle_system_flag
+			}
+			any_system_planet = {
+				NOR = {
+					is_real_KZ_VOY_solaria = yes
+					is_real_KZ_VOY_luna = yes
+					is_real_KZ_VOY_Seclusion = yes
+					is_real_KZ_VOY_Library_tower = yes
+				}
+			}
+		}
+	}
+}
 
 # ===========================================================================================================================
 
@@ -4173,12 +4195,8 @@ can_destroy_planet_general = {
 	is_star = no
 	merg_is_forbidden_target = no
 	OR = {
-		NOT = {
-			exists = owner
-		}
-		owner = {
-			is_hostile = from.owner
-		}
+		NOT = { exists = owner }
+		owner = { is_hostile = from.owner }
 	}
 }
 
@@ -4213,6 +4231,7 @@ is_a_habitable_planet_megastructure = {
 		# Expanded Gestalts: Forgotten Queens
 		is_planet_class = pc_infested
 		is_planet_class = pc_matryoshka
+		# Misc
 		merg_is_rad_planet = yes
 	}
 }

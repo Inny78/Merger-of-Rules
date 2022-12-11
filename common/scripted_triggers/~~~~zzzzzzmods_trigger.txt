@@ -1367,3 +1367,14 @@ can_build_precursor_ship = {
 		}
 	}
 }
+
+# Long Journey
+KZ_VOY_has_communications_normal_country = {
+	OR = {
+		merg_is_default_empire = yes
+		merg_is_fallen_empire = yes
+		merg_is_awakened_fe = yes
+	}
+	has_communications = prev
+	NOT = { is_country = prev }
+}

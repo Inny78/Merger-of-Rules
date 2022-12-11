@@ -367,7 +367,7 @@ can_generate_leader_from_pop = {
 	can_think = yes
 	OR = {
 		has_citizenship_rights = yes
-		# Holofrixit Revisited / Silfae's Portraits: Revisited
+		# Silfae's Portraits: Revisited
 		species = {
 			has_species_flag = allow_leaders_organic_advisors@prev.owner
 			has_citizenship_type = {
@@ -387,8 +387,6 @@ can_generate_leader_from_pop = {
 		# Expanded Events / Expanded Traits, Civics, Pops, and More
 		has_trait = trait_infested_basic
 		has_trait = trait_tree_caretaker
-		# Holofrixit Revisited / Silfae's Portraits: Revisited
-		has_trait = trait_holodrone
 		# Expanded Gestalts
 		root = { has_origin = origin_hive_overmind }
 		# Diagraphers Trait Mod
@@ -403,19 +401,6 @@ can_generate_leader_from_pop = {
 				has_technology = tech_synthetic_leaders
 				is_machine_empire = yes
 				is_mechanical_empire = yes
-			}
-		}
-		# Holofrixit Revisited / Silfae's Portraits: Revisited
-		ROOT = {
-			has_origin = origin_holofrixit
-			PREV.species = {
-				OR = {
-					NOT = { has_trait = trait_holofrixit }
-					has_trait = trait_holooverseer
-					has_trait = trait_hologanglion
-					has_trait = trait_holowarrior
-					has_trait = trait_holowarrior_2
-				}
 			}
 		}
 		# Girls Frontline
@@ -435,6 +420,22 @@ can_generate_leader_from_pop = {
 			NAND = {
 				has_origin = origin_necrophage
 				has_trait = trait_necrophage
+			}
+		}
+	}
+	# Holofrixit Revisited / Silfae's Portraits: Revisited
+	OR = {
+		NOT = { owner = { has_authority = auth_holofrixit } }
+		owner = {
+			has_origin = origin_holofrixit
+			prev.species = {
+				OR = {
+					NOT = { has_trait = trait_holofrixit }
+					has_trait = trait_holooverseer
+					has_trait = trait_hologanglion
+					has_trait = trait_holowarrior
+					has_trait = trait_holowarrior_2
+				}
 			}
 		}
 	}
@@ -1385,6 +1386,11 @@ can_species_be_assembled = {
 					}
 				}
 			}
+			# Long Journey
+			else_if = {
+				limit = { has_trait = trait_KZ_VOY_magic_puppet }
+				KZ_VOY_can_assemble_magic_puppet = yes
+			}
 			# Vanilla
 			root = {
 				check_modifier_value = {
@@ -1616,11 +1622,22 @@ can_species_be_assembled = {
 		}
 		# Steven Universe Homeworld Gems
 		has_trait = trait_geoloid
+		# Long Journey
+		KZ_VOY_trgr_plnt_CLONE = yes
 	}
 	# Expanded Gestalts
 	NAND = {
 		root = { owner = { has_valid_civic = civic_machine_replicators } }
 		has_trait = trait_machine_central
+	}
+	if = {
+		limit = { 
+			OR = {
+				has_trait = trait_KZ_VOY_sub_terran_dragon
+				has_trait = trait_KZ_VOY_sub_terran_dragon_SP
+			}
+		}
+		KZ_VOY_trgr_plnt_CLONE = yes
 	}
 	# Vanilla
 	has_population_control = { country = root.owner type = no }
@@ -2746,6 +2763,8 @@ can_build_branch_offices = {
 			has_ascension_perk = ap_expactriate_service
 			# BlueArchive species pack
 			has_authority = auth_kivotos
+			# Long Journey
+			KZ_VOY_can_build_branch_offices = yes
 		}
 	}
 }
@@ -2848,6 +2867,8 @@ can_build_branch_office_on_planet = {
 					}
 					# BlueArchive species pack
 					has_ascension_perk = ap_BA_new_frontier
+					# Long Journey
+					KZ_VOY_can_build_branch_offices = yes
 				}
 			}
 			owner = { has_commercial_pact = root }

@@ -32,6 +32,11 @@ default = {
 		civilian_industrial_ships_limit
 		# Wiirlak Additional Civics & Origins
 		wiirlak_ac_flotilla_ship_ships_limit
+		# Long Journey
+		KZ_VOY_exploration_cruiser_ships_limit
+		KZ_VOY_strike_suppression_battleship_ships_limit
+		KZ_VOY_command_dreadnought_ships_limit
+		KZ_VOY_battle_carrier_ships_limit
     }
 }
 
