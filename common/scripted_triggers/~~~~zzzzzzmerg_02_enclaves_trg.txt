@@ -27,7 +27,7 @@ fleet_can_be_scrapped = {
 		is_ship_size = shroud_manifestation
 		is_ship_size = warped_consciousness
 		is_reanimated = yes
-		# Long Journey
+		# Voyage to Eternity
 		is_ship_size = KZ_VOY_battlestar
 		is_ship_size = KZ_VOY_holo_training_ship
 		is_ship_size = KZ_VOY_planet_killer_prototype

@@ -1102,6 +1102,103 @@ merg_is_abyss_contract_type = {
 	}
 }
 
+# Assault Lily
+merg_is_assault_lily_type = {
+	OR = {
+		is_megastructure_type = recovery_matter_0
+		is_megastructure_type = recovery_matter_1
+		is_megastructure_type = recovery_matter_2
+		is_megastructure_type = recovery_matter_star_0
+		is_megastructure_type = recovery_matter_star_1
+		is_megastructure_type = recovery_matter_star_2
+		is_megastructure_type = magi_computer_core_0
+		is_megastructure_type = magi_computer_core_1
+		is_megastructure_type = magi_computer_core_2
+		is_megastructure_type = magi_computer_core_3
+		is_megastructure_type = magi_computer_core_permanently_ruined
+		is_megastructure_type = magi_computer_core_ruined
+		is_megastructure_type = magi_computer_core_restored
+		is_megastructure_type = AL_DEM2C_0
+		is_megastructure_type = AL_DEM2C_1
+		is_megastructure_type = AL_DEM2C_2
+		is_megastructure_type = AL_DEM2C_3
+		is_megastructure_type = AL_DEM2C_permanently_ruined
+		is_megastructure_type = AL_DEM2C_ruined
+		is_megastructure_type = AL_DEM2C_restored
+		is_megastructure_type = AL_GPCE_0
+		is_megastructure_type = AL_GPCE_1
+		is_megastructure_type = AL_GPCE_2
+		is_megastructure_type = AL_GPCE_3
+		is_megastructure_type = AL_GPCE_permanently_ruined
+		is_megastructure_type = AL_GPCE_ruined
+		is_megastructure_type = AL_GPCE_restored
+		is_megastructure_type = holy_land_0
+		is_megastructure_type = holy_land_1
+		is_megastructure_type = holy_land_2
+		is_megastructure_type = holy_land_3
+		is_megastructure_type = holy_land_4
+		is_megastructure_type = holy_land_5
+		is_megastructure_type = holy_land_6
+		is_megastructure_type = holy_land_permanently_ruined
+		is_megastructure_type = holy_land_ruined
+		is_megastructure_type = holy_land_restored
+		is_megastructure_type = capture_magi_0
+		is_megastructure_type = capture_magi_1
+		is_megastructure_type = capture_magi_2
+		is_megastructure_type = capture_magi_3
+		is_megastructure_type = capture_magi_permanently_ruined
+		is_megastructure_type = capture_magi_ruined
+		is_megastructure_type = capture_magi_restored
+		is_megastructure_type = magi_crystal_0
+		is_megastructure_type = magi_crystal_1
+		is_megastructure_type = magi_crystal_2
+		is_megastructure_type = magi_crystal_3
+		is_megastructure_type = magi_crystal_permanently_ruined
+		is_megastructure_type = magi_crystal_ruined
+		is_megastructure_type = magi_crystal_restored
+		is_megastructure_type = AL_puffer_changer_0
+		is_megastructure_type = AL_puffer_changer_1
+		is_megastructure_type = AL_puffer_changer_2
+		is_megastructure_type = AL_puffer_changer_3
+		is_megastructure_type = AL_puffer_changer_4
+		is_megastructure_type = AL_puffer_changer_5
+		is_megastructure_type = AL_puffer_changer_ruined 
+		is_megastructure_type = college_ship_creater_0
+		is_megastructure_type = college_ship_creater_1
+		is_megastructure_type = college_ship_creater_2
+		is_megastructure_type = college_ship_creater_3
+		is_megastructure_type = super_college_0
+		is_megastructure_type = super_college_1
+		is_megastructure_type = super_college_2
+		is_megastructure_type = super_college_3
+		is_megastructure_type = super_college_4
+		is_megastructure_type = AL_unicorn_sphere_0
+		is_megastructure_type = AL_unicorn_sphere_1
+		is_megastructure_type = AL_unicorn_sphere_2
+		is_megastructure_type = AL_unicorn_sphere_ruined 
+		is_megastructure_type = AL_transition_core_0
+		is_megastructure_type = AL_transition_core_1
+		is_megastructure_type = AL_transition_extension_0
+		is_megastructure_type = AL_transition_extension_1
+		is_megastructure_type = full_magi_furnace_1
+		is_megastructure_type = AL_collect_star_matter_2
+		is_megastructure_type = AL_collect_star_matter_active
+		is_megastructure_type = AL_collect_star_matter_1
+		is_megastructure_type = AL_collect_star_matter_0
+		is_megastructure_type = AL_DOLL_MATTER_5
+		is_megastructure_type = AL_DOLL_MATTER_4
+		is_megastructure_type = AL_DOLL_MATTER_3
+		is_megastructure_type = AL_DOLL_MATTER_2
+		is_megastructure_type = AL_DOLL_MATTER_1
+		is_megastructure_type = AL_DOLL_MATTER_0
+		is_megastructure_type = demagi_remove_0
+		is_megastructure_type = demagi_remove_1
+		is_megastructure_type = demagi_remove_2
+		is_megastructure_type = demagi_remove_3
+		is_megastructure_type = demagi_remove_4
+	}
+}
+
 # We repeat with has_megastructure ----------------------------------------------------------------------
 
 merg_has_vanilla_type = {
@@ -2207,6 +2304,105 @@ merg_has_abyss_contract_type = {
 	}
 }
 
+# Assault Lily
+merg_has_assault_lily_type = {
+	OR = {
+		has_megastructure = recovery_matter_0
+		has_megastructure = recovery_matter_1
+		has_megastructure = recovery_matter_2
+		has_megastructure = recovery_matter_star_0
+		has_megastructure = recovery_matter_star_1
+		has_megastructure = recovery_matter_star_2
+		has_megastructure = magi_computer_core_0
+		has_megastructure = magi_computer_core_1
+		has_megastructure = magi_computer_core_2
+		has_megastructure = magi_computer_core_3
+		has_megastructure = magi_computer_core_permanently_ruined
+		has_megastructure = magi_computer_core_ruined
+		has_megastructure = magi_computer_core_restored
+		has_megastructure = AL_DEM2C_0
+		has_megastructure = AL_DEM2C_1
+		has_megastructure = AL_DEM2C_2
+		has_megastructure = AL_DEM2C_3
+		has_megastructure = AL_DEM2C_permanently_ruined
+		has_megastructure = AL_DEM2C_ruined
+		has_megastructure = AL_DEM2C_restored
+		has_megastructure = AL_GPCE_0
+		has_megastructure = AL_GPCE_1
+		has_megastructure = AL_GPCE_2
+		has_megastructure = AL_GPCE_3
+		has_megastructure = AL_GPCE_permanently_ruined
+		has_megastructure = AL_GPCE_ruined
+		has_megastructure = AL_GPCE_restored
+		has_megastructure = holy_land_0
+		has_megastructure = holy_land_1
+		has_megastructure = holy_land_2
+		has_megastructure = holy_land_3
+		has_megastructure = holy_land_4
+		has_megastructure = holy_land_5
+		has_megastructure = holy_land_6
+		has_megastructure = holy_land_permanently_ruined
+		has_megastructure = holy_land_ruined
+		has_megastructure = holy_land_restored
+		has_megastructure = capture_magi_0
+		has_megastructure = capture_magi_1
+		has_megastructure = capture_magi_2
+		has_megastructure = capture_magi_3
+		has_megastructure = capture_magi_permanently_ruined
+		has_megastructure = capture_magi_ruined
+		has_megastructure = capture_magi_restored
+		has_megastructure = magi_crystal_0
+		has_megastructure = magi_crystal_1
+		has_megastructure = magi_crystal_2
+		has_megastructure = magi_crystal_3
+		has_megastructure = magi_crystal_permanently_ruined
+		has_megastructure = magi_crystal_ruined
+		has_megastructure = magi_crystal_restored
+		has_megastructure = AL_puffer_changer_0
+		has_megastructure = AL_puffer_changer_1
+		has_megastructure = AL_puffer_changer_2
+		has_megastructure = AL_puffer_changer_3
+		has_megastructure = AL_puffer_changer_4
+		has_megastructure = AL_puffer_changer_5
+		has_megastructure = AL_puffer_changer_ruined 
+		has_megastructure = college_ship_creater_0
+		has_megastructure = college_ship_creater_1
+		has_megastructure = college_ship_creater_2
+		has_megastructure = college_ship_creater_3
+		has_megastructure = super_college_0
+		has_megastructure = super_college_1
+		has_megastructure = super_college_2
+		has_megastructure = super_college_3
+		has_megastructure = super_college_4
+		has_megastructure = AL_unicorn_sphere_0
+		has_megastructure = AL_unicorn_sphere_1
+		has_megastructure = AL_unicorn_sphere_2
+		has_megastructure = AL_unicorn_sphere_ruined 
+		has_megastructure = AL_transition_core_0
+		has_megastructure = AL_transition_core_1
+		has_megastructure = AL_transition_extension_0
+		has_megastructure = AL_transition_extension_1
+		has_megastructure = full_magi_furnace_1
+		has_megastructure = AL_collect_star_matter_2
+		has_megastructure = AL_collect_star_matter_active
+		has_megastructure = AL_collect_star_matter_1
+		has_megastructure = AL_collect_star_matter_0
+		has_megastructure = AL_DOLL_MATTER_5
+		has_megastructure = AL_DOLL_MATTER_4
+		has_megastructure = AL_DOLL_MATTER_3
+		has_megastructure = AL_DOLL_MATTER_2
+		has_megastructure = AL_DOLL_MATTER_1
+		has_megastructure = AL_DOLL_MATTER_0
+		has_megastructure = demagi_remove_0
+		has_megastructure = demagi_remove_1
+		has_megastructure = demagi_remove_2
+		has_megastructure = demagi_remove_3
+		has_megastructure = demagi_remove_4		
+	}
+}
+
+# =======================================================================================================
+
 # Gate Megastructures trigger
 merg_is_gate_mega = {
 	optimize_memory
@@ -2381,7 +2577,7 @@ merg_is_gate_mega = {
 		is_megastructure_type = TAC_gateway_control_02
 		# Blue Archive
 		is_megastructure_type = Dgate_base
-		# Long Journey
+		# Voyage to Eternity
 		is_megastructure_type = KZ_VOY_terran_ancient_gateway
 	}
 }

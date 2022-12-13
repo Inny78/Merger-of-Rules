@@ -1185,8 +1185,8 @@ eligible_for_living_metal = {
 
 # Scripted Trigger Undercoat
 is_empire = { # merg_is_standard_empire
-optimize_memory
-merg_is_standard_empire = yes
+	optimize_memory
+	merg_is_standard_empire = yes
 }
 
 is_playable = {
@@ -1392,9 +1392,12 @@ can_build_precursor_ship = {
 				is_megastructure_type = acot_amerigo_oe
 				is_megastructure_type = acot_amerigo_pe
 				is_megastructure_type = acot_phanon_master_reactor_sphere
+				# Universal Gateway Origin
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_8
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9_2
+				# Assault Lily
+				is_megastructure_type = college_ship_creater_3
 			}
 		}
 		AND = {
@@ -1411,13 +1414,16 @@ can_build_precursor_ship = {
 				has_starbase_size >= origin_super_citadel_playable	
 				has_starbase_size >= acot_star_commander
 				has_starbase_size >= precursor_juggernaut
+				# Universal Gateway Origin
                 has_starbase_size >= universal_gateway_citadel
+				# Assault Lily
+				has_starbase_size >= lily_super_college_ship
 			}
 		}
 	}
 }
 
-# Long Journey
+# Voyage to Eternity
 KZ_VOY_has_communications_normal_country = {
 	optimize_memory
 	OR = {
@@ -1427,4 +1433,13 @@ KZ_VOY_has_communications_normal_country = {
 	}
 	has_communications = prev
 	NOT = { is_country = prev }
+}
+
+# Infinity Stones
+infmod_is_relevant = {
+	OR = {
+		merg_is_default_empire = yes
+		merg_is_fallen_empire = yes
+		merg_is_awakened_fe = yes
+	}
 }

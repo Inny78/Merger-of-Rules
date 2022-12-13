@@ -19,14 +19,8 @@ is_valid_rival = {
 			OR = {
 				prev = { merg_is_default_empire = no }
 				AND = {
-					relative_power = {
-						who = prev
-						value >= inferior
-					}
-					relative_power = {
-						who = prev
-						value <= superior
-					}
+					relative_power = { who = prev value >= inferior }
+					relative_power = { who = prev value <= superior }
 				}
 			}
 		}
@@ -393,6 +387,8 @@ can_generate_leader_from_pop = {
 		has_trait = trait_living_architecture
 		# Lithoid Supremacy
 		has_trait = trait_pearl_born_drone
+		# Assault Lily
+		has_trait = trait_AL_puffer
 	}
 	OR = {
 		is_robot_pop = no
@@ -1051,6 +1047,8 @@ can_colonize_with_species = {
 		has_trait = trait_plentiful_traditions_pt_cocoon
 		# ThaumStellaris
 		has_trait = tc_trait_golem
+		# Assault Lily
+		is_species_class = PUFFER
 	}
 	OR = {
 		NOT = { has_trait = trait_self_modified }
@@ -1386,7 +1384,7 @@ can_species_be_assembled = {
 					}
 				}
 			}
-			# Long Journey
+			# Voyage to Eternity
 			else_if = {
 				limit = { has_trait = trait_KZ_VOY_magic_puppet }
 				KZ_VOY_can_assemble_magic_puppet = yes
@@ -1566,6 +1564,8 @@ can_species_be_assembled = {
 					is_archetype = SHENHAI
 					# Star Wars: UnknownWorld Shipgirls Story
 					is_archetype = STARSHIPGIRLS
+					# Assault Lily
+					is_archetype = LILY
 					# Misc
 					is_archetype = NANITES_CROP
 					is_archetype = UNITED_FLEET
@@ -1622,7 +1622,7 @@ can_species_be_assembled = {
 		}
 		# Steven Universe Homeworld Gems
 		has_trait = trait_geoloid
-		# Long Journey
+		# Voyage to Eternity
 		KZ_VOY_trgr_plnt_CLONE = yes
 	}
 	# Expanded Gestalts
@@ -1892,6 +1892,9 @@ can_orbitable_repair_ships = {
 				# AOT
 				has_starbase_size = ascended_juggernaut
 				has_starbase_size = precursor_juggernaut
+				# Assault Lily
+				has_starbase_size = lily_super_college_ship
+				has_starbase_size = lily_college_ship
 			}
 			fleet = { is_disabled = no }
 		}
@@ -2206,8 +2209,20 @@ can_jump_drive = {
 	# Ancient Empire
 	custom_tooltip = {
 		fail_text = ag_jump_drive_unable_system_tooltip
+		NOT = { solar_system = { has_star_flag = ag_no_jump_out_system } }
+	}
+	# Assault Lily
+	custom_tooltip = {
+		fail_text = AL_cannot_start_jump
+		exists = solar_system
 		NOT = {
-			solar_system = { has_star_flag = ag_no_jump_out_system }
+			solar_system = {
+				exists = starbase
+				starbase = {
+					has_starbase_building = AL_AntiFTL
+					owner = { is_hostile = prevprevprev.owner }
+				}
+			}
 		}
 	}
 	# Some Events of Outside Cluster
@@ -2238,9 +2253,7 @@ can_jump_drive = {
 			always = no
 		}
 	}
-	else = {
-		always = yes
-	}
+	else = { always = yes }
 }
 
 # this = country
@@ -2371,6 +2384,20 @@ system_blocks_sensors = {
 			}
 			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_jammed } }
 		}
+		# Assault Lily
+		AND = {
+			exists = sector
+			sector = {
+				exists = leader
+				leader = {
+					OR = {
+						has_trait = leader_trait_AL_Rareskill_governor_Uberzain
+						has_trait = leader_trait_AL_Rareskill_governor_UberzainS
+						has_trait = leader_trait_AL_Rareskill_governor_UberzainEX
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -2450,6 +2477,8 @@ can_enter_system_by_jump = {
 					}
 					# THE ABYSS CONTRACT
 					has_star_flag = TAC_ag_signal_system
+					# Assault Lily
+					has_star_flag = al_huge_home_bed
 				}
 			}
 			# Reworked Advanced Ascension
@@ -2763,8 +2792,11 @@ can_build_branch_offices = {
 			has_ascension_perk = ap_expactriate_service
 			# BlueArchive species pack
 			has_authority = auth_kivotos
-			# Long Journey
+			# Voyage to Eternity
 			KZ_VOY_can_build_branch_offices = yes
+			# Asssault Lily
+			has_authority = auth_AL_democratic
+			has_authority = auth_AL_arsenal
 		}
 	}
 }
@@ -2778,6 +2810,9 @@ can_support_branch_offices = {
 			merg_is_awakened_fe = yes
 			# Warship Girls R And MIST Species
 			has_authority = auth_azur_dictatorial
+			# Assault Lily
+			is_country_type = al_fallen_empire
+			is_country_type = al_fallen_empire_no_ai
 		}
 	}
 	custom_tooltip = {
@@ -2867,8 +2902,11 @@ can_build_branch_office_on_planet = {
 					}
 					# BlueArchive species pack
 					has_ascension_perk = ap_BA_new_frontier
-					# Long Journey
+					# Voyage to Eternity
 					KZ_VOY_can_build_branch_offices = yes
+					# Assault Lily
+					has_authority = auth_AL_democratic
+					has_authority = auth_AL_arsenal
 				}
 			}
 			owner = { has_commercial_pact = root }
@@ -3000,7 +3038,14 @@ can_build_branch_office_on_planet = {
 		fail_text = BRANCH_OFFICE_CRIMINAL_HERITAGE_HAS_TRUCE
 		exists = owner
 		OR = {
-			root = { is_criminal_syndicate = no }
+			root = {
+				OR = {
+					is_criminal_syndicate = no
+					# Assault Lily
+					has_authority = auth_AL_democratic
+					has_authority = auth_AL_arsenal
+				}
+			}
 			owner = {
 				NOR = {
 					has_truce = root
@@ -3015,7 +3060,14 @@ can_build_branch_office_on_planet = {
 		fail_text = BRANCH_OFFICE_CRIMINAL_COOLDOWN
 		exists = owner
 		OR = {
-			root = { is_criminal_syndicate = no }
+			root = {
+				OR = {
+					is_criminal_syndicate = no
+					# Assault Lily
+					has_authority = auth_AL_democratic
+					has_authority = auth_AL_arsenal
+				}
+			}
 			AND = {
 				root = { is_criminal_syndicate = yes }
 				NOT = { has_planet_flag = criminal_branch_closed_cooldown_planet@root }
@@ -3846,6 +3898,11 @@ can_dismiss_leader = {
 	custom_tooltip = {
 		fail_text = "cannot_fire_StellarisCraft_leader"
 		NOT = { has_leader_flag = StellarisCraft_event_leader }
+	}
+	# Assault Lily
+	custom_tooltip = {
+		fail_text = "requires_not_special_lily_leader"
+		NOT = { has_leader_flag = AL_special_lily_leader }
 	}
 }
 

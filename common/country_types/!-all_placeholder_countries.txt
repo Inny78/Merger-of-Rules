@@ -11,6 +11,8 @@ ag_zeta_crisis_country = { ai = { enabled = no } }
 ag_ancient_psi_guardian = { ai = { enabled = no } }
 ag_kae_ge_invasion_country = { ai = { enabled = no } }
 ag_kuat_invasion_country = { ai = { enabled = no } }
+al_fallen_empire = { ai = { enabled = no } }
+al_fallen_empire_not_ai = { ai = { enabled = no } }
 ascended_empire = { ai = { enabled = no } }
 awakened_fallen_empire_ev = { ai = { enabled = no } }
 awakened_gate_builders = { ai = { enabled = no } }

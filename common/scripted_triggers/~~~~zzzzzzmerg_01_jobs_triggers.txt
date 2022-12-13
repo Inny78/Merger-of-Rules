@@ -70,19 +70,30 @@ is_organic_species = {
 		OR = {
 			is_archetype = BIOLOGICAL
 			is_archetype = LITHOID
-			# Warship Girls R And MIST Species
-			is_archetype = WARSHIPGIRL
-			is_archetype = SHENHAI
-			# SW:UnknownWorld Shipgirls Story
-			is_archetype = STARSHIPGIRLS
-			# Kancolle
-			is_archetype = KANMUSU
-			# Azur Lane Stellaris DLC
-			is_archetype = KANSEN
-			# Empire of Eeveelution
-			is_archetype = POKEMON
+			# Aquatic Portraits mod
+			is_archetype = JAYPEES_AQUATIC
+			is_archetype = JAYPEES_BRAIN
+			is_archetype = JAYPEES_CRAB
+			is_archetype = JAYPEES_DOLPHIN
+			is_archetype = JAYPEES_DUMBO
+			is_archetype = JAYPEES_ELESQUID
+			is_archetype = JAYPEES_FISH
+			is_archetype = JAYPEES_HAIRTENTACLE
+			is_archetype = JAYPEES_SEAL
+			is_archetype = JAYPEES_SQUID
+			is_archetype = JAYPEES_TURTLEHORSE
 			# AshArms Aquarius history
 			is_archetype = Dolls
+			# Assault Lily
+			is_archetype = LILY
+			# Azur Lane Stellaris DLC
+			is_archetype = KANSEN
+			# BlueArchive species pack
+			is_archetype = Schale
+			# Cryogenesis Unofficial Species Pack
+			is_archetype = sm_ELEMENTAL
+			# Empire of Eeveelution
+			is_archetype = POKEMON
 			# Expanded Traits, Civics, Pops, and More
 			is_archetype = HUMANOID
 			is_archetype = MAMMALIAN
@@ -98,20 +109,10 @@ is_organic_species = {
 			is_archetype = half_aberration
 			is_archetype = half_perfect
 			is_archetype = half_amalgamated
-			# Aquatic Portraits mod
-			is_archetype = JAYPEES_AQUATIC
-			is_archetype = JAYPEES_BRAIN
-			is_archetype = JAYPEES_CRAB
-			is_archetype = JAYPEES_DOLPHIN
-			is_archetype = JAYPEES_DUMBO
-			is_archetype = JAYPEES_ELESQUID
-			is_archetype = JAYPEES_FISH
-			is_archetype = JAYPEES_HAIRTENTACLE
-			is_archetype = JAYPEES_SEAL
-			is_archetype = JAYPEES_SQUID
-			is_archetype = JAYPEES_TURTLEHORSE
-			# The DAL Species Mod
-			is_archetype = DATEALIVE
+			# Kancolle
+			is_archetype = KANMUSU
+			# Voyage to Eternity
+			is_KZ_VOY_organic_species = yes
 			# Nyto Species Events Pack
 			is_archetype = NYTO
 			# Silfae's Portrait Revisited
@@ -123,12 +124,13 @@ is_organic_species = {
 					has_trait = trait_holofrixigram_3
 				}
 			}
-			# Cryogenesis Unofficial Species Pack
-			is_archetype = sm_ELEMENTAL
-			# BlueArchive species pack
-			is_archetype = Schale
-			# Long Journey
-			is_KZ_VOY_organic_species = yes
+			# SW:UnknownWorld Shipgirls Story
+			is_archetype = STARSHIPGIRLS
+			# The DAL Species Mod
+			is_archetype = DATEALIVE
+			# Warship Girls R And MIST Species
+			is_archetype = WARSHIPGIRL
+			is_archetype = SHENHAI
 			# Others
 			is_archetype = UNITED_FLEET
 			is_archetype = NANITES_CROP

@@ -135,7 +135,7 @@ has_encountered_other_species = {
 		# Ethics and Civics Classic and all its variants
 		has_valid_civic = civic_symbiotic_race
 		has_valid_civic = civic_slave_race
-		# Ethics & Civics: Bug Branch
+		# Ethics and Civics: Bug Branch
 		is_bugged_evolutionary_architects = yes
 		is_bugged_slave_race = yes
 		# Vanilla
@@ -773,9 +773,17 @@ has_special_star_flag_trigger = {
 		has_star_flag = ag_no_jump_in_system
 		# ACOT
 		has_star_flag = outercluster
-		# Warship Girls R And MIST Species
-		has_star_flag = wg_sealed_system
-		has_star_flag = wg_psionic_systems
+		# Assault Lily
+		has_star_flag = al_huge_home_bed
+		# Gigastructural Engineering and More
+		has_star_flag = giga_core_03
+		# Real Space
+		has_star_flag = star_disaster
+		# Some Events of Outside Cluster
+		has_star_flag = nep_Krahen_cluster
+		has_star_flag = nep_Scrus_cluster
+		has_star_flag = nep_dragon_system
+		has_star_flag = nep_heptagram_cluster
 		# SW:Kuat Ancient Empire
 		has_star_flag = Kuat_system
 		has_star_flag = Kuat_system_1
@@ -788,16 +796,11 @@ has_special_star_flag_trigger = {
 		has_star_flag = Kuat_system_int_3
 		has_star_flag = Kuat_system_int_4
 		has_star_flag = starkiller_system
-		# Gigastructural Engineering and More
-		has_star_flag = giga_core_03
-		# Some Events of Outside Cluster
-		has_star_flag = nep_Krahen_cluster
-		has_star_flag = nep_Scrus_cluster
-		has_global_flag = nep_not_pass_Aemethms
-		has_star_flag = nep_dragon_system
-		has_star_flag = nep_heptagram_cluster
-		# Real Space
-		has_star_flag = star_disaster
+		# THE ABYSS CONTRACT
+		has_star_flag = TAC_ag_signal_system
+		# Warship Girls R And MIST Species
+		has_star_flag = wg_sealed_system
+		has_star_flag = wg_psionic_systems
 	}
 }
 

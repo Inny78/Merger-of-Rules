@@ -23,6 +23,7 @@ has_no_non_gate_megastructure = {
 					merg_is_lex_type = yes
 					merg_is_thaum_type = yes
 					merg_is_wsg_type = yes
+					merg_is_assault_lily_type = yes
 					# AshArms Aquarius History
 					is_megastructure_type = dyson_swarm
 					is_megastructure_type = adf_mining_station
@@ -126,7 +127,7 @@ has_no_non_gate_megastructure = {
 					is_megastructure_type = BA_Mega_keystone_base_1
 					is_megastructure_type = BA_Mega_keystone_base_2
 					is_megastructure_type = BA_Mega_keystone_base_3
-					# Long Journey
+					# Voyage to Eternity
 					is_megastructure_type = mega_KZ_VOY_hiawatha_fleet_yards_01
 					is_megastructure_type = mega_KZ_VOY_hiawatha_fleet_yards_02
 					is_megastructure_type = mega_KZ_VOY_hiawatha_fleet_yards_03
@@ -162,6 +163,7 @@ has_any_megastructure_in_empire = {
 			merg_has_lex_type = yes
 			merg_has_thaum_type = yes
 			merg_has_wsg_type = yes
+			merg_has_assault_lily_type = yes
 			# AshArms Aquarius History
 			has_megastructure = dyson_swarm
 			has_megastructure = adf_mining_station
@@ -265,7 +267,7 @@ has_any_megastructure_in_empire = {
 			has_megastructure = BA_Mega_keystone_base_1
 			has_megastructure = BA_Mega_keystone_base_2
 			has_megastructure = BA_Mega_keystone_base_3
-			# Long Journey
+			# Voyage to Eternity
 			has_megastructure = mega_KZ_VOY_hiawatha_fleet_yards_01
 			has_megastructure = mega_KZ_VOY_hiawatha_fleet_yards_02
 			has_megastructure = mega_KZ_VOY_hiawatha_fleet_yards_03

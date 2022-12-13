@@ -60,9 +60,7 @@ has_upgraded_capital = {
 		}
 	}
 	else_if = {
-		limit = {
-			uses_habitat_capitals = yes
-		}
+		limit = { uses_habitat_capitals = yes }
 		custom_tooltip = {
 			fail_text = "requires_building_hab_capital"
 			OR = {
@@ -263,9 +261,7 @@ has_major_upgraded_capital = {
 		}
 	}
 	else_if = {
-		limit = {
-			uses_habitat_capitals = yes
-		}
+		limit = { uses_habitat_capitals = yes }
 		custom_tooltip = {
 			fail_text = "requires_building_hab_major_capital"
 			OR = {
@@ -458,9 +454,7 @@ has_fully_upgraded_capital = {
 		}
 	}
 	else_if = {
-		limit = {
-			uses_habitat_capitals = yes
-		}
+		limit = { uses_habitat_capitals = yes }
 		custom_tooltip = {
 			fail_text = "requires_building_hab_major_capital"
 			OR = {
@@ -733,11 +727,7 @@ has_ascended_capital = {
 # AOT/Twinks/galacot/Eternals
 has_stellarite_capital = {
 	if = {
-		limit = {
-			owner = {
-				is_hive_empire = yes
-			}
-		}
+		limit = { owner = { is_hive_empire = yes } }
 		custom_tooltip = {
 			fail_text = "requires_building_stellarite_capital_hive"
 			OR = {
@@ -753,11 +743,7 @@ has_stellarite_capital = {
 		}
 	}
 	else_if = {
-		limit = {
-			owner = {
-				is_machine_empire = yes
-			}
-		}
+		limit = { owner = { is_machine_empire = yes } }
 		custom_tooltip = {
 			fail_text = "requires_building_stellarite_capital_machine"
 			OR = {
@@ -831,6 +817,8 @@ has_advanced_fort = {
 		# Twinks Mods
 		has_building = building_precinct_house_at_b
 		has_building = building_tw_arcane_hold
+		has_building = building_nightelf_palace
+		has_building = building_ancient_palace_at
 		# Secrets of the Shroud
 		has_district = district_acot_soulsphere_fortress
 	}
