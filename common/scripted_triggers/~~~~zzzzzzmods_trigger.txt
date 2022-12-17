@@ -190,10 +190,10 @@ is_maginotable_restricted = {
 	}
 }
 
-is_giga_ringworld = {
-	optimize_memory
-	merg_is_hab_ringworld = yes
-}
+# is_giga_ringworld = {
+# 	optimize_memory
+# 	merg_is_hab_ringworld = yes
+# }
 
 mega_blokkats_wont_stripmine = {
 	optimize_memory
@@ -259,8 +259,7 @@ ndb_can_target_planet = {
 			owner = { is_same_value = root }
 		}
 		is_star = yes
-		is_planet_class = pc_birch
-		is_planet_class = pc_void_birch
+		giga_is_birch_world = yes
 		is_planet_class = pc_alderson_slice_ecu
 		is_planet_class = pc_alderson_slice_hive
 		is_planet_class = pc_alderson_slice_machine
@@ -325,8 +324,6 @@ is_valid_kaiser_moon_candidate = {
 		is_planet_class = pc_barren_cold
 		is_planet_class = pc_molten
 		is_planet_class = pc_frozen
-		# Giga Diversity
-		is_planet_class = pc_core_mined
 		#Added PD wolds
 		is_planet_class = pc_carbon
 		# All These Worlds
@@ -985,11 +982,6 @@ gpm_is_planet_class_toxic = {
 		is_planet_class = pc_lanthanide
 		# Planetary Diversity
 		is_planet_class = pc_ash
-		# Giga Diversity
-		is_planet_class = pc_ll_methane
-		is_planet_class = pc_ll_ash
-		is_planet_class = pc_ll_sulfur
-		is_planet_class = pc_ll_ammonia
 	}
 }
 
@@ -1018,8 +1010,12 @@ gpm_is_planet_class_nuked = {
 		is_planet_class = pc_graveyard
 		is_planet_class = pc_eyeball
 		is_planet_class = pc_lanthanide
-		# Gigastructural Engineering & More
-		# is_planet_class = pc_katzenland # Removing it from Giga Diversity as the modifiers mess up with the scripts
+		# Galaxius
+		is_planet_class = pc_ie_gateway
+		# Real Space
+		is_planet_class = pc_depleted
+		# All these worlds
+		is_planet_class = orbit_nuked 
 	}
 }
 

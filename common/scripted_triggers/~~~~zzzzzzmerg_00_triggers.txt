@@ -106,15 +106,6 @@ habitable_planet_not_urban = {
 		is_planet_class = pc_giga_edge_of_eternity
 		# Real Space - New Frontiers / Expanded Gestalts: Forgotten Queens
 		is_planet_class = pc_hollow
-		# Giga Diversity
-		is_planet_class = pc_ll_methane
-		is_planet_class = pc_ll_ash
-		is_planet_class = pc_ll_sulfur
-		is_planet_class = pc_ll_ammonia
-		is_planet_class = pc_ll_ocean
-		is_planet_class = pc_ll_tidallylocked_cold
-		is_planet_class = pc_ll_tidallylocked
-		is_planet_class = pc_ll_rogue
 	}
 }
 
@@ -816,7 +807,7 @@ can_think = {
 }
 
 uses_habitat_capitals = {
-	or = {
+	OR = {
 		uses_district_set = habitat
 		# Gigastructural Engineering & More
 		giga_uses_habitat_capitals = yes
@@ -836,4 +827,3 @@ uses_habitat_capitals = {
 		# uses_district_set = nsc_freebooter_habitat
 	}
 }
- 

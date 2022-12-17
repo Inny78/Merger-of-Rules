@@ -52,3 +52,7 @@ sm_ELEMENTAL = { uses_modifiers = no }
 NANITES_CROP = { uses_modifiers = no }
 UNITED_FLEET = { uses_modifiers = no }
 ASCENDED = { uses_modifiers = no }
+# Assault Lily
+LILY = { uses_modifiers = no }
+# BlueArchive
+Schale = { uses_modifiers = no }

@@ -128,6 +128,7 @@ building_plentiful_traditions_cybernetics_facility = { potential = { always = no
 building_plentiful_traditions_experimental_weapons_facility = { potential = { always = no } allow = { always = no } }
 building_plentiful_traditions_pillar_of_affliction = { potential = { always = no } allow = { always = no } }
 building_plentiful_traditions_university_of_wisdom = { potential = { always = no } allow = { always = no } }
+building_plentiful_traditions_trading_depot = { potential = { always = no } allow = { always = no } }
 building_precinct_house_at_b = { potential = { always = no } allow = { always = no } }
 building_SCO_resort_system_capital = { potential = { always = no } allow = { always = no } }
 building_SCO_slave_system_capital = { potential = { always = no } allow = { always = no } }
@@ -147,6 +148,7 @@ building_stellarite_hospital = { potential = { always = no } allow = { always = 
 building_stellarite_institute = { potential = { always = no } allow = { always = no } }
 building_stellarite_nano_forge = { potential = { always = no } allow = { always = no } }
 building_stellarite_palace = { potential = { always = no } allow = { always = no } }
+building_stellarite_psg = { potential = { always = no } allow = { always = no } }
 building_stellarite_stronghold = { potential = { always = no } allow = { always = no } }
 building_storm_lab = { potential = { always = no } allow = { always = no } }
 building_summoner_site = { potential = { always = no } allow = { always = no } }
