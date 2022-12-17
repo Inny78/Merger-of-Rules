@@ -297,3 +297,8 @@ has_warship_girls = {
 has_wild_space = {
 	has_global_flag = has_wild_space_mod
 }
+
+# ZOFE Megacorp
+has_zofe_mc = {
+	has_global_flag = zofe_megacorp_installed
+}

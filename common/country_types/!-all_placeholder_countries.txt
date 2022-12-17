@@ -17,6 +17,7 @@ ascended_empire = { ai = { enabled = no } }
 awakened_fallen_empire_ev = { ai = { enabled = no } }
 awakened_gate_builders = { ai = { enabled = no } }
 awakened_marauders_ev = { ai = { enabled = no } }
+awakened_original_empire = { ai = { enabled = no } }
 awakened_return_kuat_empire = { ai = { enabled = no } }
 berserker_awoken_hive = { ai = { enabled = no } }
 blokkat_stripminers = { ai = { enabled = no } }

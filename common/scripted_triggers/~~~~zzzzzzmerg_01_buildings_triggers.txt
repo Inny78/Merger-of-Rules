@@ -823,13 +823,3 @@ has_advanced_fort = {
 		has_district = district_acot_soulsphere_fortress
 	}
 }
-
-# Gigas
-uses_habitat_capitals = {
-	or = {
-		merg_is_habitat = yes
-		# Gigastructural Engineering & More
-		giga_uses_habitat_capitals = yes
-		has_planet_flag = giga_habitat_capital_compat
-	}
-}

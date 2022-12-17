@@ -814,3 +814,26 @@ can_think = {
 		has_trait = trait_subsapient_form
 	}
 }
+
+uses_habitat_capitals = {
+	or = {
+		uses_district_set = habitat
+		# Gigastructural Engineering & More
+		giga_uses_habitat_capitals = yes
+		has_planet_flag = giga_habitat_capital_compat
+		# Planetary Diversity
+		uses_district_set = pdplanethab
+		# These are in reserve in case I need them
+		# # BlueArchive
+		# uses_district_set = BA_auto_habitat
+		# # Nyto Species Pack
+		# uses_district_set = GF_nyto_devil_furnace_world
+		# # Starborn: Improved Voidtouched
+		# uses_district_set = starborn_start
+		# # Twinks Atlantean
+		# uses_district_set = skypalace
+		# # NSC2 Modjam Freebooters Origin
+		# uses_district_set = nsc_freebooter_habitat
+	}
+}
+ 

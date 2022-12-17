@@ -2267,6 +2267,7 @@ can_spawn_occupation_armies = {
 		is_country_type = original_empire_passive
 		is_country_type = original_empire_active
 		is_country_type = sofe_light_seeker
+		# ZOFE
 		is_zofe_oe = yes
 	}
 }
@@ -2869,7 +2870,13 @@ can_support_branch_offices = {
 	# ZOFE Megacorp
 	custom_tooltip = {
 		fail_text = COUNTRY_IS_ASCENDED_EMPIRE
-		is_zofe_country = no
+		OR = {
+			has_zofe_mc = no
+			AND = {
+				has_zofe_mc = yes
+				is_country_type = ascended_empire
+			}
+		}
 	}
 }
 
@@ -3578,14 +3585,7 @@ can_planet_auto_migrate = {
 	NOT = { has_global_flag = z_pf2_flg_vam_disabled }
 }
 
-can_planet_receive_auto_migration = {
-	NOR = {
-		planet_devastation >= 10
-		has_modifier = planet_culture_shock
-		is_doomsday_planet = yes
-	}
-}
-
+# can_planet_receive_auto_migration
 # can_gene_mod_habitability
 
 #This, root = country

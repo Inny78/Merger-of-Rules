@@ -46,6 +46,7 @@ merg_is_fallen_empire = {
 		is_country_type = fallen_empire
 		# ZOFE
 		is_country_type = lost_empire
+		is_country_type = original_empire
 		# The Empty Vagrant
 		is_country_type = fallen_empire_ev
 		# SW:KUAT ANCIENT EMPIRE
@@ -65,6 +66,7 @@ merg_is_awakened_fe = {
 		is_country_type = awakened_gate_builders
 		# ZOFE
 		is_country_type = ascended_empire
+		is_country_type = awakened_original_empire
 		# The Empty Vagrant
 		is_country_type = awakened_fallen_empire_ev
 	}
@@ -77,14 +79,7 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_shattered_ring_habitable
 		is_planet_class = pc_cybrex
 		# Gigastructural Engineering & More
-		is_planet_class = pc_gigaorbital_ring
-		is_planet_class = pc_interstellar_ringworld_habitable
-		is_planet_class = pc_ringworld_city
-		is_planet_class = pc_squareworld_habitable
-		is_planet_class = pc_giga_penrose_habitable
-		is_planet_class = pc_ringworld_machine
-		is_planet_class = pc_ringworld_hive
-		is_planet_class = pc_giga_maginot_ringworld
+		is_giga_ringworld = yes
 		# Ancient Empire
 		# listed planet types are for colors only, they're all ideal
 		is_planet_class = pc_ag_ringworld_desert
@@ -99,6 +94,20 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_ag_ringworld_machine
 		is_planet_class = pc_ag_ringworld_city
 		is_planet_class = pc_ag_ringworld_gaia
+		# Assault Lily
+		is_planet_class = pc_ringworld_habitable_lily
+		# Darkspace
+		is_planet_class = pc_ancient_ringworld
+		is_planet_class = pc_ringworld_spectrals
+		# Kancolle
+		is_planet_class = pc_kancolle_ringworld
+		# Planetary Diversity
+		is_planetary_diversity_ringworld = yes
+		# Planetary Ringworlds
+		is_planet_class = pc_planetary_ringworld
+		is_planet_class = pc_planetary_ringworld_machine
+		is_planet_class = pc_planetary_ringworld_hive
+		is_planet_class = pc_planetary_ringworld_city
 		# Warship Girls and MIST species
 		is_planet_class = pc_ringworld_habitable_sh
 		is_planet_class = pc_ringworld_habitable_wsg
@@ -107,20 +116,8 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_ringworld_habitable_uf
 		is_planet_class = pc_ringworld_habitable_auto_uf
 		is_planet_class = pc_dyson_ring
-		# Planetary Diversity
-		is_planetary_diversity_ringworld = yes
-		# Darkspace
-		is_planet_class = pc_ancient_ringworld
-		is_planet_class = pc_ringworld_spectrals
 		# ZOFE
 		is_planet_class = pc_utopian_ringworld
-		# Giga Diversity
-		is_planet_class = pc_giga_maginot_ringworld
-		# Planetary Ringworlds
-		is_planet_class = pc_planetary_ringworld
-		is_planet_class = pc_planetary_ringworld_machine
-		is_planet_class = pc_planetary_ringworld_hive
-		is_planet_class = pc_planetary_ringworld_city
 	}
 }
 
@@ -130,11 +127,6 @@ merg_is_true_ringworld = {
 		is_planet_class = pc_ringworld_habitable
 		is_planet_class = pc_shattered_ring_habitable
 		is_planet_class = pc_cybrex
-		# Gigastructural Engineering & More
-		is_planet_class = pc_ringworld_city
-		is_planet_class = pc_ringworld_machine
-		is_planet_class = pc_ringworld_hive
-		is_planet_class = pc_giga_maginot_ringworld
 		# Ancient Empire
 		is_planet_class = pc_ag_ringworld_desert
 		is_planet_class = pc_ag_ringworld_arid
@@ -148,6 +140,25 @@ merg_is_true_ringworld = {
 		is_planet_class = pc_ag_ringworld_machine
 		is_planet_class = pc_ag_ringworld_city
 		is_planet_class = pc_ag_ringworld_gaia
+		# Assault Lily
+		is_planet_class = pc_ringworld_habitable_lily
+		# Darkspace
+		is_planet_class = pc_ancient_ringworld
+		is_planet_class = pc_ringworld_spectrals
+		# Gigastructural Engineering & More
+		is_planet_class = pc_ringworld_city
+		is_planet_class = pc_ringworld_machine
+		is_planet_class = pc_ringworld_hive
+		is_planet_class = pc_giga_maginot_ringworld
+		# Planetary Diversity
+		is_planetary_diversity_ringworld = yes
+		# Kancolle
+		is_planet_class = pc_kancolle_ringworld
+		# Planetary Ringworlds
+		is_planet_class = pc_planetary_ringworld
+		is_planet_class = pc_planetary_ringworld_machine
+		is_planet_class = pc_planetary_ringworld_hive
+		is_planet_class = pc_planetary_ringworld_city
 		# Warship Girls and MIST species
 		is_planet_class = pc_ringworld_habitable_sh
 		is_planet_class = pc_ringworld_habitable_wsg
@@ -156,20 +167,8 @@ merg_is_true_ringworld = {
 		is_planet_class = pc_ringworld_habitable_uf
 		is_planet_class = pc_ringworld_habitable_auto_uf
 		is_planet_class = pc_dyson_ring
-		# Planetary Diversity
-		is_planetary_diversity_ringworld = yes
-		# Darkspace
-		is_planet_class = pc_ancient_ringworld
-		is_planet_class = pc_ringworld_spectrals
 		# ZOFE
 		is_planet_class = pc_utopian_ringworld
-		# Giga Diversity
-		is_planet_class = pc_giga_maginot_ringworld
-		# Planetary Ringworlds
-		is_planet_class = pc_planetary_ringworld
-		is_planet_class = pc_planetary_ringworld_machine
-		is_planet_class = pc_planetary_ringworld_hive
-		is_planet_class = pc_planetary_ringworld_city
 	}
 }
 
@@ -186,36 +185,34 @@ merg_is_habitat = {
 merg_is_habitat_non_starborn = {
 	OR = {
 		is_planet_class = pc_habitat
-		# Planetary Diversity
-		is_pd_habitat = yes
-		# Gigastructural Engineering & More
-		is_planet_class = pc_interstellar_habitat
-		is_planet_class = pc_giga_elysium
-		is_planet_class = pc_ehof_habitat
-		is_planet_class = pc_giga_orbital
-		# More Events Mod
-		is_planet_class = pc_mem_vazuran_habitat
 		# Acquisition of Technology
 		is_planet_class = pc_dm_habitat
 		is_planet_class = pc_ae_habitat
 		is_planet_class = pc_sigma_habitat
 		is_planet_class = pc_sigma_deepspace_habitat
-		# Twinks Atlantean
-		uses_district_set = skypalace
-		# Plentiful Traditions
-		is_planet_class = pc_habitat_robot
-		# Giga Diversity
-		is_planet_class = pc_pd_toxic_hab
-		# Nyto Species Pack
-		is_planet_class = pc_GFnytp_habitis
-		# NSC2 Modjam Freebooters Origin
-		uses_district_set = nsc_freebooter_habitat
+		# Blue Archive
+		is_planet_class = pc_BA_auto_habitat
+		# Gigastructural Engineering & More
+		is_planet_class = pc_interstellar_habitat
+		is_planet_class = pc_giga_elysium
+		is_planet_class = pc_ehof_habitat
+		is_planet_class = pc_giga_orbital
 		# Habitation
 		has_planet_flag = hab_init
 		# Living Space
 		has_planet_flag = stpg_planetary_habitat
-		# Blue Archive
-		is_planet_class = pc_BA_auto_habitat
+		# More Events Mod
+		is_planet_class = pc_mem_vazuran_habitat
+		# Nyto Species Pack
+		is_planet_class = pc_GFnytp_habitis
+		# Planetary Diversity
+		is_pd_habitat = yes
+		# Plentiful Traditions
+		is_planet_class = pc_habitat_robot
+		# NSC2 Modjam Freebooters Origin
+		uses_district_set = nsc_freebooter_habitat
+		# Twinks Atlantean
+		uses_district_set = skypalace
 	}
 }
 
@@ -237,8 +234,6 @@ merg_is_habitat_non_PD = {
 		uses_district_set = skypalace
 		# Plentiful Traditions
 		is_planet_class = pc_habitat_robot
-		# Giga Diversity
-		is_planet_class = pc_pd_toxic_hab
 		# Nyto Species Pack
 		is_planet_class = pc_GFnytp_habitis
 		# Starborn: Improved Voidtouched
@@ -467,8 +462,7 @@ merg_is_untargetable = {
 		has_planet_flag = cant_target_this_planet
 		has_planet_flag = cant_build_here
 		is_planet_class = pc_ehof_cplanet
-		is_planet_class = pc_birch
-		is_planet_class = pc_void_birch
+		giga_is_birch_world = yes
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target		# add this to your planet to dynamically exclude it.
 	}
@@ -481,7 +475,7 @@ merg_is_dense_star = {
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
 		# Gigastructural Engineering & More
-		is_planet_class = pc_birch
+		giga_is_birch_world = yes
 		is_planet_class = pc_core_black_hole
 		is_planet_class = pc_core_quasar
 		is_planet_class = pc_black_hole_giga
@@ -490,8 +484,6 @@ merg_is_dense_star = {
 		is_planet_class = pc_whc_star
 		is_planet_class = pc_wh_star
 		is_planet_class = pc_whdyson_star
-		# Void Birch Mod
-		is_planet_class = pc_void_birch
 		# Hypothetical Stars
 		is_planet_class = pc_white_hole
 		is_planet_class = pc_strange_star
@@ -515,29 +507,33 @@ merg_is_standard_dense_star = {
 		# Real Space
 		is_planet_class = pc_collapsar
 		is_planet_class = pc_magnetar
+		# Hypothetical Stars
+		is_planet_class = pc_white_hole
 	}
 }
 
 # List of void stars and planet for planet killers
 merg_is_empty_space = {
 	OR = {
+		# ACOT
+		is_planet_class = pc_invisible_star
+		# Ancient Empires
+		is_planet_class = pc_ag_void_star
+		is_planet_class = pc_ag_void_planet
+		# Darkspace
+		is_planet_class = pc_gc_star
 		# Gigastructural Engineering & More
 		is_planet_class = giga_hidden
 		is_planet_class = pc_giga_empty_space
 		is_planet_class = pc_giga_empty_space_asteroid
-		# Ancient Empires
-		is_planet_class = pc_ag_void_star
-		is_planet_class = pc_ag_void_planet
-		# ACOT
-		is_planet_class = pc_invisible_star
 		# History of the Lost Empire
 		is_planet_class = pc_empty_space
+		# Secrets of the Shroud
+		is_planet_class = pc_sm_empty_space
 		# Some Events of Outside Cluster
 		is_planet_class = pc_star_void_dummy_01
 		# ThaumStellaris
 		is_planet_class = pc_tc_not_texture
-		# Darkspace
-		is_planet_class = pc_gc_star
 	}
 }
 
@@ -625,7 +621,7 @@ merg_has_spiritualist_government = {
 
 merg_has_materialist_government = {
 	OR = {
-		has_mmaterialist_government = yes
+		has_materialist_government = yes
 		AND = {
 			merg_is_default_empire = yes
 			has_ethic = "ethic_fanatic_materialist"
