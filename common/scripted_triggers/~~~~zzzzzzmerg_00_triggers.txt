@@ -555,7 +555,75 @@ has_phototrophic_energy_upkeep = {
 		}
 	}
 }
- 
+
+has_food_upkeep = {
+	species = {
+		NOR = {
+			is_archetype = LITHOID
+			is_robotic_species = yes
+		}
+		OR= {
+			is_archetype = BIOLOGICAL
+			# Aquatic Portraits mod
+			is_archetype = JAYPEES_AQUATIC
+			is_archetype = JAYPEES_BRAIN
+			is_archetype = JAYPEES_CRAB
+			is_archetype = JAYPEES_DOLPHIN
+			is_archetype = JAYPEES_DUMBO
+			is_archetype = JAYPEES_ELESQUID
+			is_archetype = JAYPEES_FISH
+			is_archetype = JAYPEES_HAIRTENTACLE
+			is_archetype = JAYPEES_SEAL
+			is_archetype = JAYPEES_SQUID
+			is_archetype = JAYPEES_TURTLEHORSE
+			# AshArms Aquarius history
+			is_archetype = Dolls
+			# Assault Lily
+			is_archetype = LILY
+			# Azur Lane Stellaris DLC
+			is_archetype = KANSEN
+			# # BlueArchive species pack
+			# is_archetype = Schale
+			# # Cryogenesis Unofficial Species Pack
+			# is_archetype = sm_ELEMENTAL
+			# Empire of Eeveelution
+			is_archetype = POKEMON
+			# Expanded Traits, Civics, Pops, and More
+			is_archetype = HUMANOID
+			is_archetype = MAMMALIAN
+			is_archetype = REPTILIAN
+			is_archetype = AVIAN
+			is_archetype = ARTHROPOID
+			is_archetype = MOLUSCOID
+			is_archetype = FUNGOID
+			is_archetype = PLANTOID
+			is_archetype = NECROID
+			is_archetype = half_species
+			is_archetype = half_species_special
+			is_archetype = half_aberration
+			is_archetype = half_perfect
+			is_archetype = half_amalgamated
+			# Kancolle
+			is_archetype = KANMUSU
+			# # Voyage to Eternity
+			# is_KZ_VOY_organic_species = yes
+			# Nyto Species Events Pack
+			is_archetype = NYTO
+			# SW:UnknownWorld Shipgirls Story
+			is_archetype = STARSHIPGIRLS
+			# The DAL Species Mod
+			is_archetype = DATEALIVE
+			# Warship Girls R And MIST Species
+			is_archetype = WARSHIPGIRL
+			is_archetype = SHENHAI
+			# Others
+			is_archetype = UNITED_FLEET
+			is_archetype = NANITES_CROP
+		}
+	}
+	NOT = { has_trait = trait_voidling }
+}
+
 has_research_building = {
 	OR = {
 		has_building = building_research_lab_1

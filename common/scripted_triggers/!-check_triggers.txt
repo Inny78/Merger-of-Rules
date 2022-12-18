@@ -268,6 +268,11 @@ has_stellaris_evolved = {
 	has_global_flag = stellarisevolved
 }
 
+# ThaumStellaris
+has_thaumstellaris = {
+	has_global_flag = thaumstellaris_initialize
+}
+
 # The Empty Vagrant
 has_empty_vagrant = {
 	has_global_flag = enable_empty_vagrant_mod

@@ -190,11 +190,6 @@ is_maginotable_restricted = {
 	}
 }
 
-# is_giga_ringworld = {
-# 	optimize_memory
-# 	merg_is_hab_ringworld = yes
-# }
-
 mega_blokkats_wont_stripmine = {
 	optimize_memory
 	merg_is_gate_mega = yes
@@ -1437,5 +1432,66 @@ infmod_is_relevant = {
 		merg_is_default_empire = yes
 		merg_is_fallen_empire = yes
 		merg_is_awakened_fe = yes
+	}
+}
+
+# Real Space
+has_mineral_deposit = {
+	OR = {
+		has_deposit = d_veiny_cliffs
+		has_deposit = d_mineral_fields
+		has_deposit = d_prosperous_mesa
+		has_deposit = d_ore_rich_caverns
+		has_deposit = d_rich_mountain
+		has_deposit = d_submerged_ore_veins
+		# Real Space
+		has_deposit = d_offshore_fields
+		has_deposit = d_abundant_atoll
+		has_deposit = d_rich_lodes
+		# GPM
+		has_deposit = gpm_d_spaceship_graveyard
+		has_deposit = gpm_d_unusual_formations
+		has_deposit = gpm_d_floating_rocks
+		has_deposit = gpm_d_super_volcano
+		has_deposit = gpm_d_obsidian_fields
+		has_deposit = gpm_d_rich_crater
+		has_deposit = gpm_d_surface_mineral_veins
+		has_deposit = gpm_d_dense_metal_veins
+		has_deposit = gpm_d_iron_mountain
+		has_deposit = gpm_d_garbage_patch
+		has_deposit = gpm_d_fossilized_egg_sacks
+		has_deposit = gpm_d_fossilized_structures
+		has_deposit = gpm_d_fossilized_creep
+		has_deposit = gpm_d_giant_skeleton
+	}
+}
+
+is_mineral_deposit = {
+	OR = {
+		is_deposit_type = d_veiny_cliffs
+		is_deposit_type = d_mineral_fields
+		is_deposit_type = d_prosperous_mesa
+		is_deposit_type = d_ore_rich_caverns
+		is_deposit_type = d_rich_mountain
+		is_deposit_type = d_submerged_ore_veins
+		# Real Space
+		is_deposit_type = d_offshore_fields
+		is_deposit_type = d_abundant_atoll
+		is_deposit_type = d_rich_lodes
+		# GPM
+		is_deposit_type = gpm_d_spaceship_graveyard
+		is_deposit_type = gpm_d_unusual_formations
+		is_deposit_type = gpm_d_floating_rocks
+		is_deposit_type = gpm_d_super_volcano
+		is_deposit_type = gpm_d_obsidian_fields
+		is_deposit_type = gpm_d_rich_crater
+		is_deposit_type = gpm_d_surface_mineral_veins
+		is_deposit_type = gpm_d_dense_metal_veins
+		is_deposit_type = gpm_d_iron_mountain
+		is_deposit_type = gpm_d_garbage_patch
+		is_deposit_type = gpm_d_fossilized_egg_sacks
+		is_deposit_type = gpm_d_fossilized_structures
+		is_deposit_type = gpm_d_fossilized_creep
+		is_deposit_type = gpm_d_giant_skeleton
 	}
 }
