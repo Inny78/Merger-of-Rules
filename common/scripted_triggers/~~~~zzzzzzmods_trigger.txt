@@ -1372,6 +1372,7 @@ is_nebula_star = {
 can_build_precursor_ship = {
 	optimize_memory
 	OR = {
+		owner = { is_ai = yes }
 		AND = {
 			is_scope_type = megastructure
 			OR = {
@@ -1403,7 +1404,6 @@ can_build_precursor_ship = {
 				has_starbase_size >= acot_precusor_theta_starcitadel
 				has_starbase_size >= precursor_colossus
 				has_starbase_size >= origin_super_citadel_playable	
-				has_starbase_size >= acot_star_commander
 				has_starbase_size >= precursor_juggernaut
 				# Universal Gateway Origin
                 has_starbase_size >= universal_gateway_citadel

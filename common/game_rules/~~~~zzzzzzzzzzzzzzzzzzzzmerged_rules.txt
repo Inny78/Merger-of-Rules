@@ -1667,6 +1667,16 @@ can_orbital_bombard = {
 			from.owner = { is_crisis_faction = yes }
 		}
 	}
+	# ACOT
+	AND = {
+		OWNER = { is_progenitor_empires = no }
+		FROM = {
+			NOR = {
+				is_planet_class = pc_acot_pmc_vault
+				is_planet_class = pc_acot_enigmopolis
+			}
+		}	
+	}
 	# Vanilla
 	NOR = {
 		any_controlled_ship = {

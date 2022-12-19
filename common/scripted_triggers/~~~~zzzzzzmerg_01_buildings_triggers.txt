@@ -736,7 +736,6 @@ has_stellarite_capital = {
 				has_building = building_phanon_tower
 				# AOT
 				has_building = building_stellarite_hive_cluster
-				has_building = building_phanon_hive_cluster
 				# GALACOT
 				has_building = building_stellarite_galactic_hive_capital
 			}
@@ -752,7 +751,6 @@ has_stellarite_capital = {
 				has_building = building_phanon_tower
 				# AOT
 				has_building = building_stellarite_control_center
-				has_building = building_phanon_control_center
 				# GALACOT
 				has_building = building_stellarite_galactic_machine_capital
 			}
@@ -767,7 +765,6 @@ has_stellarite_capital = {
 				has_building = building_phanon_tower
 				# AOT
 				has_building = building_stellarite_palace
-				has_building = building_phanon_palace
 				# GALACOT
 				has_building = building_stellarite_galactic_capital
 				has_building = building_stellarite_galactic_hive_capital
@@ -791,35 +788,78 @@ uses_district_industrial = {
 }
 
 # ACOT/AOT/Twinks mods merging.
+has_fort = {
+	custom_tooltip = {
+		fail_text = acot_alpha_matter_events.1.a
+		OR = {
+			has_building = building_stronghold
+			has_building = building_fortress
+			# ACOT/AOT/SOS
+			has_building = building_dm_stronghold
+			has_building = building_fe_stronghold
+			has_building = building_ae_stronghold
+			has_building = building_giga_fortress_dm
+			has_building = building_giga_fortress
+			has_building = building_giga_fortress_array
+			has_building = building_giga_fortress_lab
+			has_building = building_giga_fortress_obelisk
+			has_building = building_giga_fortress_fe
+			# AOT
+			has_building = building_stellarite_stronghold
+			has_building = building_phanon_stronghold
+			has_building = building_stellarite_giga_fortress_array
+			has_building = building_stellarite_giga_fortress_lab
+			has_building = building_stellarite_giga_fortress_obelisk
+			has_building = building_phanon_giga_fortress_array
+			has_building = building_phanon_giga_fortress_lab
+			has_building = building_phanon_giga_fortress_obelisk
+			has_district = district_acot_enigmapolis_fortress
+			is_planet_class = pc_phanon_macripp
+			is_planet_class = pc_sigma_solaripp
+			# Twinks Mods
+			has_building = building_precinct_house_at_b
+			has_building = building_tw_arcane_hold
+			has_building = building_nightelf_palace
+			has_building = building_ancient_palace_at
+			# Secrets of the Shroud
+			has_district = district_acot_soulsphere_fortress
+		}
+	}
+}
+
 has_advanced_fort = {
-	OR = {
-		# ACOT/AOT/SOS
-		has_building = building_dm_stronghold
-		has_building = building_fe_stronghold
-		has_building = building_ae_stronghold
-		has_building = building_stellarite_stronghold
-		has_building = building_phanon_stronghold
-		has_building = building_giga_fortress_dm
-		has_building = building_giga_fortress
-		has_building = building_giga_fortress_array
-		has_building = building_giga_fortress_lab
-		has_building = building_giga_fortress_obelisk
-		has_building = building_giga_fortress_fe
-		has_building = building_stellarite_giga_fortress_array
-		has_building = building_stellarite_giga_fortress_lab
-		has_building = building_stellarite_giga_fortress_obelisk
-		has_building = building_phanon_giga_fortress_array
-		has_building = building_phanon_giga_fortress_lab
-		has_building = building_phanon_giga_fortress_obelisk
-		has_district = district_acot_enigmapolis_fortress
-		is_planet_class = pc_phanon_macripp
-		is_planet_class = pc_sigma_solaripp
-		# Twinks Mods
-		has_building = building_precinct_house_at_b
-		has_building = building_tw_arcane_hold
-		has_building = building_nightelf_palace
-		has_building = building_ancient_palace_at
-		# Secrets of the Shroud
-		has_district = district_acot_soulsphere_fortress
+	custom_tooltip = {
+		fail_text = acot_alpha_matter_events.1.a
+		OR = {
+			# ACOT/AOT/SOS
+			has_building = building_dm_stronghold
+			has_building = building_fe_stronghold
+			has_building = building_ae_stronghold
+			has_building = building_giga_fortress_dm
+			has_building = building_giga_fortress
+			has_building = building_giga_fortress_array
+			has_building = building_giga_fortress_lab
+			has_building = building_giga_fortress_obelisk
+			has_building = building_giga_fortress_fe
+			# AOT
+			has_building = building_stellarite_stronghold
+			has_building = building_phanon_stronghold
+			has_building = building_stellarite_giga_fortress_array
+			has_building = building_stellarite_giga_fortress_lab
+			has_building = building_stellarite_giga_fortress_obelisk
+			has_building = building_phanon_giga_fortress_array
+			has_building = building_phanon_giga_fortress_lab
+			has_building = building_phanon_giga_fortress_obelisk
+			has_district = district_acot_enigmapolis_fortress
+			is_planet_class = pc_phanon_macripp
+			is_planet_class = pc_sigma_solaripp
+			# Twinks Mods
+			has_building = building_precinct_house_at_b
+			has_building = building_tw_arcane_hold
+			has_building = building_nightelf_palace
+			has_building = building_ancient_palace_at
+			# Secrets of the Shroud
+			has_district = district_acot_soulsphere_fortress
+		}
 	}
 }

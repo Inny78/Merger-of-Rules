@@ -4177,6 +4177,135 @@ KZ_VOY_can_not_destroy_by_planet_killer = {
 	}
 }
 
+# WULA Fallen Empire
+can_destroy_planet_with_PLANET_KILLER_GENESIS = {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_colony_of_someone
+		is_colony = no
+	}
+	is_colonizable = yes
+	custom_tooltip = {
+		fail_text = has_been_sowed_by_genesis
+		NOT = {
+			has_planet_flag = has_been_sowed_by_genesis
+		}
+	}
+	OR = {
+		custom_tooltip = {
+			text = is_not_hostile_cracker
+			OR = {
+				AND = {
+					exists = space_owner
+					space_owner = {
+						OR = {
+							is_at_war_with = from.owner
+							is_crisis_faction = yes
+						}
+					}
+				}
+				AND = { # colony
+					exists = owner
+					owner = {
+						OR = {
+							is_at_war_with = from.owner
+							is_crisis_faction = yes
+						}
+					}
+				}
+				AND = { # primitive
+					exists = space_owner
+					exists = owner
+					owner = {
+						is_primitive = yes
+					}
+					space_owner = {
+						OR = {
+							is_at_war_with = from.owner
+							is_crisis_faction = yes
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = is_not_owned_or_claimed
+			NOR = {
+				exists = owner
+				exists = space_owner
+			}
+		}
+		custom_tooltip = {
+			text = is_uninhabited_within_borders
+			exists = space_owner
+			space_owner = { is_same_value = from.owner }
+			is_colony = no
+		}
+	}
+}
+
+can_destroy_planet_with_PLANET_KILLER_GOLIATH_SCOURGE = {
+	is_colonizable = yes
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		merg_is_forbidden_target = no
+	}
+	OR = {
+		custom_tooltip = {
+			text = is_not_hostile_cracker
+			OR = {
+				AND = {
+					exists = space_owner
+					space_owner = {
+						OR = {
+							is_at_war_with = from.owner
+							is_crisis_faction = yes
+						}
+					}
+				}
+				AND = { # colony
+					exists = owner
+					owner = {
+						OR = {
+							is_at_war_with = from.owner
+							is_crisis_faction = yes
+						}
+					}
+				}
+				AND = { # primitive
+					exists = space_owner
+					exists = owner
+					owner = {
+						is_primitive = yes
+					}
+					space_owner = {
+						OR = {
+							is_at_war_with = from.owner
+							is_crisis_faction = yes
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = is_not_owned_or_claimed
+			NOR = {
+				exists = owner
+				exists = space_owner
+			}
+		}
+		custom_tooltip = {
+			text = is_uninhabited_within_borders
+			exists = space_owner
+			space_owner = { is_same_value = from.owner }
+			is_colony = no
+		}
+	}
+}
+
 # ===========================================================================================================================
 
 # PK Triggers here
