@@ -1,0 +1,234 @@
+# Trigger library for planet types - use this for your cross-mod content.
+
+merg_is_alpine = {
+	OR = {
+		is_planet_class = pc_alpine
+		# Planetary Diversity
+		is_pd_alpine = yes
+		# All These Worlds
+		is_planet_class = orbit_alpicothalassic
+		is_planet_class = pc_alpicothalassic
+		is_planet_class = orbit_karsticos
+		is_planet_class = pc_karsticos
+		is_planet_class = orbit_redux
+		is_planet_class = pc_redux
+	}
+}
+
+merg_is_arctic = {
+	OR = {
+		is_planet_class = pc_arctic
+		# Planetary Diversity
+		is_pd_arctic = yes
+		# All These Worlds
+		is_planet_class = orbit_icy
+		is_planet_class = orbit_cryogenian
+		is_planet_class = orbit_geotidal_eyeball
+		is_planet_class = pc_geotidal_eyeball
+		is_planet_class = orbit_hydrocarbonal
+		is_planet_class = pc_hydrocarbonal
+	}
+}
+
+merg_is_arid = {
+	OR = {
+		is_planet_class = pc_arid
+		# Planetary Diversity
+		is_pd_arid = yes
+		# All These Worlds
+		is_planet_class = orbit_thermogenian
+		is_planet_class = orbit_archean
+		is_planet_class = pc_archean
+		is_planet_class = orbit_agonos
+		is_planet_class = pc_agonos
+	}
+}
+
+merg_is_continental = {
+	OR = {
+		is_planet_class = pc_continental
+		# Planetary Diversity
+		is_pd_continental = yes
+		# All These Worlds
+		is_planet_class = orbit_chlorogenian
+		is_planet_class = pc_continental
+		is_planet_class = orbit_panthalassic
+		is_planet_class = pc_panthalassic
+		is_planet_class = orbit_retinalgenian
+		is_planet_class = pc_retinalgenian
+		is_planet_class = orbit_photogenian
+		is_planet_class = pc_photogenian
+		is_planet_class = orbit_geotidal_twilight
+		is_planet_class = pc_geotidal_twilight
+	}
+}
+
+merg_is_desert = {
+	OR = {
+		is_planet_class = pc_barren
+		is_planet_class = pc_desert
+		# Planetary Diversity
+		is_pd_desert = yes
+		# All These Worlds
+		is_planet_class = orbit_erimosthalassic
+		is_planet_class = pc_erimosthalassic
+		is_planet_class = orbit_hadean
+		is_planet_class = pc_hadean
+		is_planet_class = orbit_anthracean
+		is_planet_class = pc_anthracean
+		is_planet_class = orbit_desolate
+		is_planet_class = pc_desolate
+		is_planet_class = orbit_almyros
+		is_planet_class = pc_almyros
+	}
+}
+
+merg_is_gaia = {
+	OR = {
+		is_planet_class = pc_gaia
+		# Azur Lane
+		is_planet_class = pc_azur_gaia
+		# Planetary Diversity
+		is_pd_gaia = yes
+		# All These Worlds
+		is_planet_class = orbit_chlorogaian
+	}
+}
+
+merg_is_gas_giant = {
+	OR = {
+		is_planet_class = pc_gas_giant
+		# Planetary Diversity
+		is_planet_class = pc_hot_gas_giant
+		is_planet_class = pc_cloudless_gas_giant
+		is_planet_class = pc_cold_gas_giant
+		# Expanded Events
+		is_planet_class = pc_ice_giant
+		# All these worlds
+		is_planet_class = orbit_super_giant
+		is_planet_class = orbit_ammonia-clouded_giant
+		is_planet_class = orbit_water-clouded_giant
+		is_planet_class = orbit_cloudless_giant
+		is_planet_class = orbit_alkaline_giant
+		is_planet_class = orbit_silicate_giant
+		is_planet_class = orbit_frigid_giant
+		is_planet_class = orbit_methane_giant
+		is_planet_class = orbit_turbulent_giant
+		is_planet_class = orbit_temperate_giant
+		is_planet_class = orbit_helium_giant
+		# Azur Lane
+		is_planet_class = pc_azur_gas_giant
+	}
+}
+
+merg_is_hive_world = {
+	OR = {
+		is_planet_class = pc_hive
+		# Gigastructural Engineering & More
+		is_planet_class = pc_ringworld_hive
+		# Planetary Diversity
+		is_pd_hive_world = yes
+		is_pd_hive_arcology = yes
+	}
+}
+
+merg_is_machine_world = {
+	OR = {
+		is_planet_class = pc_machine
+		# Planetary Diversity
+		is_pd_machine = yes
+		is_pd_robot_arcology = yes
+		# Gigastructural Engineering & More
+		is_planet_class = pc_ringworld_machine
+		# Origin - F.C.S.S & M.C.S.S
+		is_planet_class = pc_awaken_ai
+	}
+}
+
+merg_is_nuked = {
+	OR = {
+		is_planet_class = pc_nuked
+		# Planetary Diversity
+		is_planet_class = pc_irradiated
+		# Galaxius
+		is_planet_class = pc_ie_gateway
+		# Giga Diversity
+		is_planet_class = pc_katzenland
+		# All these worlds
+		is_planet_class = orbit_nuked 
+	}
+}
+
+merg_is_ocean = {
+	OR = {
+		is_planet_class = pc_ocean
+		# Planetary Diversity
+		is_planet_class = pc_tidallyaquatic
+		is_pd_ocean = yes
+		# All These Worlds
+		is_planet_class = orbit_water_panthalassic
+		is_planet_class = orbit_archipelagic
+		is_planet_class = orbit_panthalassic
+		is_planet_class = pc_panthalassic
+		is_planet_class = orbit_cryopelagic
+		is_planet_class = orbit_thermopelagic
+		is_planet_class = orbit_panpelagic
+		is_planet_class = pc_panpelagic
+		# Azur Lane
+		is_planet_class = pc_azur_ocean
+	}
+}
+
+merg_is_savannah = {
+	OR = {
+		is_planet_class = pc_savannah
+		# Planetary Diversity
+		is_pd_savannah = yes
+		# All These Worlds
+		is_planet_class = orbit_myciliogenian
+		is_planet_class = pc_myciliogenian
+		is_planet_class = orbit_thermothalassic
+		is_planet_class = orbit_protogenian
+		is_planet_class = pc_protogenian
+		is_planet_class = orbit_alkali
+		is_planet_class = pc_alkali
+	}
+}
+
+merg_is_shielded_world = {
+	OR = {
+		is_planet_class = pc_shielded
+		is_planet_class = pc_ringworld_shielded
+		is_planet_class = pc_habitat_shielded
+		# Ancient Empire
+		is_planet_class = pc_ringworld_shielded
+	}
+}
+
+merg_is_tropical = {
+	OR = {
+		is_planet_class = pc_tropical
+		# Planetary Diversity
+		is_pd_tropical = yes
+		# All These Worlds
+		is_planet_class = orbit_tropicothalassic
+		is_planet_class = orbit_megachloridal
+		is_planet_class = pc_megachloridal
+		is_planet_class = orbit_geotidal_biolumen
+		is_planet_class = pc_geotidal_biolumen
+	}
+}
+
+merg_is_tundra = {
+	OR = {
+		is_planet_class = pc_tundra
+		# Planetary Diversity
+		is_pd_tundra = yes
+		# All These Worlds
+		is_planet_class = orbit_cryothalassic
+		is_planet_class = orbit_stepicos
+		is_planet_class = pc_stepicos
+		is_planet_class = orbit_elos
+		is_planet_class = pc_elos
+	}
+}

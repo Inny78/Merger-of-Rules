@@ -4232,6 +4232,6 @@ is_a_habitable_planet_megastructure = {
 		is_planet_class = pc_infested
 		is_planet_class = pc_matryoshka
 		# Misc
-		merg_is_rad_planet = yes
+		merg_is_nuked = yes
 	}
 }

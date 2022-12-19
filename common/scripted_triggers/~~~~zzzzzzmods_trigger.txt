@@ -627,7 +627,7 @@ afk_target_planet = {
 		uninhabitable_regular_planet = yes
 		# Planetary Diversity
 		is_planet_class = pc_pdshroud
-		merg_is_rad_planet = yes
+		merg_is_nuked = yes
 		# Gigastructures
 		is_planet_class = pc_katzenland
 		# SW:UnknownWorld Shipgirls Story

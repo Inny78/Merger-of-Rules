@@ -26,7 +26,7 @@ colonizable_planet = {
 	OR = {
 		is_planet_class = pc_relic
 		is_planet_city = yes
-		merg_is_rad_planet = yes
+		merg_is_nuked = yes
 		merg_is_hive_world = yes
 		merg_is_machine_world = yes
 		habitable_structure = yes
@@ -442,16 +442,8 @@ is_cold = {
 
 is_fallen_empire = {
 	OR = {
-		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire
-		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_fallen_empire
-		is_country_type = kuat_awakened_fallen_empire
-		is_country_type = awakened_return_kuat_empire
-		# A Deadly Tempest
-		is_country_type = awakened_gate_builders
-		# History of the Lost Empire
-		is_country_type = LsE_fallen_empire
+		merg_is_fallen_empire = yes
+		merg_is_awakened_fe = yes
 	}
 }
 
@@ -551,17 +543,15 @@ has_phototrophic_energy_upkeep = {
 				# Planetary Diversity
 				has_trait = trait_radiotrophic_mutants
 			}
-			planet = { merg_is_rad_planet = no }
+			planet = { merg_is_nuked = no }
 		}
 	}
 }
 
 has_food_upkeep = {
 	species = {
-		NOR = {
-			is_archetype = LITHOID
-			is_robotic_species = yes
-		}
+		NOT = { is_archetype = LITHOID }
+		# Can't check is_robotic_species as it will break hybrids like KANSEN.
 		OR= {
 			is_archetype = BIOLOGICAL
 			# Aquatic Portraits mod
