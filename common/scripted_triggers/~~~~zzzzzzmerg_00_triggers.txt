@@ -442,8 +442,21 @@ is_cold = {
 
 is_fallen_empire = {
 	OR = {
-		merg_is_fallen_empire = yes
-		merg_is_awakened_fe = yes
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		# ZOFE
+		is_country_type = lost_empire
+		is_country_type = original_empire
+		# The Empty Vagrant
+		is_country_type = fallen_empire_ev
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_fallen_empire
+		is_country_type = kuat_awakened_fallen_empire
+		is_country_type = awakened_return_kuat_empire
+		# History of the Lost Empire
+		is_country_type = LsE_fallen_empire
+		# The Empty Vagrant
+		is_country_type = awakened_fallen_empire_ev
 	}
 }
 
