@@ -44,9 +44,6 @@ merg_is_fallen_empire = {
 	optimize_memory
 	OR = {
 		is_country_type = fallen_empire
-		# ZOFE
-		is_country_type = lost_empire
-		is_country_type = original_empire
 		# The Empty Vagrant
 		is_country_type = fallen_empire_ev
 		# SW:KUAT ANCIENT EMPIRE
@@ -66,8 +63,6 @@ merg_is_awakened_fe = {
 		is_country_type = awakened_return_kuat_empire
 		# A Deadly Tempest
 		is_country_type = awakened_gate_builders
-		# ZOFE
-		is_country_type = awakened_original_empire
 		# The Empty Vagrant
 		is_country_type = awakened_fallen_empire_ev
 	}
