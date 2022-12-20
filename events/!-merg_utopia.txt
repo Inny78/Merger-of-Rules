@@ -1,0 +1,210 @@
+namespace = utopia
+
+# Instrument - Pop Upkeep
+country_event = {
+	id = utopia.3340
+	title = "utopia.3340.name"
+	desc = "utopia.3340.desc"
+	picture = GFX_evt_unspeakable_horror
+	show_sound = event_mystic_reveal
+	location = root
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			20 = {
+				set_country_flag = instrument_craving_consumer_goods
+			}
+			20 = {
+				set_country_flag = instrument_craving_alloys
+			}
+			10 = {
+				set_country_flag = instrument_craving_unity
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = exotic_gases
+						value < 5
+					}
+				}
+				set_country_flag = instrument_craving_gas
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = rare_crystals
+						value < 5
+					}
+				}
+				set_country_flag = instrument_craving_crystal
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = volatile_motes
+						value < 5
+					}
+				}
+				set_country_flag = instrument_craving_motes
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = sr_zro
+						value < 1
+					}
+				}
+				set_country_flag = instrument_craving_zro
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = sr_dark_matter
+						value < 1
+					}
+				}
+				set_country_flag = instrument_craving_dark_matter
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = sr_living_metal
+						value < 1
+					}
+				}
+				set_country_flag = instrument_craving_living_metal
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = nanites
+						value < 1
+					}
+				}
+				set_country_flag = instrument_craving_nanites
+			}
+			# ACOT
+			5 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = acot_sr_dark_energy
+						value < 1
+					}
+				}
+				set_country_flag = instrument_craving_dark_energy
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = acot_sr_stellarite
+						value < 1
+					}
+				}
+				set_country_flag = instrument_craving_stellarite
+			}
+			# AOT
+			5 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = aot_sr_runic_power
+						value < 1
+					}
+				}
+				set_country_flag = instrument_craving_runic_power
+			}
+			# Gigas
+			5 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = giga_sr_amb_megaconstruction
+						value < 1
+					}
+				}
+				set_country_flag = instrument_craving_amb_megaconstruction
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = sr_psionic_sublimate
+						value < 1
+					}
+				}
+				set_country_flag = instrument_craving_psionic_sublimate
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = ehof_sr_negative_mass
+						value < 1
+					}
+				}
+				set_country_flag = instrument_craving_negative_mass
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					has_monthly_income = { 
+						resource = ehof_sr_sentient_metal
+						value < 1
+					}
+				}
+				set_country_flag = instrument_craving_sentient_metal
+			}
+		}
+		country_event = { id = utopia.3344 days = 720}
+	}
+
+	option = {
+		name = "utopia.3338.opt.a"
+		add_modifier = {
+			modifier = instrument_cravings
+			days = 720
+		}
+	}
+}
+
+#Instrument - flag cleanup event
+country_event = { 
+	id = utopia.3344
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_country_flag = instrument_craving_consumer_goods
+		remove_country_flag = instrument_craving_alloys
+		remove_country_flag = instrument_craving_unity
+		remove_country_flag = instrument_craving_gas
+		remove_country_flag = instrument_craving_crystal
+		remove_country_flag = instrument_craving_motes
+		remove_country_flag = instrument_craving_zro
+		remove_country_flag = instrument_craving_dark_matter
+		remove_country_flag = instrument_craving_living_metal
+		remove_country_flag = instrument_craving_nanites
+		# ACOT
+		remove_country_flag = instrument_craving_dark_energy
+		remove_country_flag = instrument_craving_stellarite
+		# AOT
+		remove_country_flag = instrument_craving_runic_power
+		# Gigas
+		remove_country_flag = instrument_craving_amb_megaconstruction
+		remove_country_flag = instrument_craving_psionic_sublimate
+		remove_country_flag = instrument_craving_negative_mass
+		remove_country_flag = instrument_craving_sentient_metal
+	}
+}

@@ -1,0 +1,172 @@
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_consumer_goods
+		}
+	}
+	consumer_goods = @instrument_upkeep_common
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_alloys
+		}
+	}
+	alloys = @instrument_upkeep_rare
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_unity
+		}
+	}
+	unity = @instrument_upkeep_rare
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_gas
+		}
+	}
+	exotic_gases = @instrument_upkeep_very_rare
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_crystal
+		}
+	}
+	rare_crystals = @instrument_upkeep_very_rare
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_motes
+		}
+	}
+	volatile_motes = @instrument_upkeep_very_rare
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_zro
+		}
+	}
+	sr_zro = @instrument_upkeep_legendary
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_dark_matter
+		}
+	}
+	sr_dark_matter = @instrument_upkeep_legendary
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_living_metal
+		}
+	}
+	sr_living_metal = @instrument_upkeep_epic
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_nanites
+		}
+	}
+	nanites = @instrument_upkeep_epic
+}
+
+# ACOT
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_dark_energy
+		}
+	}
+	acot_sr_dark_energy = @instrument_upkeep_epic
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_stellarite
+		}
+	}
+	acot_sr_stellarite = @instrument_upkeep_epic
+}
+
+# AOT
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_runic_power
+		}
+	}
+	aot_sr_runic_power = @instrument_upkeep_epic
+}
+
+# Gigas
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_amb_megaconstruction
+		}
+	}
+	giga_sr_amb_megaconstruction = @instrument_upkeep_epic
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_psionic_sublimate
+		}
+	}
+	sr_psionic_sublimate = @instrument_upkeep_epic
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_negative_mass
+		}
+	}
+	ehof_sr_negative_mass = @instrument_upkeep_epic
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_sentient_metal
+		}
+	}
+	ehof_sr_sentient_metal = @instrument_upkeep_epic
+}
