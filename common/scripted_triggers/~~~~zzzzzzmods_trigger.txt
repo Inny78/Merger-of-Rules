@@ -648,7 +648,12 @@ afk_target_planet = {
 ############################### Warship Girls R and MIST Species ###############################
 is_habitat_wg = {
 	optimize_memory
-	merg_is_habitat = yes
+	OR = {
+		is_planet_class = pc_flat_world
+		is_planet_class = pc_squareworld_habitable
+		is_planet_class = pc_interstellar_habitat
+		merg_is_habitat = yes
+	}
 }
 
 is_default_and_fallen_country = {

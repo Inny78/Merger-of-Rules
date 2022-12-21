@@ -2884,7 +2884,7 @@ can_support_branch_offices = {
 			has_zofe_mc = no
 			AND = {
 				has_zofe_mc = yes
-				is_country_type = ascended_empire
+				NOT = { is_country_type = ascended_empire }
 			}
 		}
 	}
