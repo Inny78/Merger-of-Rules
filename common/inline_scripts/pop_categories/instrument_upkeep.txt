@@ -135,6 +135,16 @@ upkeep = {
 	trigger = {
 		has_trait = trait_psionic
 		owner = {
+			has_country_flag = instrument_craving_iodizium
+		}
+	}
+	sr_iodizium = @instrument_upkeep_epic
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
 			has_country_flag = instrument_craving_amb_megaconstruction
 		}
 	}
@@ -169,4 +179,45 @@ upkeep = {
 		}
 	}
 	ehof_sr_sentient_metal = @instrument_upkeep_epic
+}
+
+# Planetary Diversity
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_eludium
+		}
+	}
+	sr_eludium = @instrument_upkeep_epic
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_acean
+		}
+	}
+	sr_acean = @instrument_upkeep_epic
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_rad_bloom
+		}
+	}
+	sr_rad_bloom = @instrument_upkeep_epic
+}
+
+upkeep = {
+	trigger = {
+		has_trait = trait_psionic
+		owner = {
+			has_country_flag = instrument_craving_tiyanki_parts
+		}
+	}
+	sr_tiyanki_parts = @instrument_upkeep_epic
 }
