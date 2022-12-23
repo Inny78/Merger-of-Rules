@@ -95,6 +95,11 @@ has_upgraded_capital = {
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
 				has_building = building_eternal_palace
+				# ZOFE Ascension
+				has_building = building_fe_palace
+				has_building = building_ae_palace
+				has_building = building_lt_palace
+				has_building = building_oe_palace
 			}
 		}
 	}
@@ -196,6 +201,11 @@ has_upgraded_capital = {
 				has_building = building_stellarite_galactic_machine_capital
 				# All That Is GRIMDARK
 				has_building = building_system_capital_gr
+				# ZOFE Ascension
+				has_building = building_fe_palace
+				has_building = building_ae_palace
+				has_building = building_lt_palace
+				has_building = building_oe_palace
 			}
 		}
 	}
@@ -293,6 +303,11 @@ has_major_upgraded_capital = {
 				# Twinks Eternal
 				has_building = building_eternal_palace
 				has_building = building_eternal_nexus_ai
+				# ZOFE Ascension
+				has_building = building_fe_palace
+				has_building = building_ae_palace
+				has_building = building_lt_palace
+				has_building = building_oe_palace
 			}
 		}
 	}
@@ -391,6 +406,11 @@ has_major_upgraded_capital = {
 				has_building = building_stellarite_galactic_machine_capital
 				# All that is GRIMDARK
 				has_building = building_system_capital_gr
+				# ZOFE Ascension
+				has_building = building_fe_palace
+				has_building = building_ae_palace
+				has_building = building_lt_palace
+				has_building = building_oe_palace
 			}
 		}
 	}
@@ -488,6 +508,11 @@ has_fully_upgraded_capital = {
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
 				has_building = building_eternal_palace
+				# ZOFE Ascension
+				has_building = building_fe_palace
+				has_building = building_ae_palace
+				has_building = building_lt_palace
+				has_building = building_oe_palace
 			}
 		}
 	}
@@ -580,6 +605,11 @@ has_fully_upgraded_capital = {
 				has_building = building_stellarite_galactic_machine_capital
 				# All that is GRIMDARK
 				has_building = building_system_capital_gr
+				# ZOFE Ascension
+				has_building = building_fe_palace
+				has_building = building_ae_palace
+				has_building = building_lt_palace
+				has_building = building_oe_palace
 			}
 		}
 	}

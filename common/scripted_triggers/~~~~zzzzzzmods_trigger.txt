@@ -350,7 +350,12 @@ is_zofe_compatible = {
 is_zofe_megacorp = {
 	optimize_memory
 	is_zofe_country = yes
-	is_megacorp = yes
+	OR = {
+		is_megacorp = yes
+		# Forgotten Queens
+		has_valid_civic = civic_mutualistic_behavior
+		has_valid_civic = civic_machine_trading
+	}
 }
 
 ############################### Acquisition of Technologies ###############################
@@ -935,9 +940,13 @@ cruel_has_shipyard = {
 cruel_can_trade = {
 	OR = {
 		is_gestalt = no
+		# Forgotten Queens
 		AND = {
 			is_gestalt = yes
-			is_megacorp = yes
+			OR = {
+				has_valid_civic = civic_mutualistic_behavior
+				has_valid_civic = civic_machine_trading
+			}
 		}
 	}
 }

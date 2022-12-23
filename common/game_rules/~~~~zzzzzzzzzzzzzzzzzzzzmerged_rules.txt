@@ -2808,6 +2808,9 @@ can_build_branch_offices = {
 			# Asssault Lily
 			has_authority = auth_AL_democratic
 			has_authority = auth_AL_arsenal
+			# Forgotten Queens
+			has_valid_civic = civic_mutualistic_behavior
+			has_valid_civic = civic_machine_trading
 		}
 	}
 }

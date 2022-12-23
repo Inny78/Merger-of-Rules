@@ -157,3 +157,7 @@ building_system_capital_gr = { potential = { always = no } allow = { always = no
 building_tw_arcane_hold = { potential = { always = no } allow = { always = no } }
 building_wsg_foundry = { potential = { always = no } allow = { always = no } }
 PR_BLDN_Res_food_farm_T4 = { potential = { always = no } allow = { always = no } }
+building_fe_palace = { potential = { always = no } allow = { always = no } }
+building_ae_palace = { potential = { always = no } allow = { always = no } }
+building_lt_palace = { potential = { always = no } allow = { always = no } }
+building_oe_palace = { potential = { always = no } allow = { always = no } }

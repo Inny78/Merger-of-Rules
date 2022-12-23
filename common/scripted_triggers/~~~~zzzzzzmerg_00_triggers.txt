@@ -261,8 +261,6 @@ is_megacorp = {
 		# Expanded Traits, Civics, Pops, and More
 		has_authority = auth_private
 		has_authority = auth_cooperative		# Also More Corporate Authorities
-		# Expanded Gestalts: Forgotten Queens
-		has_valid_civic = civic_mutualistic_behavior
 		# More Corporate Authorities
 		has_authority = auth_corporate_fiefdom
 	}
