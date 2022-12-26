@@ -1809,6 +1809,8 @@ can_orbital_bombard = {
 				# THE ABYSS CONTRACT
 				is_country_type = TAC_debris_ship_country
 				is_country_type = TAC_machine_crisis_country
+				# BlueArchive
+				is_country_type = Aris_mid
 			}
 		}
 		AND = {
@@ -2409,6 +2411,8 @@ system_blocks_sensors = {
 				}
 			}
 		}
+		# Destiny: The Darkness Crisis
+		has_star_flag = "black_fleet_in_system"
 	}
 }
 
@@ -2490,6 +2494,8 @@ can_enter_system_by_jump = {
 					has_star_flag = TAC_ag_signal_system
 					# Assault Lily
 					has_star_flag = al_huge_home_bed
+					# BlueArchive
+					has_star_flag = BA_FE_SYS
 				}
 			}
 			# Reworked Advanced Ascension

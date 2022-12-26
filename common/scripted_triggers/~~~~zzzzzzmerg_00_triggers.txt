@@ -172,12 +172,14 @@ is_crisis_faction = {
 		# Gigastructural Engineering & More
 		is_country_type = katzenartig_imperium
 		is_country_type = dormant_aeternum
-		# Solar Storm
-		is_country_type = abyssal_host_invaders_type
+		# Destiny: The Darkness Crisis
+		is_country_type = darkness_country
 		# Shroud Rising
 		is_country_type = shroud_cult
 		is_country_type = shroud_entities
 		is_country_type = shroud_horrors
+		# Solar Storm
+		is_country_type = abyssal_host_invaders_type
 	}
 }
 

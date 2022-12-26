@@ -13,6 +13,7 @@ ag_kae_ge_invasion_country = { ai = { enabled = no } }
 ag_kuat_invasion_country = { ai = { enabled = no } }
 al_fallen_empire = { ai = { enabled = no } }
 al_fallen_empire_not_ai = { ai = { enabled = no } }
+Aris_mid = { ai = { enabled = no } }
 ascended_empire = { ai = { enabled = no } }
 awakened_fallen_empire_ev = { ai = { enabled = no } }
 awakened_gate_builders = { ai = { enabled = no } }
@@ -22,6 +23,7 @@ awakened_return_kuat_empire = { ai = { enabled = no } }
 berserker_awoken_hive = { ai = { enabled = no } }
 blokkat_stripminers = { ai = { enabled = no } }
 compound_empire = { ai = { enabled = no } }
+darkness_country = { ai = { enabled = no } }
 default_ev = { ai = { enabled = no } }
 dormant_aeternum = { ai = { enabled = no } }
 ds_nomads = { ai = { enabled = no } }
