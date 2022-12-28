@@ -1509,3 +1509,9 @@ is_mineral_deposit = {
 		is_deposit_type = gpm_d_giant_skeleton
 	}
 }
+
+# Kancolle
+is_gas_giant = {
+	optimize_memory
+	merg_is_gas_giant = yes
+}

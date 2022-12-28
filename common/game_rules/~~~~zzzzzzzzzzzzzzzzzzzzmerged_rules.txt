@@ -2786,6 +2786,34 @@ can_build_branch_offices = {
 		fail_text = BRANCH_OFFICE_NOT_MEGACORP
 		OR = {
 			is_megacorp = yes
+			# Arknights Near Future
+			has_valid_civic = civic_business_union
+			# Asssault Lily
+			has_authority = auth_AL_democratic
+			has_authority = auth_AL_arsenal
+			# Azur Lane Stellaris DLC
+			has_authority = auth_azur_lane_0
+			has_authority = auth_azur_lane_1
+			has_authority = auth_azur_lane_2
+			has_authority = auth_azur_lane_K
+			# BlueArchive species pack
+			has_authority = auth_kivotos
+			# Girls Frontline
+			has_civic = civic_gf_GK
+			# Kancolle
+			AND = {
+				has_authority = auth_kancolle
+				OR = { has_tradition = tr_akashi_shop_open_the_kanmusu_company }
+			}
+			# More Corporate Authorities
+			has_valid_civic = civic_galactic_sovereign_megacorp
+			# Rogue Maid
+			has_ascension_perk = ap_expactriate_service
+			# Voyage to Eternity
+			KZ_VOY_can_build_branch_offices = yes
+			# Forgotten Queens
+			has_valid_civic = civic_mutualistic_behavior
+			has_valid_civic = civic_machine_trading
 			# Warship Girls R And MIST Species
 			AND = {
 				has_authority = auth_shenhai
@@ -2794,29 +2822,6 @@ can_build_branch_offices = {
 					has_valid_civic = civic_sh_criminal_syndicate
 				}
 			}
-			# Azur Lane Stellaris DLC
-			has_authority = auth_azur_lane_0
-			has_authority = auth_azur_lane_1
-			has_authority = auth_azur_lane_2
-			has_authority = auth_azur_lane_K
-			# More Corporate Authorities
-			has_valid_civic = civic_galactic_sovereign_megacorp
-			# Arknights Near Future
-			has_valid_civic = civic_business_union
-			# Girls Frontline
-			has_civic = civic_gf_GK
-			# Rogue Maid
-			has_ascension_perk = ap_expactriate_service
-			# BlueArchive species pack
-			has_authority = auth_kivotos
-			# Voyage to Eternity
-			KZ_VOY_can_build_branch_offices = yes
-			# Asssault Lily
-			has_authority = auth_AL_democratic
-			has_authority = auth_AL_arsenal
-			# Forgotten Queens
-			has_valid_civic = civic_mutualistic_behavior
-			has_valid_civic = civic_machine_trading
 		}
 	}
 }
@@ -2828,11 +2833,13 @@ can_support_branch_offices = {
 		NOR = {
 			merg_is_fallen_empire = yes
 			merg_is_awakened_fe = yes
-			# Warship Girls R And MIST Species
-			has_authority = auth_azur_dictatorial
 			# Assault Lily
 			is_country_type = al_fallen_empire
 			is_country_type = al_fallen_empire_no_ai
+			# Kancolle
+			has_authority = auth_kc_fe
+			# Warship Girls R And MIST Species
+			has_authority = auth_azur_dictatorial
 		}
 	}
 	custom_tooltip = {
@@ -2919,20 +2926,22 @@ can_build_branch_office_on_planet = {
 			root = {
 				OR = {
 					is_criminal_syndicate = yes
+					# Assault Lily
+					has_authority = auth_AL_democratic
+					has_authority = auth_AL_arsenal
 					# Azur Lane Stellaris DLC
 					has_authority = auth_azur_lane_1
+					# BlueArchive species pack
+					has_ascension_perk = ap_BA_new_frontier
+					# Kancolle
+					has_authority = auth_kancolle
+					# Voyage to Eternity
+					KZ_VOY_can_build_branch_offices = yes
 					# ZOFE Megacorp
 					AND = {
 						is_zofe_country = yes
 						is_megacorp = yes
 					}
-					# BlueArchive species pack
-					has_ascension_perk = ap_BA_new_frontier
-					# Voyage to Eternity
-					KZ_VOY_can_build_branch_offices = yes
-					# Assault Lily
-					has_authority = auth_AL_democratic
-					has_authority = auth_AL_arsenal
 				}
 			}
 			owner = { has_commercial_pact = root }
@@ -3639,7 +3648,7 @@ can_add_negative_traits_organic = {
 		# Nirvana Empire DLC
 		is_nirvana_empire = yes
 		# Kancolle
-		has_technology = tech_kancolle_high_DNA
+		has_tradition = tr_shipbuilding_adjustment
 	}
 	# Better Performances and Utilities
 	NOT = { has_country_flag = PF_flg_cntr_STOP_ai_species_mod }
@@ -3663,7 +3672,7 @@ can_remove_positive_traits_organic = {
 				# Nirvana Empire DLC
 				is_nirvana_empire = yes
 				# Kancolle
-				has_technology = tech_kancolle_high_DNA
+				has_tradition = tr_shipbuilding_adjustment
 			}
 		}
 		AND = {
@@ -3681,10 +3690,12 @@ can_modify_organic_portraits = {
 	has_utopia = yes
 	OR = {
 		has_tradition = tr_genetics_enhanced_expression
-		# Warship Girls R And MIST Species
-		has_wsg_genemodding_tech = yes
+		# Kancolle
+		has_tradition = tr_shipbuilding_adjustment
 		# Madoka Magica NEW
 		has_str_genemodding_tech = yes
+		# Warship Girls R And MIST Species
+		has_wsg_genemodding_tech = yes
 	}
 	# Better Performances and Utilities
 	NOT = { has_country_flag = PF_flg_cntr_STOP_ai_species_mod }
@@ -3902,26 +3913,31 @@ can_dismiss_leader = {
 			}
 		}
 	}
-	# Warship Girls R And MIST Species
+	# Assault Lily
 	custom_tooltip = {
-		fail_text = "cannot_fire_wg_leader"
-		NOT = { has_leader_flag = wsg_event_leader }
-		is_special_affection_leader = no
+		fail_text = "requires_not_special_lily_leader"
+		NOT = { has_leader_flag = AL_special_lily_leader }
 	}
 	# Civil Wars
 	custom_tooltip = {
 		fail_text = "cannot_fire_leader_during_crisis"
 		NOT = { has_leader_flag = cannot_be_fired }
 	}
+	# Kancolle
+	custom_tooltip = {
+		fail_text = "cannot_fire_kancolle_leader"
+		is_special_kancolle_leader = no
+	}
 	# StellarisCraft
 	custom_tooltip = {
 		fail_text = "cannot_fire_StellarisCraft_leader"
 		NOT = { has_leader_flag = StellarisCraft_event_leader }
 	}
-	# Assault Lily
+	# Warship Girls R And MIST Species
 	custom_tooltip = {
-		fail_text = "requires_not_special_lily_leader"
-		NOT = { has_leader_flag = AL_special_lily_leader }
+		fail_text = "cannot_fire_wg_leader"
+		NOT = { has_leader_flag = wsg_event_leader }
+		is_special_affection_leader = no
 	}
 }
 
