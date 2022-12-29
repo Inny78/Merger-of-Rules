@@ -231,16 +231,19 @@ is_regular_empire = {
 		is_country_type = default
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
-		# ZOFE
-		is_zofe_country = yes
-		# The Empty Vagrant
-		is_country_type = default_ev
-		is_country_type = fallen_empire_ev
-		is_country_type = awakened_fallen_empire_ev
+		# Human Fallen Empires
+		is_country_type = hfe_fallen
+		is_country_type = hfe_pirate
 		# Merger of Rules
 		# prevents these special countries from destroying their own buildings and districts in their colonies
 		is_country_type = gate_builders
 		is_country_type = awakened_marauders
+		# The Empty Vagrant
+		is_country_type = default_ev
+		is_country_type = fallen_empire_ev
+		is_country_type = awakened_fallen_empire_ev
+		# ZOFE
+		is_zofe_country = yes
 	}
 	is_gestalt = no
 }
@@ -641,8 +644,6 @@ has_research_building = {
 		has_building = building_phanon_institute
 		has_building = building_stellarite_enigmatic_lab
 		has_building = building_stellarite_institute
-		# Gigastructural Engineering & More
-		giga_has_research_building = yes
 		# Ancient Empire
 		has_building = ag_ancient_structure
 		has_building = ag_ancient_lab
@@ -663,20 +664,24 @@ has_research_building = {
 		has_building = apsr3_building_part3
 		has_building = apsr3_building_part4
 		has_building = apsr15_building_part22
-		# Plentiful Traditions
-		has_building = building_plentiful_traditions_university_of_wisdom
-		has_building = building_plentiful_traditions_cybernetics_facility
-		has_building = building_plentiful_traditions_experimental_weapons_facility
-		has_building = building_plentiful_traditions_biogenesis_lab
 		# EUTAB
 		has_building = building_institute
 		has_building = building_supercomputer
+		# Gigastructural Engineering & More
+		giga_has_research_building = yes
+		# Human Fallen Empires
+		has_building = hfe_building_thoth_module_science
 		# Kancolle
 		has_building = building_kancolle_yubari_research1
 		has_building = building_kancolle_yubari_research2
 		has_building = building_kancolle_yubari_research3
 		# Planetary Diversity
 		has_building = building_storm_lab
+		# Plentiful Traditions
+		has_building = building_plentiful_traditions_university_of_wisdom
+		has_building = building_plentiful_traditions_cybernetics_facility
+		has_building = building_plentiful_traditions_experimental_weapons_facility
+		has_building = building_plentiful_traditions_biogenesis_lab
 	}
 }
 
@@ -717,8 +722,16 @@ has_any_farming_district_or_buildings = {
 		has_district = district_rw_farming
 		has_district = district_farming_uncapped
 		has_building = building_hydroponics_farm
+		# APSR
+		has_building = apsr15_building_part32
+		has_building = apsr15_building_part33
+		has_building = apsr19_building_part_b1
+		has_building = apsr19_building_part_b2
+		has_building = apsr19_building_part_b3
 		# Gigastructures
         giga_has_any_farming_district_or_buildings = yes
+		# Human Fallen Empires
+		has_building = hfe_building_thoth_module_food
 		# Production Revolution
 		has_building = PR_BLDN_Res_food_farm_T4
 		has_district = PR_DSTR_farming
@@ -727,14 +740,6 @@ has_any_farming_district_or_buildings = {
 		# Plentiful Traditions
 		has_building = building_plentiful_traditions_pillar_of_affliction
 		has_building = building_plentiful_traditions_advanced_pillar_of_affliction
-		# EUTAB
-		has_building = building_hydroponics_farm
-		# APSR
-		has_building = apsr15_building_part32
-		has_building = apsr15_building_part33
-		has_building = apsr19_building_part_b1
-		has_building = apsr19_building_part_b2
-		has_building = apsr19_building_part_b3
     }
 }
 
@@ -761,15 +766,6 @@ has_any_generator_district_or_building = {
         has_district = district_rw_generator
         has_building = building_betharian_power_plant
 		has_building = building_waste_reprocessing_center
-		# Gigastructures
-        giga_has_any_generator_district_or_building = yes
- 		# Production Revolution
-		has_district = PR_DSTR_generator
-		has_district = PR_DSTR_generator_uncapped
-		has_district = PR_DSTR_rw_generator
-		has_district = PR_DSTR_hab_energy
-		# Plentiful Traditions
-		has_building = building_plentiful_traditions_trading_depot
 		# APSR
 		has_building = apsr15_building_part21
 		has_building = apsr15_building_part31
@@ -779,6 +775,17 @@ has_any_generator_district_or_building = {
 		has_building = apsr19_building_part_m1
 		has_building = apsr19_building_part_m2
 		has_building = apsr19_building_part_m3
+		# Gigastructures
+        giga_has_any_generator_district_or_building = yes
+		# Human Fallen Empires
+		has_building = hfe_building_thoth_module_energy
+		# Plentiful Traditions
+		has_building = building_plentiful_traditions_trading_depot
+ 		# Production Revolution
+		has_district = PR_DSTR_generator
+		has_district = PR_DSTR_generator_uncapped
+		has_district = PR_DSTR_rw_generator
+		has_district = PR_DSTR_hab_energy
 	}
 }
 

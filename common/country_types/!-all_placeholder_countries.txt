@@ -30,6 +30,9 @@ ds_nomads = { ai = { enabled = no } }
 eternal_empire = { ai = { enabled = no } }
 ev_leviathans_crisis = { ai = { enabled = no } }
 fallen_empire_ev = { ai = { enabled = no } }
+hfe_fallen = { ai = { enabled = no } }
+hfe_features_exodus = { ai = { enabled = no } }
+hfe_pirate = { ai = { enabled = no } }
 katzenartig_imperium = { ai = { enabled = no } }
 kuat_awakened_fallen_empire = { ai = { enabled = no } }
 kuat_fallen_empire = { ai = { enabled = no } }

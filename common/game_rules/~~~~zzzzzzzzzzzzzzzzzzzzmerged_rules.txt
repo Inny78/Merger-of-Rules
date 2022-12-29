@@ -897,6 +897,8 @@ can_colonize_outside_borders = {
 	exists = root
 	root = {
 		OR = {
+			# Human Fallen Empires
+			is_country_type = hfe_features_exodus
 			# The Empty Vagrant
 			is_country_type = ev_leviathans_crisis
 			# Project Gestalt
@@ -1333,10 +1335,10 @@ can_species_procreate = {
 		}
 		has_citizenship_type = { type = citizenship_slavery country = root.owner }
 	}
+	# Human Fallen Empires
+	NOT = { has_trait = hfe_species_trait_brainworm }
 	# Vanilla
-	NOT = {
-		has_species_flag = nivlac_no_procreation
-	}
+	NOT = { has_species_flag = nivlac_no_procreation }
 	if = {
 		limit = { has_trait = trait_necrophage }
 		NOT = {
@@ -2800,6 +2802,8 @@ can_build_branch_offices = {
 			has_authority = auth_kivotos
 			# Girls Frontline
 			has_civic = civic_gf_GK
+			# Human Fallen Empires
+			is_country_type = hfe_pirate
 			# Kancolle
 			AND = {
 				has_authority = auth_kancolle
@@ -2933,6 +2937,11 @@ can_build_branch_office_on_planet = {
 					has_authority = auth_azur_lane_1
 					# BlueArchive species pack
 					has_ascension_perk = ap_BA_new_frontier
+					# Human Fallen Empires
+					AND = {
+						is_country_type = hfe_pirate
+						is_forced_friendly = prev.owner
+					}
 					# Kancolle
 					has_authority = auth_kancolle
 					# Voyage to Eternity
@@ -3493,6 +3502,8 @@ can_pop_auto_migrate = {
 				ideological_discomfort = yes
 				is_enslaved = yes
 			}
+			# Human Fallen Empires
+			hfe_trigger_unemployed_auto_migrate = yes
 		}
 	}
 	custom_tooltip = {

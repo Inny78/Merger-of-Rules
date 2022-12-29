@@ -1442,6 +1442,7 @@ KZ_VOY_has_communications_normal_country = {
 
 # Infinity Stones
 infmod_is_relevant = {
+	optimize_memory
 	OR = {
 		merg_is_default_empire = yes
 		merg_is_fallen_empire = yes
@@ -1451,6 +1452,7 @@ infmod_is_relevant = {
 
 # Real Space
 has_mineral_deposit = {
+	optimize_memory
 	OR = {
 		has_deposit = d_veiny_cliffs
 		has_deposit = d_mineral_fields
@@ -1481,6 +1483,7 @@ has_mineral_deposit = {
 }
 
 is_mineral_deposit = {
+	optimize_memory
 	OR = {
 		is_deposit_type = d_veiny_cliffs
 		is_deposit_type = d_mineral_fields
@@ -1514,4 +1517,9 @@ is_mineral_deposit = {
 is_gas_giant = {
 	optimize_memory
 	merg_is_gas_giant = yes
+}
+
+# Human Fallen Empires
+hfe_trigger_is_asteroid = {
+	is_asteroid = yes
 }

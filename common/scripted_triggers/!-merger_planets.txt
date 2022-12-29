@@ -148,14 +148,17 @@ merg_is_machine_world = {
 merg_is_nuked = {
 	OR = {
 		is_planet_class = pc_nuked
-		# Planetary Diversity
-		is_planet_class = pc_irradiated
+		# All these worlds
+		is_planet_class = orbit_nuked
 		# Galaxius
 		is_planet_class = pc_ie_gateway
-		# Giga Diversity
+		# Gigastructural Engineering & More
 		is_planet_class = pc_katzenland
-		# All these worlds
-		is_planet_class = orbit_nuked 
+		# Human Fallen Empires
+		is_planet_class = hfe_pc_memorial
+		is_planet_class = hfe_pc_urbanism
+		# Planetary Diversity
+		is_planet_class = pc_irradiated
 	}
 }
 
