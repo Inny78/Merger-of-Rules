@@ -103,7 +103,7 @@ can_add_claim = {
 				}
 			}
 		}
-	} 
+	}
 	custom_tooltip = {
 		fail_text = CANNOT_ADD_CLAIM_DEVOURING_SWARM
 		NAND = {

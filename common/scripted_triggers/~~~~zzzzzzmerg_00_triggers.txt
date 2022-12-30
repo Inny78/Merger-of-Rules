@@ -447,16 +447,16 @@ is_fallen_empire = {
 	OR = {
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
-		# The Empty Vagrant
-		is_country_type = fallen_empire_ev
+		# History of the Lost Empire
+		is_country_type = LsE_fallen_empire
 		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_fallen_empire
 		is_country_type = kuat_awakened_fallen_empire
 		is_country_type = awakened_return_kuat_empire
-		# History of the Lost Empire
-		is_country_type = LsE_fallen_empire
 		# The Empty Vagrant
+		is_country_type = fallen_empire_ev
 		is_country_type = awakened_fallen_empire_ev
+		# With its last submod, ZOFE's fallen and awakened empires work differently and should not be here.
 	}
 }
 

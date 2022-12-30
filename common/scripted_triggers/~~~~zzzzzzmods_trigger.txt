@@ -1523,3 +1523,84 @@ is_gas_giant = {
 hfe_trigger_is_asteroid = {
 	is_asteroid = yes
 }
+
+hfe_trigger_is_fallen = {
+	or = {
+		is_fallen_empire = yes
+		hfe_trigger_is_human_fallen = yes
+	}
+}
+
+hfe_trigger_system_in_free_space = {
+	hfe_trigger_system_in_someones_space = no
+	any_system = { has_hyperlane_to = prev }
+	merg_is_void_system = no
+}
+
+hfe_trigger_terminator_event = {
+	is_at_war = no
+	has_country_flag = hfe_marked_as_human
+	exists = ruler.species
+	ruler.species = {
+		or = {
+			is_species_class = HUM
+			is_same_species = prev
+		}
+	}
+	exists = capital_scope
+	capital_scope = {
+		or = {
+			habitable_structure = yes
+			merg_is_tropical = yes
+			merg_is_continental = yes
+			merg_is_ocean = yes
+			merg_is_gaia = yes
+			merg_is_desert = yes
+			merg_is_arid = yes
+			merg_is_savannah = yes
+			merg_is_tundra = yes
+			merg_is_arctic = yes
+			merg_is_alpine = yes
+			merg_is_nuked = yes
+		}
+	}
+	any_relation = {
+		opinion = {
+			who = prev
+			value > 100
+		}
+	}
+	any_planet_within_border = {
+		or = {
+			merg_is_desert = yes
+			merg_is_arid = yes
+			merg_is_savannah = yes
+		}
+		not = {
+			is_planet = prev.capital_scope
+		}
+	}
+	any_planet_within_border = {
+		merg_is_ocean = yes
+		not = {
+			is_planet = prev.capital_scope
+		}
+	}
+}
+
+hfe_trigger_ascension_points = {
+	custom_tooltip = {
+		fail_text = hfe_ascension_points
+		not = {
+			calc_true_if = {
+				amount = 2
+				has_ascension_perk = ap_engineered_evolution
+				has_tradition = tr_genetics_finish
+				has_ascension_perk = ap_the_flesh_is_weak
+				has_tradition = tr_synthetics_finish
+				has_ascension_perk = ap_mind_over_matter
+				has_tradition = tr_psionics_psionic_assimilation
+			}
+		}
+	}
+}

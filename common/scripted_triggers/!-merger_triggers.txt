@@ -44,12 +44,14 @@ merg_is_fallen_empire = {
 	optimize_memory
 	OR = {
 		is_country_type = fallen_empire
-		# The Empty Vagrant
-		is_country_type = fallen_empire_ev
-		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_fallen_empire
 		# History of the Lost Empire
 		is_country_type = LsE_fallen_empire
+		# Human Fallen Empire
+		is_country_type = hfe_fallen
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_fallen_empire
+		# The Empty Vagrant
+		is_country_type = fallen_empire_ev
 	}
 }
 
