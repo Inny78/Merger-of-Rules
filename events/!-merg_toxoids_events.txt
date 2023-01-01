@@ -18,7 +18,7 @@ planet_event = {
 			has_building = building_coordinated_fulfillment_center_2
 		}
 		NOR = {
-			merg_is_rad_planet = yes
+			merg_is_nuked = yes
 			is_planet_city = yes
 			is_planet_class = pc_relic
 			is_planet_class = pc_milarc_relic
@@ -29,6 +29,7 @@ planet_event = {
 			merg_is_hab_ringworld = yes
 			merg_is_forbidden_target = yes
 			habitable_structure = yes
+			is_giga_maginot_world = yes
 		}
 		is_pd_habitat = no
 		is_pd_planetary_megaproject = no

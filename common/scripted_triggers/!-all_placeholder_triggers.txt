@@ -14,6 +14,7 @@ giga_has_any_industrial_district = { always = no }
 giga_has_any_farming_district_or_buildings = { always = no }
 giga_has_any_mining_district = { always = no }
 giga_has_any_generator_district_or_building = { always = no }
+giga_has_artificial_preference_trait = { always = no }
 giga_has_research_building = { always = no }
 giga_is_birch_world = { always = no }
 has_apsr_modifiers = { always = no }
@@ -37,6 +38,7 @@ is_cruel_mega = { always = no }
 is_civic_materialist = { always = no }
 is_civic_militarist = { always = no }
 is_giga_habitat = { always = no }
+is_giga_maginot_world = { always = no }
 is_giga_ringworld = { always = no }
 is_khan_country_type = { always = no }
 is_KZ_VOY_organic_species = { always = no }
