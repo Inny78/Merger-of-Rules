@@ -39,7 +39,7 @@ planet_event = {
 						merg_is_hab_ringworld = yes
 						merg_is_habitat = yes
 						merg_is_gas_giant = yes
-						merg_is_rad_planet = yes
+						merg_is_nuked = yes
 						merg_is_forbidden_target = no
 						# Gigastructural Engineering & More
 						giga_habitable_structure = yes
