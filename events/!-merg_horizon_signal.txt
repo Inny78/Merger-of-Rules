@@ -18,7 +18,9 @@ planet_event = {
 
 	is_triggered_only = yes
 
-	trigger = { owner = { is_ai = no } }
+	pre_triggers = {
+		is_ai = no
+	}
 
 	immediate = {
 		solar_system = {
