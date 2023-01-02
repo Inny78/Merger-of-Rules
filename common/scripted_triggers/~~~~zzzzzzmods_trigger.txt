@@ -319,7 +319,7 @@ is_valid_kaiser_moon_candidate = {
 		is_planet_class = pc_barren_cold
 		is_planet_class = pc_molten
 		is_planet_class = pc_frozen
-		#Added PD wolds
+		# Planetary Diversity
 		is_planet_class = pc_carbon
 		# All These Worlds
 		is_planet_class = orbit_molten
@@ -995,37 +995,15 @@ gpm_is_planet_class_toxic = {
 }
 
 gpm_is_planet_class_frozen = {
-	optimize_memory
-	OR = {
-		is_planet_class = pc_frozen
-		# Planetary Diversity
-		is_planet_class = pc_subglacial
-		is_planet_class = pc_hydrocarbon
-	}
+	merg_is_frozen = yes
 }
 
 gpm_is_planet_class_normal_habitable = {
-	optimize_memory
 	habitable_planet = yes
 }
 
 gpm_is_planet_class_nuked = {
-	optimize_memory
-	OR = {
-		is_planet_class = pc_nuked
-		# Planetary Diversity
-		is_planet_class = pc_ash
-		is_planet_class = pc_irradiated
-		is_planet_class = pc_graveyard
-		is_planet_class = pc_eyeball
-		is_planet_class = pc_lanthanide
-		# Galaxius
-		is_planet_class = pc_ie_gateway
-		# Real Space
-		is_planet_class = pc_depleted
-		# All these worlds
-		is_planet_class = orbit_nuked 
-	}
+	merg_is_nuked = yes
 }
 
 gpm_is_planet_class_gas_giant = {
@@ -1186,6 +1164,15 @@ eligible_for_living_metal = {
 		merg_is_gas_giant = yes
 		is_star = yes
 	}
+}
+
+is_terraforming_candidate = {
+	optimize_memory
+	# OR = {
+		has_modifier = terraforming_candidate
+		has_modifier = toxic_terraforming_candidate
+		# has_modifier = terraforming_candidate_precursor
+	# }
 }
 
 # Scripted Trigger Undercoat

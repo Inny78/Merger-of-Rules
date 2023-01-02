@@ -1,15 +1,15 @@
 # Dummy modifiers - to be overwritten by their respective mods. File is FIOS!
 # Irony this is a placeholder file please ignore it
-apocalypse = { }
-catastrophe_approach = { }
-deteriorating_ecosystem = { }
-mzilli_events_dying_world = { }
-pdammoniaatmosphere = { }
-pdashatmosphere = { }
-pdmethaneatmosphere = { }
-pdsulfuratmosphere = { }
-planet_active_worm = { }
-ravenous_locusts = { }
-planet_cloning_limits = { }
-planet_population_control_rationed = { }
-planet_population_control_gestalt = { }
+apocalypse = {}
+catastrophe_approach = {}
+deteriorating_ecosystem = {}
+mzilli_events_dying_world = {}
+pdammoniaatmosphere = {}
+pdashatmosphere = {}
+pdmethaneatmosphere = {}
+pdsulfuratmosphere = {}
+planet_active_worm = {}
+ravenous_locusts = {}
+planet_cloning_limits = {}
+planet_population_control_rationed = {}
+planet_population_control_gestalt = {}

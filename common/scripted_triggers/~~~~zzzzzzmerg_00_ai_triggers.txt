@@ -8,6 +8,8 @@ districts_good_energy = {
 			has_modifier = energy_relic
 			has_modifier = gas_rich_planet_fo_realz
 			has_planet_flag = buildings_good_energy
+			# GPM
+			gpm_has_positive_energy_planet_modifier = yes
 		}
 	}
 }
@@ -22,6 +24,8 @@ districts_good_minerals = {
 			has_modifier = asteroid_belt
 			has_modifier = minerals_relic
 			has_planet_flag = buildings_good_minerals
+			# GPM
+			gpm_has_positive_mineral_planet_modifier = yes
 		}
 		# SirBlackAxe's Unofficial Bug Patch
 		NOT = { has_modifier = pm_wenkwort_custodian }
@@ -37,37 +41,47 @@ districts_good_food = {
 			has_modifier = paradise_planet
 			has_modifier = ancient_harvesters
 			has_modifier = eat_the_titans
+			# GPM
+			gpm_has_positive_food_planet_modifier = yes
 		}
 	}
 }
 
-jobs_any_research = {
-	planet = {
-		any_owned_pop = {
-			OR = {
-				has_job = head_researcher
-				has_job = researcher
-				has_job = brain_drone
-				has_job = calculator
-				has_job = dimensional_portal_researcher
-				has_job = dimensional_portal_researcher_gestalt
-				# ACOT
-				has_job = acot_researcher
-				has_job = acot_researcher_drone
-				has_job = acot_priest
-				has_job = acot_voidsphere_labman
-				has_job = acot_voidsphere_labdrone
-				# AOT
-				has_job = ae_researcher
-				has_job = ae_researcher_drone
-				has_job = phanon_researcher
-				has_job = phanon_researcher_drone
-				has_job = phanon_priest
-				has_job = stellarite_researcher
-				has_job = stellarite_researcher_drone
-				has_job = stellarite_priest
-				has_job = stellarite_bureaucrat
-			}
-		}
-	}
-}
+# Unused
+# jobs_any_research = {
+# 	planet = {
+# 		any_owned_pop = {
+# 			OR = {
+# 				has_job = head_researcher
+# 				has_job = researcher
+# 				has_job = brain_drone
+# 				has_job = calculator
+# 				has_job = dimensional_portal_researcher
+# 				has_job = dimensional_portal_researcher_gestalt
+# 				# ACOT
+# 				has_job = acot_researcher
+# 				has_job = acot_researcher_drone
+# 				has_job = acot_priest
+# 				has_job = acot_voidsphere_labman
+# 				has_job = acot_voidsphere_labdrone
+# 				# AOT
+# 				has_job = ae_researcher
+# 				has_job = ae_researcher_drone
+# 				has_job = phanon_researcher
+# 				has_job = phanon_researcher_drone
+# 				has_job = phanon_priest
+# 				has_job = stellarite_researcher
+# 				has_job = stellarite_researcher_drone
+# 				has_job = stellarite_priest
+# 				has_job = stellarite_bureaucrat
+# 				# GPM
+# 				has_job = gpm_archaeologist
+# 				has_job = gpm_archaeologist_drone
+# 				has_job = gpm_precursor_archaeologist
+# 				has_job = gpm_precursor_archaeologist_drone
+# 				has_job = gpm_orbital_researcher
+# 				has_job = gpm_orbital_researcher_drone
+# 			}
+# 		}
+# 	}
+# }

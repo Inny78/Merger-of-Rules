@@ -694,6 +694,8 @@ has_any_industry_district = {
         has_district = district_arcology_civilian_industry
 		# Gigastructures
         giga_has_any_industrial_district = yes
+		# GPM
+		has_district = district_gpm_precursor_manufactorium
 		# Production Revolution
 		has_district = PR_DSTR_city_forge
 		has_district = PR_DSTR_city_catalytic
@@ -777,6 +779,8 @@ has_any_generator_district_or_building = {
 		has_building = apsr19_building_part_m3
 		# Gigastructures
         giga_has_any_generator_district_or_building = yes
+		# GPM
+		has_district = district_gpm_precursor_power_plant
 		# Human Fallen Empires
 		has_building = hfe_building_thoth_module_energy
 		# Plentiful Traditions

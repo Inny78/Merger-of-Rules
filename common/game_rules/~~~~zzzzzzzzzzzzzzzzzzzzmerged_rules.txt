@@ -8,7 +8,7 @@ is_valid_rival = {
 	# Powerful & Realistic Orbital Bombardments
 	hidden_trigger = {
 		if = {
-			limit = { has_power_bombard = yes }
+			limit = { merg_has_power_bombard = yes }
 			always = yes
 		}
 	}
@@ -515,7 +515,7 @@ can_generate_military_leader_from_pop = {
 can_release_vassal = {
 	hidden_trigger = {
 		if = {
-			limit = { has_expanded_pops = yes }
+			limit = { merg_has_expanded_pops = yes }
 			always = yes
 		}
 	}
@@ -591,7 +591,7 @@ can_generate_army_from_species = {
 #This rule is a condition for when subjects that normally cannot colonize outside their borders are allowed to
 subject_can_expand = {
 	# Exalted domination totally disallow vassal expansion
-	has_exalted_domination = no
+	merg_has_exalted_domination = no
 	root = { has_valid_civic = civic_feudal_realm }
 }
 
@@ -852,7 +852,7 @@ can_colonize_planet = {
 	# Diagrapher's Factions and Ethics Mod
 	hidden_trigger = {
 		OR = {
-			has_diag_fact = no
+			merg_has_diag_fact = no
 			NAND = {
 				root = {
 					is_ai = yes
@@ -909,11 +909,11 @@ can_colonize_outside_borders = {
 	solar_system = {
 		OR = {
 			NAND = {
-				has_coop_teams = yes
+				merg_has_coop_teams = yes
 				exists = owner
 			}
 			AND = {
-				has_coop_teams = yes
+				merg_has_coop_teams = yes
 				exists = owner
 				owner = {
 					has_country_flag = is_in_coop_with@root
@@ -964,9 +964,9 @@ can_terraform_planet = {
 	custom_tooltip = {
 		fail_text = NO_TERRAFORM_HOLLOW_WORLD
 		OR = {
-			has_real_new_frontiers = no
+			merg_has_real_new_frontiers = no
 			AND = {
-				has_real_new_frontiers = yes				# Let's not affect Expanded Gestalt's own pc_hollow
+				merg_has_real_new_frontiers = yes				# Let's not affect Expanded Gestalt's own pc_hollow
 				NOT = { is_planet_class = pc_hollow }
 			}
 		}
@@ -974,9 +974,9 @@ can_terraform_planet = {
 	custom_tooltip = {
 		fail_text = NO_TERRAFORM_OVERMIND
 		OR = {
-			has_real_new_frontiers = no
+			merg_has_real_new_frontiers = no
 			AND = {
-				has_real_new_frontiers = yes				# to avoid a bug
+				merg_has_real_new_frontiers = yes				# to avoid a bug
 				NOT = { has_deposit = d_heart_of_the_overmind }
 			}
 		}
@@ -1134,15 +1134,15 @@ species_has_happiness = {
 			has_trait = trait_mechanical
 			# Animated Synthetics Portraits Expanded: Reborn
 			OR = {
-				has_animated_synth = no
+				merg_has_animated_synth = no
 				AND = {
-					has_animated_synth = yes
+					merg_has_animated_synth = yes
 					from = { is_machine_empire = yes }
 					has_trait = trait_extsynth_synthetic
 					NOT = { has_trait = trait_psionic }
 				}
 				AND = {
-					has_animated_synth = yes
+					merg_has_animated_synth = yes
 					NAND = {
 						from = { is_machine_empire = yes }
 						has_trait = trait_extsynth_synthetic
@@ -1261,7 +1261,7 @@ can_species_procreate = {
 		NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
 		# Special Colonies Overhaul
 		AND = {
-			has_special_colonies = yes
+			merg_has_special_colonies = yes
 			NOT = {
 				root = {
 					owner = {
@@ -1503,7 +1503,7 @@ can_species_be_assembled = {
 					OR = {
 						has_building = building_clone_army_clone_vat
 						AND = {
-							has_gal_imperium = yes
+							merg_has_gal_imperium = yes
 							OR = {
 								has_building = building_clone_guard_clone_vat
 								merg_has_cloning_building = yes
@@ -1576,11 +1576,11 @@ can_species_be_assembled = {
 						OR = {
 							# Vanilla
 							AND = {
-								has_diag_rtp_mod = no
+								merg_has_diag_rtp_mod = no
 								merg_has_cloning_building = yes
 							}
 							AND = {
-								has_diag_rtp_mod = yes
+								merg_has_diag_rtp_mod = yes
 								merg_has_cloning_building = yes
 								any_owned_species = {
 									is_same_species = prevprev
@@ -1602,7 +1602,7 @@ can_species_be_assembled = {
 			}
 			# Special Colonies Overhaul
 			NAND = {
-				has_special_colonies = yes
+				merg_has_special_colonies = yes
 				root = { has_modifier = slave_colony }
 				NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
 				not = {
@@ -1653,7 +1653,7 @@ can_orbital_bombard = {
 	# Diagrapher's Factions and Ethics Mod
 	hidden_trigger = {
 		OR = {
-			has_diag_fact = no
+			merg_has_diag_fact = no
 			root.owner = {
 				NAND = {
 					is_ai = yes
@@ -1860,7 +1860,7 @@ has_full_sensor_range = {
 		has_country_flag = z_fw_r_cheat_quantum_beacon_activited
 		# Galaxius
 		AND = {
-			has_galaxius = yes
+			merg_has_galaxius = yes
 			any_owned_planet = { has_deposit = d_ie_sa }
 		}
 		# BlueArchive species pack
@@ -2064,7 +2064,6 @@ ai_should_restrict_system = {
 		}
 		# Gigastructural Engineering & More
 		AND = {
-			has_gigastructures = yes
 			NOT = { has_global_flag = katzenartig_imperium_happened }
 			OR = {
 				has_global_flag = katzenartig_always
@@ -2342,7 +2341,7 @@ system_blocks_sensors = {
 		has_star_flag = ss_abyssal_shockwave
 		# Sensor Expansion
 		AND = { # Neutron stars
-			has_sensor_expansion = yes
+			merg_has_sensor_expansion = yes
 			OR = {
 				is_star_class = sc_binary_2
 				is_star_class = sc_neutron_star
@@ -2350,7 +2349,7 @@ system_blocks_sensors = {
 			ROOT = { NOT = { has_technology = tech_sensors_4 } }
 		}
 		AND = { # Pulsars
-			has_sensor_expansion = yes
+			merg_has_sensor_expansion = yes
 			OR = {
 				is_star_class = sc_binary_1
 				is_star_class = sc_pulsar
@@ -2364,8 +2363,8 @@ system_blocks_sensors = {
 		}
 		AND = { # Wormholes
 			OR = {
-				has_sensor_expansion = yes
-				has_wild_space = yes
+				merg_has_sensor_expansion = yes
+				merg_has_wild_space = yes
 			}
 			has_natural_wormhole = yes
 			ROOT = {
@@ -2376,7 +2375,7 @@ system_blocks_sensors = {
 			}
 		}
 		AND = { # Black Holes
-			has_sensor_expansion = yes
+			merg_has_sensor_expansion = yes
 			OR = {
 				is_star_class = sc_black_hole
 				# Real Space
@@ -2469,19 +2468,14 @@ can_enter_system_by_jump = {
 						has_star_flag = starkiller_system
 					}
 					# Gigastructural Engineering and More
-					AND = {
-						has_gigastructures = yes
-						OR = {
-							has_star_flag = ehof_compound_system
-							has_star_flag = giga_core_03
-							cohesive_system = yes
-							urmazin_system = yes
-							everchanging_system = yes
-							katzen_jump_blocked_system = yes
-							has_star_flag = maginot_anti_jump_star
-							has_star_flag = siegfried_anti_jump_star
-						}
-					}
+					has_star_flag = ehof_compound_system
+					has_star_flag = giga_core_03
+					cohesive_system = yes
+					urmazin_system = yes
+					everchanging_system = yes
+					katzen_jump_blocked_system = yes
+					has_star_flag = maginot_anti_jump_star
+					has_star_flag = siegfried_anti_jump_star
 					# Some Events of Outside Cluster
 					has_star_flag = nep_Krahen_cluster
 					has_star_flag = nep_Scrus_cluster
@@ -2769,7 +2763,7 @@ should_force_decline_species = {
 		# Reproductive Technology and Politics
 		custom_tooltip = {
 			success_text = modification_assembly_force_decline
-			has_diag_rtp_mod = yes
+			merg_has_diag_rtp_mod = yes
 			is_robotic_species = no
 			from = {
 				merg_has_cloning_building = yes
@@ -2850,7 +2844,7 @@ can_support_branch_offices = {
 		fail_text = BRANCH_OFFICE_NOT_ON_MEGACORP_PLANET
 		NOR = {
 			AND = {
-				has_more_authorities = no
+				merg_has_more_authorities = no
 				is_megacorp = yes
 			}
 			# Warship Girls R And MIST Species
@@ -2887,9 +2881,9 @@ can_support_branch_offices = {
 	custom_tooltip = {
 		fail_text = ACTION_RECIPIENT_NOT_YOUR_CORP
 		OR = {
-			has_more_authorities = no
+			merg_has_more_authorities = no
 			AND = {
-				has_more_authorities = yes
+				merg_has_more_authorities = yes
 				NAND = {
 					is_megacorp = yes
 					is_subject = no
@@ -2957,7 +2951,7 @@ can_build_branch_office_on_planet = {
 			owner = { is_in_federation_with = root }
 			# Expanded Traits, Civics, Pops, and More
 			AND = {
-				has_expanded_pops = yes
+				merg_has_expanded_pops = yes
 				owner = { has_country_flag = cb_markets_opened@root }
 			}
 			# Warship Girls R And MIST Species
@@ -3014,7 +3008,7 @@ can_build_branch_office_on_planet = {
 			# Vassals Expanded and Reworked
 			# allow branch offices in all subjects and vice versa
 			AND = {
-				has_vassals_expanded = yes
+				merg_has_vassals_expanded = yes
 				OR = {
 					root = {
 						is_subject = yes
@@ -3498,7 +3492,7 @@ can_pop_auto_migrate = {
 			has_job = grunt
 			# Diagrapher's Factions and Ethics Mod
 			AND = {
-				has_diag_fact = yes
+				merg_has_diag_fact = yes
 				ideological_discomfort = yes
 				is_enslaved = yes
 			}
@@ -3515,7 +3509,7 @@ can_pop_auto_migrate = {
 			OR = {
 				AND = {
 					is_shackled_robot = yes
-					has_expanded_pops = no
+					merg_has_expanded_pops = no
 				}
 				is_enslaved = yes
 			}
@@ -3555,7 +3549,7 @@ can_pop_auto_migrate = {
 	if = {
 		limit = {
 			is_shackled_robot = yes
-			has_expanded_pops = yes
+			merg_has_expanded_pops = yes
 		}
 		custom_tooltip = {
 			fail_text = AUTO_MIGRATE_ROBOT_DROIDS
@@ -3729,7 +3723,7 @@ can_fill_worker_job = {
 			is_being_purged = no
 			# Expanded Traits, Civics, Pops, and More
 			AND = {
-				has_expanded_pops = yes
+				merg_has_expanded_pops = yes
 				OR = {
 					has_purge_type = { type = purge_displacement }
 					has_purge_type = { type = purge_neutering }
@@ -3751,7 +3745,7 @@ can_fill_worker_job = {
 		}
 		# Diagraphers Trait mod
 		if = {
-			limit = { has_diag_trait = yes }
+			limit = { merg_has_diag_trait = yes }
 			OR = {
 				traits_restrict_worker_jobs = no
 				has_pop_flag = allow_technician_traits
@@ -3813,7 +3807,7 @@ can_fill_ruler_job = {
 				can_think = no
 				# Ethics and Civics Alternative - Redux
 				AND = {
-					has_ethics_redux = yes					# Bug Branch allows symbiotics to rule
+					merg_has_ethics_redux = yes					# Bug Branch allows symbiotics to rule
 					has_trait = trait_symbiotic
 				}
 				has_trait = trait_slave_gene
@@ -3825,7 +3819,7 @@ can_fill_ruler_job = {
 	# Silfae's Portraits: Revisited - Holofrixit Revisited
 	else_if = {
 		limit = {
-			has_holofrixit = yes
+			merg_has_holofrixit = yes
 			exists = owner
 			owner = {
 				is_gestalt = no
@@ -3836,7 +3830,7 @@ can_fill_ruler_job = {
 		can_fill_holosphere_ruler_job = yes
 	}
 	else_if = {
-		limit = { has_holofrixit = yes }
+		limit = { merg_has_holofrixit = yes }
 		hidden_trigger = {
 			NAND = {
 				has_trait = trait_dimorphic_female
