@@ -444,7 +444,7 @@ can_generate_leader_from_species = {
 	is_sapient = yes
 	OR = {
 		NAND = {
-			NOT = { root = { has_technology = "tech_synthetic_leaders" } }
+			NOT = { root = { has_technology = tech_synthetic_leaders } }
 			has_trait = "trait_mechanical"
 		}
 		has_citizenship_type = {

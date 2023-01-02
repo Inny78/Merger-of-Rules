@@ -1,0 +1,12 @@
+# tech_nep_phantom_phase_shift
+# tech_nep_whitegoo_3_2
+tech_ariphaos_sensors_black_hole = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_sensor_expansion = yes } }
+tech_ariphaos_sensor_jammed = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_sensor_expansion = yes } }
+tech_ariphaos_sensors_nebula = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_sensor_expansion = yes } }
+tech_ariphaos_sensors_neutron_star = { cost = 0 area = physics category = { computing } tier = 3 potential = { merg_has_sensor_expansion = yes } }
+tech_ariphaos_sensors_pulsar = { cost = 0 area = physics category = { computing } tier = 4 potential = { merg_has_sensor_expansion = yes } }
+tech_ariphaos_sensors_sealed = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_sensor_expansion = yes } }
+tech_ariphaos_sensors_wormhole = { cost = 0 area = physics category = { particles } tier = 4 potential = { merg_has_sensor_expansion = yes } }
+# tech_kancolle_high_DNA
+# tech_WS_sensors_nebula_1
+# tech_WS_sensors_wormhole

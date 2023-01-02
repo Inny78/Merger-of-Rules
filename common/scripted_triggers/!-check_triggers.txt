@@ -34,6 +34,9 @@ merg_has_anz_cloning = { has_global_flag = anz_clones_installed }
 # APSR: Anomalies, Planetary and Space Resources 1346877266
 merg_has_apsr = { has_global_flag = apsr_mod_on }
 
+# Ariphaos Unofficial Patch
+merg_has_ariphaos_patch = { has_global_flag = ariphaos_unofficial_patch_installed }
+
 # Ascension Enhancements
 merg_has_uac = { has_global_flag = has_uac_mod }
 

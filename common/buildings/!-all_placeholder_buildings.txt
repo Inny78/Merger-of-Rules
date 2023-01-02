@@ -154,6 +154,7 @@ building_storm_lab = { potential = { always = no } allow = { always = no } }
 building_summoner_site = { potential = { always = no } allow = { always = no } }
 building_supercomputer = { potential = { always = no } allow = { always = no } }
 building_system_capital_gr = { potential = { always = no } allow = { always = no } }
+building_techno_04_clone_vat = { potential = { always = no } allow = { always = no } }
 building_tw_arcane_hold = { potential = { always = no } allow = { always = no } }
 building_wsg_foundry = { potential = { always = no } allow = { always = no } }
 PR_BLDN_Res_food_farm_T4 = { potential = { always = no } allow = { always = no } }
