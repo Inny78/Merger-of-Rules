@@ -1098,6 +1098,23 @@ can_colonize_with_species = {
 		}
 		always = no
 	}
+	# Extra Origins
+	else_if = {
+		limit = { is_symbiote = yes }
+		OR = {
+			root = {
+				any_owned_species = {
+					is_symbiote_of_prevprev = yes
+				}
+			}
+			any_country = {
+				has_diplo_migration_treaty = root
+				any_owned_species = {
+					is_symbiote_of_prevprev = yes
+				}
+			}
+		}
+	}
 	# Vanilla
 	else = { always = yes }
 }
@@ -2543,6 +2560,56 @@ can_resettle_pop = {
 		limit = { owner = { is_gestalt = yes } }
 		always = yes
 	}
+	# Extra Origins
+	else_if = {
+		limit = {
+			is_symbiote = yes
+			planet_has_symbiotes = no
+		}
+		always = yes
+	}
+	else_if = {
+		limit = {
+			is_being_purged = no
+			planet = {
+				AND = {
+					any_owned_pop = {
+						is_symbiote_of_prevprev = yes
+						is_being_purged = no
+						planet = {
+							any_owned_pop = {
+								is_same_species = prevprev
+								NOT = { is_same_value = prevprev }
+							}
+						}
+					}
+					NOT = {
+						any_owned_pop = {
+							is_same_species = prevprev
+							NOT = { is_same_value = prevprev }
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "would_cause_symbiote_decline"
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
+			is_symbiote = yes
+			owner = {
+				any_owned_pop = {
+					is_symbiote_of_prevprev = yes
+					planet_has_symbiotes = no
+				}
+			}
+		}
+		always = yes
+	}
+	# Vanilla
 	else = {
 		custom_tooltip = {
 			fail_text = RESETTLEMENT_POLICY_FAIL
@@ -2562,6 +2629,14 @@ can_country_resettle = {
 		hidden_trigger = {
 			#don't need to show this as tooltip only shown when all game rule fails, and this is a special case
 			any_owned_planet = { is_doomsday_planet = yes }
+		}
+		# Extra Origins
+		hidden_trigger = {
+			any_owned_pop = {
+				is_symbiote = yes
+				is_being_purged = no
+				planet_has_symbiotes = no
+			}
 		}
 	}
 }
@@ -2771,6 +2846,15 @@ should_force_decline_species = {
 					is_same_species = prevprev
 					NOT = { is_exact_same_species = prevprev }					
 				}
+			}
+		}
+		# Extra Origins
+		custom_tooltip = {
+			success_text = SYMBIOTE_FORCE_DECLINE
+			AND = {
+				is_symbiote = yes
+				from = { NOT = { any_owned_pop = { is_symbiote_of_prevprev = yes } } }
+				from = { any_owned_pop = { is_same_species = prevprev } }
 			}
 		}
 	}
@@ -3296,9 +3380,7 @@ can_be_sold_on_slave_market = {
 		}
 	}
 	# Expanded Traits, Civics, Pops, and More
-	NOT = {
-		owner = { has_country_flag = gai_machines_have_organics }
-	}
+	NOT = { owner = { has_country_flag = gai_machines_have_organics } }
 	OR = {
 		root = { is_ai = no }
 		AND = {
@@ -3366,6 +3448,8 @@ can_be_sold_on_slave_market = {
 		# Planetary Diversity
 		has_trait = trait_organic_fourschildren
 		has_trait = trait_organic_fourschildren_2
+		# Extra Origins
+		is_symbiote = yes
 	}
 }
 
@@ -3579,6 +3663,19 @@ can_pop_auto_migrate = {
 		has_trait = trait_living_architecture
 		has_trait = trait_rooted_adults_rooted
 		has_trait = trait_presapient_earthbound
+	}
+	# Extra Origins
+	if = {
+		limit = {
+			is_symbiote = yes
+			planet_has_symbiotes = yes
+		}
+		root = {
+			any_owned_pop = {
+				is_same_species = prevprev
+				NOT = { is_same_value = prev }
+			}
+		}
 	}
 }
 

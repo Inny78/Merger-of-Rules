@@ -78,6 +78,8 @@ is_sleeper = { always = no }
 is_special_affection_leader = { always = no }
 is_special_kancolle_leader = { always = no }
 is_spy_empire = { always = no }
+is_symbiote = { always = no }
+is_symbiote_of_prevprev = { always = no }
 is_valid_GF_OGAS_subnet = { always = no }
 is_wg_event_leader = { always = no }
 is_wg_event_limit_ships = { always = no }
@@ -92,6 +94,7 @@ kuat_is_flagship_system_protection = { always = no }
 KZ_VOY_can_assemble_magic_puppet = { always = no }
 KZ_VOY_can_build_branch_offices = { always = no }
 KZ_VOY_trgr_plnt_CLONE = { always = no }
+planet_has_symbiotes = { always = no }
 prob_forced_armageddon_bombardment = { always = no }
 traits_restrict_specialist_jobs = { always = no }
 traits_restrict_worker_jobs = { always = no }
