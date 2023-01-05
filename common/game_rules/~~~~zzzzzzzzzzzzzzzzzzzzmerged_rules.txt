@@ -126,6 +126,8 @@ can_add_claim = {
 					has_valid_civic = civic_machine_assimilator
 					# Expanded Traits, Civics, Pops, and More
 					has_valid_civic = civic_infestation
+					# Ethical Gestalts
+					has_valid_civic = civic_hive_assimilator
 				}
 			}
 		}
@@ -162,6 +164,8 @@ can_add_claim = {
 					has_valid_civic = civic_machine_assimilator
 					# Expanded Traits, Civics, Pops, and More
 					has_valid_civic = civic_infestation
+					# Ethical Gestalts
+					has_valid_civic = civic_hive_assimilator
 				}
 			}
 			root = {
@@ -170,6 +174,8 @@ can_add_claim = {
 					has_valid_civic = civic_machine_assimilator
 					# Expanded Traits, Civics, Pops, and More
 					has_valid_civic = civic_infestation
+					# Ethical Gestalts
+					has_valid_civic = civic_hive_assimilator
 				}
 			}
 		}
@@ -198,6 +204,110 @@ can_add_claim = {
             }
         }
     }
+	# Ethical Gestalts
+	custom_tooltip = {
+		fail_text = CANNOT_ADD_CLAIM_GESTALT_POLICY
+		exists = owner
+		OR = {
+			has_ethical_gestalts = no
+			AND = {
+				has_ethical_gestalts = yes
+				OR = {
+					root = { has_policy_flag = hostile_all_gestalts }
+					AND = {
+						root = { has_policy_flag = gestalt_liberation }
+						owner = { is_hive_empire = yes }
+					}
+					root = {
+						has_policy_flag = gestalt_punishment
+						relative_power = { who = prev.owner value < superior }			
+					}
+					AND = {
+						NOT = { root = { has_policy_flag = no_wars } }
+						owner = {
+							any_owned_pop_species = {
+								NOR = {
+									has_trait = trait_hive_mind
+									has_trait = trait_machine_unit
+								}
+							}
+						}	
+					}
+				}
+				# liberation wars policy allows claiming from unaligned hive minds with non-drone subjects.
+				# gestalt control policy allows claiming from unaligned gestalts generally unless they're weak enough to subjugate instead
+				owner = {
+					is_gestalt = yes
+					OR = {
+						root = { has_policy_flag = hostile_all_gestalts }
+						AND = {
+							root = { has_policy_flag = gestalt_liberation }
+							owner = { is_hive_empire = yes }
+						}
+						AND = {
+							is_xenophile = no
+							root = { is_xenophile = yes }
+						}
+						AND = {
+							is_xenophobe = no
+							root = { is_xenophobe = yes }
+						}
+						AND = {
+							is_authoritarian = no
+							root = { is_authoritarian = yes }
+						}
+						AND = {
+							is_egalitarian = no
+							root = { is_egalitarian = yes }
+						}		
+						AND = {
+							is_spiritualist = no
+							root = { is_spiritualist = yes }
+						}		
+						AND = {
+							is_materialist = no
+							root = { is_materialist = yes }
+						}		
+						AND = {
+							is_militarist = no
+							root = { is_militarist = yes }
+						}		
+						AND = {
+							is_pacifist = no
+							root = { is_pacifist = yes }
+						}					
+					}
+				}
+			}
+		}
+	}
+	# gestalt containment policy prevents claiming a gestalt's capital system unless you can deassimilate its pops
+	custom_tooltip = {
+		fail_text = CANNOT_ADD_CLAIM_CONTAINMENT_POLICY
+		NAND = {
+			root = {
+				has_policy_flag = "enemy_gestalt_elimination_forbidden"
+				NAND = {
+					has_technology = tech_gene_tailoring
+					root = { is_hive_empire = yes }
+				}
+			}
+			OR = {
+				owner = { is_hive_empire = yes }
+				root = { has_policy_flag = ai_full_rights }
+			}
+			any_system_planet = {
+				is_capital = yes
+				owner = {
+					is_gestalt = yes
+					or = {
+						is_playable = yes
+						merg_is_fallen_empire = yes
+					}
+				}
+			}	
+		}
+	}
 }
 
 # Root = taker country
@@ -283,7 +393,11 @@ species_can_live_on_planet = {
 				exists = root.owner
 				root.owner = {
 					is_machine_empire = yes
-					has_valid_civic = civic_machine_assimilator
+					OR = {
+						has_civic = civic_machine_assimilator
+						# Ethical Gestalts
+						has_ascension_perk = ap_gestaltization
+					}
 				}
 			}
 			# Girls Frontline
@@ -839,6 +953,17 @@ can_take_hostile_actions = {
 			text = "CAN_TAKE_HOSTILE_ACTION_NEP_GAIA"
 			always = no
 		}
+		else_if = {
+			#SEoOC_side_2
+			limit = {
+				is_country_type = nep_arena_hologram
+				is_country_type = nep_bounty_hologram
+			}
+			custom_tooltip = {
+				text = "CAN_TAKE_HOSTILE_ACTION_NEP_HOLOGRAM"
+				always = no
+			}
+		}
 	}
 	# Vanilla
 	else = { always = yes }
@@ -1183,7 +1308,10 @@ species_has_happiness = {
 			exists = from
 			from = {
 				is_machine_empire = yes
-				has_valid_civic = civic_machine_assimilator				# Assimilator empire
+				OR = {
+					has_civic = civic_machine_assimilator # Assimilator empire
+					has_ascension_perk = ap_gestaltization # Ethical Gestalts
+				}
 			}
 		}
 	}
@@ -1272,6 +1400,25 @@ can_species_procreate = {
 		has_trait = trait_pearl_born_drone
 		# Expanded Traits, Civics, Pops, and More
 		has_trait = trait_memorex_comatos
+	}
+	OR = {
+		has_ethical_gestalts = no
+		AND = {
+			has_ethical_gestalts = yes
+			OR = {
+				NOT = { has_trait = trait_hive_mind }
+				has_citizenship_type = { type = citizenship_full country = root.owner }
+				AND = {
+					exists = root.branch_office_owner
+					has_citizenship_type = { type = citizenship_full country = root.branch_office_owner }
+					root.branch_office_owner = {
+						NOT = {
+							has_relation_flag = { who = root.owner flag = no_pop_growth_treaty }
+						}
+					}
+				}
+			}
+		}
 	}
 	NAND = {
 		root = { has_modifier = slave_colony }
@@ -1376,6 +1523,9 @@ can_species_be_assembled = {
 	is_sapient = yes
 	# Holofrixit Revisited / Silfae's Portraits: Revisited
 	NOT = { has_trait = trait_holodrone }
+	# Kancolle
+	root.owner = { NOT = { has_modifier = modifier_ban_assemble } }
+	# Vanilla
 	OR = {
 		# Robots
 		AND = {
@@ -2503,6 +2653,7 @@ can_enter_system_by_jump = {
 							has_star_flag = nep_heptagram_cluster
 						}
 					}
+					has_star_flag = nep_arena
 					# THE ABYSS CONTRACT
 					has_star_flag = TAC_ag_signal_system
 					# Assault Lily
@@ -2519,6 +2670,14 @@ can_enter_system_by_jump = {
 
 # This = pop
 can_resettle_pop = {
+	# Ethical Gestalts
+	hidden_trigger = {	# not sure if ai will know not to move pops to planets where they'll immediately start declining otherwise
+		OR = {
+			owner = { is_ai = no }
+			NOT = { has_trait = trait_hive_mind }
+			owner = { is_hive_empire = yes }
+		}
+	}
 	# Self-modified Pops won't leave
 	custom_tooltip = {
 		fail_text = "self_modified_refuse"
@@ -2605,6 +2764,19 @@ can_resettle_pop = {
 					is_symbiote_of_prevprev = yes
 					planet_has_symbiotes = no
 				}
+			}
+		}
+		always = yes
+	}
+	# Ethical Gestalts
+	else_if = {
+		limit = {
+			OR = {
+				AND = {
+					has_trait = trait_hive_mind
+					owner = { is_hive_empire = yes }
+				}
+				has_citizenship_type = { type = citizenship_full_machine }
 			}
 		}
 		always = yes
@@ -2857,6 +3029,24 @@ should_force_decline_species = {
 				from = { any_owned_pop = { is_same_species = prevprev } }
 			}
 		}
+		# Ethical Gestalts
+		# lonely hive mind pops kill themselves
+		custom_tooltip = {
+			success_text = lonely_hive_mind_pops_kill_themselves_citizenship
+			has_trait = trait_hive_mind
+			exists = from
+			NOR = {
+				AND = {
+					exists = from.owner
+					has_citizenship_type = { type = citizenship_full country = from.owner }
+				}
+				AND = {
+					exists = from.branch_office_owner
+					has_citizenship_type = { type = citizenship_full country = from.branch_office_owner }
+				}
+				NOT = { exists = from.owner }
+			}
+		}
 	}
 }
 
@@ -2878,6 +3068,9 @@ can_build_branch_offices = {
 			has_authority = auth_azur_lane_K
 			# BlueArchive species pack
 			has_authority = auth_kivotos
+			# Ethical Gestalts
+			has_valid_civic = civic_hive_guest
+			has_policy_flag = infiltration_allowed
 			# Girls Frontline
 			has_civic = civic_gf_GK
 			# Human Fallen Empires
@@ -2998,6 +3191,8 @@ can_build_branch_office_on_planet = {
 			OR = {
 				is_same_species = root
 				NOT = { has_valid_civic = civic_fanatic_purifiers }
+				# Ethical Gestalts
+				has_policy_flag = infiltration_allowed
 			}
 		}
 	}
@@ -3262,6 +3457,20 @@ can_build_branch_office_on_planet = {
 			}
 		}
 	}
+	# Ethical Gestalts
+	if = {
+		limit = {
+			root = {
+				has_valid_civic = civic_hive_guest
+				NOT = { has_policy_flag = infiltration_allowed }
+			}
+		}
+		custom_tooltip = {
+			fail_text = BRANCH_OFFICE_NOT_MIGRATION_TREATY
+			exists = owner
+			root = { has_migration_access = prev.owner }
+		}
+	}
 }
 
 # This = country
@@ -3277,6 +3486,8 @@ is_criminal_syndicate_rule = {
 		# BlueArchive species pack
 		has_country_flag = BA_Momoyado_unlimited
 		has_country_flag = BA_club_onsen_department
+		# Ethical Gestalts
+		has_policy_flag = infiltration_allowed
 	}
 }
 
@@ -3677,6 +3888,14 @@ can_pop_auto_migrate = {
 			}
 		}
 	}
+	# Ethical Gestalts
+	if = {
+		limit = { has_trait = trait_hive_mind }
+		OR = {
+			NOT = { has_trait = trait_hive_mind }
+			owner = { is_hive_empire = yes }
+		}
+	}
 }
 
 # This = planet
@@ -3729,8 +3948,6 @@ can_add_advanced_traits = {
 		has_str_genemodding_tech = yes
 		# Nirvana Empire DLC
 		is_nirvana_empire = yes
-		# Kancolle
-		has_technology = tech_kancolle_high_DNA
 	}
 	# Better Performances and Utilities
 	NOT = { has_country_flag = PF_flg_cntr_STOP_ai_species_mod }
@@ -4076,10 +4293,10 @@ can_trade_leader = {
 	# The leader must have a trait from a specialist subject type.
 	this = {
 		OR = {
+			has_leader_flag = tradable_leader
 			has_specialist_subject_leader_trait = yes
 			# Rogue Maid
 			has_specialist_subject_leader_trait_maid = yes
-			has_leader_flag = tradable_leader
 		}
 	}
 	# The subject and overlord must both be regular empires, machine intelligences or hive-minds.
@@ -4117,6 +4334,8 @@ can_trade_leader = {
 			}
 			this = { species = { is_robotic = yes } }
 		}
+		# Ethics and Civics Infinity
+		ROOT = { is_servitor_empire = yes }
 	}
 	# The overlord can't be a fallen or awakened empire.
 	ROOT = {

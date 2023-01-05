@@ -33,7 +33,7 @@ ship_event = {
 						has_trait = trait_pc_KZ_VOY_astral_world_solaria_preference
 						has_trait = trait_pc_KZ_VOY_luna_preference
 						has_trait = trait_pc_KZ_VOY_terran_relic_preference
-					}
+				}
 				}
 			}
 			event_target:nanite_swarm_planet = {

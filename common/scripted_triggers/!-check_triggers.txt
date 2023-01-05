@@ -34,7 +34,7 @@ merg_has_anz_cloning = { has_global_flag = anz_clones_installed }
 # APSR: Anomalies, Planetary and Space Resources 1346877266
 merg_has_apsr = { has_global_flag = apsr_mod_on }
 
-# Ariphaos Unofficial Patch
+# Ariphaos Unofficial Patch 1995601384
 merg_has_ariphaos_patch = { has_global_flag = ariphaos_unofficial_patch_installed }
 
 # Ascension Enhancements
@@ -59,7 +59,7 @@ merg_has_espionage_extended = { has_global_flag = has_mod_espionage_extended }
 merg_has_ethical_gestalts = { has_global_flag = using_mod_ethical_gestalts }
 
 # Ethics and Civics Bug Branch 2517213262
-merg_has_ethics_bug = { has_global_flag = bugbranch_global_flag }
+merg_has_ethics_bug = { OR = { has_global_flag = bugbranch_global_flag has_bug_branch = yes } }
 
 # Ethics and Civics Classic 1100284147
 merg_has_ethics_classic = { has_global_flag = ethic_civic_classic_active }
@@ -138,7 +138,7 @@ merg_has_more_default_origins = { has_global_flag = wizz_origin_game_started }
 merg_has_nirvana_project = { has_global_flag = nirvana_empire_start }
 
 # Planetary Diversity
-merg_has_planetary_diversity = { has_global_flag = planetarydiversity }
+merg_has_planetary_diversity = { OR = { has_global_flag = planetarydiversity has_planetary_diversity = yes } }
 
 # Powerful & Realistic Orbital Bombardments
 merg_has_power_bombard = { has_global_flag = prob_global_flag }

@@ -1,0 +1,209 @@
+#########################################
+#
+# on_action_events patch rebuild outpost for orphaned colonies
+# by Fireprince
+#
+#########################################
+
+namespace = action
+event = {
+	id = action.90
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		any_playable_country = {
+			any_owned_planet = {
+				is_controlled_by = prev
+				solar_system = { NOT = { exists = starbase } }
+			}
+		}
+	}
+	immediate = {
+		every_system = {
+			limit = {
+				NOT = { exists = starbase }
+				any_system_colony = {
+					exists = owner
+					has_ground_combat = no
+					owner = {
+						OR = {
+							is_country_type = default
+							is_fallen_empire = yes
+						}
+					}
+					solar_system = {
+						NOR = {
+							any_fleet_in_system = {
+								exists = owner
+								owner = {
+									NOT = { is_same_empire = prevprevprev.owner }
+									OR = {
+										is_hostile = prevprevprev.owner
+										is_at_war_with = prevprevprev.owner
+									}
+								}
+							}
+							any_fleet_in_system = {
+								exists = controller
+								controller = {
+									NOT = { is_same_empire = prevprevprev.owner }
+									OR = {
+										is_hostile = prevprevprev.owner
+										is_at_war_with = prevprevprev.owner
+									}
+								}
+							}
+							any_system_colony = {
+								exists = owner
+								NOT = { is_planet = prevprev }
+								owner = {
+									NOT = { is_same_empire = prevprevprev.owner }
+									OR = {
+										is_country_type = default
+										is_fallen_empire = yes
+									}
+									OR = {
+										is_hostile = prevprevprev.owner
+										is_at_war_with = prevprevprev.owner
+									}
+								}
+								NAND = {
+									exists = controller
+									controller = { is_same_empire = prevprevprev.owner }
+								}
+							}
+						}
+						OR = {
+							is_capital_system = yes
+							prev = {
+								OR = {
+									is_homeworld = yes
+									has_modifier = instability_join_revolt
+									owner = { has_origin = origin_demonic_incursion }
+									owner = { has_country_flag = former_owner@prevprevprev }
+								}
+							}
+							NOR = {
+								prev = { is_occupied_flag = yes }
+								any_system_colony = {
+									exists = owner
+									NOT = { is_planet = prevprev }
+									OR = {
+										merg_is_habitat = no
+										prevprev = { merg_is_habitat = yes }
+									}
+									owner = {
+										NOR = {
+											is_same_empire = prevprevprev.owner
+											has_country_flag = former_owner@prev
+										}
+										OR = {
+											is_country_type = default
+											is_fallen_empire = yes
+										}
+									}
+									NAND = {
+										exists = controller
+										controller = { is_same_empire = prevprevprev.owner }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			random_system_colony = {
+				limit = {
+					exists = owner
+					has_ground_combat = no
+					owner = {
+						OR = {
+							is_country_type = default
+							is_fallen_empire = yes
+						}
+					}
+					solar_system = {
+						NOR = {
+							any_fleet_in_system = {
+								exists = owner
+								owner = {
+									NOT = { is_same_empire = prevprevprev.owner }
+									OR = {
+										is_hostile = prevprevprev.owner
+										is_at_war_with = prevprevprev.owner
+									}
+								}
+							}
+							any_fleet_in_system = {
+								exists = controller
+								controller = {
+									NOT = { is_same_empire = prevprevprev.owner }
+									OR = {
+										is_hostile = prevprevprev.owner
+										is_at_war_with = prevprevprev.owner
+									}
+								}
+							}
+							any_system_colony = {
+								exists = owner
+								NOT = { is_planet = prevprev }
+								owner = {
+									NOT = { is_same_empire = prevprevprev.owner }
+									OR = {
+										is_country_type = default
+										is_fallen_empire = yes
+									}
+									OR = {
+										is_hostile = prevprevprev.owner
+										is_at_war_with = prevprevprev.owner
+									}
+								}
+								NAND = {
+									exists = controller
+									controller = { is_same_empire = prevprevprev.owner }
+								}
+							}
+						}
+						OR = {
+							is_capital_system = yes
+							prev = {
+								OR = {
+									is_homeworld = yes
+									has_modifier = instability_join_revolt
+									owner = { has_origin = origin_demonic_incursion }
+									owner = { has_country_flag = former_owner@prevprevprev }
+								}
+							}
+							NOR = {
+								prev = { is_occupied_flag = yes }
+								any_system_colony = {
+									exists = owner
+									NOT = { is_planet = prevprev }
+									OR = {
+										merg_is_habitat = no
+										prevprev = { merg_is_habitat = yes }
+									}
+									owner = {
+										NOR = {
+											is_same_empire = prevprevprev.owner
+											has_country_flag = former_owner@prev
+										}
+										OR = {
+											is_country_type = default
+											is_fallen_empire = yes
+										}
+									}
+									NAND = {
+										exists = controller
+										controller = { is_same_empire = prevprevprev.owner }
+									}
+								}
+							}
+						}
+					}
+				}
+				planet_event = { id = action.91 }
+			}
+		}
+	}
+}

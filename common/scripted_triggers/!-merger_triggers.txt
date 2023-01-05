@@ -7,14 +7,16 @@ merg_is_standard_empire = {
 		is_country_type = default
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
+		# Darkspace
+		is_country_type = ds_nomads
+		# Ethics & Civics Infinity
+		is_country_type = uo_une_member_active
 		# The Empty Vagrant
 		is_country_type = default_ev
 		is_country_type = fallen_empire_ev
 		is_country_type = awakened_fallen_empire_ev
 		# ZOFE
 		is_zofe_country = yes
-		# Darkspace
-		is_country_type = ds_nomads
 	}
 }
 
@@ -23,12 +25,14 @@ merg_is_default_empire = {
 	optimize_memory
 	OR = {
 		is_country_type = default
-		# ZOFE
-		is_zofe_country = yes
-		# The Empty Vagrant
-		is_country_type = default_ev
 		# Darkspace
 		is_country_type = ds_nomads
+		# Ethics & Civics Infinity
+		is_country_type = uo_une_member_active
+		# The Empty Vagrant
+		is_country_type = default_ev
+		# ZOFE
+		is_zofe_country = yes
 	}
 }
 
@@ -416,13 +420,11 @@ merg_is_dense_star = {
 		is_planet_class = pc_black_hole
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
+		# Darkspace
+		is_planet_class = pc_zeitriss
 		# Gigastructural Engineering & More
 		giga_is_birch_world = yes
-		is_planet_class = pc_core_black_hole
-		is_planet_class = pc_core_quasar
-		is_planet_class = pc_black_hole_giga
-		is_planet_class = pc_ehof_black_hole
-		is_planet_class = pc_pouchkinn_black_hole
+		giga_is_black_hole = yes
 		is_planet_class = pc_whc_star
 		is_planet_class = pc_wh_star
 		is_planet_class = pc_whdyson_star
@@ -436,8 +438,6 @@ merg_is_dense_star = {
 		is_planet_class = pc_microquasar_2
 		# MEM
 		is_planet_class = pc_mem_micro_black_hole
-		# Darkspace
-		is_planet_class = pc_zeitriss
 	}
 }
 

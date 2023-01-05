@@ -45,12 +45,15 @@ mem_ancestor_guardian = { ai = { enabled = no } }
 mem_surveyor_country_red = { ai = { enabled = no } }
 mem_vazurans = { ai = { enabled = no } }
 mpo_lost_spacefarers = { ai = { enabled = no } }
+nep_arena_hologram = { ai = { enabled = no } }
+nep_bounty_hologram = { ai = { enabled = no } }
 nep_phantom_passive = { ai = { enabled = no } }
 original_empire = { ai = { enabled = no } }
 original_empire_active = { ai = { enabled = no } }
 original_empire_passive = { ai = { enabled = no } }
 pg_last_hope = { ai = { enabled = no } }
 planet_state = { ai = { enabled = no } }
+uo_une_member_active = { ai = { enabled = no } }
 void_lifeforms_1 = { ai = { enabled = no } }
 void_lifeforms_2 = { ai = { enabled = no } }
 vbp_machine = { ai = { enabled = no } }

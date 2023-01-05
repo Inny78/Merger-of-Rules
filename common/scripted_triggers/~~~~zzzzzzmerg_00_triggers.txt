@@ -204,12 +204,12 @@ is_country_type_with_subjects = {
 		is_country_type = default
 		is_country_type = awakened_fallen_empire
 		is_country_type = awakened_marauders
-		# ZOFE
-		is_zofe_country = yes
-		# The Empty Vagrant
-		is_country_type = default_ev
 		# ACOT
 		is_progenitor_empires = yes
+		# The Empty Vagrant
+		is_country_type = default_ev
+		# ZOFE
+		is_zofe_country = yes
 	}
 }
 
@@ -231,6 +231,8 @@ is_regular_empire = {
 		is_country_type = default
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
+		# Ethics & Civics Infinity
+		is_country_type = uo_une_member_active
 		# Human Fallen Empires
 		is_country_type = hfe_fallen
 		is_country_type = hfe_pirate
@@ -480,7 +482,7 @@ is_crossbreeding_possible = {
 			NOT = { has_species_flag = "tmp_main_species" }
 		}
 		AND = {
-			has_expanded_pops = yes
+			merg_has_expanded_pops = yes
 			count_galaxy_species = {
 				count > 7
 				limit = { is_half_species = PREV }
@@ -847,13 +849,39 @@ has_special_star_flag_trigger = {
 		has_star_flag = al_huge_home_bed
 		# Gigastructural Engineering and More
 		has_star_flag = giga_core_03
+		# LEX
+		has_star_flag = lex_garden_cluster
+		# More Events Mod
+		has_star_flag = mem_sadrell_extant_cluster
 		# Real Space
 		has_star_flag = star_disaster
 		# Some Events of Outside Cluster
 		has_star_flag = nep_Krahen_cluster
-		has_star_flag = nep_Scrus_cluster
 		has_star_flag = nep_dragon_system
 		has_star_flag = nep_heptagram_cluster
+		has_star_flag = nep_Scrus_cluster
+		has_star_flag = nep_seal_system
+		has_star_flag = nep_highway_station_system
+		has_star_flag = nep_highway_note_system
+		has_star_flag = nep_Step_to_the_Void_1
+		has_star_flag = nep_Step_to_the_Void_2
+		has_star_flag = nep_Step_to_the_Void_3
+		has_star_flag = nep_Step_to_the_Void_4
+		has_star_flag = nep_Step_to_the_Void_5
+		has_star_flag = nep_Step_to_the_Void_6
+		has_star_flag = nep_Step_to_the_Void_7
+		has_star_flag = nep_Step_to_the_Void_8
+		has_star_flag = nep_Step_to_the_Void_9
+		has_star_flag = nep_Step_to_the_Void_10
+		has_star_flag = nep_wohp_system
+		has_star_flag = nep_deus_system
+		has_star_flag = nep_deus_system_2
+		has_star_flag = nep_deus_system_3
+		has_star_flag = nep_deus_system_4
+		has_star_flag = nep_whitegoo_portal_1
+		has_star_flag = nep_whitegoo_portal_2
+		has_star_flag = nep_whitegoo_origin
+		has_star_flag = nep_ugo_system 
 		# SW:Kuat Ancient Empire
 		has_star_flag = Kuat_system
 		has_star_flag = Kuat_system_1

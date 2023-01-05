@@ -311,7 +311,41 @@ giga_planet_no_farming = {
 	optimize_memory
 	merg_is_machine_world = yes
 }
- 
+
+# giga_is_brown_dwarf = {
+# 	optimize_memory
+# 	OR = {
+# 		is_planet_class = pc_gigabrown_dwarf
+# 		is_planet_class = pc_t_star
+# 		is_planet_class = pc_t_star_big
+# 		# Real Space
+# 		is_planet_class = pc_l_star
+# 		is_planet_class = pc_y_star
+# 	}
+# }
+
+# giga_is_neutron_type_star = {
+# 	optimize_memory
+# 	OR = {
+# 		is_planet_class = pc_neutron_star
+# 		is_planet_class = pc_pulsar
+# 		# Real Space
+# 		is_planet_class = pc_collapsar
+# 		is_planet_class = pc_magnetar
+# 	}
+# }
+
+giga_is_white_hole = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_whc_star
+		is_planet_class = pc_wh_star
+		is_planet_class = pc_whdyson_star
+		# Hypothetical Stars
+		is_planet_class = pc_white_hole
+	}
+}
+
 is_valid_kaiser_moon_candidate = {
 	optimize_memory
 	OR = {
