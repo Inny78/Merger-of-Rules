@@ -18,6 +18,8 @@ giga_has_artificial_preference_trait = { always = no }
 giga_has_research_building = { always = no }
 giga_is_birch_world = { always = no }
 giga_is_black_hole = { always = no }
+giga_is_unscrappable = { always = no }
+giga_is_vat_leviathan = { always = no }
 gpm_has_positive_energy_planet_modifier = { always = no }
 gpm_has_positive_food_planet_modifier = { always = no }
 gpm_has_positive_mineral_planet_modifier = { always = no }
