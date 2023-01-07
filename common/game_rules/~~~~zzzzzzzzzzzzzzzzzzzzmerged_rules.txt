@@ -1836,16 +1836,6 @@ can_orbital_bombard = {
 			from.owner = { is_crisis_faction = yes }
 		}
 	}
-	# ACOT
-	AND = {
-		OWNER = { is_progenitor_empires = no }
-		FROM = {
-			NOR = {
-				is_planet_class = pc_acot_pmc_vault
-				is_planet_class = pc_acot_enigmopolis
-			}
-		}	
-	}
 	# Vanilla
 	NOR = {
 		any_controlled_ship = {
@@ -1858,6 +1848,16 @@ can_orbital_bombard = {
 		from = { is_planet_class = pc_hollow }
 		# Star Wars: Kuat Ancient Empire
 		FROM.OWNER = { is_country_type = kuat_fire_base_hositle }
+		# ACOT
+		AND = {
+			OWNER = { is_progenitor_empires = no }
+			FROM = {
+				OR = {
+					is_planet_class = pc_acot_pmc_vault
+					is_planet_class = pc_acot_enigmopolis
+				}
+			}
+		}
 	}
 	OR = {
 		AND = {
@@ -1909,7 +1909,7 @@ can_orbital_bombard = {
 				# Ancient Empire
 				ag_can_be_orbital_bombardment_country = yes
 				# ACOT
-				is_country_type = original_empire
+				is_progenitor_empires = yes
 				is_country_type = void_lifeforms_1
 				is_country_type = void_lifeforms_2
 				# Cruel Conquerers
@@ -1953,7 +1953,7 @@ can_orbital_bombard = {
 				# Ancient Empire
 				ag_can_do_orbital_bombardment_country = yes
 				# ACOT
-				is_country_type = original_empire
+				is_progenitor_empires = yes
 				is_country_type = void_lifeforms_1
 				is_country_type = void_lifeforms_2
 				# Star Wars: Kuat Ancient Empire
@@ -2274,15 +2274,9 @@ ai_should_restrict_system = {
 		}
 		# ACOT
 		AND = {
-			root = {
-				OR = {
-					is_country_type = default
-					# The Empty Vagrant
-					is_country_type = default_ev
-				}
-			}
+			root = { merg_is_default_empire = yes }
 			exists = owner
-			owner = { is_country_type = original_empire }
+			owner = { is_progenitor_empires = yes }
 		}
 		AND = {
 			root = { merg_is_fallen_empire = yes }
@@ -2443,9 +2437,7 @@ can_spawn_occupation_armies = {
 		merg_is_fallen_empire = yes
 		merg_is_awakened_fe = yes
 		# ACOT
-		is_country_type = original_empire
-		is_country_type = original_empire_passive
-		is_country_type = original_empire_active
+		is_progenitor_empires = yes
 		is_country_type = sofe_light_seeker
 		# ZOFE
 		is_zofe_oe = yes
