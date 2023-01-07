@@ -89,7 +89,7 @@ merg_has_gal_imperium = { has_global_flag = imperium_origins_active }
 merg_has_galaxius = { has_global_flag = ie_flag }
 
 # Gigastructural Engineering and More 1121692237
-merg_has_gigastructures = { has_global_flag = gigastructures_enabled }
+merg_has_gigastructures = { OR = { has_global_flag = gigastructures_enabled has_gigastructures = yes } }
 
 # Guilli's Planet Modifiers and Features
 merg_has_gpm = {

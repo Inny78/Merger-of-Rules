@@ -16,9 +16,7 @@ planet_event = {
 	immediate = {
 		controller = { save_event_target_as = swarm }
 		if = {
-			limit = {
-				is_artificial = no
-			}
+			limit = { is_artificial = no }
 			change_pc = pc_infested
 			set_owner = event_target:swarm
 			planet_event = { id = crisis.215 }
@@ -27,9 +25,7 @@ planet_event = {
 		else_if = {
 			# Habitable Ring Worlds can't be infested...
 			# they are destroyed instead
-			limit = {
-				merg_is_true_ringworld = yes
-			}
+			limit = { merg_is_true_ringworld = yes }
 			destroy_colony = yes
 			change_pc = pc_ringworld_habitable_damaged
 			reset_planet = yes
@@ -49,9 +45,7 @@ planet_event = {
 		}
 		# Special artificial colonies can't be infested
 		else_if = {
-			limit = {
-				merg_is_special_colony = yes
-			}
+			limit = { merg_is_special_colony = yes }
 			destroy_colony = yes
 			reset_planet = yes
 		}
@@ -73,11 +67,7 @@ planet_event = {
 					owner = event_target:swarm
 				}
 				if = {
-					limit = {
-						NOT = {
-							any_system_ambient_object = { has_ambient_object_flag = swarm_system_effect }
-						}
-					}
+					limit = { NOT = { any_system_ambient_object = { has_ambient_object_flag = swarm_system_effect } } }
 					star = {
 						create_ambient_object = {
 							type = "swarm_1"
@@ -112,9 +102,7 @@ planet_event = {
 	immediate = {
 		every_owned_pop = { kill_pop = yes }
 		if = {
-			limit = {
-				is_artificial = no
-			}
+			limit = { is_artificial = no }
 			change_pc = pc_infested
 			reset_planet = yes
 			planet_event = { id = crisis.215 }
@@ -123,9 +111,7 @@ planet_event = {
 		else_if = {
 			# Habitable Ring Worlds can't be infested...
 			# they are destroyed instead
-			limit = {
-				merg_is_true_ringworld = yes
-			}
+			limit = { merg_is_true_ringworld = yes }
 			change_pc = pc_ringworld_habitable_damaged
 			reset_planet = yes
 		}
@@ -143,9 +129,7 @@ planet_event = {
 		}
 		# Special artificial colonies can't be infested
 		else_if = {
-			limit = {
-				merg_is_special_colony = yes
-			}
+			limit = { merg_is_special_colony = yes }
 			destroy_colony = yes
 			reset_planet = yes
 		}
@@ -234,15 +218,11 @@ country_event = {
 	}
 	option = { # Xenophobe Response
 		name = crisis.211.g
-		trigger = {
-			has_ethic = "ethic_fanatic_xenophobe"
-		}
+		trigger = { has_ethic = "ethic_fanatic_xenophobe" }
 	}
 	option = { # Xenophile Response
 		name = crisis.211.h
-		trigger = {
-			has_ethic = "ethic_fanatic_xenophile"
-		}
+		trigger = { has_ethic = "ethic_fanatic_xenophile" }
 	}
 	# Risa fix: Support other government types.
 	after = {
@@ -294,9 +274,7 @@ planet_event = {
 			species = event_target:custodian_bot # for pops
 			#species = ROBOT_POP_SPECIES_3
 			authority = auth_ancient_machine_intelligence
-			ethos = {
-				ethic = ethic_gestalt_consciousness
-			}
+			ethos = { ethic = ethic_gestalt_consciousness }
 			civics = {
 				civic = civic_machine_terminator
 				civic = civic_machine_warbots
@@ -367,9 +345,7 @@ planet_event = {
 			country_event = { id = crisis.2030 }
 		}
 		every_country = {
-			limit = {
-				merg_is_default_empire = yes
-			}
+			limit = { merg_is_default_empire = yes }
 			establish_communications_no_message = event_target:AI_crisis
 		}
 		planet_event = { id = crisis.2050 } # Start Fleet reinforcement cycle
