@@ -94,7 +94,7 @@ merg_is_gaia = {
 		is_planet_class = orbit_chlorogaian
 	}
 }
-
+ 
 merg_is_gas_giant = {
 	OR = {
 		is_planet_class = pc_gas_giant
@@ -168,6 +168,7 @@ merg_is_ocean = {
 		# Planetary Diversity
 		is_planet_class = pc_tidallyaquatic
 		is_pd_ocean = yes
+		is_pd_aquatics = yes
 		# All These Worlds
 		is_planet_class = orbit_water_panthalassic
 		is_planet_class = orbit_archipelagic
