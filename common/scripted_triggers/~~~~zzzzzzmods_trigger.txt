@@ -962,38 +962,40 @@ gpm_is_planet_class_normal_uninhabitable = {
 	OR = {
 		uninhabitable_regular_planet = yes
 		# Planetary Diversity
+		is_planet_class = pc_iron
 		is_planet_class = pc_rogue
 		is_planet_class = pc_eyeball
 		is_planet_class = pc_diamond
 		is_planet_class = pc_chthonian
-		# Gigastructural Engineering & More
-		is_planet_class = pc_melted_frozen
 	}
+}
+
+gpm_is_asteroid = {
+	is_asteroid = yes
+}
+
+gpm_is_planet_class_barren = {
+	optimize_memory
+	merg_is_barren = yes
 }
 
 gpm_is_planet_class_molten = {
 	optimize_memory
-	OR = {
-		is_planet_class = pc_molten
-		# Planetary Diversity
-		is_planet_class = pc_volcanic
-	}
+	merg_is_molten = yes
 }
 
 gpm_is_planet_class_toxic = {
 	optimize_memory
 	OR = {
-		is_planet_class = pc_toxic
+		merg_is_toxic = yes
 		# Planetary Diversity
 		is_planet_class = pc_acid
 		is_planet_class = pc_methane
 		is_planet_class = pc_ammonia
-		is_planet_class = pc_hothouse
 		is_planet_class = pc_ethane_ocean
 		is_planet_class = pc_sulfur
 		is_planet_class = pc_acid
 		is_planet_class = pc_lanthanide
-		# Planetary Diversity
 		is_planet_class = pc_ash
 	}
 }
@@ -1004,6 +1006,7 @@ gpm_is_planet_class_frozen = {
 
 gpm_is_planet_class_normal_habitable = {
 	habitable_planet = yes
+	is_artificial = no
 }
 
 gpm_is_planet_class_nuked = {
@@ -1172,9 +1175,18 @@ eligible_for_living_metal = {
 
 is_terraforming_candidate = {
 	optimize_memory
-	# OR = {
+	OR = {
 		has_modifier = terraforming_candidate
 		has_modifier = toxic_terraforming_candidate
+		# has_modifier = terraforming_candidate_precursor
+	}
+}
+
+gpm_has_required_terraform_modifier = {
+	optimize_memory
+	# OR = {
+		is_terraforming_candidate = yes
+		NOT = { has_planet_flag = gpm_solidified_planet_core }
 		# has_modifier = terraforming_candidate_precursor
 	# }
 }

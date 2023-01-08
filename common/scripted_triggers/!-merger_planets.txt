@@ -1,5 +1,5 @@
 # Trigger library for planet types - use this for your cross-mod content.
-
+ 
 merg_is_alpine = {
 	OR = {
 		is_planet_class = pc_alpine
@@ -61,6 +61,8 @@ merg_is_barren = {
 		is_planet_class = orbit_chthonian
 		# Midas
 		is_planet_class = pc_midas_barren
+		# Planetary Diversity
+		is_planet_class = pc_karst
 	}
 }
 
@@ -191,6 +193,8 @@ merg_is_molten = {
 		is_planet_class = orbit_volcanic_telluric
 		# Darkspace
 		is_planet_class = pc_ds_molten
+		# Planetary Diversity
+		is_planet_class = pc_volcanic
 	}
 }
 
