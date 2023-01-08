@@ -1,11 +1,11 @@
 # Vanilla scripted triggers from 00_scripted_triggers.txt except megastructures ones
 uninhabitable_regular_planet = {
 	OR = {
-		is_planet_class = pc_molten
-		is_planet_class = pc_barren
-		is_planet_class = pc_barren_cold
-		is_planet_class = pc_toxic
-		is_planet_class = pc_frozen
+		merg_is_molten = yes
+		merg_is_barren = yes
+		merg_is_barren_cold = yes
+		merg_is_toxic = yes
+		merg_is_frozen = yes
 		# Planetary Diversity
 		is_planet_class = pc_hothouse
 		# All these worlds
@@ -25,7 +25,7 @@ colonizable_planet = {
 	optimize_memory
 	OR = {
 		is_planet_class = pc_relic
-		is_planet_city = yes
+		merg_is_arcology = yes
 		merg_is_nuked = yes
 		merg_is_hive_world = yes
 		merg_is_machine_world = yes
@@ -65,7 +65,7 @@ habitable_planet = {
 		habitable_planet_not_urban = yes
 		galactic_diversity_habitable_planet = yes
 		is_planet_class = pc_relic
-		is_planet_city = yes
+		merg_is_arcology = yes
 	}
 }
 
@@ -437,7 +437,7 @@ is_wet = {
 # Overwriting with vanilla for a correct use of the triggers
 is_dry = {
 	has_climate = dry
-	is_planet_city = no
+	merg_is_arcology = no
 }
 
 # Overwriting with vanilla for a correct use of the triggers

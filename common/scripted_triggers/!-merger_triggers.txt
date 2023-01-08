@@ -100,7 +100,10 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_ringworld_habitable_lily
 		# Darkspace
 		is_planet_class = pc_ancient_ringworld
+		is_planet_class = pc_constructor_ark
+		is_planet_class = pc_prism_world
 		is_planet_class = pc_ringworld_spectrals
+		is_planet_class = pc_stellar_engine
 		# Kancolle
 		is_planet_class = pc_kancolle_ringworld
 		# Planetary Diversity
@@ -194,6 +197,8 @@ merg_is_habitat_non_starborn = {
 		is_planet_class = pc_sigma_deepspace_habitat
 		# Blue Archive
 		is_planet_class = pc_BA_auto_habitat
+		# DarkSpace
+		is_planet_class = pc_skycatcher
 		# Gigastructural Engineering & More
 		is_planet_class = pc_interstellar_habitat
 		is_planet_class = pc_giga_elysium

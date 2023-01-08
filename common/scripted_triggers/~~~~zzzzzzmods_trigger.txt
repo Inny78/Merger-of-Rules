@@ -600,35 +600,6 @@ is_playable_country = {
 	merg_is_standard_empire = yes
 }
 
-############################### OldEnt's Crisis Mods ###############################
-CmtTriggerIsPlayableEmpire = {
-	optimize_memory
-	OR = {
-		merg_is_default_empire = yes
-		is_ai = no
-		# ACOT
-		is_country_type = original_empire_active
-	}
-}
-
-CmtTriggerIsEmpire = {
-	optimize_memory
-	OR = {
-		merg_is_standard_empire = yes
-		is_ai = no
-		# ACOT
-		is_country_type = original_empire_active
-	}
-}
-
-CmtTriggerIsFallenEmpire = {
-	optimize_memory
-	OR = {
-		merg_is_fallen_empire = yes
-		merg_is_awakened_fe = yes
-	}
-}
-
 ############################### Exalted Domination ###############################
 exalted_is_valid_as_vassal = {
 	optimize_memory
@@ -655,10 +626,9 @@ is_open_gestalt = {
 afk_target_planet = {
 	optimize_memory
 	OR = {
-		is_planet_city = yes
+		merg_is_arcology = yes
 		is_planet_class = pc_relic
-		is_planet_class = pc_nuked
-		is_planet_class = pc_hive
+		merg_is_hive_world = yes
 		merg_is_machine_world = yes
 		colonizable_planet = yes
 		habitable_planet = yes
@@ -887,7 +857,7 @@ exalted_is_valid_as_vassal = {
 is_special_colony_planet_class = {
 	optimize_memory
 	OR = {
-		is_planet_city = yes
+		merg_is_arcology = yes
 		is_planet_class = pc_cybrex
 		merg_is_habitat = yes
 		merg_is_hab_ringworld = yes
@@ -1055,7 +1025,7 @@ gpm_is_planet_class_gas_giant = {
 gpm_is_planet_class_city = {
 	optimize_memory
 	OR = {
-		is_planet_city = yes
+		merg_is_arcology = yes
 		is_planet_class = pc_relic
 	}
 }
@@ -1222,11 +1192,7 @@ is_playable = {
 
 is_planet_city = {
 	optimize_memory
-	OR = {
-		is_planet_class = pc_city
-		# Planetary Diversity
-		is_pd_arcology = yes
-	}
+	merg_is_arcology = yes
 }
 
 # Expanded Events

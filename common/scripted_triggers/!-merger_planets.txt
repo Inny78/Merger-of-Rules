@@ -15,6 +15,16 @@ merg_is_alpine = {
 	}
 }
 
+merg_is_arcology = {
+	OR = {
+		is_planet_class = pc_city
+		# Midas
+		is_planet_class = pc_midas_city
+		# Planetary Diversity
+		is_pd_arcology = yes
+	}
+}
+
 merg_is_arctic = {
 	OR = {
 		is_planet_class = pc_arctic
@@ -41,6 +51,24 @@ merg_is_arid = {
 		is_planet_class = pc_archean
 		is_planet_class = orbit_agonos
 		is_planet_class = pc_agonos
+	}
+}
+
+merg_is_barren = {
+	OR = {
+		is_planet_class = pc_barren
+		# All These Worlds
+		is_planet_class = orbit_chthonian
+		# Midas
+		is_planet_class = pc_midas_barren
+	}
+}
+
+merg_is_barren_cold = {
+	OR = {
+		is_planet_class = pc_barren_cold
+		# All These Worlds
+		is_planet_class = orbit_iron_telluric
 	}
 }
 
@@ -83,6 +111,15 @@ merg_is_desert = {
 	}
 }
 
+merg_is_frozen = {
+	OR = {
+		is_planet_class = pc_frozen
+		# All These Worlds
+		is_planet_class = orbit_icy
+		is_planet_class = orbit_frozen_telluric
+	}
+}
+
 merg_is_gaia = {
 	OR = {
 		is_planet_class = pc_gaia
@@ -98,12 +135,6 @@ merg_is_gaia = {
 merg_is_gas_giant = {
 	OR = {
 		is_planet_class = pc_gas_giant
-		# Planetary Diversity
-		is_planet_class = pc_hot_gas_giant
-		is_planet_class = pc_cloudless_gas_giant
-		is_planet_class = pc_cold_gas_giant
-		# Expanded Events
-		is_planet_class = pc_ice_giant
 		# All these worlds
 		is_planet_class = orbit_super_giant
 		is_planet_class = orbit_ammonia-clouded_giant
@@ -118,6 +149,14 @@ merg_is_gas_giant = {
 		is_planet_class = orbit_helium_giant
 		# Azur Lane
 		is_planet_class = pc_azur_gas_giant
+		# DarkSpace
+		is_planet_class = pc_ds_gas_giant
+		# Expanded Events
+		is_planet_class = pc_ice_giant
+		# Planetary Diversity
+		is_planet_class = pc_hot_gas_giant
+		is_planet_class = pc_cloudless_gas_giant
+		is_planet_class = pc_cold_gas_giant
 	}
 }
 
@@ -145,6 +184,16 @@ merg_is_machine_world = {
 	}
 }
 
+merg_is_molten = {
+	OR = {
+		is_planet_class = pc_molten
+		# All These Worlds
+		is_planet_class = orbit_volcanic_telluric
+		# Darkspace
+		is_planet_class = pc_ds_molten
+	}
+}
+
 merg_is_nuked = {
 	OR = {
 		is_planet_class = pc_nuked
@@ -159,6 +208,9 @@ merg_is_nuked = {
 		is_planet_class = hfe_pc_urbanism
 		# Planetary Diversity
 		is_planet_class = pc_irradiated
+		is_planet_class = pc_nuked_superhab
+		is_planet_class = pc_nuked_tl
+		is_planet_class = pc_nuked_relic
 	}
 }
 
@@ -201,11 +253,20 @@ merg_is_savannah = {
 
 merg_is_shielded_world = {
 	OR = {
-		is_planet_class = pc_shielded
-		is_planet_class = pc_ringworld_shielded
 		is_planet_class = pc_habitat_shielded
-		# Ancient Empire
 		is_planet_class = pc_ringworld_shielded
+		is_planet_class = pc_shielded
+	}
+}
+
+merg_is_toxic = {
+	OR = {
+		is_planet_class = pc_toxic
+		# All These Worlds
+		is_planet_class = orbit_hothouse_toxic
+		is_planet_class = orbit_carbonyl_toxic
+		# Planetary Diversity
+		is_planet_class = pc_hothouse
 	}
 }
 
