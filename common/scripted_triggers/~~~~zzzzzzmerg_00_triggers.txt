@@ -6,15 +6,7 @@ uninhabitable_regular_planet = {
 		merg_is_barren_cold = yes
 		merg_is_toxic = yes
 		merg_is_frozen = yes
-		# Planetary Diversity
-		is_planet_class = pc_hothouse
 		# All these worlds
-		is_planet_class = orbit_icy
-		is_planet_class = orbit_chthonian
-		is_planet_class = orbit_iron_telluric
-		is_planet_class = orbit_volcanic_telluric
-		is_planet_class = orbit_hothouse_toxic
-		is_planet_class = orbit_carbonyl_toxic
 		is_planet_class = orbit_water_panthalassic
 		is_planet_class = orbit_ammonia_panthalassic
 		is_planet_class = orbit_methane_panthalassic
