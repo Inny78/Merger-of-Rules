@@ -37,6 +37,7 @@ has_wg_traits = { always = no }
 has_wsg_genemodding_tech = { always = no }
 has_zofe_mc = { always = no }
 hfe_trigger_is_human_fallen = { always = no }
+hfe_trigger_system_in_someones_space = { always = no }
 hfe_trigger_unemployed_auto_migrate = { always = no }
 ideological_discomfort = { always = no }
 is_bugged_evolutionary_architects = { always = no }

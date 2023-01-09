@@ -324,7 +324,7 @@ giga_gas_giant = {
 	optimize_memory
 	merg_is_gas_giant = yes
 }
- 
+
 giga_can_be_war_planet = {
 	optimize_memory
 	NOT = { has_planet_flag = dormant_war_planet }
@@ -435,11 +435,6 @@ tc_element_shard_candidate = {
 		is_planet_class = pc_asteroid
 		is_planet_class = pc_broken
 		is_planet_class = pc_shattered
-		# Planetary Diversity
-		is_planet_class = pc_rogue
-		is_planet_class = pc_eyeball
-		is_planet_class = pc_diamond
-		is_planet_class = pc_chthonian
 	}
 }
 
@@ -498,7 +493,7 @@ starborn_can_place_hab = {
 ############################### Legendary Worlds ###############################
 legw_planet_uninhabitable = {
 	optimize_memory
-	colonizable_planet = no
+	uninhabitable_regular_planet = yes
 }
 
 legw_planet_habitable = {
@@ -955,12 +950,6 @@ gpm_is_planet_class_normal_uninhabitable = {
 	optimize_memory
 	OR = {
 		uninhabitable_regular_planet = yes
-		# Planetary Diversity
-		is_planet_class = pc_iron
-		is_planet_class = pc_rogue
-		is_planet_class = pc_eyeball
-		is_planet_class = pc_diamond
-		is_planet_class = pc_chthonian
 	}
 }
 
