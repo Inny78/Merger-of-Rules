@@ -14,6 +14,17 @@ remove_capital_building = {
 		building_slave_major_capital = { remove_building = building_slave_major_capital }
 		building_ancient_palace = { remove_building = building_ancient_palace }
 		building_ancient_control_center = { remove_building = building_ancient_control_center }
+		# All that is GRIMDARK
+		building_hive_major_capital_sick = { remove_building = building_hive_major_capital_sick }
+		building_system_capital_gr = { remove_building = building_system_capital_gr }
+		# Azur Lane Stellaris DLC
+		azur_building_mind_capital = { remove_building = azur_building_mind_capital }
+		azur_building_mind_net_capital = { remove_building = azur_building_mind_net_capital }
+		# Nirvana Empire Project
+		building_nirvana_empire_palace = { remove_building = building_nirvana_empire_palace }
+		# Special Colonies Overhaul
+		building_SCO_resort_system_capital = { remove_building = building_SCO_resort_system_capital }
+		building_SCO_slave_system_capital = { remove_building = building_SCO_slave_system_capital }
 		# Star Wars: Kuat Ancient Empire
 		building_kuat_command_center = { remove_building = building_kuat_command_center }
 		# Twinks Atlantean
@@ -23,16 +34,5 @@ remove_capital_building = {
 		# Twinks Eternal
 		building_eternal_nexus_ai = { remove_building = building_eternal_nexus_ai }
 		building_eternal_palace = { remove_building = building_eternal_palace }
-		# Special Colonies Overhaul
-		building_SCO_resort_system_capital = { remove_building = building_SCO_resort_system_capital }
-		building_SCO_slave_system_capital = { remove_building = building_SCO_slave_system_capital }
-		# All that is GRIMDARK
-		building_hive_major_capital_sick = { remove_building = building_hive_major_capital_sick }
-		building_system_capital_gr = { remove_building = building_system_capital_gr }
-		# Azur Lane Stellaris DLC
-		azur_building_mind_capital = { remove_building = azur_building_mind_capital }
-		azur_building_mind_net_capital = { remove_building = azur_building_mind_net_capital }
-		# Nirvana Empire Project
-		building_nirvana_empire_palace = { remove_building = building_nirvana_empire_palace }
 	}
 }

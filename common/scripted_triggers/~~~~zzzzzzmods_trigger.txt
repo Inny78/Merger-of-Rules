@@ -108,7 +108,7 @@ reshaper_eligible = {
 		is_planet_class = pc_ringworld_tech_damaged
 		is_planet_class = pc_ringworld_seam
 		is_planet_class = pc_ringworld_seam_damaged
-		# Merger of Rules edits
+		# Merger of Rules
 		merg_is_habitat = yes
 		merg_is_hab_ringworld = yes
 		merg_is_forbidden_target = yes
@@ -192,7 +192,15 @@ is_maginotable_restricted = {
 
 mega_blokkats_wont_stripmine = {
 	optimize_memory
-	merg_is_gate_mega = yes
+	OR = {
+		is_megastructure_type = crisis_sphere_0
+		is_megastructure_type = crisis_sphere_1
+		is_megastructure_type = crisis_sphere_2
+		is_megastructure_type = crisis_sphere_3
+		is_megastructure_type = crisis_sphere_4
+		is_megastructure_type = crisis_sphere_ruined
+		merg_is_gate_mega = yes
+	}
 }
 
 ndb_can_target_system = {
@@ -223,8 +231,7 @@ ndb_can_target_system = {
 					exists = owner
 					owner = { is_same_value = root }
 				}
-				is_planet_class = pc_birch
-				is_planet_class = pc_void_birch
+				giga_is_birch_world = yes
 				is_planet_class = pc_squareworld_habitable
 				is_planet_class = pc_alderson_slice_ecu
 				is_planet_class = pc_alderson_slice_machine
@@ -238,8 +245,6 @@ ndb_can_target_system = {
 				merg_is_untargetable = yes
 				# ACOT
 				is_planet_class = pc_acot_enigmopolis
-				# Void Birch Mod
-				is_planet_class = pc_void_birch
 			}
 		}
 	}
@@ -269,8 +274,11 @@ ndb_can_target_planet = {
 		is_planet_class = pc_virtual_stellar_industry
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target
+		merg_is_empty_space = yes
 		# ACOT
 		is_planet_class = pc_acot_enigmopolis
+		# Darkspace
+		is_planet_class = pc_zeitriss
 	}
 }
 
@@ -280,15 +288,35 @@ is_ndb_immune_star_planet = {
 		is_planet_class = pc_black_hole
 		has_planet_flag = ndb_immune_planet
 		solar_system = { has_star_flag = ndb_immune_system }
+		# Darkspace
+		is_planet_class = pc_zeitriss
 		# Hypothetical Stars
 		is_planet_class = pc_white_hole
+		# MEM
+		is_planet_class = pc_mem_micro_black_hole
 		# Real Space
 		is_planet_class = pc_microquasar_1
 		is_planet_class = pc_microquasar_2
-		# MEM
-		is_planet_class = pc_mem_micro_black_hole
-		# Darkspace
-		is_planet_class = pc_zeitriss
+		# Solar Storm
+		is_planet_class = pc_ss_abyssal_black_hole
+		# The Abyss Contract
+		is_planet_class = pc_black_hole_02
+		is_planet_class = pc_black_hole_03
+		# Voyage to Eternity
+		is_planet_class = pc_KZ_VOY_micro_black_hole
+	}
+}
+
+is_ndb_vulnerable_mega = {
+	NOR = {
+		mega_blokkats_wont_stripmine = yes
+		is_megastructure_type = blokkat_harvester_charged_mothership
+		is_megastructure_type = blokkat_harvester_charged
+		is_megastructure_type = blokkat_harvester_charging_up_mothership
+		is_megastructure_type = blokkat_harvester_charging_up
+		has_megastructure_flag = ndb_immune_megastructure
+		# Merger of Rules
+		merg_is_gate_mega = yes
 	}
 }
 
@@ -312,29 +340,6 @@ giga_planet_no_farming = {
 	merg_is_machine_world = yes
 }
 
-# giga_is_brown_dwarf = {
-# 	optimize_memory
-# 	OR = {
-# 		is_planet_class = pc_gigabrown_dwarf
-# 		is_planet_class = pc_t_star
-# 		is_planet_class = pc_t_star_big
-# 		# Real Space
-# 		is_planet_class = pc_l_star
-# 		is_planet_class = pc_y_star
-# 	}
-# }
-
-# giga_is_neutron_type_star = {
-# 	optimize_memory
-# 	OR = {
-# 		is_planet_class = pc_neutron_star
-# 		is_planet_class = pc_pulsar
-# 		# Real Space
-# 		is_planet_class = pc_collapsar
-# 		is_planet_class = pc_magnetar
-# 	}
-# }
-
 giga_is_white_hole = {
 	optimize_memory
 	OR = {
@@ -349,21 +354,10 @@ giga_is_white_hole = {
 is_valid_kaiser_moon_candidate = {
 	optimize_memory
 	OR = {
-		is_planet_class = pc_barren
-		is_planet_class = pc_barren_cold
-		is_planet_class = pc_molten
-		is_planet_class = pc_frozen
-		# Planetary Diversity
-		is_planet_class = pc_carbon
-		# All These Worlds
-		is_planet_class = orbit_molten
-		is_planet_class = orbit_icy
-		is_planet_class = orbit_chthonian
-		is_planet_class = orbit_dusty_telluric
-		is_planet_class = orbit_iron_telluric
-		is_planet_class = orbit_silicate_telluric
-		is_planet_class = orbit_volcanic_telluric
-		is_planet_class = orbit_frozen_telluric
+		merg_is_barren = yes
+		merg_is_barren_cold = yes
+		merg_is_molten = yes
+		merg_is_frozen = yes
 	}
 	OR = {
 		planet_size = 4
