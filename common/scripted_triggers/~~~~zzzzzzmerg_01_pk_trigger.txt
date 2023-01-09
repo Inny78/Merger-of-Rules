@@ -20,7 +20,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 							is_crisis_faction = yes
 							# Safety Off
 							AND = {
-								has_safety_off = yes
+								merg_has_safety_off = yes
 								is_same_value = from.owner
 							}
 						}
@@ -35,7 +35,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 							is_crisis_faction = yes
 							# Safety Off
 							AND = {
-								has_safety_off = yes
+								merg_has_safety_off = yes
 								is_same_value = from.owner
 							}
 						}
@@ -141,7 +141,7 @@ can_destroy_planet_with_PLANET_KILLER_NEUTRON = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		OR = {
 			AND = {
-				has_safety_off = no
+				merg_has_safety_off = no
 				is_a_habitable_planet_megastructure = yes
 			}
 			merg_is_forbidden_target = no
@@ -289,7 +289,7 @@ can_destroy_planet_with_PLANET_KILLER_NANOBOTS = {
 				}
 			}
 			AND = {
-				has_safety_off = yes
+				merg_has_safety_off = yes
 				is_same_value = from.owner
 			}
 		}
@@ -2175,7 +2175,7 @@ can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 							is_crisis_faction = yes
 							# Safety Off
 							AND = {
-								has_safety_off = yes
+								merg_has_safety_off = yes
 								is_same_value = from.owner
 							}
 						}
@@ -2190,7 +2190,7 @@ can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 							is_crisis_faction = yes
 							# Safety Off
 							AND = {
-								has_safety_off = yes
+								merg_has_safety_off = yes
 								is_same_value = from.owner
 							}
 						}
@@ -2269,7 +2269,7 @@ can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
 							is_crisis_faction = yes
 							# Safety Off
 							AND = {
-								has_safety_off = yes
+								merg_has_safety_off = yes
 								is_same_value = from.owner
 							}
 						}
@@ -2284,7 +2284,7 @@ can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
 							is_crisis_faction = yes
 							# Safety Off
 							AND = {
-								has_safety_off = yes
+								merg_has_safety_off = yes
 								is_same_value = from.owner
 							}
 						}
@@ -2363,7 +2363,7 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 							is_crisis_faction = yes
 							# Safety Off
 							AND = {
-								has_safety_off = yes
+								merg_has_safety_off = yes
 								is_same_value = from.owner
 							}
 						}
@@ -2378,7 +2378,7 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 							is_crisis_faction = yes
 							# Safety Off
 							AND = {
-								has_safety_off = yes
+								merg_has_safety_off = yes
 								is_same_value = from.owner
 							}
 						}
@@ -4381,7 +4381,7 @@ merg_planet_is_hostile_or_crisis = {
 		planet_is_hostile_or_crisis = yes
 		# Safety Off
 		AND = {
-			has_safety_off = yes
+			merg_has_safety_off = yes
 			is_same_value = from.owner
 		}
 	}
