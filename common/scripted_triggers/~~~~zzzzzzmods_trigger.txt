@@ -1030,6 +1030,8 @@ gpm_is_planet_class_city = {
 	OR = {
 		merg_is_arcology = yes
 		is_planet_class = pc_relic
+		# Midas
+		is_planet_class = pc_midas_relic
 	}
 }
 

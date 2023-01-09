@@ -98,6 +98,8 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_ag_ringworld_gaia
 		# Assault Lily
 		is_planet_class = pc_ringworld_habitable_lily
+		# AshArms Aquarius History
+		is_planet_class = pc_adf_academycomplex_ringworld_habitable
 		# Darkspace
 		is_planet_class = pc_ancient_ringworld
 		is_planet_class = pc_constructor_ark
@@ -113,6 +115,10 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_planetary_ringworld_machine
 		is_planet_class = pc_planetary_ringworld_hive
 		is_planet_class = pc_planetary_ringworld_city
+		# Star Wars: Kuat Ancient Empire
+		is_planet_class = pc_kuat_eternal_ringworld_habitable
+		# The DAL Species Mod
+		is_planet_class = pc_ringworld_datealive_crystals
 		# Warship Girls and MIST species
 		is_planet_class = pc_ringworld_habitable_sh
 		is_planet_class = pc_ringworld_habitable_wsg
@@ -220,6 +226,8 @@ merg_is_habitat_non_starborn = {
 		uses_district_set = nsc_freebooter_habitat
 		# Twinks Atlantean
 		uses_district_set = skypalace
+		# ZOFE
+		is_planet_class = pc_utopian_habitat
 	}
 }
 
@@ -436,13 +444,20 @@ merg_is_dense_star = {
 		# Hypothetical Stars
 		is_planet_class = pc_white_hole
 		is_planet_class = pc_strange_star
+		# MEM
+		is_planet_class = pc_mem_micro_black_hole
 		# Real Space
 		is_planet_class = pc_collapsar
 		is_planet_class = pc_magnetar
 		is_planet_class = pc_microquasar_1
 		is_planet_class = pc_microquasar_2
-		# MEM
-		is_planet_class = pc_mem_micro_black_hole
+		# Solar Storm
+		is_planet_class = pc_ss_abyssal_black_hole
+		# The Abyss Contract
+		is_planet_class = pc_black_hole_02
+		is_planet_class = pc_black_hole_03
+		# Voyage to Eternity
+		is_planet_class = pc_KZ_VOY_micro_black_hole
 	}
 }
 
@@ -469,16 +484,23 @@ merg_is_empty_space = {
 		is_planet_class = pc_ag_void_planet
 		# Darkspace
 		is_planet_class = pc_gc_star
+		# GF Nyto
+		is_planet_class = pc_GF_nyto_endles
 		# Gigastructural Engineering & More
 		is_planet_class = giga_hidden
 		is_planet_class = pc_giga_empty_space
 		is_planet_class = pc_giga_empty_space_asteroid
 		# History of the Lost Empire
 		is_planet_class = pc_empty_space
+		# LEX
+		is_planet_class = pc_bwm_star_dummy
+		is_planet_class = pc_bwm_planet_dummy
 		# Secrets of the Shroud
 		is_planet_class = pc_sm_empty_space
 		# Some Events of Outside Cluster
 		is_planet_class = pc_star_void_dummy_01
+		# Steven Universe Homeworld Gems
+		is_planet_class = pc_no_star
 		# ThaumStellaris
 		is_planet_class = pc_tc_not_texture
 	}
@@ -488,21 +510,25 @@ merg_is_empty_space = {
 merg_is_void_system = {
 	optimize_memory
 	OR = {
-		# Ancient Empire
-		is_star_class = sc_ag_void
-		# Wild Space
-		is_star_class = sc_dn
 		# ACOT
 		is_star_class = sofe_outer_class
 		is_star_class = sofe_inner_class
+		# Ancient Empire
+		is_star_class = sc_ag_void
+		# Darkspace
+		is_star_class = sc_gc
+		# GF Nyto
+		is_star_class = sc_GF_endler
+		# Gigas
+		is_star_class = sc_blokkat_stripmined
 		# History of the Lost Empire/Gigas
 		is_star_class = sc_empty_space
 		# Some Events of Outside Cluster
 		is_star_class = sc_void_dummy
-		# Darkspace
-		is_star_class = sc_gc
-		# Gigas
-		is_star_class = sc_blokkat_stripmined
+		# Steven Universe Homeworld Gems
+		is_star_class = sc_no_star
+		# Wild Space
+		is_star_class = sc_dn
 	}
 }
 

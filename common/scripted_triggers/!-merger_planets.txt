@@ -18,10 +18,22 @@ merg_is_alpine = {
 merg_is_arcology = {
 	OR = {
 		is_planet_class = pc_city
+		# Azur Lane
+		is_planet_class = pc_azur
+		# Empires Expanded
+		is_planet_class = pc_city_cep
 		# Midas
 		is_planet_class = pc_midas_city
 		# Planetary Diversity
 		is_pd_arcology = yes
+		# Pokémon
+		is_planet_class = pc_EOE_city
+		# Star Wars: Kuat Ancient Empire
+		is_planet_class = pc_kuat_eternal_city
+		# Voyage to Eternity
+		is_planet_class = pc_KZ_VOY_hyper_ecumenopolis
+		# ZOFE
+		is_planet_class = pc_utopian_city
 	}
 }
 
@@ -125,6 +137,11 @@ merg_is_frozen = {
 		# All These Worlds
 		is_planet_class = orbit_icy
 		is_planet_class = orbit_frozen_telluric
+		# Arknights Near Future
+		is_planet_class = pc_ark_frozen
+		# Endless Frontier
+		is_planet_class = pc_mzilli_rogue
+		is_planet_class = pc_mzilli_rogue_moon
 		# Planetary Diversity
 		is_planet_class = pc_subglacial
 	}
@@ -133,12 +150,16 @@ merg_is_frozen = {
 merg_is_gaia = {
 	OR = {
 		is_planet_class = pc_gaia
+		# All These Worlds
+		is_planet_class = orbit_chlorogaian
 		# Azur Lane
 		is_planet_class = pc_azur_gaia
 		# Planetary Diversity
 		is_pd_gaia = yes
-		# All These Worlds
-		is_planet_class = orbit_chlorogaian
+		# Pokémon
+		is_planet_class = pc_EOE_pokemon_gaia
+		# ZOFE
+		is_planet_class = pc_utopian_gaia
 	}
 }
  
@@ -178,6 +199,8 @@ merg_is_hive_world = {
 		# Planetary Diversity
 		is_pd_hive_world = yes
 		is_pd_hive_arcology = yes
+		# Voyage to Eternity
+		is_planet_class = pc_KZ_VOY_hive_world
 	}
 }
 
@@ -211,10 +234,10 @@ merg_is_nuked = {
 		is_planet_class = pc_nuked
 		# All these worlds
 		is_planet_class = orbit_nuked
-		# Galaxius
-		is_planet_class = pc_ie_gateway
 		# Gigastructural Engineering & More
 		is_planet_class = pc_katzenland
+		# Girls Frontline
+		is_planet_class = pc_GF_collapsed
 		# Human Fallen Empires
 		is_planet_class = hfe_pc_memorial
 		is_planet_class = hfe_pc_urbanism
@@ -229,10 +252,6 @@ merg_is_nuked = {
 merg_is_ocean = {
 	OR = {
 		is_planet_class = pc_ocean
-		# Planetary Diversity
-		is_planet_class = pc_tidallyaquatic
-		is_pd_ocean = yes
-		is_pd_aquatics = yes
 		# All These Worlds
 		is_planet_class = orbit_water_panthalassic
 		is_planet_class = orbit_archipelagic
@@ -242,8 +261,13 @@ merg_is_ocean = {
 		is_planet_class = orbit_thermopelagic
 		is_planet_class = orbit_panpelagic
 		is_planet_class = pc_panpelagic
+		# Archaeology Story Pack
+		is_planet_class = pc_asp_ocean_red
 		# Azur Lane
 		is_planet_class = pc_azur_ocean
+		# Planetary Diversity
+		is_pd_ocean = yes
+		is_pd_aquatics = yes
 	}
 }
 
@@ -271,6 +295,19 @@ merg_is_shielded_world = {
 	}
 }
 
+merg_is_shroud_habitable = {
+	OR = {
+		# Madoka Magica NEW
+		is_planet_class = pc_outpost
+		# Planetary Diversity
+		is_pd_shroud_world = yes
+		# Rozen Maiden Suigintou
+		is_planet_class = pc_roz_YS_planet
+		# Shroud Rising
+		is_planet_class = pc_shroud_touched
+	}
+}
+
 merg_is_toxic = {
 	OR = {
 		is_planet_class = pc_toxic
@@ -295,6 +332,8 @@ merg_is_tropical = {
 		is_planet_class = pc_megachloridal
 		is_planet_class = orbit_geotidal_biolumen
 		is_planet_class = pc_geotidal_biolumen
+		# More Events Mod
+		is_planet_class = mem_pc_death
 	}
 }
 
