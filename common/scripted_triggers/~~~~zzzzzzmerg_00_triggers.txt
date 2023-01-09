@@ -63,16 +63,16 @@ habitable_planet = {
 
 habitable_planet_not_urban = {
 	OR = {
-		is_planet_class = pc_desert
-		is_planet_class = pc_tropical
-		is_planet_class = pc_arid
-		is_planet_class = pc_continental
-		is_planet_class = pc_ocean
-		is_planet_class = pc_tundra
-		is_planet_class = pc_arctic
-		is_planet_class = pc_alpine
-		is_planet_class = pc_savannah
-		is_planet_class = pc_gaia
+		merg_is_desert = yes
+		merg_is_tropical = yes
+		merg_is_arid = yes
+		merg_is_continental = yes
+		merg_is_ocean = yes
+		merg_is_tundra = yes
+		merg_is_arctic = yes
+		merg_is_alpine = yes
+		merg_is_savannah = yes
+		merg_is_gaia = yes
 		# Planetary Diversity
 		is_planet_class = pc_megaflorahive
 		is_planet_class = pc_megafloratol
