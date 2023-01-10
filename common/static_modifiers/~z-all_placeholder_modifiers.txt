@@ -13,3 +13,5 @@ ravenous_locusts = {}
 planet_cloning_limits = {}
 planet_population_control_rationed = {}
 planet_population_control_gestalt = {}
+modifier_ban_assemble = {}
+modifier_BA_Veritas_4 = {}

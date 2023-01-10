@@ -953,16 +953,16 @@ can_take_hostile_actions = {
 			text = "CAN_TAKE_HOSTILE_ACTION_NEP_GAIA"
 			always = no
 		}
-		else_if = {
-			#SEoOC_side_2
-			limit = {
-				is_country_type = nep_arena_hologram
-				is_country_type = nep_bounty_hologram
-			}
-			custom_tooltip = {
-				text = "CAN_TAKE_HOSTILE_ACTION_NEP_HOLOGRAM"
-				always = no
-			}
+	}
+	else_if = {
+		#SEoOC_side_2
+		limit = {
+			is_country_type = nep_arena_hologram
+			is_country_type = nep_bounty_hologram
+		}
+		custom_tooltip = {
+			text = "CAN_TAKE_HOSTILE_ACTION_NEP_HOLOGRAM"
+			always = no
 		}
 	}
 	# Vanilla
