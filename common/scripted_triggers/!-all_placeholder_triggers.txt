@@ -23,6 +23,7 @@ giga_is_vat_leviathan = { always = no }
 gpm_has_positive_energy_planet_modifier = { always = no }
 gpm_has_positive_food_planet_modifier = { always = no }
 gpm_has_positive_mineral_planet_modifier = { always = no }
+has_acot = { always = no }
 has_apsr_modifiers = { always = no }
 has_artificial_wombs = { always = no }
 has_bug_branch = { always = no }
@@ -36,10 +37,13 @@ has_str_genemodding_tech = { always = no }
 has_wg_traits = { always = no }
 has_wsg_genemodding_tech = { always = no }
 has_zofe_mc = { always = no }
+hfe_trigger_brainworm_country = { always = no }
 hfe_trigger_is_human_fallen = { always = no }
 hfe_trigger_system_in_someones_space = { always = no }
 hfe_trigger_unemployed_auto_migrate = { always = no }
 ideological_discomfort = { always = no }
+is_acot_awesome_planet_class = { always = no }
+is_acot_fractured_planet_class = { always = no }
 is_bugged_evolutionary_architects = { always = no }
 is_bugged_slave_race = { always = no }
 is_cruel_abomination_country_type = { always = no }

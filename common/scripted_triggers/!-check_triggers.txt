@@ -14,7 +14,7 @@ merg_has_deadly_tempest = { has_global_flag = a_deadly_tempest_mod_active }
 merg_has_aot = { has_global_flag = has_aot_mod }
 
 # Ancient Cache of Technologies 1419304439
-merg_has_acot = { has_global_flag = acot_activated }
+merg_has_acot = { OR = { has_global_flag = acot_activated has_acot = yes } }
 
 # Ancient Cache of Technologies : Secrets Beyond The Gates 1481972266
 merg_has_sofe = { has_global_flag = sofe_activated }

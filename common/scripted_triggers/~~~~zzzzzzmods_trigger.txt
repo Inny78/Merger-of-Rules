@@ -1535,16 +1535,10 @@ hfe_trigger_terminator_event = {
 	capital_scope = {
 		or = {
 			habitable_structure = yes
-			merg_is_tropical = yes
-			merg_is_continental = yes
-			merg_is_ocean = yes
+			is_wet = yes
+			is_dry = yes
+			is_cold = yes
 			merg_is_gaia = yes
-			merg_is_desert = yes
-			merg_is_arid = yes
-			merg_is_savannah = yes
-			merg_is_tundra = yes
-			merg_is_arctic = yes
-			merg_is_alpine = yes
 			merg_is_nuked = yes
 		}
 	}
@@ -1555,11 +1549,7 @@ hfe_trigger_terminator_event = {
 		}
 	}
 	any_planet_within_border = {
-		or = {
-			merg_is_desert = yes
-			merg_is_arid = yes
-			merg_is_savannah = yes
-		}
+		is_dry = yes
 		not = {
 			is_planet = prev.capital_scope
 		}
@@ -1587,4 +1577,31 @@ hfe_trigger_ascension_points = {
 			}
 		}
 	}
+}
+
+hfe_trigger_is_assimilator = {
+	is_homicidal = no
+	OR = {
+		has_valid_civic = civic_machine_assimilator
+		hfe_trigger_brainworm_country = yes
+		AND = {
+			has_authority = auth_hive_mind
+			has_tradition = tr_genetics_finish
+		}
+		# Expanded Traits, Civics, Pops, and More
+		has_valid_civic = civic_infestation
+		# Ethical Gestalts
+		has_valid_civic = civic_hive_assimilator
+	}
+}
+
+hfe_trigger_planet_valid_for_settle = {
+	is_under_colonization = no
+	has_orbital_bombardment = no
+	is_controlled_by = owner
+	not = {
+		has_planet_flag = hfe_settle_pop_block
+	}
+	# Merger tweak
+	is_doomsday_planet = no
 }

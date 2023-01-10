@@ -25,9 +25,8 @@ colonizable_planet = {
 		habitable_planet = yes
 		is_artificial = yes
 		# ACOT
-		is_planet_class = pc_dark_fractured
-		is_planet_class = pc_dark_fractured_ae
-		is_planet_class = pc_acot_enigmopolis
+		is_acot_fractured_planet_class = yes
+		is_acot_awesome_planet_class = yes
 		# Planetary Diversity
 		is_planet_class = pc_pdshroud
 		# SW:UnknownWorld Shipgirls Story
