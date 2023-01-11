@@ -113,7 +113,6 @@ merg_is_continental = {
 
 merg_is_desert = {
 	OR = {
-		is_planet_class = pc_barren
 		is_planet_class = pc_desert
 		# Planetary Diversity
 		is_pd_desert = yes
