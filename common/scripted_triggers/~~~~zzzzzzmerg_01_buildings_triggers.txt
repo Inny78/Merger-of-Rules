@@ -116,17 +116,19 @@ has_upgraded_capital = {
 				has_building = building_ae_ancient_hive_cluster
 				has_building = building_heaven_sanctuary
 				has_building = building_phanon_tower
+				# All That Is GRIMDARK
+				has_building = building_hive_major_capital_sick
 				# AOT
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_hive_cluster
-				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
 				# galacot
 				has_building = building_dm_galactic_hive_capital
                	has_building = building_ae_galactic_hive_capital
 				has_building = building_stellarite_galactic_hive_capital
-				# All That Is GRIMDARK
-				has_building = building_hive_major_capital_sick
+				# Gigastructural Engineering & More
+				has_building = building_giga_elysium_host_hive_major_capital
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
 			}
 		}
 	}
@@ -148,12 +150,14 @@ has_upgraded_capital = {
 				# AOT
 				has_building = building_stellarite_control_center
 				has_building = building_phanon_control_center
-				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
 				# galacot
 				has_building = building_dm_galactic_machine_capital
               	has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
+				# Gigastructural Engineering & More
+				has_building = building_giga_elysium_host_machine_major_capital
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
 			}
@@ -179,6 +183,8 @@ has_upgraded_capital = {
 				# Azur Lane Stellaris DlC
 				has_building = azur_building_mind_capital
 				has_building = azur_building_mind_net_capital
+				# Gigastructural Engineering & More
+				has_building = building_giga_elysium_host_major_capital
 				# Nirvana Empire Project
 				has_building = building_nirvana_empire_palace
 				# Star Wars: Kuat Ancient Empire
@@ -323,17 +329,19 @@ has_major_upgraded_capital = {
 				has_building = building_ae_ancient_hive_cluster
 				has_building = building_heaven_sanctuary
 				has_building = building_phanon_tower
+				# All that is GRIMDARK
+				has_building = building_hive_major_capital_sick
 				# AOT
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_hive_cluster
-				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
 				# galacot
 				has_building = building_dm_galactic_hive_capital
                 has_building = building_ae_galactic_hive_capital
 				has_building = building_stellarite_galactic_hive_capital
-				# All that is GRIMDARK
-				has_building = building_hive_major_capital_sick
+				# Gigastructural Engineering & More
+				has_building = building_giga_elysium_host_hive_major_capital
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
 			}
 		}
 	}
@@ -354,12 +362,14 @@ has_major_upgraded_capital = {
 				# AOT
 				has_building = building_stellarite_control_center
 				has_building = building_phanon_control_center
-				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
 				# galacot
 				has_building = building_dm_galactic_machine_capital
            	    has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
+				# Gigastructural Engineering & More
+				has_building = building_giga_elysium_host_machine_major_capital
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
 			}
@@ -378,22 +388,14 @@ has_major_upgraded_capital = {
 				has_building = building_heaven_sanctuary
 				has_building = building_ancient_palace
 				has_building = building_phanon_tower
+				# All that is GRIMDARK
+				has_building = building_system_capital_gr
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_phanon_palace
 				# Azur Lane Stellaris DLC
 				has_building = azur_building_mind_capital
 				has_building = azur_building_mind_net_capital
-				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
-				# Nirvana Empire Project
-				has_building = building_nirvana_empire_palace
-				# Twinks Atlantean
-				has_building = building_ancient_palace_at
-				# Twinks Kaldorei
-				has_building = building_nightelf_palace
-				# Twinks Eternal
-				has_building = building_eternal_palace
 				# galacot
 				has_building = building_dm_galactic_capital
                	has_building = building_ae_galactic_capital
@@ -404,8 +406,18 @@ has_major_upgraded_capital = {
 				has_building = building_dm_galactic_machine_capital
                 has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
-				# All that is GRIMDARK
-				has_building = building_system_capital_gr
+				# Gigastructural Engineering & More
+				has_building = building_giga_elysium_host_major_capital
+				# Nirvana Empire Project
+				has_building = building_nirvana_empire_palace
+				# Twinks Atlantean
+				has_building = building_ancient_palace_at
+				# Twinks Kaldorei
+				has_building = building_nightelf_palace
+				# Twinks Eternal
+				has_building = building_eternal_palace
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
 				# ZOFE Ascension
 				has_building = building_fe_palace
 				has_building = building_ae_palace

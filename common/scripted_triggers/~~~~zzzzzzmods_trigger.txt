@@ -778,6 +778,62 @@ ag_is_compact_star = {
 	}
 }
 
+ag_is_common_country = {
+	optimize_memory
+	OR = {
+		merg_is_default_empire = yes
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		is_country_type = awakened_marauders
+		is_country_type = primitive
+		is_country_type = ratlings
+	}
+}
+
+ag_is_special_constructable_shipyard = {
+	optimize_memory
+	custom_tooltip = {
+		fail_text = "ag_need_ancient_construction_facilities"
+		OR = {
+			can_build_precursor_ship = yes
+			AND = { is_scope_type = starbase OR = {
+				has_starbase_size = ag_gamma_station_hostile
+				has_starbase_size = ag_gamma_station_0
+				has_starbase_size = ag_gamma_station_1
+
+				has_starbase_size = swfo_supremacy
+				has_starbase_size = exe_megastructure_starbase
+			} }
+			AND = { is_scope_type = megastructure OR = {
+				is_megastructure_type = ag_ancient_construction_section
+				has_megastructure_flag = ag_ancient_construction_section_megashipyard
+				
+				# is_megastructure_type = Shield_Gate
+				is_megastructure_type = StarForge
+				is_megastructure_type = exe_black_hole_restore
+				is_megastructure_type = exe_black_hole_facility
+			} }
+			AND = { exists = owner owner = { has_modifier = "ag_debug_modifier_buff_common" } }
+		}
+	}
+}
+
+ag_has_planetary_shield = {
+	optimize_memory
+	OR = {
+		has_active_building = building_planetary_shield_generator
+		# More Events Mod
+		has_active_building = building_mem_planetary_shield_generator
+		has_active_building = building_mem_planetary_shield_generator_heavy
+		has_active_building = building_mem_planetary_shield_generator_orila
+		# ACOT
+		has_active_building = building_dark_energy_psg
+		has_active_building = building_ae_dark_energy_psg
+		# AOT
+		has_active_building = building_phanon_psg
+		has_active_building = building_stellarite_psg
+	}
+}
 
 ############################### Reworked Advanced Ascension ###############################
 # Fixing the trigger and removing obsolete code
