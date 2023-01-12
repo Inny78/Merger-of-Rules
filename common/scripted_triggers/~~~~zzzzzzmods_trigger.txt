@@ -1605,3 +1605,15 @@ hfe_trigger_planet_valid_for_settle = {
 	# Merger tweak
 	is_doomsday_planet = no
 }
+
+# Extra Ship Components NEXT
+ESC_TRIGGER_is_city_planet = {
+    OR = {
+        merg_is_arcology = yes
+        # district overhaul compatibility
+        AND = {
+            is_planet_class = pc_relic
+            has_district = district_ascended_housing
+        }
+    }
+}
