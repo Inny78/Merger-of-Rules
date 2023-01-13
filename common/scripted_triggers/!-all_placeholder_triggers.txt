@@ -30,6 +30,7 @@ has_bug_branch = { always = no }
 has_ethical_gestalts = { always = no }
 has_gigastructures = { always = no }
 has_mod_reproductive_tech_and_politics = { always = no }
+has_more_authorities_triggers = { always = no }
 has_planetary_diversity = { always = no }
 has_reproductive_politics = { always = no }
 has_specialist_subject_leader_trait_maid = { always = no }
@@ -52,9 +53,11 @@ is_cruel_empire = { always = no }
 is_cruel_mega = { always = no }
 is_civic_materialist = { always = no }
 is_civic_militarist = { always = no }
+is_dictatorial = { always = no }
 is_giga_habitat = { always = no }
 is_giga_maginot_world = { always = no }
 is_giga_ringworld = { always = no }
+is_imperial = { always = no }
 is_khan_country_type = { always = no }
 is_KZ_VOY_organic_species = { always = no }
 is_nirvana_empire = { always = no }

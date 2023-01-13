@@ -267,15 +267,15 @@ is_megacorp = {
 is_autocracy = {
 	#Power of one
 	OR = {
-		is_gestalt = yes
+		AND = {
+			merg_has_more_authorities = no
+			is_gestalt = yes
+		}
 		has_authority = auth_imperial
 		has_authority = auth_dictatorial
 		# More Authorities
-		has_authority = auth_corporate_imperial
-		AND = {
-			has_authority = auth_democratic_dictatorship
-			is_authoritarian = yes
-		}
+		is_imperial = yes
+		is_dictatorial = yes
 		# Expanded Traits, Civics, Pops, and More
 		has_authority = auth_private
 		# More Corporate Authorities
@@ -817,6 +817,7 @@ has_special_star_flag_trigger = {
 		has_star_flag = hostile_system
 		has_star_flag = guardian
 		has_star_flag = sealed_system
+		has_star_flag = guardians_of_zanaam
 		# Megastructures
 		has_star_flag = abandoned_gateway
 		has_star_flag = ruined_mega_shipyard_system
@@ -838,12 +839,25 @@ has_special_star_flag_trigger = {
 		has_star_flag = outercluster
 		# Assault Lily
 		has_star_flag = al_huge_home_bed
+		# Fatherland
+		has_star_flag = mil_relic_system
 		# Gigastructural Engineering and More
+		has_star_flag = flusion_system
 		has_star_flag = giga_core_03
+		has_star_flag = giga_system_one
+		has_star_flag = giga_system_two
+		has_star_flag = giga_system_three
+		has_star_flag = giga_system_four
+		has_star_flag = jupitwo_system
+		has_star_flag = pouchkinn_system
 		# LEX
 		has_star_flag = lex_garden_cluster
 		# More Events Mod
 		has_star_flag = mem_sadrell_extant_cluster
+		# Planetary Diversity
+		has_star_flag = archive_system
+		has_star_flag = floating_system
+		has_star_flag = pdcrystal_system
 		# Real Space
 		has_star_flag = star_disaster
 		# Some Events of Outside Cluster

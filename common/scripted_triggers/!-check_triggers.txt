@@ -123,7 +123,7 @@ merg_has_lithoid_sup = { has_global_flag = lithoidsupremacy }
 merg_has_kuat = { has_global_flag = install_kuat_mod }
 
 # More Authorities
-merg_has_more_authorities = { has_global_flag = gf_moreauthorities_activated }
+merg_has_more_authorities = { OR = { has_global_flag = gf_moreauthorities_activated has_more_authorities_triggers = yes } }
 
 # More Corporate Authorities
 merg_has_mca = { has_global_flag = using_mod_more_corporate_authorities }
