@@ -37,6 +37,9 @@ merg_has_apsr = { has_global_flag = apsr_mod_on }
 # Ariphaos Unofficial Patch 1995601384
 merg_has_ariphaos_patch = { has_global_flag = ariphaos_unofficial_patch_installed }
 
+# Assault Lily
+merg_has_assault_lily = { has_global_flag = Assault_Lily_activated }
+
 # Ascension Enhancements
 merg_has_uac = { has_global_flag = has_uac_mod }
 
@@ -123,7 +126,7 @@ merg_has_lithoid_sup = { has_global_flag = lithoidsupremacy }
 merg_has_kuat = { has_global_flag = install_kuat_mod }
 
 # More Authorities
-merg_has_more_authorities = { OR = { has_global_flag = gf_moreauthorities_activated has_more_authorities_triggers = yes } }
+merg_has_more_authorities = { OR = { has_global_flag = more_authorities_activated has_more_authorities_triggers = yes } }
 
 # More Corporate Authorities
 merg_has_mca = { has_global_flag = using_mod_more_corporate_authorities }

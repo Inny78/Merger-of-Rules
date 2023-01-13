@@ -2388,13 +2388,19 @@ can_jump_drive = {
 	# Assault Lily
 	custom_tooltip = {
 		fail_text = AL_cannot_start_jump
-		exists = solar_system
-		NOT = {
-			solar_system = {
-				exists = starbase
-				starbase = {
-					has_starbase_building = AL_AntiFTL
-					owner = { is_hostile = prevprevprev.owner }
+		OR = {
+			merg_has_assault_lily = no
+			AND = {
+				merg_has_assault_lily = yes
+				exists = solar_system
+				NOT = {
+					solar_system = {
+						exists = starbase
+						starbase = {
+							has_starbase_building = AL_AntiFTL
+							owner = { is_hostile = prevprevprev.owner }
+						}
+					}
 				}
 			}
 		}

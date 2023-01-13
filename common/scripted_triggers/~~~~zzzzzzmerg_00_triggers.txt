@@ -267,10 +267,7 @@ is_megacorp = {
 is_autocracy = {
 	#Power of one
 	OR = {
-		AND = {
-			merg_has_more_authorities = no
-			is_gestalt = yes
-		}
+		is_gestalt = yes
 		has_authority = auth_imperial
 		has_authority = auth_dictatorial
 		# More Authorities
