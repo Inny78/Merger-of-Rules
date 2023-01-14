@@ -586,7 +586,7 @@ afk_target_planet = {
 	optimize_memory
 	OR = {
 		merg_is_arcology = yes
-		is_planet_class = pc_relic
+		merg_is_relic_world = yes
 		merg_is_hive_world = yes
 		merg_is_machine_world = yes
 		colonizable_planet = yes
@@ -1587,7 +1587,7 @@ ESC_TRIGGER_is_city_planet = {
         merg_is_arcology = yes
         # district overhaul compatibility
         AND = {
-            is_planet_class = pc_relic
+            merg_is_relic_world = yes
             has_district = district_ascended_housing
         }
     }
