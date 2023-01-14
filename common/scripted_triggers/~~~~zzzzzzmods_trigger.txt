@@ -1,6 +1,5 @@
 # Scripted triggers from mods, expanded to acknowledge other mods.
 ############################### Shadowgate ###############################
-# Making Shadowgate acknowledge mod-made Fallen Empires
 shadowgate_is_fe = {
 	optimize_memory
 	OR = {
@@ -15,8 +14,6 @@ shadowgate_is_fe = {
 		is_country_type = lost_empire
 	}
 }
-
-# Making Shadowgate acknowledge mod-made Awakened Empires
 shadowgate_is_ae = {
 	optimize_memory
 	OR = {
@@ -30,7 +27,6 @@ shadowgate_is_ae = {
 		is_country_type = ascended_empire
 	}
 }
-
 shadowgate_aggressor_is_valid_cb_target = {
 	optimize_memory
 	NOR = {
@@ -68,7 +64,6 @@ ehof_default_country = {
 	optimize_memory
 	merg_is_standard_empire = yes
 }
-
 # Making station-sized ships able to use the EHOF
 can_use_ehof = {
 	optimize_memory
@@ -88,7 +83,6 @@ can_use_ehof = {
 		}
 	}
 }
-
 reshaper_eligible = {
 	optimize_memory
 	NOR = {
@@ -114,14 +108,12 @@ reshaper_eligible = {
 		merg_is_forbidden_target = yes
 	}
 }
-
 giga_valid_planet_wrecked_ship = {
 	optimize_memory
 	solar_system = { merg_is_void_system = no }
 	is_star = no
 	NOT = { has_planet_flag = has_giga_wrecked_ship }
 }
-
 # Overwriting to give support to other ringworlds
 giga_habitable_structure = {
 	optimize_memory
@@ -150,7 +142,6 @@ giga_habitable_structure = {
 		uses_district_set = phanon_macripp
 	}
 }
-
 # extensible restriction list (can NOT build Maginots on these planet_classes)
 is_maginotable_restricted = {
 	optimize_memory
@@ -189,7 +180,6 @@ is_maginotable_restricted = {
 		is_planetary_diversity_ringworld = yes
 	}
 }
-
 mega_blokkats_wont_stripmine = {
 	optimize_memory
 	OR = {
@@ -202,7 +192,6 @@ mega_blokkats_wont_stripmine = {
 		merg_is_gate_mega = yes
 	}
 }
-
 ndb_can_target_system = {
 	optimize_memory
 	cohesive_system = no
@@ -249,7 +238,6 @@ ndb_can_target_system = {
 		}
 	}
 }
-
 ndb_can_target_planet = {
 	optimize_memory
 	NOR = {
@@ -281,7 +269,6 @@ ndb_can_target_planet = {
 		is_planet_class = pc_zeitriss
 	}
 }
-
 is_ndb_immune_star_planet = {
 	optimize_memory
 	OR = {
@@ -306,7 +293,6 @@ is_ndb_immune_star_planet = {
 		is_planet_class = pc_KZ_VOY_micro_black_hole
 	}
 }
-
 is_ndb_vulnerable_mega = {
 	NOR = {
 		mega_blokkats_wont_stripmine = yes
@@ -319,12 +305,10 @@ is_ndb_vulnerable_mega = {
 		merg_is_gate_mega = yes
 	}
 }
-
 giga_gas_giant = {
 	optimize_memory
 	merg_is_gas_giant = yes
 }
-
 giga_can_be_war_planet = {
 	optimize_memory
 	NOT = { has_planet_flag = dormant_war_planet }
@@ -334,12 +318,10 @@ giga_can_be_war_planet = {
 	prev = { NOT = { has_ethic = ethic_fanatic_spiritualist } }
 	uninhabitable_regular_planet = yes
 }
-
 giga_planet_no_farming = {
 	optimize_memory
 	merg_is_machine_world = yes
 }
-
 giga_is_white_hole = {
 	optimize_memory
 	OR = {
@@ -350,7 +332,6 @@ giga_is_white_hole = {
 		is_planet_class = pc_white_hole
 	}
 }
-
 is_valid_kaiser_moon_candidate = {
 	optimize_memory
 	OR = {
@@ -374,7 +355,6 @@ is_zofe_compatible = {
 	optimize_memory
 	merg_is_default_empire = yes
 }
-
 is_zofe_megacorp = {
 	optimize_memory
 	is_zofe_country = yes
@@ -426,20 +406,19 @@ mem_is_spherical_world = {
 }
 
 ############################### ThaumStellaris ###############################
-# Expanding this with more desolate worlds
 tc_element_shard_candidate = {
 	optimize_memory
 	NOT = { has_deposit_for = shipclass_research_station }
 	OR = {
 		uninhabitable_regular_planet = yes
-		is_planet_class = pc_asteroid
+		is_asteroid = yes
 		is_planet_class = pc_broken
 		is_planet_class = pc_shattered
+		is_planet_class = pc_shattered_2
 	}
 }
 
 ############################### Starborn ###############################
-# Expanding Starborn trigger with ACOT/AOT gene clinics
 has_gene_clinic = {
 	optimize_memory
 	OR = {
@@ -453,8 +432,6 @@ has_gene_clinic = {
 		has_building = building_phanon_hospital
 	}
 }
-
-# Adding support to other mods structures
 starborn_can_place_hab = {
 	optimize_memory
 	custom_tooltip = {
@@ -495,7 +472,6 @@ legw_planet_uninhabitable = {
 	optimize_memory
 	uninhabitable_regular_planet = yes
 }
-
 legw_planet_habitable = {
 	optimize_memory
 	AND = {
@@ -503,7 +479,6 @@ legw_planet_habitable = {
 		is_artificial = no
 	}
 }
-
 legw_megaplanet = {
 	optimize_memory
 	OR = {
@@ -525,19 +500,15 @@ legw_megaplanet = {
 		is_planet_class = pc_awaken_ai
 	}
 }
-
 legw_is_dry = {
 	is_dry = yes
 }
-
 legw_is_wet = {
 	is_wet = yes
 }
-
 legw_is_cold = {
 	is_cold = yes
 }
-
 legw_fallen_empire_planet = {
 	optimize_memory
 	owner = {
@@ -569,7 +540,6 @@ kuat_is_common_country = {
 		is_country_type = ratlings
 	}
 }
-
 kuat_is_defense_galaxy_fleet = {
 	optimize_memory
 	any_country = {
@@ -653,7 +623,6 @@ is_habitat_wg = {
 		merg_is_habitat = yes
 	}
 }
-
 is_default_and_fallen_country = {
 	optimize_memory
 	OR = {
@@ -662,12 +631,10 @@ is_default_and_fallen_country = {
 		merg_is_awakened_fe = yes
 	}
 }
-
 is_default_country_wg = {
 	optimize_memory
 	merg_is_default_empire = yes
 }
-
 has_active_wg_foundry_building = {
 	OR = {
 		has_active_building = building_foundry_1
@@ -692,7 +659,6 @@ has_active_wg_foundry_building = {
 		has_active_building = building_stellarite_alloy_forge
 	}
 }
-
 has_active_wg_foundry_building_lv_low = {
 	OR = {
 		has_active_building = building_foundry_1
@@ -703,7 +669,6 @@ has_active_wg_foundry_building_lv_low = {
 		has_active_building = building_gray_nano_foundry
 	}
 }
-
 has_active_wg_foundry_building_lv_high = {
 	OR = {
 		has_active_building = building_foundry_3
@@ -723,7 +688,6 @@ has_active_wg_foundry_building_lv_high = {
 		has_active_building = building_stellarite_alloy_forge
 	}
 }
-
 has_active_wg_factory_building = {
 	OR = {
 		has_active_building = building_factory_1
@@ -745,7 +709,6 @@ has_active_wg_factory_building = {
 		has_active_building = building_stellarite_civilian_factory
 	}
 }
-
 has_gate_megastructure = {
 	optimize_memory
 	merg_is_gate_mega = yes
@@ -755,12 +718,10 @@ has_gate_megastructure = {
 ag_is_gateway_megastructure = {
 	merg_is_gate_mega = yes
 }
-
 ag_is_habitat = {
 	optimize_memory
 	merg_is_habitat = yes
 }
-
 ag_is_compact_star = {
 	optimize_memory
 	OR = {
@@ -777,7 +738,6 @@ ag_is_compact_star = {
 		is_planet_class = pc_microquasar_2
 	}
 }
-
 ag_is_common_country = {
 	optimize_memory
 	OR = {
@@ -789,7 +749,6 @@ ag_is_common_country = {
 		is_country_type = ratlings
 	}
 }
-
 ag_is_special_constructable_shipyard = {
 	optimize_memory
 	custom_tooltip = {
@@ -817,7 +776,6 @@ ag_is_special_constructable_shipyard = {
 		}
 	}
 }
-
 ag_has_planetary_shield = {
 	optimize_memory
 	OR = {
@@ -845,7 +803,6 @@ AAR_trgr_cntr_playable = {
 		merg_is_awakened_fe = yes
 	}
 }
-
 AAR_trgr_ship_SB_valid = {
 	OR = {
 		AND = {
@@ -985,7 +942,6 @@ cruel_has_shipyard = {
 		has_starbase_module = virtual_shipyard_uplink
 	}
 }
-
 cruel_can_trade = {
 	OR = {
 		is_gestalt = no
@@ -1008,21 +964,17 @@ gpm_is_planet_class_normal_uninhabitable = {
 		uninhabitable_regular_planet = yes
 	}
 }
-
 gpm_is_asteroid = {
 	is_asteroid = yes
 }
-
 gpm_is_planet_class_barren = {
 	optimize_memory
 	merg_is_barren = yes
 }
-
 gpm_is_planet_class_molten = {
 	optimize_memory
 	merg_is_molten = yes
 }
-
 gpm_is_planet_class_toxic = {
 	optimize_memory
 	OR = {
@@ -1038,20 +990,16 @@ gpm_is_planet_class_toxic = {
 		is_planet_class = pc_ash
 	}
 }
-
 gpm_is_planet_class_frozen = {
 	merg_is_frozen = yes
 }
-
 gpm_is_planet_class_normal_habitable = {
 	habitable_planet = yes
 	is_artificial = no
 }
-
 gpm_is_planet_class_nuked = {
 	merg_is_nuked = yes
 }
-
 gpm_is_planet_class_gas_giant = {
 	optimize_memory
 	OR = {
@@ -1063,37 +1011,29 @@ gpm_is_planet_class_gas_giant = {
 		is_planet_class = pc_giga_maginot_gas_giant		
 	}
 }
-
 gpm_is_planet_class_city = {
 	optimize_memory
 	OR = {
 		merg_is_arcology = yes
-		is_planet_class = pc_relic
-		# Midas
-		is_planet_class = pc_midas_relic
+		merg_is_relic_world = yes
 	}
 }
-
 gpm_is_planet_class_machine = {
 	optimize_memory
 	merg_is_machine_world = yes
 }
-
 gpm_is_planet_class_hive = {
 	optimize_memory
 	merg_is_hive_world = yes
 }
-
 gpm_is_planet_class_habitat = {
 	optimize_memory
 	merg_is_habitat = yes
 }
-
 gpm_is_planet_class_ringworld = {
 	optimize_memory
 	merg_is_hab_ringworld = yes
 }
-
 gpm_is_planet_fallen_empire = {
 	optimize_memory
 	exists = owner
@@ -1104,7 +1044,6 @@ gpm_is_planet_fallen_empire = {
 		}
 	}
 }
-
 gpm_is_fallen_empire_space_owner = {
 	optimize_memory
 	exists = space_owner
@@ -1115,7 +1054,6 @@ gpm_is_fallen_empire_space_owner = {
 		}
 	}
 }
-
 eligible_for_rare_crystals = {
 	optimize_memory
 	NOR = {
@@ -1132,7 +1070,6 @@ eligible_for_rare_crystals = {
 		is_star = yes
 	}
 }
-
 eligible_for_volatile_motes = {
 	optimize_memory
 	NOR = {
@@ -1149,7 +1086,6 @@ eligible_for_volatile_motes = {
 		is_star = yes
 	}
 }
-
 eligible_for_alloys = {
 	optimize_memory
 	NOR = {
@@ -1165,7 +1101,6 @@ eligible_for_alloys = {
 		is_star = yes
 	}
 }
-
 eligible_for_zro = {
 	optimize_memory
 	NOR = {
@@ -1189,7 +1124,6 @@ eligible_for_zro = {
 		is_star = yes
 	}
 }
-
 eligible_for_living_metal = {
 	optimize_memory
 	NOR = {
@@ -1213,16 +1147,15 @@ eligible_for_living_metal = {
 		is_star = yes
 	}
 }
-
 is_terraforming_candidate = {
 	optimize_memory
 	OR = {
 		has_modifier = terraforming_candidate
 		has_modifier = toxic_terraforming_candidate
+		has_modifier = frozen_terraforming_candidate
 		# has_modifier = terraforming_candidate_precursor
 	}
 }
-
 gpm_has_required_terraform_modifier = {
 	optimize_memory
 	# OR = {
@@ -1237,12 +1170,10 @@ is_empire = { # merg_is_standard_empire
 	optimize_memory
 	merg_is_standard_empire = yes
 }
-
 is_playable = {
 	optimize_memory
 	merg_is_default_empire = yes
 }
-
 is_planet_city = {
 	optimize_memory
 	merg_is_arcology = yes
@@ -1269,7 +1200,6 @@ is_regular_star = {
 		is_planet_class = pc_fu_star
 	}
 }
-
 terraforming_candidate_solar_system_check = {
 	optimize_memory
 	NOR = {
@@ -1314,7 +1244,6 @@ terraforming_candidate_solar_system_check = {
 		merg_is_void_system = yes
 	}
 }
-
 is_spy_empire = {
 	optimize_memory
 	OR = {
@@ -1340,12 +1269,10 @@ is_fallen_empire_planet = {
 		}
 	}
 }
-
 exists_collapsed_star = {
 	optimize_memory
 	solar_system = { any_system_planet = { merg_is_standard_dense_star = yes } }
 }
-
 is_collapsed_star = {
 	optimize_memory
 	merg_is_standard_dense_star = yes
@@ -1376,7 +1303,6 @@ TAC_is_common_country = {
 		is_country_type = ds_nomads
 	}
 }
-
 TAC_is_sc_void = {
 	optimize_memory
 	OR = {
@@ -1521,7 +1447,6 @@ has_mineral_deposit = {
 		has_deposit = gpm_d_giant_skeleton
 	}
 }
-
 is_mineral_deposit = {
 	optimize_memory
 	OR = {
@@ -1563,20 +1488,17 @@ is_gas_giant = {
 hfe_trigger_is_asteroid = {
 	is_asteroid = yes
 }
-
 hfe_trigger_is_fallen = {
 	or = {
 		is_fallen_empire = yes
 		hfe_trigger_is_human_fallen = yes
 	}
 }
-
 hfe_trigger_system_in_free_space = {
 	hfe_trigger_system_in_someones_space = no
 	any_system = { has_hyperlane_to = prev }
 	merg_is_void_system = no
 }
-
 hfe_trigger_terminator_event = {
 	is_at_war = no
 	has_country_flag = hfe_marked_as_human
@@ -1617,7 +1539,6 @@ hfe_trigger_terminator_event = {
 		}
 	}
 }
-
 hfe_trigger_ascension_points = {
 	custom_tooltip = {
 		fail_text = hfe_ascension_points
@@ -1634,7 +1555,6 @@ hfe_trigger_ascension_points = {
 		}
 	}
 }
-
 hfe_trigger_is_assimilator = {
 	is_homicidal = no
 	OR = {
@@ -1650,7 +1570,6 @@ hfe_trigger_is_assimilator = {
 		has_valid_civic = civic_hive_assimilator
 	}
 }
-
 hfe_trigger_planet_valid_for_settle = {
 	is_under_colonization = no
 	has_orbital_bombardment = no
@@ -1672,4 +1591,85 @@ ESC_TRIGGER_is_city_planet = {
             has_district = district_ascended_housing
         }
     }
+}
+
+# The Storm Cluster
+scluster_uninhabitable_planet = {
+	OR = {
+		uninhabitable_regular_planet = yes
+		merg_is_gas_giant = yes
+	}
+}
+scluster_habitable_planet_urban = {
+	OR = {
+		merg_is_relic_world = yes
+		merg_is_arcology = yes
+	}
+}
+scluster_habitable_planet_normal_dry = {
+	OR = {
+		merg_is_arid = yes
+		merg_is_desert = yes
+		merg_is_savannah = yes
+	}
+}
+scluster_habitable_planet_normal_wet = {
+	OR = {
+		merg_is_continental = yes
+		merg_is_ocean = yes
+		merg_is_tropical = yes
+	}
+}
+scluster_habitable_planet_normal_cold = {
+	OR = {
+		merg_is_tundra = yes
+		merg_is_arctic = yes
+		merg_is_alpine = yes
+	}
+}
+scluster_is_barren = {
+	OR = {
+		merg_is_barren = yes
+		merg_is_barren_cold = yes
+		is_asteroid = yes
+	}
+}
+
+# Harvest Engine Crisis
+harvester_is_crackable = {
+	merg_is_forbidden_target = no
+	AND = {
+		OR = {
+			num_minerals >= 1
+			# Will always treat colonies as crackable, unless they are habitats or ringworlds
+			AND = {
+				is_colony = yes
+				is_artificial = no
+			}
+		}
+		NOR = {
+			is_star = yes
+			is_asteroid = yes
+			is_planet_class = pc_shattered #Prevent Overcracking
+			is_planet_class = pc_shattered_2
+			is_planet_class = pc_egg_cracked
+			is_planet_class = pc_broken
+			is_planet_class = pc_machine_broken
+		}
+		is_content_world = no
+	}
+}
+
+# Primitive Conquest Enhancements
+pce_planet_uses_district_farming_uncapped = {
+	optimize_memory
+	OR = {
+		uses_district_set = hive_world
+		uses_district_set = shattered_ring_world
+		AND = {
+			merg_is_ocean = yes
+			exists = owner
+			owner = { is_anglers_empire = yes }
+		}
+	}
 }

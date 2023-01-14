@@ -211,6 +211,8 @@ merg_is_machine_world = {
 		is_pd_robot_arcology = yes
 		# Gigastructural Engineering & More
 		is_planet_class = pc_ringworld_machine
+		# Girls Frontline
+		is_planet_class = pc_GF_sf_machine
 		# Origin - F.C.S.S & M.C.S.S
 		is_planet_class = pc_awaken_ai
 	}
@@ -267,6 +269,14 @@ merg_is_ocean = {
 		# Planetary Diversity
 		is_pd_ocean = yes
 		is_pd_aquatics = yes
+	}
+}
+
+merg_is_relic_world = {
+	OR = {
+		is_planet_class = pc_relic
+		# Midas
+		is_planet_class = pc_midas_relic
 	}
 }
 

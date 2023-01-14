@@ -57,6 +57,7 @@ is_dictatorial = { always = no }
 is_giga_habitat = { always = no }
 is_giga_maginot_world = { always = no }
 is_giga_ringworld = { always = no }
+is_harvester_country = { always = no }
 is_imperial = { always = no }
 is_khan_country_type = { always = no }
 is_KZ_VOY_organic_species = { always = no }

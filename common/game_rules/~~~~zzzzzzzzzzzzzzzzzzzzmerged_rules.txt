@@ -1980,6 +1980,8 @@ can_orbital_bombard = {
 				is_country_type = TAC_machine_crisis_country
 				# BlueArchive
 				is_country_type = Aris_mid
+				# Replicators
+				is_country_type = replicators
 			}
 		}
 		AND = {
@@ -2374,6 +2376,29 @@ ai_should_restrict_system = {
 				}
 			}
 		}
+		# Harvest Engine Crisis
+		AND = {
+			root = { is_harvester_country = yes }
+			OR = {
+				any_country_neighbor_to_system  = { merg_is_fallen_empire = yes }
+				AND = {
+					has_star_flag = guardian
+					any_fleet_in_system = {
+						exists = owner
+						owner = {
+							OR = {
+								is_country_type = guardian_fortress
+								is_guardian_country = yes
+							}
+						}
+					}
+				}
+				AND = {
+					exists = owner
+					owner = { merg_is_fallen_empire = yes }
+				}
+			}
+		}
 	}
 }
 
@@ -2662,6 +2687,17 @@ can_enter_system_by_jump = {
 			}
 			# Reworked Advanced Ascension
 			root = { has_country_flag = AAR_flg_cntr_JUMP_webway_TGT }
+		}
+	}
+	# The Storm Cluster
+	custom_tooltip = {
+		fail_text = cannot_jump_to_scluster_system_during_storm
+		NAND = {
+			has_global_flag = ongoing_space_storm
+			OR = {
+				has_star_flag = scluster
+				has_star_flag = scluster_entrance
+			}
 		}
 	}
 }

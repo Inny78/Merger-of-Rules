@@ -53,10 +53,7 @@ original_empire_active = { ai = { enabled = no } }
 original_empire_passive = { ai = { enabled = no } }
 pg_last_hope = { ai = { enabled = no } }
 planet_state = { ai = { enabled = no } }
-uo_une_member_active = { ai = { enabled = no } }
-void_lifeforms_1 = { ai = { enabled = no } }
-void_lifeforms_2 = { ai = { enabled = no } }
-vbp_machine = { ai = { enabled = no } }
+replicators = { ai = { enabled = no } }
 shroud_cult = { ai = { enabled = no } }
 shroud_entities = { ai = { enabled = no } }
 shroud_horrors = { ai = { enabled = no } }
@@ -65,6 +62,10 @@ sofe_sentinel_active = { ai = { enabled = no } }
 TAC_debris_ship_country = { ai = { enabled = no } }
 TAC_machine_crisis_country = { ai = { enabled = no } }
 the_sleeper_fallen = { ai = { enabled = no } }
+uo_une_member_active = { ai = { enabled = no } }
+vbp_machine = { ai = { enabled = no } }
+void_lifeforms_1 = { ai = { enabled = no } }
+void_lifeforms_2 = { ai = { enabled = no } }
 wg_crisis_country = { ai = { enabled = no } }
 wg_Khan_country_type = { ai = { enabled = no } }
 wg_Khan_country_type_auto_delete = { ai = { enabled = no } }
