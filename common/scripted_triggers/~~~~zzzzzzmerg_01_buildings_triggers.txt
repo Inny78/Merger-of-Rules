@@ -95,6 +95,8 @@ has_upgraded_capital = {
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
 				has_building = building_eternal_palace
+				# Wula Fallen Empire
+				merg_has_wula_capital = yes
 				# ZOFE Ascension
 				has_building = building_fe_palace
 				has_building = building_ae_palace
@@ -177,6 +179,8 @@ has_upgraded_capital = {
 				has_building = building_heaven_sanctuary
 				has_building = building_ancient_palace
 				has_building = building_phanon_tower
+				# All That Is GRIMDARK
+				has_building = building_system_capital_gr
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_phanon_palace
@@ -205,8 +209,8 @@ has_upgraded_capital = {
 				has_building = building_dm_galactic_machine_capital
    	            has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
-				# All That Is GRIMDARK
-				has_building = building_system_capital_gr
+				# Wula Fallen Empire
+				merg_has_wula_capital = yes
 				# ZOFE Ascension
 				has_building = building_fe_palace
 				has_building = building_ae_palace
@@ -309,6 +313,8 @@ has_major_upgraded_capital = {
 				# Twinks Eternal
 				has_building = building_eternal_palace
 				has_building = building_eternal_nexus_ai
+				# Wula Fallen Empire
+				merg_has_wula_capital = yes
 				# ZOFE Ascension
 				has_building = building_fe_palace
 				has_building = building_ae_palace
@@ -418,6 +424,8 @@ has_major_upgraded_capital = {
 				has_building = building_eternal_palace
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
+				# Wula Fallen Empire
+				merg_has_wula_capital = yes
 				# ZOFE Ascension
 				has_building = building_fe_palace
 				has_building = building_ae_palace
@@ -520,6 +528,8 @@ has_fully_upgraded_capital = {
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
 				has_building = building_eternal_palace
+				# Wula Fallen Empire
+				merg_has_wula_capital = yes
 				# ZOFE Ascension
 				has_building = building_fe_palace
 				has_building = building_ae_palace
@@ -589,6 +599,8 @@ has_fully_upgraded_capital = {
 				has_building = building_dm_ancient_palace
 				has_building = building_ae_ancient_palace
 				has_building = building_phanon_tower
+				# All that is GRIMDARK
+				has_building = building_system_capital_gr
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_phanon_palace
@@ -615,8 +627,8 @@ has_fully_upgraded_capital = {
 				has_building = building_dm_galactic_machine_capital
        	        has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
-				# All that is GRIMDARK
-				has_building = building_system_capital_gr
+				# Wula Fallen Empire
+				merg_has_wula_capital = yes
 				# ZOFE Ascension
 				has_building = building_fe_palace
 				has_building = building_ae_palace
@@ -696,6 +708,8 @@ has_enigmatic_capital = {
 				has_building = building_dm_galactic_machine_capital
                 has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
+				# Wula Fallen Empire
+				merg_has_wula_capital = yes
 			}
 		}
 	}	
@@ -865,6 +879,8 @@ has_fort = {
 			has_building = building_ancient_palace_at
 			# Secrets of the Shroud
 			has_district = district_acot_soulsphere_fortress
+			# Wula Fallen Empire
+			has_building = building_wula_stronghold
 		}
 	}
 }
@@ -902,6 +918,18 @@ has_advanced_fort = {
 			has_building = building_ancient_palace_at
 			# Secrets of the Shroud
 			has_district = district_acot_soulsphere_fortress
+			# Wula Fallen Empire
+			has_building = building_wula_stronghold
 		}
+	}
+}
+
+merg_has_wula_capital = {
+	OR = {
+		building_wula_archive
+		building_all_is_dust
+		building_wula_order_keep
+		building_wula_gene_bank
+		building_fe_xeno_zoo
 	}
 }

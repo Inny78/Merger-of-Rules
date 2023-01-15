@@ -657,6 +657,8 @@ has_active_wg_foundry_building = {
 		has_active_building = building_phanon_alloy_forge
 		has_active_building = building_stellarite_nano_forge
 		has_active_building = building_stellarite_alloy_forge
+		# Wula Fallen Empire
+		has_active_building = building_wula_foundry
 	}
 }
 has_active_wg_foundry_building_lv_low = {
@@ -686,6 +688,8 @@ has_active_wg_foundry_building_lv_high = {
 		has_active_building = building_phanon_alloy_forge
 		has_active_building = building_stellarite_nano_forge
 		has_active_building = building_stellarite_alloy_forge
+		# Wula Fallen Empire
+		has_active_building = building_wula_foundry
 	}
 }
 has_active_wg_factory_building = {
@@ -970,6 +974,7 @@ gpm_is_asteroid = {
 gpm_is_planet_class_barren = {
 	optimize_memory
 	merg_is_barren = yes
+	merg_is_barren_cold = yes
 }
 gpm_is_planet_class_molten = {
 	optimize_memory
@@ -1166,7 +1171,7 @@ gpm_has_required_terraform_modifier = {
 }
 
 # Scripted Trigger Undercoat
-is_empire = { # merg_is_standard_empire
+is_empire = {
 	optimize_memory
 	merg_is_standard_empire = yes
 }
@@ -1177,6 +1182,12 @@ is_playable = {
 is_planet_city = {
 	optimize_memory
 	merg_is_arcology = yes
+}
+planet_gives_aquatics_bonus = {
+	OR = {
+		merg_is_ocean = yes
+		has_modifier = flooded_habitat
+	}
 }
 
 # Expanded Events
@@ -1258,6 +1269,67 @@ is_spy_empire = {
 		has_valid_civic = civic_shadow_state
 	}
 }
+is_barren = {
+	merg_is_barren = yes
+}
+is_molten = {
+	merg_is_molten = yes
+}
+is_frozen = {
+	merg_is_frozen = yes
+}
+is_toxic = {
+	merg_is_toxic = yes
+}
+is_gas_giant = {
+	merg_is_gas_giant = yes
+}
+is_desert = {
+	merg_is_desert = yes
+}
+is_arid = {
+	merg_is_arid = yes
+}
+is_savannah = {
+	merg_is_savannah = yes
+}
+is_tropical = {
+	merg_is_tropical = yes
+}
+is_continental = {
+	merg_is_continental = yes
+}
+is_ocean = {
+	merg_is_ocean = yes
+}
+is_tundra = {
+	merg_is_tundra = yes
+}
+is_arctic = {
+	merg_is_arctic = yes
+}
+is_alpine = {
+	merg_is_alpine = yes
+}
+is_nuked = {
+	merg_is_nuked = yes
+}
+is_hive = {
+	merg_is_hive_world = yes
+}
+is_machine = {
+	merg_is_machine_world = yes
+}
+is_gaia = {
+	OR = {
+		merg_is_gaia = yes
+		# real space
+		is_planet_class = pc_ancient
+	}
+}
+is_city = {
+	merg_is_arcology = yes
+}
 
 # All these worlds
 is_fallen_empire_planet = {
@@ -1282,25 +1354,13 @@ is_collapsed_star = {
 TAC_is_common_country = {
 	optimize_memory
 	OR = {
-		is_country_type = default
-		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire
+		merg_is_standard_empire = yes
 		is_country_type = awakened_marauders
 		is_country_type = primitive
-		is_country_type = swarm
-		is_country_type = extradimensional
-		is_country_type = extradimensional_2
-		is_country_type = extradimensional_3
-		is_country_type = ai_empire
+		is_crisis_faction = yes
 		is_country_type = gate_builders
 		is_country_type = gray_goo
-		# The Empty Vagrant
-		is_country_type = default_ev
-		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
-		# Darkspace
-		is_country_type = ds_nomads
+		is_country_type = ratlings
 	}
 }
 TAC_is_sc_void = {

@@ -732,6 +732,8 @@ has_any_farming_district_or_buildings = {
 		# Plentiful Traditions
 		has_building = building_plentiful_traditions_pillar_of_affliction
 		has_building = building_plentiful_traditions_advanced_pillar_of_affliction
+		# Wula Fallen Empire
+		has_building = building_wula_nourishment_center
     }
 }
 
@@ -780,6 +782,8 @@ has_any_generator_district_or_building = {
 		has_district = PR_DSTR_generator_uncapped
 		has_district = PR_DSTR_rw_generator
 		has_district = PR_DSTR_hab_energy
+		# Wula Fallen Empire
+		has_building = building_wula_singularity
 	}
 }
 
