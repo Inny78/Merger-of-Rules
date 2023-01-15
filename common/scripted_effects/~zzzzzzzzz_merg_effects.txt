@@ -34,5 +34,11 @@ remove_capital_building = {
 		# Twinks Eternal
 		building_eternal_nexus_ai = { remove_building = building_eternal_nexus_ai }
 		building_eternal_palace = { remove_building = building_eternal_palace }
+		# Wula Fallen Empire
+		building_wula_archive = { remove_building = building_wula_archive }
+		building_all_is_dust = { remove_building = building_all_is_dust }
+		building_wula_order_keep = { remove_building = building_wula_order_keep }
+		building_wula_gene_bank = { remove_building = building_wula_gene_bank }
+		building_fe_xeno_zoo = { remove_building = building_fe_xeno_zoo }
 	}
 }
