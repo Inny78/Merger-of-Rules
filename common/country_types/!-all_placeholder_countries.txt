@@ -62,6 +62,7 @@ sofe_sentinel_active = { ai = { enabled = no } }
 TAC_debris_ship_country = { ai = { enabled = no } }
 TAC_machine_crisis_country = { ai = { enabled = no } }
 the_sleeper_fallen = { ai = { enabled = no } }
+throng_country = { ai = { enabled = no } }
 uo_une_member_active = { ai = { enabled = no } }
 vbp_machine = { ai = { enabled = no } }
 void_lifeforms_1 = { ai = { enabled = no } }

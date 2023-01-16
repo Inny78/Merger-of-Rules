@@ -22,6 +22,8 @@ merg_is_arcology = {
 		is_planet_class = pc_azur
 		# Empires Expanded
 		is_planet_class = pc_city_cep
+		# Forgotten History
+		is_planet_class = pc_apocalyptic_city
 		# Midas
 		is_planet_class = pc_midas_city
 		# Planetary Diversity
@@ -151,6 +153,10 @@ merg_is_gaia = {
 		is_planet_class = pc_gaia
 		# All These Worlds
 		is_planet_class = orbit_chlorogaian
+		is_planet_class = orbit_thermogaian
+		is_planet_class = pc_thermogaian
+		is_planet_class = orbit_cryogaian
+		is_planet_class = pc_cryogaian
 		# Azur Lane
 		is_planet_class = pc_azur_gaia
 		# Planetary Diversity
@@ -161,7 +167,7 @@ merg_is_gaia = {
 		is_planet_class = pc_utopian_gaia
 	}
 }
- 
+
 merg_is_gas_giant = {
 	OR = {
 		is_planet_class = pc_gas_giant
