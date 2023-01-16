@@ -1,0 +1,3 @@
+allowed_planet_classes = {
+	merg_is_ocean = yes
+}
