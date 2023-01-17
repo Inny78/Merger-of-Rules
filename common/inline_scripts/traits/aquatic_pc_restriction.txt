@@ -1,3 +1,23 @@
 allowed_planet_classes = {
-	merg_is_ocean = yes
+	pc_ocean
+	pc_aquatic
+	pc_reef
+	pc_pd_archipelago
+	pc_desertislands
+	pc_subarctic
+	pc_storm
+	pc_pd_iceberg
+	pc_aquatic
+	pc_tidallyaquatic
+	pc_aquatic_superhab
+	orbit_water_panthalassic
+	orbit_archipelagic
+	orbit_panthalassic
+	pc_panthalassic
+	orbit_cryopelagic
+	orbit_thermopelagic
+	orbit_panpelagic
+	pc_panpelagic
+	pc_asp_ocean_red
+	pc_azur_ocean
 }

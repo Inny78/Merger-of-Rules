@@ -274,7 +274,10 @@ merg_is_ocean = {
 		is_planet_class = pc_azur_ocean
 		# Planetary Diversity
 		is_pd_ocean = yes
-		is_pd_aquatics = yes
+		# is_pd_aquatics = yes
+		is_planet_class = pc_aquatic
+		is_planet_class = pc_tidallyaquatic
+		is_planet_class = pc_aquatic_superhab
 	}
 }
 
