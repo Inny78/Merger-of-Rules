@@ -4365,6 +4365,45 @@ can_destroy_planet_with_PLANET_KILLER_CLEANSER = {
 	}
 }
 
+# Return of Ragnarok
+can_destroy_planet_with_N_ISBS_RAGNAROK_SPEAR_OF_LONGINUS = {
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_country_type = primitive }
+		}
+		custom_tooltip = {
+			fail_text = primitives_not_active_or_full_interference
+			from.owner = {
+				OR = {
+					has_policy_flag = interference_active
+					has_policy_flag = interference_full
+				}
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = N_ISBS_longinus_triggers
+		OR = {
+			owner = { is_hostile = from.owner }
+			space_owner = { is_hostile = from.owner }
+			NOT = { exists = space_owner }
+			AND = {
+				exists = space_owner
+				space_owner = { is_same_value = from.owner }
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = N_ISBS_longinus_hited
+		NOT = { has_modifier = N_ISBS_longinus_hit_planet_modifier }
+	}
+}
+
 # ===========================================================================================================================
 
 # PK Triggers here

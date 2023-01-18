@@ -16,3 +16,4 @@ planet_population_control_gestalt = {}
 modifier_ban_assemble = {}
 modifier_BA_Veritas_4 = {}
 ag_debug_modifier_buff_common = {}
+N_ISBS_longinus_hit_planet_modifier = {}

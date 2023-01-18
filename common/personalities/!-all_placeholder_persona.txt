@@ -9,3 +9,5 @@ technological_warriors = { behaviour = { } allow = { always = no } }
 vb_ambitious_unifiers = { behaviour = { } allow = { always = no } }
 vb_keepers_of_peace = { behaviour = { } allow = { always = no } }
 vb_sneering_technocrats = { behaviour = { } allow = { always = no } }
+fallen_empire_gamers = { behaviour = { } allow = { always = no } }
+fallen_empire_pouchkinn = { behaviour = { } allow = { always = no } }
