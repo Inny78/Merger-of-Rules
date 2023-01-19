@@ -301,8 +301,6 @@ is_ndb_vulnerable_mega = {
 		is_megastructure_type = blokkat_harvester_charging_up_mothership
 		is_megastructure_type = blokkat_harvester_charging_up
 		has_megastructure_flag = ndb_immune_megastructure
-		# Merger of Rules
-		merg_is_gate_mega = yes
 	}
 }
 giga_gas_giant = {
@@ -346,6 +344,27 @@ is_valid_kaiser_moon_candidate = {
 		planet_size = 6
 		planet_size = 7
 		planet_size = 8
+	}
+}
+giga_is_standard_country_type = {
+	OR = {
+		is_country_type = default
+		is_country_type = ratlings
+		# Darkspace
+		is_country_type = ds_nomads
+		# Ethics & Civics Infinity
+		is_country_type = uo_une_member_active
+		# The Empty Vagrant
+		is_country_type = default_ev
+		# ZOFE
+		is_zofe_compatible = yes
+	}
+}
+giga_is_special_country_type = {
+	OR = {
+		merg_is_fallen_empire = yes
+		merg_is_awakened_fe = yes
+		is_country_type = primitive
 	}
 }
 
