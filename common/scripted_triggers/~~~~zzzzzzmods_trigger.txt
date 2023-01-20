@@ -59,12 +59,10 @@ shadowgate_aggressor_is_valid_cb_target = {
 }
 
 ############################### Gigastructural Engineering & More ###############################
-# Expanding a bit the country list
 ehof_default_country = {
 	optimize_memory
 	merg_is_standard_empire = yes
 }
-# Making station-sized ships able to use the EHOF
 can_use_ehof = {
 	optimize_memory
 	NOR = {

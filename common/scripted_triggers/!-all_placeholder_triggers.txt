@@ -27,6 +27,7 @@ has_acot = { always = no }
 has_apsr_modifiers = { always = no }
 has_artificial_wombs = { always = no }
 has_bug_branch = { always = no }
+has_civic_organic_zealots_active = { always = no }
 has_ethical_gestalts = { always = no }
 has_gigastructures = { always = no }
 has_mod_reproductive_tech_and_politics = { always = no }
@@ -46,6 +47,7 @@ ideological_discomfort = { always = no }
 is_acot_awesome_planet_class = { always = no }
 is_acot_fractured_planet_class = { always = no }
 is_bugged_evolutionary_architects = { always = no }
+is_bugged_interventionalist = { always = no }
 is_bugged_slave_race = { always = no }
 is_cruel_abomination_country_type = { always = no }
 is_cruel_abomination_crisis = { always = no }
@@ -54,6 +56,7 @@ is_cruel_mega = { always = no }
 is_civic_materialist = { always = no }
 is_civic_militarist = { always = no }
 is_dictatorial = { always = no }
+is_ecocentric = { always = no }
 is_giga_habitat = { always = no }
 is_giga_maginot_world = { always = no }
 is_giga_ringworld = { always = no }

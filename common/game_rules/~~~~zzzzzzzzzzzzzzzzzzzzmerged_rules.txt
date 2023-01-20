@@ -308,6 +308,18 @@ can_add_claim = {
 			}	
 		}
 	}
+	# Civic: Organic Zealots
+	custom_tooltip = {
+		fail_text = CANNOT_ADD_CLAIM_ORGANIC_ZEALOTS
+		NAND = {
+			root = { has_valid_civic = civic_organic_zealots }
+			exists = owner
+			owner = {
+				NOT = { is_same_species = root }
+				is_robot_empire = yes
+			}
+		}
+	}
 }
 
 # Root = taker country
@@ -368,6 +380,15 @@ can_get_claim_from_lost_system = {
 				has_country_flag = synthetic_empire
 				is_machine_empire = yes
 			}
+		}
+	}
+	# Civic: Organic Zealots
+	custom_tooltip = {
+		fail_text = CANNOT_ADD_CLAIM_ORGANIC_ZEALOTS
+		NAND = {
+			has_valid_civic = civic_organic_zealots
+			NOT = { is_same_species = root }
+			is_robot_empire = yes
 		}
 	}
 }
@@ -1570,6 +1591,18 @@ can_species_be_assembled = {
 						has_authority = auth_azur_lane_1
 						has_authority = auth_azur_lane_2
 						has_authority = auth_azur_lane_K
+						# Civic: Organic Zealots
+						AND = {
+							has_policy_flag = robots_outlawed
+							is_robot_empire = no
+						}
+						has_country_flag = lost_robot_policy_war
+						has_valid_civic = civic_organic_zealots
+						AND = {
+							is_subject = yes
+							exists = overlord
+							overlord = { has_valid_civic = civic_organic_zealots }
+						}
 					}
 				}
 			}
@@ -1579,9 +1612,7 @@ can_species_be_assembled = {
 			is_organic_species = yes
 			# Hives can only clone drones
 			if = {
-				limit = {
-					root.owner = { is_hive_empire = yes }
-				}
+				limit = { root.owner = { is_hive_empire = yes } }
 				AND = {
 					OR = {
 						has_trait = trait_hive_mind
@@ -1595,7 +1626,7 @@ can_species_be_assembled = {
 			# Expanded Traits, Civics, Pops, and More
 			else_if = {
 				limit = {
-					Root = {
+					root = {
 						owner = { has_origin = origin_sacred_tree }
 						OR = {
 							has_deposit = d_tree_of_life_home
@@ -1605,7 +1636,7 @@ can_species_be_assembled = {
 				}
 				OR = {
 					has_trait = trait_tree_caretaker
-					ROOT = {
+					root = {
 						OR = {
 							merg_has_cloning_building = yes
 							has_modifier = tiyanki_trophy
@@ -1643,10 +1674,10 @@ can_species_be_assembled = {
 			else_if = {
 				limit = { 
 					OR = {
-					has_trait = trait_pearl_born_drone 
-					has_trait = trait_pearl_born_royal
+						has_trait = trait_pearl_born_drone 
+						has_trait = trait_pearl_born_royal
+					}
 				} 
-			}
 				root = {
 					any_owned_species = { 
 						OR = {
