@@ -143,6 +143,8 @@ allows_purge = {
 		}
 		# Electroids
 		has_valid_civic = civic_elec_stellar_devourers
+		# Civic: Organic Zealots
+		has_valid_civic = civic_organic_zealots
 	}	
 }
 
@@ -351,11 +353,6 @@ has_total_war_cb = {
 				merg_is_awakened_fe = yes
 				has_valid_civic = civic_hive_devouring_swarm
 				has_valid_civic = civic_machine_assimilator
-				# Expanded Traits, Civics, Pops, and More
-				has_valid_civic = civic_infestation
-				# ACOT
-				is_progenitor_empires = yes
-				# Vanilla
 				AND = {
 					has_valid_civic = civic_machine_terminator
 					from = { is_synthetic_empire = no }
@@ -363,6 +360,20 @@ has_total_war_cb = {
 				AND = {
 					has_valid_civic = civic_fanatic_purifiers
 					NOT = { is_same_species = from }
+				}
+				# Expanded Traits, Civics, Pops, and More
+				has_valid_civic = civic_infestation
+				# ACOT
+				is_progenitor_empires = yes
+				# Civic: Organic Zealots
+				AND = {
+					has_valid_civic = civic_organic_zealots
+					from = {
+						OR = {
+							is_robot_empire = yes
+							is_fallen_empire_machine = yes
+						}
+					}
 				}
 			}
 		}
@@ -402,6 +413,8 @@ is_homicidal = {
 		has_valid_civic = civic_hive_devouring_swarm
 		# Expanded Traits, Civics, Pops, and More
 		has_valid_civic = civic_infestation
+		# 
+		has_valid_civic = civic_organic_zealots
 	}
 }
 

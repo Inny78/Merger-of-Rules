@@ -66,19 +66,11 @@ ehof_default_country = {
 can_use_ehof = {
 	optimize_memory
 	NOR = {
-		is_constructing = mining_station
-		is_constructing = research_station
-		is_constructing = observation_post
-		is_constructing = megastructure
-		is_constructing = starbase
-		is_ship_class = shipclass_military_station
-		is_ship_class = shipclass_mining_station
-		is_ship_class = shipclass_research_station
-		is_ship_class = shipclass_observation_station
 		AND = {
-			is_ship_class = shipclass_starbase
-			fleet = { is_mobile = no }
+			is_ship_class = shipclass_constructor
+			is_fleet_idle = no
 		}
+		fleet = { is_mobile = no }
 	}
 }
 reshaper_eligible = {
@@ -1277,10 +1269,11 @@ is_spy_empire = {
 	OR = {
 		has_valid_civic = civic_cutthroat_politics
 		has_valid_civic = civic_shadow_council
-		has_valid_civic = civic_shadow_council_megacorp
 		has_valid_civic = civic_ruthless_competition
 		has_valid_civic = civic_criminal_heritage
 		has_valid_civic = civic_machine_predictive_analysis
+		# Expanded Events
+		has_valid_civic = civic_shadow_council_megacorp
 		has_valid_civic = civic_self_experimentation
 		# Espionage Extended
 		has_valid_civic = civic_shadow_state
@@ -1747,6 +1740,26 @@ pce_planet_uses_district_farming_uncapped = {
 			merg_is_ocean = yes
 			exists = owner
 			owner = { is_anglers_empire = yes }
+		}
+	}
+}
+
+# 
+is_valid_target_to_outlaw_cybernetics_or_robot_pops_or_ai = {
+	optimize_memory
+	merg_is_default_empire = yes
+	is_robot_empire = no
+	OR = {
+		has_ascension_perk = ap_the_flesh_is_weak
+		has_ascension_perk = ap_organo_machine_interfacing
+		has_ascension_perk = ap_synthetic_evolution
+		has_policy_flag = robots_allowed
+		AND = {
+			can_set_ai_policy = yes
+			OR = {
+				has_policy_flag = ai_servitude
+				has_policy_flag = ai_full_rights
+			}
 		}
 	}
 }

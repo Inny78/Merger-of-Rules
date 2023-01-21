@@ -1610,6 +1610,27 @@ can_species_be_assembled = {
 		# Organics
 		AND = {
 			is_organic_species = yes
+			# Civic: Organic Zealots
+			root = {
+				check_modifier_value = {
+					modifier = planet_pop_assembly_organic_add
+					value > 0
+				}
+				owner = {
+					NAND = {
+						has_trait = trait_cybernetic
+						OR = {
+							has_country_flag = lost_robot_policy_war
+							has_valid_civic = civic_organic_zealots
+							AND = {
+								is_subject = yes
+								exists = overlord
+								overlord = { has_valid_civic = civic_organic_zealots }
+							}
+						}
+					}
+				}
+			}
 			# Hives can only clone drones
 			if = {
 				limit = { root.owner = { is_hive_empire = yes } }
@@ -3261,6 +3282,18 @@ can_build_branch_office_on_planet = {
 			}
 		}
 	}
+	# Civic: Organic Zealots
+	custom_tooltip = {
+		fail_text = requires_recipient_not_organic_zealots
+		exists = owner
+		owner = {
+			OR = {
+				NOT = { has_civic = civic_organic_zealots }
+				root = { is_robot_empire = no }
+			}
+		}
+	}
+	# Vanilla
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_COMMERCIAL_PACT
 		exists = owner

@@ -19,6 +19,7 @@ civic_galactic_superpower = { potential = { always = no } }
 civic_gf_GK = { potential = { always = no } }
 civic_harm_hive = { potential = { always = no } }
 civic_harm_machine = { potential = { always = no } }
+civic_hive_assimilator = { potential = { always = no } }
 civic_hive_strong_connection = { potential = { always = no } }
 civic_infestation = { potential = { always = no } }
 civic_interventionalist = { potential = { always = no } }
@@ -39,6 +40,7 @@ civic_parliamentary_system_corp = { potential = { always = no } }
 civic_patriarchy = { potential = { always = no } }
 civic_physics_cult = { potential = { always = no } }
 civic_royal_trading_company = { potential = { always = no } }
+civic_self_experimentation = { potential = { always = no } }
 civic_shadow_council_megacorp = { potential = { always = no } }
 civic_shadow_state = { potential = { always = no } }
 civic_shadows1 = { potential = { always = no } }
