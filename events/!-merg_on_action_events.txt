@@ -4,8 +4,8 @@
 # by Fireprince
 #
 #########################################
-
 namespace = action
+
 event = {
 	id = action.90
 	hide_window = yes

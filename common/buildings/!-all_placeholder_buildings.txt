@@ -112,6 +112,7 @@ building_mem_planetary_shield_generator_orila = { potential = { always = no } al
 building_nightelf_palace = { potential = { always = no } allow = { always = no } }
 building_nirvana_empire_palace = { potential = { always = no } allow = { always = no } }
 building_ocean_spawning_pool = { potential = { always = no } allow = { always = no } }
+building_omega_cloning_vats = { potential = { always = no } allow = { always = no } }
 building_phanon_affluence_center = { potential = { always = no } allow = { always = no } }
 building_phanon_alloy_forge = { potential = { always = no } allow = { always = no } }
 building_phanon_civilian_factory = { potential = { always = no } allow = { always = no } }

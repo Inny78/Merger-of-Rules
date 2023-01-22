@@ -314,24 +314,26 @@ merg_has_cloning_building = {
 		has_building = building_clone_vats_improved_serv
 		has_building = building_clone_vats_advanced_serv
 		has_building = building_clone_vats_augmented_serv
-		# Ethics and Civics Bug Branch
-		has_building = building_bugged_life_monastery
-		has_building = building_bugged_life_monastery_two
 		# ACOT
 		has_building = building_fe_clone_vats
 		has_building = building_ae_clone_vats
 		# AOT
 		has_building = building_stellarite_clone_vats
 		has_building = building_phanon_clone_vats
-		# The Dark Arts of Necromancy
-		has_building = building_house_of_the_fleshsculpter
-		has_building = building_summoner_site
-		# Lithoid Supremacy
-		has_building = building_crystallization_facilities
-		has_building = building_ocean_spawning_pool
+		# Ascension - Biological Module
+		has_building = building_omega_cloning_vats
+		# Ethics and Civics Bug Branch
+		has_building = building_bugged_life_monastery
+		has_building = building_bugged_life_monastery_two
 		# Galaxius
 		has_building = building_ie_clone_vats
 		has_building = building_ie_spawning_pool
+		# Lithoid Supremacy
+		has_building = building_crystallization_facilities
+		has_building = building_ocean_spawning_pool
+		# The Dark Arts of Necromancy
+		has_building = building_house_of_the_fleshsculpter
+		has_building = building_summoner_site
 	}
 }
 
