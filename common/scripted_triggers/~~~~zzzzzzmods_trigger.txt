@@ -646,28 +646,8 @@ is_default_country_wg = {
 }
 has_active_wg_foundry_building = {
 	OR = {
-		has_active_building = building_foundry_1
-		has_active_building = building_foundry_2
-		has_active_building = building_foundry_3
-		has_active_building = building_nano_forge
-		# Warship Girls R and MIST Species
-		has_active_building = building_sep_foundry
-		has_active_building = building_sep_foundry2
-		has_active_building = building_wsg_foundry
-		has_active_building = building_gray_nano_foundry
-		has_active_building = building_gray_nano_foundry2
-		# ACOT
-		has_active_building = building_fe_alloy_forge
-		has_active_building = building_ae_alloy_forge
-		has_active_building = building_ae_nano_forge
-		# AOT
-		has_active_building = building_fe_nano_forge
-		has_active_building = building_phanon_nano_forge
-		has_active_building = building_phanon_alloy_forge
-		has_active_building = building_stellarite_nano_forge
-		has_active_building = building_stellarite_alloy_forge
-		# Wula Fallen Empire
-		has_active_building = building_wula_foundry
+		has_active_wg_foundry_building_lv_low = yes
+		has_active_wg_foundry_building_lv_high = yes
 	}
 }
 has_active_wg_foundry_building_lv_low = {
@@ -678,6 +658,7 @@ has_active_wg_foundry_building_lv_low = {
 		has_active_building = building_sep_foundry
 		has_active_building = building_wsg_foundry
 		has_active_building = building_gray_nano_foundry
+		has_active_building = building_sh_foundry
 	}
 }
 has_active_wg_foundry_building_lv_high = {
@@ -688,9 +669,11 @@ has_active_wg_foundry_building_lv_high = {
 		has_active_building = building_sep_foundry2
 		has_active_building = building_wsg_foundry
 		has_active_building = building_gray_nano_foundry2
+		has_active_building = building_sh_foundryU
 		# ACOT
 		has_active_building = building_fe_alloy_forge
 		has_active_building = building_ae_alloy_forge
+		has_active_building = building_ae_nano_forge
 		# AOT
 		has_active_building = building_fe_nano_forge
 		has_active_building = building_phanon_nano_forge
