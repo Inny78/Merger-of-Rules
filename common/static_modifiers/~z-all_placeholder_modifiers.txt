@@ -3,6 +3,7 @@
 apocalypse = {}
 catastrophe_approach = {}
 deteriorating_ecosystem = {}
+mzilli_decaying_moon_3 = {}
 mzilli_events_dying_world = {}
 pdammoniaatmosphere = {}
 pdashatmosphere = {}
