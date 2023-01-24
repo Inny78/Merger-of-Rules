@@ -699,6 +699,14 @@ has_any_industry_district = {
         giga_has_any_industrial_district = yes
 		# GPM
 		has_district = district_gpm_precursor_manufactorium
+		# Planetary Diversity
+		has_district = district_corp_industrial
+		has_district = district_mf_alloy
+		has_district = district_bioforge_stomach
+		has_district = district_pdhab_industrial
+		has_district = district_archive_industrial
+		has_district = district_crucible_industrial
+		has_district = district_techno_industrial
 		# Production Revolution
 		has_district = PR_DSTR_city_forge
 		has_district = PR_DSTR_city_catalytic
@@ -737,6 +745,9 @@ has_any_farming_district_or_buildings = {
         giga_has_any_farming_district_or_buildings = yes
 		# Human Fallen Empires
 		has_building = hfe_building_thoth_module_food
+		# Planetary Diversity
+		has_district = district_pdhab_food_unlimited
+		has_district = district_pdhab_food
 		# Production Revolution
 		has_building = PR_BLDN_Res_food_farm_T4
 		has_district = PR_DSTR_farming
@@ -757,6 +768,10 @@ has_any_mining_district = {
         has_district = district_mining_uncapped
 		# Gigastructures
         giga_has_any_mining_district = yes
+		# Planetary Diversity
+		has_district = district_pdhab_mining
+		has_district = district_pdhab_mining_unlimited
+		has_district = district_scrapyard_mining
  		# Production Revolution
 		has_district = PR_DSTR_mining
 		has_district = PR_DSTR_mining_uncapped
@@ -788,6 +803,11 @@ has_any_generator_district_or_building = {
 		has_district = district_gpm_precursor_power_plant
 		# Human Fallen Empires
 		has_building = hfe_building_thoth_module_energy
+		# Planetary Diversity
+		has_district = district_pdhab_energy_unlimited
+		has_district = district_pdhab_energy
+		has_district = district_archive_energy
+		has_district = district_scrapyard_energy
 		# Plentiful Traditions
 		has_building = building_plentiful_traditions_trading_depot
  		# Production Revolution
