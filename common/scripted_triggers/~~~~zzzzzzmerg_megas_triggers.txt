@@ -136,6 +136,17 @@ has_no_non_gate_megastructure = {
 					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_03
 					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_04
 					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_05
+					# Wandering Witch: Voyagers
+					is_megastructure_type = caroline_orb_0
+					is_megastructure_type = caroline_orb_1
+					is_megastructure_type = caroline_orb_2
+					is_megastructure_type = caroline_orb_3
+					is_megastructure_type = caroline_orb_4
+					is_megastructure_type = caroline_orb_ul2
+					is_megastructure_type = caroline_orb_ul3
+					is_megastructure_type = caroline_orb_ul4
+					is_megastructure_type = caroline_orb_ul5
+					is_megastructure_type = carolin_orb_permanently_ruined
 				}
 			}
 		}
@@ -275,6 +286,17 @@ has_any_megastructure_in_empire = {
 			has_megastructure = mega_KZ_VOY_hyperstructure_fornax_03
 			has_megastructure = mega_KZ_VOY_hyperstructure_fornax_04
 			has_megastructure = mega_KZ_VOY_hyperstructure_fornax_05
+			# Wandering Witch: Voyagers
+			has_megastructure = caroline_orb_0
+			has_megastructure = caroline_orb_1
+			has_megastructure = caroline_orb_2
+			has_megastructure = caroline_orb_3
+			has_megastructure = caroline_orb_4
+			has_megastructure = caroline_orb_ul2
+			has_megastructure = caroline_orb_ul3
+			has_megastructure = caroline_orb_ul4
+			has_megastructure = caroline_orb_ul5
+			has_megastructure = carolin_orb_permanently_ruined
 		}
 	}
 }

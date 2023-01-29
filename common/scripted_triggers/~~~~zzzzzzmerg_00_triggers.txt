@@ -281,6 +281,26 @@ is_autocracy = {
 		has_authority = auth_corporate_fiefdom
 		# Ethics and Civics Bug Branch
 		has_authority = auth_bugged_corporate_imperial
+		# Wandering Witch: Voyagers
+		has_authority = auth_witch_dictatorial
+	}
+}
+
+is_oligarchy = { #Power of few
+	OR = {
+		has_authority = auth_oligarchic
+		AND = {
+			OR = {
+				has_authority = auth_corporate
+				# Wandering Witch: Voyagers
+				has_authority = auth_grey_witch_council
+			}
+			OR = {
+				merg_has_mca = yes
+				merg_has_expanded_pops = yes
+				is_egalitarian = no
+			}
+		}
 	}
 }
 
@@ -291,6 +311,8 @@ is_democracy = {
 		AND = {
 			has_authority = auth_corporate
 			is_egalitarian = yes
+			merg_has_mca = no
+			merg_has_expanded_pops = no
 		}
 		# More Authorities
 		has_authority = auth_strict_democratic

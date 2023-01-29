@@ -507,10 +507,10 @@ can_generate_leader_from_pop = {
 	}
 	NOR = {
 		has_trait = trait_syncretic_proles
-		# Rogue Maid (Rogue Servitor Completely Remake)
-		has_trait = trait_working_machine
-		# Plentiful Perks
-		has_trait = trait_plentiful_traditions_pt_cocoon
+		# Assault Lily
+		has_trait = trait_AL_puffer
+		# Diagraphers Trait Mod
+		has_trait = trait_living_architecture
 		# Ethics & Civics: Bug Branch/Redux
 		has_trait = trait_bugged_slave_gene
 		# Expanded Events / Expanded Traits, Civics, Pops, and More
@@ -518,12 +518,14 @@ can_generate_leader_from_pop = {
 		has_trait = trait_tree_caretaker
 		# Expanded Gestalts
 		root = { has_origin = origin_hive_overmind }
-		# Diagraphers Trait Mod
-		has_trait = trait_living_architecture
 		# Lithoid Supremacy
 		has_trait = trait_pearl_born_drone
-		# Assault Lily
-		has_trait = trait_AL_puffer
+		# Plentiful Perks
+		has_trait = trait_plentiful_traditions_pt_cocoon
+		# Rogue Maid (Rogue Servitor Completely Remake)
+		has_trait = trait_working_machine
+		# Wandering Witch: Voyagers
+		has_trait = trait_servitude
 	}
 	OR = {
 		is_robot_pop = no
@@ -1275,12 +1277,10 @@ species_has_happiness = {
 		has_trait = trait_machine_unit
 		has_trait = trait_hive_mind
 		can_think = no
-		# Warship Girls R And MIST Species
-		has_trait = sh_trait_shenhai
-		has_trait = sh_trait_shenhai1
-		has_trait = sh_trait_shenhai2
-		has_trait = sh_trait_silent
-		has_trait = sh_trait_silent1
+		# Diagraphers Trait Mod
+		has_trait = trait_multihive_drone
+		# ThaumStellaris
+		has_trait = tc_trait_golem
 		# Trait Diversity
 		has_trait = trait_td_multi_hiveminded
 		has_trait = trait_td_emotionless
@@ -1288,10 +1288,29 @@ species_has_happiness = {
 		has_trait = trait_td_thymoleptic_implants
 		has_trait = trait_td_rbot_thymoleptic_scripts
 		has_trait = trait_td_rbot_thought_inhibitor
-		# Diagraphers Trait Mod
-		has_trait = trait_multihive_drone
-		# ThaumStellaris
-		has_trait = tc_trait_golem
+		# Wandering Witch: Voyagers
+		has_trait = trait_servitude
+		AND = {
+			has_trait = trait_dummy
+			OR = {
+				NOT = { exists = from }
+				from = { 
+					NOR = { 
+						has_technology = tech_synthetic_workers 
+						has_technology = tech_dummy_leaders
+						has_origin = origin_garbage_princesses
+						has_country_flag = synthetic_empire
+					} 
+				}
+				from = { has_policy_flag = ai_outlawed }
+			}
+		}
+		# Warship Girls R And MIST Species
+		has_trait = sh_trait_shenhai
+		has_trait = sh_trait_shenhai1
+		has_trait = sh_trait_shenhai2
+		has_trait = sh_trait_silent
+		has_trait = sh_trait_silent1
 		# Vanilla
 		AND = {
 			has_trait = trait_mechanical
@@ -1399,28 +1418,30 @@ can_species_procreate = {
 				}
 			}
 		}
-		# Plentiful Traditions - Extra Perks
-		has_trait = trait_plentiful_traditions_pt_cocoon
-		# Madoka Magica NEW
-		has_trait = trait_mahoshoujo
 		# Expanded Events
 		has_trait = trait_memorex_comatos
 		AND = {
 			root = { owner = { has_origin = origin_hive_queen } }
 			has_trait = trait_hive_mind
 		}
-		# Holofrixit Revisited / Silfae's Portraits: Revisited
-		has_trait = trait_hologanglion
 		# Expanded Gestalts
 		has_trait = trait_hive_mind_overlord
 		# Diagraphers Trait Mod
 		has_trait = trait_dimorphic_male
-		# Girls Frontline
-		has_trait = GF_trait_doll
-		# Lithoid Supremacy
-		has_trait = trait_pearl_born_drone
 		# Expanded Traits, Civics, Pops, and More
 		has_trait = trait_memorex_comatos
+		# Girls Frontline
+		has_trait = GF_trait_doll
+		# Holofrixit Revisited / Silfae's Portraits: Revisited
+		has_trait = trait_hologanglion
+		# Lithoid Supremacy
+		has_trait = trait_pearl_born_drone
+		# Madoka Magica NEW
+		has_trait = trait_mahoshoujo
+		# Plentiful Traditions - Extra Perks
+		has_trait = trait_plentiful_traditions_pt_cocoon
+		# Wandering Witch: Voyagers
+		has_trait = trait_dummy
 	}
 	OR = {
 		has_ethical_gestalts = no
@@ -1522,6 +1543,62 @@ can_species_procreate = {
 	}
 	# Human Fallen Empires
 	NOT = { has_trait = hfe_species_trait_brainworm }
+	# Wandering Witch: Voyagers
+	if = {
+		limit = { has_trait = trait_reanimated_materials }
+		OR = {
+			is_mage = yes
+			root.owner = {
+				has_country_flag = syn_witch
+			}
+			root = {
+				NOR = { # make sure elaina always grow first
+					has_building = building_possibility_portal
+					has_building = building_dimensional_instrument
+					has_deposit = d_mysterious_portal
+				}
+			}
+			root = {
+				num_assigned_jobs = {
+					job = matter_reanimator
+					value > 0
+				}
+				NOR = { # make sure elaina always grow first
+					has_building = building_possibility_portal
+					has_building = building_dimensional_instrument
+					has_deposit = d_mysterious_portal
+				}
+			}
+		}
+	}
+	if = {
+		limit = { has_trait = trait_houki }
+		root.owner = {
+			has_country_flag = newbirth_houki
+			NOT = { has_country_flag = max_houki_number_reached }
+		}
+	}
+	if = {
+		limit = { 
+			OR = {
+				has_trait = trait_witch
+				has_trait = trait_victorika
+				has_trait = trait_elaina_descendant
+			}
+		}
+		OR = {
+			root.owner = {
+				has_ascension_perk = ap_xeno_compatibility
+			}
+			root = {
+				OR = {
+					has_building = building_possibility_portal
+					has_building = building_dimensional_instrument
+					has_deposit = d_mysterious_portal
+				}
+			}
+		}
+	}
 	# Vanilla
 	NOT = { has_species_flag = nivlac_no_procreation }
 	if = {
@@ -1578,6 +1655,29 @@ can_species_be_assembled = {
 			else_if = {
 				limit = { has_trait = trait_KZ_VOY_magic_puppet }
 				KZ_VOY_can_assemble_magic_puppet = yes
+			}
+			else_if = {
+				limit = { has_trait = trait_dummy }
+				if = {
+					limit = { # Restrictions for Junkyard Princesses Origin
+						root.owner = { has_origin = origin_garbage_princesses  }
+					}
+					root = { 
+						OR = {
+							has_building = building_enigmatic_assembly_plant
+							num_assigned_jobs = {
+								job = dummicist
+								value > 0
+							}
+						}
+						check_modifier_value = { modifier = planet_pop_assembly_add value > 0 }
+					}
+				}
+				else = {
+					root.owner = { has_technology = tech_dummy_workers }
+					root = { num_assigned_jobs = { job = dummicist value > 0 } }
+					root = { check_modifier_value = { modifier = planet_pop_assembly_add value > 0 } }
+				}
 			}
 			# Vanilla
 			root = {
@@ -1776,6 +1876,55 @@ can_species_be_assembled = {
 					}
 				}
 			}
+			# Wandering Witch: Voyagers
+			else_if = {
+				limit = { 
+					OR = {
+						has_trait = trait_houki 
+						has_trait = trait_reanimated_materials
+					}
+				}
+				root = {
+					OR = {
+						num_assigned_jobs = {
+							job = matter_reanimator
+							value > 0
+						}
+						has_building = building_clone_vats
+						has_building = building_dimensional_instrument
+					}
+				}
+				if = {
+					limit = { has_trait = trait_houki }
+					root.owner = {
+						has_country_flag = newbirth_houki
+						NOT = { has_country_flag = max_houki_number_reached }
+					}
+				}
+			}
+			else_if = { # for Familiars
+				limit = {
+					has_trait = trait_servitude
+				}
+				root = {
+					OR = {
+						has_building = building_clone_vats
+						has_building = building_familiar_clone_vat
+					}
+				}
+			}
+			else_if = { # for Familiars
+				limit = {
+					has_trait = trait_reanimated_materials
+				}
+				root = {
+					OR = {
+						has_building = building_object_converter
+						has_building = building_object_converter_2
+					}
+				}
+			}
+			# Vanilla
 			else = {
 				OR = {
 					# The DAL Species Mod
@@ -3133,6 +3282,41 @@ should_force_decline_species = {
 				NOT = { exists = from.owner }
 			}
 		}
+		# Wandering Witch: Voyagers
+		custom_tooltip = {
+			success_text = OBJ_MASTER_FORCE_DECLINE
+			has_trait = trait_reanimated_materials
+			AND = {
+				from = {
+					exists = owner
+					owner = { NOT = { has_country_flag = syn_witch } }
+				}	
+			}
+			NOR = {
+				has_trait = trait_psyborg_efficient_processors
+				has_trait = trait_cro_implants_psionics
+				has_trait = trait_psionic
+			}
+			from = {
+				OR = {
+					# Check if country is unable to build Vats for this species.
+					AND = {
+						exists = owner
+						owner = {
+							OR = {
+								NOT = { has_origin = origin_obj_master }					# Can't have Obj-avatars.
+								has_country_flag = synthetic_empire			# Can't have Vats anymore.
+							}
+						}
+					}
+					# Vats check out, but are there more pops than Vats support?
+					num_assigned_jobs = {
+						job = matter_reanimator
+						value = 0
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -3750,15 +3934,18 @@ can_be_sold_on_slave_market = {
 		# Diagraphers Trait Mod
 		has_trait = trait_living_architecture
 		has_trait = trait_rooted_adults_rooted
-		# Warship Girls R And MIST Species
-		has_wg_traits = yes
+		# Extra Origins
+		is_symbiote = yes
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_cocoon
 		# Planetary Diversity
 		has_trait = trait_organic_fourschildren
 		has_trait = trait_organic_fourschildren_2
-		# Extra Origins
-		is_symbiote = yes
+		# Wandering Witch: Voyagers
+		has_trait = trait_servitude
+		has_trait = trait_reanimated_materials
+		# Warship Girls R And MIST Species
+		has_wg_traits = yes
 	}
 }
 
@@ -4066,6 +4253,8 @@ can_add_negative_traits_organic = {
 		has_str_genemodding_tech = yes
 		# Nirvana Empire DLC
 		is_nirvana_empire = yes
+		# Wandering Witch: Voyagers
+		has_tradition = tr_objects_wv_integrated_physiology
 		# Warship Girls R And MIST Species
 		has_wsg_genemodding_tech = yes
 	}
@@ -4092,6 +4281,8 @@ can_remove_positive_traits_organic = {
 				has_str_genemodding_tech = yes
 				# Nirvana Empire DLC
 				is_nirvana_empire = yes
+				# Wandering Witch: Voyagers
+				has_tradition = tr_objects_wv_integrated_physiology
 				# Warship Girls R And MIST Species
 				has_wsg_genemodding_tech = yes
 			}
@@ -4283,7 +4474,29 @@ can_fill_ruler_job = {
 				# Ethics and Civics Alternative - Redux
 				has_trait = trait_symbiotic
 				has_trait = trait_slave_gene
+				# Wandering Witch: Voyagers
+				has_trait = trait_servitude
 			}
+			# Wandering Witch: Voyagers
+			OR = {
+				NOT = { has_trait = trait_dummy }
+				owner = {
+					has_origin = origin_garbage_princesses
+				}
+				AND = {
+					owner = {
+						OR = {
+							has_technology = tech_synthetic_workers 
+							has_technology = tech_dummy_leaders
+							has_country_flag = synthetic_empire
+						} 
+					}
+					owner = {
+						has_policy_flag = ai_full_rights 					
+					}
+				}	
+			}
+			# Vanilla
 			can_think = yes
 			OR = {
 				NOT = { has_trait = trait_mechanical }

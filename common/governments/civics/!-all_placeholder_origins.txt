@@ -2,6 +2,7 @@
 # Irony this is a placeholder file please ignore it
 origin_clones = { is_origin = yes potential = { always = no } }
 origin_ev_both_choosen = { is_origin = yes potential = { always = no } }
+origin_garbage_princesses = { is_origin = yes potential = { always = no } }
 origin_hive_cx_hive_world = { is_origin = yes potential = { always = no } }
 origin_hive_overmind = { is_origin = yes potential = { always = no } }
 origin_hive_queen = { is_origin = yes potential = { always = no } }

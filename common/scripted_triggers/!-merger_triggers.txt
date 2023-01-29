@@ -38,9 +38,7 @@ merg_is_default_empire = {
 
 # Inspired by Gigas code
 merg_is_playable_empire = {
-    any_playable_country = {
-        is_same_empire = prev
-    }
+    any_playable_country = { is_same_empire = prev }
 }
 
 # List of dormant/standard Fallen Empires
@@ -322,6 +320,8 @@ merg_has_cloning_building = {
 		has_building = building_phanon_clone_vats
 		# Ascension - Biological Module
 		has_building = building_omega_cloning_vats
+		# Civic: Organic Zealots
+		has_building = building_clone_birth_labs
 		# Ethics and Civics Bug Branch
 		has_building = building_bugged_life_monastery
 		has_building = building_bugged_life_monastery_two
@@ -331,9 +331,8 @@ merg_has_cloning_building = {
 		# Lithoid Supremacy
 		has_building = building_crystallization_facilities
 		has_building = building_ocean_spawning_pool
-		# The Dark Arts of Necromancy
-		has_building = building_house_of_the_fleshsculpter
-		has_building = building_summoner_site
+		# Wandering Witch: Voyagers
+		has_building = building_dimensional_instrument
 	}
 }
 
@@ -581,5 +580,27 @@ merg_has_materialist_government = {
 			merg_is_default_empire = yes
 			has_ethic = "ethic_fanatic_materialist"
 		}
+	}
+}
+
+merg_is_special_ship = {
+	OR = {
+		is_ship_size = psionic_avatar
+		is_ship_size = corrupted_avatar
+		is_ship_size = leviathan_01_elder_tiyanki
+		is_ship_size = leviathan_01_voidspawn
+		is_ship_size = nanite_space_dragon_baby
+		is_ship_size = space_dragon_red
+		is_ship_size = space_dragon_baby
+		is_ship_size = space_dragon_blue #Shard
+		is_ship_size = space_dragon_origin
+		is_ship_size = space_dragon_origin_baby
+		is_ship_size = stellarite
+		is_ship_size = asteroid #Lithoid, reanimated
+		#Worst case scenarios:
+		is_ship_size = dimensional_horror
+		is_ship_size = shroud_manifestation
+		is_ship_size = warped_consciousness
+		is_reanimated = yes
 	}
 }

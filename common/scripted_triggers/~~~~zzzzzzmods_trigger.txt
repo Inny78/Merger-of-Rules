@@ -921,7 +921,7 @@ ds_hyperlane_create = {
 	}
 }
 
-# Cruel Conquerers
+############################### Cruel Conquerers ###############################
 
 cruel_has_shipyard = {
 	or = {
@@ -952,13 +952,11 @@ cruel_can_trade = {
 	}
 }
 
-# Guilli's Planetary Modifiers
+############################### Guilli's Planetary Modifiers ###############################
 # Credits for Tai_mao and Dragonwolf for their amazing work on Giga Diversity 
 gpm_is_planet_class_normal_uninhabitable = {
 	optimize_memory
-	OR = {
-		uninhabitable_regular_planet = yes
-	}
+	uninhabitable_regular_planet = yes
 }
 gpm_is_asteroid = {
 	is_asteroid = yes
@@ -1182,7 +1180,7 @@ planet_gives_aquatics_bonus = {
 	}
 }
 
-# Expanded Events
+############################### Expanded Events ###############################
 is_regular_star = {
 	optimize_memory
 	is_star = yes
@@ -1324,7 +1322,7 @@ is_city = {
 	merg_is_arcology = yes
 }
 
-# All these worlds
+############################### All these worlds ###############################
 is_fallen_empire_planet = {
 	optimize_memory
 	owner = {
@@ -1343,7 +1341,7 @@ is_collapsed_star = {
 	merg_is_standard_dense_star = yes
 }
 
-# THE ABYSS CONTRACT
+############################### THE ABYSS CONTRACT ###############################
 TAC_is_common_country = {
 	optimize_memory
 	OR = {
@@ -1364,7 +1362,7 @@ TAC_is_sc_void = {
 	}
 }
 
-# NSC
+############################### NSC ###############################
 nsc_mothball_target_fleet_requirement = {
 	owner = { is_same_value = prev.owner }
 	OR = {
@@ -1377,7 +1375,7 @@ nsc_mothball_target_fleet_requirement = {
 	}
 }
 
-# Wild Space
+############################### Wild Space ###############################
 is_nebula_star = {
 	optimize_memory
 	Or = {
@@ -1401,7 +1399,7 @@ is_nebula_star = {
 	}
 }
 
-# ACOT/AOT/SOS
+############################### ACOT/AOT/SOS ###############################
 can_build_precursor_ship = {
 	optimize_memory
 	OR = {
@@ -1447,7 +1445,7 @@ can_build_precursor_ship = {
 	}
 }
 
-# Voyage to Eternity
+############################### Voyage to Eternity ###############################
 KZ_VOY_has_communications_normal_country = {
 	optimize_memory
 	OR = {
@@ -1469,7 +1467,7 @@ infmod_is_relevant = {
 	}
 }
 
-# Real Space
+############################### Real Space ###############################
 has_mineral_deposit = {
 	optimize_memory
 	OR = {
@@ -1531,13 +1529,13 @@ is_mineral_deposit = {
 	}
 }
 
-# Kancolle
+############################### Kancolle ###############################
 is_gas_giant = {
 	optimize_memory
 	merg_is_gas_giant = yes
 }
 
-# Human Fallen Empires
+############################### Human Fallen Empires ###############################
 hfe_trigger_is_asteroid = {
 	is_asteroid = yes
 }
@@ -1634,7 +1632,7 @@ hfe_trigger_planet_valid_for_settle = {
 	is_doomsday_planet = no
 }
 
-# Extra Ship Components NEXT
+############################### Extra Ship Components NEXT ###############################
 ESC_TRIGGER_is_city_planet = {
     OR = {
         merg_is_arcology = yes
@@ -1646,7 +1644,7 @@ ESC_TRIGGER_is_city_planet = {
     }
 }
 
-# The Storm Cluster
+############################### The Storm Cluster ###############################
 scluster_uninhabitable_planet = {
 	OR = {
 		uninhabitable_regular_planet = yes
@@ -1688,7 +1686,7 @@ scluster_is_barren = {
 	}
 }
 
-# Harvest Engine Crisis
+############################### Harvest Engine Crisis ###############################
 harvester_is_crackable = {
 	merg_is_forbidden_target = no
 	AND = {
@@ -1713,7 +1711,7 @@ harvester_is_crackable = {
 	}
 }
 
-# Primitive Conquest Enhancements
+############################### Primitive Conquest Enhancements ###############################
 pce_planet_uses_district_farming_uncapped = {
 	optimize_memory
 	OR = {
@@ -1743,6 +1741,53 @@ is_valid_target_to_outlaw_cybernetics_or_robot_pops_or_ai = {
 				has_policy_flag = ai_servitude
 				has_policy_flag = ai_full_rights
 			}
+		}
+	}
+}
+
+############################### Planetary Diversity ###############################
+ai_should_build_pd_habitats = {
+	merg_is_default_empire = yes
+	OR = {
+		is_at_war = no
+		mid_game_years_passed > 0
+	}
+	has_technology = tech_pdhabitat_2
+	if = {
+		limit = { ai_colonize_plans <= 0 }
+		OR = {
+			NOT = { has_trait = trait_aquatic }
+			has_ascension_perk = ap_hydrocentric
+		}
+	}
+	NOT = {
+		any_planet_within_border = {
+			is_pd_habitat = yes
+			is_colony = no
+		}
+	}
+	NOT = { any_neighbor_country = { is_crisis_faction = yes } }
+}
+
+############################### Wandering Witch: Voyagers ###############################
+has_psi_jumpdrive = {
+	OR = {
+		has_component = PSI_JUMP_DRIVE_1
+		has_component = EST_JUMP_DRIVE
+		# ACOT
+		has_component = SHROUD_DRIVE
+	}
+}
+can_reduce_upkeep_dummy = {
+	has_trait = trait_dummy
+	planet = {
+		OR = {
+			merg_is_gaia = yes
+			merg_is_continental = yes
+			merg_is_tropical = yes
+			merg_is_ocean = yes
+			merg_is_hab_ringworld = yes
+			has_planet_flag = wet_planet
 		}
 	}
 }

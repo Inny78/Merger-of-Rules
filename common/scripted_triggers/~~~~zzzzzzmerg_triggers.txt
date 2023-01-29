@@ -1,3 +1,6 @@
+# If for some reason you want to check if the Merger is present before game start.
+has_merger_of_rules = { always = yes }
+
 # Misc vanilla scripted triggers
 mineral_candidate = {
 	NOT = { has_deposit_for = shipclass_research_station }

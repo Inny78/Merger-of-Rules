@@ -9,5 +9,9 @@ tech_ariphaos_sensors_neutron_star = { cost = 0 area = physics category = { comp
 tech_ariphaos_sensors_pulsar = { cost = 0 area = physics category = { computing } tier = 4 potential = { merg_has_sensor_expansion = yes } }
 tech_ariphaos_sensors_sealed = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_sensor_expansion = yes } }
 tech_ariphaos_sensors_wormhole = { cost = 0 area = physics category = { particles } tier = 4 potential = { merg_has_sensor_expansion = yes } }
+tech_advanced_dummy_workers = { cost = 0 area = engineering category = { industry } tier = 2 potential = { merg_has_wandering_witch = yes } }
+tech_dummy_workers = { cost = 0 area = engineering category = { industry } tier = 1 potential = { merg_has_wandering_witch = yes } }
+# tech_pdhabitat_2 = { cost = 0 area = engineering category = { voidcraft } tier = 2 potential = { merg_has_pd_planetary_habitats = yes } }
+tech_scourge_deployment = { cost = 0 area = physics category = { particles } tier = 4 potential = { merg_has_gigastructures = yes } }
 tech_WS_sensors_nebula_1 = { cost = 0 area = physics category = { particles } tier = 4 potential = { merg_has_wild_space = yes } }
 tech_WS_sensors_wormhole = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_wild_space = yes } }

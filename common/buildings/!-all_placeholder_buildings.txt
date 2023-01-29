@@ -56,6 +56,7 @@ building_brothel_house = { potential = { always = no } allow = { always = no } }
 building_brothel_house_branch_office = { potential = { always = no } allow = { always = no } }
 building_bugged_life_monastery = { potential = { always = no } allow = { always = no } }
 building_bugged_life_monastery_two = { potential = { always = no } allow = { always = no } }
+building_clone_birth_labs = { potential = { always = no } allow = { always = no } }
 building_clone_vats_advanced_asim = { potential = { always = no } allow = { always = no } }
 building_clone_vats_advanced_organic = { potential = { always = no } allow = { always = no } }
 building_clone_vats_advanced_serv = { potential = { always = no } allow = { always = no } }
@@ -70,6 +71,7 @@ building_clone_vats_improved_organic = { potential = { always = no } allow = { a
 building_clone_vats_improved_serv = { potential = { always = no } allow = { always = no } }
 building_crystallization_facilities = { potential = { always = no } allow = { always = no } }
 building_dark_energy_psg = { potential = { always = no } allow = { always = no } }
+building_dimensional_instrument = { potential = { always = no } allow = { always = no } }
 building_dm_ancient_control_center = { potential = { always = no } allow = { always = no } }
 building_dm_ancient_hive_cluster = { potential = { always = no } allow = { always = no } }
 building_dm_ancient_palace = { potential = { always = no } allow = { always = no } }
@@ -77,9 +79,11 @@ building_dm_galactic_capital = { potential = { always = no } allow = { always = 
 building_dm_galactic_hive_capital = { potential = { always = no } allow = { always = no } }
 building_dm_galactic_machine_capital = { potential = { always = no } allow = { always = no } }
 building_dm_stronghold = { potential = { always = no } allow = { always = no } }
+building_enigmatic_assembly_plant = { potential = { always = no } allow = { always = no } }
 building_enigmatic_lab = { potential = { always = no } allow = { always = no } }
 building_eternal_nexus_ai = { potential = { always = no } allow = { always = no } }
 building_eternal_palace = { potential = { always = no } allow = { always = no } }
+building_familiar_clone_vat = { potential = { always = no } allow = { always = no } }
 building_fe_affluence_center = { potential = { always = no } allow = { always = no } }
 building_fe_alloy_forge = { potential = { always = no } allow = { always = no } }
 building_fe_clone_vats = { potential = { always = no } allow = { always = no } }
@@ -111,6 +115,8 @@ building_mem_planetary_shield_generator_heavy = { potential = { always = no } al
 building_mem_planetary_shield_generator_orila = { potential = { always = no } allow = { always = no } }
 building_nightelf_palace = { potential = { always = no } allow = { always = no } }
 building_nirvana_empire_palace = { potential = { always = no } allow = { always = no } }
+building_object_converter = { potential = { always = no } allow = { always = no } }
+building_object_converter_2 = { potential = { always = no } allow = { always = no } }
 building_ocean_spawning_pool = { potential = { always = no } allow = { always = no } }
 building_omega_cloning_vats = { potential = { always = no } allow = { always = no } }
 building_phanon_affluence_center = { potential = { always = no } allow = { always = no } }
@@ -135,6 +141,7 @@ building_plentiful_traditions_experimental_weapons_facility = { potential = { al
 building_plentiful_traditions_pillar_of_affliction = { potential = { always = no } allow = { always = no } }
 building_plentiful_traditions_university_of_wisdom = { potential = { always = no } allow = { always = no } }
 building_plentiful_traditions_trading_depot = { potential = { always = no } allow = { always = no } }
+building_possibility_portal = { potential = { always = no } allow = { always = no } }
 building_precinct_house_at_b = { potential = { always = no } allow = { always = no } }
 building_SCO_resort_system_capital = { potential = { always = no } allow = { always = no } }
 building_SCO_slave_system_capital = { potential = { always = no } allow = { always = no } }

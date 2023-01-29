@@ -1,9 +1,6 @@
 # Checking for mod presence
 # These triggers are also meant as a library for modders who want to reuse them in their own mods.
 
-# If for some reason you want to check if the Merger is present before game start.
-has_merger_of_rules = { always = yes }
-
 # Aggressive Crisis Engine
 merg_has_ace_mod = { has_global_flag = acemod_installed }
 
@@ -143,6 +140,9 @@ merg_has_nirvana_project = { has_global_flag = nirvana_empire_start }
 # Planetary Diversity
 merg_has_planetary_diversity = { OR = { has_global_flag = planetarydiversity has_planetary_diversity = yes } }
 
+# Planetary Diversity - Planetary Habitats
+# merg_has_pd_planetary_habitats = { has_global_flag = ? }
+
 # Powerful & Realistic Orbital Bombardments
 merg_has_power_bombard = { has_global_flag = prob_global_flag }
 
@@ -193,6 +193,9 @@ merg_has_uap = { has_global_flag = has_uap_mod }
 
 # Vassals Expanded and Reworked
 merg_has_vassals_expanded = { has_global_flag = gf_veru_activated }
+
+# Wandering Witch: Voyagers
+merg_has_wandering_witch = { has_global_flag = has_mod_wwvoyagers }
 
 # Warship Girls R And MIST Species
 merg_has_warship_girls = { has_global_flag = has_wsg_mod }

@@ -123,3 +123,4 @@ prob_forced_armageddon_bombardment = { always = no }
 traits_restrict_specialist_jobs = { always = no }
 traits_restrict_worker_jobs = { always = no }
 urmazin_system = { always = no }
+zofeac_capital_buildings = { always = no }
