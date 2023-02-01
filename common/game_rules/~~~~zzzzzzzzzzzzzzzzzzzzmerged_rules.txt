@@ -1839,16 +1839,6 @@ can_species_be_assembled = {
 				limit = { root.owner = { has_ascension_perk = ap_total_assimilation } }
 				has_trait = trait_plentiful_traditions_pt_cocoon
 			}
-			# The Dark Art of Necromancy
-			else_if = {
-				limit = {
-					OR = {
-						has_trait = trait_necromage
-						has_trait = trait_undead
-						has_trait = trait_mindless_undead
-					}
-				}
-			}
 			# Nirvana Empire Project
 			else_if = {
 				limit = {
@@ -3847,9 +3837,7 @@ can_use_galactic_market = {
 		# The Empty Vagrant
 		AND = {
 			is_country_type = default_ev
-			NOT = {
-				has_policy_flag = ev_no_use_galactic_market
-			}
+			NOT = { has_policy_flag = ev_no_use_galactic_market }
 		}
 		# ZOFE
 		is_zofe_oe = yes
@@ -4248,7 +4236,7 @@ can_add_negative_traits_organic = {
 		# Ascension - Biological Module
 		has_technology = tech_yanz_rs_genemod
 		# Kancolle
-		has_tradition = tr_shipbuilding_adjustment
+		has_tradition = tr_shipbuilding_transform
 		# Madoka Magica NEW
 		has_str_genemodding_tech = yes
 		# Nirvana Empire DLC
@@ -4274,7 +4262,7 @@ can_remove_positive_traits_organic = {
 				# Ascension - Biological Module
 				has_technology = tech_yanz_rs_genemod
 				# Kancolle
-				has_tradition = tr_shipbuilding_adjustment
+				has_tradition = tr_shipbuilding_transform
 				# Planetary Diversity
 				has_tradition = pd_tr_biosynth_perk_2a
 				# Madoka Magica NEW
@@ -4305,7 +4293,7 @@ can_modify_organic_portraits = {
 		# Ascension - Biological Module
 		has_technology = tech_yanz_rs_genemod
 		# Kancolle
-		has_tradition = tr_shipbuilding_adjustment
+		has_tradition = tr_shipbuilding_transform
 		# Madoka Magica NEW
 		has_str_genemodding_tech = yes
 		# Warship Girls R And MIST Species
