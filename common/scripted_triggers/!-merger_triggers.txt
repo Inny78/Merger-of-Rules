@@ -604,3 +604,55 @@ merg_is_special_ship = {
 		is_reanimated = yes
 	}
 }
+
+merg_is_isolated_system = {
+	OR = {
+		has_star_flag = sealed_system
+		has_star_flag = ds_galactic_core
+		has_star_flag = empire_home_system
+		has_star_flag = marauder_system
+		has_star_flag = marauder_capital_1
+		has_star_flag = empire_cluster
+		has_star_flag = fallen_shrouded
+		has_star_flag = fallen_shielded_1
+		has_star_flag = fallen_shielded_2
+		has_star_flag = fallen_shielded_3
+		has_star_flag = holy_system_1
+		has_star_flag = holy_system_2
+		has_star_flag = holy_system_3
+		has_star_flag = holy_system_4
+		has_star_flag = holy_system_5
+		has_star_flag = fe_xeno_zoo
+		has_star_flag = fallen_shield_world
+		has_star_flag = fallen_empire_world
+		has_star_flag = sealed_system
+		has_star_flag = lcluster
+		has_star_flag = ds_se_system_fixed
+		has_star_flag = surveillance_supercomputer_system
+		has_star_flag = giga_inner
+		has_star_flag = giga_galactic_center
+		has_star_flag = Paluush_system
+		has_star_flag = giga_system_six
+		has_star_flag = abandoned_gateway
+		has_star_flag = giga_outer_01
+		has_star_flag = giga_outer_02
+		has_star_flag = giga_outer_03
+		has_star_flag = giga_core_03
+		has_star_flag = ag_no_jump_in_system
+		has_star_flag = outercluster
+		has_star_flag = wg_sealed_system
+		has_star_flag = wg_psionic_systems
+		has_star_flag = Kuat_system
+		has_star_flag = Kuat_system_1
+		has_star_flag = Kuat_system_2
+		has_star_flag = Kuat_system_3
+		has_star_flag = kuat_initial_system
+		has_star_flag = Kuat_system_int
+		has_star_flag = Kuat_system_int_1
+		has_star_flag = Kuat_system_int_2
+		has_star_flag = Kuat_system_int_3
+		has_star_flag = Kuat_system_int_4
+		has_star_flag = nep_Krahen_cluster
+		has_star_flag = nep_Scrus_cluster
+	}
+}

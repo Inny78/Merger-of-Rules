@@ -29,6 +29,10 @@ colonizable_planet = {
 		is_acot_awesome_planet_class = yes
 		# Planetary Diversity
 		is_planet_class = pc_pdshroud
+		is_pd_machine = yes
+		is_pd_planetary_megaproject = yes
+		is_pd_nuked = yes
+		is_pd_radiotrophic_world = yes
 		# SW:UnknownWorld Shipgirls Story
 		is_planet_class = pc_swgs_engineer
 		is_planet_class = pc_swgs_engineer_ringworld_habitable
@@ -39,7 +43,7 @@ colonizable_planet = {
 		has_apsr_modifiers = yes
 		# Endless Frontier
 		is_planet_class = pc_mzilli_shadow
-		### SOFE
+		# SBTG
 		is_planet_class = pc_golden_world
 		is_planet_class = pc_golden_world_habitable
 		is_planet_class = pc_omega_ringworld_habitable
@@ -73,17 +77,13 @@ habitable_planet_not_urban = {
 		merg_is_savannah = yes
 		merg_is_gaia = yes
 		# Planetary Diversity
-		is_planet_class = pc_megaflorahive
-		is_planet_class = pc_megafloratol
-		is_planet_class = pc_pdhive1
-		is_planet_class = pc_pdhive2
-		is_planet_class = pc_bioforge
-		is_planet_class = pc_biocapital
-		is_planet_class = pc_biofort
 		is_pd_regular = yes
+		is_pd_ocean = yes
 		is_pd_gaia = yes
 		is_pd_rare = yes
 		is_pd_exotic = yes
+		is_pd_radiotrophic_world = yes
+		is_pd_megaflora_hive = yes
 		# Warship Girls R And MIST Species
 		is_planet_class = pc_wsg_port
 		is_planet_class = pc_shenhai
@@ -97,6 +97,29 @@ habitable_planet_not_urban = {
 		is_planet_class = pc_giga_edge_of_eternity
 		# Real Space - New Frontiers / Expanded Gestalts: Forgotten Queens
 		is_planet_class = pc_hollow
+	}
+}
+
+can_have_habitable_deposits = {
+	OR = {
+		merg_is_nuked_basic = yes
+		merg_is_desert = yes
+		merg_is_tropical = yes
+		merg_is_arid = yes
+		merg_is_continental = yes
+		merg_is_ocean_basic = yes
+		merg_is_tundra = yes
+		merg_is_arctic = yes
+		merg_is_alpine = yes
+		merg_is_savannah = yes
+		merg_is_gaia_basic = yes
+		merg_is_relic = yes
+		# All These Worlds
+		galactic_diversity_habitable_planet = yes
+		# Planetary Diversity
+		is_pd_radiotrophic_world = yes
+		is_pd_megaflora_hive = yes
+		is_pd_rare = yes
 	}
 }
 
@@ -581,7 +604,7 @@ has_phototrophic_energy_upkeep = {
 				# Planetary Diversity
 				has_trait = trait_radiotrophic_mutants
 			}
-			planet = { merg_is_nuked = no }
+			planet = { merg_is_rad_planet = no }
 		}
 	}
 }

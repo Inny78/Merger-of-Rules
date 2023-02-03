@@ -150,13 +150,7 @@ merg_is_frozen = {
 
 merg_is_gaia = {
 	OR = {
-		is_planet_class = pc_gaia
-		# All These Worlds
-		is_planet_class = orbit_chlorogaian
-		is_planet_class = orbit_thermogaian
-		is_planet_class = pc_thermogaian
-		is_planet_class = orbit_cryogaian
-		is_planet_class = pc_cryogaian
+		merg_is_gaia_basic = yes
 		# Azur Lane
 		is_planet_class = pc_azur_gaia
 		# Planetary Diversity
@@ -165,6 +159,20 @@ merg_is_gaia = {
 		is_planet_class = pc_EOE_pokemon_gaia
 		# ZOFE
 		is_planet_class = pc_utopian_gaia
+	}
+}
+
+merg_is_gaia_basic = {
+	OR = {
+		is_planet_class = pc_gaia
+		# All These Worlds
+		is_planet_class = orbit_chlorogaian
+		is_planet_class = orbit_thermogaian
+		is_planet_class = pc_thermogaian
+		is_planet_class = orbit_cryogaian
+		is_planet_class = pc_cryogaian
+		# Planetary Diversity
+		is_pd_gaia = yes
 	}
 }
 
@@ -204,6 +212,7 @@ merg_is_hive_world = {
 		# Planetary Diversity
 		is_pd_hive_world = yes
 		is_pd_hive_arcology = yes
+		is_pd_megaflora_hive = yes
 		# Voyage to Eternity
 		is_planet_class = pc_KZ_VOY_hive_world
 	}
@@ -238,9 +247,7 @@ merg_is_molten = {
 
 merg_is_nuked = {
 	OR = {
-		is_planet_class = pc_nuked
-		# All these worlds
-		is_planet_class = orbit_nuked
+		merg_is_nuked_basic = yes
 		# Gigastructural Engineering & More
 		is_planet_class = pc_katzenland
 		# Girls Frontline
@@ -248,15 +255,31 @@ merg_is_nuked = {
 		# Human Fallen Empires
 		is_planet_class = hfe_pc_memorial
 		is_planet_class = hfe_pc_urbanism
+
+	}
+}
+
+merg_is_nuked_basic = {
+	OR = {
+		is_planet_class = pc_nuked
+		# All these worlds
+		is_planet_class = orbit_nuked
 		# Planetary Diversity
-		is_planet_class = pc_irradiated
-		is_planet_class = pc_nuked_superhab
-		is_planet_class = pc_nuked_tl
-		is_planet_class = pc_nuked_relic
+		is_pd_nuked = yes
 	}
 }
 
 merg_is_ocean = {
+	OR = {
+		merg_is_ocean_basic = yes
+		# Archaeology Story Pack
+		is_planet_class = pc_asp_ocean_red
+		# Azur Lane
+		is_planet_class = pc_azur_ocean
+	}
+}
+
+merg_is_ocean_basic = {
 	OR = {
 		is_planet_class = pc_ocean
 		# All These Worlds
@@ -268,16 +291,17 @@ merg_is_ocean = {
 		is_planet_class = orbit_thermopelagic
 		is_planet_class = orbit_panpelagic
 		is_planet_class = pc_panpelagic
-		# Archaeology Story Pack
-		is_planet_class = pc_asp_ocean_red
-		# Azur Lane
-		is_planet_class = pc_azur_ocean
 		# Planetary Diversity
 		is_pd_ocean = yes
-		# is_pd_aquatics = yes
-		is_planet_class = pc_aquatic
-		is_planet_class = pc_tidallyaquatic
-		is_planet_class = pc_aquatic_superhab
+		is_pd_aquatics = yes
+	}
+}
+
+merg_is_rad_planet = {
+	OR = {
+		merg_is_nuked = yes
+		# Planetary Diversity
+		is_pd_radiotrophic_world = yes
 	}
 }
 
