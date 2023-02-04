@@ -126,6 +126,8 @@ has_no_non_gate_megastructure = {
 					is_megastructure_type = BA_Mega_keystone_base_1
 					is_megastructure_type = BA_Mega_keystone_base_2
 					is_megastructure_type = BA_Mega_keystone_base_3
+					# Scripted Trigger Undercoat
+					has_megastructure_flag = stu_is_gate
 					# Voyage to Eternity
 					is_megastructure_type = mega_KZ_VOY_hiawatha_fleet_yards_01
 					is_megastructure_type = mega_KZ_VOY_hiawatha_fleet_yards_02
@@ -276,6 +278,8 @@ has_any_megastructure_in_empire = {
 			has_megastructure = BA_Mega_keystone_base_1
 			has_megastructure = BA_Mega_keystone_base_2
 			has_megastructure = BA_Mega_keystone_base_3
+			# Scripted Trigger Undercoat
+			any_system_megastructure = { has_megastructure_flag = stu_structure_can_teach_megaengineering }
 			# Voyage to Eternity
 			has_megastructure = mega_KZ_VOY_hiawatha_fleet_yards_01
 			has_megastructure = mega_KZ_VOY_hiawatha_fleet_yards_02

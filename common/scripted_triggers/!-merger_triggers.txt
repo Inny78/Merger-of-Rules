@@ -11,6 +11,9 @@ merg_is_standard_empire = {
 		is_country_type = ds_nomads
 		# Ethics & Civics Infinity
 		is_country_type = uo_une_member_active
+		# Scripted Triggers Undercoat
+		has_country_flag = is_playable
+		has_country_flag = is_empire
 		# The Empty Vagrant
 		is_country_type = default_ev
 		is_country_type = fallen_empire_ev
@@ -29,6 +32,8 @@ merg_is_default_empire = {
 		is_country_type = ds_nomads
 		# Ethics & Civics Infinity
 		is_country_type = uo_une_member_active
+		# Scripted Triggers Undercoat
+		has_country_flag = is_playable
 		# The Empty Vagrant
 		is_country_type = default_ev
 		# ZOFE
@@ -115,6 +120,9 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_planetary_ringworld_city
 		# Star Wars: Kuat Ancient Empire
 		is_planet_class = pc_kuat_eternal_ringworld_habitable
+		# ThaumStellaris
+		is_planet_class = pc_tc_alchemical_ringworld_habitable
+		is_planet_class = pc_tc_advanced_alchemical_ringworld_habitable
 		# The DAL Species Mod
 		is_planet_class = pc_ringworld_datealive_crystals
 		# Warship Girls and MIST species

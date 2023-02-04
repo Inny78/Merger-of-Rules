@@ -352,6 +352,22 @@ is_democracy = {
 	}
 }
 
+is_organic_controllable_ship = {
+	OR = {
+		is_ship_size = space_amoeba
+		is_ship_size = space_amoeba_mother
+		is_ship_size = space_amoeba_centenarian
+		is_ship_size = large_ship_swarm
+		is_ship_size = small_ship_swarm
+		is_ship_size = large_ship_carrier_swarm
+		AND = {
+			is_scope_type = fleet
+			has_fleet_flag = stu_is_organic_controllable_ship
+		}
+		giga_is_vat_normal = yes 
+	}
+}
+
 has_comms_with_alien_empire = {
 	any_relation = {
 		has_communications = root
@@ -380,6 +396,8 @@ has_comms_with_alien_civilization = {
 			# ACOT
 			is_progenitor_empires = yes
 			is_country_type = sofe_light_seeker
+			# Scripted Trigger Undercoat
+			has_country_flag = stu_counts_as_civilization_for_comms
 		}
 	}
 }
@@ -771,6 +789,8 @@ has_any_industry_district = {
 		has_district = PR_DSTR_hab_catalytic
 		# Nanite Machines & Distant Stars Overhaul
 		has_district = district_nanite_forgeworld_industry
+		# Wula Fallen Empire
+		has_district = district_wandering_knight_order_industry
     }
 }
 
@@ -822,6 +842,8 @@ has_any_mining_district = {
 		has_district = PR_DSTR_mining_uncapped
 		has_district = PR_DSTR_rw_mining
 		has_district = PR_DSTR_hab_mining
+		# Wula Fallen Empire
+		has_district = district_wula_abandon_forge_world_core
 	}
 }
 
@@ -862,6 +884,7 @@ has_any_generator_district_or_building = {
 		has_district = PR_DSTR_hab_energy
 		# Wula Fallen Empire
 		has_building = building_wula_singularity
+		has_district = district_wula_abandon_forge_world_surface
 	}
 }
 
@@ -939,6 +962,8 @@ has_special_star_flag_trigger = {
 		has_star_flag = pdcrystal_system
 		# Real Space
 		has_star_flag = star_disaster
+		# Scripted Trigger Undercoat
+		has_star_flag = stu_has_special_star_flag
 		# Some Events of Outside Cluster
 		has_star_flag = nep_Krahen_cluster
 		has_star_flag = nep_dragon_system

@@ -1,11 +1,10 @@
 # Vanilla scripted triggers from 0é_scripted_triggers_enclaves.txt
 
-#Fleet scope | see also, is_organic_controllable_ship = { }
 fleet_can_be_scrapped = {
 	owner = { is_same_value = root }
 	OR = {
 		is_ship_class = shipclass_science_ship
-		is_ship_class = shipclass_military #excludes Colossi & Star Eaters; includes Titans
+		is_ship_class = shipclass_military
 		is_ship_class = shipclass_colonizer
 		is_ship_class = shipclass_constructor
 	}
@@ -14,6 +13,15 @@ fleet_can_be_scrapped = {
 		# Gigastructural Engineering & More
 		giga_is_vat_leviathan = yes
 		giga_is_unscrappable = yes
+		# Scripted Trigger Undercoat
+		AND = {
+			is_scope_type = fleet
+			has_fleet_flag = stu_fleet_cant_be_scrapped
+		}
+		AND = {
+			is_scope_type = ship
+			has_ship_flag = stu_ship_cant_be_scrapped
+		}
 		# Voyage to Eternity
 		is_ship_size = KZ_VOY_battlestar
 		is_ship_size = KZ_VOY_holo_training_ship
