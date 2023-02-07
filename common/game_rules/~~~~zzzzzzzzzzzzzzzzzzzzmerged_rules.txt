@@ -2076,7 +2076,7 @@ can_orbital_bombard = {
 			FROM.CONTROLLER = { is_country_type = vbp_machine }
 		}
 		# THE ABYSS CONTRACT
-		ROOT = { has_component = AI_MATRICES }
+		# ROOT = { has_component = AI_MATRICES }
 		# Vanilla
 		ROOT.CONTROLLER = { is_hostile = FROM.CONTROLLER }
 		root.CONTROLLER = { is_at_war_with = from.CONTROLLER }

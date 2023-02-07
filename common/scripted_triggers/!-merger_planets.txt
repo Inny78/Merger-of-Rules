@@ -24,6 +24,8 @@ merg_is_arcology = {
 		is_planet_class = pc_city_cep
 		# Forgotten History
 		is_planet_class = pc_apocalyptic_city
+		# Gigastructural Engineering & More
+		is_planet_class = pc_flusion_gaia_ecu
 		# Midas
 		is_planet_class = pc_midas_city
 		# Planetary Diversity

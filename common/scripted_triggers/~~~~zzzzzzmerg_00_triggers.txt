@@ -91,6 +91,7 @@ habitable_planet_not_urban = {
 		is_planet_class = pc_swgs_engineer
 		is_planet_class = pc_swgs_engineer_ringworld_habitable
 		# Gigastructures
+		is_planet_class = pc_katzenland
 		is_planet_class = pc_ll_temperate
 		is_planet_class = pc_ll_foggy
 		is_planet_class = pc_ll_torrid
