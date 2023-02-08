@@ -2426,6 +2426,7 @@ ai_should_restrict_system = {
 		}
 		# Gigastructural Engineering & More
 		AND = {
+			merg_has_gigastructures = yes
 			NOT = { has_global_flag = katzenartig_imperium_happened }
 			OR = {
 				has_global_flag = katzenartig_always
@@ -2471,11 +2472,13 @@ ai_should_restrict_system = {
 		}
 		# ACOT
 		AND = {
+			merg_has_acot = yes
 			root = { merg_is_default_empire = yes }
 			exists = owner
 			owner = { is_progenitor_empires = yes }
 		}
 		AND = {
+			merg_has_sofe = yes
 			root = { merg_is_fallen_empire = yes }
 			any_ship_in_system = {
 				exists = owner
@@ -2489,6 +2492,7 @@ ai_should_restrict_system = {
 		}
 		# A Deadly Tempest
 		AND = {
+			merg_has_deadly_tempest = yes
 			root = {
 				OR = {
 					is_crisis_faction = yes
@@ -2499,6 +2503,7 @@ ai_should_restrict_system = {
 		}
 		# Ancient Empire
 		AND = {
+			merg_has_ancient_empire = yes
 			root = {
 				OR = {
 					merg_is_fallen_empire = yes
