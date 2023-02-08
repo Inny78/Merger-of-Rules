@@ -2450,6 +2450,8 @@ ai_should_restrict_system = {
 					is_country_type = awakened_marauders
 					is_country_type = marauder_raiders
 					is_country_type = caravaneer_fleet
+					# The Empty Vagrant
+					is_country_type = awakened_marauders_ev
 				}
 			}
 			OR = {
@@ -2505,6 +2507,8 @@ ai_should_restrict_system = {
 					merg_is_awakened_fe = yes
 					is_country_type = awakened_marauders
 					is_country_type = ag_ancient_psi_guardian
+					# The Empty Vagrant
+					is_country_type = awakened_marauders_ev
 				}
 			}
 			OR = {
