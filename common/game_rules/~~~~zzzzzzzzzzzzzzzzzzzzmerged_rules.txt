@@ -2168,8 +2168,6 @@ can_orbital_bombard = {
 				# Shroud Rising
 				is_country_type = shroud_horrors
 				is_country_type = shroud_cult
-				# The Sleeper
-				is_sleeper = yes
 				# THE ABYSS CONTRACT
 				is_country_type = TAC_debris_ship_country
 				is_country_type = TAC_machine_crisis_country
@@ -2514,65 +2512,6 @@ ai_should_restrict_system = {
 			OR = {
 				has_star_flag = ag_zeta_crisis_psionic_storm_system
 				has_star_flag = ag_zeta_crisis_psionic_singularity_system
-			}
-		}
-		# The Sleeper
-		AND = {
-			root = { is_country_type = default }
-			exists = owner
-			has_star_flag = sleeper_system
-			root = {
-				AND = {
-					OR = {
-						is_homicidal = no
-						NAND = {
-							has_ethic = ethic_fanatic_xenophobe 
-							NOT = { has_valid_civic = civic_inwards_perfection }
-						}
-					}
-					OR = {
-						AND = {
-							is_xenophile = yes
-							is_militarist = no
-						}
-						is_pacifist = yes
-						has_valid_civic = civic_machine_servitor
-						AND = {
-							is_active_resolution = resolution_sleeper_sanctions
-							NOR = {
-								AND = {
-									is_xenophobe = yes
-									NOT = { has_valid_civic = civic_inwards_perfection }
-								}
-								is_militarist = yes
-							}
-						}
-						AND = {
-							has_global_flag = sleeper_warning_happened
-							NOT = { has_ethic = ethic_fanatic_xenophobe }
-						}
-						AND = {
-							any_neighbor_country = { is_country_type = the_sleeper_fallen }
-							event_target:the_sleeper = {
-								check_variable = { which = sleeper_aggro value > 500 }
-							}
-						}
-					}
-				}
-			}
-		}
-		AND = {
-			root = { is_country_type = fallen_empire }
-			exists = owner
-			OR = {
-				any_fleet_in_system = {
-					exists = owner
-					owner = { is_country_type = berserker_awoken_hive }
-				}
-				AND = {
-					owner = { is_country_type = the_sleeper_fallen }
-					has_star_flag = sleeper_system
-				}
 			}
 		}
 		# Harvest Engine Crisis

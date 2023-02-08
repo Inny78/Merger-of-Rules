@@ -102,7 +102,6 @@ is_real_KZ_VOY_luna = { always = no }
 is_real_KZ_VOY_Seclusion = { always = no }
 is_real_KZ_VOY_Library_tower = { always = no }
 is_servitor_empire = { always = no }
-is_sleeper = { always = no }
 is_special_affection_leader = { always = no }
 is_special_kancolle_leader = { always = no }
 is_spy_empire = { always = no }
