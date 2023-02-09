@@ -52,6 +52,15 @@ building_ae_nano_forge = { potential = { always = no } allow = { always = no } }
 building_ae_stronghold = { potential = { always = no } allow = { always = no } }
 building_ancient_palace = { potential = { always = no } allow = { always = no } }
 building_ancient_palace_at = { potential = { always = no } allow = { always = no } }
+building_avb_capital_4 = { potential = { always = no } allow = { always = no } }
+building_avb_capital_5 = { potential = { always = no } allow = { always = no } }
+building_avb_capital_6 = { potential = { always = no } allow = { always = no } }
+building_avb_hive_capital_3 = { potential = { always = no } allow = { always = no } }
+building_avb_hive_capital_4 = { potential = { always = no } allow = { always = no } }
+building_avb_machine_capital_4 = { potential = { always = no } allow = { always = no } }
+building_avb_machine_capital_5 = { potential = { always = no } allow = { always = no } }
+building_avb_machine_capital_6 = { potential = { always = no } allow = { always = no } }
+building_avb_resort_capital_3 = { potential = { always = no } allow = { always = no } }
 building_brothel_house = { potential = { always = no } allow = { always = no } }
 building_brothel_house_branch_office = { potential = { always = no } allow = { always = no } }
 building_bugged_life_monastery = { potential = { always = no } allow = { always = no } }
@@ -91,6 +100,9 @@ building_fe_factory = { potential = { always = no } allow = { always = no } }
 building_fe_hospital = { potential = { always = no } allow = { always = no } }
 building_fe_institute = { potential = { always = no } allow = { always = no } }
 building_fe_nano_forge = { potential = { always = no } allow = { always = no } }
+building_giga_elysium_host_hive_major_capital = { potential = { always = no } allow = { always = no } }
+building_giga_elysium_host_machine_major_capital = { potential = { always = no } allow = { always = no } }
+building_giga_elysium_host_major_capital = { potential = { always = no } allow = { always = no } }
 building_giga_fortress = { potential = { always = no } allow = { always = no } }
 building_giga_fortress_array = { potential = { always = no } allow = { always = no } }
 building_giga_fortress_fe = { potential = { always = no } allow = { always = no } }

@@ -240,6 +240,10 @@ birch_world_1 = { entity = "" potential = { always = no } possible = { always = 
 birch_world_2 = { entity = "" potential = { always = no } possible = { always = no } }
 birch_world_3 = { entity = "" potential = { always = no } possible = { always = no } }
 blokkat_gigarelay_2 = { entity = "" potential = { always = no } possible = { always = no } }
+blokkat_harvester_charged = { entity = "" potential = { always = no } possible = { always = no } }
+blokkat_harvester_charged_mothership = { entity = "" potential = { always = no } possible = { always = no } }
+blokkat_harvester_charging_up = { entity = "" potential = { always = no } possible = { always = no } }
+blokkat_harvester_charging_up_mothership = { entity = "" potential = { always = no } possible = { always = no } }
 blokkat_star_fix_0 = { entity = "" potential = { always = no } possible = { always = no } }
 blokkat_star_fix_1 = { entity = "" potential = { always = no } possible = { always = no } }
 blokkat_star_fix_active = { entity = "" potential = { always = no } possible = { always = no } }

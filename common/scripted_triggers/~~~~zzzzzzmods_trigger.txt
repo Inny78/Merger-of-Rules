@@ -562,12 +562,6 @@ kuat_is_defense_galaxy_fleet = {
 	}
 }
 
-############################### Ancient Caches of Technology ###############################
-is_playable_country = {
-	optimize_memory
-	merg_is_standard_empire = yes
-}
-
 ############################### Exalted Domination ###############################
 exalted_is_valid_as_vassal = {
 	optimize_memory
@@ -1393,6 +1387,13 @@ can_build_precursor_ship = {
 				has_starbase_size >= lily_super_college_ship
 			}
 		}
+	}
+}
+is_playable_country = {
+	optimize_memory
+	OR = {
+		merg_is_standard_empire = yes
+		is_country_type = sbtg_stellarborne_empire_active
 	}
 }
 

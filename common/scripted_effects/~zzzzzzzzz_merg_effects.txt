@@ -17,6 +17,16 @@ remove_capital_building = {
 		# All that is GRIMDARK
 		building_hive_major_capital_sick = { remove_building = building_hive_major_capital_sick }
 		building_system_capital_gr = { remove_building = building_system_capital_gr }
+		# AVB
+		building_avb_capital_4 = { remove_building = building_avb_capital_4 }
+		building_avb_capital_5 = { remove_building = building_avb_capital_5 }
+		building_avb_capital_6 = { remove_building = building_avb_capital_6 }
+		building_avb_hive_capital_3 = { remove_building = building_avb_hive_capital_3 }
+		building_avb_hive_capital_4 = { remove_building = building_avb_hive_capital_4 }
+		building_avb_machine_capital_4 = { remove_building = building_avb_machine_capital_4 }
+		building_avb_machine_capital_5 = { remove_building = building_avb_machine_capital_5 }
+		building_avb_machine_capital_6 = { remove_building = building_avb_machine_capital_6 }
+		building_avb_resort_capital_3 = { remove_building = building_avb_resort_capital_3 }
 		# Azur Lane Stellaris DLC
 		azur_building_mind_capital = { remove_building = azur_building_mind_capital }
 		azur_building_mind_net_capital = { remove_building = azur_building_mind_net_capital }

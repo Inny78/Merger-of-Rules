@@ -94,8 +94,8 @@ can_add_claim = {
 					is_country_type = fallen_empire
 					is_country_type = awakened_fallen_empire
 					# ACOT
-					is_country_type = original_empire_active
-					is_country_type = sofe_light_seeker
+					is_country_type = sbtg_stellarborne_empire_active
+					is_country_type = sbtg_light_seeker
 					# Twinks Eternal Empire
 					is_country_type = eternal_empire
 					# ZOFE
@@ -333,8 +333,8 @@ can_get_claim_from_lost_system = {
 			is_country_type = awakened_fallen_empire
 			# ACOT
 			is_country_type = ascended_empire
-			is_country_type = original_empire_active
-			is_country_type = sofe_light_seeker
+			is_country_type = sbtg_stellarborne_empire_active
+			is_country_type = sbtg_light_seeker
 			# Twinks Eternal Empire
 			is_country_type = eternal_empire
 			# ZOFE
@@ -347,8 +347,8 @@ can_get_claim_from_lost_system = {
 				is_country_type = awakened_fallen_empire
 				# ACOT
 				is_country_type = ascended_empire
-				is_country_type = original_empire_active
-				is_country_type = sofe_light_seeker
+				is_country_type = sbtg_stellarborne_empire_active
+				is_country_type = sbtg_light_seeker
 				# Twinks Eternal Empire
 				is_country_type = eternal_empire
 				# ZOFE
@@ -864,7 +864,7 @@ can_take_hostile_actions = {
 		}
 	}
 	else_if = {
-		limit = { this = { is_country_type = original_empire_passive } }
+		limit = { this = { is_country_type = sbtg_stellarborne_empire_passive } }
 		custom_tooltip = { always = no }
 	}
 	else_if = {
@@ -2100,7 +2100,7 @@ can_orbital_bombard = {
 				# Ancient Empire
 				ag_can_be_orbital_bombardment_country = yes
 				# ACOT
-				is_progenitor_empires = yes
+				is_country_type = sbtg_stellarborne_empire
 				is_country_type = void_lifeforms_1
 				is_country_type = void_lifeforms_2
 				# Cruel Conquerers
@@ -2485,7 +2485,7 @@ ai_should_restrict_system = {
 				owner = {
 					OR = {
 						is_guardian_country = yes
-						is_country_type = sofe_sentinel_active
+						is_country_type = sbtg_sentinel_active
 					}
 				}
 			}
@@ -2578,6 +2578,7 @@ can_jump_drive = {
 	# Some Events of Outside Cluster
 	if = {
 		limit = {
+			merg_has_seooc = yes
 			exists = solar_system
 			solar_system = { has_star_flag = nep_Scrus_cluster }
 		}
@@ -2588,6 +2589,7 @@ can_jump_drive = {
 	}
 	else_if = {
 		limit = {
+			merg_has_seooc = yes
 			exists = solar_system
 			solar_system = {
 				OR = {
@@ -2614,7 +2616,7 @@ can_spawn_occupation_armies = {
 		merg_is_awakened_fe = yes
 		# ACOT
 		is_progenitor_empires = yes
-		is_country_type = sofe_light_seeker
+		is_country_type = sbtg_light_seeker
 		# ZOFE
 		is_zofe_oe = yes
 	}
@@ -2727,6 +2729,7 @@ system_blocks_sensors = {
 			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_black_hole } }
 		}
 		AND = { # Jammer
+			merg_has_sensor_expansion = yes
 			exists = starbase
 			starbase = {
 				has_starbase_building = ariphaos_sensors_jammer_starbase
@@ -2735,6 +2738,7 @@ system_blocks_sensors = {
 		}
 		# Assault Lily
 		AND = {
+			merg_has_assault_lily = yes
 			exists = sector
 			sector = {
 				exists = leader
@@ -3786,7 +3790,7 @@ can_use_galactic_market = {
 	OR = {
 		merg_is_default_empire = yes
 		# ACOT
-		is_country_type = original_empire_active
+		is_country_type = sbtg_stellarborne_empire_active
 		# The Empty Vagrant
 		AND = {
 			is_country_type = default_ev
@@ -3897,7 +3901,7 @@ can_be_part_of_galactic_community = {
 		OR = {
 			merg_is_default_empire = yes
 			# ACOT
-			is_country_type = original_empire_active
+			is_country_type = sbtg_stellarborne_empire_active
 			# ZOFE
 			is_zofe_oe = yes
 		}
@@ -3968,7 +3972,7 @@ can_see_galactic_community = {
 		has_country_flag = galcom_form_nay
 		is_galactic_community_member = yes
 		# ACOT
-		is_country_type = original_empire_active
+		is_country_type = sbtg_stellarborne_empire_active
 		# ZOFE
 		is_country_type = lost_empire
 		is_zofe_oe = yes
@@ -3984,7 +3988,7 @@ can_be_part_of_galactic_council = {
 	OR = {
 		merg_is_default_empire = yes
 		# ACOT
-		is_country_type = original_empire_active
+		is_country_type = sbtg_stellarborne_empire_active
 		# ZOFE
 		is_zofe_oe = yes
 	}
