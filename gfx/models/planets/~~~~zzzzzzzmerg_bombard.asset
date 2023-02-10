@@ -1,0 +1,746 @@
+entity = {
+	name = "orbital_bombardment_effects"
+	pdxmesh = "bombardment_frame_mesh"
+
+	cull_radius = 500.0
+
+	state = { name = "bombard_selective" state_time = 4 looping = no next_state = "bombard_selective" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1 node = "bombardment_location_5" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.5 node = "bombardment_location_12" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_selective" state_time = 4 looping = no next_state = "bombard_selective" chance = 1
+		event = { time = 0 node = "bombardment_location_7" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.5 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_indiscriminate" state_time = 3.0 looping = no next_state = "bombard_indiscriminate" chance = 1
+		event = { time = 0 node = "bombardment_location_3" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.6 node = "bombardment_location_5" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_11" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_16" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_indiscriminate" state_time = 3.0 looping = no next_state = "bombard_indiscriminate" chance = 1
+		event = { time = 0 node = "bombardment_location_4" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.5 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_9" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_12" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_18" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_armageddon" state_time = 2.5 looping = no next_state = "bombard_armageddon" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_armageddon" state_time = 2.5 looping = no next_state = "bombard_armageddon" chance = 1
+		event = { time = 0 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.5 node = "bombardment_location_9" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.2 node = "bombardment_location_18" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_raiding" state_time = 4 looping = no next_state = "bombard_selective" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 5.0 node = "bombardment_location_11" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_raiding" state_time = 4 looping = no next_state = "bombard_selective" chance = 1
+		event = { time = 0 node = "bombardment_location_7" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_4" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 5.0 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+
+	# Ragnarok
+	state = { name = "bombard_N_ISBS_ragnarok_doomsday_03_bombing" state_time = 4 looping = no next_state = "bombard_selective" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "projectile_large_shield_hit_effect" keep_particle = yes sound = { soundeffect = "distance_assimilate_hit_layer_1" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "projectile_large_shield_hit_effect" keep_particle = yes sound = { soundeffect = "distance_assimilate_hit_layer_2" } }
+		event = { time = 5.0 node = "bombardment_location_11" particle = "projectile_large_shield_hit_effect" keep_particle = yes sound = { soundeffect = "distance_assimilate_hit_layer_1" } }
+	}
+	state = { name = "bombard_N_ISBS_ragnarok_doomsday_03_bombing" state_time = 4 looping = no next_state = "bombard_selective" chance = 1
+		event = { time = 0 node = "bombardment_location_7" particle = "projectile_large_shield_hit_effect" keep_particle = yes sound = { soundeffect = "distance_assimilate_hit_layer_1" } }
+		event = { time = 2.0 node = "bombardment_location_4" particle = "projectile_large_shield_hit_effect" keep_particle = yes sound = { soundeffect = "distance_assimilate_hit_layer_2" } }
+		event = { time = 5.0 node = "bombardment_location_8" particle = "projectile_large_shield_hit_effect" keep_particle = yes sound = { soundeffect = "distance_assimilate_hit_layer_1" } }
+	}
+	state = { name = "bombard_N_ISBS_ragnarok_doomsday_04_bombing" state_time = 4 looping = no next_state = "bombard_selective" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "railgun_medium_hit_effect" keep_particle = yes sound = { soundeffect = "plasma_hit" } }
+		event = { time = 1 node = "bombardment_location_5" particle = "railgun_medium_hit_effect" keep_particle = yes sound = { soundeffect = "plasma_hit" } }
+		event = { time = 2.5 node = "bombardment_location_12" particle = "railgun_medium_hit_effect" keep_particle = yes sound = { soundeffect = "plasma_hit" } }
+	}
+	state = { name = "bombard_N_ISBS_ragnarok_doomsday_04_bombing" state_time = 4 looping = no next_state = "bombard_selective" chance = 1
+		event = { time = 0 node = "bombardment_location_7" particle = "railgun_medium_hit_effect" keep_particle = yes sound = { soundeffect = "plasma_hit" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "railgun_medium_hit_effect" keep_particle = yes sound = { soundeffect = "plasma_hit" } }
+		event = { time = 2.5 node = "bombardment_location_6" particle = "railgun_medium_hit_effect" keep_particle = yes sound = { soundeffect = "plasma_hit" } }
+	}
+	state = { name = "bombard_N_ISBS_ragnarok_doomsday_05_bombing" state_time = 3.0 looping = no next_state = "bombard_indiscriminate" chance = 1
+		event = { time = 0 node = "bombardment_location_3" particle = "plasma_accelerator_small_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.6 node = "bombardment_location_5" particle = "plasma_accelerator_small_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "plasma_accelerator_small_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_11" particle = "plasma_accelerator_small_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_16" particle = "plasma_accelerator_small_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_N_ISBS_ragnarok_doomsday_05_bombing" state_time = 3.0 looping = no next_state = "bombard_indiscriminate" chance = 1
+		event = { time = 0 node = "bombardment_location_4" particle = "plasma_accelerator_small_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.5 node = "bombardment_location_6" particle = "plasma_accelerator_small_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_9" particle = "plasma_accelerator_small_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_12" particle = "plasma_accelerator_small_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_18" particle = "plasma_accelerator_small_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+
+	# Gigastructural Engineering & More
+	state = { name = "bombard_redtoxin" state_time = 2.5 looping = no next_state = "bombard_redtoxin" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_redtoxin" state_time = 2.5 looping = no next_state = "bombard_redtoxin" chance = 1
+		event = { time = 0 node = "bombardment_location_2" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.5 node = "bombardment_location_9" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.2 node = "bombardment_location_18" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "redtoxin_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_compound" state_time = 2.5 looping = no next_state = "bombard_compound" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_compound" state_time = 2.5 looping = no next_state = "bombard_compound" chance = 1
+		event = { time = 0 node = "bombardment_location_2" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.5 node = "bombardment_location_9" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.2 node = "bombardment_location_18" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "compound_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_katzen" state_time = 1.5 looping = no next_state = "bombard_katzen" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.33 node = "bombardment_location_4" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.33 node = "bombardment_location_5" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.66 node = "bombardment_location_2" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_7" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_8" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_6" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.3 node = "bombardment_location_13" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.4 node = "bombardment_location_14" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.5 node = "bombardment_location_11" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_katzen" state_time = 1.5 looping = no next_state = "bombard_katzen" chance = 1
+		event = { time = 0 node = "bombardment_location_2" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.33 node = "bombardment_location_5" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_7" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_9" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.25 node = "bombardment_location_16" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.3 node = "bombardment_location_13" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.35 node = "bombardment_location_18" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.4 node = "bombardment_location_11" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.5 node = "bombardment_location_15" particle = "katzen_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+
+	# ACOT
+	state = { name = "bombard_punishment" state_time = 2.5 looping = no next_state = "bombard_punishment" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+	}
+	state = { name = "bombard_punishment" state_time = 2.5 looping = no next_state = "bombard_punishment" chance = 1
+		event = { time = 0 node = "bombardment_location_2" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.5 node = "bombardment_location_9" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.2 node = "bombardment_location_18" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "acot_planetary_bombardment_dm_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+	}
+	state = { name = "bombard_exterminatus" state_time = 3.4 looping = no next_state = "bombard_exterminatus" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+	}
+	state = { name = "bombard_exterminatus" state_time = 3.4 looping = no next_state = "bombard_exterminatus" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "acot_planetary_bombardment_ae_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+	}
+	state = { name = "bombard_final_destionation" state_time = 3.4 looping = no next_state = "bombard_final_destionation" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+	}
+	state = { name = "bombard_final_destionation" state_time = 3.4 looping = no next_state = "bombard_final_destionation" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "acot_bombardment_oe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+	} 
+	state = { name = "bombard_final_destionation" state_time = 3.4 looping = no next_state = "bombard_final_destionation" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+	}
+	state = { name = "bombard_final_destionation" state_time = 3.4 looping = no next_state = "bombard_final_destionation" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "aot_planetary_bombardment_se" keep_particle = yes sound = { soundeffect = "bombardment_se" } }
+	} 
+	state = { name = "bombard_siphonlife" state_time = 3.4 looping = no next_state = "bombard_siphonlife" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+	}
+	state = { name = "bombard_siphonlife" state_time = 3.4 looping = no next_state = "bombard_siphonlife" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "acot_planetary_bombardment_edi_effect" keep_particle = yes sound = { soundeffect = "bombardment_ae" } }
+	}
+
+	# AOT
+	state = { name = "bombard_phanon_digitalization" state_time = 3.0 looping = no next_state = "bombard_phanon_digitalization" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+	}
+	state = { name = "bombard_phanon_digitalization" state_time = 3.0 looping = no next_state = "bombard_phanon_digitalization" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "aot_bombardment_pe_hit_effect" keep_particle = yes sound = { soundeffect = "bombardment_pe" } }
+	}
+
+	# Expanded Traits, Civics, Pops, and More
+	state = { name = "bombard_death" state_time = 3.0 looping = no next_state = "bombard_indiscriminate" chance = 1
+		event = { time = 0 node = "bombardment_location_3" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.6 node = "bombardment_location_5" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_11" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_16" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_death" state_time = 3.0 looping = no next_state = "bombard_indiscriminate" chance = 1
+		event = { time = 0 node = "bombardment_location_4" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.5 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_9" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_12" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_18" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_liberation" state_time = 4 looping = no next_state = "bombard_selective" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 5.0 node = "bombardment_location_11" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_liberation" state_time = 4 looping = no next_state = "bombard_selective" chance = 1
+		event = { time = 0 node = "bombardment_location_7" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_4" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 5.0 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+
+	# Girls Frontline
+	state = { name = "bombard_collapsebomb" state_time = 3.0 looping = no next_state = "bombard_collapsebomb" chance = 1
+		event = { time = 0 node = "bombardment_location_3" particle = "collapse_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.6 node = "bombardment_location_5" particle = "collapse_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "collapse_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_11" particle = "collapse_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_16" particle = "collapse_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_collapsebomb" state_time = 3.0 looping = no next_state = "bombard_collapsebomb" chance = 1
+		event = { time = 0 node = "bombardment_location_4" particle = "collapse_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.5 node = "bombardment_location_6" particle = "collapse_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_9" particle = "collapse_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_12" particle = "collapse_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_18" particle = "collapse_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+
+	# A Deadly Tempest
+	state = { name = "bombard_pox" state_time = 2.5 looping = no next_state = "bombard_pox" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_pox" state_time = 2.5 looping = no next_state = "bombard_pox" chance = 1
+		event = { time = 0 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.5 node = "bombardment_location_9" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.2 node = "bombardment_location_18" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_nanitebombard" state_time = 3 looping = no next_state = "bombard_nanitebombard" chance = 1
+		event = { time = 0 node = "bombardment_location_3" particle = "focused_arc_emitter_hit_effect" keep_particle = yes sound = { soundeffect = "distance_titan_laser_fire_02" } }
+		event = { time = 0.6 node = "bombardment_location_5" particle = "focused_arc_emitter_hit_effect" keep_particle = yes sound = { soundeffect = "distance_titan_laser_fire_02" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "focused_arc_emitter_hit_effect" keep_particle = yes sound = { soundeffect = "distance_titan_laser_fire_02" } }
+		event = { time = 1.8 node = "bombardment_location_11" particle = "focused_arc_emitter_hit_effect" keep_particle = yes sound = { soundeffect = "distance_titan_laser_fire_02" } }
+		event = { time = 2.4 node = "bombardment_location_16" particle = "focused_arc_emitter_hit_effect" keep_particle = yes sound = { soundeffect = "distance_titan_laser_fire_02" } }
+	}
+	state = { name = "bombard_nanitebombard" state_time = 3 looping = no next_state = "bombard_nanitebombard" chance = 1
+		event = { time = 0 node = "bombardment_location_4" particle = "focused_arc_emitter_hit_effect" keep_particle = yes sound = { soundeffect = "distance_titan_laser_fire_02" } }
+		event = { time = 0.5 node = "bombardment_location_6" particle = "focused_arc_emitter_hit_effect" keep_particle = yes sound = { soundeffect = "distance_titan_laser_fire_02" } }
+		event = { time = 1.2 node = "bombardment_location_9" particle = "focused_arc_emitter_hit_effect" keep_particle = yes sound = { soundeffect = "distance_titan_laser_fire_02" } }
+		event = { time = 1.8 node = "bombardment_location_12" particle = "focused_arc_emitter_hit_effect" keep_particle = yes sound = { soundeffect = "distance_titan_laser_fire_02" } }
+		event = { time = 2.4 node = "bombardment_location_18" particle = "focused_arc_emitter_hit_effect" keep_particle = yes sound = { soundeffect = "distance_titan_laser_fire_02" } }
+	}
+
+	# Star Wars: UnknownWorld Shipgirls Story
+	state = { name = "bombard_swgs_stardestroyer_bombing" state_time = 1.0 looping = no next_state = "bombard_swgs_stardestroyer_bombing" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_swgs_Kerui_bombing" state_time = 3.4 looping = no next_state = "bombard_swgs_Kerui_bombing" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_swgs_crisis_bombing" state_time = 3.4 looping = no next_state = "bombard_swgs_crisis_bombing" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+
+	# AshArms Aquarius History
+	state = { name = "bombard_adf_beam_bombing" state_time = 3.4 looping = no next_state = "bombard_adf_beam_bombing" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_adf_beam_bombing_fullpowerfire" state_time = 3.4 looping = no next_state = "bombard_adf_beam_bombing_fullpowerfire" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_15" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.6 node = "bombardment_location_10" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_3" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_12" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.4 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.2 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_19" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.6 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.8 node = "bombardment_location_9" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 3.0 node = "bombardment_location_16" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 3.2 node = "bombardment_location_18" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 3.4 node = "bombardment_location_11" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+
+	# Ancient Empire
+	state = { name = "bombard_ag_ancient_bombardment" state_time = 2.5 looping = no next_state = "bombard_ag_ancient_bombardment" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+	}
+	state = { name = "bombard_ag_ancient_bombardment" state_time = 2.5 looping = no next_state = "bombard_ag_ancient_bombardment" chance = 1
+		event = { time = 0 node = "bombardment_location_2" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 1.5 node = "bombardment_location_9" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 2.2 node = "bombardment_location_18" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+	}
+	state = { name = "bombard_ag_ancient_primitive_bombardment" state_time = 2.5 looping = no next_state = "bombard_ag_ancient_primitive_bombardment" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_ag_ancient_primitive_bombardment" state_time = 2.5 looping = no next_state = "bombard_ag_ancient_primitive_bombardment" chance = 1
+		event = { time = 0 node = "bombardment_location_2" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.5 node = "bombardment_location_9" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.2 node = "bombardment_location_18" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "ag_planetary_bombardment_orange_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombardment_ag_epsilon_purge_bombardment" state_time = 2.5 looping = no next_state = "bombardment_ag_epsilon_purge_bombardment" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+	}
+	state = { name = "bombardment_ag_epsilon_purge_bombardment" state_time = 2.5 looping = no next_state = "bombardment_ag_epsilon_purge_bombardment" chance = 1
+		event = { time = 0 node = "bombardment_location_2" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 1.5 node = "bombardment_location_9" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 2.2 node = "bombardment_location_18" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "ag_planetary_bombardment_red_effect" keep_particle = yes sound = { soundeffect = "ag_station_explosion_small" } }
+	}
+	state = { name = "bombard_ag_zeta_crisis_bombardment" state_time = 2.5 looping = no next_state = "bombard_ag_zeta_crisis_bombardment" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+	}
+	state = { name = "bombard_ag_zeta_crisis_bombardment" state_time = 2.5 looping = no next_state = "bombard_ag_zeta_crisis_bombardment" chance = 1
+		event = { time = 0 node = "bombardment_location_2" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 1.5 node = "bombardment_location_9" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 2.2 node = "bombardment_location_18" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "ag_planetary_bombardment_violet_effect" keep_particle = yes sound = { soundeffect = "arc_emitter_fire" } }
+	}
+
+	# Nanite Expansion
+	state = { name = "bombard_subsumption" state_time = 2.5 looping = no next_state = "bombard_subsumption" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_subsumption" state_time = 2.5 looping = no next_state = "bombard_subsumption" chance = 1
+		event = { time = 0 node = "bombardment_location_2" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.5 node = "bombardment_location_9" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.2 node = "bombardment_location_18" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "subsumption_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+
+	# DarkSpace
+	state = { name = "bombard_ds_exterminatus" state_time = 2.5 looping = yes next_state = "" chance = 0 #next_state = "bombard_ds_exterminatus" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.5 node = "bombardment_location_9" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.2 node = "bombardment_location_18" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_ds_naniteattack" state_time = 2.5 looping = yes next_state = "" chance = 0 #next_state = "bombard_ds_naniteattack" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "ds_planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "ds_planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "ds_planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "ds_planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "ds_planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "ds_planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "ds_planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "ds_planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "ds_planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+
+	# Electroids
+	state = { name = "bombard_elec_neutron" state_time = 2.5 looping = yes next_state = "" chance = 0 #next_state = "bombard_elec_neutron" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.5 node = "bombardment_location_9" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.2 node = "bombardment_location_18" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "elec_neutron_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+
+	scale = 1.0
+}
