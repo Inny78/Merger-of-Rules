@@ -2831,6 +2831,26 @@ can_enter_system_by_jump = {
 					has_star_flag = al_huge_home_bed
 					# BlueArchive
 					has_star_flag = BA_FE_SYS
+					# Origin Beings
+					has_star_flag = darhmod_seres_home_system
+					has_star_flag = sealed_seres_system
+					has_star_flag = seres_lcluster_spawned
+					has_star_flag = ftl_spawned
+					has_star_flag = su_lu_station_system
+					has_star_flag = su_spawned
+					has_star_flag = god_route_seres_star
+					AND = {
+						merg_has_origin_beings = yes
+						OR = {
+							has_star_flag = vultaumar
+							has_star_flag = yuhtaan
+							has_star_flag = fen_habbanis
+							has_star_flag = irass
+							has_star_flag = cybrex
+							has_star_flag = last_baol_system
+							has_star_flag = Zrocursor
+						}
+					}	
 				}
 			}
 			# Reworked Advanced Ascension

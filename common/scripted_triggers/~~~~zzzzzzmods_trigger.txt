@@ -1752,3 +1752,42 @@ elec_hyperlane_create = {
 		merg_is_isolated_system = yes
 	}
 }
+
+############################### Origin Beings ###############################
+darhmod_seres_digsite_spawn_rules = {
+	has_access_fleet = root.owner
+	OR = {
+		has_owner = no
+		owner = { is_same_value = root.owner }
+	}
+	NOR = {
+		is_same_value = root.solar_system
+		any_system_planet = {
+			is_capital = yes
+			has_planet_flag = precursor_world
+			has_planet_flag = darhmod_seres_colony
+		}
+	}
+	solar_system = { exists = star }
+	any_system_planet = {
+		is_star = no
+		has_anomaly = no
+		is_capital = no
+		NOR = {
+			merg_is_shielded = yes
+			merg_is_gas_giant = yes
+			merg_is_empty_space = yes
+			exists = archaeological_site
+		}
+	}
+	NOT = {
+		any_neighbor_system = {
+			any_system_planet = {
+				OR = {
+					has_planet_flag = precursor_world
+					has_planet_flag = darhmod_seres_colony
+				}
+			}
+		}
+	}
+}

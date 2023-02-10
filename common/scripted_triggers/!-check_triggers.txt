@@ -119,6 +119,9 @@ merg_has_kancolle = {
 # Lithoid Supremacy
 merg_has_lithoid_sup = { has_global_flag = lithoidsupremacy }
 
+# Origin Beings
+merg_has_origin_beings = { has_global_flag = darhmod_precursor_seres }
+
 # Star Wars: Kuat Ancient Empire
 merg_has_kuat = { has_global_flag = install_kuat_mod }
 
