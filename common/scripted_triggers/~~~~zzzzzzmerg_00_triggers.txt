@@ -731,6 +731,12 @@ has_research_building = {
 		has_building = apsr3_building_part3
 		has_building = apsr3_building_part4
 		has_building = apsr15_building_part22
+		#AVB
+		has_building = building_avb_research_lab_4
+		has_building = building_avb_research_lab_5
+		has_building = building_avb_research_lab_6
+		has_building = building_avb_institute_2
+		has_building = building_avb_supercomputer_2
 		# EUTAB
 		has_building = building_institute
 		has_building = building_supercomputer
@@ -807,6 +813,8 @@ has_any_farming_district_or_buildings = {
 		has_building = apsr19_building_part_b1
 		has_building = apsr19_building_part_b2
 		has_building = apsr19_building_part_b3
+		# AVB
+		has_building = building_avb_hydroponics_farm_2
 		# Gigastructures
         giga_has_any_farming_district_or_buildings = yes
 		# Human Fallen Empires
@@ -865,6 +873,8 @@ has_any_generator_district_or_building = {
 		has_building = apsr19_building_part_m1
 		has_building = apsr19_building_part_m2
 		has_building = apsr19_building_part_m3
+		# AVB
+		has_building = building_avb_betharian_power_plant_2
 		# Gigastructures
         giga_has_any_generator_district_or_building = yes
 		# GPM
