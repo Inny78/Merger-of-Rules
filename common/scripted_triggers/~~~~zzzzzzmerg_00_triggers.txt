@@ -78,8 +78,6 @@ habitable_planet_not_urban = {
 		merg_is_gaia = yes
 		# Planetary Diversity
 		is_pd_regular = yes
-		is_pd_ocean = yes
-		is_pd_gaia = yes
 		is_pd_rare = yes
 		is_pd_exotic = yes
 		is_pd_radiotrophic_world = yes
@@ -114,7 +112,7 @@ can_have_habitable_deposits = {
 		merg_is_alpine = yes
 		merg_is_savannah = yes
 		merg_is_gaia_basic = yes
-		merg_is_relic = yes
+		merg_is_relic_world = yes
 		# All These Worlds
 		galactic_diversity_habitable_planet = yes
 		# Planetary Diversity
@@ -183,7 +181,7 @@ is_crisis_faction = {
 		is_country_type = gray_goo
 		is_country_type = awakened_marauders
 		# ACOT
-		is_country_type = original_empire
+		is_country_type = sbtg_stellarborne_empire 
 		# Cruel Conquerers
 		is_cruel_abomination_country_type = yes
 		# Gigastructural Engineering & More
@@ -378,7 +376,7 @@ has_comms_with_alien_empire = {
 			is_country_type = awakened_fallen_empire
 			# ACOT
 			is_progenitor_empires = yes
-			is_country_type = sofe_light_seeker
+			is_country_type = sbtg_light_seeker
 		}
 	}
 }
@@ -396,7 +394,7 @@ has_comms_with_alien_civilization = {
 			is_country_type = awakened_marauders
 			# ACOT
 			is_progenitor_empires = yes
-			is_country_type = sofe_light_seeker
+			is_country_type = sbtg_light_seeker
 			# Scripted Trigger Undercoat
 			has_country_flag = stu_counts_as_civilization_for_comms
 		}
