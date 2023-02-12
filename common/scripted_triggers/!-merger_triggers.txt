@@ -326,6 +326,8 @@ merg_has_cloning_building = {
 		# AOT
 		has_building = building_stellarite_clone_vats
 		has_building = building_phanon_clone_vats
+		# AVB
+		has_building = building_avb_clone_vats_2
 		# Ascension - Biological Module
 		has_building = building_omega_cloning_vats
 		# Civic: Organic Zealots
@@ -341,6 +343,16 @@ merg_has_cloning_building = {
 		has_building = building_ocean_spawning_pool
 		# Wandering Witch: Voyagers
 		has_building = building_dimensional_instrument
+	}
+}
+
+merg_has_clone_army_building = {
+	OR = {
+		has_active_building = building_clone_army_clone_vat
+		# Galactic Imperium Origin
+		has_active_building = building_clone_guard_clone_vat
+		# AVB
+		has_active_building = building_avb_clone_army_clone_vat_2
 	}
 }
 

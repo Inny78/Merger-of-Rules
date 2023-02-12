@@ -104,10 +104,7 @@ has_upgraded_capital = {
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
 				# ZOFE Ascension
-				has_building = building_fe_palace
-				has_building = building_ae_palace
-				has_building = building_lt_palace
-				has_building = building_oe_palace
+				zofeac_capital_buildings = yes
 			}
 		}
 	}
@@ -229,10 +226,7 @@ has_upgraded_capital = {
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
 				# ZOFE Ascension
-				has_building = building_fe_palace
-				has_building = building_ae_palace
-				has_building = building_lt_palace
-				has_building = building_oe_palace
+				zofeac_capital_buildings = yes
 			}
 		}
 	}
@@ -339,10 +333,7 @@ has_major_upgraded_capital = {
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
 				# ZOFE Ascension
-				has_building = building_fe_palace
-				has_building = building_ae_palace
-				has_building = building_lt_palace
-				has_building = building_oe_palace
+				zofeac_capital_buildings = yes
 			}
 		}
 	}
@@ -455,10 +446,7 @@ has_major_upgraded_capital = {
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
 				# ZOFE Ascension
-				has_building = building_fe_palace
-				has_building = building_ae_palace
-				has_building = building_lt_palace
-				has_building = building_oe_palace
+				zofeac_capital_buildings = yes
 			}
 		}
 	}
@@ -565,10 +553,7 @@ has_fully_upgraded_capital = {
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
 				# ZOFE Ascension
-				has_building = building_fe_palace
-				has_building = building_ae_palace
-				has_building = building_lt_palace
-				has_building = building_oe_palace
+				zofeac_capital_buildings = yes
 			}
 		}
 	}
@@ -675,10 +660,7 @@ has_fully_upgraded_capital = {
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
 				# ZOFE Ascension
-				has_building = building_fe_palace
-				has_building = building_ae_palace
-				has_building = building_lt_palace
-				has_building = building_oe_palace
+				zofeac_capital_buildings = yes
 			}
 		}
 	}

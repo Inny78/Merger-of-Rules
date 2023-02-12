@@ -60,6 +60,7 @@ is_civic_materialist = { always = no }
 is_civic_militarist = { always = no }
 is_dictatorial = { always = no }
 is_ecocentric = { always = no }
+is_exile_country = { always = no }
 is_giga_habitat = { always = no }
 is_giga_maginot_world = { always = no }
 is_giga_ringworld = { always = no }
