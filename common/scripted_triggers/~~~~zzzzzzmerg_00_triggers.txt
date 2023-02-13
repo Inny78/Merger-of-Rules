@@ -512,6 +512,11 @@ is_fallen_empire = {
 	OR = {
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
+		# A Deadly Tempest
+		AND = {
+			merg_has_deadly_tempest = yes
+			is_country_type = awakened_gate_builders
+		}
 		# History of the Lost Empire
 		is_country_type = LsE_fallen_empire
 		# SW:KUAT ANCIENT EMPIRE

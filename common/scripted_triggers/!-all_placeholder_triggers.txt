@@ -69,6 +69,7 @@ is_imperial = { always = no }
 is_khan_country_type = { always = no }
 is_KZ_VOY_organic_species = { always = no }
 is_nirvana_empire = { always = no }
+is_organic_zealots = { always = no }
 is_pd_aquatics = { always = no }
 is_pd_arcology = { always = no }
 is_pd_alpine = { always = no }
@@ -110,6 +111,7 @@ is_spy_empire = { always = no }
 is_symbiote = { always = no }
 is_symbiote_of_prevprev = { always = no }
 is_valid_GF_OGAS_subnet = { always = no }
+is_valid_organic_zealots = { always = no }
 is_wg_event_leader = { always = no }
 is_wg_event_limit_ships = { always = no }
 is_ws_system = { always = no }

@@ -312,7 +312,7 @@ can_add_claim = {
 	custom_tooltip = {
 		fail_text = CANNOT_ADD_CLAIM_ORGANIC_ZEALOTS
 		NAND = {
-			root = { has_valid_civic = civic_organic_zealots }
+			root = { is_valid_organic_zealots = yes }
 			exists = owner
 			owner = {
 				NOT = { is_same_species = root }
@@ -386,7 +386,7 @@ can_get_claim_from_lost_system = {
 	custom_tooltip = {
 		fail_text = CANNOT_ADD_CLAIM_ORGANIC_ZEALOTS
 		NAND = {
-			has_valid_civic = civic_organic_zealots
+			is_valid_organic_zealots = yes
 			NOT = { is_same_species = root }
 			is_robot_empire = yes
 		}
@@ -1697,11 +1697,11 @@ can_species_be_assembled = {
 							is_robot_empire = no
 						}
 						has_country_flag = lost_robot_policy_war
-						has_valid_civic = civic_organic_zealots
+						is_valid_organic_zealots = yes
 						AND = {
 							is_subject = yes
 							exists = overlord
-							overlord = { has_valid_civic = civic_organic_zealots }
+							overlord = { is_valid_organic_zealots = yes }
 						}
 					}
 				}
@@ -1721,11 +1721,11 @@ can_species_be_assembled = {
 						has_trait = trait_cybernetic
 						OR = {
 							has_country_flag = lost_robot_policy_war
-							has_valid_civic = civic_organic_zealots
+							is_valid_organic_zealots = yes
 							AND = {
 								is_subject = yes
 								exists = overlord
-								overlord = { has_valid_civic = civic_organic_zealots }
+								overlord = { is_valid_organic_zealots = yes }
 							}
 						}
 					}
@@ -2150,6 +2150,8 @@ can_orbital_bombard = {
 				is_country_type = default_ev
 				# LEX
 				is_country_type = mem_ancestor_guardian
+				# More Events Mod
+				has_country_flag = mem_severance_harvesting_country
 				# Scripted Triggers Undercoat
 				has_country_flag = stu_can_bombard_everyone
 				# Solar Storm
@@ -3429,7 +3431,7 @@ can_build_branch_office_on_planet = {
 		exists = owner
 		owner = {
 			OR = {
-				NOT = { has_civic = civic_organic_zealots }
+				NOT = { is_organic_zealots = no }
 				root = { is_robot_empire = no }
 			}
 		}
