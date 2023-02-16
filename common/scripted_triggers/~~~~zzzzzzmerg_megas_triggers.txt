@@ -5,151 +5,8 @@ has_no_non_gate_megastructure = {
 		has_any_megastructure = no
 		NOR = {
 			has_star_flag = ring_world_built
-			any_system_megastructure = { # exclude gateways
-				OR = {
-					# Merger
-					merg_is_vanilla_type = yes
-					merg_is_hab_type = yes
-					merg_is_ringworld_type = yes
-					merg_is_ancient_empire_type = yes
-					merg_is_aot_type = yes
-					merg_is_acot_type = yes
-					merg_is_azur_type = yes
-					merg_is_fcss_type = yes
-					merg_is_giga_manip_type = yes
-					merg_is_gigas_type = yes
-					merg_is_kuat_type = yes
-					merg_is_lex_type = yes
-					merg_is_thaum_type = yes
-					merg_is_wsg_type = yes
-					merg_is_assault_lily_type = yes
-					# AshArms Aquarius History
-					is_megastructure_type = dyson_swarm
-					is_megastructure_type = adf_mining_station
-					# Cruel Conquerers
-					is_cruel_mega = yes
-					# GPM
-					is_megastructure_type = gpm_mega_shipyard_ruined_precursor
-					is_megastructure_type = gpm_mega_shipyard_restored_precursor
-					# Nyto Species Pack
-					is_megastructure_type = GFnyto_megastructure_collapse_reactor_ruined
-					is_megastructure_type = GFnyto_megastructure_collapse_reactor_restored
-					is_megastructure_type = GFnyto_beacon_weapon_01
-					is_megastructure_type = GFnyto_beacon_weapon_02
-					is_megastructure_type = GFnyto_beacon_weapon_03
-					is_megastructure_type = GFnyto_stions_fortress_base
-					is_megastructure_type = GFnyto_stions_fortress_up
-					# Omega's Stellaris Traditions
-					is_megastructure_type = planet_construction_0
-					is_megastructure_type = machine_assimilate_0
-					# Twinks Atlantean
-					is_megastructure_type = atlantis_oranos_world
-					is_megastructure_type = destruction_atlantis
-					# Twinks Kaldorei
-					is_megastructure_type = highborne_ward
-					is_megastructure_type = kaldorei_systemward
-					# Twinks Sin'dorei
-					is_megastructure_type = arcane_sanctum_0
-					is_megastructure_type = arcane_sanctum_1
-					# Real Space - Planetary Station
-					is_megastructure_type = planet_crack_0
-					is_megastructure_type = planetary_station_0
-					# Empires Expanded
-					is_megastructure_type = tma_core_1
-					is_megastructure_type = tma_core_2
-					is_megastructure_type = tma_core_2_contacted
-					is_megastructure_type = tma_inhibitor_1
-					is_megastructure_type = tma_inhibitor_2
-					# Imperial Projects
-					is_megastructure_type = Biolab_0
-					is_megastructure_type = Biolab_1
-					is_megastructure_type = Biolab_2
-					is_megastructure_type = engineers_guild_0
-					is_megastructure_type = engineers_guild_1
-					is_megastructure_type = engineers_guild_2
-					is_megastructure_type = Throne_0
-					is_megastructure_type = Throne_1
-					is_megastructure_type = Tyanki_incubator_0
-					is_megastructure_type = Tyanki_incubator_1
-					is_megastructure_type = Tyanki_incubator_2
-					# Kancolle
-					is_megastructure_type = kancolle_consumer_goods_factory_0
-					is_megastructure_type = kancolle_consumer_goods_factory_1
-					is_megastructure_type = kancolle_consumer_goods_factory_2
-					is_megastructure_type = kancolle_consumer_goods_factory_3
-					is_megastructure_type = kancolle_consumer_goods_factory_4
-					is_megastructure_type = kancolle_dyson_bubble
-					is_megastructure_type = kancolle_minerals_factory
-					is_megastructure_type = kancolle_time_freeze_machine_00
-					is_megastructure_type = kancolle_time_freeze_machine_01
-					is_megastructure_type = kancolle_time_freeze_machine_02
-					is_megastructure_type = kancolle_time_freeze_machine_03
-					is_megastructure_type = kancolle_time_freeze_machine_start
-					is_megastructure_type = kancolle_wu_navy_factory_0
-					is_megastructure_type = kancolle_wu_navy_factory_1
-					# Nanite Machines & Distant Stars Overhaul
-					is_megastructure_type = nanite_factory_station_0
-					# Some Events of Outside Cluster
-					is_megastructure_type = nep_station_whitegoo_mega
-					is_megastructure_type = nep_sealphantom_nexus
-					is_megastructure_type = nep_sealportal_nexus
-					# Star Wars: UnknownWorld Shipgirls Story
-					is_megastructure_type = swsg_mining_station
-					is_megastructure_type = swgs_star_hub
-					# Unique Ascension Perks
-					is_megastructure_type = utopia_site
-					is_megastructure_type = utopia_1
-					is_megastructure_type = utopia_2
-					is_megastructure_type = utopia_3
-					is_megastructure_type = utopia_4
-					is_megastructure_type = utopia_5
-					is_megastructure_type = nanite_factory_site
-					is_megastructure_type = nanite_factory
-					# Sensible Late Game Techs
-					is_megastructure_type = slgt_central_mining_station
-					# NSC
-					is_megastructure_type = nsc_strategic_resource_factory_0
-					is_megastructure_type = nsc_strategic_resource_factory_1
-					is_megastructure_type = nsc_hospital_0
-					is_megastructure_type = nsc_hospital_1
-					is_megastructure_type = nsc_hospital_2
-					is_megastructure_type = nsc_hospital_3
-					is_megastructure_type = nsc_galactic_mall_0
-					is_megastructure_type = nsc_galactic_mall_1
-					# Blue Archive
-					is_megastructure_type = BA_Mega_pyroxenes_base_0
-					is_megastructure_type = BA_Mega_pyroxenes_base_1
-					is_megastructure_type = BA_Mega_pyroxenes_base_2
-					is_megastructure_type = BA_Mega_pyroxenes_base_3
-					is_megastructure_type = BA_Mega_pyroxenes_base_4
-					is_megastructure_type = BA_Mega_keystone_base_0
-					is_megastructure_type = BA_Mega_keystone_base_1
-					is_megastructure_type = BA_Mega_keystone_base_2
-					is_megastructure_type = BA_Mega_keystone_base_3
-					# Scripted Trigger Undercoat
-					has_megastructure_flag = stu_is_gate
-					# Voyage to Eternity
-					is_megastructure_type = mega_KZ_VOY_hiawatha_fleet_yards_01
-					is_megastructure_type = mega_KZ_VOY_hiawatha_fleet_yards_02
-					is_megastructure_type = mega_KZ_VOY_hiawatha_fleet_yards_03
-					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_00
-					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_01
-					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_02
-					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_03
-					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_04
-					is_megastructure_type = mega_KZ_VOY_hyperstructure_fornax_05
-					# Wandering Witch: Voyagers
-					is_megastructure_type = caroline_orb_0
-					is_megastructure_type = caroline_orb_1
-					is_megastructure_type = caroline_orb_2
-					is_megastructure_type = caroline_orb_3
-					is_megastructure_type = caroline_orb_4
-					is_megastructure_type = caroline_orb_ul2
-					is_megastructure_type = caroline_orb_ul3
-					is_megastructure_type = caroline_orb_ul4
-					is_megastructure_type = caroline_orb_ul5
-					is_megastructure_type = carolin_orb_permanently_ruined
-				}
+			any_system_megastructure = {
+				NOT = { merg_is_gate_mega = yes } # exclude gateways
 			}
 		}
 	}
@@ -178,40 +35,27 @@ has_any_megastructure_in_empire = {
 			# AshArms Aquarius History
 			has_megastructure = dyson_swarm
 			has_megastructure = adf_mining_station
+			# Blue Archive
+			has_megastructure = BA_Mega_pyroxenes_base_0
+			has_megastructure = BA_Mega_pyroxenes_base_1
+			has_megastructure = BA_Mega_pyroxenes_base_2
+			has_megastructure = BA_Mega_pyroxenes_base_3
+			has_megastructure = BA_Mega_pyroxenes_base_4
+			has_megastructure = BA_Mega_keystone_base_0
+			has_megastructure = BA_Mega_keystone_base_1
+			has_megastructure = BA_Mega_keystone_base_2
+			has_megastructure = BA_Mega_keystone_base_3
 			# Cruel Conquerers
 			is_cruel_mega = yes
-			# GPM
-			has_megastructure = gpm_mega_shipyard_ruined_precursor
-			has_megastructure = gpm_mega_shipyard_restored_precursor
-			# Nyto Species Pack
-			has_megastructure = GFnyto_megastructure_collapse_reactor_ruined
-			has_megastructure = GFnyto_megastructure_collapse_reactor_restored
-			has_megastructure = GFnyto_beacon_weapon_01
-			has_megastructure = GFnyto_beacon_weapon_02
-			has_megastructure = GFnyto_beacon_weapon_03
-			has_megastructure = GFnyto_stions_fortress_base
-			has_megastructure = GFnyto_stions_fortress_up
-			# Omega's Stellaris Traditions
-			has_megastructure = planet_construction_0
-			has_megastructure = machine_assimilate_0
-			# Twinks Atlantean
-			has_megastructure = atlantis_oranos_world
-			has_megastructure = destruction_atlantis
-			# Twinks Kaldorei
-			has_megastructure = highborne_ward
-			has_megastructure = kaldorei_systemward
-			# Twinks Sin'dorei
-			has_megastructure = arcane_sanctum_0
-			has_megastructure = arcane_sanctum_1
-			# Real Space - Planetary Station
-			has_megastructure = planet_crack_0
-			has_megastructure = planetary_station_0
 			# Empires Expanded
 			has_megastructure = tma_core_1
 			has_megastructure = tma_core_2
 			has_megastructure = tma_core_2_contacted
 			has_megastructure = tma_inhibitor_1
 			has_megastructure = tma_inhibitor_2
+			# GPM
+			has_megastructure = gpm_mega_shipyard_ruined_precursor
+			has_megastructure = gpm_mega_shipyard_restored_precursor
 			# Imperial Projects
 			has_megastructure = Biolab_0
 			has_megastructure = Biolab_1
@@ -241,24 +85,6 @@ has_any_megastructure_in_empire = {
 			has_megastructure = kancolle_wu_navy_factory_1
 			# Nanite Machines & Distant Stars Overhaul
 			has_megastructure = nanite_factory_station_0
-			# Some Events of Outside Cluster
-			has_megastructure = nep_station_whitegoo_mega
-			has_megastructure = nep_sealphantom_nexus
-			has_megastructure = nep_sealportal_nexus
-			# Star Wars: UnknownWorld Shipgirls Story
-			has_megastructure = swsg_mining_station
-			has_megastructure = swgs_star_hub
-			# Unique Ascension Perks
-			has_megastructure = utopia_site
-			has_megastructure = utopia_1
-			has_megastructure = utopia_2
-			has_megastructure = utopia_3
-			has_megastructure = utopia_4
-			has_megastructure = utopia_5
-			has_megastructure = nanite_factory_site
-			has_megastructure = nanite_factory
-			# Sensible Late Game Techs
-			has_megastructure = slgt_central_mining_station
 			# NSC
 			has_megastructure = nsc_strategic_resource_factory_0
 			has_megastructure = nsc_strategic_resource_factory_1
@@ -268,18 +94,49 @@ has_any_megastructure_in_empire = {
 			has_megastructure = nsc_hospital_3
 			has_megastructure = nsc_galactic_mall_0
 			has_megastructure = nsc_galactic_mall_1
-			# Blue Archive
-			has_megastructure = BA_Mega_pyroxenes_base_0
-			has_megastructure = BA_Mega_pyroxenes_base_1
-			has_megastructure = BA_Mega_pyroxenes_base_2
-			has_megastructure = BA_Mega_pyroxenes_base_3
-			has_megastructure = BA_Mega_pyroxenes_base_4
-			has_megastructure = BA_Mega_keystone_base_0
-			has_megastructure = BA_Mega_keystone_base_1
-			has_megastructure = BA_Mega_keystone_base_2
-			has_megastructure = BA_Mega_keystone_base_3
+			# Nyto Species Pack
+			has_megastructure = GFnyto_megastructure_collapse_reactor_ruined
+			has_megastructure = GFnyto_megastructure_collapse_reactor_restored
+			has_megastructure = GFnyto_beacon_weapon_01
+			has_megastructure = GFnyto_beacon_weapon_02
+			has_megastructure = GFnyto_beacon_weapon_03
+			has_megastructure = GFnyto_stions_fortress_base
+			has_megastructure = GFnyto_stions_fortress_up
+			# Omega's Stellaris Traditions
+			has_megastructure = planet_construction_0
+			has_megastructure = machine_assimilate_0
+			# Twinks Atlantean
+			has_megastructure = atlantis_oranos_world
+			has_megastructure = destruction_atlantis
+			# Twinks Kaldorei
+			has_megastructure = highborne_ward
+			has_megastructure = kaldorei_systemward
+			# Twinks Sin'dorei
+			has_megastructure = arcane_sanctum_0
+			has_megastructure = arcane_sanctum_1
+			# Real Space - Planetary Station
+			has_megastructure = planet_crack_0
+			has_megastructure = planetary_station_0
+			# Some Events of Outside Cluster
+			has_megastructure = nep_station_whitegoo_mega
+			has_megastructure = nep_sealphantom_nexus
+			has_megastructure = nep_sealportal_nexus
+			# Star Wars: UnknownWorld Shipgirls Story
+			has_megastructure = swsg_mining_station
+			has_megastructure = swgs_star_hub
+			# Sensible Late Game Techs
+			has_megastructure = slgt_central_mining_station
 			# Scripted Trigger Undercoat
 			any_system_megastructure = { has_megastructure_flag = stu_structure_can_teach_megaengineering }
+			# Unique Ascension Perks
+			has_megastructure = utopia_site
+			has_megastructure = utopia_1
+			has_megastructure = utopia_2
+			has_megastructure = utopia_3
+			has_megastructure = utopia_4
+			has_megastructure = utopia_5
+			has_megastructure = nanite_factory_site
+			has_megastructure = nanite_factory
 			# Voyage to Eternity
 			has_megastructure = mega_KZ_VOY_hiawatha_fleet_yards_01
 			has_megastructure = mega_KZ_VOY_hiawatha_fleet_yards_02
