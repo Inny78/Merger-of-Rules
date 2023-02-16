@@ -1310,7 +1310,7 @@ merg_is_gate_mega = {
 		is_megastructure_type = Dgate_base
 		# Voyage to Eternity
 		is_megastructure_type = KZ_VOY_terran_ancient_gateway
-		# 
+		# Wandering Witch: Voyagers
 		is_megastructure_type = estelle_gate_0
 		is_megastructure_type = estelle_gate_1
 		is_megastructure_type = estelle_gate_2
