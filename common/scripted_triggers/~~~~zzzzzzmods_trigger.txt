@@ -112,18 +112,12 @@ giga_habitable_structure = {
 		merg_is_habitat = yes
 		merg_is_hab_ringworld = yes
 		# Gigastructural Engineering & More
-		is_planet_class = pc_habitable_gas_giant
-		is_planet_class = pc_interstellar_habitat
-		is_planet_class = pc_birch
-		is_planet_class = pc_void_birch
+		is_giga_habitable_gas_giant = yes
+		giga_is_birch_world = yes
+		giga_is_alderson_disk = yes
 		is_planet_class = pc_virtual_reality
 		is_planet_class = pc_virtual_industry
 		is_planet_class = pc_virtual_stellar_industry
-		is_planet_class = pc_alderson_slice_gaia
-		is_planet_class = pc_alderson_slice_pc
-		is_planet_class = pc_alderson_slice_ecu
-		is_planet_class = pc_alderson_slice_hive
-		is_planet_class = pc_alderson_slice_machine
 		is_planet_class = pc_pouchkinn_black_hole
 		is_planet_class = pc_flat_world
 		is_planet_class = pc_giga_frameworld
@@ -211,12 +205,8 @@ ndb_can_target_system = {
 					owner = { is_same_value = root }
 				}
 				giga_is_birch_world = yes
+				giga_is_alderson_disk = yes
 				is_planet_class = pc_squareworld_habitable
-				is_planet_class = pc_alderson_slice_ecu
-				is_planet_class = pc_alderson_slice_machine
-				is_planet_class = pc_alderson_slice_gaia
-				is_planet_class = pc_alderson_slice_pc
-				is_planet_class = pc_alderson_slice_hive
 				is_planet_class = pc_ai
 				has_planet_flag = cant_build_here
 				has_planet_flag = cant_target_this_planet
@@ -238,11 +228,7 @@ ndb_can_target_planet = {
 		}
 		is_star = yes
 		giga_is_birch_world = yes
-		is_planet_class = pc_alderson_slice_ecu
-		is_planet_class = pc_alderson_slice_hive
-		is_planet_class = pc_alderson_slice_machine
-		is_planet_class = pc_alderson_slice_gaia
-		is_planet_class = pc_alderson_slice_pc
+		giga_is_alderson_disk = yes
 		is_planet_class = pc_ai
 		is_planet_class = pc_squareworld_habitable
 		has_planet_flag = cant_build_here
@@ -357,7 +343,17 @@ giga_is_special_country_type = {
 		is_country_type = primitive
 	}
 }
-
+giga_country_uses_supertensiles = {
+	OR = {
+		merg_is_default_empire = yes
+		merg_is_fallen_empire = yes
+		merg_is_awakened_fe = yes
+		# Scipted Triggers Undercoat
+		has_country_flag = is_empire
+		# fairly expensive check as it uses an any_country
+		giga_is_playable_country = yes
+	}
+}
 ############################### Zenith of the Fallen Empires ###############################
 # Overwriting this for ZOFE and comp mods
 is_zofe_compatible = {

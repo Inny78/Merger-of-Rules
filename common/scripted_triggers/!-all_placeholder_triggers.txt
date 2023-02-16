@@ -9,6 +9,8 @@ compound_cluster = { always = no }
 everchanging_system = { always = no }
 FW_trgr_ldr_SP = { always = no }
 galactic_diversity_habitable_planet = { always = no }
+giga_is_alderson_disk = { always = no }
+giga_is_birch_world = { always = no }
 giga_uses_habitat_capitals = { always = no }
 giga_uses_industrial_district = { always = no }
 giga_has_any_industrial_district = { always = no }
@@ -19,6 +21,7 @@ giga_has_artificial_preference_trait = { always = no }
 giga_has_research_building = { always = no }
 giga_is_birch_world = { always = no }
 giga_is_black_hole = { always = no }
+giga_is_playable_country = { always = no }
 giga_is_unscrappable = { always = no }
 giga_is_vat_leviathan = { always = no }
 giga_is_vat_normal = { always = no }
@@ -35,6 +38,7 @@ has_gigastructures = { always = no }
 has_mod_reproductive_tech_and_politics = { always = no }
 has_more_authorities_triggers = { always = no }
 has_planetary_diversity = { always = no }
+has_planetary_diversity_planetaryhabitats = { always = no }
 has_reproductive_politics = { always = no }
 has_specialist_subject_leader_trait_maid = { always = no }
 has_str_genemodding_tech = { always = no }
@@ -61,6 +65,7 @@ is_civic_militarist = { always = no }
 is_dictatorial = { always = no }
 is_ecocentric = { always = no }
 is_exile_country = { always = no }
+is_giga_habitable_gas_giant = { always = no }
 is_giga_habitat = { always = no }
 is_giga_maginot_world = { always = no }
 is_giga_ringworld = { always = no }

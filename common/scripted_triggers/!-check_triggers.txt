@@ -144,7 +144,7 @@ merg_has_nirvana_project = { has_global_flag = nirvana_empire_start }
 merg_has_planetary_diversity = { OR = { has_global_flag = planetarydiversity has_planetary_diversity = yes } }
 
 # Planetary Diversity - Planetary Habitats
-merg_has_pd_planetary_habitats = { has_global_flag = planetarydiversityphabs }
+merg_has_pd_planetary_habitats = { OR = { has_global_flag = planetarydiversityphabs has_planetary_diversity_planetaryhabitats = yes } }
 
 # Powerful & Realistic Orbital Bombardments
 merg_has_power_bombard = { has_global_flag = prob_global_flag }
