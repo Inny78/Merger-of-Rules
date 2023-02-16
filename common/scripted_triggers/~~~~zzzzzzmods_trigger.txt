@@ -1116,10 +1116,15 @@ is_planet_city = {
 	merg_is_arcology = yes
 }
 planet_gives_aquatics_bonus = {
+	optimize_memory
 	OR = {
 		merg_is_ocean = yes
 		has_modifier = flooded_habitat
 	}
+}
+is_shielded = {
+	optimize_memory
+	merg_is_shielded = yes
 }
 
 ############################### Expanded Events ###############################
