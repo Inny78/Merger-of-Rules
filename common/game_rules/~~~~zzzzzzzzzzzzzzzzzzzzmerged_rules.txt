@@ -3958,7 +3958,10 @@ can_be_part_of_galactic_empire = {
 	}
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
-		is_homicidal = no
+		NOR = {
+			is_homicidal = yes
+			has_origin = origin_chosen_of_the_shroud
+		}
 	}
 	custom_tooltip = {
 		fail_text = "community_declared_crisis_failtext"

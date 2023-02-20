@@ -21,6 +21,7 @@ giga_has_artificial_preference_trait = { always = no }
 giga_has_research_building = { always = no }
 giga_is_birch_world = { always = no }
 giga_is_black_hole = { always = no }
+giga_is_core_system = { always = no }
 giga_is_playable_country = { always = no }
 giga_is_unscrappable = { always = no }
 giga_is_vat_leviathan = { always = no }

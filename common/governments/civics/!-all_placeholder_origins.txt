@@ -1,5 +1,6 @@
 # Dummy origins - to be overwritten by their respective mods.
 # Irony this is a placeholder file please ignore it
+origin_chosen_of_the_shroud = { is_origin = yes potential = { always = no } }
 origin_clones = { is_origin = yes potential = { always = no } }
 origin_ev_both_choosen = { is_origin = yes potential = { always = no } }
 origin_garbage_princesses = { is_origin = yes potential = { always = no } }
