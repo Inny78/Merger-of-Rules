@@ -92,6 +92,8 @@ has_upgraded_capital = {
 				has_building = building_phanon_control_center
 				# AVB
 				has_building = building_avb_hab_capital_3
+				# Dawn of the Republic
+				has_building = building_galactic_senate
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
@@ -201,6 +203,8 @@ has_upgraded_capital = {
 				# Azur Lane Stellaris DlC
 				has_building = azur_building_mind_capital
 				has_building = azur_building_mind_net_capital
+				# Dawn of the Republic
+				has_building = building_galactic_senate
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_major_capital
 				# Nirvana Empire Project
@@ -321,6 +325,8 @@ has_major_upgraded_capital = {
 				has_building = building_phanon_palace
 				# AVB
 				has_building = building_avb_hab_capital_3
+				# Dawn of the Republic
+				has_building = building_galactic_senate
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
@@ -427,6 +433,8 @@ has_major_upgraded_capital = {
 				# Azur Lane Stellaris DLC
 				has_building = azur_building_mind_capital
 				has_building = azur_building_mind_net_capital
+				# Dawn of the Republic
+				has_building = building_galactic_senate
 				# galacot
 				has_building = building_dm_galactic_capital
                	has_building = building_ae_galactic_capital
@@ -541,6 +549,8 @@ has_fully_upgraded_capital = {
 				has_building = building_phanon_control_center
 				# AVB
 				has_building = building_avb_hab_capital_3
+				# Dawn of the Republic
+				has_building = building_galactic_senate
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
@@ -641,6 +651,8 @@ has_fully_upgraded_capital = {
 				# Azur Lane Stellaris DLC
 				has_building = azur_building_mind_capital
 				has_building = azur_building_mind_net_capital
+				# Dawn of the Republic
+				has_building = building_galactic_senate
 				# galacot
 				has_building = building_dm_galactic_capital
    	            has_building = building_ae_galactic_capital

@@ -4317,7 +4317,7 @@ can_destroy_planet_with_PLANET_KILLER_SLUMBER = {
 	custom_tooltip = {
 		fail_text = is_not_hostile
 		OR = {
-			planet_is_hostile_or_crisis = yes
+			merg_planet_is_hostile_or_crisis = yes
 			AND = {
 				exists = owner
 				owner = { is_country_type = primitive }
@@ -4374,7 +4374,7 @@ can_destroy_planet_with_PLANET_KILLER_PRISCILLA = {
 	custom_tooltip = {
 		fail_text = is_not_hostile
 		OR = {
-			planet_is_hostile_or_crisis = yes
+			merg_planet_is_hostile_or_crisis = yes
 			AND = {
 				exists = owner
 				owner = { is_country_type = primitive }
@@ -4486,6 +4486,9 @@ is_a_habitable_planet_megastructure = {
 	OR = {
 		colonizable_planet = yes
 		habitable_structure = yes
+		# ACOT
+		is_acot_fractured_planet_class = yes
+		is_acot_awesome_planet_class = yes
 		# Expanded Gestalts: Forgotten Queens
 		is_planet_class = pc_infested
 		is_planet_class = pc_matryoshka
