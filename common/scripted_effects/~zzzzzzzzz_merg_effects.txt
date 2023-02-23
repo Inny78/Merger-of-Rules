@@ -57,6 +57,6 @@ remove_capital_building = {
 		building_ae_palace = { remove_building = building_ae_palace }
 		building_lt_palace = { remove_building = building_lt_palace }
 		building_oe_palace = { remove_building = building_oe_palace }
-		building_le_origin_palace = { remove_building = building_oe_palace }
+		building_le_origin_palace = { remove_building = building_le_origin_palace }
 	}
 }
