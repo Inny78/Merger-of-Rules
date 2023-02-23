@@ -2,6 +2,10 @@
 
 has_upgraded_capital = {
 	if = {
+		limit = { has_modifier = penal_colony }
+		has_upgraded_penal_capital = yes
+	}
+	else_if = {
 		limit = { has_modifier = resort_colony }
 		custom_tooltip = {
 			fail_text = "requires_building_resort_capital"
@@ -238,6 +242,10 @@ has_upgraded_capital = {
 
 has_major_upgraded_capital = {
 	if = {
+		limit = { has_modifier = penal_colony }
+		has_major_upgraded_penal_capital = yes
+	}
+	else_if = {
 		limit = { has_modifier = resort_colony }
 		custom_tooltip = {
 			fail_text = "requires_building_resort_major_capital"
@@ -462,6 +470,10 @@ has_major_upgraded_capital = {
 
 has_fully_upgraded_capital = {
 	if = {
+		limit = { has_modifier = penal_colony }
+		has_fully_upgraded_penal_capital = yes
+	}
+	else_if = {
 		limit = { has_modifier = resort_colony }
 		custom_tooltip = {
 			fail_text = "requires_building_resort_major_capital"

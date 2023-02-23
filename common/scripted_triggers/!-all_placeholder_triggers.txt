@@ -46,6 +46,9 @@ has_planetary_diversity_planetaryhabitats = { always = no }
 has_reproductive_politics = { always = no }
 has_specialist_subject_leader_trait_maid = { always = no }
 has_str_genemodding_tech = { always = no }
+has_fully_upgraded_penal_capital = { always = no }
+has_major_upgraded_penal_capital = { always = no }
+has_upgraded_penal_capital = { always = no }
 has_wg_traits = { always = no }
 has_wsg_genemodding_tech = { always = no }
 has_zofe_mc = { always = no }
