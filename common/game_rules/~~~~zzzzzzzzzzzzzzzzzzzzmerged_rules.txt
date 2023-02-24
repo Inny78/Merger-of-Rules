@@ -3460,6 +3460,8 @@ can_build_branch_office_on_planet = {
 					has_authority = auth_kancolle
 					# Voyage to Eternity
 					KZ_VOY_can_build_branch_offices = yes
+					# Warship Girls R And MIST Species
+					has_civic = civic_sh_criminal_syndicate
 					# ZOFE Megacorp
 					AND = {
 						is_zofe_country = yes
@@ -3477,12 +3479,7 @@ can_build_branch_office_on_planet = {
 			# Warship Girls R And MIST Species
 			AND = {
 				owner = { has_country_flag = lose_wg_shop_war }
-				root = {
-					OR = {
-						has_country_flag = pantsu_shop_origin
-						has_valid_civic = civic_sh_criminal_syndicate
-					}
-				}
+				root = { has_country_flag = pantsu_shop_origin }
 			}
 			# Azur Lane Stellaris DLC
 			owner = {
