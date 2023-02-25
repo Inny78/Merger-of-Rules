@@ -320,6 +320,17 @@ can_add_claim = {
 			}
 		}
 	}
+	custom_tooltip = { # organic zealots don't need to claim system from other non-OZ homicidals
+		fail_text = CANNOT_ADD_CLAIM_THEY_THREAT
+		NAND = {
+			exists = owner
+			owner = {
+				is_homicidal = yes
+				is_valid_organic_zealots = no
+			}
+			root = { is_valid_organic_zealots = yes }
+		}
+	}
 }
 
 # Root = taker country

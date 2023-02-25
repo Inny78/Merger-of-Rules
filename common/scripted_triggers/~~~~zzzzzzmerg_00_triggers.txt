@@ -16,11 +16,12 @@ uninhabitable_regular_planet = {
 colonizable_planet = {
 	optimize_memory
 	OR = {
-		is_planet_class = pc_relic
+		merg_is_relic_world = yes
 		merg_is_arcology = yes
 		merg_is_nuked = yes
 		merg_is_hive_world = yes
 		merg_is_machine_world = yes
+		merg_is_shroud_habitable = yes
 		habitable_structure = yes
 		habitable_planet = yes
 		is_artificial = yes
@@ -28,11 +29,9 @@ colonizable_planet = {
 		is_acot_fractured_planet_class = yes
 		is_acot_awesome_planet_class = yes
 		# Planetary Diversity
-		is_planet_class = pc_pdshroud
 		is_pd_machine = yes
 		is_pd_planetary_megaproject = yes
 		is_pd_nuked = yes
-		is_pd_radiotrophic_world = yes
 		# SW:UnknownWorld Shipgirls Story
 		is_planet_class = pc_swgs_engineer
 		is_planet_class = pc_swgs_engineer_ringworld_habitable
@@ -77,7 +76,6 @@ habitable_planet_not_urban = {
 		merg_is_savannah = yes
 		merg_is_gaia = yes
 		# Planetary Diversity
-		is_pd_regular = yes
 		is_pd_rare = yes
 		is_pd_exotic = yes
 		is_pd_radiotrophic_world = yes
@@ -166,7 +164,7 @@ allows_purge = {
 		# Electroids
 		has_valid_civic = civic_elec_stellar_devourers
 		# Civic: Organic Zealots
-		has_valid_civic = civic_organic_zealots
+		is_valid_organic_zealots = yes
 	}	
 }
 
@@ -429,7 +427,7 @@ has_total_war_cb = {
 				is_progenitor_empires = yes
 				# Civic: Organic Zealots
 				AND = {
-					has_valid_civic = civic_organic_zealots
+					is_valid_organic_zealots = yes
 					from = {
 						OR = {
 							is_robot_empire = yes
