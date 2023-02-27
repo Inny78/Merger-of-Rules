@@ -354,6 +354,36 @@ giga_country_uses_supertensiles = {
 		giga_is_playable_country = yes
 	}
 }
+hyperlane_eligible = {
+    NOR = {
+        is_same_value = prev
+        has_hyperlane_to = prev
+        has_star_flag = has_new_hyperlane
+        has_star_flag = giga_grox_system
+		merg_is_isolated_system = yes
+		has_star_flag = darkspace_void_control
+		giga_is_core_system = yes
+		cohesive_system = yes
+		compound_cluster = yes
+		annihilator_system = yes
+		urmazin_system = yes
+	}
+}
+galactic_core_hyperlane_eligible = {
+	giga_is_core_system = yes
+	NOR = {
+		is_same_value = prev
+		has_hyperlane_to = prev
+		has_star_flag = has_new_hyperlane
+		has_star_flag = giga_grox_system
+		cohesive_system = yes
+		compound_cluster = yes
+		annihilator_system = yes
+		urmazin_system = yes
+		merg_is_isolated_system = yes
+		has_star_flag = darkspace_void_control
+	}
+}
 ############################### Zenith of the Fallen Empires ###############################
 # Overwriting this for ZOFE and comp mods
 is_zofe_compatible = {
@@ -860,6 +890,11 @@ ds_hyperlane_create = {
 		is_same_value = prev
 		has_hyperlane_to = prev
 		merg_is_isolated_system = yes
+		giga_is_core_system = yes
+		cohesive_system = yes
+		compound_cluster = yes
+		annihilator_system = yes
+		urmazin_system = yes
 	}
 }
 
@@ -1751,6 +1786,12 @@ elec_hyperlane_create = {
 		is_same_value = prev
 		has_hyperlane_to = prev
 		merg_is_isolated_system = yes
+		has_star_flag = darkspace_void_control
+		giga_is_core_system = yes
+		cohesive_system = yes
+		compound_cluster = yes
+		annihilator_system = yes
+		urmazin_system = yes
 	}
 }
 
