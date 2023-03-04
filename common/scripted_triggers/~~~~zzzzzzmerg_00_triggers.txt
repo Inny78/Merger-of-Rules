@@ -7,9 +7,7 @@ uninhabitable_regular_planet = {
 		merg_is_toxic = yes
 		merg_is_frozen = yes
 		# All these worlds
-		is_planet_class = orbit_water_panthalassic
-		is_planet_class = orbit_ammonia_panthalassic
-		is_planet_class = orbit_methane_panthalassic
+		is_submerged = yes
 	}
 }
 
