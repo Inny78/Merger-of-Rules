@@ -738,6 +738,9 @@ has_research_building = {
 		has_building = building_avb_supercomputer_2
 		# EUTAB
 		eutab_has_research_building = yes
+		# Extra Districts
+		#Extra Districts
+		ED_has_research_district = yes
 		# Gigastructural Engineering & More
 		giga_has_research_building = yes
 		# Human Fallen Empires
@@ -748,6 +751,12 @@ has_research_building = {
 		has_building = building_kancolle_yubari_research3
 		# Planetary Diversity
 		has_building = building_storm_lab
+		has_district = district_pdhab_science
+		has_district = district_arcology_research_complex
+		has_district = district_machine_research_district
+		has_district = district_bioforge_brain
+		has_district = district_archive_science
+		has_district = district_scrapyard_recyclers
 		# Plentiful Traditions
 		has_building = building_plentiful_traditions_university_of_wisdom
 		has_building = building_plentiful_traditions_cybernetics_facility
@@ -763,6 +772,8 @@ has_any_industry_district = {
         has_district = district_rw_industrial
         has_district = district_arcology_arms_industry
         has_district = district_arcology_civilian_industry
+		# Extra Districts
+		ED_has_industry_district = yes
 		# Gigastructures
         giga_has_any_industrial_district = yes
 		# GPM
@@ -815,6 +826,8 @@ has_any_farming_district_or_buildings = {
 		has_building = building_avb_hydroponics_farm_2
 		# EUTAB
 		eutab_has_farming_building = yes
+		# Extra Districts
+		ED_has_farming_district = yes
 		# Gigastructures
         giga_has_any_farming_district_or_buildings = yes
 		# Human Fallen Empires
@@ -840,6 +853,8 @@ has_any_mining_district = {
         has_district = district_mining
         has_district = district_hab_mining
         has_district = district_mining_uncapped
+		# Extra Districts
+		ED_has_mining_district = yes
 		# Gigastructures
         giga_has_any_mining_district = yes
 		# Planetary Diversity
@@ -879,6 +894,8 @@ has_any_generator_district_or_building = {
 		has_building = building_avb_betharian_power_plant_2
 		# EUTAB
 		eutab_has_generator_building = yes
+		# Extra Districts
+		ED_has_generator_district = yes
 		# Gigastructures
         giga_has_any_generator_district_or_building = yes
 		# GPM
