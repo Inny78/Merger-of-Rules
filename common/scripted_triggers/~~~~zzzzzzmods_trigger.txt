@@ -354,6 +354,17 @@ giga_country_uses_supertensiles = {
 		giga_is_playable_country = yes
 	}
 }
+# 3.7
+giga_compat_hyperlane_exclude = {
+	OR = {
+		has_star_flag = giga_no_lanes
+		# Darkspace
+		has_star_flag = darkspace_void_control
+		# Merger of Rules
+		merg_is_isolated_system = yes
+	}
+}
+# soon obsolete
 hyperlane_eligible = {
     NOR = {
         is_same_value = prev
@@ -775,7 +786,6 @@ ag_is_special_constructable_shipyard = {
 				has_starbase_size = ag_gamma_station_hostile
 				has_starbase_size = ag_gamma_station_0
 				has_starbase_size = ag_gamma_station_1
-
 				has_starbase_size = swfo_supremacy
 				has_starbase_size = exe_megastructure_starbase
 			} }
@@ -889,6 +899,25 @@ ds_hyperlane_create = {
 	NOR = {
 		is_same_value = prev
 		has_hyperlane_to = prev
+		has_star_flag = ds_se_system_fixed
+		has_star_flag = ds_galactic_core
+		has_star_flag = empire_home_system
+		has_star_flag = marauder_system
+		has_star_flag = marauder_capital_1
+		has_star_flag = empire_cluster
+		has_star_flag = fallen_shrouded
+		has_star_flag = fallen_shielded_1
+		has_star_flag = fallen_shielded_2
+		has_star_flag = fallen_shielded_3
+		has_star_flag = holy_system_1
+		has_star_flag = holy_system_2
+		has_star_flag = holy_system_3
+		has_star_flag = holy_system_4
+		has_star_flag = holy_system_5
+		has_star_flag = fe_xeno_zoo	
+		has_star_flag = fallen_shield_world
+		has_star_flag = fallen_empire_world
+		has_star_flag = surveillance_supercomputer_system
 		merg_is_isolated_system = yes
 		giga_is_core_system = yes
 		cohesive_system = yes
@@ -1125,19 +1154,15 @@ is_terraforming_candidate = {
 		has_modifier = terraforming_candidate
 		has_modifier = toxic_terraforming_candidate
 		has_modifier = frozen_terraforming_candidate
-		# has_modifier = terraforming_candidate_precursor
 	}
 }
 gpm_has_required_terraform_modifier = {
 	optimize_memory
-	# OR = {
-		is_terraforming_candidate = yes
-		NOT = { has_planet_flag = gpm_solidified_planet_core }
-		# has_modifier = terraforming_candidate_precursor
-	# }
+	is_terraforming_candidate = yes
+	NOT = { has_planet_flag = gpm_solidified_planet_core }
 }
 
-# Scripted Trigger Undercoat
+############################### Scripted Trigger Undercoat ###############################
 is_empire = {
 	optimize_memory
 	merg_is_standard_empire = yes

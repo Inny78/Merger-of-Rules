@@ -30,6 +30,7 @@ civic_machine_cult = { potential = { always = no } }
 civic_machine_cult_corpo = { potential = { always = no } }
 civic_machine_emotions = { potential = { always = no } }
 civic_machine_replicators = { potential = { always = no } }
+civic_machine_trading = { potential = { always = no } }
 civic_megastore = { potential = { always = no } }
 civic_memorialist_corp = { potential = { always = no } }
 civic_mutualistic_behavior = { potential = { always = no } }

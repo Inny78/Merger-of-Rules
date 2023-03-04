@@ -1204,6 +1204,8 @@ merg_is_gate_mega = {
 		is_megastructure_type = Transwarp_hub_3
 		is_megastructure_type = Transwarp_hub_4
 		is_megastructure_type = Transwarp_hub_5
+		# Blue Archive
+		is_megastructure_type = Dgate_base
 		# Darkspace
 		is_megastructure_type = ancient_relay_0
 		is_megastructure_type = ancient_relay_final
@@ -1306,8 +1308,6 @@ merg_is_gate_mega = {
 		is_megastructure_type = TACgate_system_01_C
 		is_megastructure_type = TAC_gateway_control_01
 		is_megastructure_type = TAC_gateway_control_02
-		# Blue Archive
-		is_megastructure_type = Dgate_base
 		# Voyage to Eternity
 		is_megastructure_type = KZ_VOY_terran_ancient_gateway
 		# Wandering Witch: Voyagers
