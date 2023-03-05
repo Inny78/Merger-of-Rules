@@ -331,6 +331,7 @@ is_democracy = {
 			is_egalitarian = yes
 			merg_has_mca = no
 			merg_has_expanded_pops = no
+			has_more_authorities_triggers = no
 		}
 		# More Authorities
 		has_authority = auth_strict_democratic
