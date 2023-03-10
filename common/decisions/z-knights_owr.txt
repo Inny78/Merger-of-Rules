@@ -94,14 +94,14 @@ decision_consecrated_worlds = {
 				limit = {
 					OR = {
 						is_asteroid = yes
-						merg_is_nuked = yes
+						is_planet_class = pc_nuked
 						merg_is_gas_giant = yes
 						is_planet_class = pc_shielded
 						merg_is_hive_world = yes
 						merg_is_machine_world = yes
 						is_planet_class = pc_ai
 						merg_is_arcology = yes
-						is_planet_class = pc_relic
+						merg_is_relic_world = yes
 					}
 				}
 				custom_tooltip = consecrated_worlds_unsuitable
@@ -114,7 +114,7 @@ decision_consecrated_worlds = {
 								merg_is_machine_world = yes
 								is_planet_class = pc_ai
 								merg_is_arcology = yes
-								is_planet_class = pc_relic
+								merg_is_relic_world = yes
 							}
 						}
 						add_modifier = {
@@ -460,9 +460,7 @@ decision_consecrated_worlds = {
 				}
 			}
 			# recalculate modifier
-			from = {
-				recalculate_consecrated_world_modifier = yes
-			}
+			from = { recalculate_consecrated_world_modifier = yes }
 		}
 	}
 
