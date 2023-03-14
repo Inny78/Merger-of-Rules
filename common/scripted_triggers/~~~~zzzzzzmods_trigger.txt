@@ -99,7 +99,10 @@ reshaper_eligible = {
 }
 giga_valid_planet_wrecked_ship = {
 	optimize_memory
-	solar_system = { merg_is_void_system = no }
+	solar_system = {
+		merg_is_void_system = no
+		is_capital_system = no
+	}
 	is_star = no
 	NOT = { has_planet_flag = has_giga_wrecked_ship }
 }
@@ -361,37 +364,6 @@ giga_compat_hyperlane_exclude = {
 		has_star_flag = darkspace_void_control
 		# Merger of Rules
 		merg_is_isolated_system = yes
-	}
-}
-# soon obsolete
-hyperlane_eligible = {
-    NOR = {
-        is_same_value = prev
-        has_hyperlane_to = prev
-        has_star_flag = has_new_hyperlane
-        has_star_flag = giga_grox_system
-		merg_is_isolated_system = yes
-		has_star_flag = darkspace_void_control
-		giga_is_core_system = yes
-		cohesive_system = yes
-		compound_cluster = yes
-		annihilator_system = yes
-		urmazin_system = yes
-	}
-}
-galactic_core_hyperlane_eligible = {
-	giga_is_core_system = yes
-	NOR = {
-		is_same_value = prev
-		has_hyperlane_to = prev
-		has_star_flag = has_new_hyperlane
-		has_star_flag = giga_grox_system
-		cohesive_system = yes
-		compound_cluster = yes
-		annihilator_system = yes
-		urmazin_system = yes
-		merg_is_isolated_system = yes
-		has_star_flag = darkspace_void_control
 	}
 }
 giga_is_neutron_type_star = {
@@ -1857,4 +1829,76 @@ darhmod_seres_digsite_spawn_rules = {
 			}
 		}
 	}
+}
+
+############################### District Overhaul ###############################
+bdoe_is_habitable_structure = { habitable_structure = yes } # Don't reinvent the wheel when you have a tire factory
+bdoe_can_have_random_districts = {
+	OR = {
+		merg_is_continental = yes
+		merg_is_tropical = yes
+		merg_is_ocean_basic = yes
+		merg_is_desert = yes
+		merg_is_arid = yes
+		merg_is_savannah = yes
+		merg_is_arctic = yes
+		merg_is_tundra = yes
+		merg_is_alpine = yes
+		merg_is_gaia_basic = yes
+		merg_is_nuked_basic = yes
+		merg_is_relic_world = yes
+		# Lithoid Supremacy
+		is_planet_class = pc_geode
+		# Real Space: New Frontiers
+		AND = {
+			merg_has_real_new_frontiers = yes
+			OR = {
+				is_planet_class = pc_tidallylocked
+				is_planet_class = pc_sterile
+				is_planet_class = pc_hollow
+			}
+		}
+	}
+	NOR = {
+		# Planetary Ringworlds
+		is_planet_class = pc_planetary_ringworld
+		is_planet_class = pc_planetary_ringworld_machine
+		is_planet_class = pc_planetary_ringworld_hive
+		is_planet_class = pc_planetary_ringworld_city
+		# WH40K Planets Renewed
+		merg_is_wh40k_planet = yes
+	}
+}
+bdoe_is_hive_planet = {
+	merg_is_hive_world = yes
+}
+bdoe_is_machine_planet = {
+	merg_is_machine_world = yes
+}
+bdoe_is_ringworld = {
+	merg_is_hab_ringworld = yes
+}
+bdoe_is_ecu_planet = {
+	OR = {
+		merg_is_arcology = yes
+		# WH40K Planets Renewed
+		merg_is_wh40k_planet = yes
+	}
+}
+############################### Expanded Stellaris Traditions ###############################
+est_is_evil_dip_empire = {
+	OR = {
+		is_unfriendly = yes
+		has_valid_civic = civic_machine_assimilator	
+	}
+}
+est_uses_slaves = {
+	OR = {
+		has_policy_flag = slavery_allowed
+		has_policy_flag = ai_servitude
+		has_civic =	civic_slaver_guilds
+		is_slaver = yes
+		has_country_flag = est_built_robot
+	}
+	NOT = { has_policy_flag = slavery_not_allowed }
 }

@@ -168,6 +168,10 @@ has_upgraded_capital = {
 				has_building = building_avb_machine_capital_4
 				has_building = building_avb_machine_capital_5
 				has_building = building_avb_machine_capital_6
+				# Empires Expanded
+				has_building = building_bok_capital_1
+				has_building = building_bok_capital_2
+				has_building = building_bok_capital_3
 				# galacot
 				has_building = building_dm_galactic_machine_capital
               	has_building = building_ae_galactic_machine_capital
@@ -403,6 +407,9 @@ has_major_upgraded_capital = {
 				has_building = building_avb_machine_capital_4
 				has_building = building_avb_machine_capital_5
 				has_building = building_avb_machine_capital_6
+				# Empires Expanded
+				has_building = building_bok_capital_2
+				has_building = building_bok_capital_3
 				# galacot
 				has_building = building_dm_galactic_machine_capital
            	    has_building = building_ae_galactic_machine_capital
@@ -628,6 +635,8 @@ has_fully_upgraded_capital = {
 				has_building = building_avb_machine_capital_4
 				has_building = building_avb_machine_capital_5
 				has_building = building_avb_machine_capital_6
+				# Empires Expanded
+				has_building = building_bok_capital_3
 				# galacot
 				has_building = building_dm_galactic_machine_capital
                 has_building = building_ae_galactic_machine_capital

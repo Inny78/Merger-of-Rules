@@ -215,6 +215,8 @@ merg_is_hive_world = {
 		is_pd_hive_world = yes
 		is_pd_hive_arcology = yes
 		is_pd_megaflora_hive = yes
+		# Planetary Ringworlds
+		is_planet_class = pc_planetary_ringworld_hive
 		# Voyage to Eternity
 		is_planet_class = pc_KZ_VOY_hive_world
 	}
@@ -232,6 +234,8 @@ merg_is_machine_world = {
 		is_planet_class = pc_GF_sf_machine
 		# Origin - F.C.S.S & M.C.S.S
 		is_planet_class = pc_awaken_ai
+		# Planetary Ringworlds
+		is_planet_class = pc_planetary_ringworld_machine
 	}
 }
 
@@ -392,5 +396,31 @@ merg_is_tundra = {
 		is_planet_class = pc_stepicos
 		is_planet_class = orbit_elos
 		is_planet_class = pc_elos
+	}
+}
+
+# WH40K Planets Renewed
+merg_is_wh40k_planet = {
+	OR = {
+		is_planet_class = pc_industrial
+		is_planet_class = pc_forge
+		is_planet_class = pc_forgee
+		is_planet_class = pc_forgeee
+		is_planet_class = pc_forge_ring
+		is_planet_class = pc_forge_ring2
+		is_planet_class = pc_forge_ring3
+		is_planet_class = pc_agri
+		is_planet_class = pc_shrine
+		is_planet_class = pc_fortress
+		is_planet_class = pc_penal
+		is_planet_class = pc_hive_arid
+		is_planet_class = pc_hive_continental_01
+		is_planet_class = pc_hive_continental_02
+		is_planet_class = pc_hive_ocean
+		is_planet_class = pc_hive_tundra
+		is_planet_class = pc_hive_medium
+		is_planet_class = pc_super_hive
+		is_planet_class = pc_hive_industrial
+		is_planet_class = pc_mega_hive
 	}
 }

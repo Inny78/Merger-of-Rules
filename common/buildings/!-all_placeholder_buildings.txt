@@ -72,6 +72,9 @@ building_avb_research_lab_5 = { potential = { always = no } allow = { always = n
 building_avb_research_lab_6 = { potential = { always = no } allow = { always = no } }
 building_avb_slave_capital_3 = { potential = { always = no } allow = { always = no } }
 building_avb_supercomputer_2 = { potential = { always = no } allow = { always = no } }
+building_bok_capital_1 = { potential = { always = no } allow = { always = no } }
+building_bok_capital_2 = { potential = { always = no } allow = { always = no } }
+building_bok_capital_3 = { potential = { always = no } allow = { always = no } }
 building_brothel_house = { potential = { always = no } allow = { always = no } }
 building_brothel_house_branch_office = { potential = { always = no } allow = { always = no } }
 building_bugged_life_monastery = { potential = { always = no } allow = { always = no } }

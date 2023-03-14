@@ -545,6 +545,8 @@ can_generate_leader_from_pop = {
 				has_technology = tech_synthetic_leaders
 				is_machine_empire = yes
 				is_mechanical_empire = yes
+				# Wandering Witch: Voyagers
+				has_technology = tech_dummy_leaders
 			}
 		}
 		# Girls Frontline
@@ -690,14 +692,27 @@ can_release_vassal_from_species = {
 		NOR = {
 			AND = {
 				has_trait = trait_hive_mind
-				NOT = { prev.this = { has_origin = origin_progenitor_hive } }
+				NOR = {
+					prev.this = { has_origin = origin_progenitor_hive }
+					# Empires Expanded
+					prev.this = { has_valid_civic = civic_hive_semi_autonomous_drones }
+				}
 			}
 			AND = {
 				NOT = { has_trait = trait_hive_mind }
 				prev.this = { has_authority = auth_hive_mind }
 			}
-			has_trait = trait_mechanical
 			can_think = no
+			# Empires Expanded
+			AND = {
+				OR = {
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+				NOT = {
+					prev.this = { has_valid_civic = civic_machine_mighty_processors }
+				}
+			}
 			# Plentiful Perks
 			has_trait = trait_plentiful_traditions_pt_cocoon
 			# Girls Frontline
@@ -747,7 +762,7 @@ subject_can_expand = {
 #This = country, target
 #This rule is a condition for taking hostile actions towards neutral targets. Such as landing troops or attacking their fleets
 can_take_hostile_actions = {
-	# Vanilia
+	# Vanilla
 	if = {
 		limit = {
 			root = { NOT = { has_policy_flag = first_contact_attack_allowed } }
@@ -758,6 +773,18 @@ can_take_hostile_actions = {
 		}
 		custom_tooltip = {
 			text = "CAN_TAKE_HOSTILE_ACTION_FIRST_CONTACT_PROTOCOL"
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = fotd_seperatist_country@ROOT
+			ROOT = {
+				has_origin = origin_fear_of_the_dark
+			}
+		}
+		custom_tooltip = {
+			text = "CAN_TAKE_HOSTILE_ACTION_FOTD"
 			always = no
 		}
 	}
@@ -803,9 +830,8 @@ can_take_hostile_actions = {
 		limit = {
 			root = {
 				merg_is_default_empire = yes
-				OR = {
-					has_policy_flag = interference_passive
-					has_policy_flag = interference_active
+				NOT = {
+					has_policy_flag = interference_aggressive
 				}
 			}
 			is_primitive = yes
@@ -1348,7 +1374,11 @@ species_has_happiness = {
 				from = {
 					OR = {
 						is_machine_empire = yes
-						NOT = { has_technology = tech_synthetic_workers }
+						NOR = {
+							has_technology = tech_synthetic_workers
+							# Wandering Witch: Voyagers
+							has_technology = tech_dummy_leaders
+						}
 						has_policy_flag = ai_outlawed
 					}
 				}
@@ -1374,11 +1404,19 @@ species_has_happiness = {
 can_be_hostile_towards = {
 	if = {
 		limit = { is_primitive = yes }
-		root = { NOT = { has_policy_flag = interference_passive } }
+		ROOT = {
+			NOR = {
+				has_policy_flag = interference_not_allowed
+				has_policy_flag = interference_subtle
+			}
+		}
 	}
 	else_if = {
-		limit = { root = { is_primitive = yes } }
-		NOT = { has_policy_flag = interference_passive }
+		limit = { ROOT = { is_primitive = yes } }
+		NOR = {
+			has_policy_flag = interference_not_allowed
+			has_policy_flag = interference_subtle
+		}
 	}
 	else_if = {
 		limit = { is_country_type = ratlings }
@@ -1880,7 +1918,7 @@ can_species_be_assembled = {
 							job = matter_reanimator
 							value > 0
 						}
-						has_building = building_clone_vats
+						merg_has_cloning_building = yes
 						has_building = building_dimensional_instrument
 					}
 				}
@@ -1898,7 +1936,7 @@ can_species_be_assembled = {
 				}
 				root = {
 					OR = {
-						has_building = building_clone_vats
+						merg_has_cloning_building = yes
 						has_building = building_familiar_clone_vat
 					}
 				}
@@ -2062,8 +2100,8 @@ can_orbital_bombard = {
 		AND = {
 			root.CONTROLLER = {
 				NOR = {
-					has_policy_flag = interference_passive
-					has_policy_flag = interference_active
+					has_policy_flag = interference_not_allowed
+					has_policy_flag = interference_subtle
 				}
 			}
 			from.CONTROLLER = { is_country_type = primitive }
@@ -2132,33 +2170,28 @@ can_orbital_bombard = {
 				is_country_type = dormant_marauders
 				is_country_type = marauder_raiders
 				is_country_type = ruined_marauders
+				is_country_type = debt_collectors
 				is_country_type = gray_goo
 				is_country_type = vol
 				AND = {
 					is_country_type = awakened_marauders
 					from.CONTROLLER = { is_hostile = prev }
 				}
-				# Warship Girls R And MIST Species
-				is_country_type = wg_crisis_country
 				is_khan_country_type = yes
-				# Star Wars: UnknownWorld Shipgirls Story
-				is_country_type = afk_crisis_country
 				# Ancient Empire
 				ag_can_do_orbital_bombardment_country = yes
 				# ACOT
 				is_progenitor_empires = yes
 				is_country_type = void_lifeforms_1
 				is_country_type = void_lifeforms_2
-				# Star Wars: Kuat Ancient Empire
-				kuat_can_do_bombarment_country = yes
-				# History of the Lost Empire
-				is_country_type = LsE_fallen_empire
+				# BlueArchive
+				is_country_type = Aris_mid
 				# Gigastructural Engineering & More
 				is_country_type = katzenartig_imperium
 				is_country_type = acot_crazed_stellarite
 				is_country_type = compound_empire
-				# The Empty Vagrant
-				is_country_type = default_ev
+				# History of the Lost Empire
+				is_country_type = LsE_fallen_empire
 				# LEX
 				is_country_type = mem_ancestor_guardian
 				# More Events Mod
@@ -2170,13 +2203,19 @@ can_orbital_bombard = {
 				# Shroud Rising
 				is_country_type = shroud_horrors
 				is_country_type = shroud_cult
+				# Replicators
+				is_country_type = replicators
+				# Star Wars: Kuat Ancient Empire
+				kuat_can_do_bombarment_country = yes
+				# Star Wars: UnknownWorld Shipgirls Story
+				is_country_type = afk_crisis_country
 				# THE ABYSS CONTRACT
 				is_country_type = TAC_debris_ship_country
 				is_country_type = TAC_machine_crisis_country
-				# BlueArchive
-				is_country_type = Aris_mid
-				# Replicators
-				is_country_type = replicators
+				# The Empty Vagrant
+				is_country_type = default_ev
+				# Warship Girls R And MIST Species
+				is_country_type = wg_crisis_country
 			}
 		}
 		AND = {
@@ -2633,6 +2672,7 @@ system_blocks_sensors = {
 			OR = {
 				has_modifier = space_storm
 				is_inside_nebula = yes
+				has_modifier = zroni_storm
 				merg_is_nebulae = yes
 				# Wild Space
 				is_ws_system = yes
@@ -3076,26 +3116,7 @@ pop_generates_crime = {
 # can_pops_assemble_on_planet
 # can_pops_decline_on_planet
 # can_force_grow_on_planet
-
-# This = planet
-# Root = country
-can_force_decline_on_planet = {
-	custom_tooltip = {
-		fail_text = FORCE_DECLINE_NEEDS_POP_CONTROLS
-		exists = owner
-		owner = { NOT = { has_policy_flag = population_controls_not_allowed } }
-	}
-	custom_tooltip = {
-		fail_text = FORCED_DECLINE_ALREADY_PURGING
-		NOT = {
-			any_owned_species = {
-				has_citizenship_type = { type = citizenship_purge country = root }
-				NOT = { has_purge_type = { country = root type = purge_neutering } }
-			}
-		}
-	}
-}
-
+# can_force_decline_on_planet
 # can_force_decline_species
 
 ## If this returns true, the species will be set to decline even if it is not being purged
@@ -3258,7 +3279,9 @@ should_force_decline_species = {
 			AND = {
 				from = {
 					exists = owner
-					owner = { NOT = { has_country_flag = syn_witch } }
+					owner = {
+						NOT = { has_country_flag = syn_witch }
+					}
 				}	
 			}
 			NOR = {
@@ -3386,11 +3409,24 @@ can_support_branch_offices = {
 	}
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_REGULAR_EMPIRE
-		is_regular_empire = yes
-		# Merger of Rules
 		NOR = {
+			is_gestalt = yes
+			# Merger of Rules
 			is_country_type = gate_builders
 			is_country_type = awakened_marauders
+		}
+	}
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_NOT_ADVANCED_PRE_FTL
+		if = {
+			limit = {
+				is_primitive = yes
+				is_gestalt = no
+			}
+			OR = {
+				has_pre_ftl_age = atomic_age
+				has_pre_ftl_age = early_space_age
+			}
 		}
 	}
 	# More Authorities
@@ -3433,6 +3469,19 @@ can_build_branch_office_on_planet = {
 				NOT = { has_valid_civic = civic_fanatic_purifiers }
 				# Ethical Gestalts
 				has_policy_flag = infiltration_allowed
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_NO_OBSERVATION_OUTPOST
+		if = {
+			limit = {
+				root = { is_criminal_syndicate = yes }
+				owner = { is_primitive = yes }
+			}
+			has_observation_outpost = yes
+			observation_outpost_owner = {
+				is_same_value = root
 			}
 		}
 	}
@@ -3482,6 +3531,12 @@ can_build_branch_office_on_planet = {
 			}
 			owner = { has_commercial_pact = root }
 			owner = { is_in_federation_with = root }
+			AND = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					has_modifier = preftl_action_trade_pact
+				}
+			}
 			# Expanded Traits, Civics, Pops, and More
 			AND = {
 				merg_has_expanded_pops = yes
@@ -3928,7 +3983,10 @@ can_be_part_of_galactic_community = {
 	}
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
-		is_homicidal = no
+		NOR = {
+			is_homicidal = yes
+			has_origin = origin_chosen_of_the_shroud
+		}
 	}
 	custom_tooltip = {
 		fail_text = "community_declared_crisis_failtext"
@@ -3938,16 +3996,10 @@ can_be_part_of_galactic_community = {
 		fail_text = "community_declared_crisis_failtext"
 		#fail_text = "community_overlord_declared_crisis_failtext"
 		OR = {
-			NOT = {
-				exists = overlord
-			}
-			overlord = {
-				has_been_declared_crisis = no
-			}
+			NOT = { exists = overlord }
+			overlord = { has_been_declared_crisis = no }
 			# Warship Girls R And MIST Species
-			NOT = {
-				has_country_flag = wgfm_quit_community
-			}
+			NOT = { has_country_flag = wgfm_quit_community }
 		}
 	}
 	# B5 Species - Shadows
@@ -3966,10 +4018,7 @@ can_be_part_of_galactic_empire = {
 	}
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
-		NOR = {
-			is_homicidal = yes
-			has_origin = origin_chosen_of_the_shroud
-		}
+		is_homicidal = no
 	}
 	custom_tooltip = {
 		fail_text = "community_declared_crisis_failtext"
@@ -3978,9 +4027,7 @@ can_be_part_of_galactic_empire = {
 	custom_tooltip = {
 		fail_text = "community_declared_crisis_failtext"
 		OR = {
-			NOT = {
-				exists = overlord
-			}
+			NOT = { exists = overlord }
 			overlord = { has_been_declared_crisis = no }
 			# Warship Girls R And MIST Species
 			NOT = { has_country_flag = wgfm_quit_community }
@@ -4219,8 +4266,6 @@ can_add_negative_traits_organic = {
 		has_tradition = tr_shipbuilding_transform
 		# Madoka Magica NEW
 		has_str_genemodding_tech = yes
-		# Nirvana Empire DLC
-		is_nirvana_empire = yes
 		# Scripted Triggers Undercoat
 		check_modifier_value = {
 			modifier = stu_deleterious_organic_modding_flag
@@ -4231,6 +4276,8 @@ can_add_negative_traits_organic = {
 		# Warship Girls R And MIST Species
 		has_wsg_genemodding_tech = yes
 	}
+	# Nirvana Empire DLC
+	is_nirvana_empire = no
 	# Better Performances and Utilities
 	NOT = { has_country_flag = PF_flg_cntr_STOP_ai_species_mod }
 }
@@ -4318,7 +4365,7 @@ can_fill_worker_job = {
 			}
 		}
 		is_being_assimilated = no
-		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+		NOT = { has_citizenship_type = { type = citizenship_organic_trophy country = owner } }
 		NAND = {
 			has_citizenship_type = { type = citizenship_slavery }
 			OR = {
@@ -4482,8 +4529,13 @@ can_fill_ruler_job = {
 					owner = { has_technology = tech_synthetic_workers }
 					owner = { has_policy_flag = ai_full_rights }
 				}
+				# Empires Expanded
+				AND = {
+					owner = { has_policy_flag = artificial_aristocracy }
+					owner = { has_technology = tech_droid_workers }
+				}
 			}
-			NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+			NOT = { has_citizenship_type = { type = citizenship_organic_trophy country = owner } }
 			if = {
 				limit = { divinity_right_to_work_job_check_trigger_exempt = no }
 				divinity_right_to_work_job_check_trigger_ruler = yes
@@ -4642,6 +4694,10 @@ can_trade_leader = {
 			}
 		}
 	}
+	NOR = { 
+		has_trait = leader_trait_fotd_scientist
+		has_trait = leader_trait_fotd_admiral
+	}
 	# Warship Girls R And MIST Species
 	custom_tooltip = {
 		fail_text = "cannot_sold_wg_leader"
@@ -4677,3 +4733,10 @@ can_trade_fleet = {
 
 # is_terraforming_candidate
 # has_ascension_for_terraforming_candidate
+# can_be_renamed_by
+# can_build_station_around
+# can_build_mining_station_around
+# can_build_research_station_around
+# can_build_military_station_around
+# can_build_observation_station_around
+# can_build_starbase_around

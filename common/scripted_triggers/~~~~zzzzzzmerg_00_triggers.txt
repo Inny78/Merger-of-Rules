@@ -95,6 +95,20 @@ habitable_planet_not_urban = {
 	}
 }
 
+is_starting_planet_type = {
+	OR = {
+		merg_is_desert = yes
+		merg_is_tropical = yes
+		merg_is_arid = yes
+		merg_is_continental = yes
+		merg_is_ocean = yes
+		merg_is_tundra = yes
+		merg_is_arctic = yes
+		merg_is_alpine = yes
+		merg_is_savannah = yes
+	}
+}
+
 can_have_habitable_deposits = {
 	OR = {
 		merg_is_nuked_basic = yes
@@ -131,6 +145,7 @@ has_encountered_other_species = {
 	OR = {
 		has_origin = origin_syncretic_evolution
 		has_origin = origin_necrophage
+		has_origin = origin_payback
 		has_valid_civic = civic_machine_servitor
 		# Ethics and Civics Classic and all its variants
 		has_valid_civic = civic_symbiotic_race
@@ -153,10 +168,9 @@ allows_purge = {
 	OR = {
 		has_valid_civic = civic_fanatic_purifiers
 		has_policy_flag = purge_allowed
-		has_policy_flag = purge_displacement_only
-		# Expanded Gestalts: Forgotten Queens
 		AND = {
 			is_gestalt = yes
+			# Expanded Gestalts: Forgotten Queens
 			NOT = {  has_valid_civic = civic_mutualistic_behavior }
 		}
 		# Electroids
@@ -259,6 +273,13 @@ is_regular_empire = {
 		is_zofe_country = yes
 	}
 	is_gestalt = no
+}
+
+is_regular_empire_or_primitive = {
+	OR = {
+		is_regular_empire = yes
+		is_regular_pre_ftl = yes
+	}
 }
 
 is_megacorp = {
@@ -472,7 +493,7 @@ is_homicidal = {
 		has_valid_civic = civic_hive_devouring_swarm
 		# Expanded Traits, Civics, Pops, and More
 		has_valid_civic = civic_infestation
-		# 
+		# Organic Zealots
 		has_valid_civic = civic_organic_zealots
 	}
 }
@@ -731,16 +752,21 @@ has_research_building = {
 		has_building = apsr3_building_part3
 		has_building = apsr3_building_part4
 		has_building = apsr15_building_part22
-		#AVB
+		# AVB
 		has_building = building_avb_research_lab_4
 		has_building = building_avb_research_lab_5
 		has_building = building_avb_research_lab_6
 		has_building = building_avb_institute_2
 		has_building = building_avb_supercomputer_2
+		# Buildings and Districts Overhaul and Expansion
+		has_district = district_bdoe_501_nature_reserve
+		has_district = district_bdoe_501_research_complex
+		has_district = district_bdoe_501_scrapyard
+		has_district = district_bdoe_502_workshops
+		has_district = district_bdoe_502_university
 		# EUTAB
 		eutab_has_research_building = yes
 		# Extra Districts
-		#Extra Districts
 		ED_has_research_district = yes
 		# Gigastructural Engineering & More
 		giga_has_research_building = yes
@@ -775,6 +801,9 @@ has_any_industry_district = {
         has_district = district_rw_industrial
         has_district = district_arcology_arms_industry
         has_district = district_arcology_civilian_industry
+		# Buildings and Districts Overhaul and Expansion
+		has_district = district_bdoe_502_local_industry
+		has_district = district_bdoe_502_production_hub
 		# Extra Districts
 		ED_has_industry_district = yes
 		# Gigastructures
@@ -827,6 +856,14 @@ has_any_farming_district_or_buildings = {
 		has_building = apsr19_building_part_b3
 		# AVB
 		has_building = building_avb_hydroponics_farm_2
+		# Buildings and Districts Overhaul and Expansion
+		has_district = district_bdoe_05_nature_farms
+		has_district = district_bdoe_05_ocean_farms
+		has_district = district_bdoe_05_exotic_farms
+		has_district = district_bdoe_05_oasis_farms
+		has_district = district_bdoe_05_cave_farms
+		has_district = district_bdoe_05_industrial_farms
+		has_district = district_bdoe_502_hydroponic_bay
 		# EUTAB
 		eutab_has_farming_building = yes
 		# Extra Districts
@@ -856,6 +893,13 @@ has_any_mining_district = {
         has_district = district_mining
         has_district = district_hab_mining
         has_district = district_mining_uncapped
+		# Buildings and Districts Overhaul and Expansion
+		has_district = district_bdoe_04_unstable_mining
+		has_district = district_bdoe_04_stable_mining
+		has_district = district_bdoe_04_surface_mining
+		has_district = district_bdoe_04_deep_mining
+		has_district = district_bdoe_04_mountain_mining
+		has_district = district_bdoe_501_rw_asteroid_belt_mining
 		# Extra Districts
 		ED_has_mining_district = yes
 		# Gigastructures
@@ -895,6 +939,14 @@ has_any_generator_district_or_building = {
 		has_building = apsr19_building_part_m3
 		# AVB
 		has_building = building_avb_betharian_power_plant_2
+		# Buildings and Districts Overhaul and Expansion
+		has_district = district_bdoe_03_fusion_generator
+		has_district = district_bdoe_03_fossil_fuel_generator
+		has_district = district_bdoe_03_wind_turbines
+		has_district = district_bdoe_03_geothermal_generator
+		has_district = district_bdoe_03_solar_generator
+		has_district = district_bdoe_03_tidal_generator
+		has_district = district_bdoe_03_biomass_generator
 		# EUTAB
 		eutab_has_generator_building = yes
 		# Extra Districts
@@ -1065,16 +1117,20 @@ uses_habitat_capitals = {
 		has_planet_flag = giga_habitat_capital_compat
 		# Planetary Diversity
 		uses_district_set = pdplanethab
-		# These are in reserve in case I need them
-		# # BlueArchive
-		# uses_district_set = BA_auto_habitat
-		# # Nyto Species Pack
-		# uses_district_set = GF_nyto_devil_furnace_world
-		# # Starborn: Improved Voidtouched
-		# uses_district_set = starborn_start
-		# # Twinks Atlantean
-		# uses_district_set = skypalace
-		# # NSC2 Modjam Freebooters Origin
-		# uses_district_set = nsc_freebooter_habitat
+	}
+}
+
+is_special_colony_type = {
+	OR = {
+		has_modifier = penal_colony
+		has_modifier = resort_colony
+		has_modifier = slave_colony
+		# District Overhaul
+		has_modifier = bdoe_cemetary_world
+		has_modifier = bdoe_storage_world
+		has_modifier = bdoe_waste_world
+		has_modifier = bdoe_feudal_world
+		# Real Space - Planetary Stations
+		has_planet_flag = planetary_station
 	}
 }

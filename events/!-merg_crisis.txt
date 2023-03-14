@@ -26,6 +26,9 @@ planet_event = {
 			# Habitable Ring Worlds can't be infested...
 			# they are destroyed instead
 			limit = { merg_is_true_ringworld = yes }
+			every_owned_pop = {
+				kill_pop = yes
+			}
 			destroy_colony = yes
 			change_pc = pc_ringworld_habitable_damaged
 			reset_planet = yes
@@ -235,6 +238,12 @@ country_event = {
 			value = @tier5unityreward
 		}
 		end_event_chain = "prethoryn_scourge_chain"
+		if = {
+			limit = {
+				has_origin = origin_fear_of_the_dark
+			}
+			country_event = { id = origin.6136 }
+		}
 	}
 }
 

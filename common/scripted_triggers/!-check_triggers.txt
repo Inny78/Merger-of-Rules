@@ -40,6 +40,9 @@ merg_has_assault_lily = { has_global_flag = Assault_Lily_activated }
 # Ascension Enhancements
 merg_has_uac = { has_global_flag = has_uac_mod }
 
+# Buildings and Districts Overhaul and Expansion
+merg_has_bdoe = { has_global_flag = bdoe_active }
+
 # Coop: Start in Teams
 merg_has_coop_teams = { has_global_flag = coop_base_mod }
 

@@ -41,6 +41,7 @@ kuat_fleet = { ai = { enabled = no } }
 kuat_fleet_hostile = { ai = { enabled = no } }
 lost_empire = { ai = { enabled = no } }
 LsE_fallen_empire = { ai = { enabled = no } }
+master_ai_country = { ai = { enabled = no } }
 mem_ancestor_guardian = { ai = { enabled = no } }
 mem_surveyor_country_red = { ai = { enabled = no } }
 mem_vazurans = { ai = { enabled = no } }
