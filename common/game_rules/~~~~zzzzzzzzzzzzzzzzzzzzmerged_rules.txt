@@ -434,6 +434,8 @@ species_can_live_on_planet = {
 			}
 			# Girls Frontline
 			has_trait = GF_trait_doll
+			# Ethics and Civics Bug Branch
+			has_trait = trait_bugged_happy_machine
 		}
 	}
 	# Vanilla
@@ -1453,6 +1455,7 @@ can_species_procreate = {
 	NOR = {
 		has_trait = trait_machine_unit
 		has_trait = trait_mechanical
+		has_trait = trait_bugged_happy_machine
 		AND = {
 			has_trait = trait_clones
 			root = {

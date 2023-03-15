@@ -485,6 +485,14 @@ starborn_can_place_hab = {
 			giga_habitable_structure = yes
 		}
 	}
+	custom_tooltip = {
+		fail_text = "requires_no_orbital_debris"
+		NOR = { has_planet_flag = has_orbital_debris }
+	}
+	custom_tooltip = {
+		fail_text = "requires_not_solarpunk"
+		NOT = { solar_system = { has_star_flag = solarpunk_system_02 } }
+	}
 }
 
 ############################### Legendary Worlds ###############################
@@ -1901,4 +1909,20 @@ est_uses_slaves = {
 		has_country_flag = est_built_robot
 	}
 	NOT = { has_policy_flag = slavery_not_allowed }
+}
+
+
+############################### Ethics and Civics Bug Branch ###############################
+is_bugged_starbase = {
+	OR = {
+		has_starbase_size = starbase_starport
+		has_starbase_size = starbase_starhold
+		has_starbase_size = starbase_starfortress
+		has_starbase_size = starbase_citadel
+		# ACOT/AOT/SOTS
+		has_starbase_size >= acot_precusor_starbase
+		has_starbase_size >= acot_precusor_sigma_starbase
+		has_starbase_size >= acot_precusor_phanon_starcitadel
+		has_starbase_size >= acot_precusor_theta_starcitadel
+	}
 }

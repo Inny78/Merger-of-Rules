@@ -76,18 +76,12 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 		}
 		custom_tooltip = {
 			text = not_barren_molten_frozen_toxic_test_fire
-			NOT = {
-				exists = owner
-			}
+			NOT = { exists = owner }
 			OR = {
-				NOT = {
-					exists = space_owner
-				}
+				NOT = { exists = space_owner }
 				AND = {
 					exists = space_owner
-					space_owner = {
-						is_same_empire = from.owner
-					}
+					space_owner = { is_same_empire = from.owner }
 				}
 			}
 			OR = {
@@ -4497,6 +4491,19 @@ can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER_SERES = {
 			space_owner = { is_same_value = from.owner }
 		}
 	}
+}
+
+# AssaultLilly in Stellaris
+can_destroy_planet_with_PLANET_KILLER_CRACKER_FAKE = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
+can_destroy_planet_with_PLANET_KILLER_SHIELDER_FAKE = { can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes }
+can_destroy_planet_with_PLANET_KILLER_NEUTRON_FAKE = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes }
+can_destroy_planet_with_PLANET_KILLER_GODRAY_FAKE = { can_destroy_planet_with_PLANET_KILLER_GODRAY = yes }
+can_destroy_planet_with_PLANET_KILLER_NANOBOTS_FAKE = { can_destroy_planet_with_PLANET_KILLER_NANOBOTS = yes }
+planet_is_hostile_or_crisis_FAKE = { planet_is_hostile_or_crisis = yes }
+can_destroy_planet_with_PLANET_KILLER_PLANET_TO_NEST = {
+	NOT = { is_planet_class = pc_nest }
+	is_colony = yes
+	merg_is_forbidden_target = no
 }
 
 # ===========================================================================================================================
