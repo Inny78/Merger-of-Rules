@@ -4506,6 +4506,20 @@ can_destroy_planet_with_PLANET_KILLER_PLANET_TO_NEST = {
 	merg_is_forbidden_target = no
 }
 
+# Krogan's Sci Fi Stuff Pack
+can_destroy_planet_with_DEATH_STAR_WEAPON = {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		is_a_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		merg_is_shielded = no
+	}
+}
+
+
 # ===========================================================================================================================
 
 # PK Triggers here
