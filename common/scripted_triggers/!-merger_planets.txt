@@ -18,6 +18,8 @@ merg_is_alpine = {
 merg_is_arcology = {
 	OR = {
 		is_planet_class = pc_city
+		# Ancient Empire
+		is_planet_class = pc_ag_city
 		# Azur Lane
 		is_planet_class = pc_azur
 		# Empires Expanded
