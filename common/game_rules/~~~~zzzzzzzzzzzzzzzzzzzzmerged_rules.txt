@@ -1132,20 +1132,23 @@ can_terraform_planet = {
 	custom_tooltip = {
 		fail_text = "requires_actor_not_devouring_swarm_lithoid"
 		exists = root
-		root = { is_lithoid_devouring_swarm = no }
+		OR = {
+			# Ethics and Civics Bug Branch removes this check
+			merg_has_ethics_bug = yes
+			AND = {
+				merg_has_ethics_bug = no
+				root = { is_lithoid_devouring_swarm = no }
+			}
+		}
 	}
 	custom_tooltip = {
 		fail_text = requires_not_relentless_industrialists_situation
-		NOT = {
-			any_targeting_situation = { is_situation_type = relentless_industrialists_situation }
-		}
+		NOT = { any_targeting_situation = { is_situation_type = relentless_industrialists_situation } }
 	}
 	# Planetary Diversity
 	custom_tooltip = {
 		fail_text = "requires_actor_not_pdtol"
-		root = {
-			NOT = { has_origin = origin_pd_tree_of_life }
-		}
+		root = { NOT = { has_origin = origin_pd_tree_of_life } }
 	}
 	# Real Space New Frontiers
 	custom_tooltip = {
@@ -1682,6 +1685,17 @@ can_species_be_assembled = {
 			is_robotic = yes
 			# Azur lane Stellaris DLC
 			NOT = { has_trait = trait_robot_mind_relic_core }
+			# Animated Synthetics Portraits Expanded: Reborn
+			OR = {
+				merg_has_animated_synth = no
+				AND = {
+					merg_has_animated_synth = yes
+					if = { #synth can never be built unless empire is a synth empire
+						limit = { root.owner = { has_country_flag = synthetic_empire } }
+						has_trait = trait_extsynth_synthetic
+					}
+				}
+			}
 			# Diagraphers Trait Mod
 			NAND = {
 				has_trait = trait_robot_rare_crystal_components
@@ -1697,10 +1711,7 @@ can_species_be_assembled = {
 			if = {
 				limit = { has_trait = GF_trait_doll }
 				root.owner = {
-					OR = {
-						has_authority = GF_auth_commonwealth
-						is_valid_GF_OGAS_subnet = yes
-					}
+					GF_can_build_doll_species = yes
 				}
 			}
 			# Voyage to Eternity
@@ -1955,6 +1966,14 @@ can_species_be_assembled = {
 					}
 				}
 			}
+			# ANZ Advanced Cloning
+			else_if = { # Cyborg Origin
+				limit = {
+					root.owner = { has_origin = origin_anz_cyborgs_collective }
+					root = { has_building = building_anz_cc_mainframe }
+				}
+				is_same_species = root.owner.owner_main_species
+			}
 			# Vanilla
 			else = {
 				OR = {
@@ -2189,6 +2208,8 @@ can_orbital_bombard = {
 				is_country_type = void_lifeforms_2
 				# BlueArchive
 				is_country_type = Aris_mid
+				# Destiny: The Darkness Crisis
+				is_country_type = darkness_country
 				# Gigastructural Engineering & More
 				is_country_type = katzenartig_imperium
 				is_country_type = acot_crazed_stellarite

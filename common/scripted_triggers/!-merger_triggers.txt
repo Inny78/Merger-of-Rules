@@ -86,19 +86,7 @@ merg_is_hab_ringworld = {
 		# Gigastructural Engineering & More
 		is_giga_ringworld = yes
 		# Ancient Empire
-		# listed planet types are for colors only, they're all ideal
-		is_planet_class = pc_ag_ringworld_desert
-		is_planet_class = pc_ag_ringworld_arid
-		is_planet_class = pc_ag_ringworld_savannah
-		is_planet_class = pc_ag_ringworld_ocean
-		is_planet_class = pc_ag_ringworld_continental
-		is_planet_class = pc_ag_ringworld_tropical
-		is_planet_class = pc_ag_ringworld_tundra
-		is_planet_class = pc_ag_ringworld_arctic
-		is_planet_class = pc_ag_ringworld_alpine
-		is_planet_class = pc_ag_ringworld_machine
-		is_planet_class = pc_ag_ringworld_city
-		is_planet_class = pc_ag_ringworld_gaia
+		ag_is_mod_habitable_ringworld = yes
 		# Assault Lily
 		is_planet_class = pc_ringworld_habitable_lily
 		# AshArms Aquarius History
@@ -145,18 +133,7 @@ merg_is_true_ringworld = {
 		is_planet_class = pc_shattered_ring_habitable
 		is_planet_class = pc_cybrex
 		# Ancient Empire
-		is_planet_class = pc_ag_ringworld_desert
-		is_planet_class = pc_ag_ringworld_arid
-		is_planet_class = pc_ag_ringworld_savannah
-		is_planet_class = pc_ag_ringworld_ocean
-		is_planet_class = pc_ag_ringworld_continental
-		is_planet_class = pc_ag_ringworld_tropical
-		is_planet_class = pc_ag_ringworld_tundra
-		is_planet_class = pc_ag_ringworld_arctic
-		is_planet_class = pc_ag_ringworld_alpine
-		is_planet_class = pc_ag_ringworld_machine
-		is_planet_class = pc_ag_ringworld_city
-		is_planet_class = pc_ag_ringworld_gaia
+		ag_is_mod_habitable_ringworld = yes
 		# Assault Lily
 		is_planet_class = pc_ringworld_habitable_lily
 		# Darkspace
@@ -312,14 +289,10 @@ merg_has_cloning_building = {
 		has_building = building_clone_vats_improved_organic
 		has_building = building_clone_vats_advanced_organic
 		has_building = building_clone_vats_augmented_organic
-		has_building = building_clone_vats_basic_asim
-		has_building = building_clone_vats_improved_asim
-		has_building = building_clone_vats_advanced_asim
-		has_building = building_clone_vats_augmented_asim
-		has_building = building_clone_vats_basic_serv
-		has_building = building_clone_vats_improved_serv
-		has_building = building_clone_vats_advanced_serv
-		has_building = building_clone_vats_augmented_serv
+		has_building = building_clone_vats_basic_mech
+		has_building = building_clone_vats_improved_mech
+		has_building = building_clone_vats_advanced_mech
+		has_building = building_clone_vats_augmented_mech
 		# ACOT
 		has_building = building_fe_clone_vats
 		has_building = building_ae_clone_vats
