@@ -1143,6 +1143,8 @@ gpm_has_required_terraform_modifier = {
 	is_terraforming_candidate = yes
 	NOT = { has_planet_flag = gpm_solidified_planet_core }
 }
+gpm_is_country_type_default = { merg_is_default_empire = yes }
+gpm_is_country_type_awakened_fallen_empire = { merg_is_awakened_fe = yes }
 
 ############################### Scripted Trigger Undercoat ###############################
 is_empire = {

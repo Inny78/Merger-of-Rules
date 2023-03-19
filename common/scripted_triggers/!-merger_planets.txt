@@ -205,6 +205,8 @@ merg_is_gas_giant = {
 		is_planet_class = pc_hot_gas_giant
 		is_planet_class = pc_cloudless_gas_giant
 		is_planet_class = pc_cold_gas_giant
+		is_planet_class = pc_dwarf_gas_giant
+		is_planet_class = pc_pd_gas_giant_hab
 	}
 }
 
@@ -274,6 +276,7 @@ merg_is_nuked_basic = {
 		is_planet_class = orbit_nuked
 		# Planetary Diversity
 		is_pd_nuked = yes
+		is_pd_radiotrophic_world = yes
 	}
 }
 
@@ -302,14 +305,6 @@ merg_is_ocean_basic = {
 		# Planetary Diversity
 		is_pd_ocean = yes
 		is_pd_aquatics = yes
-	}
-}
-
-merg_is_rad_planet = {
-	OR = {
-		merg_is_nuked = yes
-		# Planetary Diversity
-		is_pd_radiotrophic_world = yes
 	}
 }
 

@@ -644,7 +644,7 @@ has_phototrophic_energy_upkeep = {
 				# Planetary Diversity
 				has_trait = trait_radiotrophic_mutants
 			}
-			planet = { merg_is_rad_planet = no }
+			planet = { merg_is_nuked = no }
 		}
 	}
 }
