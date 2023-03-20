@@ -2,7 +2,6 @@
 # These triggers are also meant as a library for modders who want to reuse them in their own mods.
 
 merg_is_standard_empire = {
-	optimize_memory
 	OR = {
 		is_country_type = default
 		is_country_type = fallen_empire
@@ -25,7 +24,6 @@ merg_is_standard_empire = {
 
 # Expanded version of country_type = default
 merg_is_default_empire = {
-	optimize_memory
 	OR = {
 		is_country_type = default
 		# Darkspace
@@ -48,7 +46,6 @@ merg_is_playable_empire = {
 
 # List of dormant/standard Fallen Empires
 merg_is_fallen_empire = {
-	optimize_memory
 	OR = {
 		is_country_type = fallen_empire
 		# History of the Lost Empire
@@ -64,7 +61,6 @@ merg_is_fallen_empire = {
 
 # List of awakened Fallen Empires
 merg_is_awakened_fe = {
-	optimize_memory
 	OR = {
 		is_country_type = awakened_fallen_empire
 		# SW:KUAT ANCIENT EMPIRE
@@ -168,7 +164,6 @@ merg_is_true_ringworld = {
 
 # Listing habitats
 merg_is_habitat = {
-	optimize_memory
 	OR = {
 		merg_is_habitat_non_starborn = yes
 		# Starborn: Improved Voidtouched
@@ -280,7 +275,6 @@ merg_is_special_colony = {
 }
 
 merg_has_cloning_building = {
-	optimize_memory
 	OR = {
 		# Vanilla
 		has_building = building_clone_vats
@@ -342,7 +336,6 @@ merg_has_hive_trait = {
 }
 
 merg_is_nebulae = {
-	optimize_memory
 	OR = {
 		# Real Space Nebulae
 		is_star_class = sc_collapsar
@@ -502,7 +495,6 @@ merg_is_empty_space = {
 
 # List of void systems
 merg_is_void_system = {
-	optimize_memory
 	OR = {
 		# ACOT
 		is_star_class = sofe_outer_class

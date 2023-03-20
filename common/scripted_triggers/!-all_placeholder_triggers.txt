@@ -4,6 +4,8 @@ ag_can_be_orbital_bombardment_country = { always = no }
 ag_can_do_orbital_bombardment_country = { always = no }
 ag_is_mod_habitable_ringworld = { always = no }
 annihilator_system = { always = no }
+bdoe_is_habitable_asteroid = { always = no }
+bdoe_is_habitable_barren = { always = no }
 can_fill_holosphere_ruler_job = { always = no }
 cohesive_system = { always = no }
 compound_cluster = { always = no }

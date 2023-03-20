@@ -1868,13 +1868,19 @@ bdoe_can_have_random_districts = {
 				is_planet_class = pc_hollow
 			}
 		}
+		can_have_habitable_deposits = yes
 	}
 	NOR = {
+		# Ancient Empire
+		ag_is_mod_habitable_ringworld = yes
 		# Planetary Ringworlds
 		is_planet_class = pc_planetary_ringworld
 		is_planet_class = pc_planetary_ringworld_machine
 		is_planet_class = pc_planetary_ringworld_hive
 		is_planet_class = pc_planetary_ringworld_city
+		# The Belt
+		bdoe_is_habitable_asteroid = yes
+		bdoe_is_habitable_barren = yes
 		# WH40K Planets Renewed
 		merg_is_wh40k_planet = yes
 	}

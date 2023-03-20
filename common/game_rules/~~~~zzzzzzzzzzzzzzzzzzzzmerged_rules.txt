@@ -162,8 +162,6 @@ can_add_claim = {
 				OR = {
 					is_homicidal = yes
 					has_valid_civic = civic_machine_assimilator
-					# Expanded Traits, Civics, Pops, and More
-					has_valid_civic = civic_infestation
 					# Ethical Gestalts
 					has_valid_civic = civic_hive_assimilator
 				}
@@ -172,8 +170,6 @@ can_add_claim = {
 				NOR = {
 					is_homicidal = yes
 					has_valid_civic = civic_machine_assimilator
-					# Expanded Traits, Civics, Pops, and More
-					has_valid_civic = civic_infestation
 					# Ethical Gestalts
 					has_valid_civic = civic_hive_assimilator
 				}

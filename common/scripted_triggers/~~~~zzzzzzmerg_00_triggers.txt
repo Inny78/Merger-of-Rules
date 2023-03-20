@@ -12,7 +12,6 @@ uninhabitable_regular_planet = {
 }
 
 colonizable_planet = {
-	optimize_memory
 	OR = {
 		merg_is_relic_world = yes
 		merg_is_arcology = yes
@@ -251,27 +250,7 @@ is_valid_target_fe_stop_atrocities = {
 }
 
 is_regular_empire = {
-	optimize_memory
-	OR = {
-		is_country_type = default
-		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire
-		# Ethics & Civics Infinity
-		is_country_type = uo_une_member_active
-		# Human Fallen Empires
-		is_country_type = hfe_fallen
-		is_country_type = hfe_pirate
-		# Merger of Rules
-		# prevents these special countries from destroying their own buildings and districts in their colonies
-		is_country_type = gate_builders
-		is_country_type = awakened_marauders
-		# The Empty Vagrant
-		is_country_type = default_ev
-		is_country_type = fallen_empire_ev
-		is_country_type = awakened_fallen_empire_ev
-		# ZOFE
-		is_zofe_country = yes
-	}
+	merg_is_standard_empire = yes
 	is_gestalt = no
 }
 
@@ -283,7 +262,6 @@ is_regular_empire_or_primitive = {
 }
 
 is_megacorp = {
-	optimize_memory
 	OR = {
 		has_authority = auth_corporate
 		has_valid_civic = civic_galactic_sovereign_megacorp
@@ -468,16 +446,12 @@ has_total_war_cb = {
 				is_country_type = awakened_fallen_empire
 				is_homicidal = yes
 				has_valid_civic = civic_machine_assimilator
-				# Expanded Traits, Civics, Pops, and More
-				has_valid_civic = civic_infestation
 			}
 			from = {
 				OR = {
 					merg_is_awakened_fe = yes
 					is_homicidal = yes
 					has_valid_civic = civic_machine_assimilator
-					# Expanded Traits, Civics, Pops, and More
-					has_valid_civic = civic_infestation
 					# ACOT
 					is_progenitor_empires = yes
 				}

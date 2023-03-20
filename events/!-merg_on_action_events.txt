@@ -27,7 +27,7 @@ event = {
 					has_ground_combat = no
 					owner = {
 						OR = {
-							is_country_type = default
+							merg_is_default_empire = yes
 							is_fallen_empire = yes
 						}
 					}
@@ -59,7 +59,7 @@ event = {
 								owner = {
 									NOT = { is_same_empire = prevprevprev.owner }
 									OR = {
-										is_country_type = default
+										merg_is_default_empire = yes
 										is_fallen_empire = yes
 									}
 									OR = {
@@ -98,7 +98,7 @@ event = {
 											has_country_flag = former_owner@prev
 										}
 										OR = {
-											is_country_type = default
+											merg_is_default_empire = yes
 											is_fallen_empire = yes
 										}
 									}
@@ -118,7 +118,7 @@ event = {
 					has_ground_combat = no
 					owner = {
 						OR = {
-							is_country_type = default
+							merg_is_default_empire = yes
 							is_fallen_empire = yes
 						}
 					}
@@ -150,7 +150,7 @@ event = {
 								owner = {
 									NOT = { is_same_empire = prevprevprev.owner }
 									OR = {
-										is_country_type = default
+										merg_is_default_empire = yes
 										is_fallen_empire = yes
 									}
 									OR = {
@@ -189,7 +189,7 @@ event = {
 											has_country_flag = former_owner@prev
 										}
 										OR = {
-											is_country_type = default
+											merg_is_default_empire = yes
 											is_fallen_empire = yes
 										}
 									}
