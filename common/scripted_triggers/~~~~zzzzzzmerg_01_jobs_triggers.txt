@@ -1,6 +1,5 @@
 # Vanilla scripted triggers from 01_scripted_triggers_jobs.txt
 complex_specialist_job_check_trigger = {
-	optimize_memory
 	hidden_trigger = {
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
 		NOR = {

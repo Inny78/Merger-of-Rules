@@ -1146,31 +1146,6 @@ gpm_has_required_terraform_modifier = {
 gpm_is_country_type_default = { merg_is_default_empire = yes }
 gpm_is_country_type_awakened_fallen_empire = { merg_is_awakened_fe = yes }
 
-############################### Scripted Trigger Undercoat ###############################
-is_empire = {
-	optimize_memory
-	merg_is_standard_empire = yes
-}
-is_playable = {
-	optimize_memory
-	merg_is_default_empire = yes
-}
-is_planet_city = {
-	optimize_memory
-	merg_is_arcology = yes
-}
-planet_gives_aquatics_bonus = {
-	optimize_memory
-	OR = {
-		merg_is_ocean = yes
-		has_modifier = flooded_habitat
-	}
-}
-is_shielded = {
-	optimize_memory
-	merg_is_shielded = yes
-}
-
 ############################### Expanded Events ###############################
 is_regular_star = {
 	optimize_memory
