@@ -3505,14 +3505,19 @@ can_build_branch_office_on_planet = {
 			}
 		}
 	}
-	# Civic: Organic Zealots
+	# Civic: Organic Zealots 
 	custom_tooltip = {
 		fail_text = requires_recipient_not_organic_zealots
-		exists = owner
-		owner = {
-			OR = {
-				NOT = { is_organic_zealots = no }
-				root = { is_robot_empire = no }
+		OR = {
+			merg_has_organic_zealots = no
+			AND = {
+				exists = owner
+				owner = {
+					OR = {
+						NOT = { is_organic_zealots = no }
+						root = { is_robot_empire = no }
+					}
+				}
 			}
 		}
 	}

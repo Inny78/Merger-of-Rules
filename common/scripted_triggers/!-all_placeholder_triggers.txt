@@ -50,6 +50,7 @@ has_ethical_gestalts = { always = no }
 has_gigastructures = { always = no }
 has_mod_reproductive_tech_and_politics = { always = no }
 has_more_authorities_triggers = { always = no }
+has_civic_organic_zealots_active = { always = no }
 has_planetary_diversity = { always = no }
 has_planetary_diversity_planetaryhabitats = { always = no }
 has_reproductive_politics = { always = no }
