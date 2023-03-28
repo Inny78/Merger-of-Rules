@@ -46,3 +46,47 @@ districts_good_food = {
 		}
 	}
 }
+
+jobs_any_research = {
+	planet = {
+		any_owned_pop = {
+			OR = {
+				has_job = head_researcher
+				has_job = researcher
+				has_job = brain_drone
+				has_job = calculator
+				has_job = dimensional_portal_researcher
+				has_job = dimensional_portal_researcher_gestalt
+				has_job = space_time_anomaly_researcher
+				has_job = space_time_anomaly_researcher_gestalt
+				has_job = necromancer
+				has_job = xeno_zoo_keeper
+				has_job = head_researcher
+				# ACOT
+				has_job = acot_researcher
+				has_job = acot_researcher_drone
+				has_job = acot_priest
+				has_job = acot_voidsphere_labman
+				has_job = acot_voidsphere_labdrone
+				has_job = acot_free_thinker
+				# AOT
+				has_job = ae_researcher
+				has_job = ae_researcher_drone
+				has_job = phanon_researcher
+				has_job = phanon_researcher_drone
+				has_job = phanon_priest
+				has_job = stellarite_researcher
+				has_job = stellarite_researcher_drone
+				has_job = stellarite_priest
+				has_job = stellarite_bureaucrat
+				# GPM
+				has_job = gpm_archaeologist
+				has_job = gpm_archaeologist_drone
+				has_job = gpm_precursor_archaeologist
+				has_job = gpm_precursor_archaeologist_drone
+				has_job = gpm_orbital_researcher
+				has_job = gpm_orbital_researcher_drone
+			}
+		}
+	}
+}

@@ -137,3 +137,61 @@ is_organic_species = {
 		}
 	}
 }
+
+has_sr_producing_job = {
+	OR = {
+		has_job = mote_harvester
+		has_job = mote_harvesting_drone
+		has_job = chemist
+		has_job = chemist_drone
+		has_job = gas_extractor
+		has_job = gas_extraction_drone
+		has_job = gas_refiner
+		has_job = gas_refiner_drone
+		has_job = crystal_miner
+		has_job = crystal_mining_drone
+		has_job = translucer
+		has_job = translucer_drone
+		# ACOT
+		has_job = acot_transmute_drone
+	}
+}
+
+has_research_job = {
+	OR = {
+		has_job = researcher
+		has_job = brain_drone
+		has_job = calculator
+		has_job = dimensional_portal_researcher
+		has_job = dimensional_portal_researcher_gestalt
+		has_job = space_time_anomaly_researcher
+		has_job = space_time_anomaly_researcher_gestalt
+		has_job = necromancer
+		has_job = xeno_zoo_keeper
+		has_job = head_researcher
+		# ACOT
+		has_job = acot_researcher
+		has_job = acot_researcher_drone
+		has_job = acot_priest
+		has_job = acot_voidsphere_labman
+		has_job = acot_voidsphere_labdrone
+		has_job = acot_free_thinker
+		# AOT
+		has_job = ae_researcher
+		has_job = ae_researcher_drone
+		has_job = phanon_researcher
+		has_job = phanon_researcher_drone
+		has_job = phanon_priest
+		has_job = stellarite_researcher
+		has_job = stellarite_researcher_drone
+		has_job = stellarite_priest
+		has_job = stellarite_bureaucrat
+		# GPM
+		has_job = gpm_archaeologist
+		has_job = gpm_archaeologist_drone
+		has_job = gpm_precursor_archaeologist
+		has_job = gpm_precursor_archaeologist_drone
+		has_job = gpm_orbital_researcher
+		has_job = gpm_orbital_researcher_drone
+	}
+}

@@ -271,9 +271,9 @@ is_megacorp = {
 		# Expanded Traits, Civics, Pops, and More
 		has_authority = auth_private
 		has_authority = auth_cooperative		# Also More Corporate Authorities
-		# More Authorities
-		has_government = gov_imperial_domain_megacorp
+		# More Authorities/E&C FunEFork
 		has_authority = auth_corporate_imperial
+		has_government = gov_imperial_domain_megacorp
 		# More Corporate Authorities
 		has_authority = auth_corporate_fiefdom
 		# Warship Girls R And MIST Species
@@ -330,11 +330,11 @@ is_democracy = {
 			merg_has_expanded_pops = no
 			has_more_authorities_triggers = no
 		}
-		# More Authorities
+		# More Authorities/E&C FunEFork
 		has_authority = auth_strict_democratic
 		has_authority = auth_direct_democratic		# Also used by Stellaris Evolved
 		AND = {
-			has_authority = auth_democratic_dictatorship
+			has_authority = auth_dict_democratic
 			is_egalitarian = yes
 		}
 		# Expanded Traits, Civics, Pops, and More

@@ -191,6 +191,9 @@ merg_has_stellaris_evolved = { has_global_flag = stellarisevolved }
 # ThaumStellaris
 merg_has_thaumstellaris = { has_global_flag = thaumstellaris_initialize }
 
+# The Belt
+merg_has_the_belt = { is_the_belt_active = yes }
+
 # The Empty Vagrant
 merg_has_empty_vagrant = { has_global_flag = enable_empty_vagrant_mod }
 

@@ -1070,6 +1070,21 @@ can_colonize_planet = {
 		}
 		always = no
 	}
+	# The Belt
+	else_if = {
+		limit = { merg_has_the_belt = yes }
+		OR = {
+			AND = {
+				NOT = { has_global_flag = xenos_disable_mechanics_asteroid_colonizing }
+				bdoe_is_habitable_asteroid = yes
+				root = { has_technology = tech_bdoe_asteroid_adaption_0 }
+			}
+			AND = {
+				bdoe_is_habitable_barren = yes
+				root = { has_technology = tech_bdoe_secondary_planets_adaption_0 }
+			}
+		}
+	}
 	# Vanilla
 	else = { always = yes }
 }
@@ -2842,77 +2857,86 @@ can_enter_system_by_jump = {
 						has_star_flag = sealed_system
 					}
 				}
-				# Clusters and forbidden systems
-				NOR = {
-					has_star_flag = lcluster
-					# Ancient Empire
-					has_star_flag = ag_no_jump_in_system
-					# ACOT
-					has_star_flag = outercluster
-					# Warship Girls R And MIST Species
-					has_star_flag = wg_sealed_system
-					has_star_flag = wg_psionic_systems
-					# SW:Kuat Ancient Empire
-					has_star_flag = Kuat_system
-					has_star_flag = Kuat_system_1
-					has_star_flag = Kuat_system_2
-					has_star_flag = Kuat_system_3
-					has_star_flag = kuat_initial_system
-					has_star_flag = Kuat_system_int
-					has_star_flag = Kuat_system_int_1
-					has_star_flag = Kuat_system_int_2
-					has_star_flag = Kuat_system_int_3
-					has_star_flag = Kuat_system_int_4
-					AND = {
-						has_global_flag = starkillerbase_not_passed
-						has_star_flag = starkiller_system
+				OR = {
+					# Clusters and forbidden systems
+					NOR = {
+						has_star_flag = lcluster
+						# Ancient Empire
+						has_star_flag = ag_no_jump_in_system
+						# ACOT
+						has_star_flag = outercluster
+						# Warship Girls R And MIST Species
+						has_star_flag = wg_sealed_system
+						has_star_flag = wg_psionic_systems
+						# SW:Kuat Ancient Empire
+						has_star_flag = Kuat_system
+						has_star_flag = Kuat_system_1
+						has_star_flag = Kuat_system_2
+						has_star_flag = Kuat_system_3
+						has_star_flag = kuat_initial_system
+						has_star_flag = Kuat_system_int
+						has_star_flag = Kuat_system_int_1
+						has_star_flag = Kuat_system_int_2
+						has_star_flag = Kuat_system_int_3
+						has_star_flag = Kuat_system_int_4
+						AND = {
+							has_global_flag = starkillerbase_not_passed
+							has_star_flag = starkiller_system
+						}
+						# Gigastructural Engineering and More
+						has_star_flag = ehof_compound_system
+						has_star_flag = giga_core_03
+						cohesive_system = yes
+						urmazin_system = yes
+						everchanging_system = yes
+						katzen_jump_blocked_system = yes
+						has_star_flag = maginot_anti_jump_star
+						has_star_flag = siegfried_anti_jump_star
+						# Some Events of Outside Cluster
+						has_star_flag = nep_Krahen_cluster
+						has_star_flag = nep_Scrus_cluster
+						AND = {
+							has_global_flag = nep_not_pass_Aemethms
+							OR = {
+								has_star_flag = nep_dragon_system
+								has_star_flag = nep_heptagram_cluster
+							}
+						}
+						has_star_flag = nep_arena
+						# THE ABYSS CONTRACT
+						has_star_flag = TAC_ag_signal_system
+						# Assault Lily
+						has_star_flag = al_huge_home_bed
+						# BlueArchive
+						has_star_flag = BA_FE_SYS
+						# Origin Beings
+						has_star_flag = darhmod_seres_home_system
+						has_star_flag = sealed_seres_system
+						has_star_flag = seres_lcluster_spawned
+						has_star_flag = ftl_spawned
+						has_star_flag = su_lu_station_system
+						has_star_flag = su_spawned
+						has_star_flag = god_route_seres_star
+						AND = {
+							merg_has_origin_beings = yes
+							OR = {
+								has_star_flag = vultaumar
+								has_star_flag = yuhtaan
+								has_star_flag = fen_habbanis
+								has_star_flag = irass
+								has_star_flag = cybrex
+								has_star_flag = last_baol_system
+								has_star_flag = Zrocursor
+							}
+						}	
 					}
 					# Gigastructural Engineering and More
-					has_star_flag = ehof_compound_system
-					has_star_flag = giga_core_03
-					cohesive_system = yes
-					urmazin_system = yes
-					everchanging_system = yes
-					katzen_jump_blocked_system = yes
-					has_star_flag = maginot_anti_jump_star
-					has_star_flag = siegfried_anti_jump_star
-					# Some Events of Outside Cluster
-					has_star_flag = nep_Krahen_cluster
-					has_star_flag = nep_Scrus_cluster
+					# This is gonna be a bit annoying, BUT it needs to be done for eager explorers
 					AND = {
-						has_global_flag = nep_not_pass_Aemethms
-						OR = {
-							has_star_flag = nep_dragon_system
-							has_star_flag = nep_heptagram_cluster
-						}
+						cohesive_system = yes
+						ROOT = { is_eager_explorer_empire = yes }
+						has_star_flag = ehof_system_created_by_@root
 					}
-					has_star_flag = nep_arena
-					# THE ABYSS CONTRACT
-					has_star_flag = TAC_ag_signal_system
-					# Assault Lily
-					has_star_flag = al_huge_home_bed
-					# BlueArchive
-					has_star_flag = BA_FE_SYS
-					# Origin Beings
-					has_star_flag = darhmod_seres_home_system
-					has_star_flag = sealed_seres_system
-					has_star_flag = seres_lcluster_spawned
-					has_star_flag = ftl_spawned
-					has_star_flag = su_lu_station_system
-					has_star_flag = su_spawned
-					has_star_flag = god_route_seres_star
-					AND = {
-						merg_has_origin_beings = yes
-						OR = {
-							has_star_flag = vultaumar
-							has_star_flag = yuhtaan
-							has_star_flag = fen_habbanis
-							has_star_flag = irass
-							has_star_flag = cybrex
-							has_star_flag = last_baol_system
-							has_star_flag = Zrocursor
-						}
-					}	
 				}
 			}
 			# Reworked Advanced Ascension
