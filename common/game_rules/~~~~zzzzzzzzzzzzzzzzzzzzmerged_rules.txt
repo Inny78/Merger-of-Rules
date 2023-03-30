@@ -1023,6 +1023,15 @@ can_take_hostile_actions = {
 			always = no
 		}
 	}
+	# BlueArchive
+	else_if = {
+		limit = {
+			from = {
+				has_country_flag = BA_Precursor_contactor
+			}
+		}
+		always = no
+	}
 	# Vanilla
 	else = { always = yes }
 }
@@ -1718,18 +1727,16 @@ can_species_be_assembled = {
 					}
 				}
 			}
-			# Girls Frontline
-			if = {
-				limit = { has_trait = GF_trait_doll }
-				root.owner = {
-					GF_can_build_doll_species = yes
-				}
-			}
 			# Voyage to Eternity
-			else_if = {
+			OR = {
+				KZ_VOY_MOD = no
+				KZ_VOY_trgr_plnt_ASSEMBLY = yes
+			}
+			if = {
 				limit = { has_trait = trait_KZ_VOY_magic_puppet }
 				KZ_VOY_can_assemble_magic_puppet = yes
 			}
+			# Wandering Witch
 			else_if = {
 				limit = { has_trait = trait_dummy }
 				if = {
@@ -1751,6 +1758,13 @@ can_species_be_assembled = {
 					root.owner = { has_technology = tech_dummy_workers }
 					root = { num_assigned_jobs = { job = dummicist value > 0 } }
 					root = { check_modifier_value = { modifier = planet_pop_assembly_add value > 0 } }
+				}
+			}
+			# Girls Frontline
+			else_if = {
+				limit = { has_trait = GF_trait_doll }
+				root.owner = {
+					GF_can_build_doll_species = yes
 				}
 			}
 			# Vanilla
@@ -2061,6 +2075,7 @@ can_species_be_assembled = {
 		root = { owner = { has_valid_civic = civic_machine_replicators } }
 		has_trait = trait_machine_central
 	}
+	# Voyage to Eternity
 	if = {
 		limit = { 
 			OR = {

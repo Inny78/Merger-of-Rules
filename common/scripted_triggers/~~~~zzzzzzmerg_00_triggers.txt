@@ -1098,7 +1098,7 @@ is_special_colony_type = {
 		has_modifier = resort_colony
 		has_modifier = slave_colony
 		# District Overhaul
-		has_modifier = bdoe_cemetary_world
+		has_modifier = bdoe_cemetery_world
 		has_modifier = bdoe_storage_world
 		has_modifier = bdoe_waste_world
 		has_modifier = bdoe_feudal_world

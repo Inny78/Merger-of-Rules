@@ -10,6 +10,8 @@ tech_ariphaos_sensors_pulsar = { cost = 0 area = physics category = { computing 
 tech_ariphaos_sensors_sealed = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_sensor_expansion = yes } }
 tech_ariphaos_sensors_wormhole = { cost = 0 area = physics category = { particles } tier = 4 potential = { merg_has_sensor_expansion = yes } }
 tech_advanced_dummy_workers = { cost = 0 area = engineering category = { industry } tier = 2 potential = { merg_has_wandering_witch = yes } }
+tech_bdoe_asteroid_adaption_0 = { cost = 0 area = society category = { new_worlds } tier = 2 potential = { merg_has_the_belt = yes } }
+tech_bdoe_secondary_planets_adaption_0 = { cost = 0 area = society category = { new_worlds } tier = 3 potential = { merg_has_the_belt = yes } }
 tech_dummy_leaders = { cost = 0 area = engineering category = { industry } tier = 4 potential = { merg_has_wandering_witch = yes } }
 tech_dummy_workers = { cost = 0 area = engineering category = { industry } tier = 1 potential = { merg_has_wandering_witch = yes } }
 tech_pdhabitat_2 = { cost = 0 area = engineering category = { voidcraft } tier = 2 potential = { merg_has_pd_planetary_habitats = yes } }

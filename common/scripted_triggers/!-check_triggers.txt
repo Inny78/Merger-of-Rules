@@ -128,8 +128,8 @@ merg_has_origin_beings = { has_global_flag = darhmod_precursor_seres }
 # Star Wars: Kuat Ancient Empire
 merg_has_kuat = { has_global_flag = install_kuat_mod }
 
-# More Authorities
-merg_has_more_authorities = { OR = { has_global_flag = more_authorities_activated has_more_authorities_triggers = yes } }
+# More Authorities/Ethics and Civics Alternative - FunEFork
+merg_has_more_authorities = { OR = { has_global_flag = more_authorities_activated has_ecaf_triggers = yes } }
 
 # More Corporate Authorities
 merg_has_mca = { has_global_flag = using_mod_more_corporate_authorities }
