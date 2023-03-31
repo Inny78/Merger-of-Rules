@@ -2073,7 +2073,13 @@ can_species_be_assembled = {
 		# Steven Universe Homeworld Gems
 		has_trait = trait_geoloid
 		# Voyage to Eternity
-		KZ_VOY_trgr_plnt_CLONE = yes
+		OR = {
+			KZ_VOY_MOD = no
+			AND = {
+				KZ_VOY_MOD = yes
+				KZ_VOY_trgr_plnt_CLONE = yes
+			}
+		}
 	}
 	# Expanded Gestalts
 	NAND = {
@@ -2081,14 +2087,17 @@ can_species_be_assembled = {
 		has_trait = trait_machine_central
 	}
 	# Voyage to Eternity
-	if = {
-		limit = { 
-			OR = {
-				has_trait = trait_KZ_VOY_sub_terran_dragon
-				has_trait = trait_KZ_VOY_sub_terran_dragon_SP
+	OR = {
+		KZ_VOY_MOD = no
+		if = {
+			limit = { 
+				OR = {
+					has_trait = trait_KZ_VOY_sub_terran_dragon
+					has_trait = trait_KZ_VOY_sub_terran_dragon_SP
+				}
 			}
+			KZ_VOY_trgr_plnt_CLONE = yes
 		}
-		KZ_VOY_trgr_plnt_CLONE = yes
 	}
 	# Vanilla
 	has_population_control = { country = root.owner type = no }

@@ -1901,10 +1901,7 @@ is_bugged_starbase = {
 	OR = {
 		has_starbase_size >= starbase_starport
 		# ACOT/AOT/SOTS
-		has_starbase_size >= acot_precusor_starbase
-		has_starbase_size >= acot_precusor_sigma_starbase
-		has_starbase_size >= acot_precusor_phanon_starcitadel
-		has_starbase_size >= acot_precusor_theta_starcitadel
+		is_precursor_starbase = yes
 	}
 }
 
