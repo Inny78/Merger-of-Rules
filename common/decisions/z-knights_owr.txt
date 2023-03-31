@@ -40,6 +40,10 @@ decision_consecrated_worlds = {
 			NOT = { exists = owner }
 			fail_text = consecrated_worlds_planet_owned
 		}
+		NOR = {
+			has_modifier = delicate_ecosystem
+			has_modifier = eco_fragile_ecosystem
+		}
 	}
 
 	effect = {

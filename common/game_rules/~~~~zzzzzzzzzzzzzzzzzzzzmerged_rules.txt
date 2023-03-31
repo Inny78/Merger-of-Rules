@@ -1730,7 +1730,10 @@ can_species_be_assembled = {
 			# Voyage to Eternity
 			OR = {
 				KZ_VOY_MOD = no
-				KZ_VOY_trgr_plnt_ASSEMBLY = yes
+				AND = {
+					KZ_VOY_MOD = yes
+					KZ_VOY_trgr_plnt_ASSEMBLY = yes
+				}
 			}
 			if = {
 				limit = { has_trait = trait_KZ_VOY_magic_puppet }
@@ -1768,28 +1771,30 @@ can_species_be_assembled = {
 				}
 			}
 			# Vanilla
-			root = {
-				check_modifier_value = {
-					modifier = planet_pop_assembly_add
-					value > 0
-				}
-				owner = {
-					NOR = {
-						# Azur lane Stellaris DLC
-						has_authority = auth_azur_lane_1
-						has_authority = auth_azur_lane_2
-						has_authority = auth_azur_lane_K
-						# Civic: Organic Zealots
-						AND = {
-							has_policy_flag = robots_outlawed
-							is_robot_empire = no
-						}
-						has_country_flag = lost_robot_policy_war
-						is_valid_organic_zealots = yes
-						AND = {
-							is_subject = yes
-							exists = overlord
-							overlord = { is_valid_organic_zealots = yes }
+			else = {
+				root = {
+					check_modifier_value = {
+						modifier = planet_pop_assembly_add
+						value > 0
+					}
+					owner = {
+						NOR = {
+							# Azur lane Stellaris DLC
+							has_authority = auth_azur_lane_1
+							has_authority = auth_azur_lane_2
+							has_authority = auth_azur_lane_K
+							# Civic: Organic Zealots
+							AND = {
+								has_policy_flag = robots_outlawed
+								is_robot_empire = no
+							}
+							has_country_flag = lost_robot_policy_war
+							is_valid_organic_zealots = yes
+							AND = {
+								is_subject = yes
+								exists = overlord
+								overlord = { is_valid_organic_zealots = yes }
+							}
 						}
 					}
 				}

@@ -2,7 +2,9 @@
 # Irony this is a placeholder file please ignore it
 apocalypse = {}
 catastrophe_approach = {}
+delicate_ecosystem = {}
 deteriorating_ecosystem = {}
+eco_fragile_ecosystem = {}
 mzilli_decaying_moon_3 = {}
 mzilli_events_dying_world = {}
 pdammoniaatmosphere = {}
