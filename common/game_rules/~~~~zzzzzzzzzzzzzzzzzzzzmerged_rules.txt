@@ -1079,14 +1079,38 @@ can_colonize_planet = {
 	else_if = {
 		limit = { merg_has_the_belt = yes }
 		OR = {
-			AND = {
-				NOT = { has_global_flag = xenos_disable_mechanics_asteroid_colonizing }
-				bdoe_is_habitable_asteroid = yes
-				root = { has_technology = tech_bdoe_asteroid_adaption_0 }
+			NOR = {
+				is_planet_class = pc_bdoe_habitable_asteroid
+				is_planet_class = pc_bdoe_habitable_ice_asteroid
+				is_planet_class = pc_bdoe_habitable_crystal_asteroid
+				is_planet_class = pc_bdoe_molten_habitable
+				is_planet_class = pc_bdoe_barren_habitable
+				is_planet_class = pc_bdoe_barren_cold_habitable
+				is_planet_class = pc_bdoe_toxic_habitable
+				is_planet_class = pc_bdoe_frozen_habitable
 			}
 			AND = {
-				bdoe_is_habitable_barren = yes
-				root = { has_technology = tech_bdoe_secondary_planets_adaption_0 }
+				OR = {
+					is_planet_class = pc_bdoe_habitable_asteroid
+					is_planet_class = pc_bdoe_habitable_ice_asteroid
+					is_planet_class = pc_bdoe_habitable_crystal_asteroid
+				}
+				root = {
+					has_technology = tech_bdoe_asteroid_adaption_0
+				}
+				NOT = { has_global_flag = xenos_disable_mechanics_asteroid_colonizing }
+			}
+			AND = {
+				OR = {
+					is_planet_class = pc_bdoe_molten_habitable
+					is_planet_class = pc_bdoe_barren_habitable
+					is_planet_class = pc_bdoe_barren_cold_habitable
+					is_planet_class = pc_bdoe_toxic_habitable
+					is_planet_class = pc_bdoe_frozen_habitable
+				}
+				root = {
+					has_technology = tech_bdoe_secondary_planets_adaption_0
+				}
 			}
 		}
 	}
@@ -1730,34 +1754,6 @@ can_species_be_assembled = {
 					GF_can_build_doll_species = yes
 				}
 			}
-			# Voyage to Eternity
-			else_if = {
-				limit = { has_trait = trait_KZ_VOY_magic_puppet }
-				KZ_VOY_can_assemble_magic_puppet = yes
-			}
-			else_if = {
-				limit = { has_trait = trait_dummy }
-				if = {
-					limit = { # Restrictions for Junkyard Princesses Origin
-						root.owner = { has_origin = origin_garbage_princesses  }
-					}
-					root = { 
-						OR = {
-							has_building = building_enigmatic_assembly_plant
-							num_assigned_jobs = {
-								job = dummicist
-								value > 0
-							}
-						}
-						check_modifier_value = { modifier = planet_pop_assembly_add value > 0 }
-					}
-				}
-				else = {
-					root.owner = { has_technology = tech_dummy_workers }
-					root = { num_assigned_jobs = { job = dummicist value > 0 } }
-					root = { check_modifier_value = { modifier = planet_pop_assembly_add value > 0 } }
-				}
-			}
 			# Vanilla
 			root = {
 				check_modifier_value = {
@@ -2058,8 +2054,6 @@ can_species_be_assembled = {
 		}
 		# Steven Universe Homeworld Gems
 		has_trait = trait_geoloid
-		# Voyage to Eternity
-		KZ_VOY_trgr_plnt_CLONE = yes
 	}
 	# Expanded Gestalts
 	NAND = {
