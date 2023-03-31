@@ -802,6 +802,13 @@ can_take_hostile_actions = {
 			always = no
 		}
 	}
+	# BlueArchive
+	else_if = {
+		limit = {
+			from = { has_country_flag = BA_Precursor_contactor }
+			always = no
+		}
+	}
 	# Origins of Civilization
 	else_if = {
 		limit = {
@@ -846,9 +853,7 @@ can_take_hostile_actions = {
 			capital_scope = {
 				root = {
 					NOT = {
-						any_planet_within_border = {
-							is_same_value = prevprev
-						}
+						any_planet_within_border = { is_same_value = prevprev }
 					}
 				}
 			}
@@ -1022,15 +1027,6 @@ can_take_hostile_actions = {
 			text = "CAN_TAKE_HOSTILE_ACTION_NEP_HOLOGRAM"
 			always = no
 		}
-	}
-	# BlueArchive
-	else_if = {
-		limit = {
-			from = {
-				has_country_flag = BA_Precursor_contactor
-			}
-		}
-		always = no
 	}
 	# Vanilla
 	else = { always = yes }
@@ -1727,19 +1723,18 @@ can_species_be_assembled = {
 					}
 				}
 			}
-			# Voyage to Eternity
-			OR = {
-				KZ_VOY_MOD = no
-				AND = {
-					KZ_VOY_MOD = yes
-					KZ_VOY_trgr_plnt_ASSEMBLY = yes
+			# Girls Frontline
+			if = {
+				limit = { has_trait = GF_trait_doll }
+				root.owner = {
+					GF_can_build_doll_species = yes
 				}
 			}
-			if = {
+			# Voyage to Eternity
+			else_if = {
 				limit = { has_trait = trait_KZ_VOY_magic_puppet }
 				KZ_VOY_can_assemble_magic_puppet = yes
 			}
-			# Wandering Witch
 			else_if = {
 				limit = { has_trait = trait_dummy }
 				if = {
@@ -1763,38 +1758,29 @@ can_species_be_assembled = {
 					root = { check_modifier_value = { modifier = planet_pop_assembly_add value > 0 } }
 				}
 			}
-			# Girls Frontline
-			else_if = {
-				limit = { has_trait = GF_trait_doll }
-				root.owner = {
-					GF_can_build_doll_species = yes
-				}
-			}
 			# Vanilla
-			else = {
-				root = {
-					check_modifier_value = {
-						modifier = planet_pop_assembly_add
-						value > 0
-					}
-					owner = {
-						NOR = {
-							# Azur lane Stellaris DLC
-							has_authority = auth_azur_lane_1
-							has_authority = auth_azur_lane_2
-							has_authority = auth_azur_lane_K
-							# Civic: Organic Zealots
-							AND = {
-								has_policy_flag = robots_outlawed
-								is_robot_empire = no
-							}
-							has_country_flag = lost_robot_policy_war
-							is_valid_organic_zealots = yes
-							AND = {
-								is_subject = yes
-								exists = overlord
-								overlord = { is_valid_organic_zealots = yes }
-							}
+			root = {
+				check_modifier_value = {
+					modifier = planet_pop_assembly_add
+					value > 0
+				}
+				owner = {
+					NOR = {
+						# Azur lane Stellaris DLC
+						has_authority = auth_azur_lane_1
+						has_authority = auth_azur_lane_2
+						has_authority = auth_azur_lane_K
+						# Civic: Organic Zealots
+						AND = {
+							has_policy_flag = robots_outlawed
+							is_robot_empire = no
+						}
+						has_country_flag = lost_robot_policy_war
+						is_valid_organic_zealots = yes
+						AND = {
+							is_subject = yes
+							exists = overlord
+							overlord = { is_valid_organic_zealots = yes }
 						}
 					}
 				}
@@ -2073,31 +2059,21 @@ can_species_be_assembled = {
 		# Steven Universe Homeworld Gems
 		has_trait = trait_geoloid
 		# Voyage to Eternity
-		OR = {
-			KZ_VOY_MOD = no
-			AND = {
-				KZ_VOY_MOD = yes
-				KZ_VOY_trgr_plnt_CLONE = yes
-			}
-		}
+		KZ_VOY_trgr_plnt_CLONE = yes
 	}
 	# Expanded Gestalts
 	NAND = {
 		root = { owner = { has_valid_civic = civic_machine_replicators } }
 		has_trait = trait_machine_central
 	}
-	# Voyage to Eternity
-	OR = {
-		KZ_VOY_MOD = no
-		if = {
-			limit = { 
-				OR = {
-					has_trait = trait_KZ_VOY_sub_terran_dragon
-					has_trait = trait_KZ_VOY_sub_terran_dragon_SP
-				}
+	if = {
+		limit = { 
+			OR = {
+				has_trait = trait_KZ_VOY_sub_terran_dragon
+				has_trait = trait_KZ_VOY_sub_terran_dragon_SP
 			}
-			KZ_VOY_trgr_plnt_CLONE = yes
 		}
+		KZ_VOY_trgr_plnt_CLONE = yes
 	}
 	# Vanilla
 	has_population_control = { country = root.owner type = no }
