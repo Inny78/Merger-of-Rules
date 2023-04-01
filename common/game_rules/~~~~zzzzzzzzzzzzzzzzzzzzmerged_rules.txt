@@ -1754,6 +1754,50 @@ can_species_be_assembled = {
 					GF_can_build_doll_species = yes
 				}
 			}
+			# Wandering Witch
+			if = { limit = { has_trait = trait_dummy }
+				if = { limit = { root.owner = { has_origin = origin_garbage_princesses } }
+					root = { 
+						OR = {
+							has_building = building_enigmatic_assembly_plant
+							num_assigned_jobs = {
+								job = dummicist
+								value > 0
+							}
+						}
+						check_modifier_value = {
+							modifier = planet_pop_assembly_add
+							value > 0
+						}
+					}
+				}
+				else = {
+					root.owner = { has_technology = tech_dummy_workers }
+					root = {
+						num_assigned_jobs = {
+							job = dummicist
+							value > 0
+						}
+					}
+					root = {
+						check_modifier_value = {
+							modifier = planet_pop_assembly_add
+							value > 0
+						}
+					}
+				}
+			}
+			# Voyage to Eternity
+			OR = {
+				merg_has_voyage_eternity = no
+				AND = {
+					merg_has_voyage_eternity = yes
+					KZ_VOY_trgr_plnt_ASSEMBLY = yes
+				}
+			}
+			else_if = { limit = { has_trait = trait_KZ_VOY_magic_puppet }
+				KZ_VOY_can_assemble_magic_puppet = yes
+			}
 			# Vanilla
 			root = {
 				check_modifier_value = {
@@ -2059,6 +2103,13 @@ can_species_be_assembled = {
 	NAND = {
 		root = { owner = { has_valid_civic = civic_machine_replicators } }
 		has_trait = trait_machine_central
+	}
+	OR = {
+		merg_has_voyage_eternity = no
+		AND = {
+			merg_has_voyage_eternity = yes
+			KZ_VOY_trgr_plnt_CLONE = yes
+		}
 	}
 	if = {
 		limit = { 

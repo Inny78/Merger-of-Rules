@@ -11,7 +11,7 @@ merg_has_deadly_tempest = { has_global_flag = a_deadly_tempest_mod_active }
 merg_has_aot = { has_global_flag = has_aot_mod }
 
 # Ancient Cache of Technologies 1419304439
-merg_has_acot = { OR = { has_global_flag = acot_activated has_acot = yes } }
+merg_has_acot = { has_acot = yes }
 
 # Ancient Cache of Technologies : Secrets Beyond The Gates 1481972266
 merg_has_sofe = { has_global_flag = sofe_activated }
@@ -62,7 +62,7 @@ merg_has_espionage_extended = { has_global_flag = has_mod_espionage_extended }
 merg_has_ethical_gestalts = { has_global_flag = using_mod_ethical_gestalts }
 
 # Ethics and Civics Bug Branch 2517213262
-merg_has_ethics_bug = { OR = { has_global_flag = bugbranch_global_flag has_bug_branch = yes } }
+merg_has_ethics_bug = { has_bug_branch = yes }
 
 # Ethics and Civics Classic 1100284147
 merg_has_ethics_classic = { has_global_flag = ethic_civic_classic_active }
@@ -92,7 +92,7 @@ merg_has_gal_imperium = { has_global_flag = imperium_origins_active }
 merg_has_galaxius = { has_global_flag = ie_flag }
 
 # Gigastructural Engineering and More 1121692237
-merg_has_gigastructures = { OR = { has_global_flag = gigastructures_enabled has_gigastructures = yes } }
+merg_has_gigastructures = { has_gigastructures = yes }
 
 # Guilli's Planet Modifiers and Features
 merg_has_gpm = {
@@ -129,7 +129,7 @@ merg_has_origin_beings = { has_global_flag = darhmod_precursor_seres }
 merg_has_kuat = { has_global_flag = install_kuat_mod }
 
 # More Authorities/Ethics and Civics Alternative - FunEFork
-merg_has_more_authorities = { OR = { has_global_flag = more_authorities_activated has_ecaf_triggers = yes } }
+merg_has_more_authorities = { has_ecaf_triggers = yes }
 
 # More Corporate Authorities
 merg_has_mca = { has_global_flag = using_mod_more_corporate_authorities }
@@ -147,10 +147,10 @@ merg_has_nirvana_project = { has_global_flag = nirvana_empire_start }
 merg_has_organic_zealots = { has_civic_organic_zealots_active = yes }
 
 # Planetary Diversity
-merg_has_planetary_diversity = { OR = { has_global_flag = planetarydiversity has_planetary_diversity = yes } }
+merg_has_planetary_diversity = { has_planetary_diversity = yes }
 
 # Planetary Diversity - Planetary Habitats
-merg_has_pd_planetary_habitats = { OR = { has_global_flag = planetarydiversityphabs has_planetary_diversity_planetaryhabitats = yes } }
+merg_has_pd_planetary_habitats = { has_planetary_diversity_planetaryhabitats = yes }
 
 # Powerful & Realistic Orbital Bombardments
 merg_has_power_bombard = { has_global_flag = prob_global_flag }
@@ -205,6 +205,9 @@ merg_has_uap = { has_global_flag = has_uap_mod }
 
 # Vassals Expanded and Reworked
 merg_has_vassals_expanded = { has_global_flag = gf_veru_activated }
+
+# Voyage to Eternity
+merg_has_voyage_eternity = { KZ_VOY_MOD = yes }
 
 # Wandering Witch: Voyagers
 merg_has_wandering_witch = { has_global_flag = has_mod_wwvoyagers }
