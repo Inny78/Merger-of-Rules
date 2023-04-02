@@ -710,6 +710,7 @@ has_enigmatic_capital = {
 				has_building = building_dm_ancient_hive_cluster
 				has_building = building_ae_ancient_hive_cluster
 				has_building = building_phanon_tower
+				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_hive_cluster
@@ -729,6 +730,7 @@ has_enigmatic_capital = {
 				has_building = building_dm_ancient_control_center 
 				has_building = building_ae_ancient_control_center
 				has_building = building_phanon_tower
+				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_control_center
 				has_building = building_phanon_control_center
@@ -749,6 +751,7 @@ has_enigmatic_capital = {
 				has_building = building_dm_ancient_palace
 				has_building = building_ae_ancient_palace
 				has_building = building_phanon_tower
+				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_phanon_palace
@@ -778,6 +781,7 @@ has_ascended_capital = {
 				has_building = building_imperial_hive_capital
 				has_building = building_ae_ancient_hive_cluster
 				has_building = building_phanon_tower
+				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_hive_cluster
@@ -795,6 +799,7 @@ has_ascended_capital = {
 				has_building = building_imperial_machine_capital
 				has_building = building_ae_ancient_control_center
 				has_building = building_phanon_tower
+				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_control_center
 				has_building = building_phanon_control_center
@@ -813,6 +818,7 @@ has_ascended_capital = {
 				has_building = building_imperial_capital
 				has_building = building_ae_ancient_palace
 				has_building = building_phanon_tower
+				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_phanon_palace
@@ -840,6 +846,7 @@ has_stellarite_capital = {
 				# ACOT
 				has_building = building_imperial_hive_capital
 				has_building = building_phanon_tower
+				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_hive_cluster
 				# GALACOT
@@ -855,6 +862,7 @@ has_stellarite_capital = {
 				# ACOT
 				has_building = building_imperial_machine_capital
 				has_building = building_phanon_tower
+				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_control_center
 				# GALACOT
@@ -869,6 +877,7 @@ has_stellarite_capital = {
 				# ACOT
 				has_building = building_imperial_capital
 				has_building = building_phanon_tower
+				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_palace
 				# GALACOT

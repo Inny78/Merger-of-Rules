@@ -6,12 +6,7 @@ merg_is_alpine = {
 		# Planetary Diversity
 		is_pd_alpine = yes
 		# All These Worlds
-		is_planet_class = orbit_alpicothalassic
-		is_planet_class = pc_alpicothalassic
-		is_planet_class = orbit_karsticos
-		is_planet_class = pc_karsticos
-		is_planet_class = orbit_redux
-		is_planet_class = pc_redux
+		atw_is_alpine = yes
 	}
 }
 
@@ -49,12 +44,7 @@ merg_is_arctic = {
 		# Planetary Diversity
 		is_pd_arctic = yes
 		# All These Worlds
-		is_planet_class = orbit_icy
-		is_planet_class = orbit_cryogenian
-		is_planet_class = orbit_geotidal_eyeball
-		is_planet_class = pc_geotidal_eyeball
-		is_planet_class = orbit_hydrocarbonal
-		is_planet_class = pc_hydrocarbonal
+		atw_is_arctic = yes
 	}
 }
 
@@ -64,11 +54,7 @@ merg_is_arid = {
 		# Planetary Diversity
 		is_pd_arid = yes
 		# All These Worlds
-		is_planet_class = orbit_thermogenian
-		is_planet_class = orbit_archean
-		is_planet_class = pc_archean
-		is_planet_class = orbit_agonos
-		is_planet_class = pc_agonos
+		atw_is_arid = yes
 	}
 }
 
@@ -76,8 +62,7 @@ merg_is_barren = {
 	OR = {
 		is_planet_class = pc_barren
 		# All These Worlds
-		is_planet_class = orbit_chthonian
-		is_planet_class = orbit_iron_telluric
+		atw_is_barren = yes
 		# Midas
 		is_planet_class = pc_midas_barren
 		# Planetary Diversity
@@ -92,7 +77,7 @@ merg_is_barren_cold = {
 	OR = {
 		is_planet_class = pc_barren_cold
 		# All These Worlds
-		is_planet_class = orbit_iron_telluric
+		atw_is_barren_cold = yes
 		# Planetary Diversity
 		is_planet_class = pc_diamond
 	}
@@ -104,16 +89,7 @@ merg_is_continental = {
 		# Planetary Diversity
 		is_pd_continental = yes
 		# All These Worlds
-		is_planet_class = orbit_chlorogenian
-		is_planet_class = pc_continental
-		is_planet_class = orbit_panthalassic
-		is_planet_class = pc_panthalassic
-		is_planet_class = orbit_retinalgenian
-		is_planet_class = pc_retinalgenian
-		is_planet_class = orbit_photogenian
-		is_planet_class = pc_photogenian
-		is_planet_class = orbit_geotidal_twilight
-		is_planet_class = pc_geotidal_twilight
+		atw_is_continental = yes
 	}
 }
 
@@ -123,16 +99,7 @@ merg_is_desert = {
 		# Planetary Diversity
 		is_pd_desert = yes
 		# All These Worlds
-		is_planet_class = orbit_erimosthalassic
-		is_planet_class = pc_erimosthalassic
-		is_planet_class = orbit_hadean
-		is_planet_class = pc_hadean
-		is_planet_class = orbit_anthracean
-		is_planet_class = pc_anthracean
-		is_planet_class = orbit_desolate
-		is_planet_class = pc_desolate
-		is_planet_class = orbit_almyros
-		is_planet_class = pc_almyros
+		atw_is_desert = yes
 	}
 }
 
@@ -140,8 +107,7 @@ merg_is_frozen = {
 	OR = {
 		is_planet_class = pc_frozen
 		# All These Worlds
-		is_planet_class = orbit_icy
-		is_planet_class = orbit_frozen_telluric
+		atw_is_frozen = yes
 		# Arknights Near Future
 		is_planet_class = pc_ark_frozen
 		# Endless Frontier
@@ -170,11 +136,7 @@ merg_is_gaia_basic = {
 	OR = {
 		is_planet_class = pc_gaia
 		# All These Worlds
-		is_planet_class = orbit_chlorogaian
-		is_planet_class = orbit_thermogaian
-		is_planet_class = pc_thermogaian
-		is_planet_class = orbit_cryogaian
-		is_planet_class = pc_cryogaian
+		atw_is_gaia = yes
 		# Planetary Diversity
 		is_pd_gaia = yes
 	}
@@ -184,17 +146,7 @@ merg_is_gas_giant = {
 	OR = {
 		is_planet_class = pc_gas_giant
 		# All these worlds
-		is_planet_class = orbit_super_giant
-		is_planet_class = orbit_ammonia-clouded_giant
-		is_planet_class = orbit_water-clouded_giant
-		is_planet_class = orbit_cloudless_giant
-		is_planet_class = orbit_alkaline_giant
-		is_planet_class = orbit_silicate_giant
-		is_planet_class = orbit_frigid_giant
-		is_planet_class = orbit_methane_giant
-		is_planet_class = orbit_turbulent_giant
-		is_planet_class = orbit_temperate_giant
-		is_planet_class = orbit_helium_giant
+		atw_is_gas_giant = yes
 		# Azur Lane
 		is_planet_class = pc_azur_gas_giant
 		# DarkSpace
@@ -247,7 +199,7 @@ merg_is_molten = {
 	OR = {
 		is_planet_class = pc_molten
 		# All These Worlds
-		is_planet_class = orbit_volcanic_telluric
+		atw_is_molten = yes
 		# Darkspace
 		is_planet_class = pc_ds_molten
 		# Planetary Diversity
@@ -273,7 +225,7 @@ merg_is_nuked_basic = {
 	OR = {
 		is_planet_class = pc_nuked
 		# All these worlds
-		is_planet_class = orbit_nuked
+		atw_is_molten = yes
 		# Planetary Diversity
 		is_pd_nuked = yes
 		is_pd_radiotrophic_world = yes
@@ -294,14 +246,7 @@ merg_is_ocean_basic = {
 	OR = {
 		is_planet_class = pc_ocean
 		# All These Worlds
-		is_planet_class = orbit_water_panthalassic
-		is_planet_class = orbit_archipelagic
-		is_planet_class = orbit_panthalassic
-		is_planet_class = pc_panthalassic
-		is_planet_class = orbit_cryopelagic
-		is_planet_class = orbit_thermopelagic
-		is_planet_class = orbit_panpelagic
-		is_planet_class = pc_panpelagic
+		atw_is_ocean_basic = yes
 		# Planetary Diversity
 		is_pd_ocean = yes
 		is_pd_aquatics = yes
@@ -322,13 +267,7 @@ merg_is_savannah = {
 		# Planetary Diversity
 		is_pd_savannah = yes
 		# All These Worlds
-		is_planet_class = orbit_myciliogenian
-		is_planet_class = pc_myciliogenian
-		is_planet_class = orbit_thermothalassic
-		is_planet_class = orbit_protogenian
-		is_planet_class = pc_protogenian
-		is_planet_class = orbit_alkali
-		is_planet_class = pc_alkali
+		atw_is_savannah = yes
 	}
 }
 
@@ -357,8 +296,7 @@ merg_is_toxic = {
 	OR = {
 		is_planet_class = pc_toxic
 		# All These Worlds
-		is_planet_class = orbit_hothouse_toxic
-		is_planet_class = orbit_carbonyl_toxic
+		atw_is_toxic = yes
 		# Planetary Diversity
 		is_planet_class = pc_ethane_ocean
 		is_planet_class = pc_hothouse
@@ -372,11 +310,7 @@ merg_is_tropical = {
 		# Planetary Diversity
 		is_pd_tropical = yes
 		# All These Worlds
-		is_planet_class = orbit_tropicothalassic
-		is_planet_class = orbit_megachloridal
-		is_planet_class = pc_megachloridal
-		is_planet_class = orbit_geotidal_biolumen
-		is_planet_class = pc_geotidal_biolumen
+		atw_is_tropical = yes
 		# More Events Mod
 		is_planet_class = mem_pc_death
 	}
@@ -388,11 +322,7 @@ merg_is_tundra = {
 		# Planetary Diversity
 		is_pd_tundra = yes
 		# All These Worlds
-		is_planet_class = orbit_cryothalassic
-		is_planet_class = orbit_stepicos
-		is_planet_class = pc_stepicos
-		is_planet_class = orbit_elos
-		is_planet_class = pc_elos
+		atw_is_tundra = yes
 	}
 }
 

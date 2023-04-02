@@ -2001,9 +2001,7 @@ can_species_be_assembled = {
 				}
 			}
 			else_if = { # for Familiars
-				limit = {
-					has_trait = trait_servitude
-				}
+				limit = { has_trait = trait_servitude }
 				root = {
 					OR = {
 						merg_has_cloning_building = yes
@@ -2012,9 +2010,7 @@ can_species_be_assembled = {
 				}
 			}
 			else_if = { # for Familiars
-				limit = {
-					has_trait = trait_reanimated_materials
-				}
+				limit = { has_trait = trait_reanimated_materials }
 				root = {
 					OR = {
 						has_building = building_object_converter
