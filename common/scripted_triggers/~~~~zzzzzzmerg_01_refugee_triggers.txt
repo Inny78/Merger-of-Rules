@@ -51,10 +51,7 @@ has_any_habitability = {
 	event_target:refugee_pop = {
 		OR = {
 			has_citizenship_type = { type = citizenship_full country = prev }
-			has_citizenship_type = {
-				type = citizenship_caste_system
-				country = prev
-			}
+			has_citizenship_type = { type = citizenship_caste_system country = prev }
 			AND = {
 				has_citizenship_type = { type = citizenship_limited country = prev }
 				prev = { has_policy_flag = refugees_allowed }

@@ -1802,6 +1802,8 @@ can_destroy_planet_with_ACOT_PLANET_KILLER_NEUTRON = {
 		OR = {
 			num_pops > 0
 			is_planet_class = pc_infested
+			# Expanded Events
+			has_modifier = planet_active_worm
 		}
 	}
 }
@@ -2013,6 +2015,8 @@ can_destroy_planet_with_ACOT_SE_PLANET_KILLER_NEUTRON = {
 		OR = {
 			num_pops > 0
 			is_planet_class = pc_infested
+			# Expanded Events
+			has_modifier = planet_active_worm
 		}
 	}
 }
@@ -2224,6 +2228,8 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_NEUTRON = {
 		OR = {
 			num_pops > 0
 			is_planet_class = pc_infested
+			# Expanded Events
+			has_modifier = planet_active_worm
 		}
 	}
 }
