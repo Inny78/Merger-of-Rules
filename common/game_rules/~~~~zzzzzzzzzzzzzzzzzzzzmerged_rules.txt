@@ -4534,6 +4534,8 @@ can_fill_ruler_job = {
 			NOR = {
 				has_trait = trait_syncretic_proles
 				can_think = no
+				# Ethics and Civics Bug Branch
+				has_trait = trait_bugged_slave_gene
 				# Ethics and Civics Alternative - Redux
 				AND = {
 					merg_has_ethics_redux = yes					# Bug Branch allows symbiotics to rule

@@ -43,6 +43,8 @@ can_fill_specialist_job = {
 		is_being_assimilated = no
 		NOR = {
 			has_trait = trait_syncretic_proles
+			# Ethics and Civics Bug Branch
+			has_trait = trait_bugged_slave_gene
 			# Expanded Traits, Civics, Pops, and More
 			has_trait = trait_tree_caretaker
 			has_trait = trait_presapient_docile_livestock

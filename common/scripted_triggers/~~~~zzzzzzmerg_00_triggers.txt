@@ -328,7 +328,7 @@ is_democracy = {
 			is_egalitarian = yes
 			merg_has_mca = no
 			merg_has_expanded_pops = no
-			has_more_authorities_triggers = no
+			merg_has_ecaf = no
 		}
 		# More Authorities/E&C FunEFork
 		has_authority = auth_strict_democratic
