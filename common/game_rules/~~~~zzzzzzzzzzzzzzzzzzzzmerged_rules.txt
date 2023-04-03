@@ -2162,7 +2162,7 @@ can_orbital_bombard = {
 			FROM = {
 				OR = {
 					is_planet_class = pc_acot_pmc_vault
-					is_planet_class = pc_acot_enigmopolis
+					is_acot_awesome_planet_class = yes
 				}
 			}
 		}

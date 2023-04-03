@@ -947,7 +947,7 @@ gpm_is_planet_class_normal_uninhabitable = {
 	optimize_memory
 	uninhabitable_regular_planet = yes
 }
-gpm_is_asteroid = {
+gpm_is_asteroid = { 
 	is_asteroid = yes
 }
 gpm_is_planet_class_barren = {
@@ -1149,7 +1149,6 @@ gpm_is_country_type_awakened_fallen_empire = { merg_is_awakened_fe = yes }
 
 ############################### Expanded Events ###############################
 is_regular_star = {
-	optimize_memory
 	is_star = yes
 	merg_is_forbidden_target = no
 	NOR = {
@@ -1169,7 +1168,6 @@ is_regular_star = {
 	}
 }
 terraforming_candidate_solar_system_check = {
-	optimize_memory
 	NOR = {
 		merg_is_standard_dense_star = yes
 		is_star_class = sc_o_super
@@ -1211,7 +1209,6 @@ terraforming_candidate_solar_system_check = {
 	}
 }
 is_spy_empire = {
-	optimize_memory
 	OR = {
 		has_valid_civic = civic_cutthroat_politics
 		has_valid_civic = civic_shadow_council

@@ -1,0 +1,3 @@
+# Irony this is a placeholder file please ignore it
+gov_eternal_continuum = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
+gov_parasitic_overmind = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
