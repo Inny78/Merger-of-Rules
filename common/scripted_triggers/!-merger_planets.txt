@@ -24,9 +24,11 @@ merg_is_arcology = {
 		# Gigastructural Engineering & More
 		is_planet_class = pc_flusion_gaia_ecu
 		# Midas
-		is_planet_class = pc_midas_city
+		# is_planet_class = pc_midas_city
 		# Planetary Diversity
 		is_pd_arcology = yes
+		is_pd_hive_arcology = yes
+		is_pd_robot_arcology = yes
 		# Pokémon
 		is_planet_class = pc_EOE_city
 		# Star Wars: Kuat Ancient Empire
@@ -64,7 +66,7 @@ merg_is_barren = {
 		# All These Worlds
 		atw_is_barren = yes
 		# Midas
-		is_planet_class = pc_midas_barren
+		# is_planet_class = pc_midas_barren
 		# Planetary Diversity
 		is_planet_class = pc_carbon
 		is_planet_class = pc_chthonian
@@ -257,7 +259,7 @@ merg_is_relic_world = {
 	OR = {
 		is_planet_class = pc_relic
 		# Midas
-		is_planet_class = pc_midas_relic
+		# is_planet_class = pc_midas_relic
 	}
 }
 

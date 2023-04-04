@@ -3,10 +3,13 @@ sc_ae = { class = g_star spawn_odds = 0 }
 sc_ag_void = { class = g_star spawn_odds = 0 }
 sc_a_super = { class = g_star spawn_odds = 0 }
 sc_b_super = { class = g_star spawn_odds = 0 }
+sc_birch = { class = g_star spawn_odds = 0 }
+sc_birch_built = { class = g_star spawn_odds = 0 }
 sc_blokkat_stripmined = { class = g_star spawn_odds = 0 }
 sc_c_giant = { class = g_star spawn_odds = 0 }
 sc_collapsar = { class = g_star spawn_odds = 0 }
 sc_dn = { class = g_star spawn_odds = 0 }
+sc_ehof_black_hole = { class = g_star spawn_odds = 0 }
 sc_empty_space = { class = g_star spawn_odds = 0 }
 sc_f_super = { class = g_star spawn_odds = 0 }
 sc_g_super = { class = g_star spawn_odds = 0 }
@@ -18,6 +21,8 @@ sc_lbv_green = { class = g_star spawn_odds = 0 }
 sc_lbv_red = { class = g_star spawn_odds = 0 }
 sc_m_hyper = { class = g_star spawn_odds = 0 }
 sc_m_super = { class = g_star spawn_odds = 0 }
+sc_microquasar_1 = { class = g_star spawn_odds = 0 }
+sc_microquasar_2 = { class = g_star spawn_odds = 0 }
 sc_no_star = { class = g_star spawn_odds = 0 }
 sc_nova_1 = { class = g_star spawn_odds = 0 }
 sc_nova_2 = { class = g_star spawn_odds = 0 }
@@ -28,6 +33,7 @@ sc_p_green = { class = g_star spawn_odds = 0 }
 sc_p_red = { class = g_star spawn_odds = 0 }
 sc_p_green = { class = g_star spawn_odds = 0 }
 sc_protostar = { class = g_star spawn_odds = 0 }
+sc_quasar = { class = g_star spawn_odds = 0 }
 sc_s_giant = { class = g_star spawn_odds = 0 }
 sc_tt_red = { class = g_star spawn_odds = 0 }
 sc_tt_orange = { class = g_star spawn_odds = 0 }
@@ -40,3 +46,5 @@ sc_w_green = { class = g_star spawn_odds = 0 }
 sc_w_purple = { class = g_star spawn_odds = 0 }
 sofe_outer_class = { class = g_star spawn_odds = 0 }
 sofe_inner_class = { class = g_star spawn_odds = 0 }
+sc_void_birch_built = { class = g_star spawn_odds = 0 }
+sc_white_hole = { class = g_star spawn_odds = 0 }

@@ -2844,10 +2844,9 @@ system_blocks_sensors = {
 				# Gigastructural Engineering & More
 				is_star_class = sc_birch
 				is_star_class = sc_birch_built
-				is_star_class = sc_void_birch_built
-				is_star_class = sc_quasar
 				is_star_class = sc_ehof_black_hole
-				is_star_class = sc_white_hole
+				is_star_class = sc_quasar
+				is_star_class = sc_void_birch_built
 			}
 			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_black_hole } }
 		}

@@ -3546,79 +3546,79 @@ can_destroy_planet_with_PLANET_KILLER_HARBINGER = {
 }
 
 # Midas
-can_destroy_planet_with_PLANET_KILLER_MIDAS = {
-	custom_tooltip = {
-		fail_text = is_not_a_standard_planet_or_megastructure
-		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
-	}
-	custom_tooltip = {
-		fail_text = is_shielded
-		merg_is_shielded = no
-	}
-	OR = {
-		custom_tooltip = {
-			text = is_not_hostile_cracker
-			OR = {
-				AND = {
-					exists = space_owner
-					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
-					}
-				}
-				AND = {
-					# colony
-					exists = owner
-					owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
-					}
-				}
-				AND = {
-					# primitive
-					exists = space_owner
-					exists = owner
-					owner = {
-						is_primitive = yes
-					}
-					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
-					}
-				}
-			}
-		}
-		custom_tooltip = {
-			text = not_barren_molten_frozen_toxic_test_fire
-			NOT = {
-				exists = owner
-			}
-			OR = {
-				NOT = {
-					exists = space_owner
-				}
-				AND = {
-					exists = space_owner
-					space_owner = {
-						is_same_empire = from.owner
-					}
-				}
-			}
-			OR = {
-				colonizable_planet = yes
-				is_artificial = yes
-				merg_is_crackable_planet = yes
-			}
-		}
-	}
-}
+# can_destroy_planet_with_PLANET_KILLER_MIDAS = {
+# 	custom_tooltip = {
+# 		fail_text = is_not_a_standard_planet_or_megastructure
+# 		is_a_planet_megastructure = yes
+# 		merg_is_forbidden_target = no
+# 	}
+# 	custom_tooltip = {
+# 		fail_text = is_shielded
+# 		merg_is_shielded = no
+# 	}
+# 	OR = {
+# 		custom_tooltip = {
+# 			text = is_not_hostile_cracker
+# 			OR = {
+# 				AND = {
+# 					exists = space_owner
+# 					space_owner = {
+# 						OR = {
+# 							is_at_war_with = from.owner
+# 							is_crisis_faction = yes
+# 						}
+# 					}
+# 				}
+# 				AND = {
+# 					# colony
+# 					exists = owner
+# 					owner = {
+# 						OR = {
+# 							is_at_war_with = from.owner
+# 							is_crisis_faction = yes
+# 						}
+# 					}
+# 				}
+# 				AND = {
+# 					# primitive
+# 					exists = space_owner
+# 					exists = owner
+# 					owner = {
+# 						is_primitive = yes
+# 					}
+# 					space_owner = {
+# 						OR = {
+# 							is_at_war_with = from.owner
+# 							is_crisis_faction = yes
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		custom_tooltip = {
+# 			text = not_barren_molten_frozen_toxic_test_fire
+# 			NOT = {
+# 				exists = owner
+# 			}
+# 			OR = {
+# 				NOT = {
+# 					exists = space_owner
+# 				}
+# 				AND = {
+# 					exists = space_owner
+# 					space_owner = {
+# 						is_same_empire = from.owner
+# 					}
+# 				}
+# 			}
+# 			OR = {
+# 				colonizable_planet = yes
+# 				is_artificial = yes
+# 				merg_is_crackable_planet = yes
+# 			}
+# 		}
+# 	}
+# }
 
 # Hypertraversal Manipulation
 can_destroy_planet_with_hyperspace_augur_beam = {

@@ -368,21 +368,6 @@ merg_is_crackable_planet = {
 		is_planet_class = pc_red_toxic
 		# Dead Space
 		is_planet_class = pc_stahl
-		# All these worlds
-		is_planet_class = orbit_molten
-		is_planet_class = orbit_icy
-		is_planet_class = orbit_chthonian
-		is_planet_class = orbit_dusty_telluric
-		is_planet_class = orbit_iron_telluric
-		is_planet_class = orbit_silicate_telluric
-		is_planet_class = orbit_volcanic_telluric
-		is_planet_class = orbit_frozen_telluric
-		is_planet_class = orbit_methane_toxic
-		is_planet_class = orbit_hothouse_toxic
-		is_planet_class = orbit_carbonyl_toxic
-		is_planet_class = orbit_water_panthalassic
-		is_planet_class = orbit_ammonia_panthalassic
-		is_planet_class = orbit_methane_panthalassic
 	}
 }
 
@@ -401,7 +386,7 @@ merg_is_untargetable = {
 		# MEM
 		is_planet_class = pc_mem_synthetic_sun
 		# ACOT
-		is_planet_class = pc_acot_enigmopolis
+		is_acot_awesome_planet_class = yes
 		# Secrets of the Shroud
 		is_planet_class = pc_acot_soulsphere
 		# ACOT/Gigas
@@ -429,8 +414,9 @@ merg_is_dense_star = {
 		is_planet_class = pc_wh_star
 		is_planet_class = pc_whdyson_star
 		# Hypothetical Stars
-		is_planet_class = pc_white_hole
-		is_planet_class = pc_strange_star
+		is_hypo_stars_black_dwarf_star = yes
+		is_hypo_stars_strange_star = yes
+		is_hypo_stars_white_hole = yes
 		# MEM
 		is_planet_class = pc_mem_micro_black_hole
 		# Real Space
@@ -456,8 +442,6 @@ merg_is_standard_dense_star = {
 		# Real Space
 		is_planet_class = pc_collapsar
 		is_planet_class = pc_magnetar
-		# Hypothetical Stars
-		is_planet_class = pc_white_hole
 	}
 }
 

@@ -106,6 +106,13 @@ is_giga_maginot_world = { always = no }
 is_giga_ringworld = { always = no }
 is_green = { always = no }
 is_harvester_country = { always = no }
+is_hypo_stars_antimatter_star = { always = no }
+is_hypo_stars_blue_dwarf_star = { always = no }
+is_hypo_stars_black_dwarf_star = { always = no }
+is_hypo_stars_dark_star = { always = no }
+is_hypo_stars_quasi_star = { always = no }
+is_hypo_stars_strange_star = { always = no }
+is_hypo_stars_white_hole = { always = no }
 is_imperial = { always = no }
 is_khan_country_type = { always = no }
 is_KZ_VOY_organic_species = { always = no }

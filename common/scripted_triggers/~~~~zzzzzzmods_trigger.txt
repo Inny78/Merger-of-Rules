@@ -138,7 +138,7 @@ is_maginotable_restricted = {
 		is_planet_class = pc_apsr_ancient
 		is_planet_class = pc_apsr_unique
 		# ACOT
-		is_planet_class = pc_acot_enigmopolis
+		is_acot_awesome_planet_class = yes
 		# Ancient Empire
 		is_planet_class = pc_ag_ringworld_desert
 		is_planet_class = pc_ag_ringworld_arid
@@ -215,7 +215,7 @@ ndb_can_target_system = {
 				# Merger of Rules
 				merg_is_untargetable = yes
 				# ACOT
-				is_planet_class = pc_acot_enigmopolis
+				is_acot_awesome_planet_class = yes
 			}
 		}
 	}
@@ -242,7 +242,7 @@ ndb_can_target_planet = {
 		has_planet_flag = merg_is_forbidden_target
 		merg_is_empty_space = yes
 		# ACOT
-		is_planet_class = pc_acot_enigmopolis
+		is_acot_awesome_planet_class = yes
 		# Darkspace
 		is_planet_class = pc_zeitriss
 	}
@@ -255,8 +255,6 @@ is_ndb_immune_star_planet = {
 		solar_system = { has_star_flag = ndb_immune_system }
 		# Darkspace
 		is_planet_class = pc_zeitriss
-		# Hypothetical Stars
-		is_planet_class = pc_white_hole
 		# MEM
 		is_planet_class = pc_mem_micro_black_hole
 		# Real Space
@@ -296,7 +294,7 @@ giga_is_white_hole = {
 		is_planet_class = pc_wh_star
 		is_planet_class = pc_whdyson_star
 		# Hypothetical Stars
-		is_planet_class = pc_white_hole
+		is_hypo_stars_white_hole = yes
 	}
 }
 giga_is_standard_country_type = {
@@ -739,8 +737,9 @@ ag_is_compact_star = {
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
 		# Hypothetical Stars
-		is_planet_class = pc_white_hole
-		is_planet_class = pc_strange_star
+		is_hypo_stars_black_dwarf_star = yes
+		is_hypo_stars_strange_star = yes
+		is_hypo_stars_white_hole = yes
 		# Real Space
 		is_planet_class = pc_collapsar
 		is_planet_class = pc_magnetar
