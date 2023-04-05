@@ -151,8 +151,6 @@ merg_is_gas_giant = {
 		atw_is_gas_giant = yes
 		# Azur Lane
 		is_planet_class = pc_azur_gas_giant
-		# Expanded Events
-		is_planet_class = pc_ice_giant
 		# Planetary Diversity
 		is_planet_class = pc_hot_gas_giant
 		is_planet_class = pc_cloudless_gas_giant
@@ -224,6 +222,8 @@ merg_is_nuked_basic = {
 		is_planet_class = pc_nuked
 		# All these worlds
 		atw_is_molten = yes
+		# Archeology Story Pack
+		is_planet_class = pc_nuked_colorful
 		# Planetary Diversity
 		is_pd_nuked = yes
 		is_pd_radiotrophic_world = yes
@@ -232,19 +232,13 @@ merg_is_nuked_basic = {
 
 merg_is_ocean = {
 	OR = {
-		merg_is_ocean_basic = yes
+		is_planet_class = pc_ocean
+		# All These Worlds
+		atw_is_ocean_basic = yes
 		# Archaeology Story Pack
 		is_planet_class = pc_asp_ocean_red
 		# Azur Lane
 		is_planet_class = pc_azur_ocean
-	}
-}
-
-merg_is_ocean_basic = {
-	OR = {
-		is_planet_class = pc_ocean
-		# All These Worlds
-		atw_is_ocean_basic = yes
 		# Planetary Diversity
 		is_pd_ocean = yes
 		is_pd_aquatics = yes
@@ -295,6 +289,8 @@ merg_is_toxic = {
 		is_planet_class = pc_toxic
 		# All These Worlds
 		atw_is_toxic = yes
+		# Gigastructural Engineering & More
+		is_planet_class = pc_red_toxic
 		# Planetary Diversity
 		is_planet_class = pc_ethane_ocean
 		is_planet_class = pc_hothouse
