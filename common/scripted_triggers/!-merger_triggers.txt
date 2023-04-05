@@ -405,6 +405,8 @@ merg_is_dense_star = {
 		is_planet_class = pc_black_hole
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
+		# ACOT
+		is_planet_class = pc_acot_void_hole
 		# Darkspace
 		is_planet_class = pc_zeitriss
 		# Gigastructural Engineering & More

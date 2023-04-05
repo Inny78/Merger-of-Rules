@@ -85,6 +85,7 @@ hfe_trigger_is_human_fallen = { always = no }
 hfe_trigger_system_in_someones_space = { always = no }
 hfe_trigger_unemployed_auto_migrate = { always = no }
 ideological_discomfort = { always = no }
+is_abyssal_black_hole = { always = no }
 is_acot_awesome_planet_class = { always = no }
 is_acot_fractured_planet_class = { always = no }
 is_bugged_evolutionary_architects = { always = no }

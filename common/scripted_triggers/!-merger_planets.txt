@@ -151,8 +151,6 @@ merg_is_gas_giant = {
 		atw_is_gas_giant = yes
 		# Azur Lane
 		is_planet_class = pc_azur_gas_giant
-		# DarkSpace
-		is_planet_class = pc_ds_gas_giant
 		# Expanded Events
 		is_planet_class = pc_ice_giant
 		# Planetary Diversity
@@ -202,8 +200,6 @@ merg_is_molten = {
 		is_planet_class = pc_molten
 		# All These Worlds
 		atw_is_molten = yes
-		# Darkspace
-		is_planet_class = pc_ds_molten
 		# Planetary Diversity
 		is_planet_class = pc_volcanic
 	}
