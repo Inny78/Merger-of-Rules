@@ -221,7 +221,7 @@ merg_is_nuked_basic = {
 	OR = {
 		is_planet_class = pc_nuked
 		# All these worlds
-		atw_is_molten = yes
+		atw_is_nuked = yes
 		# Archeology Story Pack
 		is_planet_class = pc_nuked_colorful
 		# Planetary Diversity
