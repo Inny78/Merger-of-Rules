@@ -1638,6 +1638,13 @@ can_species_procreate = {
 	}
 	# Human Fallen Empires
 	NOT = { has_trait = hfe_species_trait_brainworm }
+	# V_Traits
+	NAND = {
+		has_trait = trait_v_specific_breeders
+		root = {
+			habitability = { who = prev value >= 0.6 }
+		}
+	}
 	# Wandering Witch: Voyagers
 	if = {
 		limit = { has_trait = trait_reanimated_materials }
@@ -3114,6 +3121,17 @@ can_resettle_pop = {
 		}
 		always = yes
 	}
+	# V_Traits
+	custom_tooltip = {
+		fail_text = "is_v_mobile_cant_be_resetttled"
+		OR = {
+			merg_has_v_traits = no
+			AND = {
+				merg_has_v_traits = yes
+				This = { is_v_mobile = yes }
+			}
+		}
+	}
 	# Vanilla
 	else = {
 		custom_tooltip = {
@@ -4055,6 +4073,8 @@ can_be_sold_on_slave_market = {
 		# Planetary Diversity
 		has_trait = trait_organic_fourschildren
 		has_trait = trait_organic_fourschildren_2
+		# V_Traits
+		This = { is_v_mobile = yes }
 		# Wandering Witch: Voyagers
 		has_trait = trait_servitude
 		has_trait = trait_reanimated_materials
@@ -4290,6 +4310,14 @@ can_pop_auto_migrate = {
 			owner = { is_hive_empire = yes }
 		}
 	}
+	# V_Traits
+	OR = {
+		merg_has_v_traits = no
+		AND = {
+			merg_has_v_traits = yes
+			This = { is_v_mobile = yes }
+		}
+	}
 }
 
 # This = planet
@@ -4438,7 +4466,62 @@ can_modify_organic_portraits = {
 # can_use_envoys_to_raise_imperial_authority
 # can_use_envoys_to_lower_imperial_authority
 # should_planetary_automate
-# can_fill_drone_job
+
+#this/root = pop
+#checked if job's possible_precalc = can_fill_drone_job
+can_fill_drone_job = {
+	custom_tooltip = DRONE_JOB_TRIGGER
+	hidden_trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+		is_being_purged = no
+		AND = {
+			merg_has_expanded_pops = no
+			is_enslaved = no
+		}
+		is_being_assimilated = no
+		NOT = { has_citizenship_type = { type = citizenship_organic_trophy country = owner } }
+		# Ethical Gestalts
+		OR = {
+			merg_has_ethical_gestalts = no
+			AND = {
+				merg_has_ethical_gestalts = yes
+				owner = { is_hive_empire = yes }
+				has_citizenship_type = { type = citizenship_full }
+			}
+			AND = {
+				merg_has_ethical_gestalts = yes
+				owner = { is_machine_empire = yes }
+				has_citizenship_type = { type = citizenship_full_machine }
+			}
+			AND = {
+				merg_has_ethical_gestalts = yes
+				planet = {
+					exists = branch_office_owner
+					branch_office_owner = {
+						is_hive_empire = yes
+						root.species = { has_citizenship_type = { type = citizenship_full country = prev } }
+					}
+				}
+			}
+		}
+		# Expanded Traits, Civics, Pops, and More
+		NAND = {
+			has_citizenship_type = { type = citizenship_slavery }
+			OR = {
+				has_slavery_type = { type = slavery_livestock }
+				has_slavery_type = { type = slavery_matrix }
+			}
+		}
+		# V_Traits
+		this = {
+			NOR = {
+				has_trait = trait_v_social_parasite
+				has_trait = trait_v_adv_social_parasite
+			}
+		}
+	}
+}
 
 #this/root = pop
 #checked if job's possible_precalc = can_fill_worker_job
@@ -4489,6 +4572,13 @@ can_fill_worker_job = {
 				has_pop_flag = allow_odd_factory_worker_traits
 				has_pop_flag = allow_cave_cleaner_traits
 				has_pop_flag = allow_titan_hunter_traits
+			}
+		}
+		# V_Traits
+		this = {
+			NOR = {
+				has_trait = trait_v_social_parasite
+				has_trait = trait_v_adv_social_parasite
 			}
 		}
 	}

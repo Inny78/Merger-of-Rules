@@ -167,6 +167,7 @@ is_submerged = { always = no }
 is_symbiote = { always = no }
 is_symbiote_of_prevprev = { always = no }
 is_the_belt_active = { always = no }
+is_v_mobile = { always = no }
 is_valid_GF_OGAS_subnet = { always = no }
 is_valid_organic_zealots = { always = no }
 is_wg_event_leader = { always = no }

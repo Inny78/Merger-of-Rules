@@ -203,6 +203,9 @@ merg_has_zofe = { has_global_flag = zofe_activated }
 # Unique Ascension Perks
 merg_has_uap = { has_global_flag = has_uap_mod }
 
+# V_traits 2872760980
+merg_has_v_traits = { has_global_flag = v_traits_is_active }
+
 # Vassals Expanded and Reworked
 merg_has_vassals_expanded = { has_global_flag = gf_veru_activated }
 
