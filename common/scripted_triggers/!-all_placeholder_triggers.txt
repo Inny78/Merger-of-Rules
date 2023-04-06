@@ -4,6 +4,8 @@ ag_can_be_orbital_bombardment_country = { always = no }
 ag_can_do_orbital_bombardment_country = { always = no }
 ag_is_mod_habitable_ringworld = { always = no }
 annihilator_system = { always = no }
+aspmod_pc_nuked_colorful_trigger = { always = no }
+aspmod_pc_ocean_red_trigger = { always = no }
 atw_is_alpine = { always = no }
 atw_is_arctic = { always = no }
 atw_is_arid = { always = no }

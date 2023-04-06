@@ -223,7 +223,7 @@ merg_is_nuked_basic = {
 		# All these worlds
 		atw_is_nuked = yes
 		# Archeology Story Pack
-		is_planet_class = pc_nuked_colorful
+		aspmod_pc_nuked_colorful_trigger = yes
 		# Planetary Diversity
 		is_pd_nuked = yes
 		is_pd_radiotrophic_world = yes
@@ -236,7 +236,7 @@ merg_is_ocean = {
 		# All These Worlds
 		atw_is_ocean_basic = yes
 		# Archaeology Story Pack
-		is_planet_class = pc_asp_ocean_red
+		aspmod_pc_ocean_red_trigger = yes
 		# Azur Lane
 		is_planet_class = pc_azur_ocean
 		# Planetary Diversity
