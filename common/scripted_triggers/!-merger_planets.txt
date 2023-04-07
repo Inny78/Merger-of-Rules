@@ -125,8 +125,6 @@ merg_is_gaia = {
 		merg_is_gaia_basic = yes
 		# Azur Lane
 		is_planet_class = pc_azur_gaia
-		# Planetary Diversity
-		is_pd_gaia = yes
 		# Pokémon
 		is_planet_class = pc_EOE_pokemon_gaia
 		# ZOFE
@@ -230,6 +228,14 @@ merg_is_nuked_basic = {
 	}
 }
 
+merg_is_aquatic = {
+	OR = {
+		merg_is_ocean = yes
+		# Azur Lane
+		is_planet_class = pc_azur_ocean
+	}
+}
+
 merg_is_ocean = {
 	OR = {
 		is_planet_class = pc_ocean
@@ -237,8 +243,6 @@ merg_is_ocean = {
 		atw_is_ocean_basic = yes
 		# Archaeology Story Pack
 		aspmod_pc_ocean_red_trigger = yes
-		# Azur Lane
-		is_planet_class = pc_azur_ocean
 		# Planetary Diversity
 		is_pd_ocean = yes
 		is_pd_aquatics = yes
