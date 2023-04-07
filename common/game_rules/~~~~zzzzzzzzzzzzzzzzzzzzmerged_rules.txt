@@ -805,6 +805,7 @@ can_take_hostile_actions = {
 	# BlueArchive
 	else_if = {
 		limit = {
+			exists = from
 			from = { has_country_flag = BA_Precursor_contactor }
 			always = no
 		}

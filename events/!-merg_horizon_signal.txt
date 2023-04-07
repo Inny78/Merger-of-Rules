@@ -188,7 +188,6 @@ planet_event = {
 			every_system_planet = {
 				limit = {
 					is_star = yes
-					merg_is_forbidden_target = no
 				}
 				change_pc = pc_black_hole
 				reroll_planet = yes

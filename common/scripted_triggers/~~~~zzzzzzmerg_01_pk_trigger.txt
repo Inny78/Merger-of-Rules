@@ -2658,6 +2658,9 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 	}
 }
 
+# ACOT - SBTG
+# can_destroy_planet_with_ACOT_PLANET_KILLER_NANITE
+
 # Arknights Near Future
 can_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = {
 	custom_tooltip = {

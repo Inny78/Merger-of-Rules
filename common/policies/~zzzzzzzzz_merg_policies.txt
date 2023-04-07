@@ -126,7 +126,6 @@ orbital_bombardment = {
 		}
 		prerequisites = {
 			tech_scourge_deployment
-			merg_has_gigastructures = yes
 		}
 		policy_flags = {
 			orbital_bombardment_redtoxin

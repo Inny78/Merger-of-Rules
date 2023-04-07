@@ -119,6 +119,7 @@ is_hypo_stars_white_hole = { always = no }
 is_imperial = { always = no }
 is_khan_country_type = { always = no }
 is_KZ_VOY_organic_species = { always = no }
+is_mage = { always = no }
 is_nirvana_empire = { always = no }
 is_organic_zealots = { always = no }
 is_pd_aquatics = { always = no }
@@ -190,5 +191,6 @@ planet_has_symbiotes = { always = no }
 prob_forced_armageddon_bombardment = { always = no }
 traits_restrict_specialist_jobs = { always = no }
 traits_restrict_worker_jobs = { always = no }
+UGRC_installed = { always = no }
 urmazin_system = { always = no }
 zofeac_capital_buildings = { always = no }

@@ -53,6 +53,9 @@ merg_has_diag_fact = { has_global_flag = using_mod_dfactions }
 # Diagrapher's Trait Mod
 merg_has_diag_trait = { has_global_flag = dtraits_randomization_flag }
 
+# Extra Ship Components NEXT
+merg_has_esc_next = { has_global_flag = Extra_Ship_Components_NEXT }
+
 # Empires Expanded
 merg_has_empires_exp = { has_global_flag = emex_active }
 

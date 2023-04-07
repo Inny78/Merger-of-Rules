@@ -334,7 +334,7 @@ planet_event = {
 		reset_planet = yes
 		# GPM
 		if = {
-			limit = { has_gpm = yes }
+			limit = { merg_has_gpm = yes }
 			gpm_purge_all_planetary_modifiers = yes
 			gpm_purge_all_core_modifiers = yes
 			gpm_roll_machine_world_modifiers = yes

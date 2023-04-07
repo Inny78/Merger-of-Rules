@@ -1,7 +1,6 @@
 # Irony this is a placeholder file please ignore it
 
-tech_nep_phantom_phase_shift = { cost = 0 area = physics tier = 5 category = { particles } potential = { merg_has_wild_space = yes } }
-tech_nep_whitegoo_3_2 = { cost = 0 area = society tier = 4 category = { statecraft } potential = { merg_has_wild_space = yes } }
+esc_tech_synthetic_lifeform_studies = { cost = 0 area = society category = { materials } tier = 5 potential = { merg_has_esc_next = yes } }
 tech_ariphaos_sensors_black_hole = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_sensor_expansion = yes } }
 tech_ariphaos_sensors_jammed = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_sensor_expansion = yes } }
 tech_ariphaos_sensors_nebula = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_sensor_expansion = yes } }
@@ -14,6 +13,8 @@ tech_bdoe_asteroid_adaption_0 = { cost = 0 area = society category = { new_world
 tech_bdoe_secondary_planets_adaption_0 = { cost = 0 area = society category = { new_worlds } tier = 3 potential = { merg_has_the_belt = yes } }
 tech_dummy_leaders = { cost = 0 area = engineering category = { industry } tier = 4 potential = { merg_has_wandering_witch = yes } }
 tech_dummy_workers = { cost = 0 area = engineering category = { industry } tier = 1 potential = { merg_has_wandering_witch = yes } }
+tech_nep_phantom_phase_shift = { cost = 0 area = physics tier = 5 category = { particles } potential = { merg_has_wild_space = yes } }
+tech_nep_whitegoo_3_2 = { cost = 0 area = society tier = 4 category = { statecraft } potential = { merg_has_wild_space = yes } }
 tech_pdhabitat_2 = { cost = 0 area = engineering category = { voidcraft } tier = 2 potential = { merg_has_pd_planetary_habitats = yes } }
 tech_scourge_deployment = { cost = 0 area = physics category = { particles } tier = 4 potential = { merg_has_gigastructures = yes } }
 tech_WS_sensors_nebula_1 = { cost = 0 area = physics category = { particles } tier = 4 potential = { merg_has_wild_space = yes } }

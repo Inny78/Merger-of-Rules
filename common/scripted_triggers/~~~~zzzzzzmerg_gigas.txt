@@ -28,7 +28,6 @@ reshaper_eligible = {
 		is_planet_class = pc_ringworld_tech_damaged
 		is_planet_class = pc_ringworld_seam
 		is_planet_class = pc_ringworld_seam_damaged
-		# Merger of Rules
 		merg_is_habitat = yes
 		merg_is_hab_ringworld = yes
 		merg_is_forbidden_target = yes
