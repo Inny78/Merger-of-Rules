@@ -1364,6 +1364,9 @@ can_build_precursor_ship = {
 				is_megastructure_type = acot_amerigo_oe
 				is_megastructure_type = acot_amerigo_pe
 				is_megastructure_type = acot_phanon_master_reactor_sphere
+				is_megastructure_type = sofe_omega_nexus
+                is_megastructure_type = sofe_omega_spy_orb_center
+                is_megastructure_type = sofe_omega_dyson_sphere
 				# Universal Gateway Origin
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_8
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9
@@ -1383,7 +1386,9 @@ can_build_precursor_ship = {
 				has_starbase_size >= acot_precusor_phanon_starcitadel			
 				has_starbase_size >= acot_precusor_theta_starcitadel
 				has_starbase_size >= precursor_colossus
-				has_starbase_size >= origin_super_citadel_playable	
+				has_starbase_size >= origin_super_citadel_playable
+				has_starbase_size >= origin_super_citadel
+				has_starbase_size >= origin_citadel
 				has_starbase_size >= precursor_juggernaut
 				# Universal Gateway Origin
                 has_starbase_size >= universal_gateway_citadel
@@ -1897,4 +1902,12 @@ is_toxic_planet = {
 
 is_barren_planet = {
 	merg_is_barren = yes
+}
+
+############################### ZOFE ###############################
+is_zofe_country = {
+	OR = {
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+	}
 }

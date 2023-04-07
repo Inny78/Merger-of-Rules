@@ -176,7 +176,6 @@ is_wg_event_leader = { always = no }
 is_wg_event_limit_ships = { always = no }
 is_ws_system = { always = no }
 is_xenophobic_isolationists = { always = no }
-is_zofe_country = { always = no }
 is_zofe_oe = { always = no }
 katzen_jump_blocked_system = { always = no }
 kuat_can_be_orbital_bombarment_country = { always = no }

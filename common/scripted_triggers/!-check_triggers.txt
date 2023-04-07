@@ -1,5 +1,6 @@
 # Checking for mod presence
 # These triggers are also meant as a library for modders who want to reuse them in their own mods.
+# Modders, favor ID triggers over global flags as they can be detected before game start.
 
 # Aggressive Crisis Engine
 merg_has_ace_mod = { has_global_flag = acemod_installed }
@@ -199,6 +200,10 @@ merg_has_empty_vagrant = { has_global_flag = enable_empty_vagrant_mod }
 
 # The Zenith of Fallen Empires
 merg_has_zofe = { has_global_flag = zofe_activated }
+
+# UGRP check
+# If true, open the gates of Hell. All of them.
+merg_has_ugrp = { UGRC_installed = yes }
 
 # Unique Ascension Perks
 merg_has_uap = { has_global_flag = has_uap_mod }
