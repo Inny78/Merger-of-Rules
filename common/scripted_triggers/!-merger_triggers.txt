@@ -110,11 +110,8 @@ merg_is_hab_ringworld = {
 		# The DAL Species Mod
 		is_planet_class = pc_ringworld_datealive_crystals
 		# Warship Girls and MIST species
-		is_planet_class = pc_ringworld_habitable_sh
-		is_planet_class = pc_ringworld_habitable_wsg
-		is_planet_class = pc_ringworld_habitable_swim
+		is_wg_upgraded_ringworld = yes
 		is_planet_class = pc_ringworld_habitable_water
-		is_planet_class = pc_ringworld_habitable_uf
 		is_planet_class = pc_ringworld_habitable_auto_uf
 		is_planet_class = pc_dyson_ring
 		# ZOFE

@@ -461,7 +461,7 @@ species_can_live_on_planet = {
 	}
 	# Forgotten Queens
 	NAND = {
-		root = { NOT = { is_planet_class = pc_matryoshka } }
+		root = { is_fq_matryoshka = no }
 		has_trait = trait_machine_digital
 	}
 	# Planetary Population Restrictions
@@ -1351,7 +1351,7 @@ can_colonize_with_species = {
 }
 
 # pop_has_random_ethics
-
+ 
 # Root = Species
 # From = Country
 # This = Species
@@ -3197,14 +3197,7 @@ pop_generates_crime = {
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
 		# Warship Girls R And MIST Species
-		has_trait = wsg_trait_warshipgirls
-		has_trait = wsg_trait_warshipgirls1
-		has_trait = wsg_trait_warshipgirls2
-		has_trait = wsg_trait_mist
-		has_trait = sh_trait_shenhai
-		has_trait = sh_trait_shenhai1
-		has_trait = sh_trait_shenhai2
-		has_trait = sh_trait_shenhai3
+		has_wg_traits = yes
 		has_trait = trait_intelligent_galo
 		# Star Wars: UnknownWorld Shipgirls Story
 		has_trait = swg_trait_starshipgirls
