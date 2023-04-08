@@ -263,8 +263,8 @@ giga_is_neutron_type_star = {
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
 		# Real Space
-		is_planet_class = pc_collapsar
-		is_planet_class = pc_magnetar
+		is_rs_collapsar = yes
+		is_rs_magnetar = yes
 	}
 }
 # Planet triggers

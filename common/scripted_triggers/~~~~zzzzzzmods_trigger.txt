@@ -424,10 +424,9 @@ ag_is_compact_star = {
 		is_hypo_stars_strange_star = yes
 		is_hypo_stars_white_hole = yes
 		# Real Space
-		is_planet_class = pc_collapsar
-		is_planet_class = pc_magnetar
-		is_planet_class = pc_microquasar_1
-		is_planet_class = pc_microquasar_2
+		is_rs_collapsar = yes
+		is_rs_magnetar = yes
+		is_rs_microquasar = yes
 	}
 }
 ag_is_common_country = {
