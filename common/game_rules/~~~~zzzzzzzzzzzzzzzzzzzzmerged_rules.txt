@@ -1145,7 +1145,6 @@ can_colonize_outside_borders = {
 				exists = owner
 				owner = {
 					has_country_flag = is_in_coop_with@root
-					#is_in_federation_with = root
 					has_policy_flag = coop_colony_policy_yes
 					not = { has_global_flag = prevent_colony_outside }
 				}
@@ -3577,13 +3576,20 @@ can_build_branch_office_on_planet = {
 		fail_text = BRANCH_OFFICE_NO_OBSERVATION_OUTPOST
 		if = {
 			limit = {
-				root = { is_criminal_syndicate = yes }
+				root = {
+					OR = {
+						is_criminal_syndicate = yes
+						AND = {
+							is_zofe_country = yes
+							has_civic = civic_criminal_heritage
+							has_civic = mc_civic_criminal_dominion
+						}
+					}
+				}
 				owner = { is_primitive = yes }
 			}
 			has_observation_outpost = yes
-			observation_outpost_owner = {
-				is_same_value = root
-			}
+			observation_outpost_owner = { is_same_value = root }
 		}
 	}
 	# Civic: Organic Zealots 
@@ -3898,6 +3904,8 @@ is_criminal_syndicate_rule = {
 		has_country_flag = BA_club_onsen_department
 		# Ethical Gestalts
 		has_policy_flag = infiltration_allowed
+		# ZOFE Megacorp
+		has_valid_civic = mc_civic_criminal_dominion
 	}
 }
 
