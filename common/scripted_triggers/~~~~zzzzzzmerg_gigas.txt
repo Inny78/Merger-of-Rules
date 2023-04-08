@@ -123,6 +123,7 @@ ndb_can_target_system = {
 			}
 			
 		}
+	}
 	NOT = {
 		any_system_planet = {
 			OR = {
@@ -326,17 +327,14 @@ giga_is_machine = {
 		is_planet_class = pc_awaken_ai
 	}
 }
-
 giga_is_gaia = { 
 	optimize_memory
 	merg_is_gaia = yes
 }
-
 giga_is_nuked = { 
 	optimize_memory
 	merg_is_nuked = yes
 }
-
 giga_is_arcology = {
 	optimize_memory
 	merg_is_arcology = yes

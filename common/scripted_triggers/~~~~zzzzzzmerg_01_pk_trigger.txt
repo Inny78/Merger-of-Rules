@@ -4528,6 +4528,27 @@ can_destroy_planet_with_DEATH_STAR_WEAPON = {
 	}
 }
 
+# BlueArchive
+can_destroy_planet_with_Sweepers = {
+	custom_tooltip = {
+		fail_text = What_are_you_doing
+		NOR = {
+			is_planet_class = pc_BA_campus_planet
+			is_planet_class = pc_BA_ruined_planet
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_valid_target_for_sweeper
+		merg_is_forbidden_target = no
+		exists = owner
+		owner = {
+			OR = {
+				is_same_empire = FROM.owner
+				is_at_war_with = FROM.owner
+			}
+		}
+	}
+}
 
 # ===========================================================================================================================
 

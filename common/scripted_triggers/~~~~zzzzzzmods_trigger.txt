@@ -1605,3 +1605,20 @@ is_zofe_country = {
 		is_country_type = lost_empire
 	}
 }
+
+#
+is_BA_fallen_empire = {
+	merg_is_fallen_empire = yes
+	OR = {
+		has_country_flag = BA_Gematria
+		has_country_flag = BA_Precursor
+	}
+}
+
+is_BA_fallen_empire_awakened = {
+	merg_is_awakened_fe = yes
+	OR = {
+		has_country_flag = BA_Gematria
+		has_country_flag = BA_Precursor
+	}
+}
