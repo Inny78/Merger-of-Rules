@@ -16,3 +16,16 @@ event = {
 		}
 	}
 }
+
+event = {
+	id = merg.2
+	title = merg.2.name
+	desc = merg.2.desc
+	picture = GFX_evt_exploding_planet
+	show_sound = event_red_alert
+	is_triggered_only = yes
+	trigger = { merg_has_ugrp = yes }
+	option = {
+		name = OOPS
+	}
+}
