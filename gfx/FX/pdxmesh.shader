@@ -1830,7 +1830,7 @@ Effect PdxMeshAlphaAdditiveAnimateUVErosionSkinned
 	PixelShader = "PixelPdxMeshAdditive"
 	BlendState = "BlendStateAdditiveBlend"
 	DepthStencilState = "DepthStencilNoZWrite"
-	Defines = { "ANIMATE_UV" "DISSOLVE" "DISSOLVE_USE_EROSION" }	
+	Defines = { "ANIMATE_UV" "DISSOLVE" "DISSOLVE_USE_EROSION" }
 }
 
 Effect PdxMeshAlphaAnimateUVErosion
@@ -2965,7 +2965,7 @@ Effect PdxMeshAtmosphereSkinnedShadow
 	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
 	PixelShader = "PixelPdxMeshStandardShadow"
 	RasterizerState = "RasterizerStateBack"
-	Defines = { "IS_SHADOW" "IS_PLANET"  }
+	Defines = { "IS_SHADOW" "IS_PLANET" "" }
 }
 
 Effect PdxMeshAtmosphereStarShadow
