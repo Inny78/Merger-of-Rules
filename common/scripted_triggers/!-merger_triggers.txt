@@ -39,7 +39,7 @@ merg_is_default_empire = {
 	}
 }
 
-# Inspired by Gigas code
+# Warning, this is a resource intensive trigger
 merg_is_playable_empire = {
     any_playable_country = { is_same_empire = prev }
 }

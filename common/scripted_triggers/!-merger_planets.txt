@@ -237,6 +237,8 @@ merg_is_aquatic = {
 		is_planet_class = pc_azur_ocean
 		# Blue Archive
 		is_planet_class = pc_BA_campus_planet
+		# Gigastructural Engineering & More
+		is_planet_class = pc_giga_edge_of_eternity
 	}
 }
 

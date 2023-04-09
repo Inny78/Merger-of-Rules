@@ -247,7 +247,6 @@ giga_country_uses_supertensiles = {
 		giga_is_playable_country = yes
 	}
 }
-# 3.7
 giga_compat_hyperlane_exclude = {
 	OR = {
 		has_star_flag = giga_no_lanes
@@ -267,30 +266,17 @@ giga_is_neutron_type_star = {
 		is_rs_magnetar = yes
 	}
 }
-# Planet triggers
-
-# Soon obsolete
-giga_gas_giant = {
+giga_gas_giant = { # Soon obsolete
 	merg_is_gas_giant = yes
 }
-
-###################################
-### Compat Planet type triggers ###
-###################################
-
-### Uninhabitable planets ###
- 
-#Gas giants
 giga_is_gas_giant = {
 	optimize_memory
 	merg_is_gas_giant = yes
 }
-#frozen
 giga_is_frozen = {
 	optimize_memory
 	merg_is_frozen = yes
 }
-### Habitable worlds(pain) ###
 giga_is_ocean = { 
 	optimize_memory
 	OR = {
@@ -338,4 +324,18 @@ giga_is_nuked = {
 giga_is_arcology = {
 	optimize_memory
 	merg_is_arcology = yes
+}
+giga_country_gets_bank_include = {
+	OR = {
+		# Darkspace
+		is_country_type = ds_nomads
+		# Ethics & Civics Infinity
+		is_country_type = uo_une_member_active
+		# Scripted Triggers Undercoat
+		has_country_flag = is_playable
+		# The Empty Vagrant
+		is_country_type = default_ev
+		# ZOFE
+		is_zofe_country = yes
+	}
 }
