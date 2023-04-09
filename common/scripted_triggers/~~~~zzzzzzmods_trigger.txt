@@ -470,16 +470,36 @@ ag_has_planetary_shield = {
 	optimize_memory
 	OR = {
 		has_active_building = building_planetary_shield_generator
-		# More Events Mod
-		has_active_building = building_mem_planetary_shield_generator
-		has_active_building = building_mem_planetary_shield_generator_heavy
-		has_active_building = building_mem_planetary_shield_generator_orila
+		has_active_building = building_planetary_shield_generator_fe
 		# ACOT
 		has_active_building = building_dark_energy_psg
 		has_active_building = building_ae_dark_energy_psg
 		# AOT
 		has_active_building = building_phanon_psg
 		has_active_building = building_stellarite_psg
+		# AVB
+		has_active_building = building_avb_planetary_shield_generator_2
+		has_active_building = building_avb_planetary_shield_generator_3
+		has_active_building = building_avb_dark_matter_planetary_shield_generator
+		# Gigas
+		has_active_building = building_giga_planetary_shield_generator_1
+		has_active_building = building_giga_planetary_shield_generator_2
+		# Star Wars: Kuat Ancient Empire
+		has_active_building = building_kuat_shield
+		# More Events Mod
+		has_active_building = building_mem_planetary_shield_generator
+		has_active_building = building_mem_planetary_shield_generator_heavy
+		has_active_building = building_mem_planetary_shield_generator_orila
+		# Nirvana Empire Project
+		has_active_building = building_sky_shield
+		# Production Revolution
+		has_active_building = PR_BLDN_Army_sp_shield_T3
+		# Reworked Advanced Ascension
+		has_active_building = AAR_bldn_VEIL_shield_generator_T5
+		# ThaumStellaris
+		has_active_building = building_tc_rune_shield_t1
+		has_active_building = building_tc_rune_shield_t2
+		has_active_building = building_tc_rune_shield_t3
 	}
 }
 
