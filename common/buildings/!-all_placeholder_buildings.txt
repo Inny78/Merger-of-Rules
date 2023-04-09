@@ -174,6 +174,7 @@ building_phanon_palace = { potential = { always = no } allow = { always = no } }
 building_phanon_psg = { potential = { always = no } allow = { always = no } }
 building_phanon_stronghold = { potential = { always = no } allow = { always = no } }
 building_phanon_tower = { potential = { always = no } allow = { always = no } }
+building_planetary_shield_generator_fe = { potential = { always = no } allow = { always = no } }
 building_plentiful_traditions_advanced_pillar_of_affliction = { potential = { always = no } allow = { always = no } }
 building_plentiful_traditions_advanced_slave_processing = { potential = { always = no } allow = { always = no } }
 building_plentiful_traditions_biogenesis_lab = { potential = { always = no } allow = { always = no } }

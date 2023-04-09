@@ -1081,34 +1081,18 @@ can_colonize_planet = {
 		limit = { merg_has_the_belt = yes }
 		OR = {
 			NOR = {
-				is_planet_class = pc_bdoe_habitable_asteroid
-				is_planet_class = pc_bdoe_habitable_ice_asteroid
-				is_planet_class = pc_bdoe_habitable_crystal_asteroid
-				is_planet_class = pc_bdoe_molten_habitable
-				is_planet_class = pc_bdoe_barren_habitable
-				is_planet_class = pc_bdoe_barren_cold_habitable
-				is_planet_class = pc_bdoe_toxic_habitable
-				is_planet_class = pc_bdoe_frozen_habitable
+				bdoe_is_habitable_asteroid = yes
+				bdoe_is_habitable_barren = yes
 			}
 			AND = {
-				OR = {
-					is_planet_class = pc_bdoe_habitable_asteroid
-					is_planet_class = pc_bdoe_habitable_ice_asteroid
-					is_planet_class = pc_bdoe_habitable_crystal_asteroid
-				}
+				bdoe_is_habitable_asteroid = yes
 				root = {
 					has_technology = tech_bdoe_asteroid_adaption_0
 				}
 				NOT = { has_global_flag = xenos_disable_mechanics_asteroid_colonizing }
 			}
 			AND = {
-				OR = {
-					is_planet_class = pc_bdoe_molten_habitable
-					is_planet_class = pc_bdoe_barren_habitable
-					is_planet_class = pc_bdoe_barren_cold_habitable
-					is_planet_class = pc_bdoe_toxic_habitable
-					is_planet_class = pc_bdoe_frozen_habitable
-				}
+				bdoe_is_habitable_barren = yes
 				root = {
 					has_technology = tech_bdoe_secondary_planets_adaption_0
 				}
@@ -2591,10 +2575,9 @@ ai_should_restrict_system = {
 				exists = owner
 				owner = {
 					OR = {
-						is_country_type = crystal
-						is_country_type = amoeba
-						is_country_type = amoeba_garrison
-						is_country_type = drone
+						is_crystal_country_type = yes
+						is_amoeba_country_type = yes
+						is_drone_country_type = yes
 					}
 				}
 			}
