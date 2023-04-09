@@ -49,6 +49,7 @@ mpo_lost_spacefarers = { ai = { enabled = no } }
 nep_arena_hologram = { ai = { enabled = no } }
 nep_bounty_hologram = { ai = { enabled = no } }
 nep_phantom_passive = { ai = { enabled = no } }
+original_empire = { ai = { enabled = no } }
 pg_last_hope = { ai = { enabled = no } }
 planet_state = { ai = { enabled = no } }
 replicators = { ai = { enabled = no } }
