@@ -1112,6 +1112,8 @@ can_think = {
 		has_trait = trait_memorex_comatos
 		# Diagraphers Trait Mod
 		has_trait = trait_subsapient_form
+		# Rogue Maid
+		has_trait = trait_working_machine
 		# V_Traits
 		has_trait = trait_v_cyborg_servitor
 	}

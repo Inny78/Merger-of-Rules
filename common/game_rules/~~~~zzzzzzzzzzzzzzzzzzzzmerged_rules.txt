@@ -1189,10 +1189,7 @@ can_terraform_planet = {
 		fail_text = NO_TERRAFORM_OVERMIND
 		OR = {
 			merg_has_real_new_frontiers = no
-			AND = {
-				merg_has_real_new_frontiers = yes				# to avoid a bug
-				NOT = { has_deposit = d_heart_of_the_overmind }
-			}
+			NOT = { has_deposit = d_heart_of_the_overmind }
 		}
 	}
 }
@@ -3417,6 +3414,9 @@ can_build_branch_offices = {
 			# Ethical Gestalts
 			has_valid_civic = civic_hive_guest
 			has_policy_flag = infiltration_allowed
+			# Forgotten Queens
+			has_valid_civic = civic_mutualistic_behavior
+			has_valid_civic = civic_machine_trading
 			# Girls Frontline
 			has_civic = civic_gf_GK
 			# Human Fallen Empires
@@ -3432,9 +3432,6 @@ can_build_branch_offices = {
 			has_ascension_perk = ap_expactriate_service
 			# Voyage to Eternity
 			KZ_VOY_can_build_branch_offices = yes
-			# Forgotten Queens
-			has_valid_civic = civic_mutualistic_behavior
-			has_valid_civic = civic_machine_trading
 			# Warship Girls R And MIST Species
 			AND = {
 				has_authority = auth_shenhai
@@ -3470,6 +3467,16 @@ can_support_branch_offices = {
 				merg_has_more_authorities = no
 				is_megacorp = yes
 			}
+			# Azur Lane Stellaris DLC
+			has_authority = auth_azur_lane_1
+			# Arknights Near Future
+			has_valid_civic = civic_business_union
+			# BlueArchive species pack
+			has_authority = auth_kivotos
+			# Girls Frontline
+			has_civic = civic_gf_GK
+			# More Corporate Authorities
+			has_valid_civic = civic_galactic_sovereign_megacorp
 			# Warship Girls R And MIST Species
 			AND = {
 				has_authority = auth_shenhai
@@ -3478,16 +3485,6 @@ can_support_branch_offices = {
 					has_valid_civic = civic_sh_criminal_syndicate
 				}
 			}
-			# Azur Lane Stellaris DLC
-			has_authority = auth_azur_lane_1
-			# More Corporate Authorities
-			has_valid_civic = civic_galactic_sovereign_megacorp
-			# Arknights Near Future
-			has_valid_civic = civic_business_union
-			# Girls Frontline
-			has_civic = civic_gf_GK
-			# BlueArchive species pack
-			has_authority = auth_kivotos
 		}
 	}
 	custom_tooltip = {
@@ -3613,6 +3610,8 @@ can_build_branch_office_on_planet = {
 					}
 					# Kancolle
 					has_authority = auth_kancolle
+					# Rogue Maid
+					has_ascension_perk = ap_expactriate_service
 					# Voyage to Eternity
 					KZ_VOY_can_build_branch_offices = yes
 					# Warship Girls R And MIST Species
@@ -3829,30 +3828,11 @@ can_build_branch_office_on_planet = {
 	# principled rogues won't build branch offices in countries they like
 	hidden_trigger = {
 		OR = {
-			NOT = {
-				root = {
-					has_ai_personality = principled_rogues
-					is_ai = yes
-				}
-			}
+			NOT = { root = { has_ai_personality = principled_rogues is_ai = yes } }
+			owner = { their_opinion = { who = root value < 0 } }
 			owner = {
-				their_opinion = {
-					who = root
-					value < 0
-				}
-			}
-			owner = {
-				their_opinion = {
-					who = root
-					value < 20
-				}
-				NOT = {
-					has_opinion_modifier = {
-						who = root
-						modifier = opinion_new_contact
-						is_reverse = yes
-					}
-				}
+				their_opinion = { who = root value < 20 }
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_new_contact is_reverse = yes } }
 			}
 		}
 	}
@@ -3868,6 +3848,77 @@ can_build_branch_office_on_planet = {
 			fail_text = BRANCH_OFFICE_NOT_MIGRATION_TREATY
 			exists = owner
 			root = { has_migration_access = prev.owner }
+		}
+	}
+	# Rogue Maid
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_MAID_AI_OUTLAWED
+		exists = owner
+		OR = {
+			merg_has_rogue_maid = no
+			root = { NOT = { has_ascension_perk = ap_expactriate_service } }
+			if = {
+				limit = { root = { has_civic = civic_machine_servitor } }
+				owner = { NOT = { has_policy_flag = ai_outlawed } }
+			}
+			owner = { is_galactic_community_member = yes }
+			owner = {
+				is_subject = yes
+				overlord = { is_same_value = root }
+			}
+		}
+	}
+	custom_tooltip = { #对方禁止AI（共同体提示）
+		fail_text = BRANCH_OFFICE_MAID_AI_OUTLAWED_WITH_COMMUNITY
+		exists = owner
+		OR = {
+			merg_has_rogue_maid = no
+			root = { NOT = { has_ascension_perk = ap_expactriate_service } }
+			if = {
+				limit = { root = { has_civic = civic_machine_servitor } }
+				owner = { NOT = { has_policy_flag = ai_outlawed } }
+			}
+			is_galactic_community_formed = no
+			owner = { is_galactic_community_member = no }
+			owner = {
+				is_subject = yes
+				overlord = { is_same_value = root }
+			}
+			root = { is_galactic_emperor = yes }
+		}
+	}
+	custom_tooltip = { #未建立大使馆
+		fail_text = BRANCH_OFFICE_MAID_NO_EMBASSY
+		exists = owner
+		OR = {
+			merg_has_rogue_maid = no
+			root = { NOT = { has_ascension_perk = ap_expactriate_service } }
+			root = { has_embassy = prev.owner }
+		}
+	}
+	custom_tooltip = { #好感不足
+		fail_text = BRANCH_OFFICE_MAID_NOT_ENOUGH_FRIENDLY
+		exists = owner
+		OR = {
+			merg_has_rogue_maid = no
+			root = { NOT = { has_ascension_perk = ap_expactriate_service } }
+			owner = {
+				NOR = {
+					is_unfriendly_to = root
+					is_rival = root
+					is_hostile_to = root
+					is_threatened_to = root
+				}
+			}
+			AND = {
+				root = {
+					OR = {
+						is_galactic_custodian = yes
+						is_galactic_emperor = yes
+					}
+				}
+				owner = { is_galactic_community_member = yes }
+			}
 		}
 	}
 }
