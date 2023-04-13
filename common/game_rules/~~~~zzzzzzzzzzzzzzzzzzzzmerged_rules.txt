@@ -1343,7 +1343,11 @@ species_has_happiness = {
 		# Diagraphers Trait Mod
 		has_trait = trait_multihive_drone
 		# ThaumStellaris
-		has_trait = tc_trait_golem
+		OR = {
+			is_archetype = TC_GOLEM
+			is_archetype = TC_GOLEM_HIVE
+			is_archetype = TC_GOLEM_MACHINE
+		}
 		# Trait Diversity
 		has_trait = trait_td_multi_hiveminded
 		has_trait = trait_td_emotionless
@@ -2367,12 +2371,8 @@ can_orbitable_repair_ships = {
 				has_starbase_size >= ls_starbase_starport
 				has_starbase_size = origin_super_citadel_playable
 				has_starbase_size = origin_super_citadel
-				has_starbase_size >= acot_precusor_starbase
-				has_starbase_size >= acot_precusor_sigma_starbase
-				has_starbase_size >= acot_precusor_phanon_starcitadel
-				has_starbase_size >= acot_precusor_theta_starcitadel
+				is_precursor_starbase = yes
 				has_starbase_size >= precursor_colossus
-				has_starbase_size >= acot_star_commander
 				# ZOFE
 				has_starbase_size = fe_goliath
 				# AOT

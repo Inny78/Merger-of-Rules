@@ -847,6 +847,8 @@ Shield_Gate = { entity = "" potential = { always = no } possible = { always = no
 skypalace_0 = { entity = "" potential = { always = no } possible = { always = no } }
 slgt_central_mining_station = { entity = "" potential = { always = no } possible = { always = no } }
 sofe_inner_gate = { entity = "" potential = { always = no } possible = { always = no } }
+sofe_omega_dyson_sphere = { entity = "" potential = { always = no } possible = { always = no } }
+sofe_omega_nexus = { entity = "" potential = { always = no } possible = { always = no } }
 sofe_omega_spy_orb_center = { entity = "" potential = { always = no } possible = { always = no } }
 sofe_outer_gate = { entity = "" potential = { always = no } possible = { always = no } }
 star_imploder_0 = { entity = "" potential = { always = no } possible = { always = no } }

@@ -47,6 +47,10 @@ NYTO = { uses_modifiers = no }
 HOLOARCH = { uses_modifiers = no }
 # SW:UnknownWorld Shipgirls Story
 STARSHIPGIRLS = { uses_modifiers = no }
+# ThaumStellaris
+TC_GOLEM = { uses_modifiers = no }
+TC_GOLEM_HIVE = { uses_modifiers = no }
+TC_GOLEM_MACHINE = { uses_modifiers = no }
 # The DAL Species Mod
 DATEALIVE = { uses_modifiers = no }
 # Wandering Witch: Voyagers
