@@ -123,6 +123,7 @@ is_imperial = { always = no }
 is_khan_country_type = { always = no }
 is_KZ_VOY_organic_species = { always = no }
 is_mage = { always = no }
+is_multihive_drone = { always = no }
 is_nirvana_empire = { always = no }
 is_organic_zealots = { always = no }
 is_pd_aquatics = { always = no }

@@ -288,7 +288,6 @@ legw_megaplanet = {
 		is_planet_class = pc_machine
 		is_planet_class = pc_cybrex
 		# Planetary Diversity
-		# Planetary Diversity
 		is_planet_class = pc_machinetidallylocked 
 		is_planet_class = pc_machine_factory 
 		is_planet_class = pc_machine_necropolis
@@ -757,14 +756,7 @@ gpm_is_planet_class_toxic = {
 	OR = {
 		merg_is_toxic = yes
 		# Planetary Diversity
-		is_planet_class = pc_acid
-		is_planet_class = pc_methane
-		is_planet_class = pc_ammonia
-		is_planet_class = pc_ethane_ocean
-		is_planet_class = pc_sulfur
-		is_planet_class = pc_acid
-		is_planet_class = pc_lanthanide
-		is_planet_class = pc_ash
+		is_pd_exotic = yes
 	}
 }
 gpm_is_planet_class_frozen = {
@@ -779,14 +771,7 @@ gpm_is_planet_class_nuked = {
 }
 gpm_is_planet_class_gas_giant = {
 	optimize_memory
-	OR = {
-		merg_is_gas_giant = yes
-		# Planetary Diversity
-		is_planet_class = pc_pd_gas_giant_hab
-		# Gigastructural Engineering & More
-		is_planet_class = pc_habitable_gas_giant
-		is_planet_class = pc_giga_maginot_gas_giant		
-	}
+	merg_is_gas_giant = yes
 }
 gpm_is_planet_class_city = {
 	optimize_memory
@@ -1614,18 +1599,7 @@ darhmod_seres_digsite_spawn_rules = {
 bdoe_is_habitable_structure = { habitable_structure = yes } # Don't reinvent the wheel when you have a tire factory
 bdoe_can_have_random_districts = {
 	OR = {
-		merg_is_continental = yes
-		merg_is_tropical = yes
-		merg_is_ocean = yes
-		merg_is_desert = yes
-		merg_is_arid = yes
-		merg_is_savannah = yes
-		merg_is_arctic = yes
-		merg_is_tundra = yes
-		merg_is_alpine = yes
-		merg_is_gaia_basic = yes
-		merg_is_nuked_basic = yes
-		merg_is_relic_world = yes
+		merg_is_basic_habitable = yes
 		# Lithoid Supremacy
 		is_planet_class = pc_geode
 		# Real Space: New Frontiers

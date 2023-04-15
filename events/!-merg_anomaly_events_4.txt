@@ -27,6 +27,12 @@ ship_event = {
 						has_trait = trait_pc_shattered_ring_habitable_preference
 						# Gigastructural Engineering & More
 						giga_has_artificial_preference_trait = yes
+						# Planetary Diversity
+						has_trait = trait_pc_floating_preference
+						has_trait = trait_pc_crystal_preference
+						has_trait = trait_pc_technoorganic_preference
+						has_trait = trait_pc_pd_zro_preference
+						has_trait = trait_pc_graveyard_preference
 						# Voyage to Eternity
 						has_trait = trait_pc_KZ_VOY_hyper_ecumenopolis_preference
 						has_trait = trait_pc_KZ_VOY_astral_world_preference

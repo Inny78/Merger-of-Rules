@@ -1341,7 +1341,7 @@ species_has_happiness = {
 		has_trait = trait_hive_mind
 		can_think = no
 		# Diagraphers Trait Mod
-		has_trait = trait_multihive_drone
+		is_multihive_drone = yes
 		# ThaumStellaris
 		OR = {
 			is_archetype = TC_GOLEM
@@ -3868,7 +3868,7 @@ can_build_branch_office_on_planet = {
 			}
 		}
 	}
-	custom_tooltip = { #对方禁止AI（共同体提示）
+	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_MAID_AI_OUTLAWED_WITH_COMMUNITY
 		exists = owner
 		OR = {
@@ -3887,7 +3887,7 @@ can_build_branch_office_on_planet = {
 			root = { is_galactic_emperor = yes }
 		}
 	}
-	custom_tooltip = { #未建立大使馆
+	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_MAID_NO_EMBASSY
 		exists = owner
 		OR = {
@@ -3896,7 +3896,7 @@ can_build_branch_office_on_planet = {
 			root = { has_embassy = prev.owner }
 		}
 	}
-	custom_tooltip = { #好感不足
+	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_MAID_NOT_ENOUGH_FRIENDLY
 		exists = owner
 		OR = {

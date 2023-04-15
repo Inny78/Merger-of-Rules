@@ -88,7 +88,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 				# Rewriting this part for max compatibility, inspired by Planetary Diversity
 				colonizable_planet = yes
 				is_artificial = yes
-				merg_is_crackable_planet = yes
+				uninhabitable_regular_planet = yes
 			}
 		}
 	}
@@ -684,7 +684,7 @@ can_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 					}
 				}
 			}
-			merg_is_crackable_planet = yes
+			uninhabitable_regular_planet = yes
 		}
 	}
 	#}
@@ -1307,7 +1307,7 @@ can_destroy_planet_with_PLANET_KILLER_WATERB = {
 						colonizable_planet = yes
 						is_artificial = yes
 						is_colonizable = yes
-						merg_is_crackable_planet = yes
+						uninhabitable_regular_planet = yes
 					}
 				}
 			}
@@ -1385,7 +1385,7 @@ wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 			OR = {
 				colonizable_planet = yes
 				is_artificial = yes
-				merg_is_crackable_planet = yes
+				uninhabitable_regular_planet = yes
 			}
 		}
 	}
@@ -2448,7 +2448,7 @@ can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 				# Rewriting this part for max compatibility, inspired by Planetary Diversity
 				colonizable_planet = yes
 				is_artificial = yes
-				merg_is_crackable_planet = yes
+				uninhabitable_regular_planet = yes
 			}
 		}
 	}
@@ -2550,7 +2550,7 @@ can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
 				# Rewriting this part for max compatibility, inspired by Planetary Diversity
 				colonizable_planet = yes
 				is_artificial = yes
-				merg_is_crackable_planet = yes
+				uninhabitable_regular_planet = yes
 			}
 		}
 	}
@@ -2652,7 +2652,7 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 				# Rewriting this part for max compatibility, inspired by Planetary Diversity
 				colonizable_planet = yes
 				is_artificial = yes
-				merg_is_crackable_planet = yes
+				uninhabitable_regular_planet = yes
 			}
 		}
 	}
@@ -2775,7 +2775,7 @@ can_destroy_planet_with_PLANET_KILLER_HARVESTER = {
 			OR = {
 				# Rewriting this part for max compatibility, inspired by Planetary Diversity
 				colonizable_planet = yes
-				merg_is_crackable_planet = yes
+				uninhabitable_regular_planet = yes
 			}
 		}
 	}
@@ -3022,7 +3022,7 @@ can_destroy_planet_with_planet_killer_kancolle_kari = {
 				# Rewriting this part for max compatibility, inspired by Planetary Diversity
 				colonizable_planet = yes
 				is_artificial = yes
-				merg_is_crackable_planet = yes
+				uninhabitable_regular_planet = yes
 			}
 		}
 	}
@@ -3463,7 +3463,7 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 				}
 				OR = {
 					colonizable_planet = yes
-					merg_is_crackable_planet = yes
+					uninhabitable_regular_planet = yes
 					is_pd_planet_class_all = yes
 				}
 			}
@@ -3617,7 +3617,7 @@ can_destroy_planet_with_PLANET_KILLER_HARBINGER = {
 # 			OR = {
 # 				colonizable_planet = yes
 # 				is_artificial = yes
-# 				merg_is_crackable_planet = yes
+# 				uninhabitable_regular_planet = yes
 # 			}
 # 		}
 # 	}
@@ -3873,7 +3873,7 @@ can_destroy_planet_with_PLANET_KILLER_GRAYGOO = {
 			OR = {
 				colonizable_planet = yes
 				is_artificial = yes
-				merg_is_crackable_planet = yes
+				uninhabitable_regular_planet = yes
 			}
 		}
 	}	
@@ -4117,7 +4117,7 @@ can_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = {
 				OR = {
 					colonizable_planet = yes
 					is_artificial = yes
-					merg_is_crackable_planet = yes
+					uninhabitable_regular_planet = yes
 				}
 			}
 		}
@@ -4156,6 +4156,11 @@ can_destroy_planet_with_PLANET_KILLER_GENESIS = {
 	custom_tooltip = {
 		fail_text = is_colony_of_someone
 		is_colony = no
+	}
+	OR = {
+		is_planet_class = pc_ringworld_habitable
+		is_planet_class = pc_habitat
+		merg_is_basic_planet = yes
 	}
 	is_colonizable = yes
 	custom_tooltip = {
@@ -4222,6 +4227,11 @@ can_destroy_planet_with_PLANET_KILLER_GOLIATH_SCOURGE = {
 	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		merg_is_forbidden_target = no
+	}
+	OR = {
+		is_planet_class = pc_ringworld_habitable
+		is_planet_class = pc_habitat
+		merg_is_basic_planet = yes
 	}
 	OR = {
 		custom_tooltip = {
