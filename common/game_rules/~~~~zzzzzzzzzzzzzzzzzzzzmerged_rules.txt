@@ -1326,6 +1326,11 @@ can_colonize_with_species = {
 			}
 		}
 	}
+	# Lithoid Supremacy Content
+	else_if = {
+		limit = { has_trait = trait_pearl_born_drone }
+		custom_tooltip = { always = no }
+	}
 	# Vanilla
 	else = { always = yes }
 }
@@ -4721,6 +4726,8 @@ can_fill_ruler_job = {
 				# Ethics and Civics Alternative - Redux
 				has_trait = trait_symbiotic
 				has_trait = trait_slave_gene
+				# Lithoid Supremacy
+				has_trait = trait_pearl_born_drone
 				# Wandering Witch: Voyagers
 				has_trait = trait_servitude
 			}
