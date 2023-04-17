@@ -62,6 +62,12 @@ building_avb_capital_5 = { potential = { always = no } allow = { always = no } }
 building_avb_capital_6 = { potential = { always = no } allow = { always = no } }
 building_avb_clone_army_clone_vat_2 = { potential = { always = no } allow = { always = no } }
 building_avb_clone_vats_2 = { potential = { always = no } allow = { always = no } }
+building_avb_factory_4 = { potential = { always = no } allow = { always = no } }
+building_avb_factory_5 = { potential = { always = no } allow = { always = no } }
+building_avb_factory_6 = { potential = { always = no } allow = { always = no } }
+building_avb_foundry_4 = { potential = { always = no } allow = { always = no } }
+building_avb_foundry_5 = { potential = { always = no } allow = { always = no } }
+building_avb_foundry_6 = { potential = { always = no } allow = { always = no } }
 building_avb_hab_capital_3 = { potential = { always = no } allow = { always = no } }
 building_avb_hive_capital_3 = { potential = { always = no } allow = { always = no } }
 building_avb_hive_capital_4 = { potential = { always = no } allow = { always = no } }

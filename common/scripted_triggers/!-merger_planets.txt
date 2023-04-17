@@ -104,8 +104,9 @@ merg_is_barren = {
 		is_planet_class = pc_barren
 		# All These Worlds
 		atw_is_barren = yes
-		# Midas
-		# is_planet_class = pc_midas_barren
+		# Mem
+		is_pc_mem_destroyed_barren = yes
+		is_pc_mem_broken_city = yes
 		# Planetary Diversity
 		is_pd_barren = yes
 	}
@@ -348,7 +349,7 @@ merg_is_tropical = {
 		# All These Worlds
 		atw_is_tropical = yes
 		# More Events Mod
-		is_planet_class = mem_pc_death
+		is_pc_mem_death = yes
 	}
 }
 

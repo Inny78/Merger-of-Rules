@@ -190,7 +190,7 @@ merg_is_habitat_non_starborn = {
 		# Living Space
 		has_planet_flag = stpg_planetary_habitat
 		# More Events Mod
-		is_planet_class = pc_mem_vazuran_habitat
+		is_pc_mem_vazuran_habitat = yes
 		# Nyto Species Pack
 		is_planet_class = pc_GFnytp_habitis
 		# Planetary Diversity
@@ -214,7 +214,7 @@ merg_is_habitat_non_PD = {
 		is_planet_class = pc_giga_elysium
 		is_planet_class = pc_giga_orbital
 		# More Events Mod
-		is_planet_class = pc_mem_vazuran_habitat
+		is_pc_mem_vazuran_habitat = yes
 		# Acquisition of Technology
 		is_planet_class = pc_dm_habitat
 		is_planet_class = pc_ae_habitat
@@ -368,7 +368,7 @@ merg_is_forbidden_target = {
 merg_is_untargetable = {
 	OR = {
 		# MEM
-		is_planet_class = pc_mem_synthetic_sun
+		is_pc_mem_synthetic_sun = yes
 		# ACOT
 		is_acot_awesome_planet_class = yes
 		# Secrets of the Shroud
@@ -404,7 +404,7 @@ merg_is_dense_star = {
 		is_hypo_stars_strange_star = yes
 		is_hypo_stars_white_hole = yes
 		# MEM
-		is_planet_class = pc_mem_micro_black_hole
+		is_pc_mem_micro_black_hole = yes
 		# Real Space
 		is_rs_collapsar = yes
 		is_rs_magnetar = yes

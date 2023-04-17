@@ -124,6 +124,12 @@ is_imperial = { always = no }
 is_khan_country_type = { always = no }
 is_KZ_VOY_organic_species = { always = no }
 is_mage = { always = no }
+is_pc_mem_death = { always = no }
+is_pc_mem_destroyed_barren = { always = no }
+is_pc_mem_micro_black_hole = { always = no }
+is_pc_mem_broken_city = { always = no }
+is_pc_mem_synthetic_sun = { always = no }
+is_pc_mem_vazuran_habitat = { always = no }
 is_multihive_drone = { always = no }
 is_nirvana_empire = { always = no }
 is_organic_zealots = { always = no }
