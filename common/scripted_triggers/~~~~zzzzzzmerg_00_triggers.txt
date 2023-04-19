@@ -37,15 +37,6 @@ colonizable_planet = {
 		has_apsr_modifiers = yes
 		# Endless Frontier
 		is_planet_class = pc_mzilli_shadow
-		# SBTG
-		is_planet_class = pc_golden_world
-		is_planet_class = pc_golden_world_habitable
-		is_planet_class = pc_omega_ringworld_habitable
-		is_planet_class = pc_omega_ringworld_seam
-		is_planet_class = pc_omega_ringworld_tech
-		is_planet_class = pc_goodman_gaia_world
-		is_planet_class = pc_golden_fortress
-		is_planet_class = pc_sosi_proto_gaia_world
 	}
 }
 
@@ -82,12 +73,13 @@ habitable_planet_not_urban = {
 		is_planet_class = pc_swgs_engineer
 		is_planet_class = pc_swgs_engineer_ringworld_habitable
 		# Gigastructures
-		is_planet_class = pc_katzenland
 		# soon to be removed
+		is_planet_class = pc_katzenland
 		is_planet_class = pc_ll_temperate
 		is_planet_class = pc_ll_foggy
 		is_planet_class = pc_ll_torrid
 		# giga_is_lifeless = yes # future update
+		# giga_is_katzenland = yes
 		# Real Space - New Frontiers / Expanded Gestalts: Forgotten Queens
 		is_planet_class = pc_hollow
 	}

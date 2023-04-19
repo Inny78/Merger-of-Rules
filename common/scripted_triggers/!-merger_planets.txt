@@ -243,6 +243,7 @@ merg_is_nuked = {
 		is_planet_class = pc_BA_ruined_planet
 		# Gigastructural Engineering & More
 		is_planet_class = pc_katzenland
+		# giga_is_katzenland = yes
 		# Girls Frontline
 		is_planet_class = pc_GF_collapsed
 		# Human Fallen Empires
@@ -274,6 +275,7 @@ merg_is_aquatic = {
 		is_planet_class = pc_BA_campus_planet
 		# Gigastructural Engineering & More
 		is_planet_class = pc_giga_edge_of_eternity
+		# giga_is_edge_of_eternity = yes
 	}
 }
 

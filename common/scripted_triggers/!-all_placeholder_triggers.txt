@@ -43,6 +43,8 @@ GF_can_build_doll_species = { always = no }
 giga_is_alderson_disk = { always = no }
 giga_is_birch_world = { always = no }
 giga_is_compact_star = { always = no }
+giga_is_edge_of_eternity = { always = no }
+giga_is_katzenland = { always = no }
 giga_is_lifeless = { always = no }
 giga_uses_habitat_capitals = { always = no }
 giga_uses_industrial_district = { always = no }
