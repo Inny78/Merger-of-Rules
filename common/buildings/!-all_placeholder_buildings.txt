@@ -56,6 +56,7 @@ building_ae_stronghold = { potential = { always = no } allow = { always = no } }
 building_all_is_dust = { potential = { always = no } allow = { always = no } }
 building_ancient_palace = { potential = { always = no } allow = { always = no } }
 building_ancient_palace_at = { potential = { always = no } allow = { always = no } }
+building_anz_cc_mainframe = { potential = { always = no } allow = { always = no } }
 building_avb_betharian_power_plant_2 = { potential = { always = no } allow = { always = no } }
 building_avb_capital_4 = { potential = { always = no } allow = { always = no } }
 building_avb_capital_5 = { potential = { always = no } allow = { always = no } }

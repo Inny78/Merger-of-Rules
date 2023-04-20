@@ -1,10 +1,17 @@
 # Dummy modifiers - to be overwritten by their respective mods. File is FIOS!
 # Irony this is a placeholder file please ignore it
 apocalypse = {}
+ag_debug_modifier_buff_common = {}
+bdoe_cemetery_world = {}
+bdoe_storage_world = {}
+bdoe_waste_world = {}
+bdoe_feudal_world = {}
 catastrophe_approach = {}
 delicate_ecosystem = {}
 deteriorating_ecosystem = {}
 eco_fragile_ecosystem = {}
+modifier_ban_assemble = {}
+modifier_BA_Veritas_4 = {}
 mzilli_decaying_moon_3 = {}
 mzilli_events_dying_world = {}
 pdammoniaatmosphere = {}
@@ -12,11 +19,8 @@ pdashatmosphere = {}
 pdmethaneatmosphere = {}
 pdsulfuratmosphere = {}
 planet_active_worm = {}
-ravenous_locusts = {}
 planet_cloning_limits = {}
 planet_population_control_rationed = {}
 planet_population_control_gestalt = {}
-modifier_ban_assemble = {}
-modifier_BA_Veritas_4 = {}
-ag_debug_modifier_buff_common = {}
 N_ISBS_longinus_hit_planet_modifier = {}
+ravenous_locusts = {}

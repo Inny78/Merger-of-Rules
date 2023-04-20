@@ -20,6 +20,8 @@ civic_gf_GK = { potential = { always = no } }
 civic_harm_hive = { potential = { always = no } }
 civic_harm_machine = { potential = { always = no } }
 civic_hive_assimilator = { potential = { always = no } }
+civic_hive_parasitic = { potential = { always = no } }
+civic_hive_semi_autonomous_drones = { potential = { always = no } }
 civic_hive_strong_connection = { potential = { always = no } }
 civic_infestation = { potential = { always = no } }
 civic_interventionalist = { potential = { always = no } }
@@ -29,6 +31,7 @@ civic_living_hosts = { potential = { always = no } }
 civic_machine_cult = { potential = { always = no } }
 civic_machine_cult_corpo = { potential = { always = no } }
 civic_machine_emotions = { potential = { always = no } }
+civic_machine_mighty_processors = { potential = { always = no } }
 civic_machine_replicators = { potential = { always = no } }
 civic_machine_trading = { potential = { always = no } }
 civic_megastore = { potential = { always = no } }

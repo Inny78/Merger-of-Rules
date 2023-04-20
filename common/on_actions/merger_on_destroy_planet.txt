@@ -603,6 +603,6 @@ on_destroy_planet_with_PLANET_KILLER_NANO = { # Nanites
 		sleeper_dormant.12
 		maginot_destruction.1002
 		giga_katzen.0933
-		cruel_pk.4
+		# cruel_pk.4
 	}
 }
