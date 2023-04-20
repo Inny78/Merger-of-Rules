@@ -190,6 +190,7 @@ is_wg_upgraded_ringworld = { always = no }
 is_v_mobile = { always = no }
 is_valid_GF_OGAS_subnet = { always = no }
 is_valid_organic_zealots = { always = no }
+is_valid_pop_for_PLANET_KILLER_SLUMBER = { always = no }
 is_wg_event_leader = { always = no }
 is_wg_event_limit_ships = { always = no }
 is_ws_system = { always = no }
