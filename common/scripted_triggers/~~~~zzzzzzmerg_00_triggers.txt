@@ -323,7 +323,7 @@ is_democracy = {
 		}
 		# More Authorities/E&C FunEFork
 		has_authority = auth_strict_democratic
-		has_authority = auth_direct_democratic		# Also used by Stellaris Evolved
+		has_authority = auth_direct_democratic
 		AND = {
 			has_authority = auth_dict_democratic
 			is_egalitarian = yes
