@@ -350,7 +350,7 @@ can_destroy_planet_with_PLANET_KILLER_DELUGE = {
 	}
 	custom_tooltip = {
 		fail_text = is_not_oceanic
-		merg_is_ocean = no
+		merg_is_aquatic = no
 	}
 	if = {
 		limit = { is_inside_border = from.owner }
