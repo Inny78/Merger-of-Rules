@@ -1300,12 +1300,8 @@ can_colonize_with_species = {
 	}
 	else_if = {
 		limit = {
-			OR = {
-				# Nyto Species Event Pack
-				has_species_flag = GF_nyto_not_coloniz
-				# Lithoid Supremacy
-				has_trait = trait_pearl_born_drone
-			}
+			# Lithoid Supremacy
+			has_trait = trait_pearl_born_drone
 		}
 		always = no
 	}

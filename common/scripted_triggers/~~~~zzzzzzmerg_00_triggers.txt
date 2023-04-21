@@ -670,10 +670,6 @@ has_food_upkeep = {
 			is_archetype = LILY
 			# Azur Lane Stellaris DLC
 			is_archetype = KANSEN
-			# # BlueArchive species pack
-			# is_archetype = Schale
-			# # Cryogenesis Unofficial Species Pack
-			# is_archetype = sm_ELEMENTAL
 			# Empire of Eeveelution
 			is_archetype = POKEMON
 			# Expanded Traits, Civics, Pops, and More
@@ -693,8 +689,6 @@ has_food_upkeep = {
 			is_archetype = half_amalgamated
 			# Kancolle
 			is_archetype = KANMUSU
-			# # Voyage to Eternity
-			# is_KZ_VOY_organic_species = yes
 			# Nyto Species Events Pack
 			is_archetype = NYTO
 			# SW:UnknownWorld Shipgirls Story

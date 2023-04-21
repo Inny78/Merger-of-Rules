@@ -113,8 +113,6 @@ is_organic_species = {
 			is_archetype = KANMUSU
 			# Voyage to Eternity
 			is_KZ_VOY_organic_species = yes
-			# Nyto Species Events Pack
-			is_archetype = NYTO
 			# Silfae's Portrait Revisited
 			AND = {
 				is_archetype = HOLOARCH
