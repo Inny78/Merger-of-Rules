@@ -20,6 +20,7 @@ pdmethaneatmosphere = {}
 pdsulfuratmosphere = {}
 planet_active_worm = {}
 planet_cloning_limits = {}
+planet_dal_war_in_eden = {}
 planet_population_control_rationed = {}
 planet_population_control_gestalt = {}
 N_ISBS_longinus_hit_planet_modifier = {}

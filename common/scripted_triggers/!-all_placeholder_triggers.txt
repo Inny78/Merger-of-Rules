@@ -2,7 +2,9 @@
 # Irony this is a placeholder file please ignore it
 ag_can_be_orbital_bombardment_country = { always = no }
 ag_can_do_orbital_bombardment_country = { always = no }
+ag_is_ancient_system = { always = no }
 ag_is_mod_habitable_ringworld = { always = no }
+ag_is_special_system = { always = no }
 annihilator_system = { always = no }
 aspmod_pc_nuked_colorful_trigger = { always = no }
 aspmod_pc_ocean_red_trigger = { always = no }
@@ -190,6 +192,7 @@ is_wg_upgraded_ringworld = { always = no }
 is_v_mobile = { always = no }
 is_valid_GF_OGAS_subnet = { always = no }
 is_valid_organic_zealots = { always = no }
+is_valid_pop_for_PLANET_KILLER_CM = { always = no }
 is_valid_pop_for_PLANET_KILLER_SLUMBER = { always = no }
 is_wg_event_leader = { always = no }
 is_wg_event_limit_ships = { always = no }
@@ -208,6 +211,7 @@ KZ_VOY_trgr_plnt_ASSEMBLY = { always = no }
 KZ_VOY_trgr_plnt_CLONE = { always = no }
 planet_has_symbiotes = { always = no }
 prob_forced_armageddon_bombardment = { always = no }
+systems_blokkats_wont_stripmine = { always = no }
 traits_restrict_specialist_jobs = { always = no }
 traits_restrict_worker_jobs = { always = no }
 UGRC_installed = { always = no }
