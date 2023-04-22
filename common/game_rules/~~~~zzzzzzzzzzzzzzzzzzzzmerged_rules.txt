@@ -413,7 +413,7 @@ species_can_live_on_planet = {
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
 			AND = {
-				has_fcss = yes
+				merg_has_fcss = yes
 				has_trait = trait_cybernetic
 			}
 			AND = {
@@ -495,6 +495,8 @@ species_can_live_on_planet = {
 			has_citizenship_type = { type = citizenship_slavery country = root.owner }
 		}
 	}
+	# TimeMod
+	TIME_RULE_trgr_spcs_CAN_live_on_planet = yes
 }
 
 # can_vote_in_democratic_election
@@ -1766,13 +1768,7 @@ can_species_be_assembled = {
 				}
 			}
 			# Voyage to Eternity
-			OR = {
-				merg_has_voyage_eternity = no
-				AND = {
-					merg_has_voyage_eternity = yes
-					KZ_VOY_trgr_plnt_ASSEMBLY = yes
-				}
-			}
+			KZ_VOY_trgr_plnt_ASSEMBLY = yes
 			if = { limit = { has_trait = trait_KZ_VOY_magic_puppet }
 				KZ_VOY_can_assemble_magic_puppet = yes
 			}
@@ -2091,6 +2087,8 @@ can_species_be_assembled = {
 		}
 		KZ_VOY_trgr_plnt_CLONE = yes
 	}
+	# TimeMod
+	NOT = { has_trait = trait_reassembler }
 	# Vanilla
 	has_population_control = { country = root.owner type = no }
 }
@@ -4592,6 +4590,8 @@ can_fill_worker_job = {
 				has_trait = trait_v_adv_social_parasite
 			}
 		}
+		# TimeMod
+		NOT = { has_citizenship_type = { type = citizenship_adeptus_mechanicus } }
 	}
 }
 
@@ -4610,6 +4610,10 @@ can_fill_specialist_job = {
 				has_policy_flag = GF_doll_work_policy_middle
 			}
 		}
+	}
+	# TimeMod
+	hidden_trigger = {
+		NOT = { has_citizenship_type = { type = citizenship_adeptus_mechanicus } }
 	}
 }
 
@@ -4751,6 +4755,10 @@ can_fill_ruler_job = {
 				}
 			}
 		}
+	}
+	# TimeMod
+	hidden_trigger = {
+		NOT = { has_citizenship_type = { type = citizenship_adeptus_mechanicus } }
 	}
 }
 

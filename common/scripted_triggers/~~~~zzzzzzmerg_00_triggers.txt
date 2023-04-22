@@ -37,6 +37,10 @@ colonizable_planet = {
 		has_apsr_modifiers = yes
 		# Endless Frontier
 		is_planet_class = pc_mzilli_shadow
+		# TimeMod
+		is_planet_class = pc_gas_colony
+		is_planet_class = pc_psionic
+		is_planet_class = pc_nanites
 	}
 }
 

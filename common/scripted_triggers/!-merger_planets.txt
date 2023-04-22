@@ -191,6 +191,8 @@ merg_is_gas_giant = {
 		# Planetary Diversity
 		is_planet_class = pc_dwarf_gas_giant
 		is_planet_class = pc_pd_gas_giant_hab
+		# Time Mod
+		is_planet_class = pc_gas_colony
 	}
 }
 
@@ -328,6 +330,8 @@ merg_is_shroud_habitable = {
 		is_planet_class = pc_roz_YS_planet
 		# Shroud Rising
 		is_planet_class = pc_shroud_touched
+		# TimeMod
+		is_planet_class = pc_psionic
 	}
 }
 

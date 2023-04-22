@@ -65,6 +65,7 @@ giga_is_playable_country = { always = no }
 giga_is_unscrappable = { always = no }
 giga_is_vat_leviathan = { always = no }
 giga_is_vat_normal = { always = no }
+giga_is_white_hole = { always = no }
 gpm_has_positive_energy_planet_modifier = { always = no }
 gpm_has_positive_food_planet_modifier = { always = no }
 gpm_has_positive_mineral_planet_modifier = { always = no }
@@ -209,11 +210,12 @@ kuat_is_flagship_system_protection = { always = no }
 KZ_VOY_can_assemble_magic_puppet = { always = no }
 KZ_VOY_can_build_branch_offices = { always = no }
 KZ_VOY_MOD = { always = no }
-KZ_VOY_trgr_plnt_ASSEMBLY = { always = no }
+KZ_VOY_trgr_plnt_ASSEMBLY = { always = yes }
 KZ_VOY_trgr_plnt_CLONE = { always = no }
 planet_has_symbiotes = { always = no }
 prob_forced_armageddon_bombardment = { always = no }
 systems_blokkats_wont_stripmine = { always = no }
+TIME_RULE_trgr_spcs_CAN_live_on_planet = { always = yes }
 traits_restrict_specialist_jobs = { always = no }
 traits_restrict_worker_jobs = { always = no }
 UGRC_installed = { always = no }
