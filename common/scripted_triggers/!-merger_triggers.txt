@@ -431,6 +431,8 @@ merg_is_black_or_white_hole = {
 		is_hypo_stars_white_hole = yes
 		# MEM
 		is_pc_mem_micro_black_hole = yes
+		# Real Space
+		is_rs_microquasar = yes
 		# Solar Storm
 		is_planet_class = pc_ss_abyssal_black_hole
 		# The Abyss Contract
@@ -486,6 +488,26 @@ merg_is_empty_space = {
 		is_planet_class = pc_no_star
 		# ThaumStellaris
 		is_planet_class = pc_tc_not_texture
+	}
+}
+
+# WIP
+merg_is_hole_star_class = {
+	OR = {
+		is_star_class = sc_black_hole
+		# ACOT
+		is_star_class = sc_acot_void_star
+		# Gigastructural Engineering & More
+		is_star_class = sc_ehof_black_hole
+		is_star_class = sc_birch
+		is_star_class = sc_birch_built
+		is_star_class = sc_void_birch_built
+		is_star_class = sc_quasar
+		# TimeMod
+		is_star_class = sc_endless_time
+		is_star_class = sc_white_hole
+		is_star_class = sc_time_white_hole
+		is_star_class = sc_bright_pearl
 	}
 }
 

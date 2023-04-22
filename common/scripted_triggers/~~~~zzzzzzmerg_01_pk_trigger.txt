@@ -3433,29 +3433,15 @@ can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = {
 	custom_tooltip = {
 		fail_text = is_not_star
 		is_star = yes
+		merg_is_untargetable = no
 	}
 	custom_tooltip = {
 		fail_text = is_black_hole
-		NOR = {
-			is_planet_class = pc_black_hole
-			is_planet_class = pc_time
-			is_planet_class = pc_time_replace
-			is_planet_class = pc_endless_time
-			is_planet_class = pc_white_hole
-			is_planet_class = pc_time_white_hole
-		}
+		merg_is_black_or_white_hole = no
 	}
 	custom_tooltip = {
 		fail_text = is_sc_black_hole
-		solar_system = {
-			NOR = {
-				is_star_class = sc_black_hole
-				is_star_class = sc_endless_time
-				is_star_class = sc_white_hole
-				is_star_class = sc_time_white_hole
-				is_star_class = sc_bright_pearl
-			}
-		}
+		solar_system = { merg_is_hole_star_class = no }
 	}
 	custom_tooltip = {
 		fail_text = star_owner_is_not_hostile
