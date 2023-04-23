@@ -2987,13 +2987,7 @@ can_resettle_pop = {
 	# V_Traits
 	custom_tooltip = {
 		fail_text = "is_v_mobile_cant_be_resetttled"
-		OR = {
-			merg_has_v_traits = no
-			AND = {
-				merg_has_v_traits = yes
-				This = { is_v_mobile = yes }
-			}
-		}
+		is_v_mobile = yes
 	}
 	#Done as an IF/ELSE so the tooltip isn't hideous and unreadable
 	# Diagraphers Trait Mod
@@ -3165,6 +3159,8 @@ pop_generates_crime = {
 		# MISC
 		species = { is_archetype = UNITED_FLEET }
 		species = { is_archetype = NANITES_CROP }
+		# V_TRAITS
+		NOT = { has_trait = trait_v_cyborg_no_crime }
 	}
 }
 
@@ -4083,7 +4079,10 @@ can_be_sold_on_slave_market = {
 		has_trait = trait_organic_fourschildren
 		has_trait = trait_organic_fourschildren_2
 		# V_Traits
-		This = { is_v_mobile = yes }
+		AND = {
+			merg_has_v_traits = yes
+			is_v_mobile = yes
+		}
 		# Wandering Witch: Voyagers
 		has_trait = trait_servitude
 		has_trait = trait_reanimated_materials
@@ -4320,13 +4319,7 @@ can_pop_auto_migrate = {
 		}
 	}
 	# V_Traits
-	OR = {
-		merg_has_v_traits = no
-		AND = {
-			merg_has_v_traits = yes
-			This = { is_v_mobile = yes }
-		}
-	}
+	is_v_mobile = yes
 }
 
 # This = planet

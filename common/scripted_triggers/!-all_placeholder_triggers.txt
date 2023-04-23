@@ -192,7 +192,7 @@ is_symbiote = { always = no }
 is_symbiote_of_prevprev = { always = no }
 is_the_belt_active = { always = no }
 is_wg_upgraded_ringworld = { always = no }
-is_v_mobile = { always = no }
+is_v_mobile = { always = yes }
 is_valid_GF_OGAS_subnet = { always = no }
 is_valid_organic_zealots = { always = no }
 is_valid_pop_for_PLANET_KILLER_CM = { always = no }
