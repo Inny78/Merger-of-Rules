@@ -191,7 +191,7 @@ merg_is_gas_giant = {
 		# Planetary Diversity
 		is_planet_class = pc_dwarf_gas_giant
 		is_planet_class = pc_pd_gas_giant_hab
-		# Time Mod
+		# TimeMod
 		is_planet_class = pc_gas_colony
 	}
 }

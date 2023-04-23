@@ -510,10 +510,7 @@ can_generate_leader_from_pop = {
 		# Silfae's Portraits: Revisited
 		species = {
 			has_species_flag = allow_leaders_organic_advisors@prev.owner
-			has_citizenship_type = {
-				type = citizenship_organic_trophy
-				country = prev.owner
-			}
+			has_citizenship_type = { type = citizenship_organic_trophy country = prev.owner }
 		}
 	}
 	NOR = {
@@ -597,10 +594,7 @@ can_generate_leader_from_species = {
 			NOT = { root = { has_technology = tech_synthetic_leaders } }
 			has_trait = trait_mechanical
 		}
-		has_citizenship_type = {
-			type = citizenship_full
-			country = root
-		}
+		has_citizenship_type = { type = citizenship_full country = root }
 	}
 	NOR = {
 		# ThaumStellaris
@@ -1537,9 +1531,7 @@ can_species_procreate = {
 					exists = root.branch_office_owner
 					has_citizenship_type = { type = citizenship_full country = root.branch_office_owner }
 					root.branch_office_owner = {
-						NOT = {
-							has_relation_flag = { who = root.owner flag = no_pop_growth_treaty }
-						}
+						NOT = { has_relation_flag = { who = root.owner flag = no_pop_growth_treaty } }
 					}
 				}
 			}

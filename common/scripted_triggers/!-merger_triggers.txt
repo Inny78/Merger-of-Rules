@@ -442,7 +442,6 @@ merg_is_black_or_white_hole = {
 		is_planet_class = pc_time
 		is_planet_class = pc_time_replace
 		is_planet_class = pc_endless_time
-		is_planet_class = pc_white_hole
 		is_planet_class = pc_time_white_hole
 		# Voyage to Eternity
 		is_planet_class = pc_KZ_VOY_micro_black_hole

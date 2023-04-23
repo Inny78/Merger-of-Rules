@@ -1,4 +1,3 @@
-# Dummy archetypes - to be overwritten by their respective mods.
 # Irony this is a placeholder file please ignore it
 # Aquatic Portraits mod
 JAYPEES_AQUATIC = { uses_modifiers = no }
