@@ -23,30 +23,14 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 				AND = {
 					exists = space_owner
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-							# Safety Off
-							AND = {
-								merg_has_safety_off = yes
-								is_same_value = from.owner
-							}
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
 					# colony
 					exists = owner
 					owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-							# Safety Off
-							AND = {
-								merg_has_safety_off = yes
-								is_same_value = from.owner
-							}
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
@@ -59,8 +43,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 						space_owner = {
 							OR = {
 								is_same_value = from.owner
-								is_at_war_with = from.owner
-								is_crisis_faction = yes
+								merg_is_at_war = yes
 							}
 						}
 					}
@@ -178,10 +161,7 @@ can_destroy_planet_with_PLANET_KILLER_NEUTRON = {
 				exists = owner
 				owner = { is_primitive = yes }
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 		}
@@ -433,19 +413,13 @@ can_destroy_planet_with_PLANET_KILLER_TOXIFIER = {
 				AND = {
 					exists = space_owner
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = { # colony
 					exists = owner
 					owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = { # primitive
@@ -455,10 +429,7 @@ can_destroy_planet_with_PLANET_KILLER_TOXIFIER = {
 						is_primitive = yes
 					}
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 			}
@@ -590,20 +561,14 @@ can_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 				AND = {
 					exists = space_owner
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
 					# colony
 					exists = owner
 					owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
@@ -614,10 +579,7 @@ can_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 						is_primitive = yes
 					}
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 			}
@@ -687,8 +649,7 @@ can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 					exists = space_owner
 					space_owner = {
 						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
+							merg_is_at_war = yes
 							is_same_value = from.owner							# added condition if you own it								  
 						}
 					}
@@ -698,8 +659,7 @@ can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 					exists = owner
 					owner = {
 						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
+							merg_is_at_war = yes
 							is_same_value = from.owner							# added condition if you own it								  
 						}
 					}
@@ -713,8 +673,7 @@ can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 					}
 					space_owner = {
 						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
+							merg_is_at_war = yes
 							is_same_value = from.owner							# added condition if you own it								  
 						}
 					}
@@ -1198,8 +1157,6 @@ wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 		fail_text = is_shielded
 		merg_is_shielded = no
 	}
-	#custom_tooltip = {
-	#fail_text = is_not_hostile
 	OR = {
 		custom_tooltip = {
 			text = is_not_hostile_cracker
@@ -1207,20 +1164,14 @@ wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 				AND = {
 					exists = space_owner
 					space_owner = {
-						OR = {
-							is_at_war_with = root.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
 					# colony
 					exists = owner
 					owner = {
-						OR = {
-							is_at_war_with = root.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
@@ -1231,10 +1182,7 @@ wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 						is_primitive = yes
 					}
 					space_owner = {
-						OR = {
-							is_at_war_with = root.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 			}
@@ -1262,7 +1210,6 @@ wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 			}
 		}
 	}
-	#}
 }
 
 # Underground Realms
@@ -1281,9 +1228,7 @@ can_destroy_planet_with_PLANET_KILLER_SHROUDER = {
 			merg_planet_is_hostile_or_crisis = yes
 			AND = {
 				exists = owner
-				owner = {
-					is_country_type = primitive
-				}
+				owner = { is_country_type = primitive }
 			}
 		}
 	}
@@ -1306,9 +1251,7 @@ can_destroy_planet_with_PLANET_KILLER_EDEN = {
 	}
 	custom_tooltip = {
 		fail_text = no_has_dal_war_in_eden
-		NOR = {
-			has_modifier = planet_dal_war_in_eden
-		}
+		NOR = { has_modifier = planet_dal_war_in_eden }
 	}
 	custom_tooltip = {
 		#success_text = "is at war with player"
@@ -1317,24 +1260,18 @@ can_destroy_planet_with_PLANET_KILLER_EDEN = {
 			planet_is_hostile = yes
 			AND = {
 				exists = owner
-				owner = {
-					is_country_type = primitive
-				}
+				owner = { is_country_type = primitive }
 			}
 			AND = {
 				exists = owner
-				owner = {
-					is_same_value = from.owner
-				}
+				owner = { is_same_value = from.owner }
 			}
 		}
 	}
 	if = {
 		limit = {
 			exists = owner
-			owner = {
-				is_country_type = primitive
-			}
+			owner = { is_country_type = primitive }
 		}
 		custom_tooltip = {
 			fail_text = primitives_not_in_borders
@@ -1368,9 +1305,7 @@ can_destroy_planet_with_PLANET_KILLER_NEP_UGO = {
 	}
 	custom_tooltip = {
 		fail_text = nep_no_sapient_pops
-		any_owned_pop = {
-			is_sapient = yes
-		}
+		any_owned_pop = { is_sapient = yes }
 	}
 }
 
@@ -1387,9 +1322,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 	}
 	custom_tooltip = {
 		fail_text = "tc_planet_killer_excavation_nothing_dig"
-		NOT = {
-			is_planet_class = pc_tc_bedrock
-		}
+		NOT = { is_planet_class = pc_tc_bedrock }
 	}
 	custom_tooltip = {
 		fail_text = "tc_planet_killer_excavation_not_hostile"
@@ -1413,20 +1346,14 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 						AND = {
 							exists = space_owner
 							space_owner = {
-								OR = {
-									is_at_war_with = from.owner
-									is_crisis_faction = yes
-								}
+								merg_is_at_war = yes
 							}
 						}
 						AND = {
 							# colony
 							exists = owner
 							owner = {
-								OR = {
-									is_at_war_with = from.owner
-									is_crisis_faction = yes
-								}
+								merg_is_at_war = yes
 							}
 						}
 						AND = {
@@ -1435,10 +1362,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 							exists = owner
 							owner = { is_primitive = yes }
 							space_owner = {
-								OR = {
-									is_at_war_with = from.owner
-									is_crisis_faction = yes
-								}
+								merg_is_at_war = yes
 							}
 						}
 					}
@@ -1485,20 +1409,14 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 						AND = {
 							exists = space_owner
 							space_owner = {
-								OR = {
-									is_at_war_with = from.owner
-									is_crisis_faction = yes
-								}
+								merg_is_at_war = yes
 							}
 						}
 						AND = {
 							# colony
 							exists = owner
 							owner = {
-								OR = {
-									is_at_war_with = from.owner
-									is_crisis_faction = yes
-								}
+								merg_is_at_war = yes
 							}
 						}
 						AND = {
@@ -1509,10 +1427,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 								is_primitive = yes
 							}
 							space_owner = {
-								OR = {
-									is_at_war_with = from.owner
-									is_crisis_faction = yes
-								}
+								merg_is_at_war = yes
 							}
 						}
 					}
@@ -1621,9 +1536,7 @@ can_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = {
 			AND = {
 				# primitive
 				exists = owner
-				owner = {
-					is_primitive = yes
-				}
+				owner = { is_primitive = yes }
 			}
 			has_owner = no
 			AND = {
@@ -1669,20 +1582,14 @@ can_destroy_planet_with_PLANET_KILLER_HARVESTER = {
 				AND = {
 					exists = space_owner
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
 					# colony
 					exists = owner
 					owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
@@ -1693,23 +1600,16 @@ can_destroy_planet_with_PLANET_KILLER_HARVESTER = {
 						is_primitive = yes
 					}
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 			}
 		}
 		custom_tooltip = {
 			text = not_barren_molten_frozen_toxic_test_fire
-			NOT = {
-				exists = owner
-			}
+			NOT = { exists = owner }
 			OR = {
-				NOT = {
-					exists = space_owner
-				}
+				NOT = { exists = space_owner }
 				AND = {
 					exists = space_owner
 					is_owned_by = from.owner
@@ -1747,8 +1647,7 @@ can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
 					exists = space_owner
 					space_owner = {
 						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
+							merg_is_at_war = yes
 							is_country_type = master_ai_country
 						}
 					}
@@ -1758,8 +1657,7 @@ can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
 					exists = owner
 					owner = {
 						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
+							merg_is_at_war = yes
 							is_country_type = primitive
 							is_country_type = master_ai_country
 						}
@@ -1774,8 +1672,7 @@ can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
 					}
 					space_owner = {
 						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
+							merg_is_at_war = yes
 							is_country_type = master_ai_country
 						}
 					}
@@ -1796,10 +1693,7 @@ can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
 					exists = owner
 					owner = { is_primitive = yes }
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 			}
@@ -1912,20 +1806,14 @@ can_destroy_planet_with_planet_killer_kancolle_kari = {
 				AND = {
 					exists = space_owner
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
 					# colony
 					exists = owner
 					owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
@@ -1936,28 +1824,19 @@ can_destroy_planet_with_planet_killer_kancolle_kari = {
 						is_primitive = yes
 					}
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 			}
 		}
 		custom_tooltip = {
 			text = not_barren_molten_frozen_toxic_test_fire
-			NOT = {
-				exists = owner
-			}
+			NOT = { exists = owner }
 			OR = {
-				NOT = {
-					exists = space_owner
-				}
+				NOT = { exists = space_owner }
 				AND = {
 					exists = space_owner
-					space_owner = {
-						is_same_value = from.owner
-					}
+					space_owner = { is_same_value = from.owner }
 				}
 			}
 			OR = {
@@ -1996,20 +1875,14 @@ can_destroy_planet_with_PLANET_KILLER_TAKING = {
 				AND = {
 					exists = space_owner
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
 					# colony
 					exists = owner
 					owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
@@ -2020,10 +1893,7 @@ can_destroy_planet_with_PLANET_KILLER_TAKING = {
 						is_primitive = yes
 					}
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 			}
@@ -2041,41 +1911,27 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER_ARCANE = {
 				space_owner = {
 					OR = {
 						is_same_value = from.owner
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
+						merg_is_at_war = yes
 					}
 				}
 			}
 			AND = {
 				# Ownelerless
-				NOT = {
-					exists = space_owner
-				}
-				NOT = {
-					is_at_war_with = from.owner
-				}
+				NOT = { exists = space_owner }
+				NOT = { is_at_war_with = from.owner }
 			}
 			AND = {
 				# primitive
 				exists = space_owner
 				exists = owner
-				owner = {
-					is_primitive = yes
-				}
+				owner = { is_primitive = yes }
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 		}
-		NOT = {
-			is_owned_by = event_target:origin_crisis_country
-		}
-		NOT = {
-			is_star = yes
-		}
+		NOT = { is_owned_by = event_target:origin_crisis_country }
+		is_star = no
 		is_asteroid = no
 		custom_tooltip = {
 			fail_text = is_not_a_standard_planet_or_megastructure
@@ -2095,16 +1951,11 @@ can_destroy_planet_with_azur_shippart_W2_T4 = {
 	custom_tooltip = {
 		text = is_not_hostile_cracker
 		OR = {
-			NOT = {
-				exists = space_owner
-			}
+			NOT = { exists = space_owner }
 			AND = {
 				exists = space_owner
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 			AND = {
@@ -2114,10 +1965,7 @@ can_destroy_planet_with_azur_shippart_W2_T4 = {
 					is_primitive = yes
 				}
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 		}
@@ -2136,10 +1984,7 @@ can_destroy_planet_with_milky_way_terminal_test_1 = {
 			AND = {
 				exists = space_owner
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 			AND = {
@@ -2149,10 +1994,7 @@ can_destroy_planet_with_milky_way_terminal_test_1 = {
 					is_primitive = yes
 				}
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 		}
@@ -2171,10 +2013,7 @@ can_destroy_planet_with_milky_way_terminal_test_2 = {
 			AND = {
 				exists = space_owner
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 			AND = {
@@ -2184,10 +2023,7 @@ can_destroy_planet_with_milky_way_terminal_test_2 = {
 					is_primitive = yes
 				}
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 		}
@@ -2211,10 +2047,7 @@ can_destroy_planet_with_azur_shippart_W3_T3 = {
 			AND = {
 				exists = space_owner
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 			AND = {
@@ -2224,10 +2057,7 @@ can_destroy_planet_with_azur_shippart_W3_T3 = {
 					is_primitive = yes
 				}
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 		}
@@ -2265,27 +2095,14 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 				AND = {
 					exists = space_owner
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
 					# colony
 					exists = owner
 					owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-							from.owner = {
-								is_hostile = prev
-								OR = {
-									has_country_flag = acemod_can_target_hostile_with_colossus
-									is_crisis_faction = yes
-								}
-							}
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = {
@@ -2295,10 +2112,7 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 						is_primitive = yes
 					}
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 			}
@@ -2306,18 +2120,12 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 		OR = {
 			custom_tooltip = {
 				text = not_barren_molten_frozen_toxic_test_fire
-				NOT = {
-					exists = owner
-				}
+				NOT = { exists = owner }
 				OR = {
-					NOT = {
-						exists = space_owner
-					}
+					NOT = { exists = space_owner }
 					AND = {
 						exists = space_owner
-						space_owner = {
-							is_same_value = from.owner
-						}
+						space_owner = { is_same_value = from.owner }
 					}
 				}
 				OR = {
@@ -2346,20 +2154,14 @@ can_destroy_planet_with_PLANET_KILLER_HARBINGER = {
 					AND = {
 						exists = space_owner
 						space_owner = {
-							OR = {
-								is_at_war_with = from.owner
-								is_crisis_faction = yes
-							}
+							merg_is_at_war = yes
 						}
 					}
 					AND = {
 						# colony
 						exists = owner
 						owner = {
-							OR = {
-								is_at_war_with = from.owner
-								is_crisis_faction = yes
-							}
+							merg_is_at_war = yes
 						}
 					}
 					AND = {
@@ -2370,28 +2172,19 @@ can_destroy_planet_with_PLANET_KILLER_HARBINGER = {
 							is_primitive = yes
 						}
 						space_owner = {
-							OR = {
-								is_at_war_with = from.owner
-								is_crisis_faction = yes
-							}
+							merg_is_at_war = yes
 						}
 					}
 				}
 			}
 			custom_tooltip = {
 				text = not_barren_molten_frozen_toxic_test_fire
-				NOT = {
-					exists = owner
-				}
+				NOT = { exists = owner }
 				OR = {
-					NOT = {
-						exists = space_owner
-					}
+					NOT = { exists = space_owner }
 					AND = {
 						exists = space_owner
-						space_owner = {
-							is_same_value = from.owner
-						}
+						space_owner = { is_same_value = from.owner }
 					}
 				}
 				is_colony = yes
@@ -2406,81 +2199,6 @@ can_destroy_planet_with_PLANET_KILLER_HARBINGER = {
 		}
 	}
 }
-
-# Midas
-# can_destroy_planet_with_PLANET_KILLER_MIDAS = {
-# 	custom_tooltip = {
-# 		fail_text = is_not_a_standard_planet_or_megastructure
-# 		is_a_planet_megastructure = yes
-# 		merg_is_forbidden_target = no
-# 	}
-# 	custom_tooltip = {
-# 		fail_text = is_shielded
-# 		merg_is_shielded = no
-# 	}
-# 	OR = {
-# 		custom_tooltip = {
-# 			text = is_not_hostile_cracker
-# 			OR = {
-# 				AND = {
-# 					exists = space_owner
-# 					space_owner = {
-# 						OR = {
-# 							is_at_war_with = from.owner
-# 							is_crisis_faction = yes
-# 						}
-# 					}
-# 				}
-# 				AND = {
-# 					# colony
-# 					exists = owner
-# 					owner = {
-# 						OR = {
-# 							is_at_war_with = from.owner
-# 							is_crisis_faction = yes
-# 						}
-# 					}
-# 				}
-# 				AND = {
-# 					# primitive
-# 					exists = space_owner
-# 					exists = owner
-# 					owner = {
-# 						is_primitive = yes
-# 					}
-# 					space_owner = {
-# 						OR = {
-# 							is_at_war_with = from.owner
-# 							is_crisis_faction = yes
-# 						}
-# 					}
-# 				}
-# 			}
-# 		}
-# 		custom_tooltip = {
-# 			text = not_barren_molten_frozen_toxic_test_fire
-# 			NOT = {
-# 				exists = owner
-# 			}
-# 			OR = {
-# 				NOT = {
-# 					exists = space_owner
-# 				}
-# 				AND = {
-# 					exists = space_owner
-# 					space_owner = {
-# 						is_same_empire = from.owner
-# 					}
-# 				}
-# 			}
-# 			OR = {
-# 				colonizable_planet = yes
-# 				is_artificial = yes
-# 				uninhabitable_regular_planet = yes
-# 			}
-# 		}
-# 	}
-# }
 
 # Hypertraversal Manipulation
 can_destroy_planet_with_hyperspace_augur_beam = {
@@ -2504,9 +2222,7 @@ can_destroy_planet_with_hyperspace_augur_beam = {
 		katzen_jump_blocked_system = yes
 		has_star_flag = maginot_anti_jump_star
 		has_star_flag = siegfried_anti_jump_star
-		is_planet_class = pc_core_black_hole
-		is_planet_class = pc_core_quasar
-		is_planet_class = pc_black_hole_giga
+		giga_is_core_system = yes
 		# Some Events of Outside Cluster
 		has_star_flag = nep_Krahen_cluster
 		has_star_flag = nep_Scrus_cluster
@@ -2584,9 +2300,7 @@ can_destroy_planet_with_PLANET_KILLER_METHANE_FREEZE_RAY = {
 				merg_planet_is_hostile_or_crisis = yes
 				AND = {
 					exists = owner
-					owner = {
-						is_country_type = primitive
-					}
+					owner = { is_country_type = primitive }
 				}
 			}
 		}
@@ -2655,9 +2369,7 @@ can_destroy_planet_with_PLANET_KILLER_PD_NECRO_RAY = {
 				merg_planet_is_hostile_or_crisis = yes
 				AND = {
 					exists = owner
-					owner = {
-						is_country_type = primitive
-					}
+					owner = { is_country_type = primitive }
 				}
 			}
 		}
@@ -2748,30 +2460,20 @@ can_destroy_planet_with_EE_PLANETKILLER_GAIA = {
 				space_owner = {
 					OR = {
 						is_same_value = from.owner
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
+						merg_is_at_war = yes
 					}
 				}
 			}
 			AND = { # Ownelerless
-				NOT = {
-					exists = space_owner
-				}
-				NOT = {
-					is_at_war_with = from.owner
-				}
+				NOT = { exists = space_owner }
+				NOT = { is_at_war_with = from.owner }
 			}
 			AND = { # primitive
 				exists = space_owner
 				exists = owner
-				owner = {
-					is_primitive = yes
-				}
+				owner = { is_primitive = yes }
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 		}
@@ -2794,37 +2496,25 @@ can_destroy_planet_with_EE_PLANETKILLER_BARREN = {
 				space_owner = {
 					OR = {
 						is_same_value = from.owner
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
+						merg_is_at_war = yes
 					}
 				}
 			}
 			AND = { # Ownelerless
-				NOT = {
-					exists = space_owner
-				}
-				NOT = {
-					is_at_war_with = from.owner
-				}
+				NOT = { exists = space_owner }
+				NOT = { is_at_war_with = from.owner }
 			}
 			AND = { # primitive
 				exists = space_owner
 				exists = owner
-				owner = {
-					is_primitive = yes
-				}
+				owner = { is_primitive = yes }
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 		}
-		NOT = {
-			is_owned_by = event_target:origin_crisis_country		
-		}
-		NOT = { is_star = yes }
+		NOT = { is_owned_by = event_target:origin_crisis_country }
+		is_star = no
 		is_asteroid = no
 		merg_is_forbidden_target = no
 	}
@@ -2846,9 +2536,7 @@ can_destroy_planet_with_slgt_planet_killer_knid = {
 			merg_planet_is_hostile_or_crisis = yes
 			AND = {
 				exists = owner
-				owner = {
-					is_country_type = primitive
-				}
+				owner = { is_country_type = primitive }
 			}
 		}
 	}
@@ -2890,10 +2578,7 @@ can_destroy_planet_with_PLANET_KILLER_ELEC_FOCUS = {
 					AND = { # colony
 						exists = owner
 						owner = {
-							OR = {
-								is_at_war_with = from.owner
-								is_crisis_faction = yes
-							}
+							merg_is_at_war = yes
 						}
 					}
 					AND = { # primitive
@@ -2903,10 +2588,7 @@ can_destroy_planet_with_PLANET_KILLER_ELEC_FOCUS = {
 							is_primitive = yes
 						}
 						space_owner = {
-							OR = {
-								is_at_war_with = from.owner
-								is_crisis_faction = yes
-							}
+							merg_is_at_war = yes
 						}
 					}
 				}
@@ -2935,19 +2617,13 @@ can_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = {
 					AND = {
 						exists = space_owner
 						space_owner = {
-							OR = {
-								is_at_war_with = from.owner
-								is_crisis_faction = yes
-							}
+							merg_is_at_war = yes
 						}
 					}
 					AND = { # colony
 						exists = owner
 						owner = {
-							OR = {
-								is_at_war_with = from.owner
-								is_crisis_faction = yes
-							}
+							merg_is_at_war = yes
 						}
 					}
 					AND = { # primitive
@@ -2955,10 +2631,7 @@ can_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = {
 						exists = owner
 						owner = { is_primitive = yes }
 						space_owner = {
-							OR = {
-								is_at_war_with = from.owner
-								is_crisis_faction = yes
-							}
+							merg_is_at_war = yes
 						}
 					}
 				}
@@ -3017,16 +2690,14 @@ can_destroy_planet_with_PLANET_KILLER_GENESIS = {
 		is_colony = no
 	}
 	OR = {
-		is_planet_class = pc_ringworld_habitable
-		is_planet_class = pc_habitat
+		merg_is_hab_ringworld = yes
+		merg_is_habitat = yes
 		merg_is_basic_planet = yes
 	}
 	is_colonizable = yes
 	custom_tooltip = {
 		fail_text = has_been_sowed_by_genesis
-		NOT = {
-			has_planet_flag = has_been_sowed_by_genesis
-		}
+		NOT = { has_planet_flag = has_been_sowed_by_genesis }
 	}
 	OR = {
 		custom_tooltip = {
@@ -3035,19 +2706,13 @@ can_destroy_planet_with_PLANET_KILLER_GENESIS = {
 				AND = {
 					exists = space_owner
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = { # colony
 					exists = owner
 					owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = { # primitive
@@ -3057,10 +2722,7 @@ can_destroy_planet_with_PLANET_KILLER_GENESIS = {
 						is_primitive = yes
 					}
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 			}
@@ -3077,6 +2739,23 @@ can_destroy_planet_with_PLANET_KILLER_GENESIS = {
 			exists = space_owner
 			space_owner = { is_same_value = from.owner }
 			is_colony = no
+		}
+	}
+}
+
+can_destroy_planet_with_PLANET_KILLER_IDC = {
+	# 只能轰炸殖民地
+	custom_tooltip = {
+		fail_text = is_not_a_default_empire_colony
+		is_colony = yes
+		owner = { merg_is_default_empire = yes }
+		merg_is_forbidden_target = no
+	}
+	# 一个星系只能有一支部署完成的干涉使节团
+	custom_tooltip = {
+		fail_text = has_another_IDC_in_system
+		solar_system = {
+			NOT = { any_fleet_in_system = { is_ship_size = IDC_station_fallen_empire } }
 		}
 	}
 }
@@ -3099,19 +2778,13 @@ can_destroy_planet_with_PLANET_KILLER_GOLIATH_SCOURGE = {
 				AND = {
 					exists = space_owner
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = { # colony
 					exists = owner
 					owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 				AND = { # primitive
@@ -3121,10 +2794,7 @@ can_destroy_planet_with_PLANET_KILLER_GOLIATH_SCOURGE = {
 						is_primitive = yes
 					}
 					space_owner = {
-						OR = {
-							is_at_war_with = from.owner
-							is_crisis_faction = yes
-						}
+						merg_is_at_war = yes
 					}
 				}
 			}
@@ -3282,10 +2952,7 @@ can_destroy_planet_with_PLANET_KILLER_SLUMBER = {
 				exists = owner
 				owner = { is_primitive = yes }
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 		}
@@ -3327,10 +2994,7 @@ can_destroy_planet_with_PLANET_KILLER_PRISCILLA = {
 				exists = owner
 				owner = { is_primitive = yes }
 				space_owner = {
-					OR = {
-						is_at_war_with = from.owner
-						is_crisis_faction = yes
-					}
+					merg_is_at_war = yes
 				}
 			}
 		}
@@ -3518,5 +3182,52 @@ is_a_habitable_planet_megastructure = {
 		is_fq_matryoshka = yes
 		# Misc
 		merg_is_nuked = yes
+	}
+}
+
+merg_is_at_war = {
+	OR = {
+		is_at_war_with = from.owner
+		is_crisis_faction = yes
+		# Aggressive Crisis Engine
+		from.owner = {
+			is_hostile = prev
+			OR = {
+				has_country_flag = acemod_can_target_hostile_with_colossus
+				is_crisis_faction = yes
+			}
+		}
+		# Safety Off
+		AND = {
+			merg_has_safety_off = yes
+			is_same_value = from.owner
+		}
+	}
+}
+
+merg_is_untargetable = {
+	OR = {
+		# MEM
+		is_pc_mem_synthetic_sun = yes
+		# ACOT
+		is_acot_awesome_planet_class = yes
+		# Secrets of the Shroud
+		is_planet_class = pc_acot_soulsphere
+		# ACOT/Gigas
+		has_planet_flag = cant_target_this_planet
+		has_planet_flag = cant_build_here
+		is_planet_class = pc_ehof_cplanet
+		giga_is_birch_world = yes
+		# Merger of Rules
+		has_planet_flag = merg_is_forbidden_target		# add this to your planet to dynamically exclude it.
+	}
+}
+
+# Used by Planet Killers to forbid them to destroy invalid targets
+merg_is_forbidden_target = {
+	OR = {
+		merg_is_dense_star = yes
+		merg_is_empty_space = yes
+		merg_is_untargetable = yes
 	}
 }

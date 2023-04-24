@@ -348,34 +348,6 @@ merg_is_nebulae = {
 	}
 }
 
-# Used by Planet Killers to forbid them to destroy invalid targets
-merg_is_forbidden_target = {
-	OR = {
-		merg_is_dense_star = yes
-		merg_is_empty_space = yes
-		merg_is_untargetable = yes
-	}
-}
-
-# restricted list
-merg_is_untargetable = {
-	OR = {
-		# MEM
-		is_pc_mem_synthetic_sun = yes
-		# ACOT
-		is_acot_awesome_planet_class = yes
-		# Secrets of the Shroud
-		is_planet_class = pc_acot_soulsphere
-		# ACOT/Gigas
-		has_planet_flag = cant_target_this_planet
-		has_planet_flag = cant_build_here
-		is_planet_class = pc_ehof_cplanet
-		giga_is_birch_world = yes
-		# Merger of Rules
-		has_planet_flag = merg_is_forbidden_target		# add this to your planet to dynamically exclude it.
-	}
-}
-
 # List of dense stars for planet killers
 merg_is_dense_star = {
 	OR = {
