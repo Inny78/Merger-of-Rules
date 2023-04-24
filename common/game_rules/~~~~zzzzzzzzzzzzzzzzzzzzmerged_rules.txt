@@ -1992,18 +1992,18 @@ can_species_be_assembled = {
 			# Vanilla
 			else = {
 				OR = {
+					# Assault Lily
+					is_archetype = LILY
+					# Star Wars: UnknownWorld Shipgirls Story
+					is_archetype = STARSHIPGIRLS
 					# The DAL Species Mod
 					is_archetype = DATEALIVE
 					# Warship Girls R and MIST species
 					is_archetype = WARSHIPGIRL
 					is_archetype = SHENHAI
-					# Star Wars: UnknownWorld Shipgirls Story
-					is_archetype = STARSHIPGIRLS
-					# Assault Lily
-					is_archetype = LILY
+					is_archetype = UNITED_FLEET
 					# Misc
 					is_archetype = NANITES_CROP
-					is_archetype = UNITED_FLEET
 					is_archetype = ASCENDED
 					root = {
 						OR = {
@@ -2971,7 +2971,7 @@ can_resettle_pop = {
 		fail_text = "self_modified_refuse"
 		NOT = { has_trait = trait_self_modified }
 	}
-	# Expanded Events
+	# Expanded Traits, Civics, Pops, and More
 	custom_tooltip = {
 		fail_text = "caretaker_refuse"
 		NOT = { has_trait = trait_tree_caretaker }
