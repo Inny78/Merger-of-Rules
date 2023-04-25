@@ -2194,7 +2194,7 @@ can_destroy_planet_with_PLANET_KILLER_HARBINGER = {
 	custom_tooltip = {
 		fail_text = is_shielded
 		NOR = {
-			is_planet_class = pc_kompass
+			is_ds_kompass = yes
 			merg_is_shielded = yes
 		}
 	}
@@ -3211,6 +3211,8 @@ merg_is_untargetable = {
 		is_pc_mem_synthetic_sun = yes
 		# ACOT
 		is_acot_awesome_planet_class = yes
+		# Darkspace
+		is_ds_stellar_engine = yes
 		# Secrets of the Shroud
 		is_planet_class = pc_acot_soulsphere
 		# ACOT/Gigas

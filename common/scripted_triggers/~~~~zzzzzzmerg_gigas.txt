@@ -69,6 +69,12 @@ is_maginotable_restricted = {
 		is_acot_awesome_planet_class = yes
 		# Ancient Empire
 		ag_is_mod_habitable_ringworld = yes
+		# Darkspace
+		is_ds_ancient_ringworld = yes
+		is_ds_constructor_ark = yes
+		is_ds_prism_world = yes
+		is_ds_ringworld_spectrals = yes
+		is_ds_stellar_engine = yes
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target
 		# Warship Girls and MIST species

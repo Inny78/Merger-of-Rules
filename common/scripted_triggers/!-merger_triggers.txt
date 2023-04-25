@@ -88,11 +88,11 @@ merg_is_hab_ringworld = {
 		# AshArms Aquarius History
 		is_planet_class = pc_adf_academycomplex_ringworld_habitable
 		# Darkspace
-		is_planet_class = pc_ancient_ringworld
-		is_planet_class = pc_constructor_ark
-		is_planet_class = pc_prism_world
-		is_planet_class = pc_ringworld_spectrals
-		is_planet_class = pc_stellar_engine
+		is_ds_ancient_ringworld = yes
+		is_ds_constructor_ark = yes
+		is_ds_prism_world = yes
+		is_ds_ringworld_spectrals = yes
+		is_ds_stellar_engine = yes
 		# Kancolle
 		is_planet_class = pc_kancolle_ringworld
 		# Planetary Diversity
@@ -130,8 +130,8 @@ merg_is_true_ringworld = {
 		# Assault Lily
 		is_planet_class = pc_ringworld_habitable_lily
 		# Darkspace
-		is_planet_class = pc_ancient_ringworld
-		is_planet_class = pc_ringworld_spectrals
+		is_ds_ancient_ringworld = yes
+		is_ds_ringworld_spectrals = yes
 		# Gigastructural Engineering & More
 		is_planet_class = pc_ringworld_city
 		is_planet_class = pc_ringworld_machine
@@ -179,7 +179,7 @@ merg_is_habitat_non_starborn = {
 		# Blue Archive
 		is_planet_class = pc_BA_auto_habitat
 		# DarkSpace
-		is_planet_class = pc_skycatcher
+		is_ds_skycatcher = yes
 		# Gigastructural Engineering & More
 		is_giga_habitat = yes
 		# Habitation
@@ -357,7 +357,7 @@ merg_is_dense_star = {
 		# ACOT
 		is_planet_class = pc_acot_void_hole
 		# Darkspace
-		is_planet_class = pc_zeitriss
+		is_ds_zeitriss_gc = yes
 		# Gigastructural Engineering & More
 		giga_is_birch_world = yes
 		giga_is_black_hole = yes
@@ -394,7 +394,7 @@ merg_is_black_or_white_hole = {
 		# ACOT
 		is_planet_class = pc_acot_void_hole
 		# Darkspace
-		is_planet_class = pc_zeitriss
+		is_ds_zeitriss_gc = yes
 		# Gigastructural Engineering & More
 		giga_is_birch_world = yes
 		giga_is_black_hole = yes
