@@ -502,7 +502,7 @@ can_destroy_planet_with_PLANET_KILLER_DEVOLUTION = {
 
 ###################################### Mods start here ######################################
 
-# Empire of Eveelution
+############################### Empire of Eveelution ###############################
 can_destroy_planet_with_PLANET_KILLER_EOE = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -599,7 +599,7 @@ can_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 	}
 }
 
-# AshArms Aquarius history
+############################### AshArms Aquarius History ###############################
 can_destroy_planet_with_PLANET_KILLER_Ark_CRACKER = {
 	custom_tooltip = {
 		fail_text = is_your_megastructure_system
@@ -650,7 +650,7 @@ can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 					space_owner = {
 						OR = {
 							merg_is_at_war = yes
-							is_same_value = from.owner							# added condition if you own it								  
+							is_same_value = from.owner
 						}
 					}
 				}
@@ -660,7 +660,7 @@ can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 					owner = {
 						OR = {
 							merg_is_at_war = yes
-							is_same_value = from.owner							# added condition if you own it								  
+							is_same_value = from.owner
 						}
 					}
 				}
@@ -674,7 +674,7 @@ can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 					space_owner = {
 						OR = {
 							merg_is_at_war = yes
-							is_same_value = from.owner							# added condition if you own it								  
+							is_same_value = from.owner
 						}
 					}
 				}
@@ -683,7 +683,7 @@ can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 	}
 }
 
-# Ancient Empire
+############################### Ancient Empire ###############################
 can_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = {
 	custom_tooltip = {
 		fail_text = "ag_requires_a_star_star_killer"
@@ -811,7 +811,7 @@ can_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = {
 	}
 }
 
-# Corsair's Custom Empires: Eldanær Stellar Authority
+############################### Corsair's Custom Empires: Eldanær Stellar Authority ###############################
 can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -898,7 +898,7 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 	}
 }
 
-# Warship Girls R And MIST Species
+############################### Warship Girls R And MIST Species ###############################
 can_destroy_planet_with_PLANET_KILLER_OVO = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -1212,33 +1212,7 @@ wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 	}
 }
 
-# Underground Realms
-can_destroy_planet_with_PLANET_KILLER_SHROUDER = {
-	custom_tooltip = {
-		fail_text = is_not_a_habitable_planet_or_megastructure
-		OR = {
-			is_a_habitable_planet_megastructure = yes
-			is_planet_class = pc_ai
-		}
-		merg_is_forbidden_target = no
-	}
-	custom_tooltip = {
-		fail_text = is_not_hostile_or_primitive
-		OR = {
-			merg_planet_is_hostile_or_crisis = yes
-			AND = {
-				exists = owner
-				owner = { is_country_type = primitive }
-			}
-		}
-	}
-	custom_tooltip = {
-		fail_text = is_shielded
-		merg_is_shielded = no
-	}
-}
-
-# # The DAL Species Mod
+############################### The DAL Species Mod ###############################
 can_destroy_planet_with_PLANET_KILLER_EDEN = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -1292,7 +1266,7 @@ can_destroy_planet_with_PLANET_KILLER_EDEN = {
 	}
 }
 
-# Some Events of Outside Cluster
+############################### Some Events of Outside Cluster ###############################
 can_destroy_planet_with_PLANET_KILLER_NEP_UGO = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -1309,7 +1283,7 @@ can_destroy_planet_with_PLANET_KILLER_NEP_UGO = {
 	}
 }
 
-# ThaumStellaris
+############################### ThaumStellaris ###############################
 can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 	custom_tooltip = {
 		fail_text = "tc_planet_killer_excavation_not_target"
@@ -1374,7 +1348,6 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 
 can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 	custom_tooltip = {
-		#排除类型
 		fail_text = "tc_planet_killer_excavation_not_target"
 		NOR = {
 			merg_is_shielded = yes
@@ -1384,24 +1357,20 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 		is_star = no
 	}
 	custom_tooltip = {
-		#已采掘星球
 		fail_text = "tc_planet_killer_excavation_nothing_dig"
 		NOT = { is_planet_class = pc_tc_bedrock }
 	}
 	custom_tooltip = {
 		fail_text = "tc_planet_killer_excavation_not_hostile"
 		OR = {
-			#任意己方非殖民地球
 			AND = {
 				custom_tooltip = {
-					#所有者控制
 					fail_text = "tc_planet_killer_excavation_our_planet"
 					NOT = { exists = owner }
 					exists = space_owner
 					space_owner = { is_same_value = from.owner }
 				}
 			}
-			#敌对殖民地
 			AND = {
 				custom_tooltip = {
 					text = is_not_hostile_cracker
@@ -1487,39 +1456,101 @@ can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM_TURRET = {
 	}
 }
 
-# ACOT
-can_destroy_planet_with_ACOT_PLANET_KILLER_SHIELDER = { can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes }
+############################### ACOT ###############################
+can_destroy_planet_with_ACOT_EMISSARY_BEAM = {
+	custom_tooltip = {
+		text = acot_emissary_on_cooldown
+		FROM = {
+			NOT = {
+				has_fleet_flag = acot_emissary_beam_delay
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+		}
+	}
+	OR = {
+		custom_tooltip = {
+			text = acot_is_valid_for_emissary_beam
+			OR = {
+				NOT = { exists = space_owner }
+				AND = {
+					exists = space_owner
+					space_owner = { is_same_value = from.owner }
+				}
+			}
+			is_a_planet = yes
+			is_asteroid = no
+			is_star = no
+			is_artificial = no
+			NOR = {
+				merg_is_gas_giant = yes
+				merg_is_habitat = yes
+				merg_is_hab_ringworld = yes
+			}
+		}		
+	}
+}
 
-can_destroy_planet_with_ACOT_PLANET_KILLER_NEUTRON = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes }
+can_destroy_planet_with_ACOT_EMISSARY_BEAM_LANDING = {
+	custom_tooltip = {
+		text = acot_emissary_on_cooldown
+		FROM = {
+			NOT = { has_fleet_flag = acot_emissary_beam_delay }
+		}
+	}
+	OR = {
+		custom_tooltip = {
+			text = is_not_hostile_cracker
+			exists = owner
+			is_colony = yes
+			owner = { merg_is_at_war = yes }
+		}
+		custom_tooltip = {
+			text = acot_is_valid_for_emissary_beam
+			exists = space_owner
+			space_owner = { is_same_value = from.owner }
+			is_colonizable = yes
+		}		
+	}
+}
 
-can_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = { can_destroy_planet_with_PLANET_KILLER_GODRAY = yes }
+can_destroy_planet_with_ACOT_EMISSARY_BEAM_REMOVE = {
+	custom_tooltip = {
+		text = acot_emissary_on_cooldown
+		FROM = {
+			NOT = { has_fleet_flag = acot_emissary_beam_delay }
+		}
+	}
+	OR = {
+		custom_tooltip = {
+			text = acot_is_valid_for_emissary_beam
+			exists = space_owner
+			space_owner = { is_same_value = from.owner }
+			is_star = no
+			OR = {
+				is_artificial = no
+				merg_is_habitat = yes
+			}
+			merg_is_hab_ringworld = no
+		}		
+	}
+}
 
-can_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = { can_destroy_planet_with_PLANET_KILLER_NANOBOTS = yes }
 
-can_destroy_planet_with_ACOT_SE_PLANET_KILLER_SHIELDER = { can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes }
-
-can_destroy_planet_with_ACOT_SE_PLANET_KILLER_NEUTRON = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes }
-
-can_destroy_planet_with_ACOT_SE_PLANET_KILLER_GODRAY = { can_destroy_planet_with_PLANET_KILLER_GODRAY = yes }
-
-can_destroy_planet_with_ACOT_SE_PLANET_KILLER_NANOBOTS = { can_destroy_planet_with_PLANET_KILLER_NANOBOTS = yes }
-
-can_destroy_planet_with_ACOT_HE_PLANET_KILLER_SHIELDER = { can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes }
-
-can_destroy_planet_with_ACOT_HE_PLANET_KILLER_NEUTRON = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes }
-
-can_destroy_planet_with_ACOT_HE_PLANET_KILLER_GODRAY = { can_destroy_planet_with_PLANET_KILLER_GODRAY = yes }
-
-can_destroy_planet_with_ACOT_HE_PLANET_KILLER_NANOBOTS = { can_destroy_planet_with_PLANET_KILLER_NANOBOTS = yes }
-
-# ACOT (AOT overwrites)
+############################### AOT ###############################
 can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
 
 can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
 
 can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
 
-# Arknights Near Future
+############################### Arknights Near Future ###############################
 can_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -1562,7 +1593,7 @@ can_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = {
 	}
 }
 
-# Nanite Machines & Distant Stars Overhaul
+############################### Nanite Machines & Distant Stars Overhaul ###############################
 can_destroy_planet_with_PLANET_KILLER_HARVESTER = {
 	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
@@ -1573,8 +1604,6 @@ can_destroy_planet_with_PLANET_KILLER_HARVESTER = {
 		fail_text = is_shielded
 		merg_is_shielded = no
 	}
-	#custom_tooltip = {
-	#fail_text = is_not_hostile
 	OR = {
 		custom_tooltip = {
 			text = is_not_hostile_cracker
@@ -1616,7 +1645,6 @@ can_destroy_planet_with_PLANET_KILLER_HARVESTER = {
 				}
 			}
 			OR = {
-				# Rewriting this part for max compatibility, inspired by Planetary Diversity
 				colonizable_planet = yes
 				uninhabitable_regular_planet = yes
 			}
@@ -1624,7 +1652,7 @@ can_destroy_planet_with_PLANET_KILLER_HARVESTER = {
 	}
 }
 
-# Empires Expanded
+############################### Empires Expanded ###############################
 can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
 	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
@@ -2200,7 +2228,7 @@ can_destroy_planet_with_PLANET_KILLER_HARBINGER = {
 	}
 }
 
-# Hypertraversal Manipulation
+############################### Hypertraversal Manipulation ###############################
 can_destroy_planet_with_hyperspace_augur_beam = {
 	is_star = yes
 	merg_is_empty_space = no
@@ -2229,7 +2257,7 @@ can_destroy_planet_with_hyperspace_augur_beam = {
 	}
 }
 
-# Gigastructural Engineering & More
+############################### Gigastructural Engineering & More ###############################
 can_destroy_planet_with_PLANET_KILLER_BLOKKAT_GENERATOR = {
 	is_colony = no
 	is_star = no
@@ -2254,7 +2282,7 @@ can_destroy_planet_with_PLANET_KILLER_BLOKKAT_HARVESTER = {
 	}
 }
 
-# Planetary Diversity
+############################### Planetary Diversity ###############################
 can_destroy_planet_with_PLANET_KILLER_METHANE_FREEZE_RAY = {
 	custom_tooltip = {
 		fail_text = is_habitable_non_artificial
@@ -2393,8 +2421,7 @@ can_destroy_planet_with_PLANET_KILLER_PD_NECRO_RAY = {
 	}
 }
 
-# KDC Story Pack
-
+############################### KDC Story Pack ###############################
 can_destroy_planet_with_PLANET_KILLER_GRAYGOO = {
 	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
@@ -2450,7 +2477,7 @@ can_destroy_planet_with_PLANET_KILLER_GRAYGOO = {
 	}	
 }
 
-# Twinks Eternals
+############################### Twinks Eternals ###############################
 can_destroy_planet_with_EE_PLANETKILLER_GAIA = {
 	custom_tooltip = {
 		fail_text = is_not_hostile
@@ -2486,7 +2513,6 @@ can_destroy_planet_with_EE_PLANETKILLER_GAIA = {
 	}
 }
 
-
 can_destroy_planet_with_EE_PLANETKILLER_BARREN = {
 	custom_tooltip = {
 		fail_text = is_not_hostile
@@ -2520,7 +2546,7 @@ can_destroy_planet_with_EE_PLANETKILLER_BARREN = {
 	}
 }
 
-# Sensible Late Game Techs
+############################### Sensible Late Game Techs ###############################
 can_destroy_planet_with_slgt_planet_killer_knid = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -2558,7 +2584,7 @@ can_destroy_planet_with_slgt_planet_killer_knid = {
 	}
 }
 
-# Electroids
+############################### Electroids ###############################
 can_destroy_planet_with_PLANET_KILLER_ELEC_FOCUS = {
 	custom_tooltip = {
 		fail_text = elec_must_be_colony
@@ -2597,7 +2623,7 @@ can_destroy_planet_with_PLANET_KILLER_ELEC_FOCUS = {
 	}
 }
 
-# Girls Frontline
+############################### Girls Frontline ###############################
 can_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = {
 	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
@@ -2656,7 +2682,7 @@ can_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = {
 	#}
 }
 
-# Voyage to Eternity
+############################### Voyage to Eternity ###############################
 KZ_VOY_can_not_destroy_by_planet_killer = {
 	custom_tooltip = {
 		fail_text = KZ_VOY_can_not_destroy_by_planet_killer
@@ -2679,7 +2705,7 @@ KZ_VOY_can_not_destroy_by_planet_killer = {
 	}
 }
 
-# WULA Fallen Empire
+############################### WULA Fallen Empire ###############################
 can_destroy_planet_with_PLANET_KILLER_GENESIS = {
 	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
@@ -2744,14 +2770,12 @@ can_destroy_planet_with_PLANET_KILLER_GENESIS = {
 }
 
 can_destroy_planet_with_PLANET_KILLER_IDC = {
-	# 只能轰炸殖民地
 	custom_tooltip = {
 		fail_text = is_not_a_default_empire_colony
 		is_colony = yes
 		owner = { merg_is_default_empire = yes }
 		merg_is_forbidden_target = no
 	}
-	# 一个星系只能有一支部署完成的干涉使节团
 	custom_tooltip = {
 		fail_text = has_another_IDC_in_system
 		solar_system = {
@@ -2815,7 +2839,7 @@ can_destroy_planet_with_PLANET_KILLER_GOLIATH_SCOURGE = {
 	}
 }
 
-# Rozen Maiden Suigintou Leader Pack
+############################### Rozen Maiden Suigintou Leader Pack ###############################
 can_destroy_planet_with_GE_PLANET_KILLER_Crasher = {
 	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
@@ -2848,7 +2872,7 @@ can_destroy_planet_with_GE_PLANET_KILLER_DELUGE = {
 	can_destroy_planet_with_PLANET_KILLER_DELUGE = yes
 }
 
-# The Crimson Throng
+############################### The Crimson Throng ###############################
 can_destroy_planet_with_PLANET_KILLER_CLEANSER = {
 	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
@@ -2879,7 +2903,7 @@ can_destroy_planet_with_PLANET_KILLER_CLEANSER = {
 	}
 }
 
-# Return of Ragnarok
+############################### Return of Ragnarok ###############################
 can_destroy_planet_with_N_ISBS_RAGNAROK_SPEAR_OF_LONGINUS = {
 	if = {
 		limit = {
@@ -2915,7 +2939,7 @@ can_destroy_planet_with_N_ISBS_RAGNAROK_SPEAR_OF_LONGINUS = {
 	}
 }
 
-# 
+############################### Wandering Witch: Voyagers ###############################
 can_destroy_planet_with_PLANET_KILLER_SLUMBER = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -3005,7 +3029,7 @@ can_destroy_planet_with_PLANET_KILLER_PRISCILLA = {
 	}
 }
 
-# Origin Beings
+############################### Origin Beings ###############################
 can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER_SERES = {
 	custom_tooltip = {
 		fail_text = is_your_megastructure_system
@@ -3035,7 +3059,7 @@ can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER_SERES = {
 	}
 }
 
-# AssaultLilly in Stellaris
+############################### AssaultLilly in Stellaris ###############################
 can_destroy_planet_with_PLANET_KILLER_CRACKER_FAKE = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
 can_destroy_planet_with_PLANET_KILLER_SHIELDER_FAKE = { can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes }
 can_destroy_planet_with_PLANET_KILLER_NEUTRON_FAKE = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes }
@@ -3048,7 +3072,7 @@ can_destroy_planet_with_PLANET_KILLER_PLANET_TO_NEST = {
 	merg_is_forbidden_target = no
 }
 
-# Krogan's Sci Fi Stuff Pack
+############################### Krogan's Sci Fi Stuff Pack ###############################
 can_destroy_planet_with_DEATH_STAR_WEAPON = {
 	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
@@ -3061,7 +3085,7 @@ can_destroy_planet_with_DEATH_STAR_WEAPON = {
 	}
 }
 
-# BlueArchive
+############################### BlueArchive ###############################
 can_destroy_planet_with_Sweepers = {
 	custom_tooltip = {
 		fail_text = What_are_you_doing
@@ -3083,7 +3107,7 @@ can_destroy_planet_with_Sweepers = {
 	}
 }
 
-# TimeMod
+############################### TimeMod ###############################
 can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = {
 	custom_tooltip = {
 		fail_text = is_your_megastructure_system

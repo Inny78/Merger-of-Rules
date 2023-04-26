@@ -518,7 +518,7 @@ can_generate_leader_from_pop = {
 		# Assault Lily
 		has_trait = trait_AL_puffer
 		# Diagraphers Trait Mod
-		has_trait = trait_living_architecture
+		is_living_architecture = yes
 		# Ethics & Civics: Bug Branch/Redux
 		has_trait = trait_bugged_slave_gene
 		# Expanded Events / Expanded Traits, Civics, Pops, and More
@@ -1220,10 +1220,10 @@ can_colonize_with_pop = {
 		# Madoka Magica NEW
 		has_trait = trait_mahoshoujo
 		# Diagraphers Trait Mod
-		has_trait = trait_subsapient_form
-		has_trait = trait_rooted_adults_rooted
-		has_trait = trait_living_architecture
-		has_trait = trait_dimorphic_male
+		is_subsapient_form = yes
+		is_rooted_adult = yes
+		is_living_architecture = yes
+		is_dimorphic_male = yes
 	}
 	# Vanilla
 	if = {
@@ -1249,9 +1249,9 @@ can_colonize_with_species = {
 	}
 	NOR = {
 		# Diagraphers Trait Mod
-		has_trait = trait_rooted_adults_rooted
-		has_trait = trait_living_architecture
-		has_trait = trait_dimorphic_male
+		is_rooted_adult = yes
+		is_living_architecture = yes
+		is_dimorphic_male = yes
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
 		# ThaumStellaris
@@ -1504,7 +1504,7 @@ can_species_procreate = {
 		# Expanded Gestalts
 		has_trait = trait_hive_mind_overlord
 		# Diagraphers Trait Mod
-		has_trait = trait_dimorphic_male
+		is_dimorphic_male = yes
 		# Expanded Traits, Civics, Pops, and More
 		has_trait = trait_memorex_comatos
 		# Girls Frontline
@@ -1557,17 +1557,17 @@ can_species_procreate = {
 	}
 	# Diagraphers Trait Mod
 	NAND = {
-		has_trait = trait_exotic_gas_dependency
+		has_exotic_gas_dependency = yes
 		exists = root.owner
 		root.owner = { resource_stockpile_compare = { resource = exotic_gases value <= 0 } }
 	}
 	NAND = {
-		has_trait = trait_delicate
+		diag_is_delicate = yes
 		exists = root.owner
 		has_citizenship_type = { type = citizenship_slavery country = root.owner }
 	}
 	NAND = {
-		has_trait = trait_sterile
+		diag_is_sterile = yes
 		exists = root.owner
 		root.owner = { 	has_artificial_wombs = no }
 	}
@@ -1722,7 +1722,7 @@ can_species_be_assembled = {
 			}
 			# Diagraphers Trait Mod
 			NAND = {
-				has_trait = trait_robot_rare_crystal_components
+				robot_has_rare_crystal_comp = yes
 				exists = root.owner
 				root.owner = {
 					resource_stockpile_compare = {
@@ -2121,7 +2121,7 @@ can_orbital_bombard = {
 			OWNER = { is_progenitor_empires = no }
 			FROM = {
 				OR = {
-					is_planet_class = pc_acot_pmc_vault
+					is_acot_pmc_vault = yes
 					is_acot_awesome_planet_class = yes
 				}
 			}
@@ -2336,11 +2336,7 @@ can_orbitable_repair_ships = {
 				has_starbase_size = juggernaut
 				has_starbase_size = enclave_mercenary_station
 				# ACOT
-				has_starbase_size >= ls_starbase_starport
-				has_starbase_size = origin_super_citadel_playable
-				has_starbase_size = origin_super_citadel
-				is_precursor_starbase = yes
-				has_starbase_size >= precursor_colossus
+				is_acot_advanced_starbase = yes
 				# ZOFE
 				has_starbase_size = fe_goliath
 				# AOT
@@ -2986,8 +2982,8 @@ can_resettle_pop = {
 	if = {
 		limit = {
 			OR = {
-				has_trait = trait_living_architecture
-				has_trait = trait_rooted_adults_rooted
+				is_living_architecture = yes
+				is_rooted_adult = yes
 			}
 		}
 		always = no
@@ -4061,8 +4057,8 @@ can_be_sold_on_slave_market = {
 		has_trait = trait_clone_soldier_infertile
 		has_trait = trait_clone_soldier_infertile_full_potential
 		# Diagraphers Trait Mod
-		has_trait = trait_living_architecture
-		has_trait = trait_rooted_adults_rooted
+		is_living_architecture = yes
+		is_rooted_adult = yes
 		# Extra Origins
 		is_symbiote = yes
 		# Plentiful Perks
@@ -4285,8 +4281,8 @@ can_pop_auto_migrate = {
 	}
 	# Diagraphers Trait Mod
 	NOR = {
-		has_trait = trait_living_architecture
-		has_trait = trait_rooted_adults_rooted
+		is_living_architecture = yes
+		is_rooted_adult = yes
 		has_trait = trait_presapient_earthbound
 	}
 	# Extra Origins
