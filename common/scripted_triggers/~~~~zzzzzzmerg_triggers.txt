@@ -30,15 +30,3 @@ is_doomsday_planet = {
 		has_modifier = mzilli_decaying_moon_3
 	}
 }
-
-default_site_visible_trigger = {
-	root = { merg_is_default_empire = yes }
-	exists = from
-	OR = {
-		intel_level = {
-			level >= low
-			system = from.solar_system
-		}
-		from.planet = { is_within_borders_of = root }
-	}
-}
