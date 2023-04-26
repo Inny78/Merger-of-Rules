@@ -3197,17 +3197,17 @@ should_force_decline_species = {
 		# Diagraphers Trait Mod
 		custom_tooltip = {
 			success_text = sterile_force_decline
-			has_trait = trait_sterile
+			diag_is_sterile = yes
 			from.owner = { has_artificial_wombs = no }
 		}
 		custom_tooltip = {
 			success_text = needs_exotic_gases
-			has_trait = trait_exotic_gas_dependency
+			has_exotic_gas_dependency = yes
 			from.owner = { has_deficit = exotic_gases }
 		}
 		custom_tooltip = {
 			success_text = delicate_enslaved
-			has_trait = trait_delicate
+			diag_is_delicate = yes
 			has_citizenship_type = { type = citizenship_slavery country = from.owner }
 		}
 		# Expanded Traits, Civics, Pops, and More

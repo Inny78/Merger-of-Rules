@@ -29,3 +29,17 @@ event = {
 # 		name = OOPS
 # 	}
 # }
+
+event = {
+	id = merg.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { always = no }
+
+	immediate = {
+		set_variable = {
+			which = techno_pops_missing
+			value = 0
+		}
+	}
+}
