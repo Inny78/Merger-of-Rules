@@ -931,6 +931,8 @@ has_fort = {
 			has_district = district_acot_enigmapolis_fortress
 			is_planet_class = pc_phanon_macripp
 			is_planet_class = pc_sigma_solaripp
+			# GPM
+			has_building = gpm_building_stronghold
 			# Plentiful Traditions
 			has_building = building_zitadom
 			# Twinks Mods

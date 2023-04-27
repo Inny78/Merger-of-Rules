@@ -765,6 +765,8 @@ has_research_building = {
 		ED_has_research_district = yes
 		# Gigastructural Engineering & More
 		giga_has_research_building = yes
+		# GPM
+		has_building = gpm_precursor_research_center
 		# Human Fallen Empires
 		has_building = hfe_building_thoth_module_science
 		# Kancolle

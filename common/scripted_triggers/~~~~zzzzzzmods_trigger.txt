@@ -481,6 +481,8 @@ has_active_wg_factory_building = {
 		has_active_building = building_avb_factory_4
 		has_active_building = building_avb_factory_5
 		has_active_building = building_avb_factory_6
+		# GPM
+		has_active_building = gpm_building_manufactory_hub
 		# Warship Girls R and MIST Species
 		has_active_building = building_sep_foundry
 		has_active_building = building_gray_nano_factory

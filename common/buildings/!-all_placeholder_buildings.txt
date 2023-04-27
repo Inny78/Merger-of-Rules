@@ -236,6 +236,9 @@ building_wula_order_keep = { potential = { always = no } allow = { always = no }
 building_wula_singularity = { potential = { always = no } allow = { always = no } }
 building_wula_stronghold = { potential = { always = no } allow = { always = no } }
 building_zitadom = { potential = { always = no } allow = { always = no } }
+gpm_building_manufactory_hub = { potential = { always = no } allow = { always = no } }
+gpm_precursor_research_center = { potential = { always = no } allow = { always = no } }
+gpm_building_stronghold = { potential = { always = no } allow = { always = no } }
 hfe_building_thoth_module_energy = { potential = { always = no } allow = { always = no } }
 hfe_building_thoth_module_food = { potential = { always = no } allow = { always = no } }
 hfe_building_thoth_module_science = { potential = { always = no } allow = { always = no } }
