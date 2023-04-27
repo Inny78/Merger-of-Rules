@@ -132,6 +132,7 @@ building_giga_elysium_host_hive_major_capital = { potential = { always = no } al
 building_giga_elysium_host_machine_major_capital = { potential = { always = no } allow = { always = no } }
 building_giga_elysium_host_major_capital = { potential = { always = no } allow = { always = no } }
 building_giga_fortress = { potential = { always = no } allow = { always = no } }
+building_giga_fortress_array = { potential = { always = no } allow = { always = no } }
 building_giga_fortress_dm = { potential = { always = no } allow = { always = no } }
 building_giga_fortress_fe = { potential = { always = no } allow = { always = no } }
 building_giga_fortress_lab = { potential = { always = no } allow = { always = no } }
@@ -234,6 +235,7 @@ building_wula_nourishment_center = { potential = { always = no } allow = { alway
 building_wula_order_keep = { potential = { always = no } allow = { always = no } }
 building_wula_singularity = { potential = { always = no } allow = { always = no } }
 building_wula_stronghold = { potential = { always = no } allow = { always = no } }
+building_zitadom = { potential = { always = no } allow = { always = no } }
 hfe_building_thoth_module_energy = { potential = { always = no } allow = { always = no } }
 hfe_building_thoth_module_food = { potential = { always = no } allow = { always = no } }
 hfe_building_thoth_module_science = { potential = { always = no } allow = { always = no } }

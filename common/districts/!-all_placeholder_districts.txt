@@ -1,4 +1,5 @@
 # Irony this is a placeholder file please ignore it
+district_acot_soulsphere_fortress = { base_buildtime = 1 icon = district_city desc = district_city_desc is_capped_by_modifier = no show_on_uncolonized = { always = no } potential = { always = no } resources = { category = planet_districts_cities upkeep = { energy = 1 } } }
 district_archive_energy = { base_buildtime = 1 icon = district_city desc = district_city_desc is_capped_by_modifier = no show_on_uncolonized = { always = no } potential = { always = no } resources = { category = planet_districts_cities upkeep = { energy = 1 } } }
 district_archive_industrial = { base_buildtime = 1 icon = district_city desc = district_city_desc is_capped_by_modifier = no show_on_uncolonized = { always = no } potential = { always = no } resources = { category = planet_districts_cities upkeep = { energy = 1 } } }
 district_archive_science = { base_buildtime = 1 icon = district_city desc = district_city_desc is_capped_by_modifier = no show_on_uncolonized = { always = no } potential = { always = no } resources = { category = planet_districts_cities upkeep = { energy = 1 } } }

@@ -354,17 +354,6 @@ kuat_is_defense_galaxy_fleet = {
 	}
 }
 
-############################### Exalted Domination ###############################
-exalted_is_valid_as_vassal = {
-	optimize_memory
-	OR = {
-		is_country_type = default
-		is_country_type = default_ev
-		# Darkspace
-		is_country_type = ds_nomads
-	}
-}
-
 ############################### Expanded Traits, Civics, Pops, and More ###############################
 is_open_gestalt = {
 	optimize_memory
@@ -389,7 +378,6 @@ afk_target_planet = {
 		is_artificial = yes
 		uninhabitable_regular_planet = yes
 		# Planetary Diversity
-		is_planet_class = pc_pdshroud
 		merg_is_nuked = yes
 		# Gigastructures
 		is_planet_class = pc_katzenland
