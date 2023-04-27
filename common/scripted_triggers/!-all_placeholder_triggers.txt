@@ -72,6 +72,7 @@ gpm_has_positive_food_planet_modifier = { always = no }
 gpm_has_positive_mineral_planet_modifier = { always = no }
 has_acot = { always = no }
 has_apsr_modifiers = { always = no }
+has_artificial_aristocracy_emex = { always = no }
 has_artificial_wombs = { always = no }
 has_bug_branch = { always = no }
 has_civic_organic_zealots_active = { always = no }

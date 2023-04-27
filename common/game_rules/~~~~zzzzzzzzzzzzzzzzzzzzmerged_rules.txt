@@ -4395,10 +4395,7 @@ can_add_negative_traits_organic = {
 		# Madoka Magica NEW
 		has_str_genemodding_tech = yes
 		# Scripted Triggers Undercoat
-		check_modifier_value = {
-			modifier = stu_deleterious_organic_modding_flag
-			value > 0
-		}
+		check_modifier_value = { modifier = stu_deleterious_organic_modding_flag value > 0 }
 		# Wandering Witch: Voyagers
 		has_tradition = tr_objects_wv_integrated_physiology
 		# Warship Girls R And MIST Species
@@ -4520,11 +4517,9 @@ can_fill_drone_job = {
 			}
 		}
 		# V_Traits
-		this = {
-			NOR = {
-				has_trait = trait_v_social_parasite
-				has_trait = trait_v_adv_social_parasite
-			}
+		NOR = {
+			has_trait = trait_v_social_parasite
+			has_trait = trait_v_adv_social_parasite
 		}
 	}
 }
@@ -4581,11 +4576,14 @@ can_fill_worker_job = {
 			}
 		}
 		# V_Traits
-		this = {
-			NOR = {
-				has_trait = trait_v_social_parasite
-				has_trait = trait_v_adv_social_parasite
+		if = {
+			limit = {
+				OR = {
+					has_trait = trait_v_social_parasite
+					has_trait = trait_v_adv_social_parasite
+				}
 			}
+			has_citizenship_type = { type = citizenship_slavery }
 		}
 		# TimeMod
 		NOT = { has_citizenship_type = { type = citizenship_adeptus_mechanicus } }
