@@ -1,4 +1,3 @@
-# Dummy countries - to be overwritten by their respective mods.
 # Irony this is a placeholder file please ignore it
 abyssal_host_invaders_type = { ai = { enabled = no } }
 acot_crazed_stellarite = { ai = { enabled = no } }

@@ -1,0 +1,2 @@
+# Irony this is a placeholder file please ignore it
+cb_shadowrift_attacked = { show_in_diplomacy = no show_notification = no potential = { always = no } is_valid = { always = no } }

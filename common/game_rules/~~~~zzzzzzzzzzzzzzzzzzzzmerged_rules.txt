@@ -431,7 +431,7 @@ species_can_live_on_planet = {
 			# Girls Frontline
 			has_trait = GF_trait_doll
 			# Ethics and Civics Bug Branch
-			has_trait = trait_bugged_happy_machine
+			is_bugged_happy_machine = yes
 		}
 	}
 	# Vanilla
@@ -519,8 +519,8 @@ can_generate_leader_from_pop = {
 		has_trait = trait_AL_puffer
 		# Diagraphers Trait Mod
 		is_living_architecture = yes
-		# Ethics & Civics: Bug Branch/Redux
-		has_trait = trait_bugged_slave_gene
+		# Ethics & Civics: Bug Branch
+		is_bugged_slave_gene = yes
 		# Expanded Events / Expanded Traits, Civics, Pops, and More
 		has_trait = trait_infested_basic
 		has_trait = trait_tree_caretaker
@@ -602,7 +602,7 @@ can_generate_leader_from_species = {
 		is_archetype = TC_GOLEM_HIVE
 		is_archetype = TC_GOLEM_MACHINE
 		# Ethics and Civics - Bug Branch
-		has_trait = trait_bugged_symbiotic
+		is_bugged_symbiotic = yes
 	}
 }
 
@@ -1482,7 +1482,7 @@ can_species_procreate = {
 	NOR = {
 		has_trait = trait_machine_unit
 		has_trait = trait_mechanical
-		has_trait = trait_bugged_happy_machine
+		is_bugged_happy_machine = yes
 		AND = {
 			has_trait = trait_clones
 			root = {
@@ -1825,7 +1825,7 @@ can_species_be_assembled = {
 					OR = {
 						has_trait = trait_hive_mind
 						# Ethics and Civics - Bug Branch
-						has_trait = trait_bugged_happy_hive
+						is_bugged_happy_drone = yes
 					}
 					# Expanded Gestalts
 					NOT = { has_trait = trait_hive_mind_overlord }
@@ -4636,12 +4636,8 @@ can_fill_ruler_job = {
 				has_trait = trait_syncretic_proles
 				can_think = no
 				# Ethics and Civics Bug Branch
-				has_trait = trait_bugged_slave_gene
-				# Ethics and Civics Alternative - Redux
-				AND = {
-					merg_has_ethics_redux = yes					# Bug Branch allows symbiotics to rule
-					has_trait = trait_symbiotic
-				}
+				is_bugged_slave_gene = yes
+				# Ethics and Civics Classic
 				has_trait = trait_slave_gene
 				# Lithoid Supremacy
 				has_trait = trait_pearl_born_drone
@@ -4662,7 +4658,7 @@ can_fill_ruler_job = {
 		can_fill_holosphere_ruler_job = yes
 	}
 	else_if = {
-		limit = { merg_has_holofrixit = yes }
+		limit = { merg_has_expanded_pops = yes }
 		hidden_trigger = {
 			NAND = {
 				has_trait = trait_dimorphic_female
@@ -4694,9 +4690,6 @@ can_fill_ruler_job = {
 				has_trait = trait_presapient_docile_livestock
 				# Expanded Traits, Civics, Pops, and More
 				has_trait = trait_tree_caretaker
-				# Ethics and Civics Alternative - Redux
-				has_trait = trait_symbiotic
-				has_trait = trait_slave_gene
 				# Lithoid Supremacy
 				has_trait = trait_pearl_born_drone
 				# Wandering Witch: Voyagers

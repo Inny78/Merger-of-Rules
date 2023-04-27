@@ -317,7 +317,7 @@ merg_has_hive_trait = {
 	OR = {
 		has_trait = trait_hive_mind
 		# Ethics and Civics - Bug Branch
-		has_trait = trait_bugged_happy_hive
+		is_bugged_happy_drone = yes
 		# Trait Diversity
 		has_trait = trait_td_multi_hiveminded
 		# Diagraphers Trait Mod

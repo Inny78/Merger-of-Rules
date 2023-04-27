@@ -263,8 +263,7 @@ is_megacorp = {
 		has_valid_civic = civic_galactic_sovereign_megacorp
 		has_government = gov_imperial_domain_megacorp
 		# Ethics and Civics - Bug Branch
-		has_authority = auth_bugged_corporate_democratic
-		has_authority = auth_bugged_corporate_imperial
+		is_bugged_megacorp = yes
 		# Expanded Traits, Civics, Pops, and More
 		has_authority = auth_private
 		has_authority = auth_cooperative		# Also More Corporate Authorities
@@ -284,7 +283,7 @@ is_autocracy = {
 		has_authority = auth_imperial
 		has_authority = auth_dictatorial
 		# Ethics and Civics Bug Branch
-		has_authority = auth_bugged_corporate_imperial
+		is_bugged_dynastic_enterprise = yes
 		# Expanded Traits, Civics, Pops, and More
 		has_authority = auth_private
 		# More Authorities
@@ -336,8 +335,7 @@ is_democracy = {
 		# Expanded Traits, Civics, Pops, and More
 		has_authority = auth_cooperative
 		# Ethics and Civics Bug Branch
-		has_authority = auth_bugged_direct_democratic
-		has_authority = auth_bugged_corporate_democratic
+		is_bugged_megacorp = yes
 	}
 }
 

@@ -106,6 +106,14 @@ is_acot_pmc_vault = { always = no }
 is_bugged_evolutionary_architects = { always = no }
 is_bugged_interventionalist = { always = no }
 is_bugged_slave_race = { always = no }
+is_bugged_happy_drone = { always = no }
+is_bugged_slave_gene = { always = no }
+is_bugged_happy_machine = { always = no }
+is_bugged_symbiotic = { always = no }
+is_bugged_direct_democratic = { always = no }
+is_bugged_group_firm = { always = no }
+is_bugged_dynastic_enterprise = { always = no }
+is_bugged_megacorp = { always = no }
 is_civic_materialist = { always = no }
 is_civic_militarist = { always = no }
 is_content_world = { always = no }

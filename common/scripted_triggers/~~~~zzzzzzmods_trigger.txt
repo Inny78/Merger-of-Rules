@@ -18,11 +18,11 @@ shadowgate_is_ae = {
 	optimize_memory
 	OR = {
 		is_country_type = awakened_fallen_empire
+		# A Deadly Tempest
+		is_country_type = awakened_gate_builders
 		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_awakened_fallen_empire
 		is_country_type = awakened_return_kuat_empire
-		# A Deadly Tempest
-		is_country_type = awakened_gate_builders
 		# ZOFE
 		is_country_type = ascended_empire
 	}
@@ -32,10 +32,7 @@ shadowgate_aggressor_is_valid_cb_target = {
 	NOR = {
 		is_in_federation_with = root.from
 		is_hostile = root.from
-		has_casus_belli = {
-			type = cb_shadowrift_attacked
-			target = root.from
-		}
+		has_casus_belli = { type = cb_shadowrift_attacked target = root.from }
 	}
 	root.from = {
 		OR = {
@@ -46,15 +43,9 @@ shadowgate_aggressor_is_valid_cb_target = {
 	}
 	OR = {
 		is_subject = no
-		overlord = {
-			NOT = {
-				is_same_value = root.from
-			}
-		}
+		overlord = { NOT = { is_same_value = root.from } }
 	}
-	root.fromfrom.solar_system = {
-		has_access_fleet = event_target:shadowgate_assaulted_owner
-	}
+	root.fromfrom.solar_system = { has_access_fleet = event_target:shadowgate_assaulted_owner }
 	has_communications = root.from
 }
 
@@ -112,7 +103,7 @@ mem_has_happiness = {
 		has_trait = trait_hive_mind
 		can_think = no
 		# Diagraphers Trait Mod
-		has_trait = trait_multihive_drone
+		is_multihive_drone = yes
 		# ThaumStellaris
 		OR = {
 			is_archetype = TC_GOLEM
@@ -928,7 +919,9 @@ is_regular_star = {
 	merg_is_forbidden_target = no
 	NOR = {
 		is_planet_class = pc_ae_star
-		is_planet_class = pc_collapsar
+		is_rs_collapsar = yes
+		is_rs_magnetar = yes
+		is_rs_microquasar = yes
 		is_planet_class = pc_d_star
 		is_planet_class = pc_fu_star
 		is_planet_class = pc_l_star
@@ -1154,31 +1147,30 @@ can_build_precursor_ship = {
 				is_megastructure_type = sofe_omega_nexus
                 is_megastructure_type = sofe_omega_spy_orb_center
                 is_megastructure_type = sofe_omega_dyson_sphere
+				# Assault Lily
+				is_megastructure_type = college_ship_creater_3
 				# Universal Gateway Origin
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_8
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9_2
-				# Assault Lily
-				is_megastructure_type = college_ship_creater_3
 			}
 		}
 		AND = {
 			is_scope_type = starbase
 			OR = {
-				has_starbase_size >= juggernaut
-				has_starbase_module = virtual_shipyard_uplink
+				has_starbase_size = juggernaut
 				has_starbase_building = acot_precursor_database	
-				is_precursor_starbase = yes
-				has_starbase_size >= precursor_colossus
-				has_starbase_size >= origin_super_citadel_playable
-				has_starbase_size >= origin_super_citadel
-				has_starbase_size >= origin_citadel
+				is_acot_advanced_starbase = yes
 				has_starbase_size = precursor_juggernaut
 				has_starbase_size = ascended_juggernaut
-				# Universal Gateway Origin
-                has_starbase_size >= universal_gateway_citadel
 				# Assault Lily
 				has_starbase_size >= lily_super_college_ship
+				# Gigastructural Engineering & More
+				has_starbase_module = virtual_shipyard_uplink
+				# Universal Gateway Origin
+                has_starbase_size >= universal_gateway_citadel
+				# ZOFE
+				has_starbase_size = fe_goliath
 			}
 		}
 	}
@@ -1659,7 +1651,6 @@ est_uses_slaves = {
 	NOT = { has_policy_flag = slavery_not_allowed }
 }
 
-
 ############################### Ethics and Civics Bug Branch ###############################
 is_bugged_starbase = {
 	OR = {
@@ -1669,13 +1660,15 @@ is_bugged_starbase = {
 	}
 }
 
-############################### Ethics and Civics Alternative - FunEFork ###############################
+############################### Ethics and Civics Alternative - FunEFork/Classics ###############################
 is_toxic_planet = {
 	merg_is_toxic = yes
 }
-
 is_barren_planet = {
 	merg_is_barren = yes
+}
+is_nuked_planet = {
+    merg_is_nuked = yes
 }
 
 ############################### BlueArchive ###############################
