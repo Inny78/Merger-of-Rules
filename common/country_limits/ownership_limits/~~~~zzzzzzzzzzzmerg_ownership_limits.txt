@@ -21,6 +21,9 @@ default = {
 		azur_super_battale_ship_limit
 		# BlueArchive
 		BA_hub_ships_limit
+		# Culture Special Ships
+		CSS_TI_REJUVENATOR_limit
+		CSS_JG_DREADNOUGHT_limit
         # Darkspace
         ds_nomads_main_ships_limit
         ds_nomads_ark_ships_limit
@@ -61,6 +64,9 @@ default_ev = {
         aot_gatekeeper_ships_limit
         aot_juggernaut_ships_limit
         aot_fe_juggernaut_ships_limit
+		# Culture Special Ships
+		CSS_TI_REJUVENATOR_limit
+		CSS_JG_DREADNOUGHT_limit
 		# DarkSpace		
 		ds_nomads_main_ships_limit
 		ds_nomads_ark_ships_limit
@@ -101,6 +107,9 @@ darkspace_ownership_limit = {
         aot_gatekeeper_ships_limit
         aot_juggernaut_ships_limit
         aot_fe_juggernaut_ships_limit
+		# Culture Special Ships
+		CSS_TI_REJUVENATOR_limit
+		CSS_JG_DREADNOUGHT_limit
 		# Hypertraversal Manipulation Augur
 		htm_augur_ships_limit
 		# NSC

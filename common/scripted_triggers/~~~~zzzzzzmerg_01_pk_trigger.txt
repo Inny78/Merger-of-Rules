@@ -3238,7 +3238,7 @@ merg_is_untargetable = {
 		# Darkspace
 		is_ds_stellar_engine = yes
 		# Secrets of the Shroud
-		is_planet_class = pc_acot_soulsphere
+		is_sots_soulsphere = yes
 		# ACOT/Gigas
 		has_planet_flag = cant_target_this_planet
 		has_planet_flag = cant_build_here

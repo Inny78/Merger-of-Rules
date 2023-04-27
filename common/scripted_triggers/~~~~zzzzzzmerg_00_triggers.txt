@@ -25,6 +25,7 @@ colonizable_planet = {
 		# ACOT
 		is_acot_fractured_planet_class = yes
 		is_acot_awesome_planet_class = yes
+		is_sots_soulsphere = yes
 		# Planetary Diversity
 		is_pd_planetary_megaproject = yes
 		# SW:UnknownWorld Shipgirls Story
