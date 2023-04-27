@@ -4087,6 +4087,8 @@ can_be_part_of_galactic_community = {
 			merg_is_default_empire = yes
 			# ACOT
 			is_country_type = sbtg_stellarborne_empire_active
+			# More Emperor & Custodian Resolutions, and Galactic Unification
+			MECR_trigger_0_community_country_type = yes
 			# ZOFE
 			is_zofe_oe = yes
 		}
@@ -4117,14 +4119,21 @@ can_be_part_of_galactic_community = {
 		fail_text = "community_shadows_failtext"
 		NOT = { has_civic = civic_shadows1 }
 	}
+	# More Emperor & Custodian Resolutions, and Galactic Unification
+	MECR_trigger_1_can_be_part_of_galactic_community = yes
 }
 
 # This = country
 can_be_part_of_galactic_empire = {
 	custom_tooltip = {
 		fail_text = "community_default_failtext"
-		merg_is_default_empire = yes
-		is_zofe_oe = yes
+		OR = {
+			merg_is_default_empire = yes
+			# More Emperor & Custodian Resolutions, and Galactic Unification
+			MECR_trigger_0_community_country_type = yes
+			# ZOFE
+			is_zofe_oe = yes
+		}
 	}
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
@@ -4143,6 +4152,8 @@ can_be_part_of_galactic_empire = {
 			NOT = { has_country_flag = wgfm_quit_community }
 		}
 	}
+	# More Emperor & Custodian Resolutions, and Galactic Unification
+	MECR_trigger_2_can_be_part_of_galactic_empire = yes
 }
 
 # This = country
@@ -4169,6 +4180,8 @@ can_be_part_of_galactic_council = {
 		merg_is_default_empire = yes
 		# ACOT
 		is_country_type = sbtg_stellarborne_empire_active
+		# More Emperor & Custodian Resolutions, and Galactic Unification
+		MECR_trigger_0_community_country_type = yes
 		# ZOFE
 		is_zofe_oe = yes
 	}
