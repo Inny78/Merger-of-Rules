@@ -598,7 +598,9 @@ can_generate_leader_from_species = {
 	}
 	NOR = {
 		# ThaumStellaris
-		has_trait = tc_trait_golem
+		is_archetype = TC_GOLEM
+		is_archetype = TC_GOLEM_HIVE
+		is_archetype = TC_GOLEM_MACHINE
 		# Ethics and Civics - Bug Branch
 		has_trait = trait_bugged_symbiotic
 	}
@@ -1255,7 +1257,9 @@ can_colonize_with_species = {
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
 		# ThaumStellaris
-		has_trait = tc_trait_golem
+		is_archetype = TC_GOLEM
+		is_archetype = TC_GOLEM_HIVE
+		is_archetype = TC_GOLEM_MACHINE
 		# Assault Lily
 		is_species_class = PUFFER
 	}
@@ -1340,11 +1344,9 @@ species_has_happiness = {
 		# Diagraphers Trait Mod
 		is_multihive_drone = yes
 		# ThaumStellaris
-		OR = {
-			is_archetype = TC_GOLEM
-			is_archetype = TC_GOLEM_HIVE
-			is_archetype = TC_GOLEM_MACHINE
-		}
+		is_archetype = TC_GOLEM
+		is_archetype = TC_GOLEM_HIVE
+		is_archetype = TC_GOLEM_MACHINE
 		# Trait Diversity
 		has_trait = trait_td_multi_hiveminded
 		has_trait = trait_td_emotionless
