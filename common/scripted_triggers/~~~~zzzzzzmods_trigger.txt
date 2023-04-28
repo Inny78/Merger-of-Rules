@@ -1266,7 +1266,76 @@ is_mineral_deposit = {
 		is_deposit_type = gpm_d_giant_skeleton
 	}
 }
+planetary_catastrophe_is_possible = {
+	is_colony = yes
+	num_pops > 0
+	OR = {
+		merg_is_desert = yes
+		merg_is_arid = yes
+		merg_is_savannah = yes
+		merg_is_tropical = yes
+		merg_is_ocean = yes
+		merg_is_continental = yes
+		merg_is_arctic = yes
+		merg_is_alpine = yes
+		merg_is_tundra = yes
+		merg_is_gaia = yes
+		merg_is_nuked = yes
+		merg_is_hive_world = yes
+		merg_is_arcology = yes
+		merg_is_relic_world = yes
+		merg_is_hab_ringworld = yes
+		merg_is_habitat = yes
+		is_planet_class = pc_sterile
+	}
+	NOR = {
+		has_planet_flag = colony_event
+		has_planet_flag = planetary_disaster
+		solar_system = { has_star_flag = star_disaster }
+	}
+	merg_is_forbidden_target = no
+}
 
+star_catastrophe_is_possible = {
+	is_primary_star = yes
+	OR = {
+		is_planet_class = pc_k_star
+		is_planet_class = pc_g_star
+		is_planet_class = pc_f_star
+		is_planet_class = pc_m_giant_star
+		is_planet_class = pc_k_giant_star
+		is_planet_class = pc_g_giant_star
+		is_planet_class = pc_a_star
+		is_planet_class = pc_b_star
+	}
+	solar_system = {
+		NOR = { 
+			has_star_flag = star_disaster
+			has_star_flag = dyson_sphere_built
+			has_star_flag = AI_hub
+			has_star_flag = cybrex_beta
+			has_star_flag = guardian
+			has_star_flag = guardians_of_zanaam
+			has_star_flag = sanctuary_system
+			has_star_flag = hyacinth_system
+			has_star_flag = ai_system
+			has_star_flag = sentinel_system
+			has_star_flag = vultaumar
+			has_star_flag = yuhtaan
+			has_star_flag = fen_habbanis
+			has_star_flag = irass 
+			has_star_flag = cybrex
+			has_star_flag = ruined_dyson_system
+			AND = {
+				has_star_flag = ruined_ring_system
+				any_system_megastructure = { is_megastructure_type = ring_world_ruined }
+			}
+		}
+		any_system_planet = {
+			planetary_catastrophe_is_possible = yes
+		}
+	}
+}
 ############################### Kancolle ###############################
 is_gas_giant = {
 	optimize_memory

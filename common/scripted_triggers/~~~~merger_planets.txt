@@ -178,6 +178,18 @@ merg_is_gaia_basic = {
 	}
 }
 
+merg_is_gas_giant_habitable = {
+	OR = {
+		# Gigastructural Engineering & More
+		is_giga_habitable_gas_giant = yes
+		is_planet_class = pc_giga_maginot_gas_giant
+		# Planetary Diversity
+		is_planet_class = pc_pd_gas_giant_hab
+		# TimeMod
+		is_tm_gas_colony = yes
+	}
+}
+
 merg_is_gas_giant = {
 	OR = {
 		is_planet_class = pc_gas_giant
@@ -185,14 +197,8 @@ merg_is_gas_giant = {
 		atw_is_gas_giant = yes
 		# Azur Lane
 		is_planet_class = pc_azur_gas_giant
-		# Gigastructural Engineering & More
-		is_giga_habitable_gas_giant = yes
-		is_planet_class = pc_giga_maginot_gas_giant		
 		# Planetary Diversity
 		is_planet_class = pc_dwarf_gas_giant
-		is_planet_class = pc_pd_gas_giant_hab
-		# TimeMod
-		is_tm_gas_colony = yes
 	}
 }
 
@@ -250,8 +256,7 @@ merg_is_nuked = {
 		# BlueArchive
 		is_planet_class = pc_BA_ruined_planet
 		# Gigastructural Engineering & More
-		is_planet_class = pc_katzenland
-		# giga_is_katzenland = yes
+		giga_is_katzenland = yes
 		# Human Fallen Empires
 		uses_district_set = hfe_district_set_pc_memorial
 		uses_district_set = hfe_district_set_pc_urbanism
@@ -279,8 +284,7 @@ merg_is_aquatic = {
 		# Blue Archive
 		uses_district_set = BA_planet
 		# Gigastructural Engineering & More
-		is_planet_class = pc_giga_edge_of_eternity
-		# giga_is_edge_of_eternity = yes
+		giga_is_edge_of_eternity = yes
 	}
 }
 
@@ -324,7 +328,7 @@ merg_is_shielded_world = {
 merg_is_shroud_habitable = {
 	OR = {
 		# Madoka Magica NEW
-		is_planet_class = pc_outpost
+		uses_district_set = outpost
 		# Planetary Diversity
 		is_pd_shroud_world = yes
 		# Rozen Maiden Suigintou

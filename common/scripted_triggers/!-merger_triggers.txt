@@ -103,6 +103,8 @@ merg_is_hab_ringworld = {
 		uses_district_set = planet_ring_city
 		# Star Wars: Kuat Ancient Empire
 		is_planet_class = pc_kuat_eternal_ringworld_habitable
+		# Star Wars: UnknownWorld Shipgirls Story
+		uses_district_set = rw_swgs_engineer_world
 		# ThaumStellaris
 		uses_district_set = pc_tc_alchemical_ringworld
 		# Warship Girls and MIST species
@@ -139,7 +141,7 @@ merg_is_true_ringworld = {
 		uses_district_set = planet_ring
 		uses_district_set = planet_ring_city
 		# Warship Girls and MIST species
-		is_planet_class = pc_ringworld_habitable_sh
+		uses_district_set = rw_sh_world
 		uses_district_set = rw_port_world
 		uses_district_set = rw_swim_world
 		is_planet_class = pc_ringworld_habitable_water

@@ -72,19 +72,13 @@ habitable_planet_not_urban = {
 		is_pd_radiotrophic_world = yes
 		is_pd_megaflora_hive = yes
 		# Warship Girls R And MIST Species
-		is_planet_class = pc_wsg_port
-		is_planet_class = pc_shenhai
+		uses_district_set = port_world
+		uses_district_set = sh_world
 		# SW: UnknownWorld Shipgirls Story
-		is_planet_class = pc_swgs_engineer
-		is_planet_class = pc_swgs_engineer_ringworld_habitable
+		uses_district_set = engineer_world
 		# Gigastructures
-		# soon to be removed
-		is_planet_class = pc_katzenland
-		is_planet_class = pc_ll_temperate
-		is_planet_class = pc_ll_foggy
-		is_planet_class = pc_ll_torrid
-		# giga_is_lifeless = yes # future update
-		# giga_is_katzenland = yes
+		giga_is_lifeless = yes
+		giga_is_katzenland = yes
 		# Real Space - New Frontiers / Expanded Gestalts: Forgotten Queens
 		is_planet_class = pc_hollow
 	}
