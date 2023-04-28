@@ -46,9 +46,8 @@ giga_habitable_structure = {
 		is_giga_habitable_gas_giant = yes
 		giga_is_birch_world = yes
 		giga_is_alderson_disk = yes
-		is_planet_class = pc_virtual_reality
-		is_planet_class = pc_virtual_industry
-		is_planet_class = pc_virtual_stellar_industry
+		uses_district_set = virtual_ring
+		uses_district_set = virtual_ring_industry
 		is_planet_class = pc_pouchkinn_black_hole
 		is_planet_class = pc_flat_world
 		is_planet_class = pc_giga_frameworld
@@ -60,7 +59,7 @@ giga_habitable_structure = {
 # extensible restriction list (can NOT build Maginots on these planet_classes)
 is_maginotable_restricted = {
 	OR = {
-		is_planet_class = pc_giga_planetary_computer
+		uses_district_set = giga_planetary_computer
 		has_planet_flag = has_planet_pc_mega
 		# APSR
 		is_planet_class = pc_apsr_ancient
@@ -161,16 +160,15 @@ ndb_can_target_planet = {
 		is_planet_class = pc_squareworld_habitable
 		has_planet_flag = cant_build_here
 		has_planet_flag = cant_target_this_planet
-		is_planet_class = pc_virtual_industry
-		is_planet_class = pc_virtual_reality
-		is_planet_class = pc_virtual_stellar_industry
+		uses_district_set = virtual_ring
+		uses_district_set = virtual_ring_industry
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target
 		merg_is_empty_space = yes
 		# ACOT
 		is_acot_awesome_planet_class = yes
 		# Darkspace
-		is_planet_class = pc_zeitriss
+		is_ds_zeitriss_gc = yes
 	}
 }
 is_ndb_immune_star_planet = {

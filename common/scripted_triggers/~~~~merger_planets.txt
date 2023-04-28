@@ -53,15 +53,15 @@ merg_is_arcology = {
 	OR = {
 		is_planet_class = pc_city
 		# Ancient Empire
-		is_planet_class = pc_ag_city
+		uses_district_set = ag_city_planet
 		# Azur Lane
-		is_planet_class = pc_azur
+		uses_district_set = azur_harbour
 		# Empires Expanded
 		is_planet_class = pc_city_cep
 		# Forgotten History
 		is_planet_class = pc_apocalyptic_city
 		# Gigastructural Engineering & More
-		is_planet_class = pc_flusion_gaia_ecu
+		uses_district_set = flusion_gaia_ecu
 		# Midas
 		# is_planet_class = pc_midas_city
 		# Planetary Diversity
@@ -69,13 +69,13 @@ merg_is_arcology = {
 		is_pd_hive_arcology = yes
 		is_pd_robot_arcology = yes
 		# Pokémon
-		is_planet_class = pc_EOE_city
+		uses_district_set = EOE_city_world
 		# Star Wars: Kuat Ancient Empire
 		is_planet_class = pc_kuat_eternal_city
 		# Voyage to Eternity
-		is_planet_class = pc_KZ_VOY_hyper_ecumenopolis
+		uses_district_set = KZ_VOY_hyper_ecumenopolis
 		# ZOFE
-		is_planet_class = pc_utopian_city
+		uses_district_set = utopian_city
 	}
 }
 
@@ -160,11 +160,11 @@ merg_is_gaia = {
 	OR = {
 		merg_is_gaia_basic = yes
 		# Azur Lane
-		is_planet_class = pc_azur_gaia
+		uses_district_set = azur_gaia
 		# Pokémon
-		is_planet_class = pc_EOE_pokemon_gaia
+		uses_district_set = EOE_pokemon_world
 		# ZOFE
-		is_planet_class = pc_utopian_gaia
+		uses_district_set = utopian_world
 	}
 }
 
@@ -192,7 +192,7 @@ merg_is_gas_giant = {
 		is_planet_class = pc_dwarf_gas_giant
 		is_planet_class = pc_pd_gas_giant_hab
 		# TimeMod
-		is_planet_class = pc_gas_colony
+		is_tm_gas_colony = yes
 	}
 }
 
@@ -209,6 +209,9 @@ merg_is_hive_world = {
 		is_planet_class = pc_planetary_ringworld_hive
 		# Voyage to Eternity
 		is_planet_class = pc_KZ_VOY_hive_world
+		# ZOFE
+		uses_district_set = utopian_hive_world
+		uses_district_set = utopian_hive_ringworld
 	}
 }
 
@@ -221,11 +224,14 @@ merg_is_machine_world = {
 		# Gigastructural Engineering & More
 		is_planet_class = pc_ringworld_machine
 		# Girls Frontline
-		is_planet_class = pc_GF_sf_machine
+		uses_district_set = GF_sf_machine_world
 		# Origin - F.C.S.S & M.C.S.S
-		is_planet_class = pc_awaken_ai
+		uses_district_set = awaken_ai_world
 		# Planetary Ringworlds
 		is_planet_class = pc_planetary_ringworld_machine
+		# ZOFE
+		uses_district_set = utopian_machine_world
+		uses_district_set = utopian_machine_ringworld
 	}
 }
 
@@ -246,12 +252,9 @@ merg_is_nuked = {
 		# Gigastructural Engineering & More
 		is_planet_class = pc_katzenland
 		# giga_is_katzenland = yes
-		# Girls Frontline
-		is_planet_class = pc_GF_collapsed
 		# Human Fallen Empires
-		is_planet_class = hfe_pc_memorial
-		is_planet_class = hfe_pc_urbanism
-
+		uses_district_set = hfe_district_set_pc_memorial
+		uses_district_set = hfe_district_set_pc_urbanism
 	}
 }
 
@@ -272,9 +275,9 @@ merg_is_aquatic = {
 	OR = {
 		merg_is_ocean = yes
 		# Azur Lane
-		is_planet_class = pc_azur_ocean
+		uses_district_set = azur_ocean
 		# Blue Archive
-		is_planet_class = pc_BA_campus_planet
+		uses_district_set = BA_planet
 		# Gigastructural Engineering & More
 		is_planet_class = pc_giga_edge_of_eternity
 		# giga_is_edge_of_eternity = yes
@@ -297,8 +300,6 @@ merg_is_ocean = {
 merg_is_relic_world = {
 	OR = {
 		is_planet_class = pc_relic
-		# Midas
-		# is_planet_class = pc_midas_relic
 	}
 }
 
@@ -331,7 +332,7 @@ merg_is_shroud_habitable = {
 		# Shroud Rising
 		is_planet_class = pc_shroud_touched
 		# TimeMod
-		is_planet_class = pc_psionic
+		is_tm_psionic_world = yes
 	}
 }
 
@@ -372,25 +373,15 @@ merg_is_tundra = {
 # WH40K Planets Renewed
 merg_is_wh40k_planet = {
 	OR = {
-		is_planet_class = pc_industrial
-		is_planet_class = pc_forge
-		is_planet_class = pc_forgee
-		is_planet_class = pc_forgeee
-		is_planet_class = pc_forge_ring
-		is_planet_class = pc_forge_ring2
-		is_planet_class = pc_forge_ring3
-		is_planet_class = pc_agri
-		is_planet_class = pc_shrine
-		is_planet_class = pc_fortress
-		is_planet_class = pc_penal
-		is_planet_class = pc_hive_arid
-		is_planet_class = pc_hive_continental_01
-		is_planet_class = pc_hive_continental_02
-		is_planet_class = pc_hive_ocean
-		is_planet_class = pc_hive_tundra
-		is_planet_class = pc_hive_medium
-		is_planet_class = pc_super_hive
-		is_planet_class = pc_hive_industrial
-		is_planet_class = pc_mega_hive
+		uses_district_set = fe_industrial_planet
+		uses_district_set = fe_forge_planet
+		uses_district_set = fe_refinery_planet
+		uses_district_set = fe_armory_planet
+		uses_district_set = mc_agri_world
+		uses_district_set = mc_shrine_world
+		uses_district_set = mc_penal
+		uses_district_set = mc_fortress_world
+		uses_district_set = fe_hive_planet
+		uses_district_set = fe_hive_planet_industrial
 	}
 }

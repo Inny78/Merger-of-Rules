@@ -705,8 +705,10 @@ can_release_vassal_from_species = {
 					has_trait = trait_machine_unit
 					has_trait = trait_mechanical
 				}
-				NOT = {
+				NOR = {
 					prev.this = { has_valid_civic = civic_machine_mighty_processors }
+					# Rogue Maid
+					Maid_trigger_4_can_release_vassal_from_species = yes
 				}
 			}
 			# Plentiful Perks
@@ -2082,7 +2084,7 @@ can_species_be_assembled = {
 		KZ_VOY_trgr_plnt_CLONE = yes
 	}
 	# TimeMod
-	NOT = { has_trait = trait_reassembler }
+	is_tm_reassembler = no
 	# Vanilla
 	has_population_control = { country = root.owner type = no }
 }
@@ -3389,7 +3391,7 @@ can_build_branch_offices = {
 			# More Corporate Authorities
 			has_valid_civic = civic_galactic_sovereign_megacorp
 			# Rogue Maid
-			has_ascension_perk = ap_expactriate_service
+			Maid_trigger_0_can_build_branch_offices = yes
 			# Voyage to Eternity
 			KZ_VOY_can_build_branch_offices = yes
 			# Warship Girls R And MIST Species
@@ -3437,6 +3439,8 @@ can_support_branch_offices = {
 			has_civic = civic_gf_GK
 			# More Corporate Authorities
 			has_valid_civic = civic_galactic_sovereign_megacorp
+			# Rogue Maid
+			Maid_trigger_1_can_support_branch_offices = yes
 			# Warship Girls R And MIST Species
 			AND = {
 				has_authority = auth_shenhai
@@ -3571,7 +3575,7 @@ can_build_branch_office_on_planet = {
 					# Kancolle
 					has_authority = auth_kancolle
 					# Rogue Maid
-					has_ascension_perk = ap_expactriate_service
+					Maid_trigger_0_can_build_branch_offices = yes
 					# Voyage to Eternity
 					KZ_VOY_can_build_branch_offices = yes
 					# Warship Girls R And MIST Species
@@ -3811,76 +3815,7 @@ can_build_branch_office_on_planet = {
 		}
 	}
 	# Rogue Maid
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_MAID_AI_OUTLAWED
-		exists = owner
-		OR = {
-			merg_has_rogue_maid = no
-			root = { NOT = { has_ascension_perk = ap_expactriate_service } }
-			if = {
-				limit = { root = { has_civic = civic_machine_servitor } }
-				owner = { NOT = { has_policy_flag = ai_outlawed } }
-			}
-			owner = { is_galactic_community_member = yes }
-			owner = {
-				is_subject = yes
-				overlord = { is_same_value = root }
-			}
-		}
-	}
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_MAID_AI_OUTLAWED_WITH_COMMUNITY
-		exists = owner
-		OR = {
-			merg_has_rogue_maid = no
-			root = { NOT = { has_ascension_perk = ap_expactriate_service } }
-			if = {
-				limit = { root = { has_civic = civic_machine_servitor } }
-				owner = { NOT = { has_policy_flag = ai_outlawed } }
-			}
-			is_galactic_community_formed = no
-			owner = { is_galactic_community_member = no }
-			owner = {
-				is_subject = yes
-				overlord = { is_same_value = root }
-			}
-			root = { is_galactic_emperor = yes }
-		}
-	}
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_MAID_NO_EMBASSY
-		exists = owner
-		OR = {
-			merg_has_rogue_maid = no
-			root = { NOT = { has_ascension_perk = ap_expactriate_service } }
-			root = { has_embassy = prev.owner }
-		}
-	}
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_MAID_NOT_ENOUGH_FRIENDLY
-		exists = owner
-		OR = {
-			merg_has_rogue_maid = no
-			root = { NOT = { has_ascension_perk = ap_expactriate_service } }
-			owner = {
-				NOR = {
-					is_unfriendly_to = root
-					is_rival = root
-					is_hostile_to = root
-					is_threatened_to = root
-				}
-			}
-			AND = {
-				root = {
-					OR = {
-						is_galactic_custodian = yes
-						is_galactic_emperor = yes
-					}
-				}
-				owner = { is_galactic_community_member = yes }
-			}
-		}
-	}
+	Maid_trigger_2_can_build_branch_office_on_planet = yes
 }
 
 # This = country

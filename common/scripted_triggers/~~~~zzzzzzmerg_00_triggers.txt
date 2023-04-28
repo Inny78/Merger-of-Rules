@@ -39,9 +39,9 @@ colonizable_planet = {
 		# Endless Frontier
 		is_planet_class = pc_mzilli_shadow
 		# TimeMod
-		is_planet_class = pc_gas_colony
-		is_planet_class = pc_psionic
-		is_planet_class = pc_nanites
+		is_tm_gas_colony = yes
+		is_tm_psionic_world = yes
+		is_tm_nanites_world = yes
 	}
 }
 

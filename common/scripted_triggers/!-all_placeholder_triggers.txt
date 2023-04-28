@@ -50,8 +50,6 @@ giga_has_any_mining_district = { always = no }
 giga_has_artificial_preference_trait = { always = no }
 giga_has_research_building = { always = no }
 giga_is_alderson_disk = { always = no }
-giga_is_alderson_disk = { always = no }
-giga_is_birch_world = { always = no }
 giga_is_birch_world = { always = no }
 giga_is_black_hole = { always = no }
 giga_is_compact_star = { always = no }
@@ -229,6 +227,11 @@ is_submerged = { always = no }
 is_subsapient_form = { always = no }
 is_symbiote = { always = no }
 is_symbiote_of_prevprev = { always = no }
+is_tm_black_hole = { always = no }
+is_tm_gas_colony = { always = no }
+is_tm_psionic_world = { always = no }
+is_tm_nanites_world = { always = no }
+is_tm_reassembler = { always = no }
 is_the_belt_active = { always = no }
 is_v_mobile = { always = yes }
 is_valid_GF_OGAS_subnet = { always = no }
@@ -251,6 +254,11 @@ KZ_VOY_can_build_branch_offices = { always = no }
 KZ_VOY_MOD = { always = no }
 KZ_VOY_trgr_plnt_ASSEMBLY = { always = yes }
 KZ_VOY_trgr_plnt_CLONE = { always = no }
+Maid_trigger_0_can_build_branch_offices = { always = no }
+Maid_trigger_1_can_support_branch_offices = { always = no }
+Maid_trigger_2_can_build_branch_office_on_planet = { always = yes }
+Maid_trigger_3_can_declare_war = { always = no }
+Maid_trigger_4_can_release_vassal_from_species = { always = no }
 MECR_trigger_0_community_country_type = { always = no }
 MECR_trigger_1_can_be_part_of_galactic_community = { always = yes }
 MECR_trigger_2_can_be_part_of_galactic_empire = { always = yes }
