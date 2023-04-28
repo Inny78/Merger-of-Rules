@@ -371,13 +371,16 @@ afk_target_planet = {
 		# Planetary Diversity
 		merg_is_nuked = yes
 		# Gigastructures
-		is_planet_class = pc_katzenland
+		giga_is_katzenland = yes
 		# SW:UnknownWorld Shipgirls Story
 		is_planet_class = pc_swgs_engineer
 		is_planet_class = pc_swgs_engineer_ringworld_habitable
 		# Warship Girls R And MIST Species
-		is_planet_class = pc_wsg_port
-		is_planet_class = pc_shenhai
+		uses_district_set = port_world
+		uses_district_set = sh_world
+		# SW: UnknownWorld Shipgirls Story
+		uses_district_set = engineer_world
+		uses_district_set = rw_swgs_engineer_world
 		# APSR: Anomalies, Planetary and Space Resources
 		has_apsr_modifiers = yes
 		# Planetary Diversity
@@ -385,6 +388,7 @@ afk_target_planet = {
 		# Gigastructural Engineering & More
 		is_planet_class = pc_red_toxic
 	}
+	merg_is_forbidden_target = no
 }
 
 ############################### Warship Girls R and MIST Species ###############################
@@ -1050,7 +1054,14 @@ is_gaia = {
 is_city = {
 	merg_is_arcology = yes
 }
-
+living_metal_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		merg_is_barren = yes
+		merg_is_barren_cold = yes
+		is_asteroid = yes
+	}
+}
 ############################### All these worlds ###############################
 is_fallen_empire_planet = {
 	optimize_memory

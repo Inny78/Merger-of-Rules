@@ -145,6 +145,11 @@ is_ds_surrelist = { always = no }
 is_ds_zeitriss_gc = { always = no }
 is_ecocentric = { always = no }
 is_exile_country = { always = no }
+is_exp_memorex_comatos = { always = no }
+is_exp_tree_caretaker = { always = no }
+is_infested_basic = { always = no }
+is_exp_pheremone = { always = no }
+is_exp_lithoid_shiny = { always = no }
 is_fq_hollow = { always = no }
 is_fq_matryoshka = { always = no }
 is_giga_habitable_gas_giant = { always = no }

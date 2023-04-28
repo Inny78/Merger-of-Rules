@@ -28,12 +28,6 @@ colonizable_planet = {
 		is_sots_soulsphere = yes
 		# Planetary Diversity
 		is_pd_planetary_megaproject = yes
-		# SW:UnknownWorld Shipgirls Story
-		is_planet_class = pc_swgs_engineer
-		is_planet_class = pc_swgs_engineer_ringworld_habitable
-		# Warship Girls R And MIST Species
-		is_planet_class = pc_wsg_port
-		is_planet_class = pc_shenhai
 		# APSR: Anomalies, Planetary and Space Resources
 		has_apsr_modifiers = yes
 		# Endless Frontier
@@ -259,11 +253,12 @@ is_megacorp = {
 		# Ethics and Civics - Bug Branch
 		is_bugged_megacorp = yes
 		# Expanded Traits, Civics, Pops, and More
-		has_authority = auth_private
-		has_authority = auth_cooperative		# Also More Corporate Authorities
+		is_exp_private_auth = yes
+		is_exp_cooperative = yes
 		# More Authorities/E&C FunEFork
 		has_authority = auth_corporate_imperial
 		# More Corporate Authorities
+		has_authority = auth_cooperative
 		has_authority = auth_corporate_fiefdom
 		# Warship Girls R And MIST Species
 		has_authority = auth_warshipgirls
@@ -279,7 +274,7 @@ is_autocracy = {
 		# Ethics and Civics Bug Branch
 		is_bugged_dynastic_enterprise = yes
 		# Expanded Traits, Civics, Pops, and More
-		has_authority = auth_private
+		is_exp_private_auth = yes
 		# More Authorities
 		is_imperial = yes
 		is_dictatorial = yes
@@ -327,7 +322,7 @@ is_democracy = {
 			is_egalitarian = yes
 		}
 		# Expanded Traits, Civics, Pops, and More
-		has_authority = auth_cooperative
+		is_exp_cooperative = yes
 		# Ethics and Civics Bug Branch
 		is_bugged_megacorp = yes
 	}
@@ -1093,7 +1088,7 @@ can_think = {
 		has_trait = trait_nerve_stapled
 		has_trait = trait_zombie
 		# Expanded Events
-		has_trait = trait_memorex_comatos
+		is_exp_memorex_comatos = yes
 		# Diagraphers Trait Mod
 		is_subsapient_form = yes
 		# Rogue Maid

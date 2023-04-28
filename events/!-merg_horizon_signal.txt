@@ -48,12 +48,12 @@ planet_event = {
 						# Gigastructural Engineering & More
 						giga_habitable_structure = yes
 						# Madoka Magica
-						is_planet_class = pc_outpost
+						uses_district_set = outpost
 						# Planetary Diversity
 						is_pd_arcology = yes
 						is_pd_unique = yes
 					    # Starborn
-					    is_planet_class = pc_starborn_habitat_start
+					    uses_district_set = starborn_start
 					    # Warship Girls R And MIST Species
 						has_planet_flag = port_home
  						has_planet_flag = clovertheater_future_flag
@@ -106,14 +106,14 @@ planet_event = {
 						}
 						# Expanded Traits, Civics, Pops, and More
 						if = {
-							limit = { has_trait = trait_pheremones }
+							limit = { is_exp_pheremone = yes }
 							modify_species = {
 								species = this
 								remove_trait = trait_pheremones
 							}
 						}
 						if = {
-							limit = { has_trait = trait_lithoid_shiny }
+							limit = { is_exp_lithoid_shiny = yes }
 							modify_species = {
 								species = this
 								remove_trait = trait_lithoid_shiny

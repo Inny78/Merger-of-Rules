@@ -522,8 +522,8 @@ can_generate_leader_from_pop = {
 		# Ethics & Civics: Bug Branch
 		is_bugged_slave_gene = yes
 		# Expanded Events / Expanded Traits, Civics, Pops, and More
-		has_trait = trait_infested_basic
-		has_trait = trait_tree_caretaker
+		is_infested_basic = yes
+		is_exp_tree_caretaker = yes
 		# Expanded Gestalts
 		root = { has_origin = origin_hive_overmind }
 		# Lithoid Supremacy
@@ -724,8 +724,8 @@ can_release_vassal_from_species = {
 				NOT = { has_trait = trait_machine_unit }
 				prev.this = { has_authority = auth_machine_intelligence }
 			}
-			has_trait = trait_infested_basic
-			has_trait = trait_tree_caretaker
+			is_infested_basic = yes
+			is_exp_tree_caretaker = yes
 		}
 	}
 }
@@ -1499,8 +1499,6 @@ can_species_procreate = {
 				}
 			}
 		}
-		# Expanded Events
-		has_trait = trait_memorex_comatos
 		AND = {
 			root = { owner = { has_origin = origin_hive_queen } }
 			has_trait = trait_hive_mind
@@ -1509,8 +1507,8 @@ can_species_procreate = {
 		has_trait = trait_hive_mind_overlord
 		# Diagraphers Trait Mod
 		is_dimorphic_male = yes
-		# Expanded Traits, Civics, Pops, and More
-		has_trait = trait_memorex_comatos
+		# Expanded Events
+		is_exp_memorex_comatos = yes
 		# Girls Frontline
 		has_trait = GF_trait_doll
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
@@ -1577,7 +1575,7 @@ can_species_procreate = {
 	}
 	# Expanded Pops
 	if = {
-		limit = { has_trait = trait_tree_caretaker }
+		limit = { is_exp_tree_caretaker = yes }
 		root = {
 			OR = {
 				has_deposit = d_tree_of_life_colony
@@ -1845,7 +1843,7 @@ can_species_be_assembled = {
 					}
 				}
 				OR = {
-					has_trait = trait_tree_caretaker
+					is_exp_tree_caretaker = yes
 					root = {
 						OR = {
 							merg_has_cloning_building = yes
@@ -2975,7 +2973,7 @@ can_resettle_pop = {
 	# Expanded Traits, Civics, Pops, and More
 	custom_tooltip = {
 		fail_text = "caretaker_refuse"
-		NOT = { has_trait = trait_tree_caretaker }
+		NOT = { is_exp_tree_caretaker = yes }
 	}
 	# V_Traits
 	custom_tooltip = {
@@ -3219,7 +3217,7 @@ should_force_decline_species = {
 		# Caretakers die without the Tree of Life
 		custom_tooltip = {
 			success_text = TREEFOLK_FORCE_DECLINE
-			has_trait = trait_tree_caretaker
+			is_exp_tree_caretaker = yes
 			from = {
 				NOR = {
 					has_deposit = d_tree_of_life_colony
@@ -4224,7 +4222,7 @@ can_pop_auto_migrate = {
 	}
 	# Expanded Traits, Civics, Pops, and More
 	if = {
-		limit = { has_trait = trait_tree_caretaker }
+		limit = { is_exp_tree_caretaker = yes }
 		custom_tooltip = {
 			fail_text = caretaker_refuse
 			always = no
@@ -4622,7 +4620,7 @@ can_fill_ruler_job = {
 				has_trait = trait_nerve_stapled
 				has_trait = trait_presapient_docile_livestock
 				# Expanded Traits, Civics, Pops, and More
-				has_trait = trait_tree_caretaker
+				is_exp_tree_caretaker = yes
 				# Lithoid Supremacy
 				has_trait = trait_pearl_born_drone
 				# Wandering Witch: Voyagers
