@@ -17,7 +17,7 @@ merg_has_acot = { has_acot = yes }
 # Ancient Cache of Technologies : Secrets Beyond The Gates 1481972266
 merg_has_sofe = { has_global_flag = sofe_activated }
 
-# Ancient Empire
+# Ancient Empire 2389589691
 merg_has_ancient_empire = { has_global_flag = has_ancient_empire_mod }
 
 # Animated Synthetics Portraits Expanded: Reborn 1492025820
@@ -184,7 +184,7 @@ merg_has_shadowgate = { has_global_flag = shadowgate_mod_active }
 merg_has_shroud_rising = { has_global_flag = shroud_rising_active }
 
 # Silfae's Portraits: Revisited - Holofrixit Revisited
-merg_has_holofrixit = { has_global_flag = holofrixit_revisited_installed }
+merg_has_holofrixit = { has_holosphere_portraits_revisited_active = yes }
 
 # Some Events of Outside Cluster
 merg_has_seooc = { has_global_flag = has_nsc_active }

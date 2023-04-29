@@ -568,16 +568,15 @@ can_generate_leader_from_pop = {
 	}
 	# Holofrixit Revisited / Silfae's Portraits: Revisited
 	OR = {
-		NOT = { owner = { has_authority = auth_holofrixit } }
+		owner = { has_auth_holofrixit = no }
 		owner = {
 			has_origin = origin_holofrixit
 			prev.species = {
 				OR = {
-					NOT = { has_trait = trait_holofrixit }
-					has_trait = trait_holooverseer
-					has_trait = trait_hologanglion
-					has_trait = trait_holowarrior
-					has_trait = trait_holowarrior_2
+					has_species_trait_holofrixit = no
+					has_species_trait_holooverseer = yes
+					has_species_trait_hologanglion = yes
+					has_species_trait_holowarrior = yes
 				}
 			}
 		}
@@ -622,12 +621,7 @@ can_generate_military_leader_from_pop = {
 				# Holofrixit Revisited / Silfae's Portraits: Revisited
 				AND = {
 					has_origin = origin_holofrixit
-					PREV.species = {
-						OR = {
-							has_trait = trait_holowarrior
-							has_trait = trait_holowarrior_2
-						}
-					}
+					PREV.species = { has_species_trait_holowarrior = yes }
 				}
 			}
 		}
@@ -1512,7 +1506,7 @@ can_species_procreate = {
 		# Girls Frontline
 		has_trait = GF_trait_doll
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
-		has_trait = trait_hologanglion
+		has_species_trait_hologanglion = yes
 		# Lithoid Supremacy
 		has_trait = trait_pearl_born_drone
 		# Madoka Magica NEW
@@ -1701,7 +1695,7 @@ can_species_procreate = {
 can_species_be_assembled = {
 	is_sapient = yes
 	# Holofrixit Revisited / Silfae's Portraits: Revisited
-	NOT = { has_trait = trait_holodrone }
+	has_species_trait_holodrone = no
 	# Kancolle
 	root.owner = { NOT = { has_modifier = modifier_ban_assemble } }
 	# Vanilla
@@ -4583,7 +4577,7 @@ can_fill_ruler_job = {
 			owner = {
 				is_gestalt = no
 				has_origin = origin_holofrixit
-				has_trait = trait_holooverseer
+				has_species_trait_holooverseer = yes
 			}
 		}
 		can_fill_holosphere_ruler_job = yes

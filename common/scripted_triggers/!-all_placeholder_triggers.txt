@@ -2,6 +2,7 @@
 ag_can_be_orbital_bombardment_country = { always = no }
 ag_can_do_orbital_bombardment_country = { always = no }
 ag_is_ancient_system = { always = no }
+ag_is_mod_country = { always = no }
 ag_is_mod_habitable_ringworld = { always = no }
 ag_is_special_system = { always = no }
 annihilator_system = { always = no }
@@ -43,6 +44,7 @@ everchanging_system = { always = no }
 FW_trgr_ldr_SP = { always = no }
 galactic_diversity_habitable_planet = { always = no }
 GF_can_build_doll_species = { always = no }
+giga_country_gets_bank_exclude = { always = no }
 giga_has_any_farming_district_or_buildings = { always = no }
 giga_has_any_generator_district_or_building = { always = no }
 giga_has_any_industrial_district = { always = no }
@@ -72,6 +74,7 @@ has_acot = { always = no }
 has_apsr_modifiers = { always = no }
 has_artificial_aristocracy_emex = { always = no }
 has_artificial_wombs = { always = no }
+has_auth_holofrixit = { always = no }
 has_bug_branch = { always = no }
 has_civic_organic_zealots_active = { always = no }
 has_civic_organic_zealots_active = { always = no }
@@ -80,6 +83,7 @@ has_ethical_gestalts = { always = no }
 has_exotic_gas_dependency = { always = no }
 has_fully_upgraded_penal_capital = { always = no }
 has_gigastructures = { always = no }
+has_holosphere_portraits_revisited_active = { always = no }
 has_major_upgraded_penal_capital = { always = no }
 has_mod_reproductive_tech_and_politics = { always = no }
 has_more_authorities_triggers = { always = no }
@@ -87,6 +91,12 @@ has_planetary_diversity = { always = no }
 has_planetary_diversity_planetaryhabitats = { always = no }
 has_reproductive_politics = { always = no }
 has_specialist_subject_leader_trait_maid = { always = no }
+has_species_trait_holofrixit = { always = no }
+has_species_trait_holooverseer = { always = no }
+has_species_trait_hologanglion = { always = no }
+has_species_trait_holowarrior = { always = no }
+has_species_trait_holodrone = { always = no }
+has_species_trait_holofrixigram = { always = no }
 has_str_genemodding_tech = { always = no }
 has_upgraded_penal_capital = { always = no }
 has_wg_traits = { always = no }

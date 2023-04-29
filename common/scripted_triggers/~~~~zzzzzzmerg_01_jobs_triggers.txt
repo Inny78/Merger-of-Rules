@@ -2,11 +2,8 @@
 complex_specialist_job_check_trigger = {
 	hidden_trigger = {
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
-		NOR = {
-			has_trait = trait_holowarrior
-			has_trait = trait_holowarrior_2
-			has_trait = trait_holodrone
-		}
+		has_species_trait_holowarrior = no
+		has_species_trait_holodrone = no
 		# Vanilla
 		exists = owner
 		OR = {
@@ -171,11 +168,7 @@ is_organic_species = {
 				# Silfae's Portrait Revisited
 				AND = {
 					is_archetype = HOLOARCH
-					NOR = {
-						has_trait = trait_holofrixigram
-						has_trait = trait_holofrixigram_2
-						has_trait = trait_holofrixigram_3
-					}
+					has_species_trait_holofrixigram = no
 				}
 				# SW:UnknownWorld Shipgirls Story
 				is_archetype = STARSHIPGIRLS

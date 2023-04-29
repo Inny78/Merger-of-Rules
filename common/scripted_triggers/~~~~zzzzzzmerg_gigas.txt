@@ -315,3 +315,52 @@ giga_country_gets_bank_include = {
 		is_zofe_country = yes
 	}
 }
+giga_country_gets_bank = {
+	optimize_memory
+	giga_country_gets_bank_exclude = no
+	merg_mod_country_gets_bank_exclude = no
+	OR = {
+		is_country_type = default
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		giga_country_gets_bank_include = yes
+		giga_is_playable_country = yes
+	}
+}
+merg_mod_country_gets_bank_exclude = {
+	OR = {
+		ag_is_mod_country = yes
+		is_country_type = abyssal_host_invaders_type
+		is_country_type = acot_crazed_stellarite
+		is_country_type = afk_crisis_country
+		is_country_type = ag_kae_ge_invasion_country
+		is_country_type = ag_kuat_invasion_country
+		is_country_type = Aris_mid
+		is_country_type = awakened_gate_builders
+		is_country_type = awakened_marauders_ev
+		is_country_type = berserker_awoken_hive
+		is_country_type = ev_leviathans_crisis
+		is_country_type = hfe_pirate
+		is_country_type = master_ai_country
+		is_country_type = mem_ancestor_guardian
+		is_country_type = mem_surveyor_country_red
+		is_country_type = mem_vazurans
+		is_country_type = nep_arena_hologram
+		is_country_type = nep_bounty_hologram
+		is_country_type = nep_phantom_passive
+		is_country_type = planet_state
+		is_country_type = replicators
+		is_country_type = shroud_entities
+		is_country_type = shroud_horrors
+		is_country_type = sbtg_sentinel_active
+		is_country_type = TAC_debris_ship_country
+		is_country_type = TAC_machine_crisis_country
+		is_country_type = throng_country
+		is_country_type = vbp_machine
+		is_country_type = void_lifeforms_1
+		is_country_type = void_lifeforms_2
+		is_country_type = wg_crisis_country
+		is_country_type = wg_Khan_country_type
+		is_country_type = wg_Khan_country_type_auto_delete
+	}
+}
