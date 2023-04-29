@@ -26,17 +26,17 @@ planet_event = {
 			merg_is_forbidden_target = yes
 			habitable_structure = yes
 			is_giga_maginot_world = yes
+			is_pd_wasteland = yes
+			is_pd_habitat = yes
+			is_pd_planetary_megaproject = yes
+			is_pd_shroud_world = yes
+			is_pd_machine = yes
+			is_pd_hive_world = yes
+			is_pd_arcology = yes
+			is_pd_unique = yes
+			is_artificial = yes
+			is_pd_exotic = yes
 		}
-		is_pd_wasteland = no
-		is_pd_habitat = no
-		is_pd_planetary_megaproject = no
-		is_pd_shroud_world = no
-		is_pd_machine = no
-		is_pd_hive_world = no
-		is_pd_arcology = no
-		is_pd_unique = no
-		is_artificial = no
-		is_pd_exotic = no
 		exists = owner
 		owner = { is_relentless_industrialist_empire = yes }
 	}

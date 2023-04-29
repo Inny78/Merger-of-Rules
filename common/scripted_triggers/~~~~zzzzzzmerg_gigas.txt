@@ -51,7 +51,7 @@ giga_habitable_structure = {
 		is_planet_class = pc_pouchkinn_black_hole
 		is_planet_class = pc_flat_world
 		is_planet_class = pc_giga_frameworld
-		is_planet_class = pc_equatorial_shipyard
+		uses_district_set = giga_equatorial_shipyard
 		# AOT
 		uses_district_set = phanon_macripp
 	}
@@ -68,24 +68,39 @@ is_maginotable_restricted = {
 		is_acot_awesome_planet_class = yes
 		# Ancient Empire
 		ag_is_mod_habitable_ringworld = yes
+		# Assault Lily
+		uses_district_set = lily_ring_world
+		# AshArms Aquarius History
+		uses_district_set = rw_academycomplex_world
 		# Darkspace
 		is_ds_ancient_ringworld = yes
 		is_ds_constructor_ark = yes
 		is_ds_prism_world = yes
 		is_ds_ringworld_spectrals = yes
 		is_ds_stellar_engine = yes
+		# Kancolle
+		uses_district_set = kancolle_ring_world
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target
-		# Warship Girls and MIST species
-		is_planet_class = pc_ringworld_habitable_sh
-		is_planet_class = pc_ringworld_habitable_wsg
-		is_planet_class = pc_ringworld_habitable_swim
-		is_planet_class = pc_ringworld_habitable_water
-		is_planet_class = pc_ringworld_habitable_uf
-		is_planet_class = pc_ringworld_habitable_auto_uf
-		is_planet_class = pc_dyson_ring
 		# Planetary Diversity
 		is_planetary_diversity_ringworld = yes
+		# Planetary Ringworlds
+		uses_district_set = planet_ring
+		uses_district_set = planet_ring_city
+		# Star Wars: Kuat Ancient Empire
+		is_planet_class = pc_kuat_eternal_ringworld_habitable
+		# Star Wars: UnknownWorld Shipgirls Story
+		uses_district_set = rw_swgs_engineer_world
+		# ThaumStellaris
+		uses_district_set = pc_tc_alchemical_ringworld
+		# Warship Girls and MIST species
+		is_wg_upgraded_ringworld = yes
+		uses_district_set = rw_auto_uf_world
+		uses_district_set = dyson_ring_world
+		# ZOFE
+		uses_district_set = utopian_ringworld
+		uses_district_set = utopian_machine_ringworld
+		uses_district_set = utopian_hive_ringworld
 	}
 }
 mega_blokkats_wont_stripmine = {
@@ -178,16 +193,6 @@ is_ndb_immune_star_planet = {
 		merg_is_black_or_white_hole = yes
 	}
 }
-is_ndb_vulnerable_mega = {
-	NOR = {
-		mega_blokkats_wont_stripmine = yes
-		is_megastructure_type = blokkat_harvester_charged_mothership
-		is_megastructure_type = blokkat_harvester_charged
-		is_megastructure_type = blokkat_harvester_charging_up_mothership
-		is_megastructure_type = blokkat_harvester_charging_up
-		has_megastructure_flag = ndb_immune_megastructure
-	}
-}
 giga_planet_no_farming = {
 	merg_is_machine_world = yes
 }
@@ -271,23 +276,11 @@ giga_is_tropical = {
 }
 giga_is_hive = {
 	optimize_memory
-	OR = {
-		is_planet_class = pc_hive
-		is_pd_hive_world = yes
-		# Voyage to Eternity
-		is_planet_class = pc_KZ_VOY_hive_world
-	}
+	merg_is_hive_world = yes
 }
 giga_is_machine = {
 	optimize_memory
-	OR = {
-		is_planet_class = pc_machine
-		is_pd_machine = yes
-		# Girls Frontline
-		is_planet_class = pc_GF_sf_machine
-		# Origin - F.C.S.S & M.C.S.S
-		is_planet_class = pc_awaken_ai
-	}
+	merg_is_machine_world = yes
 }
 giga_is_gaia = { 
 	optimize_memory
@@ -318,7 +311,7 @@ giga_country_gets_bank_include = {
 giga_country_gets_bank = {
 	optimize_memory
 	giga_country_gets_bank_exclude = no
-	merg_mod_country_gets_bank_exclude = no
+	giga_mod_country_gets_bank_exclude = no
 	OR = {
 		is_country_type = default
 		is_country_type = fallen_empire
@@ -327,7 +320,7 @@ giga_country_gets_bank = {
 		giga_is_playable_country = yes
 	}
 }
-merg_mod_country_gets_bank_exclude = {
+giga_mod_country_gets_bank_exclude = {
 	OR = {
 		ag_is_mod_country = yes
 		is_country_type = abyssal_host_invaders_type
@@ -362,5 +355,14 @@ merg_mod_country_gets_bank_exclude = {
 		is_country_type = wg_crisis_country
 		is_country_type = wg_Khan_country_type
 		is_country_type = wg_Khan_country_type_auto_delete
+	}
+}
+is_ndb_immune_star_planet = {
+	OR = {
+		merg_is_black_or_white_hole = yes
+		has_planet_flag = ndb_immune_planet
+		solar_system = {
+			has_star_flag = ndb_immune_system
+		}
 	}
 }

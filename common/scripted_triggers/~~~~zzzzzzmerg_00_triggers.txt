@@ -266,7 +266,6 @@ is_megacorp = {
 }
 
 is_autocracy = {
-	#Power of one
 	OR = {
 		is_gestalt = yes
 		has_authority = auth_imperial
@@ -285,7 +284,7 @@ is_autocracy = {
 	}
 }
 
-is_oligarchy = { #Power of few
+is_oligarchy = {
 	OR = {
 		has_authority = auth_oligarchic
 		AND = {
@@ -304,7 +303,6 @@ is_oligarchy = { #Power of few
 }
 
 is_democracy = {
-	#Power of many
 	OR = {
 		has_authority = auth_democratic
 		AND = {

@@ -157,6 +157,8 @@ is_ecocentric = { always = no }
 is_exile_country = { always = no }
 is_exp_memorex_comatos = { always = no }
 is_exp_tree_caretaker = { always = no }
+is_exp_private_auth = { always = no }
+is_exp_cooperative = { always = no }
 is_infested_basic = { always = no }
 is_exp_pheremone = { always = no }
 is_exp_lithoid_shiny = { always = no }
@@ -229,6 +231,7 @@ is_real_KZ_VOY_Library_tower = { always = no }
 is_real_KZ_VOY_luna = { always = no }
 is_real_KZ_VOY_Seclusion = { always = no }
 is_real_KZ_VOY_solaria = { always = no }
+is_regular_giga_maginot_world = { always = no }
 is_rooted_adult = { always = no }
 is_rs_collapsar = { always = no }
 is_rs_magnetar = { always = no }
