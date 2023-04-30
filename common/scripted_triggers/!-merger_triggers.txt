@@ -167,10 +167,7 @@ merg_is_habitat_non_starborn = {
 		is_planet_class = pc_habitat
 		uses_district_set = habitat
 		# Acquisition of Technology
-		is_planet_class = pc_dm_habitat
-		is_planet_class = pc_ae_habitat
-		is_planet_class = pc_sigma_habitat
-		is_planet_class = pc_sigma_deepspace_habitat
+		is_aot_habitat = yes
 		# Blue Archive
 		uses_district_set = BA_auto_habitat
 		# DarkSpace
@@ -204,10 +201,7 @@ merg_is_habitat_non_PD = {
 		uses_district_set = giga_elysium
 		uses_district_set = giga_orbital
 		# Acquisition of Technology
-		is_planet_class = pc_dm_habitat
-		is_planet_class = pc_ae_habitat
-		is_planet_class = pc_sigma_habitat
-		is_planet_class = pc_sigma_deepspace_habitat
+		is_aot_habitat = yes
 		# Blue Archive
 		uses_district_set = BA_auto_habitat
 		# Habitation

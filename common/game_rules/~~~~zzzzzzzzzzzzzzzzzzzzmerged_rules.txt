@@ -467,33 +467,11 @@ species_can_live_on_planet = {
 	# Planetary Population Restrictions
 	custom_tooltip = {
 		fail_text = RESIDENT_LIVING_RESTRICTED
-		NAND = {
-            exists = root.owner
-			root.owner = { has_policy_flag = residentliving_restricted }
-			root = { has_planet_flag = limited_rights_living_banned }
-			has_citizenship_type = { type = citizenship_limited country = root.owner }
-		}
-		NAND = {
-			exists = root.owner
-			root.owner = { has_policy_flag = residentliving_restricted_habs }
-			root = { habitable_structure = yes }
-			has_citizenship_type = { type = citizenship_limited country = root.owner }
-		}
+		has_policy_residentliving_restricted = yes
 	}
 	custom_tooltip = {
 		fail_text = SLAVE_LIVING_RESTRICTED
-		NAND = {
-            exists = root.owner
-			root.owner = { has_policy_flag = slaveliving_restricted }
-			root = { has_planet_flag = slave_living_banned }
-			has_citizenship_type = { type = citizenship_slavery country = root.owner }
-		}
-		NAND = {
-			exists = root.owner
-			root.owner = { has_policy_flag = slaveliving_restricted_habs }
-			root = { habitable_structure = yes }
-			has_citizenship_type = { type = citizenship_slavery country = root.owner }
-		}
+		has_policy_slaveliving_restricted = yes
 	}
 	# TimeMod
 	TIME_RULE_trgr_spcs_CAN_live_on_planet = yes
@@ -1578,40 +1556,7 @@ can_species_procreate = {
 		}
 	}
 	# Planetary Population Restrictions
-	NAND = {
-		root = { has_modifier = slave_colony }
-		NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
-	}
-	NAND = {
-		root.owner = { has_policy_flag = residentbreeding_restricted }
-		root = { has_planet_flag = limited_rights_breeding_banned }
-		has_citizenship_type = { type = citizenship_limited country = root.owner }
-	}
-	NAND = {
-		root.owner = { has_policy_flag = residentbreeding_restricted_habs }
-		root = { habitable_structure = yes }
-		has_citizenship_type = { type = citizenship_limited country = root.owner }
-	}
-	NAND = {
-		root.owner = { has_policy_flag = slavebreeding_restricted }
-		root = { 
-			NOR = {
-				has_planet_flag = slave_breeding_allowed
-				has_modifier = slave_colony
-			}			
-		}
-		has_citizenship_type = { type = citizenship_slavery country = root.owner }
-	}
-	NAND = {
-		root.owner = { has_policy_flag = slavebreeding_restricted_habs }
-		root = { 
-			NOR = {
-				habitable_structure = no
-				has_modifier = slave_colony
-			}			
-		}
-		has_citizenship_type = { type = citizenship_slavery country = root.owner }
-	}
+	policies_allow_breeding = yes
 	# Human Fallen Empires
 	NOT = { has_trait = hfe_species_trait_brainworm }
 	# V_Traits
@@ -2337,7 +2282,7 @@ can_orbitable_repair_ships = {
 				# ZOFE
 				has_starbase_size = fe_goliath
 				# AOT
-				has_starbase_size = ascended_juggernaut
+				is_ascended_juggernaut = yes
 				has_starbase_size = precursor_juggernaut
 				# Assault Lily
 				has_starbase_size = lily_super_college_ship

@@ -92,6 +92,8 @@ has_mod_reproductive_tech_and_politics = { always = no }
 has_more_authorities_triggers = { always = no }
 has_planetary_diversity = { always = no }
 has_planetary_diversity_planetaryhabitats = { always = no }
+has_policy_residentliving_restricted = { always = yes }
+has_policy_slaveliving_restricted = { always = yes }
 has_reproductive_politics = { always = no }
 has_specialist_subject_leader_trait_maid = { always = no }
 has_species_trait_holofrixit = { always = no }
@@ -115,6 +117,9 @@ is_acot_advanced_starbase = { always = no }
 is_acot_awesome_planet_class = { always = no }
 is_acot_fractured_planet_class = { always = no }
 is_acot_pmc_vault = { always = no }
+is_aot_habitat = { always = no }
+is_aot_macripp = { always = no }
+is_ascended_juggernaut = { always = no }
 is_bugged_evolutionary_architects = { always = no }
 is_bugged_interventionalist = { always = no }
 is_bugged_slave_race = { always = no }
@@ -284,6 +289,7 @@ MECR_trigger_0_community_country_type = { always = no }
 MECR_trigger_1_can_be_part_of_galactic_community = { always = yes }
 MECR_trigger_2_can_be_part_of_galactic_empire = { always = yes }
 planet_has_symbiotes = { always = no }
+policies_allow_breeding = { always = yes }
 prob_forced_armageddon_bombardment = { always = no }
 robot_has_rare_crystal_comp = { always = no }
 systems_blokkats_wont_stripmine = { always = no }

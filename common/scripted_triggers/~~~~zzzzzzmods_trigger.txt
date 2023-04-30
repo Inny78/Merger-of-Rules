@@ -279,17 +279,16 @@ legw_megaplanet = {
 		is_planet_class = pc_machine
 		is_planet_class = pc_cybrex
 		# Planetary Diversity
-		is_planet_class = pc_machinetidallylocked 
-		is_planet_class = pc_machine_factory 
-		is_planet_class = pc_machine_necropolis
-		is_planet_class = pc_machine_factory
-		is_planet_class = pc_machine_fort
-		is_planet_class = pc_machine_capital
-		is_planet_class = pc_archive
+		is_pd_machine = yes
+		is_pd_robot_arcology = yes
+		# Girls Frontline
+		uses_district_set = GF_sf_machine_world
 		# Gigastructural Engineering & More
-		is_planet_class = pc_giga_planetary_computer
+		uses_district_set = giga_planetary_computer
 		# Origin - F.C.S.S & M.C.S.S
-		is_planet_class = pc_awaken_ai
+		uses_district_set = awaken_ai_world
+		# ZOFE
+		uses_district_set = utopian_machine_world
 	}
 }
 legw_is_dry = {
@@ -374,8 +373,8 @@ afk_target_planet = {
 		# Gigastructures
 		giga_is_katzenland = yes
 		# SW:UnknownWorld Shipgirls Story
-		is_planet_class = pc_swgs_engineer
-		is_planet_class = pc_swgs_engineer_ringworld_habitable
+		uses_district_set = engineer_world
+		uses_district_set = rw_swgs_engineer_world
 		# Warship Girls R And MIST Species
 		uses_district_set = port_world
 		uses_district_set = sh_world
@@ -1174,7 +1173,7 @@ can_build_precursor_ship = {
 				has_starbase_building = acot_precursor_database	
 				is_acot_advanced_starbase = yes
 				has_starbase_size = precursor_juggernaut
-				has_starbase_size = ascended_juggernaut
+				is_ascended_juggernaut = yes
 				# Assault Lily
 				has_starbase_size >= lily_super_college_ship
 				# Gigastructural Engineering & More
