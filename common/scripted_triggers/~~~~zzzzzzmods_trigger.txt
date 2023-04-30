@@ -105,10 +105,12 @@ mem_has_happiness = {
 		# Diagraphers Trait Mod
 		is_multihive_drone = yes
 		# ThaumStellaris
-		OR = {
-			is_archetype = TC_GOLEM
-			is_archetype = TC_GOLEM_HIVE
-			is_archetype = TC_GOLEM_MACHINE
+		species = {
+			OR = {
+				is_archetype = TC_GOLEM
+				is_archetype = TC_GOLEM_HIVE
+				is_archetype = TC_GOLEM_MACHINE
+			}
 		}
 		# Trait Diversity
 		has_trait = trait_td_multi_hiveminded
