@@ -3784,7 +3784,7 @@ can_build_branch_office_on_planet = {
 	# principled rogues won't build branch offices in countries they like
 	hidden_trigger = {
 		OR = {
-			NOT = { root = { has_ai_personality = principled_rogues is_ai = yes } }
+			NOT = { root = { has_mca_personality_principled_rogues = yes is_ai = yes } }
 			owner = { their_opinion = { who = root value < 0 } }
 			owner = {
 				their_opinion = { who = root value < 20 }

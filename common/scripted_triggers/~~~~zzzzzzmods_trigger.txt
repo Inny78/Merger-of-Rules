@@ -353,6 +353,7 @@ is_open_gestalt = {
 		has_ai_personality = open_machine_intelligence
 		# Expanded Gestalts
 		has_valid_civic = civic_mutualistic_behavior
+		has_valid_civic = civic_machine_trading
 	}
 }
 

@@ -258,8 +258,8 @@ is_megacorp = {
 		# More Authorities/E&C FunEFork
 		has_authority = auth_corporate_imperial
 		# More Corporate Authorities
-		has_authority = auth_cooperative
-		has_authority = auth_corporate_fiefdom
+		has_mca_auth_cooperative = yes
+		has_mca_auth_private = yes
 		# Warship Girls R And MIST Species
 		has_authority = auth_warshipgirls
 	}
@@ -278,7 +278,7 @@ is_autocracy = {
 		is_imperial = yes
 		is_dictatorial = yes
 		# More Corporate Authorities
-		has_authority = auth_corporate_fiefdom
+		has_mca_auth_private = yes
 		# Wandering Witch: Voyagers
 		has_authority = auth_witch_dictatorial
 	}
