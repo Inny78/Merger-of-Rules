@@ -256,7 +256,7 @@ merg_is_nuked = {
 	OR = {
 		merg_is_nuked_basic = yes
 		# BlueArchive
-		is_planet_class = pc_BA_ruined_planet
+		uses_district_set = BA_ruined_planet
 		# Gigastructural Engineering & More
 		giga_is_katzenland = yes
 		# Human Fallen Empires

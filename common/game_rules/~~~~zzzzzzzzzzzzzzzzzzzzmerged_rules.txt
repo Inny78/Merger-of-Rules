@@ -574,10 +574,17 @@ can_generate_leader_from_species = {
 		has_citizenship_type = { type = citizenship_full country = root }
 	}
 	NOR = {
-		# ThaumStellaris
-		is_archetype = TC_GOLEM
-		is_archetype = TC_GOLEM_HIVE
-		is_archetype = TC_GOLEM_MACHINE
+		AND = {
+			merg_has_thaumstellaris = yes
+			species = {
+				OR = {
+					# ThaumStellaris
+					is_archetype = TC_GOLEM
+					is_archetype = TC_GOLEM_HIVE
+					is_archetype = TC_GOLEM_MACHINE
+				}
+			}
+		}
 		# Ethics and Civics - Bug Branch
 		is_bugged_symbiotic = yes
 	}
@@ -1230,10 +1237,17 @@ can_colonize_with_species = {
 		is_dimorphic_male = yes
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
-		# ThaumStellaris
-		is_archetype = TC_GOLEM
-		is_archetype = TC_GOLEM_HIVE
-		is_archetype = TC_GOLEM_MACHINE
+		AND = {
+			merg_has_thaumstellaris = yes
+			species = {
+				OR = {
+					# ThaumStellaris
+					is_archetype = TC_GOLEM
+					is_archetype = TC_GOLEM_HIVE
+					is_archetype = TC_GOLEM_MACHINE
+				}
+			}
+		}
 		# Assault Lily
 		is_species_class = PUFFER
 	}
@@ -3080,8 +3094,19 @@ pop_generates_crime = {
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
 		# Warship Girls R And MIST Species
-		has_wg_traits = yes
-		has_trait = trait_intelligent_galo
+		AND = {
+			merg_has_warship_girls = yes
+			OR = {
+				has_wg_traits = yes
+				has_trait = trait_intelligent_galo
+				species = {
+					OR = {
+						is_archetype = UNITED_FLEET
+						is_archetype = NANITES_CROP
+					}
+				}
+			}
+		}
 		# Star Wars: UnknownWorld Shipgirls Story
 		has_trait = swg_trait_starshipgirls
 		# Kancolle
@@ -3090,11 +3115,8 @@ pop_generates_crime = {
 		has_trait = kancolle_trait_kanmusu2
 		# AshArms Aquarius history
 		has_trait = adf_trait_dolls
-		# MISC
-		species = { is_archetype = UNITED_FLEET }
-		species = { is_archetype = NANITES_CROP }
 		# V_TRAITS
-		NOT = { has_trait = trait_v_cyborg_no_crime }
+		has_trait = trait_v_cyborg_no_crime
 	}
 }
 
@@ -3165,34 +3187,6 @@ should_force_decline_species = {
 				NOR = {
 					has_deposit = d_tree_of_life_colony
 					has_deposit = d_tree_of_life_home
-				}
-			}
-		}
-		# Cryogenesis Unofficial Species Pack
-		custom_tooltip = {
-			success_text = SM_ICEPOPS_DIE_WITHOUT_COLD
-			from = {
-				exists = owner
-				owner = {
-					OR = {
-						has_origin = origin_sm_cryogenesis
-						AND = {
-							NOT = { has_origin = origin_sm_cryogenesis }
-							OR = {
-								has_trait = trait_pc_sm_cryoworld_preference
-								has_trait = trait_sm_cryogenesis_machine
-							}
-						}
-					}
-				}
-				OR = {
-					is_dry = yes
-					is_wet = yes
-				}
-				NOR = {
-					has_modifier = pm_sm_cryogenesis_1
-					has_modifier = pm_sm_cryogenesis_2
-					has_modifier = pm_sm_cryogenesis_3
 				}
 			}
 		}
