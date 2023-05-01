@@ -399,7 +399,6 @@ is_habitat_wg = {
 	OR = {
 		is_planet_class = pc_flat_world
 		is_planet_class = pc_squareworld_habitable
-		is_planet_class = pc_interstellar_habitat
 		merg_is_habitat = yes
 	}
 }

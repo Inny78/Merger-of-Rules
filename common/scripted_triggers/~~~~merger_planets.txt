@@ -117,6 +117,7 @@ merg_is_barren_cold = {
 		is_planet_class = pc_barren_cold
 		# All These Worlds
 		atw_is_barren_cold = yes
+		# Planetary Diversity
 		is_pd_barren_cold = yes
 	}
 }
@@ -246,6 +247,7 @@ merg_is_molten = {
 		is_planet_class = pc_molten
 		# All These Worlds
 		atw_is_molten = yes
+		# Planetary Diversity
 		is_pd_molten = yes
 	}
 }

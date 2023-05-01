@@ -1665,7 +1665,7 @@ can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
 	}
 	custom_tooltip = {
 		fail_text = is_already_corrupt
-		NOT = { is_planet_class = pc_corrupted }
+		is_corrupted_world_emex = no
 	}
 	OR = {
 		custom_tooltip = {
@@ -2800,12 +2800,12 @@ can_destroy_planet_with_PLANET_KILLER_CLEANSER = {
 	OR = {
 		custom_tooltip = {
 			text = is_not_infected
-			is_planet_class = pc_projcrim_afflicted
+			is_projcrim_afflicted = yes
 		}
 		custom_tooltip = {
 			text = no_pops_infected
 			any_owned_pop = {
-				pop_has_trait = trait_crimson_infected
+				is_crimson_infected = yes
 			}
 		}
 		custom_tooltip = {
