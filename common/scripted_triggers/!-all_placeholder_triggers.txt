@@ -90,6 +90,7 @@ has_mca_auth_private = { always = no }
 has_mca_personality_principled_rogues = { always = no }
 has_mod_reproductive_tech_and_politics = { always = no }
 has_more_authorities_triggers = { always = no }
+has_origins_of_civilization = { always = no }
 has_planetary_diversity = { always = no }
 has_planetary_diversity_planetaryhabitats = { always = no }
 has_policy_residentliving_restricted = { always = yes }

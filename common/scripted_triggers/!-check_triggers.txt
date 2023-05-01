@@ -150,6 +150,9 @@ merg_has_nirvana_project = { has_global_flag = nirvana_empire_start }
 # Organic Zealots
 merg_has_organic_zealots = { has_civic_organic_zealots_active = yes }
 
+# Origins of Civilization
+merg_has_origins_of_civ = { has_origins_of_civilization = yes }
+
 # Planetary Diversity
 merg_has_planetary_diversity = { has_planetary_diversity = yes }
 

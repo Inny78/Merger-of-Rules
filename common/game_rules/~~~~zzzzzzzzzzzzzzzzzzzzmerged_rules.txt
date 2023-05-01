@@ -574,11 +574,11 @@ can_generate_leader_from_species = {
 		has_citizenship_type = { type = citizenship_full country = root }
 	}
 	NOR = {
+		# ThaumStellaris
 		AND = {
 			merg_has_thaumstellaris = yes
 			species = {
 				OR = {
-					# ThaumStellaris
 					is_archetype = TC_GOLEM
 					is_archetype = TC_GOLEM_HIVE
 					is_archetype = TC_GOLEM_MACHINE
@@ -1237,11 +1237,11 @@ can_colonize_with_species = {
 		is_dimorphic_male = yes
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
+		# ThaumStellaris
 		AND = {
 			merg_has_thaumstellaris = yes
 			species = {
 				OR = {
-					# ThaumStellaris
 					is_archetype = TC_GOLEM
 					is_archetype = TC_GOLEM_HIVE
 					is_archetype = TC_GOLEM_MACHINE
@@ -4384,6 +4384,14 @@ can_fill_drone_job = {
 			OR = {
 				has_slavery_type = { type = slavery_livestock }
 				has_slavery_type = { type = slavery_matrix }
+			}
+		}
+		# Origins of Civilization
+		OR = {
+			has_origins_of_civilization = no
+			if = {
+				limit = { owner = { is_hive_empire = yes } }
+				has_trait = trait_hive_mind
 			}
 		}
 		# V_Traits
