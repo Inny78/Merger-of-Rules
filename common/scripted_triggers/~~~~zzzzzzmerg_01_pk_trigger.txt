@@ -76,7 +76,6 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 		}
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_SHIELDER = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -119,7 +118,6 @@ can_destroy_planet_with_PLANET_KILLER_SHIELDER = {
 		merg_is_shielded = no
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_NEUTRON = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -176,7 +174,6 @@ can_destroy_planet_with_PLANET_KILLER_NEUTRON = {
 		}
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_GODRAY = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -250,7 +247,6 @@ can_destroy_planet_with_PLANET_KILLER_GODRAY = {
 		}
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_NANOBOTS = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -305,7 +301,6 @@ can_destroy_planet_with_PLANET_KILLER_NANOBOTS = {
 		}
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_DELUGE = {
 	custom_tooltip = {
 		fail_text = is_habitable_non_artificial
@@ -383,7 +378,6 @@ can_destroy_planet_with_PLANET_KILLER_DELUGE = {
 		}
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_TOXIFIER = {
 	custom_tooltip = {
 		fail_text = is_habitable_non_artificial
@@ -449,7 +443,6 @@ can_destroy_planet_with_PLANET_KILLER_TOXIFIER = {
 		}
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_DEVOLUTION = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -496,6 +489,40 @@ can_destroy_planet_with_PLANET_KILLER_DEVOLUTION = {
 			from.owner = {
 				has_policy_flag = interference_aggressive
 			}
+		}
+	}
+}
+can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = {
+	custom_tooltip = {
+		fail_text = is_your_megastructure_system
+		NOT = {
+			solar_system = {
+				has_star_flag = crisis_sphere_system@from.owner
+				any_system_megastructure = { has_megastructure_flag = crisis_sphere }
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_not_star
+		is_star = yes
+		exists = system_star
+		system_star = { merg_is_untargetable = no }
+	}
+	custom_tooltip = {
+		fail_text = is_black_hole
+		exists = system_star
+		system_star = { merg_is_black_or_white_hole = no }
+	}
+	custom_tooltip = {
+		fail_text = is_sc_black_hole
+		solar_system = { merg_is_hole_star_class = no }
+	}
+	custom_tooltip = {
+		fail_text = star_owner_is_not_hostile
+		OR = {
+			NOT = { exists = space_owner }
+			space_owner = { is_hostile = from.owner }
+			space_owner = { is_same_value = from.owner }
 		}
 	}
 }
@@ -2654,7 +2681,6 @@ can_destroy_planet_with_PLANET_KILLER_GENESIS = {
 		}
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_IDC = {
 	custom_tooltip = {
 		fail_text = is_not_a_default_empire_colony
@@ -2669,62 +2695,31 @@ can_destroy_planet_with_PLANET_KILLER_IDC = {
 		}
 	}
 }
-
-can_destroy_planet_with_PLANET_KILLER_GOLIATH_SCOURGE = {
-	is_colonizable = yes
+can_destroy_planet_with_PLANET_KILLER_Pilgrimage = {
 	custom_tooltip = {
-		fail_text = is_not_a_standard_planet_or_megastructure
+		fail_text = can_only_deploy_on_star
+		is_star = yes
 		merg_is_forbidden_target = no
 	}
-	OR = {
-		is_planet_class = pc_ringworld_habitable
-		is_planet_class = pc_habitat
-		merg_is_basic_planet = yes
+	custom_tooltip = {
+		fail_text = can_not_deploy_near_other_empire
+		solar_system = {
+			any_neighbor_system = {
+				NOT = {
+					exists = owner
+				}
+			}
+		}
 	}
-	OR = {
-		custom_tooltip = {
-			text = is_not_hostile_cracker
-			OR = {
-				AND = {
-					exists = space_owner
-					space_owner = {
-						merg_is_at_war = yes
-					}
-				}
-				AND = { # colony
-					exists = owner
-					owner = {
-						merg_is_at_war = yes
-					}
-				}
-				AND = { # primitive
-					exists = space_owner
-					exists = owner
-					owner = {
-						is_primitive = yes
-					}
-					space_owner = {
-						merg_is_at_war = yes
-					}
-				}
-			}
-		}
-		custom_tooltip = {
-			text = is_not_owned_or_claimed
-			NOR = {
+	custom_tooltip = {
+		fail_text = can_not_deploy_if_system_owned
+		solar_system = {
+			NOT = {
 				exists = owner
-				exists = space_owner
 			}
-		}
-		custom_tooltip = {
-			text = is_uninhabited_within_borders
-			exists = space_owner
-			space_owner = { is_same_value = from.owner }
-			is_colony = no
 		}
 	}
 }
-
 ############################### Rozen Maiden Suigintou Leader Pack ###############################
 can_destroy_planet_with_GE_PLANET_KILLER_Crasher = {
 	custom_tooltip = {
@@ -2962,42 +2957,6 @@ can_destroy_planet_with_Sweepers = {
 				is_same_empire = FROM.owner
 				is_at_war_with = FROM.owner
 			}
-		}
-	}
-}
-
-############################### TimeMod ###############################
-can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = {
-	custom_tooltip = {
-		fail_text = is_your_megastructure_system
-		NOT = {
-			solar_system = {
-				has_star_flag = crisis_sphere_system@from.owner
-				any_system_megastructure = { has_megastructure_flag = crisis_sphere }
-			}
-		}
-	}
-	custom_tooltip = {
-		fail_text = is_not_star
-		is_star = yes
-		exists = system_star
-		system_star = { merg_is_untargetable = no }
-	}
-	custom_tooltip = {
-		fail_text = is_black_hole
-		exists = system_star
-		system_star = { merg_is_black_or_white_hole = no }
-	}
-	custom_tooltip = {
-		fail_text = is_sc_black_hole
-		solar_system = { merg_is_hole_star_class = no }
-	}
-	custom_tooltip = {
-		fail_text = star_owner_is_not_hostile
-		OR = {
-			NOT = { exists = space_owner }
-			space_owner = { is_hostile = from.owner }
-			space_owner = { is_same_value = from.owner }
 		}
 	}
 }

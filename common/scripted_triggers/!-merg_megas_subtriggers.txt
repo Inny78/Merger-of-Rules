@@ -1316,5 +1316,7 @@ merg_is_gate_mega = {
 		is_megastructure_type = estelle_gate_2
 		is_megastructure_type = estelle_gate_3
 		is_megastructure_type = estelle_gate_permanently_ruined
+		# Wula Fallen Empire
+		is_megastructure_type = wula_shroud_fissure_0
 	}
 }

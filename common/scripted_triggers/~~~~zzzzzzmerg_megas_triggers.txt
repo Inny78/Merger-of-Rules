@@ -158,6 +158,12 @@ has_any_megastructure_in_empire = {
 			has_megastructure = caroline_orb_ul4
 			has_megastructure = caroline_orb_ul5
 			has_megastructure = carolin_orb_permanently_ruined
+			# Wula Fallen Empire
+			has_megastructure = wula_ark_0
+			has_megastructure = wula_ark_1
+			has_megastructure = wula_ark_2
+			has_megastructure = wula_ark_3
+			has_megastructure = wula_ark_4
 		}
 	}
 }
