@@ -169,6 +169,7 @@ is_exp_memorex_comatos = { always = no }
 is_exp_tree_caretaker = { always = no }
 is_exp_private_auth = { always = no }
 is_exp_cooperative = { always = no }
+is_extsynth_synthetic = { always = no }
 is_infested_basic = { always = no }
 is_exp_pheremone = { always = no }
 is_exp_lithoid_shiny = { always = no }

@@ -151,14 +151,14 @@ mem_has_happiness = {
 				AND = {
 					merg_has_animated_synth = yes
 					from = { is_machine_empire = yes }
-					has_trait = trait_extsynth_synthetic
+					is_extsynth_synthetic = yes
 					NOT = { has_trait = trait_psionic }
 				}
 				AND = {
 					merg_has_animated_synth = yes
 					NAND = {
 						from = { is_machine_empire = yes }
-						has_trait = trait_extsynth_synthetic
+						is_extsynth_synthetic = yes
 					}
 				}
 			}

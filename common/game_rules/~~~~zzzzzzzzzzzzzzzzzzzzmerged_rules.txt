@@ -1364,14 +1364,14 @@ species_has_happiness = {
 				AND = {
 					merg_has_animated_synth = yes
 					from = { is_machine_empire = yes }
-					has_trait = trait_extsynth_synthetic
+					is_extsynth_synthetic = yes
 					NOT = { has_trait = trait_psionic }
 				}
 				AND = {
 					merg_has_animated_synth = yes
 					NAND = {
 						from = { is_machine_empire = yes }
-						has_trait = trait_extsynth_synthetic
+						is_extsynth_synthetic = yes
 					}
 				}
 			}
@@ -1661,7 +1661,7 @@ can_species_be_assembled = {
 					merg_has_animated_synth = yes
 					if = { #synth can never be built unless empire is a synth empire
 						limit = { root.owner = { has_country_flag = synthetic_empire } }
-						has_trait = trait_extsynth_synthetic
+						is_extsynth_synthetic = yes
 					}
 				}
 			}

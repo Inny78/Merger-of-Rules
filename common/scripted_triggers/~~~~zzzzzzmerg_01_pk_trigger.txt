@@ -600,36 +600,7 @@ can_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 }
 
 ############################### AshArms Aquarius History ###############################
-can_destroy_planet_with_PLANET_KILLER_Ark_CRACKER = {
-	custom_tooltip = {
-		fail_text = is_your_megastructure_system
-		NOT = {
-			solar_system = {
-				has_star_flag = crisis_sphere_system@from.owner
-				any_system_megastructure = {
-					has_megastructure_flag = crisis_sphere
-				}
-			}
-		}
-	}
-	custom_tooltip = {
-		fail_text = is_not_star
-		is_star = yes
-		merg_is_forbidden_target = no
-	}
-	custom_tooltip = {
-		fail_text = is_black_hole
-		merg_is_dense_star = no
-	}
-	custom_tooltip = {
-		fail_text = star_owner_is_not_hostile
-		OR = {
-			NOT = { exists = space_owner }
-			space_owner = { is_hostile = from.owner }
-			space_owner = { is_same_empire = from.owner }
-		}
-	}
-}
+can_destroy_planet_with_PLANET_KILLER_Ark_CRACKER = { can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = yes }
 
 can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 	custom_tooltip = {
