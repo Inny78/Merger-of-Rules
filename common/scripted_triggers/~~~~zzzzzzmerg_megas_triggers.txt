@@ -105,6 +105,12 @@ has_any_megastructure_in_empire = {
 			# Omega's Stellaris Traditions
 			has_megastructure = planet_construction_0
 			has_megastructure = machine_assimilate_0
+			# Planetary Ringworlds
+			has_megastructure = planet_ring_0
+			has_megastructure = planet_ring_0_machine
+			has_megastructure = planet_ring_0_hive
+			has_megastructure = planet_ring_0_city
+			has_megastructure = planet_ring_1
 			# Twinks Atlantean
 			has_megastructure = atlantis_oranos_world
 			has_megastructure = destruction_atlantis

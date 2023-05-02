@@ -1,73 +1,6 @@
 # Scripted triggers from mods, expanded to acknowledge other mods.
-############################### Shadowgate ###############################
-shadowgate_is_fe = {
-	optimize_memory
-	OR = {
-		is_country_type = fallen_empire
-		# History of the Lost Empire
-		is_country_type = LsE_fallen_empire
-		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_fallen_empire
-		# The Empty Vagrant
-		is_country_type = fallen_empire_ev
-		# ZOFE
-		is_country_type = lost_empire
-	}
-}
-shadowgate_is_ae = {
-	optimize_memory
-	OR = {
-		is_country_type = awakened_fallen_empire
-		# A Deadly Tempest
-		is_country_type = awakened_gate_builders
-		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_awakened_fallen_empire
-		is_country_type = awakened_return_kuat_empire
-		# ZOFE
-		is_country_type = ascended_empire
-	}
-}
-shadowgate_aggressor_is_valid_cb_target = {
-	optimize_memory
-	NOR = {
-		is_in_federation_with = root.from
-		is_hostile = root.from
-		has_casus_belli = { type = cb_shadowrift_attacked target = root.from }
-	}
-	root.from = {
-		OR = {
-			merg_is_default_empire = yes
-			shadowgate_is_fe = yes
-			shadowgate_is_ae = yes
-		}
-	}
-	OR = {
-		is_subject = no
-		overlord = { NOT = { is_same_value = root.from } }
-	}
-	root.fromfrom.solar_system = { has_access_fleet = event_target:shadowgate_assaulted_owner }
-	has_communications = root.from
-}
-
-############################### Zenith of the Fallen Empires ###############################
-# Overwriting this for ZOFE and comp mods
-is_zofe_compatible = {
-	optimize_memory
-	merg_is_default_empire = yes
-}
-is_zofe_megacorp = {
-	optimize_memory
-	is_zofe_country = yes
-	OR = {
-		is_megacorp = yes
-		# Forgotten Queens
-		has_valid_civic = civic_mutualistic_behavior
-		has_valid_civic = civic_machine_trading
-	}
-}
 
 ############################### Acquisition of Technologies ###############################
-# AOT trigger disallowing planetary shields to be shown
 is_memeable_space_habitat = {
 	optimize_memory
 	OR = {
@@ -79,230 +12,68 @@ is_memeable_space_habitat = {
 		giga_habitable_structure = yes
 	}
 }
-
 is_memeable_ringworld = {
 	optimize_memory
 	merg_is_hab_ringworld = yes
 }
 
-############################### More Events Mod ###############################
-# disallowing MEM planetary shields to be shown 
-mem_is_spherical_world = {
+############################### ACOT/AOT/SOS ###############################
+can_build_precursor_ship = {
 	optimize_memory
-	NOR = {
-		habitable_structure = yes
-		merg_is_habitat = yes
-		merg_is_hab_ringworld = yes
-		# Gigastructural Engineering & More
-		giga_habitable_structure = yes
-	}
-}
-mem_has_happiness = {
-	NOR = {
-		has_trait = trait_machine_unit
-		has_trait = trait_hive_mind
-		can_think = no
-		# Diagraphers Trait Mod
-		is_multihive_drone = yes
-		# ThaumStellaris
-		species = {
-			OR = {
-				is_archetype = TC_GOLEM
-				is_archetype = TC_GOLEM_HIVE
-				is_archetype = TC_GOLEM_MACHINE
-			}
-		}
-		# Trait Diversity
-		has_trait = trait_td_multi_hiveminded
-		has_trait = trait_td_emotionless
-		has_trait = trait_td_psychopathic
-		has_trait = trait_td_thymoleptic_implants
-		has_trait = trait_td_rbot_thymoleptic_scripts
-		has_trait = trait_td_rbot_thought_inhibitor
-		# Wandering Witch: Voyagers
-		has_trait = trait_servitude
+	OR = {
+		owner = { is_ai = yes }
 		AND = {
-			has_trait = trait_dummy
+			is_scope_type = megastructure
 			OR = {
-				NOT = { exists = from }
-				from = { 
-					NOR = { 
-						has_technology = tech_synthetic_workers 
-						has_technology = tech_dummy_leaders
-						has_origin = origin_garbage_princesses
-						has_country_flag = synthetic_empire
-					} 
-				}
-				from = { has_policy_flag = ai_outlawed }
-			}
-		}
-		# Warship Girls R And MIST Species
-		has_trait = sh_trait_shenhai
-		has_trait = sh_trait_shenhai1
-		has_trait = sh_trait_shenhai2
-		has_trait = sh_trait_silent
-		has_trait = sh_trait_silent1
-		# Vanilla
-		AND = {
-			has_trait = trait_mechanical
-			# Animated Synthetics Portraits Expanded: Reborn
-			OR = {
-				merg_has_animated_synth = no
-				AND = {
-					merg_has_animated_synth = yes
-					from = { is_machine_empire = yes }
-					is_extsynth_synthetic = yes
-					NOT = { has_trait = trait_psionic }
-				}
-				AND = {
-					merg_has_animated_synth = yes
-					NAND = {
-						from = { is_machine_empire = yes }
-						is_extsynth_synthetic = yes
-					}
-				}
-			}
-			# Vanilla
-			OR = {
-				NOT = { exists = from }
-				from = {
-					OR = {
-						is_machine_empire = yes
-						NOR = {
-							has_technology = tech_synthetic_workers
-							# Wandering Witch: Voyagers
-							has_technology = tech_dummy_leaders
-						}
-						has_policy_flag = ai_outlawed
-					}
-				}
+				is_megastructure_type = acot_precursor_colossus_base
+				is_megastructure_type = acot_precursor_colossus_stage_two
+				is_megastructure_type = acot_amerigo
+				is_megastructure_type = acot_amerigo_ae
+				is_megastructure_type = acot_amerigo_se
+				is_megastructure_type = acot_amerigo_oe
+				is_megastructure_type = acot_amerigo_pe
+				is_megastructure_type = acot_phanon_master_reactor_sphere
+				is_megastructure_type = sofe_omega_nexus
+                is_megastructure_type = sofe_omega_spy_orb_center
+                is_megastructure_type = sofe_omega_dyson_sphere
+				# Assault Lily
+				is_megastructure_type = college_ship_creater_3
+				# Universal Gateway Origin
+                is_megastructure_type = universal_gateway_origin_demiurge_forge_8
+                is_megastructure_type = universal_gateway_origin_demiurge_forge_9
+                is_megastructure_type = universal_gateway_origin_demiurge_forge_9_2
 			}
 		}
 		AND = {
-			has_trait = trait_cybernetic
-			exists = from
-			from = {
-				is_machine_empire = yes
-				OR = {
-					has_civic = civic_machine_assimilator # Assimilator empire
-					has_ascension_perk = ap_gestaltization # Ethical Gestalts
-				}
+			is_scope_type = starbase
+			OR = {
+				has_starbase_size = juggernaut
+				has_starbase_building = acot_precursor_database	
+				is_acot_advanced_starbase = yes
+				has_starbase_size = precursor_juggernaut
+				is_ascended_juggernaut = yes
+				# Assault Lily
+				has_starbase_size >= lily_super_college_ship
+				# Gigastructural Engineering & More
+				has_starbase_module = virtual_shipyard_uplink
+				# Universal Gateway Origin
+                has_starbase_size >= universal_gateway_citadel
+				# ZOFE
+				has_starbase_size = fe_goliath
 			}
 		}
 	}
 }
-
-############################### ThaumStellaris ###############################
-tc_element_shard_candidate = {
+is_playable_country = {
 	optimize_memory
-	NOT = { has_deposit_for = shipclass_research_station }
 	OR = {
-		uninhabitable_regular_planet = yes
-		is_asteroid = yes
-		is_planet_class = pc_broken
-		is_planet_class = pc_shattered
-		is_planet_class = pc_shattered_2
+		merg_is_standard_empire = yes
+		is_country_type = sbtg_stellarborne_empire_active
 	}
 }
 
-############################### Starborn ###############################
-has_gene_clinic = {
-	optimize_memory
-	OR = {
-		has_building = building_hospital
-		has_building = building_clinic
-		# ACOT
-		has_building = building_fe_hospital
-		has_building = building_ae_hospital
-		# AOT
-		has_building = building_stellarite_hospital
-		has_building = building_phanon_hospital
-	}
-}
-starborn_can_place_hab = {
-	optimize_memory
-	custom_tooltip = {
-		fail_text = "requires_surveyed_planet"
-		is_surveyed = {
-			# prevent leaking habitability information
-			who = prev.from
-			status = yes
-		}
-	}
-	custom_tooltip = {
-		fail_text = "requires_no_anomaly"
-		has_anomaly = no
-	}
-	custom_tooltip = {
-		fail_text = "requires_no_existing_megastructure"
-		NOR = {
-			has_planet_flag = megastructure
-			has_planet_flag = has_megastructure
-			solar_system = {
-				has_star_flag = ring_world_built
-			}
-			is_planet_class = pc_ringworld_habitable_damaged
-			is_planet_class = pc_ringworld_tech
-			is_planet_class = pc_ringworld_tech_damaged
-			is_planet_class = pc_ringworld_seam
-			is_planet_class = pc_ringworld_seam_damaged
-			merg_is_habitat_non_starborn = yes
-			merg_is_hab_ringworld = yes
-			# Gigastructural Engineering & More
-			giga_habitable_structure = yes
-		}
-	}
-	custom_tooltip = {
-		fail_text = "requires_no_orbital_debris"
-		NOR = { has_planet_flag = has_orbital_debris }
-	}
-	custom_tooltip = {
-		fail_text = "requires_not_solarpunk"
-		NOT = { solar_system = { has_star_flag = solarpunk_system_02 } }
-	}
-}
-
-############################### Legendary Worlds ###############################
-legw_planet_uninhabitable = {
-	optimize_memory
-	uninhabitable_regular_planet = yes
-}
-legw_planet_habitable = {
-	optimize_memory
-	AND = {
-		colonizable_planet = yes
-		is_artificial = no
-	}
-}
-legw_megaplanet = {
-	optimize_memory
-	OR = {
-		is_artificial = yes
-		is_planet_class = pc_machine
-		is_planet_class = pc_cybrex
-		# Planetary Diversity
-		is_pd_machine = yes
-		is_pd_robot_arcology = yes
-		# Girls Frontline
-		uses_district_set = GF_sf_machine_world
-		# Gigastructural Engineering & More
-		uses_district_set = giga_planetary_computer
-		# Origin - F.C.S.S & M.C.S.S
-		uses_district_set = awaken_ai_world
-		# ZOFE
-		uses_district_set = utopian_machine_world
-	}
-}
-legw_is_dry = {
-	is_dry = yes
-}
-legw_is_wet = {
-	is_wet = yes
-}
-legw_is_cold = {
-	is_cold = yes
-}
-legw_fallen_empire_planet = {
+############################### All these worlds ###############################
+is_fallen_empire_planet = {
 	optimize_memory
 	owner = {
 		OR = {
@@ -311,182 +82,13 @@ legw_fallen_empire_planet = {
 		}
 	}
 }
-
-############################### Real Space New Frontiers ###############################
-is_moon_of_gas_giant = {
+exists_collapsed_star = {
 	optimize_memory
-	is_scope_type = planet
-	exists = orbit
-	OR = {
-		orbit = { merg_is_gas_giant = yes }
-		has_planet_flag = gas_giant_moon
-	}
+	solar_system = { any_system_planet = { merg_is_standard_dense_star = yes } }
 }
-
-############################### Star Wars: Kuat Ancient Empire ###############################
-kuat_is_common_country = {
+is_collapsed_star = {
 	optimize_memory
-	OR = {
-		merg_is_standard_empire = yes
-		is_country_type = awakened_marauders
-		is_country_type = primitive
-		is_country_type = ratlings
-	}
-}
-kuat_is_defense_galaxy_fleet = {
-	optimize_memory
-	any_country = {
-		OR = {
-			is_crisis_faction = yes
-			# Ancient Empire
-			is_country_type = ag_ancient_gamma_guardian
-			is_country_type = ag_zeta_crisis_country
-			is_country_type = ag_ancient_primitive_crisis
-		}
-	}
-}
-
-############################### Expanded Traits, Civics, Pops, and More ###############################
-is_open_gestalt = {
-	optimize_memory
-	OR = {
-		has_ai_personality = open_hive_mind
-		has_ai_personality = open_machine_intelligence
-		# Expanded Gestalts
-		has_valid_civic = civic_mutualistic_behavior
-		has_valid_civic = civic_machine_trading
-	}
-}
-
-############################### History of the Lost Empire ###############################
-afk_target_planet = {
-	optimize_memory
-	OR = {
-		merg_is_arcology = yes
-		merg_is_relic_world = yes
-		merg_is_hive_world = yes
-		merg_is_machine_world = yes
-		colonizable_planet = yes
-		habitable_planet = yes
-		is_artificial = yes
-		uninhabitable_regular_planet = yes
-		# Planetary Diversity
-		merg_is_nuked = yes
-		# Gigastructures
-		giga_is_katzenland = yes
-		# SW:UnknownWorld Shipgirls Story
-		uses_district_set = engineer_world
-		uses_district_set = rw_swgs_engineer_world
-		# Warship Girls R And MIST Species
-		uses_district_set = port_world
-		uses_district_set = sh_world
-		# SW: UnknownWorld Shipgirls Story
-		uses_district_set = engineer_world
-		uses_district_set = rw_swgs_engineer_world
-		# APSR: Anomalies, Planetary and Space Resources
-		has_apsr_modifiers = yes
-		# Planetary Diversity
-		is_pd_planet_class_all = yes
-		# Gigastructural Engineering & More
-		is_planet_class = pc_red_toxic
-	}
-	merg_is_forbidden_target = no
-}
-
-############################### Warship Girls R and MIST Species ###############################
-is_habitat_wg = {
-	optimize_memory
-	OR = {
-		is_planet_class = pc_flat_world
-		is_planet_class = pc_squareworld_habitable
-		merg_is_habitat = yes
-	}
-}
-is_default_and_fallen_country = {
-	optimize_memory
-	OR = {
-		merg_is_default_empire = yes
-		merg_is_fallen_empire = yes
-		merg_is_awakened_fe = yes
-	}
-}
-is_default_country_wg = {
-	optimize_memory
-	merg_is_default_empire = yes
-}
-has_active_wg_foundry_building = {
-	OR = {
-		has_active_wg_foundry_building_lv_low = yes
-		has_active_wg_foundry_building_lv_high = yes
-	}
-}
-has_active_wg_foundry_building_lv_low = {
-	OR = {
-		has_active_building = building_foundry_1
-		has_active_building = building_foundry_2
-		# Warship Girls R and MIST Species
-		has_active_building = building_sep_foundry
-		has_active_building = building_wsg_foundry
-		has_active_building = building_gray_nano_foundry
-		has_active_building = building_sh_foundry
-	}
-}
-has_active_wg_foundry_building_lv_high = {
-	OR = {
-		has_active_building = building_foundry_3
-		has_active_building = building_nano_forge
-		# ACOT
-		has_active_building = building_fe_alloy_forge
-		has_active_building = building_ae_alloy_forge
-		has_active_building = building_ae_nano_forge
-		# AOT
-		has_active_building = building_fe_nano_forge
-		has_active_building = building_phanon_nano_forge
-		has_active_building = building_phanon_alloy_forge
-		has_active_building = building_stellarite_nano_forge
-		has_active_building = building_stellarite_alloy_forge
-		# AVB
-		has_active_building = building_avb_foundry_4
-		has_active_building = building_avb_foundry_5
-		has_active_building = building_avb_foundry_6
-		# Warship Girls R and MIST Species
-		has_active_building = building_sep_foundry2
-		has_active_building = building_wsg_foundry
-		has_active_building = building_gray_nano_foundry2
-		has_active_building = building_sh_foundryU
-		# Wula Fallen Empire
-		has_active_building = building_wula_foundry
-	}
-}
-has_active_wg_factory_building = {
-	OR = {
-		has_active_building = building_factory_1
-		has_active_building = building_factory_2
-		has_active_building = building_factory_3
-		has_active_building = building_affluence_center
-		# ACOT
-		has_active_building = building_fe_factory
-		has_active_building = building_ae_factory
-		has_active_building = building_ae_affluence_center
-		# AOT
-		has_active_building = building_fe_affluence_center
-		has_active_building = building_phanon_affluence_center
-		has_active_building = building_phanon_civilian_factory
-		has_active_building = building_stellarite_affluence_center
-		# AVB
-		has_active_building = building_avb_factory_4
-		has_active_building = building_avb_factory_5
-		has_active_building = building_avb_factory_6
-		# GPM
-		has_active_building = gpm_building_manufactory_hub
-		# Warship Girls R and MIST Species
-		has_active_building = building_sep_foundry
-		has_active_building = building_gray_nano_factory
-	}
-}
-has_gate_megastructure = {
-	optimize_memory
-	merg_is_gate_mega = yes
+	merg_is_standard_dense_star = yes
 }
 
 ############################### Ancient Empire ###############################
@@ -587,78 +189,50 @@ ag_has_planetary_shield = {
 	}
 }
 
-############################### Reworked Advanced Ascension ###############################
-# Fixing the trigger and removing obsolete code
-AAR_trgr_cntr_playable = {
-	optimize_memory
+############################### BlueArchive ###############################
+
+is_BA_fallen_empire = {
+	merg_is_fallen_empire = yes
 	OR = {
-		merg_is_default_empire = yes
-		merg_is_fallen_empire = yes
-		merg_is_awakened_fe = yes
+		has_country_flag = BA_Gematria
+		has_country_flag = BA_Precursor
 	}
 }
-AAR_trgr_ship_SB_valid = {
+is_BA_fallen_empire_awakened = {
+	merg_is_awakened_fe = yes
 	OR = {
-		AND = {
-			is_ship_class = shipclass_starbase
-			fleet = { is_mobile = no }
-			NOT = { is_ship_size = starbase_outpost }
-		}
-		is_orbital_ring = yes
+		has_country_flag = BA_Gematria
+		has_country_flag = BA_Precursor
 	}
 }
 
-############################### The Empty Vagrant ###############################
-can_be_ev_investment_country = {
-	OR = {
-		is_country_type = default
-		# Darkspace
-		is_country_type = ds_nomads
-	}
-	is_hive_empire = no
-	is_machine_empire = no
-	num_owned_planets > 0
-	opinion = {
-		who = root
-		value > -99
-	}
-	NOT = {
-		is_at_war_with = root
-	}
-	NOR = {
-		has_ethic = ethic_fanatic_xenophobe
-		is_homicidal = yes
-		# Expanded Traits, Civics, Pops, and More
-		has_valid_civic = civic_infestation
-	}
-	has_communications = ROOT
-	NOT = {
-		has_country_flag = ev_received_an_investment
-	}
-	is_ai = yes
-}
-
-############################### Exalted Domination ###############################
-exalted_is_valid_as_vassal = {
-	OR = {
-		is_country_type = default
-		# The Empty Vagrant
-		is_country_type = default_ev
-		# Darkspace
-		is_country_type = ds_nomads
-	}
-}
-
-############################### The DAL Species Mod ###############################
-is_special_colony_planet_class = {
-	optimize_memory
-	OR = {
-		merg_is_arcology = yes
-		is_planet_class = pc_cybrex
-		merg_is_habitat = yes
-		merg_is_hab_ringworld = yes
+############################### Cruel Conquerers ###############################
+cruel_has_shipyard = {
+	or = {
+		has_starbase_module = shipyard
+		has_starbase_module = cruel_pain_ship_labor_module
+		has_starbase_module = cruel_suffering_ship_labor_module
+		has_starbase_module = cruel_agony_ship_labor_module
+		# ACOT/AOT/Secrets of the Shroud
+		has_starbase_module = acot_starbase_shipyard
+		has_starbase_module = acot_sigma_starbase_shipyard
+		has_starbase_module = acot_phanon_starbase_shipyard
+		has_starbase_module = acot_theta_starbase_shipyard
 		# Gigastructural Engineering & More
-		giga_habitable_structure = yes
+		has_starbase_module = virtual_shipyard_uplink
+	}
+}
+cruel_can_trade = {
+	OR = {
+		is_gestalt = no
+		# Forgotten Queens
+		AND = {
+			is_gestalt = yes
+			OR = {
+				has_valid_civic = civic_mutualistic_behavior
+				has_valid_civic = civic_machine_trading
+			}
+		}
 	}
 }
 
@@ -695,39 +269,289 @@ ds_hyperlane_create = {
 	}
 }
 
-############################### Cruel Conquerers ###############################
-
-cruel_has_shipyard = {
-	or = {
-		has_starbase_module = shipyard
-		has_starbase_module = cruel_pain_ship_labor_module
-		has_starbase_module = cruel_suffering_ship_labor_module
-		has_starbase_module = cruel_agony_ship_labor_module
-		# ACOT/AOT/Secrets of the Shroud
-		has_starbase_module = acot_starbase_shipyard
-		has_starbase_module = acot_sigma_starbase_shipyard
-		has_starbase_module = acot_phanon_starbase_shipyard
-		has_starbase_module = acot_theta_starbase_shipyard
-		# Gigastructural Engineering & More
-		has_starbase_module = virtual_shipyard_uplink
-	}
-}
-cruel_can_trade = {
+############################### District Overhaul ###############################
+bdoe_is_habitable_structure = { habitable_structure = yes } # Don't reinvent the wheel when you have a tire factory
+bdoe_can_have_random_districts = {
 	OR = {
-		is_gestalt = no
-		# Forgotten Queens
+		merg_is_basic_habitable = yes
+		# Lithoid Supremacy
+		is_planet_class = pc_geode
+		# Real Space: New Frontiers
 		AND = {
-			is_gestalt = yes
+			merg_has_real_new_frontiers = yes
 			OR = {
-				has_valid_civic = civic_mutualistic_behavior
-				has_valid_civic = civic_machine_trading
+				is_planet_class = pc_tidallylocked
+				is_planet_class = pc_sterile
+				is_planet_class = pc_hollow
 			}
 		}
+		can_have_habitable_deposits = yes
 	}
+	NOR = {
+		# Ancient Empire
+		ag_is_mod_habitable_ringworld = yes
+		# Planetary Ringworlds
+		uses_district_set = planet_ring
+		uses_district_set = planet_ring_city
+		# The Belt
+		bdoe_is_habitable_asteroid = yes
+		bdoe_is_habitable_barren = yes
+		# WH40K Planets Renewed
+		merg_is_wh40k_planet = yes
+	}
+}
+bdoe_is_hive_planet = {
+	merg_is_hive_world = yes
+}
+bdoe_is_machine_planet = {
+	merg_is_machine_world = yes
+}
+bdoe_is_ringworld = {
+	merg_is_hab_ringworld = yes
+}
+bdoe_is_ecu_planet = {
+	OR = {
+		merg_is_arcology = yes
+		# WH40K Planets Renewed
+		merg_is_wh40k_planet = yes
+	}
+}
+
+############################### Electroids ###############################
+elec_hyperlane_create = {
+	NOR = {
+		is_same_value = prev
+		has_hyperlane_to = prev
+		merg_is_isolated_system = yes
+		has_star_flag = darkspace_void_control
+		giga_is_core_system = yes
+		cohesive_system = yes
+		compound_cluster = yes
+		annihilator_system = yes
+		urmazin_system = yes
+	}
+}
+
+############################### Ethics and Civics Bug Branch ###############################
+is_bugged_starbase = {
+	OR = {
+		has_starbase_size >= starbase_starport
+		# ACOT/AOT/SOTS
+		is_precursor_starbase = yes
+	}
+}
+
+############################### Ethics and Civics Alternative - FunEFork/Classics ###############################
+is_toxic_planet = {
+	merg_is_toxic = yes
+}
+is_barren_planet = {
+	merg_is_barren = yes
+}
+is_nuked_planet = {
+    merg_is_nuked = yes
+}
+
+############################### Exalted Domination ###############################
+exalted_is_valid_as_vassal = {
+	OR = {
+		is_country_type = default
+		# The Empty Vagrant
+		is_country_type = default_ev
+		# Darkspace
+		is_country_type = ds_nomads
+	}
+}
+
+############################### Expanded Events ###############################
+is_regular_star = {
+	is_star = yes
+	merg_is_forbidden_target = no
+	NOR = {
+		is_planet_class = pc_ae_star
+		is_rs_collapsar = yes
+		is_rs_magnetar = yes
+		is_rs_microquasar = yes
+		is_planet_class = pc_d_star
+		is_planet_class = pc_fu_star
+		is_planet_class = pc_l_star
+		is_planet_class = pc_nova_1
+		is_planet_class = pc_nova_2
+		is_planet_class = pc_protostar
+		is_planet_class = pc_t_star
+		is_planet_class = pc_tt_red_star
+		is_planet_class = pc_tt_orange_star
+		is_planet_class = pc_tt_white_star
+		is_planet_class = pc_y_star
+	}
+}
+terraforming_candidate_solar_system_check = {
+	NOR = {
+		merg_is_standard_dense_star = yes
+		is_star_class = sc_o_super
+		is_star_class = sc_o_hyper
+		is_star_class = sc_b_super
+		is_star_class = sc_a_super
+		is_star_class = sc_f_super
+		is_star_class = sc_g_super
+		is_star_class = sc_k_super
+		is_star_class = sc_m_super
+		is_star_class = sc_m_hyper
+		is_star_class = sc_nova_1
+		is_star_class = sc_nova_2
+		is_star_class = sc_collapsar
+		is_star_class = sc_protostar
+		is_star_class = sc_lbv_blue
+		is_star_class = sc_lbv_green
+		is_star_class = sc_lbv_red
+		is_star_class = sc_o
+		is_star_class = sc_b
+		is_star_class = sc_a
+		is_star_class = sc_l
+		is_star_class = sc_d
+		is_star_class = sc_c_giant
+		is_star_class = sc_s_giant
+		is_star_class = sc_w_azure
+		is_star_class = sc_w_red
+		is_star_class = sc_w_green
+		is_star_class = sc_w_purple
+		is_star_class = sc_tt_red
+		is_star_class = sc_tt_orange
+		is_star_class = sc_tt_white
+		is_star_class = sc_ae
+		is_star_class = sc_p_purple
+		is_star_class = sc_p_green
+		is_star_class = sc_p_red
+		is_star_class = sc_magnetar
+		merg_is_void_system = yes
+	}
+}
+is_spy_empire = {
+	OR = {
+		has_valid_civic = civic_cutthroat_politics
+		has_valid_civic = civic_shadow_council
+		has_valid_civic = civic_ruthless_competition
+		has_valid_civic = civic_criminal_heritage
+		has_valid_civic = civic_machine_predictive_analysis
+		# Expanded Events
+		has_valid_civic = civic_shadow_council_megacorp
+		has_valid_civic = civic_self_experimentation
+		# Espionage Extended
+		has_valid_civic = civic_shadow_state
+	}
+}
+is_barren = {
+	merg_is_barren = yes
+}
+is_molten = {
+	merg_is_molten = yes
+}
+is_frozen = {
+	merg_is_frozen = yes
+}
+is_toxic = {
+	merg_is_toxic = yes
+}
+is_gas_giant = {
+	merg_is_gas_giant = yes
+}
+is_desert = {
+	merg_is_desert = yes
+}
+is_arid = {
+	merg_is_arid = yes
+}
+is_savannah = {
+	merg_is_savannah = yes
+}
+is_tropical = {
+	merg_is_tropical = yes
+}
+is_continental = {
+	merg_is_continental = yes
+}
+is_ocean = {
+	merg_is_ocean = yes
+}
+is_tundra = {
+	merg_is_tundra = yes
+}
+is_arctic = {
+	merg_is_arctic = yes
+}
+is_alpine = {
+	merg_is_alpine = yes
+}
+is_nuked = {
+	merg_is_nuked = yes
+}
+is_hive = {
+	merg_is_hive_world = yes
+}
+is_machine = {
+	merg_is_machine_world = yes
+}
+is_gaia = {
+	OR = {
+		merg_is_gaia = yes
+		is_planet_class = pc_ancient
+	}
+}
+is_city = {
+	merg_is_arcology = yes
+}
+living_metal_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		merg_is_barren = yes
+		merg_is_barren_cold = yes
+		is_asteroid = yes
+	}
+}
+
+############################### Expanded Stellaris Traditions ###############################
+est_is_evil_dip_empire = {
+	OR = {
+		is_unfriendly = yes
+		has_valid_civic = civic_machine_assimilator	
+	}
+}
+est_uses_slaves = {
+	OR = {
+		has_policy_flag = slavery_allowed
+		has_policy_flag = ai_servitude
+		has_civic =	civic_slaver_guilds
+		is_slaver = yes
+		has_country_flag = est_built_robot
+	}
+	NOT = { has_policy_flag = slavery_not_allowed }
+}
+
+############################### Expanded Traits, Civics, Pops, and More ###############################
+is_open_gestalt = {
+	optimize_memory
+	OR = {
+		has_ai_personality = open_hive_mind
+		has_ai_personality = open_machine_intelligence
+		# Expanded Gestalts
+		has_valid_civic = civic_mutualistic_behavior
+		has_valid_civic = civic_machine_trading
+	}
+}
+
+############################### Extra Ship Components NEXT ###############################
+ESC_TRIGGER_is_city_planet = {
+    OR = {
+        merg_is_arcology = yes
+        # district overhaul compatibility
+        AND = {
+            merg_is_relic_world = yes
+            has_district = district_ascended_housing
+        }
+    }
 }
 
 ############################### Guilli's Planetary Modifiers ###############################
-# Credits for Tai_mao and Dragonwolf for their amazing work on Giga Diversity 
 gpm_is_planet_class_normal_uninhabitable = {
 	optimize_memory
 	uninhabitable_regular_planet = yes
@@ -918,440 +742,64 @@ gpm_has_required_terraform_modifier = {
 gpm_is_country_type_default = { merg_is_default_empire = yes }
 gpm_is_country_type_awakened_fallen_empire = { merg_is_awakened_fe = yes }
 
-############################### Expanded Events ###############################
-is_regular_star = {
-	is_star = yes
+############################### Harvest Engine Crisis ###############################
+harvester_is_crackable = {
 	merg_is_forbidden_target = no
-	NOR = {
-		is_planet_class = pc_ae_star
-		is_rs_collapsar = yes
-		is_rs_magnetar = yes
-		is_rs_microquasar = yes
-		is_planet_class = pc_d_star
-		is_planet_class = pc_fu_star
-		is_planet_class = pc_l_star
-		is_planet_class = pc_nova_1
-		is_planet_class = pc_nova_2
-		is_planet_class = pc_protostar
-		is_planet_class = pc_t_star
-		is_planet_class = pc_tt_red_star
-		is_planet_class = pc_tt_orange_star
-		is_planet_class = pc_tt_white_star
-		is_planet_class = pc_y_star
-	}
-}
-terraforming_candidate_solar_system_check = {
-	NOR = {
-		merg_is_standard_dense_star = yes
-		is_star_class = sc_o_super
-		is_star_class = sc_o_hyper
-		is_star_class = sc_b_super
-		is_star_class = sc_a_super
-		is_star_class = sc_f_super
-		is_star_class = sc_g_super
-		is_star_class = sc_k_super
-		is_star_class = sc_m_super
-		is_star_class = sc_m_hyper
-		is_star_class = sc_nova_1
-		is_star_class = sc_nova_2
-		is_star_class = sc_collapsar
-		is_star_class = sc_protostar
-		is_star_class = sc_lbv_blue
-		is_star_class = sc_lbv_green
-		is_star_class = sc_lbv_red
-		is_star_class = sc_o
-		is_star_class = sc_b
-		is_star_class = sc_a
-		is_star_class = sc_l
-		is_star_class = sc_d
-		is_star_class = sc_c_giant
-		is_star_class = sc_s_giant
-		is_star_class = sc_w_azure
-		is_star_class = sc_w_red
-		is_star_class = sc_w_green
-		is_star_class = sc_w_purple
-		is_star_class = sc_tt_red
-		is_star_class = sc_tt_orange
-		is_star_class = sc_tt_white
-		is_star_class = sc_ae
-		is_star_class = sc_p_purple
-		is_star_class = sc_p_green
-		is_star_class = sc_p_red
-		is_star_class = sc_magnetar
-		merg_is_void_system = yes
-	}
-}
-is_spy_empire = {
-	OR = {
-		has_valid_civic = civic_cutthroat_politics
-		has_valid_civic = civic_shadow_council
-		has_valid_civic = civic_ruthless_competition
-		has_valid_civic = civic_criminal_heritage
-		has_valid_civic = civic_machine_predictive_analysis
-		# Expanded Events
-		has_valid_civic = civic_shadow_council_megacorp
-		has_valid_civic = civic_self_experimentation
-		# Espionage Extended
-		has_valid_civic = civic_shadow_state
-	}
-}
-is_barren = {
-	merg_is_barren = yes
-}
-is_molten = {
-	merg_is_molten = yes
-}
-is_frozen = {
-	merg_is_frozen = yes
-}
-is_toxic = {
-	merg_is_toxic = yes
-}
-is_gas_giant = {
-	merg_is_gas_giant = yes
-}
-is_desert = {
-	merg_is_desert = yes
-}
-is_arid = {
-	merg_is_arid = yes
-}
-is_savannah = {
-	merg_is_savannah = yes
-}
-is_tropical = {
-	merg_is_tropical = yes
-}
-is_continental = {
-	merg_is_continental = yes
-}
-is_ocean = {
-	merg_is_ocean = yes
-}
-is_tundra = {
-	merg_is_tundra = yes
-}
-is_arctic = {
-	merg_is_arctic = yes
-}
-is_alpine = {
-	merg_is_alpine = yes
-}
-is_nuked = {
-	merg_is_nuked = yes
-}
-is_hive = {
-	merg_is_hive_world = yes
-}
-is_machine = {
-	merg_is_machine_world = yes
-}
-is_gaia = {
-	OR = {
-		merg_is_gaia = yes
-		is_planet_class = pc_ancient
-	}
-}
-is_city = {
-	merg_is_arcology = yes
-}
-living_metal_candidate = {
-	NOT = { has_deposit_for = shipclass_research_station }
-	OR = {
-		merg_is_barren = yes
-		merg_is_barren_cold = yes
-		is_asteroid = yes
-	}
-}
-############################### All these worlds ###############################
-is_fallen_empire_planet = {
-	optimize_memory
-	owner = {
+	AND = {
 		OR = {
-			merg_is_fallen_empire = yes
-			merg_is_awakened_fe = yes
-		}
-	}
-}
-exists_collapsed_star = {
-	optimize_memory
-	solar_system = { any_system_planet = { merg_is_standard_dense_star = yes } }
-}
-is_collapsed_star = {
-	optimize_memory
-	merg_is_standard_dense_star = yes
-}
-
-############################### THE ABYSS CONTRACT ###############################
-TAC_is_common_country = {
-	optimize_memory
-	OR = {
-		merg_is_standard_empire = yes
-		is_country_type = awakened_marauders
-		is_country_type = primitive
-		is_crisis_faction = yes
-		is_country_type = gate_builders
-		is_country_type = gray_goo
-		is_country_type = ratlings
-	}
-}
-TAC_is_sc_void = {
-	optimize_memory
-	OR = {
-		merg_is_void_system = yes
-		NOT = { exists = star }
-	}
-}
-
-############################### NSC ###############################
-nsc_mothball_target_fleet_requirement = {
-	owner = { is_same_value = prev.owner }
-	OR = {
-		is_ship_class = shipclass_military
-		is_ship_class = shipclass_military_special
-        AND = {
-            is_ship_class = shipclass_starbase
-            fleet = { is_mobile = yes }
-        }
-	}
-}
-
-############################### Wild Space ###############################
-is_nebula_star = {
-	optimize_memory
-	Or = {
-		is_star_class = sc_collapsar
-		is_star_class = sc_p_purple
-		is_star_class = sc_p_green
-		is_star_class = sc_p_red
-		# Misc Nebulae
-		is_star_class = sc_p_purple
-		is_star_class = sc_p_green
-		is_star_class = sc_p_red
-		is_star_class = sc_nova_1
-		is_star_class = sc_nova_2
-		is_star_class = sc_w_azure
-		is_star_class = sc_w_red
-		is_star_class = sc_w_green
-		is_star_class = sc_w_purple
-		is_star_class = sc_lbv_blue
-		is_star_class = sc_lbv_green
-		is_star_class = sc_lbv_red
-	}
-}
-
-############################### ACOT/AOT/SOS ###############################
-can_build_precursor_ship = {
-	optimize_memory
-	OR = {
-		owner = { is_ai = yes }
-		AND = {
-			is_scope_type = megastructure
-			OR = {
-				is_megastructure_type = acot_precursor_colossus_base
-				is_megastructure_type = acot_precursor_colossus_stage_two
-				is_megastructure_type = acot_amerigo
-				is_megastructure_type = acot_amerigo_ae
-				is_megastructure_type = acot_amerigo_se
-				is_megastructure_type = acot_amerigo_oe
-				is_megastructure_type = acot_amerigo_pe
-				is_megastructure_type = acot_phanon_master_reactor_sphere
-				is_megastructure_type = sofe_omega_nexus
-                is_megastructure_type = sofe_omega_spy_orb_center
-                is_megastructure_type = sofe_omega_dyson_sphere
-				# Assault Lily
-				is_megastructure_type = college_ship_creater_3
-				# Universal Gateway Origin
-                is_megastructure_type = universal_gateway_origin_demiurge_forge_8
-                is_megastructure_type = universal_gateway_origin_demiurge_forge_9
-                is_megastructure_type = universal_gateway_origin_demiurge_forge_9_2
+			num_minerals >= 1
+			# Will always treat colonies as crackable, unless they are habitats or ringworlds
+			AND = {
+				is_colony = yes
+				is_artificial = no
 			}
 		}
-		AND = {
-			is_scope_type = starbase
-			OR = {
-				has_starbase_size = juggernaut
-				has_starbase_building = acot_precursor_database	
-				is_acot_advanced_starbase = yes
-				has_starbase_size = precursor_juggernaut
-				is_ascended_juggernaut = yes
-				# Assault Lily
-				has_starbase_size >= lily_super_college_ship
-				# Gigastructural Engineering & More
-				has_starbase_module = virtual_shipyard_uplink
-				# Universal Gateway Origin
-                has_starbase_size >= universal_gateway_citadel
-				# ZOFE
-				has_starbase_size = fe_goliath
-			}
+		NOR = {
+			is_star = yes
+			is_asteroid = yes
+			is_planet_class = pc_shattered #Prevent Overcracking
+			is_planet_class = pc_shattered_2
+			is_planet_class = pc_egg_cracked
+			is_planet_class = pc_broken
+			is_planet_class = pc_machine_broken
 		}
-	}
-}
-is_playable_country = {
-	optimize_memory
-	OR = {
-		merg_is_standard_empire = yes
-		is_country_type = sbtg_stellarborne_empire_active
+		is_content_world = no
 	}
 }
 
-############################### Voyage to Eternity ###############################
-KZ_VOY_has_communications_normal_country = {
+############################### History of the Lost Empire ###############################
+afk_target_planet = {
 	optimize_memory
 	OR = {
-		merg_is_default_empire = yes
-		merg_is_fallen_empire = yes
-		merg_is_awakened_fe = yes
-	}
-	has_communications = prev
-	NOT = { is_country = prev }
-}
-
-# Infinity Stones
-infmod_is_relevant = {
-	optimize_memory
-	OR = {
-		merg_is_default_empire = yes
-		merg_is_fallen_empire = yes
-		merg_is_awakened_fe = yes
-	}
-}
-
-############################### Real Space ###############################
-has_mineral_deposit = {
-	optimize_memory
-	OR = {
-		has_deposit = d_veiny_cliffs
-		has_deposit = d_mineral_fields
-		has_deposit = d_prosperous_mesa
-		has_deposit = d_ore_rich_caverns
-		has_deposit = d_rich_mountain
-		has_deposit = d_submerged_ore_veins
-		# Real Space
-		has_deposit = d_offshore_fields
-		has_deposit = d_abundant_atoll
-		has_deposit = d_rich_lodes
-		# GPM
-		has_deposit = gpm_d_spaceship_graveyard
-		has_deposit = gpm_d_unusual_formations
-		has_deposit = gpm_d_floating_rocks
-		has_deposit = gpm_d_super_volcano
-		has_deposit = gpm_d_obsidian_fields
-		has_deposit = gpm_d_rich_crater
-		has_deposit = gpm_d_surface_mineral_veins
-		has_deposit = gpm_d_dense_metal_veins
-		has_deposit = gpm_d_iron_mountain
-		has_deposit = gpm_d_garbage_patch
-		has_deposit = gpm_d_fossilized_egg_sacks
-		has_deposit = gpm_d_fossilized_structures
-		has_deposit = gpm_d_fossilized_creep
-		has_deposit = gpm_d_giant_skeleton
-	}
-}
-is_mineral_deposit = {
-	optimize_memory
-	OR = {
-		is_deposit_type = d_veiny_cliffs
-		is_deposit_type = d_mineral_fields
-		is_deposit_type = d_prosperous_mesa
-		is_deposit_type = d_ore_rich_caverns
-		is_deposit_type = d_rich_mountain
-		is_deposit_type = d_submerged_ore_veins
-		# Real Space
-		is_deposit_type = d_offshore_fields
-		is_deposit_type = d_abundant_atoll
-		is_deposit_type = d_rich_lodes
-		# GPM
-		is_deposit_type = gpm_d_spaceship_graveyard
-		is_deposit_type = gpm_d_unusual_formations
-		is_deposit_type = gpm_d_floating_rocks
-		is_deposit_type = gpm_d_super_volcano
-		is_deposit_type = gpm_d_obsidian_fields
-		is_deposit_type = gpm_d_rich_crater
-		is_deposit_type = gpm_d_surface_mineral_veins
-		is_deposit_type = gpm_d_dense_metal_veins
-		is_deposit_type = gpm_d_iron_mountain
-		is_deposit_type = gpm_d_garbage_patch
-		is_deposit_type = gpm_d_fossilized_egg_sacks
-		is_deposit_type = gpm_d_fossilized_structures
-		is_deposit_type = gpm_d_fossilized_creep
-		is_deposit_type = gpm_d_giant_skeleton
-	}
-}
-planetary_catastrophe_is_possible = {
-	is_colony = yes
-	num_pops > 0
-	OR = {
-		merg_is_desert = yes
-		merg_is_arid = yes
-		merg_is_savannah = yes
-		merg_is_tropical = yes
-		merg_is_ocean = yes
-		merg_is_continental = yes
-		merg_is_arctic = yes
-		merg_is_alpine = yes
-		merg_is_tundra = yes
-		merg_is_gaia = yes
-		merg_is_nuked = yes
-		merg_is_hive_world = yes
 		merg_is_arcology = yes
 		merg_is_relic_world = yes
-		merg_is_hab_ringworld = yes
-		merg_is_habitat = yes
-		is_planet_class = pc_sterile
-	}
-	NOR = {
-		has_planet_flag = colony_event
-		has_planet_flag = planetary_disaster
-		solar_system = { has_star_flag = star_disaster }
+		merg_is_hive_world = yes
+		merg_is_machine_world = yes
+		colonizable_planet = yes
+		habitable_planet = yes
+		is_artificial = yes
+		uninhabitable_regular_planet = yes
+		# Planetary Diversity
+		merg_is_nuked = yes
+		# Gigastructures
+		giga_is_katzenland = yes
+		# SW:UnknownWorld Shipgirls Story
+		uses_district_set = engineer_world
+		uses_district_set = rw_swgs_engineer_world
+		# Warship Girls R And MIST Species
+		uses_district_set = port_world
+		uses_district_set = sh_world
+		# SW: UnknownWorld Shipgirls Story
+		uses_district_set = engineer_world
+		uses_district_set = rw_swgs_engineer_world
+		# APSR: Anomalies, Planetary and Space Resources
+		has_apsr_modifiers = yes
+		# Planetary Diversity
+		is_pd_planet_class_all = yes
+		# Gigastructural Engineering & More
+		is_planet_class = pc_red_toxic
 	}
 	merg_is_forbidden_target = no
-}
-
-star_catastrophe_is_possible = {
-	is_primary_star = yes
-	OR = {
-		is_planet_class = pc_k_star
-		is_planet_class = pc_g_star
-		is_planet_class = pc_f_star
-		is_planet_class = pc_m_giant_star
-		is_planet_class = pc_k_giant_star
-		is_planet_class = pc_g_giant_star
-		is_planet_class = pc_a_star
-		is_planet_class = pc_b_star
-	}
-	solar_system = {
-		NOR = { 
-			has_star_flag = star_disaster
-			has_star_flag = dyson_sphere_built
-			has_star_flag = AI_hub
-			has_star_flag = cybrex_beta
-			has_star_flag = guardian
-			has_star_flag = guardians_of_zanaam
-			has_star_flag = sanctuary_system
-			has_star_flag = hyacinth_system
-			has_star_flag = ai_system
-			has_star_flag = sentinel_system
-			has_star_flag = vultaumar
-			has_star_flag = yuhtaan
-			has_star_flag = fen_habbanis
-			has_star_flag = irass 
-			has_star_flag = cybrex
-			has_star_flag = ruined_dyson_system
-			AND = {
-				has_star_flag = ruined_ring_system
-				any_system_megastructure = { is_megastructure_type = ring_world_ruined }
-			}
-		}
-		any_system_planet = {
-			planetary_catastrophe_is_possible = yes
-		}
-	}
-}
-############################### Kancolle ###############################
-is_gas_giant = {
-	optimize_memory
-	merg_is_gas_giant = yes
 }
 
 ############################### Human Fallen Empires ###############################
@@ -1451,16 +899,631 @@ hfe_trigger_planet_valid_for_settle = {
 	is_doomsday_planet = no
 }
 
-############################### Extra Ship Components NEXT ###############################
-ESC_TRIGGER_is_city_planet = {
-    OR = {
-        merg_is_arcology = yes
-        # district overhaul compatibility
+############################### Infinity Stones ###############################
+infmod_is_relevant = {
+	optimize_memory
+	OR = {
+		merg_is_default_empire = yes
+		merg_is_fallen_empire = yes
+		merg_is_awakened_fe = yes
+	}
+}
+
+############################### Kancolle ###############################
+is_gas_giant = {
+	optimize_memory
+	merg_is_gas_giant = yes
+}
+
+############################### Legendary Worlds ###############################
+legw_planet_uninhabitable = {
+	optimize_memory
+	uninhabitable_regular_planet = yes
+}
+legw_planet_habitable = {
+	optimize_memory
+	AND = {
+		colonizable_planet = yes
+		is_artificial = no
+	}
+}
+legw_megaplanet = {
+	optimize_memory
+	OR = {
+		is_artificial = yes
+		is_planet_class = pc_machine
+		is_planet_class = pc_cybrex
+		# Planetary Diversity
+		is_pd_machine = yes
+		is_pd_robot_arcology = yes
+		# Girls Frontline
+		uses_district_set = GF_sf_machine_world
+		# Gigastructural Engineering & More
+		uses_district_set = giga_planetary_computer
+		# Origin - F.C.S.S & M.C.S.S
+		uses_district_set = awaken_ai_world
+		# ZOFE
+		uses_district_set = utopian_machine_world
+	}
+}
+legw_is_dry = {
+	is_dry = yes
+}
+legw_is_wet = {
+	is_wet = yes
+}
+legw_is_cold = {
+	is_cold = yes
+}
+legw_fallen_empire_planet = {
+	optimize_memory
+	owner = {
+		OR = {
+			merg_is_fallen_empire = yes
+			merg_is_awakened_fe = yes
+		}
+	}
+}
+
+############################### More Events Mod ###############################
+mem_is_spherical_world = {
+	optimize_memory
+	NOR = {
+		habitable_structure = yes
+		merg_is_habitat = yes
+		merg_is_hab_ringworld = yes
+		# Gigastructural Engineering & More
+		giga_habitable_structure = yes
+	}
+}
+mem_has_happiness = {
+	NOR = {
+		has_trait = trait_machine_unit
+		has_trait = trait_hive_mind
+		can_think = no
+		# Diagraphers Trait Mod
+		is_multihive_drone = yes
+		# ThaumStellaris
+		species = {
+			OR = {
+				is_archetype = TC_GOLEM
+				is_archetype = TC_GOLEM_HIVE
+				is_archetype = TC_GOLEM_MACHINE
+			}
+		}
+		# Trait Diversity
+		has_trait = trait_td_multi_hiveminded
+		has_trait = trait_td_emotionless
+		has_trait = trait_td_psychopathic
+		has_trait = trait_td_thymoleptic_implants
+		has_trait = trait_td_rbot_thymoleptic_scripts
+		has_trait = trait_td_rbot_thought_inhibitor
+		# Wandering Witch: Voyagers
+		has_trait = trait_servitude
+		AND = {
+			has_trait = trait_dummy
+			OR = {
+				NOT = { exists = from }
+				from = { 
+					NOR = { 
+						has_technology = tech_synthetic_workers 
+						has_technology = tech_dummy_leaders
+						has_origin = origin_garbage_princesses
+						has_country_flag = synthetic_empire
+					} 
+				}
+				from = { has_policy_flag = ai_outlawed }
+			}
+		}
+		# Warship Girls R And MIST Species
+		has_trait = sh_trait_shenhai
+		has_trait = sh_trait_shenhai1
+		has_trait = sh_trait_shenhai2
+		has_trait = sh_trait_silent
+		has_trait = sh_trait_silent1
+		# Vanilla
+		AND = {
+			has_trait = trait_mechanical
+			# Animated Synthetics Portraits Expanded: Reborn
+			OR = {
+				merg_has_animated_synth = no
+				AND = {
+					merg_has_animated_synth = yes
+					from = { is_machine_empire = yes }
+					is_extsynth_synthetic = yes
+					NOT = { has_trait = trait_psionic }
+				}
+				AND = {
+					merg_has_animated_synth = yes
+					NAND = {
+						from = { is_machine_empire = yes }
+						is_extsynth_synthetic = yes
+					}
+				}
+			}
+			# Vanilla
+			OR = {
+				NOT = { exists = from }
+				from = {
+					OR = {
+						is_machine_empire = yes
+						NOR = {
+							has_technology = tech_synthetic_workers
+							# Wandering Witch: Voyagers
+							has_technology = tech_dummy_leaders
+						}
+						has_policy_flag = ai_outlawed
+					}
+				}
+			}
+		}
+		AND = {
+			has_trait = trait_cybernetic
+			exists = from
+			from = {
+				is_machine_empire = yes
+				OR = {
+					has_civic = civic_machine_assimilator # Assimilator empire
+					has_ascension_perk = ap_gestaltization # Ethical Gestalts
+				}
+			}
+		}
+	}
+}
+
+############################### More Precursors ###############################
+FHMP_is_valid_precursor_planet = {
+	OR = {
+		merg_is_barren = yes
+		merg_is_barren_cold = yes
+		merg_is_frozen = yes
+		merg_is_nuked_basic = yes
+	}
+}
+FHMP_is_valid_werediran_planet = {
+	OR = {
+		merg_is_alpine = yes
+		merg_is_arctic = yes
+		merg_is_arid = yes
+		merg_is_continental = yes
+		merg_is_desert = yes
+		merg_is_gaia = yes
+		merg_is_nuked_basic = yes
+		merg_is_ocean = yes
+		merg_is_savannah = yes
+		merg_is_tropical = yes
+		merg_is_tundra = yes
+	}
+}
+
+############################### NSC ###############################
+nsc_mothball_target_fleet_requirement = {
+	owner = { is_same_value = prev.owner }
+	OR = {
+		is_ship_class = shipclass_military
+		is_ship_class = shipclass_military_special
         AND = {
-            merg_is_relic_world = yes
-            has_district = district_ascended_housing
+            is_ship_class = shipclass_starbase
+            fleet = { is_mobile = yes }
         }
-    }
+	}
+}
+
+############################### Organic Zealots ###############################
+is_valid_target_to_outlaw_cybernetics_or_robot_pops_or_ai = {
+	optimize_memory
+	merg_is_default_empire = yes
+	is_robot_empire = no
+	OR = {
+		has_ascension_perk = ap_the_flesh_is_weak
+		has_ascension_perk = ap_organo_machine_interfacing
+		has_ascension_perk = ap_synthetic_evolution
+		has_policy_flag = robots_allowed
+		AND = {
+			can_set_ai_policy = yes
+			OR = {
+				has_policy_flag = ai_servitude
+				has_policy_flag = ai_full_rights
+			}
+		}
+	}
+}
+
+############################### Origin Beings ###############################
+darhmod_seres_digsite_spawn_rules = {
+	has_access_fleet = root.owner
+	OR = {
+		has_owner = no
+		owner = { is_same_value = root.owner }
+	}
+	NOR = {
+		is_same_value = root.solar_system
+		any_system_planet = {
+			is_capital = yes
+			has_planet_flag = precursor_world
+			has_planet_flag = darhmod_seres_colony
+		}
+	}
+	solar_system = { exists = star }
+	any_system_planet = {
+		is_star = no
+		has_anomaly = no
+		is_capital = no
+		NOR = {
+			merg_is_shielded = yes
+			merg_is_gas_giant = yes
+			merg_is_empty_space = yes
+			exists = archaeological_site
+		}
+	}
+	NOT = {
+		any_neighbor_system = {
+			any_system_planet = {
+				OR = {
+					has_planet_flag = precursor_world
+					has_planet_flag = darhmod_seres_colony
+				}
+			}
+		}
+	}
+}
+
+############################### Planetary Diversity ###############################
+ai_should_build_pd_habitats = {
+	merg_is_default_empire = yes
+	OR = {
+		is_at_war = no
+		mid_game_years_passed > 0
+	}
+	has_technology = tech_pdhabitat_2
+	if = {
+		limit = { ai_colonize_plans <= 0 }
+		OR = {
+			NOT = { has_trait = trait_aquatic }
+			has_ascension_perk = ap_hydrocentric
+		}
+	}
+	NOT = {
+		any_planet_within_border = {
+			is_pd_habitat = yes
+			is_colony = no
+		}
+	}
+	NOT = { any_neighbor_country = { is_crisis_faction = yes } }
+}
+
+############################### Primitive Conquest Enhancements ###############################
+pce_planet_uses_district_farming_uncapped = {
+	optimize_memory
+	OR = {
+		uses_district_set = hive_world
+		uses_district_set = shattered_ring_world
+		AND = {
+			merg_is_ocean = yes
+			exists = owner
+			owner = { is_anglers_empire = yes }
+		}
+	}
+}
+
+############################### Real Space ###############################
+has_mineral_deposit = {
+	optimize_memory
+	OR = {
+		has_deposit = d_veiny_cliffs
+		has_deposit = d_mineral_fields
+		has_deposit = d_prosperous_mesa
+		has_deposit = d_ore_rich_caverns
+		has_deposit = d_rich_mountain
+		has_deposit = d_submerged_ore_veins
+		# Real Space
+		has_deposit = d_offshore_fields
+		has_deposit = d_abundant_atoll
+		has_deposit = d_rich_lodes
+		# GPM
+		has_deposit = gpm_d_spaceship_graveyard
+		has_deposit = gpm_d_unusual_formations
+		has_deposit = gpm_d_floating_rocks
+		has_deposit = gpm_d_super_volcano
+		has_deposit = gpm_d_obsidian_fields
+		has_deposit = gpm_d_rich_crater
+		has_deposit = gpm_d_surface_mineral_veins
+		has_deposit = gpm_d_dense_metal_veins
+		has_deposit = gpm_d_iron_mountain
+		has_deposit = gpm_d_garbage_patch
+		has_deposit = gpm_d_fossilized_egg_sacks
+		has_deposit = gpm_d_fossilized_structures
+		has_deposit = gpm_d_fossilized_creep
+		has_deposit = gpm_d_giant_skeleton
+	}
+}
+is_mineral_deposit = {
+	optimize_memory
+	OR = {
+		is_deposit_type = d_veiny_cliffs
+		is_deposit_type = d_mineral_fields
+		is_deposit_type = d_prosperous_mesa
+		is_deposit_type = d_ore_rich_caverns
+		is_deposit_type = d_rich_mountain
+		is_deposit_type = d_submerged_ore_veins
+		# Real Space
+		is_deposit_type = d_offshore_fields
+		is_deposit_type = d_abundant_atoll
+		is_deposit_type = d_rich_lodes
+		# GPM
+		is_deposit_type = gpm_d_spaceship_graveyard
+		is_deposit_type = gpm_d_unusual_formations
+		is_deposit_type = gpm_d_floating_rocks
+		is_deposit_type = gpm_d_super_volcano
+		is_deposit_type = gpm_d_obsidian_fields
+		is_deposit_type = gpm_d_rich_crater
+		is_deposit_type = gpm_d_surface_mineral_veins
+		is_deposit_type = gpm_d_dense_metal_veins
+		is_deposit_type = gpm_d_iron_mountain
+		is_deposit_type = gpm_d_garbage_patch
+		is_deposit_type = gpm_d_fossilized_egg_sacks
+		is_deposit_type = gpm_d_fossilized_structures
+		is_deposit_type = gpm_d_fossilized_creep
+		is_deposit_type = gpm_d_giant_skeleton
+	}
+}
+planetary_catastrophe_is_possible = {
+	is_colony = yes
+	num_pops > 0
+	OR = {
+		merg_is_desert = yes
+		merg_is_arid = yes
+		merg_is_savannah = yes
+		merg_is_tropical = yes
+		merg_is_ocean = yes
+		merg_is_continental = yes
+		merg_is_arctic = yes
+		merg_is_alpine = yes
+		merg_is_tundra = yes
+		merg_is_gaia = yes
+		merg_is_nuked = yes
+		merg_is_hive_world = yes
+		merg_is_arcology = yes
+		merg_is_relic_world = yes
+		merg_is_hab_ringworld = yes
+		merg_is_habitat = yes
+		is_planet_class = pc_sterile
+	}
+	NOR = {
+		has_planet_flag = colony_event
+		has_planet_flag = planetary_disaster
+		solar_system = { has_star_flag = star_disaster }
+	}
+	merg_is_forbidden_target = no
+}
+star_catastrophe_is_possible = {
+	is_primary_star = yes
+	OR = {
+		is_planet_class = pc_k_star
+		is_planet_class = pc_g_star
+		is_planet_class = pc_f_star
+		is_planet_class = pc_m_giant_star
+		is_planet_class = pc_k_giant_star
+		is_planet_class = pc_g_giant_star
+		is_planet_class = pc_a_star
+		is_planet_class = pc_b_star
+	}
+	solar_system = {
+		NOR = { 
+			has_star_flag = star_disaster
+			has_star_flag = dyson_sphere_built
+			has_star_flag = AI_hub
+			has_star_flag = cybrex_beta
+			has_star_flag = guardian
+			has_star_flag = guardians_of_zanaam
+			has_star_flag = sanctuary_system
+			has_star_flag = hyacinth_system
+			has_star_flag = ai_system
+			has_star_flag = sentinel_system
+			has_star_flag = vultaumar
+			has_star_flag = yuhtaan
+			has_star_flag = fen_habbanis
+			has_star_flag = irass 
+			has_star_flag = cybrex
+			has_star_flag = ruined_dyson_system
+			AND = {
+				has_star_flag = ruined_ring_system
+				any_system_megastructure = { is_megastructure_type = ring_world_ruined }
+			}
+		}
+		any_system_planet = {
+			planetary_catastrophe_is_possible = yes
+		}
+	}
+}
+
+############################### Real Space New Frontiers ###############################
+is_moon_of_gas_giant = {
+	optimize_memory
+	is_scope_type = planet
+	exists = orbit
+	OR = {
+		orbit = { merg_is_gas_giant = yes }
+		has_planet_flag = gas_giant_moon
+	}
+}
+
+############################### Reworked Advanced Ascension ###############################
+# Fixing the trigger and removing obsolete code
+AAR_trgr_cntr_playable = {
+	optimize_memory
+	OR = {
+		merg_is_default_empire = yes
+		merg_is_fallen_empire = yes
+		merg_is_awakened_fe = yes
+	}
+}
+AAR_trgr_ship_SB_valid = {
+	OR = {
+		AND = {
+			is_ship_class = shipclass_starbase
+			fleet = { is_mobile = no }
+			NOT = { is_ship_size = starbase_outpost }
+		}
+		is_orbital_ring = yes
+	}
+}
+
+############################### Starborn ###############################
+has_gene_clinic = {
+	optimize_memory
+	OR = {
+		has_building = building_hospital
+		has_building = building_clinic
+		# ACOT
+		has_building = building_fe_hospital
+		has_building = building_ae_hospital
+		# AOT
+		has_building = building_stellarite_hospital
+		has_building = building_phanon_hospital
+	}
+}
+starborn_can_place_hab = {
+	optimize_memory
+	custom_tooltip = {
+		fail_text = "requires_surveyed_planet"
+		is_surveyed = {
+			# prevent leaking habitability information
+			who = prev.from
+			status = yes
+		}
+	}
+	custom_tooltip = {
+		fail_text = "requires_no_anomaly"
+		has_anomaly = no
+	}
+	custom_tooltip = {
+		fail_text = "requires_no_existing_megastructure"
+		NOR = {
+			has_planet_flag = megastructure
+			has_planet_flag = has_megastructure
+			solar_system = {
+				has_star_flag = ring_world_built
+			}
+			is_planet_class = pc_ringworld_habitable_damaged
+			is_planet_class = pc_ringworld_tech
+			is_planet_class = pc_ringworld_tech_damaged
+			is_planet_class = pc_ringworld_seam
+			is_planet_class = pc_ringworld_seam_damaged
+			merg_is_habitat_non_starborn = yes
+			merg_is_hab_ringworld = yes
+			# Gigastructural Engineering & More
+			giga_habitable_structure = yes
+		}
+	}
+	custom_tooltip = {
+		fail_text = "requires_no_orbital_debris"
+		NOR = { has_planet_flag = has_orbital_debris }
+	}
+	custom_tooltip = {
+		fail_text = "requires_not_solarpunk"
+		NOT = { solar_system = { has_star_flag = solarpunk_system_02 } }
+	}
+}
+
+############################### Star Wars: Kuat Ancient Empire ###############################
+kuat_is_common_country = {
+	optimize_memory
+	OR = {
+		merg_is_standard_empire = yes
+		is_country_type = awakened_marauders
+		is_country_type = primitive
+		is_country_type = ratlings
+	}
+}
+kuat_is_defense_galaxy_fleet = {
+	optimize_memory
+	any_country = {
+		OR = {
+			is_crisis_faction = yes
+			# Ancient Empire
+			is_country_type = ag_ancient_gamma_guardian
+			is_country_type = ag_zeta_crisis_country
+			is_country_type = ag_ancient_primitive_crisis
+		}
+	}
+}
+
+############################### ThaumStellaris ###############################
+tc_element_shard_candidate = {
+	optimize_memory
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		uninhabitable_regular_planet = yes
+		is_asteroid = yes
+		is_planet_class = pc_broken
+		is_planet_class = pc_shattered
+		is_planet_class = pc_shattered_2
+	}
+}
+
+############################### THE ABYSS CONTRACT ###############################
+TAC_is_common_country = {
+	optimize_memory
+	OR = {
+		merg_is_standard_empire = yes
+		is_country_type = awakened_marauders
+		is_country_type = primitive
+		is_crisis_faction = yes
+		is_country_type = gate_builders
+		is_country_type = gray_goo
+		is_country_type = ratlings
+	}
+}
+TAC_is_sc_void = {
+	optimize_memory
+	OR = {
+		merg_is_void_system = yes
+		NOT = { exists = star }
+	}
+}
+
+############################### The DAL Species Mod ###############################
+is_special_colony_planet_class = {
+	optimize_memory
+	OR = {
+		merg_is_arcology = yes
+		is_planet_class = pc_cybrex
+		merg_is_habitat = yes
+		merg_is_hab_ringworld = yes
+		# Gigastructural Engineering & More
+		giga_habitable_structure = yes
+	}
+}
+
+############################### The Empty Vagrant ###############################
+can_be_ev_investment_country = {
+	OR = {
+		is_country_type = default
+		# Darkspace
+		is_country_type = ds_nomads
+	}
+	is_hive_empire = no
+	is_machine_empire = no
+	num_owned_planets > 0
+	opinion = {
+		who = root
+		value > -99
+	}
+	NOT = {
+		is_at_war_with = root
+	}
+	NOR = {
+		has_ethic = ethic_fanatic_xenophobe
+		is_homicidal = yes
+		# Expanded Traits, Civics, Pops, and More
+		has_valid_civic = civic_infestation
+	}
+	has_communications = ROOT
+	NOT = {
+		has_country_flag = ev_received_an_investment
+	}
+	is_ai = yes
 }
 
 ############################### The Storm Cluster ###############################
@@ -1505,87 +1568,66 @@ scluster_is_barren = {
 	}
 }
 
-############################### Harvest Engine Crisis ###############################
-harvester_is_crackable = {
-	merg_is_forbidden_target = no
-	AND = {
-		OR = {
-			num_minerals >= 1
-			# Will always treat colonies as crackable, unless they are habitats or ringworlds
-			AND = {
-				is_colony = yes
-				is_artificial = no
-			}
-		}
-		NOR = {
-			is_star = yes
-			is_asteroid = yes
-			is_planet_class = pc_shattered #Prevent Overcracking
-			is_planet_class = pc_shattered_2
-			is_planet_class = pc_egg_cracked
-			is_planet_class = pc_broken
-			is_planet_class = pc_machine_broken
-		}
-		is_content_world = no
-	}
-}
-
-############################### Primitive Conquest Enhancements ###############################
-pce_planet_uses_district_farming_uncapped = {
+############################### Shadowgate ###############################
+shadowgate_is_fe = {
 	optimize_memory
 	OR = {
-		uses_district_set = hive_world
-		uses_district_set = shattered_ring_world
-		AND = {
-			merg_is_ocean = yes
-			exists = owner
-			owner = { is_anglers_empire = yes }
-		}
+		is_country_type = fallen_empire
+		# History of the Lost Empire
+		is_country_type = LsE_fallen_empire
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_fallen_empire
+		# The Empty Vagrant
+		is_country_type = fallen_empire_ev
+		# ZOFE
+		is_country_type = lost_empire
 	}
 }
-
-# 
-is_valid_target_to_outlaw_cybernetics_or_robot_pops_or_ai = {
+shadowgate_is_ae = {
 	optimize_memory
-	merg_is_default_empire = yes
-	is_robot_empire = no
 	OR = {
-		has_ascension_perk = ap_the_flesh_is_weak
-		has_ascension_perk = ap_organo_machine_interfacing
-		has_ascension_perk = ap_synthetic_evolution
-		has_policy_flag = robots_allowed
-		AND = {
-			can_set_ai_policy = yes
-			OR = {
-				has_policy_flag = ai_servitude
-				has_policy_flag = ai_full_rights
-			}
-		}
+		is_country_type = awakened_fallen_empire
+		# A Deadly Tempest
+		is_country_type = awakened_gate_builders
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_awakened_fallen_empire
+		is_country_type = awakened_return_kuat_empire
+		# ZOFE
+		is_country_type = ascended_empire
 	}
 }
-
-############################### Planetary Diversity ###############################
-ai_should_build_pd_habitats = {
-	merg_is_default_empire = yes
-	OR = {
-		is_at_war = no
-		mid_game_years_passed > 0
+shadowgate_aggressor_is_valid_cb_target = {
+	optimize_memory
+	NOR = {
+		is_in_federation_with = root.from
+		is_hostile = root.from
+		has_casus_belli = { type = cb_shadowrift_attacked target = root.from }
 	}
-	has_technology = tech_pdhabitat_2
-	if = {
-		limit = { ai_colonize_plans <= 0 }
+	root.from = {
 		OR = {
-			NOT = { has_trait = trait_aquatic }
-			has_ascension_perk = ap_hydrocentric
+			merg_is_default_empire = yes
+			shadowgate_is_fe = yes
+			shadowgate_is_ae = yes
 		}
 	}
-	NOT = {
-		any_planet_within_border = {
-			is_pd_habitat = yes
-			is_colony = no
-		}
+	OR = {
+		is_subject = no
+		overlord = { NOT = { is_same_value = root.from } }
 	}
-	NOT = { any_neighbor_country = { is_crisis_faction = yes } }
+	root.fromfrom.solar_system = { has_access_fleet = event_target:shadowgate_assaulted_owner }
+	has_communications = root.from
+}
+
+############################### Voyage to Eternity ###############################
+KZ_VOY_has_communications_normal_country = {
+	optimize_memory
+	OR = {
+		merg_is_default_empire = yes
+		merg_is_fallen_empire = yes
+		merg_is_awakened_fe = yes
+	}
+	has_communications = prev
+	NOT = { is_country = prev }
 }
 
 ############################### Wandering Witch: Voyagers ###############################
@@ -1611,160 +1653,139 @@ can_reduce_upkeep_dummy = {
 	}
 }
 
-############################### Electroids ###############################
-elec_hyperlane_create = {
-	NOR = {
-		is_same_value = prev
-		has_hyperlane_to = prev
-		merg_is_isolated_system = yes
-		has_star_flag = darkspace_void_control
-		giga_is_core_system = yes
-		cohesive_system = yes
-		compound_cluster = yes
-		annihilator_system = yes
-		urmazin_system = yes
+############################### Warship Girls R and MIST Species ###############################
+is_habitat_wg = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_flat_world
+		is_planet_class = pc_squareworld_habitable
+		merg_is_habitat = yes
+	}
+}
+is_default_and_fallen_country = {
+	optimize_memory
+	OR = {
+		merg_is_default_empire = yes
+		merg_is_fallen_empire = yes
+		merg_is_awakened_fe = yes
+	}
+}
+is_default_country_wg = {
+	optimize_memory
+	merg_is_default_empire = yes
+}
+has_active_wg_foundry_building = {
+	OR = {
+		has_active_wg_foundry_building_lv_low = yes
+		has_active_wg_foundry_building_lv_high = yes
+	}
+}
+has_active_wg_foundry_building_lv_low = {
+	OR = {
+		has_active_building = building_foundry_1
+		has_active_building = building_foundry_2
+		# Warship Girls R and MIST Species
+		has_active_building = building_sep_foundry
+		has_active_building = building_wsg_foundry
+		has_active_building = building_gray_nano_foundry
+		has_active_building = building_sh_foundry
+	}
+}
+has_active_wg_foundry_building_lv_high = {
+	OR = {
+		has_active_building = building_foundry_3
+		has_active_building = building_nano_forge
+		# ACOT
+		has_active_building = building_fe_alloy_forge
+		has_active_building = building_ae_alloy_forge
+		has_active_building = building_ae_nano_forge
+		# AOT
+		has_active_building = building_fe_nano_forge
+		has_active_building = building_phanon_nano_forge
+		has_active_building = building_phanon_alloy_forge
+		has_active_building = building_stellarite_nano_forge
+		has_active_building = building_stellarite_alloy_forge
+		# AVB
+		has_active_building = building_avb_foundry_4
+		has_active_building = building_avb_foundry_5
+		has_active_building = building_avb_foundry_6
+		# Warship Girls R and MIST Species
+		has_active_building = building_sep_foundry2
+		has_active_building = building_wsg_foundry
+		has_active_building = building_gray_nano_foundry2
+		has_active_building = building_sh_foundryU
+		# Wula Fallen Empire
+		has_active_building = building_wula_foundry
+	}
+}
+has_active_wg_factory_building = {
+	OR = {
+		has_active_building = building_factory_1
+		has_active_building = building_factory_2
+		has_active_building = building_factory_3
+		has_active_building = building_affluence_center
+		# ACOT
+		has_active_building = building_fe_factory
+		has_active_building = building_ae_factory
+		has_active_building = building_ae_affluence_center
+		# AOT
+		has_active_building = building_fe_affluence_center
+		has_active_building = building_phanon_affluence_center
+		has_active_building = building_phanon_civilian_factory
+		has_active_building = building_stellarite_affluence_center
+		# AVB
+		has_active_building = building_avb_factory_4
+		has_active_building = building_avb_factory_5
+		has_active_building = building_avb_factory_6
+		# GPM
+		has_active_building = gpm_building_manufactory_hub
+		# Warship Girls R and MIST Species
+		has_active_building = building_sep_foundry
+		has_active_building = building_gray_nano_factory
+	}
+}
+has_gate_megastructure = {
+	optimize_memory
+	merg_is_gate_mega = yes
+}
+
+############################### Wild Space ###############################
+is_nebula_star = {
+	optimize_memory
+	Or = {
+		is_star_class = sc_collapsar
+		is_star_class = sc_p_purple
+		is_star_class = sc_p_green
+		is_star_class = sc_p_red
+		# Misc Nebulae
+		is_star_class = sc_p_purple
+		is_star_class = sc_p_green
+		is_star_class = sc_p_red
+		is_star_class = sc_nova_1
+		is_star_class = sc_nova_2
+		is_star_class = sc_w_azure
+		is_star_class = sc_w_red
+		is_star_class = sc_w_green
+		is_star_class = sc_w_purple
+		is_star_class = sc_lbv_blue
+		is_star_class = sc_lbv_green
+		is_star_class = sc_lbv_red
 	}
 }
 
-############################### Origin Beings ###############################
-darhmod_seres_digsite_spawn_rules = {
-	has_access_fleet = root.owner
+############################### Zenith of the Fallen Empires ###############################
+# Overwriting this for ZOFE and comp mods
+is_zofe_compatible = {
+	optimize_memory
+	merg_is_default_empire = yes
+}
+is_zofe_megacorp = {
+	optimize_memory
+	is_zofe_country = yes
 	OR = {
-		has_owner = no
-		owner = { is_same_value = root.owner }
-	}
-	NOR = {
-		is_same_value = root.solar_system
-		any_system_planet = {
-			is_capital = yes
-			has_planet_flag = precursor_world
-			has_planet_flag = darhmod_seres_colony
-		}
-	}
-	solar_system = { exists = star }
-	any_system_planet = {
-		is_star = no
-		has_anomaly = no
-		is_capital = no
-		NOR = {
-			merg_is_shielded = yes
-			merg_is_gas_giant = yes
-			merg_is_empty_space = yes
-			exists = archaeological_site
-		}
-	}
-	NOT = {
-		any_neighbor_system = {
-			any_system_planet = {
-				OR = {
-					has_planet_flag = precursor_world
-					has_planet_flag = darhmod_seres_colony
-				}
-			}
-		}
-	}
-}
-
-############################### District Overhaul ###############################
-bdoe_is_habitable_structure = { habitable_structure = yes } # Don't reinvent the wheel when you have a tire factory
-bdoe_can_have_random_districts = {
-	OR = {
-		merg_is_basic_habitable = yes
-		# Lithoid Supremacy
-		is_planet_class = pc_geode
-		# Real Space: New Frontiers
-		AND = {
-			merg_has_real_new_frontiers = yes
-			OR = {
-				is_planet_class = pc_tidallylocked
-				is_planet_class = pc_sterile
-				is_planet_class = pc_hollow
-			}
-		}
-		can_have_habitable_deposits = yes
-	}
-	NOR = {
-		# Ancient Empire
-		ag_is_mod_habitable_ringworld = yes
-		# Planetary Ringworlds
-		is_planet_class = pc_planetary_ringworld
-		is_planet_class = pc_planetary_ringworld_machine
-		is_planet_class = pc_planetary_ringworld_hive
-		is_planet_class = pc_planetary_ringworld_city
-		# The Belt
-		bdoe_is_habitable_asteroid = yes
-		bdoe_is_habitable_barren = yes
-		# WH40K Planets Renewed
-		merg_is_wh40k_planet = yes
-	}
-}
-bdoe_is_hive_planet = {
-	merg_is_hive_world = yes
-}
-bdoe_is_machine_planet = {
-	merg_is_machine_world = yes
-}
-bdoe_is_ringworld = {
-	merg_is_hab_ringworld = yes
-}
-bdoe_is_ecu_planet = {
-	OR = {
-		merg_is_arcology = yes
-		# WH40K Planets Renewed
-		merg_is_wh40k_planet = yes
-	}
-}
-############################### Expanded Stellaris Traditions ###############################
-est_is_evil_dip_empire = {
-	OR = {
-		is_unfriendly = yes
-		has_valid_civic = civic_machine_assimilator	
-	}
-}
-est_uses_slaves = {
-	OR = {
-		has_policy_flag = slavery_allowed
-		has_policy_flag = ai_servitude
-		has_civic =	civic_slaver_guilds
-		is_slaver = yes
-		has_country_flag = est_built_robot
-	}
-	NOT = { has_policy_flag = slavery_not_allowed }
-}
-
-############################### Ethics and Civics Bug Branch ###############################
-is_bugged_starbase = {
-	OR = {
-		has_starbase_size >= starbase_starport
-		# ACOT/AOT/SOTS
-		is_precursor_starbase = yes
-	}
-}
-
-############################### Ethics and Civics Alternative - FunEFork/Classics ###############################
-is_toxic_planet = {
-	merg_is_toxic = yes
-}
-is_barren_planet = {
-	merg_is_barren = yes
-}
-is_nuked_planet = {
-    merg_is_nuked = yes
-}
-
-############################### BlueArchive ###############################
-
-is_BA_fallen_empire = {
-	merg_is_fallen_empire = yes
-	OR = {
-		has_country_flag = BA_Gematria
-		has_country_flag = BA_Precursor
-	}
-}
-is_BA_fallen_empire_awakened = {
-	merg_is_awakened_fe = yes
-	OR = {
-		has_country_flag = BA_Gematria
-		has_country_flag = BA_Precursor
+		is_megacorp = yes
+		# Forgotten Queens
+		has_valid_civic = civic_mutualistic_behavior
+		has_valid_civic = civic_machine_trading
 	}
 }

@@ -778,6 +778,11 @@ phanon_megaturret_destroyed_1 = { entity = "" potential = { always = no } possib
 phanon_megaturret_intermediate_1 = { entity = "" potential = { always = no } possible = { always = no } }
 planet_construction_0 = { entity = "" potential = { always = no } possible = { always = no } }
 planet_crack_0 = { entity = "" potential = { always = no } possible = { always = no } }
+planet_ring_0 = { entity = "" potential = { always = no } possible = { always = no } }
+planet_ring_0_machine = { entity = "" potential = { always = no } possible = { always = no } }
+planet_ring_0_hive = { entity = "" potential = { always = no } possible = { always = no } }
+planet_ring_0_city = { entity = "" potential = { always = no } possible = { always = no } }
+planet_ring_1 = { entity = "" potential = { always = no } possible = { always = no } }
 planetary_computer_0 = { entity = "" potential = { always = no } possible = { always = no } }
 planetary_computer_1 = { entity = "" potential = { always = no } possible = { always = no } }
 planetary_computer_2 = { entity = "" potential = { always = no } possible = { always = no } }
