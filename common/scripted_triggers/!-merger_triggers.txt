@@ -279,6 +279,9 @@ merg_has_cloning_building = {
 		# Lithoid Supremacy
 		has_building = building_crystallization_facilities
 		has_building = building_ocean_spawning_pool
+		# The Dark Arts of Necromancy
+		has_building = building_house_of_the_fleshsculpter
+		has_building = building_summoner_site
 		# Wandering Witch: Voyagers
 		has_building = building_dimensional_instrument
 	}

@@ -1892,6 +1892,7 @@ can_species_be_assembled = {
 						has_trait = trait_organic_fourschildren
 						has_trait = trait_organic_fourschildren_2
 					}
+					# is_organic_fourschildren = yes
 				}
 				root = {
 					has_building = building_techno_04_clone_vat
@@ -1947,6 +1948,17 @@ can_species_be_assembled = {
 					root = { has_building = building_anz_cc_mainframe }
 				}
 				is_same_species = root.owner.owner_main_species
+			}
+			# The Dark Arts of Necromancy
+			else_if = {
+				limit = {
+					OR = {
+						has_trait = trait_necromage
+						has_trait = trait_undead
+						has_trait = trait_mindless_undead
+					}
+				}
+				always = yes
 			}
 			# Vanilla
 			else = {
@@ -3197,6 +3209,7 @@ should_force_decline_species = {
 				has_trait = trait_organic_fourschildren
 				has_trait = trait_organic_fourschildren_2
 			}
+			# is_organic_fourschildren = yes
 			from = {
 				OR = {
 					AND = {
@@ -3939,6 +3952,7 @@ can_be_sold_on_slave_market = {
 		# Planetary Diversity
 		has_trait = trait_organic_fourschildren
 		has_trait = trait_organic_fourschildren_2
+		# is_organic_fourschildren = yes
 		# V_Traits
 		AND = {
 			merg_has_v_traits = yes

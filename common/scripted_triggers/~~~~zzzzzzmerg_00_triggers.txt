@@ -513,6 +513,7 @@ is_crossbreeding_possible = {
 		# Planetary Diversity - Unique Worlds
 		has_trait = trait_organic_fourschildren
 		has_trait = trait_organic_fourschildren_2
+		# is_organic_fourschildren = yes
 		# Expanded Traits, Civics, Pops, and More
 		has_trait = trait_clones
 		AND = {

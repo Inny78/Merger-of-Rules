@@ -186,6 +186,7 @@ merg_is_gas_giant_habitable = {
 		is_planet_class = pc_giga_maginot_gas_giant
 		# Planetary Diversity
 		is_planet_class = pc_pd_gas_giant_hab
+		# is_pd_gas_giant_habitable = yes
 		# TimeMod
 		is_tm_gas_colony = yes
 	}
@@ -200,6 +201,7 @@ merg_is_gas_giant = {
 		is_planet_class = pc_azur_gas_giant
 		# Planetary Diversity
 		is_planet_class = pc_dwarf_gas_giant
+		# is_pd_gas_giant = yes
 	}
 }
 

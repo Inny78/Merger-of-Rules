@@ -196,6 +196,7 @@ is_living_architecture = { always = no }
 is_mage = { always = no }
 is_multihive_drone = { always = no }
 is_nirvana_empire = { always = no }
+is_organic_fourschildren = { always = no }
 is_organic_zealots = { always = no }
 is_pc_mem_broken_city = { always = no }
 is_pc_mem_death = { always = no }
@@ -214,6 +215,8 @@ is_pd_continental = { always = no }
 is_pd_desert = { always = no }
 is_pd_exotic = { always = no }
 is_pd_gaia = { always = no }
+is_pd_gas_giant = { always = no }
+is_pd_gas_giant_habitable = { always = no }
 is_pd_habitat = { always = no }
 is_pd_hive_arcology = { always = no }
 is_pd_hive_world = { always = no }
