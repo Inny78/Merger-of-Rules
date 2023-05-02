@@ -505,7 +505,7 @@ can_generate_leader_from_pop = {
 		# Expanded Gestalts
 		root = { has_origin = origin_hive_overmind }
 		# Lithoid Supremacy
-		has_trait = trait_pearl_born_drone
+		is_pearl_born_drone = yes
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
 		# Rogue Maid (Rogue Servitor Completely Remake)
@@ -1289,7 +1289,7 @@ can_colonize_with_species = {
 	else_if = {
 		limit = {
 			# Lithoid Supremacy
-			has_trait = trait_pearl_born_drone
+			is_pearl_born_drone = yes
 		}
 		always = no
 	}
@@ -1312,7 +1312,7 @@ can_colonize_with_species = {
 	}
 	# Lithoid Supremacy Content
 	else_if = {
-		limit = { has_trait = trait_pearl_born_drone }
+		limit = { is_pearl_born_drone = yes }
 		custom_tooltip = { always = no }
 	}
 	# Vanilla
@@ -1504,7 +1504,7 @@ can_species_procreate = {
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
 		has_species_trait_hologanglion = yes
 		# Lithoid Supremacy
-		has_trait = trait_pearl_born_drone
+		is_pearl_born_drone = yes
 		# Madoka Magica NEW
 		has_trait = trait_mahoshoujo
 		# Plentiful Traditions - Extra Perks
@@ -1839,14 +1839,14 @@ can_species_be_assembled = {
 			else_if = {
 				limit = { 
 					OR = {
-						has_trait = trait_pearl_born_drone 
+						is_pearl_born_drone = yes 
 						has_trait = trait_pearl_born_royal
 					}
 				} 
 				root = {
 					any_owned_species = { 
 						OR = {
-							has_trait = trait_pearl_born_drone 
+							is_pearl_born_drone = yes 
 							has_trait = trait_pearl_born_royal
 						}
 					}
@@ -4530,7 +4530,7 @@ can_fill_ruler_job = {
 				# Ethics and Civics Classic
 				has_trait = trait_slave_gene
 				# Lithoid Supremacy
-				has_trait = trait_pearl_born_drone
+				is_pearl_born_drone = yes
 			}
 		}
 	}
@@ -4581,7 +4581,7 @@ can_fill_ruler_job = {
 				# Expanded Traits, Civics, Pops, and More
 				is_exp_tree_caretaker = yes
 				# Lithoid Supremacy
-				has_trait = trait_pearl_born_drone
+				is_pearl_born_drone = yes
 				# Wandering Witch: Voyagers
 				has_trait = trait_servitude
 			}

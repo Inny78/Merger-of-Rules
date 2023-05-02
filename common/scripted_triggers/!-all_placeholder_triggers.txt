@@ -176,6 +176,7 @@ is_exp_pheremone = { always = no }
 is_exp_lithoid_shiny = { always = no }
 is_fq_hollow = { always = no }
 is_fq_matryoshka = { always = no }
+is_geode_world = { always = no }
 is_giga_habitable_gas_giant = { always = no }
 is_giga_habitat = { always = no }
 is_giga_maginot_world = { always = no }
@@ -239,6 +240,7 @@ is_pd_tropical = { always = no }
 is_pd_tundra = { always = no }
 is_pd_unique = { always = no }
 is_pd_wasteland = { always = no }
+is_pearl_born_drone = { always = no }
 is_planetary_diversity_ringworld = { always = no }
 is_precursor_starbase = { always = no }
 is_progenitor_empires = { always = no }

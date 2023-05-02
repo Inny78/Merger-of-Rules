@@ -278,86 +278,86 @@ giga_mod_country_gets_bank_exclude = {
 		is_country_type = wg_Khan_country_type_auto_delete
 	}
 }
-# is_ndb_immune_star_planet = {
-# 	OR = {
-# 		merg_is_black_or_white_hole = yes
-# 		has_planet_flag = ndb_immune_planet
-# 		solar_system = {
-# 			has_star_flag = ndb_immune_system
-# 		}
-# 	}
-# }
-# ndb_can_target_planet = {
-# 	NOR = {
-# 		AND = {
-# 			is_capital = yes
-# 			exists = owner
-# 			owner = { is_same_value = root }
-# 		}
-# 		is_star = yes
-# 		giga_is_birch_world = yes
-# 		giga_is_alderson_disk = yes
-# 		is_planet_class = pc_ai
-# 		is_planet_class = pc_squareworld_habitable
-# 		has_planet_flag = cant_build_here
-# 		has_planet_flag = cant_target_this_planet
-# 		uses_district_set = virtual_ring
-# 		uses_district_set = virtual_ring_industry
-# 		# Merger of Rules
-# 		has_planet_flag = merg_is_forbidden_target
-# 		merg_is_empty_space = yes
-# 		# ACOT
-# 		is_acot_awesome_planet_class = yes
-# 		# Darkspace
-# 		is_ds_zeitriss_gc = yes
-# 	}
-# }
-# ndb_can_target_system = {
-# 	cohesive_system = no
-# 	compound_cluster = no
-# 	annihilator_system = no
-# 	urmazin_system = no
-# 	everchanging_system = no
-# 	merg_is_hole_star_class = no
-# 	merg_is_void_system = no
-# 	NOR = {
-# 		has_star_flag = blokkat_system_being_stripmined
-# 		has_star_flag = blokkat_stripmined_system
-# 		any_fleet_in_system = {
-# 			exists = owner
-# 			owner = {
-# 				is_country_type = blokkat_stripminers
-# 			}
-# 		}
-# 		OR = {
-# 			merg_has_acot = no
-# 			any_ship_in_system = {
-# 				OR = {
-# 					is_ship_size = sofe_ancient_weapon
-# 					is_ship_size = precursor_colossus
-# 				}
-# 			}
-# 		}
-# 	}
-# 	NOT = {
-# 		any_system_planet = {
-# 			OR = {
-# 				AND = {
-# 					is_capital = yes
-# 					exists = owner
-# 					owner = { is_same_value = root }
-# 				}
-# 				giga_is_birch_world = yes
-# 				giga_is_alderson_disk = yes
-# 				is_planet_class = pc_squareworld_habitable
-# 				is_planet_class = pc_ai
-# 				has_planet_flag = cant_build_here
-# 				has_planet_flag = cant_target_this_planet
-# 				# Merger of Rules
-# 				merg_is_untargetable = yes
-# 				# ACOT
-# 				is_acot_awesome_planet_class = yes
-# 			}
-# 		}
-# 	}
-# }
+is_ndb_immune_star_planet = {
+	OR = {
+		merg_is_black_or_white_hole = yes
+		has_planet_flag = ndb_immune_planet
+		solar_system = {
+			has_star_flag = ndb_immune_system
+		}
+	}
+}
+ndb_can_target_planet = {
+	NOR = {
+		AND = {
+			is_capital = yes
+			exists = owner
+			owner = { is_same_value = root }
+		}
+		is_star = yes
+		giga_is_birch_world = yes
+		giga_is_alderson_disk = yes
+		is_planet_class = pc_ai
+		is_planet_class = pc_squareworld_habitable
+		has_planet_flag = cant_build_here
+		has_planet_flag = cant_target_this_planet
+		uses_district_set = virtual_ring
+		uses_district_set = virtual_ring_industry
+		# Merger of Rules
+		has_planet_flag = merg_is_forbidden_target
+		merg_is_empty_space = yes
+		# ACOT
+		is_acot_awesome_planet_class = yes
+		# Darkspace
+		is_ds_zeitriss_gc = yes
+	}
+}
+ndb_can_target_system = {
+	cohesive_system = no
+	compound_cluster = no
+	annihilator_system = no
+	urmazin_system = no
+	everchanging_system = no
+	merg_is_hole_star_class = no
+	merg_is_void_system = no
+	NOR = {
+		has_star_flag = blokkat_system_being_stripmined
+		has_star_flag = blokkat_stripmined_system
+		any_fleet_in_system = {
+			exists = owner
+			owner = {
+				is_country_type = blokkat_stripminers
+			}
+		}
+		AND = {
+			merg_has_acot = yes
+			any_ship_in_system = {
+				OR = {
+					is_ship_size = sofe_ancient_weapon
+					is_ship_size = precursor_colossus
+				}
+			}
+		}
+	}
+	NOT = {
+		any_system_planet = {
+			OR = {
+				AND = {
+					is_capital = yes
+					exists = owner
+					owner = { is_same_value = root }
+				}
+				giga_is_birch_world = yes
+				giga_is_alderson_disk = yes
+				is_planet_class = pc_squareworld_habitable
+				is_planet_class = pc_ai
+				has_planet_flag = cant_build_here
+				has_planet_flag = cant_target_this_planet
+				# Merger of Rules
+				merg_is_untargetable = yes
+				# ACOT
+				is_acot_awesome_planet_class = yes
+			}
+		}
+	}
+}

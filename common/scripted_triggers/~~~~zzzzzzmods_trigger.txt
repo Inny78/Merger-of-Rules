@@ -275,7 +275,7 @@ bdoe_can_have_random_districts = {
 	OR = {
 		merg_is_basic_habitable = yes
 		# Lithoid Supremacy
-		is_planet_class = pc_geode
+		is_geode_world = yes
 		# Real Space: New Frontiers
 		AND = {
 			merg_has_real_new_frontiers = yes
