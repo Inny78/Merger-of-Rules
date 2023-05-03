@@ -56,14 +56,10 @@ merg_is_arcology = {
 		uses_district_set = ag_city_planet
 		# Azur Lane
 		uses_district_set = azur_harbour
-		# Empires Expanded
-		is_planet_class = pc_city_cep
 		# Forgotten History
 		is_planet_class = pc_apocalyptic_city
 		# Gigastructural Engineering & More
 		uses_district_set = flusion_gaia_ecu
-		# Midas
-		# is_planet_class = pc_midas_city
 		# Planetary Diversity
 		is_pd_arcology = yes
 		is_pd_hive_arcology = yes
@@ -152,8 +148,6 @@ merg_is_frozen = {
 		# Endless Frontier
 		is_planet_class = pc_mzilli_rogue
 		is_planet_class = pc_mzilli_rogue_moon
-		# Planetary Diversity
-		# is_planet_class = pc_subglacial
 	}
 }
 
@@ -215,7 +209,7 @@ merg_is_hive_world = {
 		is_pd_hive_arcology = yes
 		is_pd_megaflora_hive = yes
 		# Planetary Ringworlds
-		is_planet_class = pc_planetary_ringworld_hive
+		is_planetary_ringworld_hive = yes
 		# Voyage to Eternity
 		is_planet_class = pc_KZ_VOY_hive_world
 		# ZOFE
@@ -237,7 +231,7 @@ merg_is_machine_world = {
 		# Origin - F.C.S.S & M.C.S.S
 		uses_district_set = awaken_ai_world
 		# Planetary Ringworlds
-		is_planet_class = pc_planetary_ringworld_machine
+		is_planetary_ringworld_machine = yes
 		# ZOFE
 		uses_district_set = utopian_machine_world
 		uses_district_set = utopian_machine_ringworld

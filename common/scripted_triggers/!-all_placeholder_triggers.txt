@@ -27,6 +27,7 @@ atw_is_tropical = { always = no }
 atw_is_tundra = { always = no }
 bdoe_is_habitable_asteroid = { always = no }
 bdoe_is_habitable_barren = { always = no }
+can_build_senior_lily_garden = { always = no }
 can_fill_holosphere_ruler_job = { always = no }
 cohesive_system = { always = no }
 compound_cluster = { always = no }
@@ -242,6 +243,10 @@ is_pd_unique = { always = no }
 is_pd_wasteland = { always = no }
 is_pearl_born_drone = { always = no }
 is_planetary_diversity_ringworld = { always = no }
+is_planetary_ringworld = { always = no }
+is_planetary_ringworld_city = { always = no }
+is_planetary_ringworld_hive = { always = no }
+is_planetary_ringworld_machine = { always = no }
 is_precursor_starbase = { always = no }
 is_progenitor_empires = { always = no }
 is_projcrim_afflicted = { always = no }

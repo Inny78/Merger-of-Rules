@@ -1,4 +1,4 @@
 # Irony this is a placeholder file please ignore it
-acot_precursor_database = { icon = "GFX_starbase_shipyard" potential = { always = no } resources = { category = starbase_modules } ai_weight = { weight = 0 } }
-AL_AntiFTL = { icon = "GFX_starbase_shipyard" potential = { always = no } resources = { category = starbase_modules } ai_weight = { weight = 0 } }
-ariphaos_sensors_jammer_starbase = { icon = "GFX_starbase_shipyard" potential = { always = no } resources = { category = starbase_modules } ai_weight = { weight = 0 } }
+acot_precursor_database = { icon = "GFX_starbase_shipyard" potential = { always = no } resources = { category = starbase_buildings } ai_weight = { weight = 0 } }
+AL_AntiFTL = { icon = "GFX_starbase_shipyard" potential = { always = no } resources = { category = starbase_buildings } ai_weight = { weight = 0 } }
+ariphaos_sensors_jammer_starbase = { icon = "GFX_starbase_shipyard" potential = { always = no } resources = { category = starbase_buildings } ai_weight = { weight = 0 } }

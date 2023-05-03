@@ -99,8 +99,10 @@ merg_is_hab_ringworld = {
 		# Planetary Diversity
 		is_planetary_diversity_ringworld = yes
 		# Planetary Ringworlds
-		uses_district_set = planet_ring
-		uses_district_set = planet_ring_city
+		is_planetary_ringworld = yes
+		is_planetary_ringworld_city = yes
+		is_planetary_ringworld_hive = yes
+		is_planetary_ringworld_machine = yes
 		# Star Wars: Kuat Ancient Empire
 		is_planet_class = pc_kuat_eternal_ringworld_habitable
 		# Star Wars: UnknownWorld Shipgirls Story
@@ -138,8 +140,10 @@ merg_is_true_ringworld = {
 		# Kancolle
 		uses_district_set = kancolle_ring_world
 		# Planetary Ringworlds
-		uses_district_set = planet_ring
-		uses_district_set = planet_ring_city
+		is_planetary_ringworld = yes
+		is_planetary_ringworld_city = yes
+		is_planetary_ringworld_hive = yes
+		is_planetary_ringworld_machine = yes
 		# Warship Girls and MIST species
 		uses_district_set = rw_sh_world
 		uses_district_set = rw_port_world
