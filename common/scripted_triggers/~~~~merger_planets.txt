@@ -178,9 +178,9 @@ merg_is_gas_giant_habitable = {
 		# Gigastructural Engineering & More
 		is_giga_habitable_gas_giant = yes
 		is_planet_class = pc_giga_maginot_gas_giant
+		# giga_is_maginot_gas_giant = yes
 		# Planetary Diversity
-		is_planet_class = pc_pd_gas_giant_hab
-		# is_pd_gas_giant_habitable = yes
+		is_pd_gas_giant_habitable = yes
 		# TimeMod
 		is_tm_gas_colony = yes
 	}
@@ -194,8 +194,7 @@ merg_is_gas_giant = {
 		# Azur Lane
 		is_planet_class = pc_azur_gas_giant
 		# Planetary Diversity
-		is_planet_class = pc_dwarf_gas_giant
-		# is_pd_gas_giant = yes
+		is_pd_gas_giant = yes
 	}
 }
 
@@ -210,8 +209,6 @@ merg_is_hive_world = {
 		is_pd_megaflora_hive = yes
 		# Planetary Ringworlds
 		is_planetary_ringworld_hive = yes
-		# Voyage to Eternity
-		is_planet_class = pc_KZ_VOY_hive_world
 		# ZOFE
 		uses_district_set = utopian_hive_world
 		uses_district_set = utopian_hive_ringworld
@@ -331,8 +328,6 @@ merg_is_shroud_habitable = {
 		is_pd_shroud_world = yes
 		# Rozen Maiden Suigintou
 		is_planet_class = pc_roz_YS_planet
-		# Shroud Rising
-		is_planet_class = pc_shroud_touched
 		# TimeMod
 		is_tm_psionic_world = yes
 	}

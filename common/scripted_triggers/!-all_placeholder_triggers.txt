@@ -61,6 +61,7 @@ giga_is_edge_of_eternity = { always = no }
 giga_is_empty_space = { always = no }
 giga_is_katzenland = { always = no }
 giga_is_lifeless = { always = no }
+giga_is_maginot_gas_giant = { always = no }
 giga_is_playable_country = { always = no }
 giga_is_unscrappable = { always = no }
 giga_is_vat_leviathan = { always = no }

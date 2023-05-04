@@ -189,6 +189,14 @@ ag_has_planetary_shield = {
 	}
 }
 
+############################### Assault Lily ###############################
+is_planet_habitable = {
+	AND = {
+		is_artificial = no
+		colonizable_planet = yes
+	}
+}
+
 ############################### BlueArchive ###############################
 
 is_BA_fallen_empire = {

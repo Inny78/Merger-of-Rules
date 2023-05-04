@@ -821,6 +821,8 @@ has_any_industry_district = {
 		has_district = PR_DSTR_hab_catalytic
 		# Nanite Machines & Distant Stars Overhaul
 		has_district = district_nanite_forgeworld_industry
+		# Warship Girls R and MIST Species
+		has_district = district_dr_industrial
 		# Wula Fallen Empire
 		has_district = district_wandering_knight_order_industry
     }
