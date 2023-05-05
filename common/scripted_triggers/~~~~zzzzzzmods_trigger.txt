@@ -1456,7 +1456,12 @@ kuat_is_defense_galaxy_fleet = {
 		}
 	}
 }
-
+kuat_is_ringworld = {
+	merg_is_hab_ringworld = yes
+}
+kuat_is_habitat = {
+	merg_is_habitat = yes
+}
 ############################### ThaumStellaris ###############################
 tc_element_shard_candidate = {
 	optimize_memory

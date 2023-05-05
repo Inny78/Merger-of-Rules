@@ -2114,6 +2114,7 @@ can_orbital_bombard = {
 		from = { is_planet_class = pc_hollow }
 		# Star Wars: Kuat Ancient Empire
 		FROM.OWNER = { is_country_type = kuat_fire_base_hositle }
+		FROM = { has_planet_flag = enable_kuat_shield }
 		# ACOT
 		AND = {
 			OWNER = { is_progenitor_empires = no }
@@ -2864,19 +2865,11 @@ can_enter_system_by_jump = {
 						has_star_flag = wg_sealed_system
 						has_star_flag = wg_psionic_systems
 						# SW:Kuat Ancient Empire
-						has_star_flag = Kuat_system
-						has_star_flag = Kuat_system_1
-						has_star_flag = Kuat_system_2
-						has_star_flag = Kuat_system_3
-						has_star_flag = kuat_initial_system
-						has_star_flag = Kuat_system_int
-						has_star_flag = Kuat_system_int_1
-						has_star_flag = Kuat_system_int_2
-						has_star_flag = Kuat_system_int_3
-						has_star_flag = Kuat_system_int_4
+						kuat_is_kuat_system = yes
+						has_star_flag = ag_kae_e_area_system
 						AND = {
 							has_global_flag = starkillerbase_not_passed
-							has_star_flag = starkiller_system
+							has_star_flag = starkiller_system	
 						}
 						# Gigastructural Engineering and More
 						has_star_flag = ehof_compound_system

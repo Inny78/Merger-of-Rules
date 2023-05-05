@@ -268,7 +268,7 @@ merg_has_cloning_building = {
 		# AOT
 		has_building = building_stellarite_clone_vats
 		has_building = building_phanon_clone_vats
-		# AVB
+		# Additional Vanilla Buildings
 		has_building = building_avb_clone_vats_2
 		# Ascension - Biological Module
 		has_building = building_omega_cloning_vats
