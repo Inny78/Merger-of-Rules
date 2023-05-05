@@ -401,7 +401,32 @@ can_get_claim_from_lost_system = {
 }
 
 # species_has_citizenship
-# should_abduct_pop
+
+#Root = country
+#This = pop
+should_abduct_pop = {
+	planet = {
+		exists = owner
+		owner = { is_hostile = root }
+	}
+	OR = {
+		ROOT = { has_valid_civic = civic_living_hosts }
+		# Expanded Traits, Civics, Pops, and More
+		ROOT = { has_government = gov_parasitic_overmind }
+		# Vanilla
+		NAND = {
+			has_citizenship_type = { type = citizenship_purge country = root }
+			NOR = {
+				has_purge_type = { type = purge_matrix country = root }
+				has_purge_type = { type = purge_processing country = root }
+				has_purge_type = { type = purge_labor_camps country = root }
+				has_purge_type = { type = purge_necrophage country = root }
+			}
+		}
+	}
+	# V_TRAITS
+	is_v_mobile = yes
+}
 
 #Root = planet
 #This = species
@@ -1509,6 +1534,8 @@ can_species_procreate = {
 		has_trait = trait_mahoshoujo
 		# Plentiful Traditions - Extra Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
+		# V_TRAITs
+		has_trait = trait_v_difficult_reproduction
 		# Wandering Witch: Voyagers
 		has_trait = trait_dummy
 	}
@@ -3953,17 +3980,14 @@ can_be_sold_on_slave_market = {
 		has_trait = trait_organic_fourschildren
 		has_trait = trait_organic_fourschildren_2
 		# is_organic_fourschildren = yes
-		# V_Traits
-		AND = {
-			merg_has_v_traits = yes
-			is_v_mobile = yes
-		}
 		# Wandering Witch: Voyagers
 		has_trait = trait_servitude
 		has_trait = trait_reanimated_materials
 		# Warship Girls R And MIST Species
 		has_wg_traits = yes
 	}
+	# V_TRAITS
+	is_v_mobile = yes
 }
 
 # This = country
@@ -4441,6 +4465,8 @@ can_fill_worker_job = {
 			OR = {
 				has_slavery_type = { type = slavery_livestock }
 				has_slavery_type = { type = slavery_matrix }
+				# V_TRAITS
+				has_slavery_type = { type = slavery_s_test_subjects }
 			}
 		}
 		if = {
