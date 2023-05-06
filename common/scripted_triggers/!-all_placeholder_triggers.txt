@@ -80,6 +80,8 @@ has_auth_holofrixit = { always = no }
 has_bug_branch = { always = no }
 has_civic_organic_zealots_active = { always = no }
 has_civic_organic_zealots_active = { always = no }
+has_corporate_imperial_auth = { always = no }
+has_dict_democratic_auth = { always = no }
 has_ecaf_triggers = { always = no }
 has_ethical_gestalts = { always = no }
 has_exotic_gas_dependency = { always = no }
@@ -106,6 +108,7 @@ has_species_trait_holowarrior = { always = no }
 has_species_trait_holodrone = { always = no }
 has_species_trait_holofrixigram = { always = no }
 has_str_genemodding_tech = { always = no }
+has_strict_democratic_auth = { always = no }
 has_upgraded_penal_capital = { always = no }
 has_wg_traits = { always = no }
 has_wsg_genemodding_tech = { always = no }

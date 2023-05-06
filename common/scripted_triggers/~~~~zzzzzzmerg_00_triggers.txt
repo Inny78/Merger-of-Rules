@@ -256,7 +256,7 @@ is_megacorp = {
 		is_exp_private_auth = yes
 		is_exp_cooperative = yes
 		# More Authorities/E&C FunEFork
-		has_authority = auth_corporate_imperial
+		has_corporate_imperial_auth = yes
 		# More Corporate Authorities
 		has_mca_auth_cooperative = yes
 		has_mca_auth_private = yes
@@ -312,17 +312,18 @@ is_democracy = {
 			merg_has_expanded_pops = no
 			merg_has_ecaf = no
 		}
-		# More Authorities/E&C FunEFork
-		has_authority = auth_strict_democratic
-		has_authority = auth_direct_democratic
-		AND = {
-			has_authority = auth_dict_democratic
-			is_egalitarian = yes
-		}
-		# Expanded Traits, Civics, Pops, and More
-		is_exp_cooperative = yes
 		# Ethics and Civics Bug Branch
 		is_bugged_megacorp = yes
+		# Ethics and Civics Classic
+		has_authority = auth_direct_democratic
+		# Expanded Traits, Civics, Pops, and More
+		is_exp_cooperative = yes
+		# More Authorities/E&C FunEFork
+		has_strict_democratic_auth = yes
+		AND = {
+			has_dict_democratic_auth = yes
+			is_egalitarian = yes
+		}
 	}
 }
 
