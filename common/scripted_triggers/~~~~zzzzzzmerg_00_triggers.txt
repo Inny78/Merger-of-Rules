@@ -762,6 +762,8 @@ has_research_building = {
 		has_building = building_kancolle_yubari_research2
 		has_building = building_kancolle_yubari_research3
 		# More Standard Districts
+		has_district = district_hab_science
+		has_district = district_rw_science
 		has_district = district_standard_cm_science
 		# Planetary Diversity
 		has_building = building_storm_lab

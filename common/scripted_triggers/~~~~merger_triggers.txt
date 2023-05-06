@@ -231,7 +231,7 @@ merg_is_special_colony = {
 		# Planetary Diversity
 		is_pd_habitat = yes
 		# Gigastructural Engineering & More
-		is_planet_class = pc_ehof_habitat
+		has_planet_flag = enigmatic_colony_flag # pc_ehof_habitat
 		is_regular_giga_maginot_world = yes
 		uses_district_set = giga_planetary_computer
 		uses_district_set = virtual_ring
