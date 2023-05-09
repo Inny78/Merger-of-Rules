@@ -2507,22 +2507,7 @@ ai_should_restrict_system = {
 			has_global_flag = gray_goo_crisis_active
 		}
 		# Gigastructural Engineering & More
-		AND = {
-			merg_has_gigastructures = yes
-			NOT = { has_global_flag = katzenartig_imperium_happened }
-			OR = {
-				has_global_flag = katzenartig_always
-				has_global_flag = katzenartig_deathwish
-				has_global_flag = katzenartig_stellarite
-				has_global_flag = katzenartig_improbable
-			}
-			has_star_flag = flusion_system
-			exists = event_target:gigaflusion
-			event_target:gigaflusion = {
-				exists = owner
-				owner = { is_country_type = primitive }
-			}
-		}
+		giga_ai_should_restrict_system = yes
 		# Spaceborne Civs Expanded
 		AND = {
 			root = {
