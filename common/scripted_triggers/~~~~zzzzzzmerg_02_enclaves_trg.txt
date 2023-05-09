@@ -1,4 +1,4 @@
-# Vanilla scripted triggers from 0é_scripted_triggers_enclaves.txt
+# Vanilla scripted triggers from 02_scripted_triggers_enclaves.txt
 
 fleet_can_be_scrapped = {
 	owner = { is_same_value = root }
@@ -17,10 +17,6 @@ fleet_can_be_scrapped = {
 		AND = {
 			is_scope_type = fleet
 			has_fleet_flag = stu_fleet_cant_be_scrapped
-		}
-		AND = {
-			is_scope_type = ship
-			has_ship_flag = stu_ship_cant_be_scrapped
 		}
 		# Voyage to Eternity
 		is_ship_size = KZ_VOY_battlestar

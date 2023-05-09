@@ -1089,9 +1089,7 @@ can_destroy_planet_with_PLANET_KILLER_WATERB = {
 	OR = {
 		hidden_trigger = {
 			AND = {
-				FROM = {
-					has_fleet_flag = RBQ_Dragon_fleet
-				}
+				FROM = { has_fleet_flag = RBQ_Dragon_fleet }
 				NOT = { is_planet_class = pc_wg_water }
 			}
 		}
@@ -1161,16 +1159,12 @@ wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 			OR = {
 				AND = {
 					exists = space_owner
-					space_owner = {
-						merg_is_at_war = yes
-					}
+					space_owner = { merg_is_at_war = yes }
 				}
 				AND = {
 					# colony
 					exists = owner
-					owner = {
-						merg_is_at_war = yes
-					}
+					owner = { merg_is_at_war = yes }
 				}
 				AND = {
 					# primitive
@@ -1179,9 +1173,7 @@ wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 					owner = {
 						is_primitive = yes
 					}
-					space_owner = {
-						merg_is_at_war = yes
-					}
+					space_owner = { merg_is_at_war = yes }
 				}
 			}
 		}
@@ -1196,9 +1188,7 @@ wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 				}
 				AND = {
 					exists = space_owner
-					space_owner = {
-						is_same_value = root.owner
-					}
+					space_owner = { is_same_value = root.owner }
 				}
 			}
 			OR = {

@@ -1,65 +1,11 @@
-default = {
-    ship_of_size_limits = {
-        progenitor_ships_limit
-        titan_ships_limit
-        colossus_ships_limit
-        juggernaut_ships_limit
-        space_dragon_origin_babies_limit
-        # AOT
-        aot_gatekeeper_ships_limit
-        aot_juggernaut_ships_limit
-        aot_fe_juggernaut_ships_limit
-		# AssaultLily In Stellaris
-		lily_college_ship_ships_limit
-		lily_charmship_ship_ships_limit
-		AL_New_Jerusalem_ships_limit
-        # Azur Lane Stellaris Dlc
-		azur_flagship_limit
-		azur_nsc_battleship_S_limit
-		azur_nsc_carrier_S_limit
-		altair_flagship_limit
-		azur_super_battale_ship_limit
-		# BlueArchive
-		BA_hub_ships_limit
-		# Culture Special Ships
-		CSS_TI_REJUVENATOR_limit
-		CSS_JG_DREADNOUGHT_limit
-        # Darkspace
-        ds_nomads_main_ships_limit
-        ds_nomads_ark_ships_limit
-        ds_nomads_res_ships_limit
-        ds_deathstar_ships_limit
-        ds_endzeit_ships_limit
-        ds_will_ships_limit
-        # Hypertraversal Manipulation Augur
-        htm_augur_ships_limit
-		# Long Journey
-		KZ_VOY_exploration_cruiser_ships_limit
-		KZ_VOY_strike_suppression_battleship_ships_limit
-		KZ_VOY_command_dreadnought_ships_limit
-		KZ_VOY_battle_carrier_ships_limit
-		# NSC
-		headquarters_ship_limit
-		explorationship_ship_limit
-		# Unique Ascension Perks
-		civilian_factory_ships_limit
-		civilian_industrial_ships_limit
-		# Wiirlak Additional Civics & Origins
-		wiirlak_ac_flotilla_ship_ships_limit
-    }
-}
+# Note for overwriting: ownership_limits are extendable/additive. So if you make a second "default" and
+# add a single ship_of_size_limit inside it, it will apply both the limits described here, and the one
+# that you specified.
+# To do a full overwrite, you need to overwrite 00_ownership_limits.txt instead.
 
 # The Empty Vagrant
 default_ev = {
 	ship_of_size_limits = {
-		progenitor_ships_limit
-		titan_ships_limit
-		colossus_ships_limit
-		juggernaut_ships_limit
-		space_dragon_origin_babies_limit
-		homeless_ships_limit
-		megastructures_ships_limit
-		ambassador_ships_limit
 		# AOT
         aot_gatekeeper_ships_limit
         aot_juggernaut_ships_limit
@@ -90,19 +36,6 @@ default_ev = {
 # Darkspace
 darkspace_ownership_limit = {
 	ship_of_size_limits = {
-		# Vanilla
-		progenitor_ships_limit
-		titan_ships_limit
-		colossus_ships_limit
-		juggernaut_ships_limit
-		space_dragon_origin_babies_limit
-		# DarkSpace		
-		ds_nomads_main_ships_limit
-		ds_nomads_ark_ships_limit
-		ds_nomads_res_ships_limit
-		ds_deathstar_ships_limit
-		ds_endzeit_ships_limit
-		ds_will_ships_limit
 		# AOT
         aot_gatekeeper_ships_limit
         aot_juggernaut_ships_limit

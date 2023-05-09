@@ -123,6 +123,8 @@ is_acot_advanced_starbase = { always = no }
 is_acot_awesome_planet_class = { always = no }
 is_acot_fractured_planet_class = { always = no }
 is_acot_pmc_vault = { always = no }
+is_acot_sbtg_arkship = { always = no }
+is_acot_void_hole = { always = no }
 is_aot_habitat = { always = no }
 is_aot_macripp = { always = no }
 is_ascended_juggernaut = { always = no }
@@ -200,7 +202,9 @@ is_khan_country_type = { always = no }
 is_KZ_VOY_organic_species = { always = no }
 is_living_architecture = { always = no }
 is_mage = { always = no }
+is_mindless_undead = { always = no }
 is_multihive_drone = { always = no }
+is_necromage = { always = no }
 is_nirvana_empire = { always = no }
 is_organic_fourschildren = { always = no }
 is_organic_zealots = { always = no }
@@ -278,6 +282,7 @@ is_tm_psionic_world = { always = no }
 is_tm_nanites_world = { always = no }
 is_tm_reassembler = { always = no }
 is_the_belt_active = { always = no }
+is_undead = { always = no }
 is_v_mobile = { always = yes }
 is_valid_GF_OGAS_subnet = { always = no }
 is_valid_organic_zealots = { always = no }

@@ -400,6 +400,7 @@ can_get_claim_from_lost_system = {
 	}
 }
 
+# should_surrender_planets_to
 # species_has_citizenship
 
 #Root = country
@@ -503,6 +504,8 @@ species_can_live_on_planet = {
 }
 
 # can_vote_in_democratic_election
+# should_pay_for_leader_upkeep
+
 #Checks whether any leaders (scientists etc) can be formed from this pop
 #Root = country
 #This = pop
@@ -1170,6 +1173,13 @@ can_terraform_planet = {
 		}
 	}
 	custom_tooltip = {
+		fail_text = "legendary_leader_planet_no_terraform"
+		exists = root
+		this = {
+			NOT = { has_planet_flag = legendary_leader_planet }
+		}
+	}
+	custom_tooltip = {
 		fail_text = requires_not_relentless_industrialists_situation
 		NOT = { any_targeting_situation = { is_situation_type = relentless_industrialists_situation } }
 	}
@@ -1357,11 +1367,14 @@ species_has_happiness = {
 		# Diagraphers Trait Mod
 		is_multihive_drone = yes
 		# ThaumStellaris
-		species = {
-			OR = {
-				is_archetype = TC_GOLEM
-				is_archetype = TC_GOLEM_HIVE
-				is_archetype = TC_GOLEM_MACHINE
+		AND = {
+			merg_has_thaumstellaris = yes
+			species = {
+				OR = {
+					is_archetype = TC_GOLEM
+					is_archetype = TC_GOLEM_HIVE
+					is_archetype = TC_GOLEM_MACHINE
+				}
 			}
 		}
 		# Trait Diversity
@@ -1915,11 +1928,7 @@ can_species_be_assembled = {
 			# Planetary Diversity
 			else_if = {
 				limit = {
-					OR = {
-						has_trait = trait_organic_fourschildren
-						has_trait = trait_organic_fourschildren_2
-					}
-					# is_organic_fourschildren = yes
+					is_organic_fourschildren = yes
 				}
 				root = {
 					has_building = building_techno_04_clone_vat
@@ -1980,12 +1989,11 @@ can_species_be_assembled = {
 			else_if = {
 				limit = {
 					OR = {
-						has_trait = trait_necromage
-						has_trait = trait_undead
-						has_trait = trait_mindless_undead
+						is_necromage = yes
+						is_undead = yes
+						is_mindless_undead = yes
 					}
 				}
-				always = yes
 			}
 			# Vanilla
 			else = {
@@ -2621,6 +2629,12 @@ ai_should_restrict_system = {
 }
 
 # can_subjugate_empires
+# can_leader_get_council_trait
+# can_leader_get_normal_trait
+# can_leader_get_subclass_trait
+# can_leader_get_destiny_trait
+# has_extra_council_position
+
 # this = Fleet
 can_jump_drive = {
 	# Ancient Empire
@@ -2950,7 +2964,7 @@ can_resettle_pop = {
 	hidden_trigger = {	# not sure if ai will know not to move pops to planets where they'll immediately start declining otherwise
 		OR = {
 			owner = { is_ai = no }
-			NOT = { has_trait = trait_hive_mind }
+			NOT = { merg_has_hive_trait = yes }
 			owner = { is_hive_empire = yes }
 		}
 	}
@@ -2958,6 +2972,14 @@ can_resettle_pop = {
 	custom_tooltip = {
 		fail_text = "self_modified_refuse"
 		NOT = { has_trait = trait_self_modified }
+	}
+	custom_tooltip = {
+		fail_text = "origin_egalitarian_refuse"
+		NAND = {
+			pop_has_ethic = ethic_egalitarian
+			is_enslaved = no
+			planet = { has_modifier = paragon_origin_reformists }
+		}
 	}
 	# Expanded Traits, Civics, Pops, and More
 	custom_tooltip = {
@@ -3225,11 +3247,7 @@ should_force_decline_species = {
 		# Planetary Diversity
 		custom_tooltip = {
 			success_text = UNIT04CHILDREN_FORCE_DECLINE
-			OR = {
-				has_trait = trait_organic_fourschildren
-				has_trait = trait_organic_fourschildren_2
-			}
-			# is_organic_fourschildren = yes
+			is_organic_fourschildren = yes
 			from = {
 				OR = {
 					AND = {
@@ -3970,9 +3988,7 @@ can_be_sold_on_slave_market = {
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_cocoon
 		# Planetary Diversity
-		has_trait = trait_organic_fourschildren
-		has_trait = trait_organic_fourschildren_2
-		# is_organic_fourschildren = yes
+		is_organic_fourschildren = yes
 		# Wandering Witch: Voyagers
 		has_trait = trait_servitude
 		has_trait = trait_reanimated_materials
@@ -4369,7 +4385,6 @@ can_modify_organic_portraits = {
 # can_have_first_contact
 # can_use_envoys_to_raise_imperial_authority
 # can_use_envoys_to_lower_imperial_authority
-# should_planetary_automate
 
 #this/root = pop
 #checked if job's possible_precalc = can_fill_drone_job
@@ -4662,17 +4677,17 @@ can_fill_ruler_job = {
 }
 
 # should_planetary_automate
+# dismiss_leader_cost
+
 # this = leader
 can_dismiss_leader = {
-	custom_tooltip = {
-		fail_text = "requires_actor_not_feudal_society"
-		exists = owner
-		owner = { NOT = { has_valid_civic = civic_feudal_realm } }
-	}
 	if = {
 		limit = {
 			leader_class = admiral
 			is_idle = no
+			# Rulers and heirs can't be dismissed any way and can be non-idle
+			is_ruler = no
+			is_heir = no
 		}
 		custom_tooltip = {
 			fail_text = "requires_fleet_control"
@@ -4683,6 +4698,18 @@ can_dismiss_leader = {
 					is_same_value = prevprev.owner
 				}
 			}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				is_heir = yes
+				is_ruler = yes
+			}
+		}
+		custom_tooltip = {
+			always = no
+			fail_text = "can_not_dismiss_rulers"
 		}
 	}
 	# Assault Lily
@@ -4713,6 +4740,9 @@ can_dismiss_leader = {
 	}
 }
 
+# can_country_change_councilors
+# should_count_towards_leader_cap
+
 # From = country, country that tries to connect using relay network
 # ROOT/This = country, target country to connect to using relay network
 can_country_connect_to_relay_network = {
@@ -4736,6 +4766,10 @@ can_country_connect_to_relay_network = {
 		NOT = { is_at_war_with = from }
 	}
 }
+
+# should_ai_build_stronghold_on_vulnerable_planet
+# will_leader_retire
+# can_get_external_leader_pool_candidate
 
 # This = leader, leader we'd like to trade
 # Root = country, country that owns the leader currently
@@ -4841,6 +4875,13 @@ can_trade_fleet = {
 	}
 }
 
+# chance_for_external_leader_pool
+# council_agenda_early_activation_cost
+# leader_election_elect_cost
+# emergency_election_cost_rule
+# leader_election_support_cost
+# leader_election_weight
+# are_pre_ftls_unaware
 # is_terraforming_candidate
 # has_ascension_for_terraforming_candidate
 # can_be_renamed_by

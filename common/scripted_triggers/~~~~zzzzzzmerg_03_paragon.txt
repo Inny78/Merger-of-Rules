@@ -1,0 +1,14 @@
+is_hive_species = {
+	species = {
+		merg_has_hive_trait = yes
+	}
+}
+
+is_azaryn_preferred_terraform_pc = {
+	OR = {
+		merg_is_barren = yes
+		merg_is_barren_cold = yes
+	}
+	planet_size >= 10
+	NOT = { has_planet_flag = terraform_nucleus_transfixed }
+}

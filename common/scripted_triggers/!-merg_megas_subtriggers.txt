@@ -88,6 +88,18 @@ merg_has_ringworld_type = {
 		has_megastructure = ring_world_3_intermediate
 		has_megastructure = ring_world_ruined
 		has_megastructure = ring_world_restored
+		# Azur Lane Stellaris DLC
+		has_megastructure = azur_01_ring_world_1
+		has_megastructure = azur_01_ring_world_2
+		has_megastructure = azur_01_ring_world_2_intermediate
+		has_megastructure = azur_01_ring_world_3_intermediate
+		has_megastructure = azur_02_ring_world_1
+		has_megastructure = azur_02_ring_world_2
+		has_megastructure = azur_02_ring_world_2_intermediate
+		has_megastructure = azur_02_ring_world_3_intermediate
+		# Darkspace
+		has_megastructure = ancient_ring_world_ruined
+		has_megastructure = ancient_ring_world_restored
 		# Gigas
 		has_megastructure = ringworld_t_3x_segment
 		has_megastructure = ringworld_b_3x_segment
@@ -106,9 +118,12 @@ merg_has_ringworld_type = {
 		has_megastructure = r_square_world_hub_powered
 		has_megastructure = r_square_world_restored
 		has_megastructure = r_square_world_ruined
-		# Darkspace
-		has_megastructure = ancient_ring_world_ruined
-		has_megastructure = ancient_ring_world_restored
+		# Planetary Ringworlds
+		has_megastructure = planet_ring_0
+		has_megastructure = planet_ring_0_machine
+		has_megastructure = planet_ring_0_hive
+		has_megastructure = planet_ring_0_city
+		has_megastructure = planet_ring_1
 		# Warship Girls R and MIST Species
 		has_megastructure = ration_dyson_ring_faster
 		has_megastructure = ration_dyson_ring_low
@@ -126,15 +141,6 @@ merg_has_ringworld_type = {
 		has_megastructure = uf_ring_shipyard_3
 		has_megastructure = uf_hm_ring
 		has_megastructure = uf_hm_ring_1
-		# Azur Lane Stellaris DLC
-		has_megastructure = azur_01_ring_world_1
-		has_megastructure = azur_01_ring_world_2
-		has_megastructure = azur_01_ring_world_2_intermediate
-		has_megastructure = azur_01_ring_world_3_intermediate
-		has_megastructure = azur_02_ring_world_1
-		has_megastructure = azur_02_ring_world_2
-		has_megastructure = azur_02_ring_world_2_intermediate
-		has_megastructure = azur_02_ring_world_3_intermediate
 	}
 }
 

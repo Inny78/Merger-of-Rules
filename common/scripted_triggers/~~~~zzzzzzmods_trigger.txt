@@ -461,7 +461,7 @@ is_toxic = {
 	merg_is_toxic = yes
 }
 is_gas_giant = {
-	merg_is_gas_giant = yes
+	merg_is_gas_giant = yes # Also Kancolle
 }
 is_desert = {
 	merg_is_desert = yes
@@ -917,12 +917,6 @@ infmod_is_relevant = {
 	}
 }
 
-############################### Kancolle ###############################
-is_gas_giant = {
-	optimize_memory
-	merg_is_gas_giant = yes
-}
-
 ############################### Legendary Worlds ###############################
 legw_planet_uninhabitable = {
 	optimize_memory
@@ -1352,6 +1346,7 @@ is_moon_of_gas_giant = {
 	exists = orbit
 	OR = {
 		orbit = { merg_is_gas_giant = yes }
+		orbit = { merg_is_gas_giant_habitable = yes }
 		has_planet_flag = gas_giant_moon
 	}
 }

@@ -245,6 +245,13 @@ is_regular_empire_or_primitive = {
 	}
 }
 
+is_default_or_fallen = {
+	OR = {
+		merg_is_default_empire = yes
+		is_fallen_empire = yes
+	}
+}
+
 is_megacorp = {
 	OR = {
 		has_authority = auth_corporate
@@ -512,9 +519,7 @@ is_crossbreeding_possible = {
 		has_trait = trait_clone_soldier_infertile
 		has_trait = trait_clone_soldier_infertile_full_potential
 		# Planetary Diversity - Unique Worlds
-		has_trait = trait_organic_fourschildren
-		has_trait = trait_organic_fourschildren_2
-		# is_organic_fourschildren = yes
+		is_organic_fourschildren = yes
 		# Expanded Traits, Civics, Pops, and More
 		has_trait = trait_clones
 		AND = {
