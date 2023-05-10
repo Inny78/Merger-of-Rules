@@ -188,6 +188,16 @@ ag_has_planetary_shield = {
 		has_active_building = building_tc_rune_shield_t3
 	}
 }
+ag_is_star_killer_special_system = {
+	optimize_memory
+	OR = {
+		has_star_flag = ag_no_star_killer_target_system
+		kuat_is_kuat_system = yes
+		# Gigastructural Engineering & More
+		has_star_flag = ehof_compound_system
+		has_star_flag = giga_core_03
+	}
+}
 
 ############################### Assault Lily ###############################
 is_planet_habitable = {

@@ -64,6 +64,7 @@ giga_is_katzenland = { always = no }
 giga_is_lifeless = { always = no }
 giga_is_maginot_gas_giant = { always = no }
 giga_is_playable_country = { always = no }
+giga_is_special_primitive = { always = no }
 giga_is_unscrappable = { always = no }
 giga_is_vat_leviathan = { always = no }
 giga_is_vat_normal = { always = no }
