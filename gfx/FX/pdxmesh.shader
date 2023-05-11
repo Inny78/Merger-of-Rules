@@ -4787,3 +4787,32 @@ Effect GigaDebug
 	VertexShader = "VertexPdxMeshStandard"
 	PixelShader = "PixelGigaDebug"
 }
+
+#  // Ringworld Graphical Enhancements
+
+Effect PdxMeshCloudsAnimateUV #//custom shader added by corsairmarks - I just want ringworld clouds to animate!
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshShip"
+	BlendState = "BlendStateAlphaBlend";
+	Defines = {
+		"IS_PLANET"
+		"IS_CLOUDS"
+		"ANIMATE_UV"
+		"NO_ALPHA_MULTIPLIED_EMISSIVE"
+	}
+}
+
+Effect PdxMeshCloudsAnimateUVShadow #// required to exist by the game, but unused
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshShip"
+	BlendState = "BlendStateAlphaBlend";
+	Defines = {
+		"IS_PLANET"
+		"IS_CLOUDS"
+		"IS_SHADOW"
+		"ANIMATE_UV"
+		"NO_ALPHA_MULTIPLIED_EMISSIVE"
+	}
+}
