@@ -307,7 +307,7 @@ merg_has_hive_trait = {
 		# Ethics and Civics - Bug Branch
 		is_bugged_happy_drone = yes
 		# Trait Diversity
-		has_trait = trait_td_multi_hiveminded
+		is_td_multi_hiveminded = yes
 		# Diagraphers Trait Mod
 		is_multihive_drone = yes
 	}

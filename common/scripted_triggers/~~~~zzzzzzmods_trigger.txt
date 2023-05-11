@@ -1004,12 +1004,7 @@ mem_has_happiness = {
 			}
 		}
 		# Trait Diversity
-		has_trait = trait_td_multi_hiveminded
-		has_trait = trait_td_emotionless
-		has_trait = trait_td_psychopathic
-		has_trait = trait_td_thymoleptic_implants
-		has_trait = trait_td_rbot_thymoleptic_scripts
-		has_trait = trait_td_rbot_thought_inhibitor
+		td_has_no_happiness = yes
 		# Wandering Witch: Voyagers
 		has_trait = trait_servitude
 		AND = {

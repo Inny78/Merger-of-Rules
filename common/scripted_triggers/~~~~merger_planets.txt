@@ -56,6 +56,9 @@ merg_is_arcology = {
 		uses_district_set = ag_city_planet
 		# Azur Lane
 		uses_district_set = azur_harbour
+		# Expanded Gestalts - Forgotten Queens
+		is_fq_hollow = yes
+		is_fq_matryoshka = yes
 		# Forgotten History
 		is_planet_class = pc_apocalyptic_city
 		# Gigastructural Engineering & More

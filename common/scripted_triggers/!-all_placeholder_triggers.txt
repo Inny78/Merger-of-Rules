@@ -278,6 +278,7 @@ is_submerged = { always = no }
 is_subsapient_form = { always = no }
 is_symbiote = { always = no }
 is_symbiote_of_prevprev = { always = no }
+is_td_multi_hiveminded = { always = no }
 is_tm_black_hole = { always = no }
 is_tm_gas_colony = { always = no }
 is_tm_psionic_world = { always = no }
@@ -320,6 +321,7 @@ policies_allow_breeding = { always = yes }
 prob_forced_armageddon_bombardment = { always = no }
 robot_has_rare_crystal_comp = { always = no }
 systems_blokkats_wont_stripmine = { always = no }
+td_has_no_happiness = { always = no }
 TIME_RULE_trgr_spcs_CAN_live_on_planet = { always = yes }
 traits_restrict_specialist_jobs = { always = no }
 traits_restrict_worker_jobs = { always = no }
