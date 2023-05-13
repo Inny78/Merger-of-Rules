@@ -52,6 +52,10 @@ merg_is_alpine = {
 merg_is_arcology = {
 	OR = {
 		is_planet_class = pc_city
+		uses_district_set = city_world
+		# Excluding habitats
+		is_pc_mem_vazuran_habitat = no
+		is_ds_skycatcher = no
 		# Ancient Empire
 		uses_district_set = ag_city_planet
 		# Azur Lane
@@ -59,8 +63,6 @@ merg_is_arcology = {
 		# Expanded Gestalts - Forgotten Queens
 		is_fq_hollow = yes
 		is_fq_matryoshka = yes
-		# Forgotten History
-		is_planet_class = pc_apocalyptic_city
 		# Gigastructural Engineering & More
 		uses_district_set = flusion_gaia_ecu
 		# Planetary Diversity
@@ -70,7 +72,7 @@ merg_is_arcology = {
 		# Pokémon
 		uses_district_set = EOE_city_world
 		# Star Wars: Kuat Ancient Empire
-		is_planet_class = pc_kuat_eternal_city
+		uses_district_set = Eternal_city
 		# Voyage to Eternity
 		uses_district_set = KZ_VOY_hyper_ecumenopolis
 		# Warhammer 40K Planets
