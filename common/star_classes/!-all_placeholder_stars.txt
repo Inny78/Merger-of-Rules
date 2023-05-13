@@ -1,8 +1,12 @@
 # Irony this is a placeholder file please ignore it
 sc_ae = { class = g_star spawn_odds = 0 }
-sc_ag_void = { class = g_star spawn_odds = 0 }
+sc_Aemethms = { class = g_star spawn_odds = 0 }
 sc_a_super = { class = g_star spawn_odds = 0 }
 sc_acot_void_star = { class = g_star spawn_odds = 0 }
+sc_ag_void = { class = g_star spawn_odds = 0 }
+sc_ag_void_alt = { class = g_star spawn_odds = 0 }
+sc_Arena = { class = g_star spawn_odds = 0 }
+sc_aso_gg_white_hole = { class = g_star spawn_odds = 0 }
 sc_b_super = { class = g_star spawn_odds = 0 }
 sc_binary_pl_n = { class = g_star spawn_odds = 0 }
 sc_binary_pl_pl = { class = g_star spawn_odds = 0 }
@@ -21,6 +25,7 @@ sc_f_super = { class = g_star spawn_odds = 0 }
 sc_g_super = { class = g_star spawn_odds = 0 }
 sc_gc = { class = g_star spawn_odds = 0 }
 sc_GF_endler = { class = g_star spawn_odds = 0 }
+sc_grand_seal = { class = g_star spawn_odds = 0 }
 sc_k_super = { class = g_star spawn_odds = 0 }
 sc_l = { class = g_star spawn_odds = 0 }
 sc_lbv_blue = { class = g_star spawn_odds = 0 }
@@ -54,6 +59,8 @@ sc_w_red = { class = g_star spawn_odds = 0 }
 sc_w_azure = { class = g_star spawn_odds = 0 }
 sc_w_green = { class = g_star spawn_odds = 0 }
 sc_w_purple = { class = g_star spawn_odds = 0 }
+sc_whitte_hole = { class = g_star spawn_odds = 0 }
+shadowgate = { class = g_star spawn_odds = 0 }
 sofe_outer_class = { class = g_star spawn_odds = 0 }
 sofe_inner_class = { class = g_star spawn_odds = 0 }
 sc_void_birch_built = { class = g_star spawn_odds = 0 }

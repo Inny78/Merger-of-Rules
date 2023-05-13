@@ -104,7 +104,11 @@ merg_is_hab_ringworld = {
 		is_planetary_ringworld_hive = yes
 		is_planetary_ringworld_machine = yes
 		# Star Wars: Kuat Ancient Empire
-		is_planet_class = pc_kuat_eternal_ringworld_habitable
+		AND = {
+			# pc_kuat_eternal_ringworld_habitable
+			is_ringworld = yes
+			uses_district_set = Eternal_city
+		}
 		# Star Wars: UnknownWorld Shipgirls Story
 		uses_district_set = rw_swgs_engineer_world
 		# ThaumStellaris
@@ -344,6 +348,8 @@ merg_is_dense_star = {
 		is_planet_class = pc_pulsar
 		# ACOT
 		is_planet_class = pc_acot_void_hole
+		# Astro's Stellaris Overhaul - Galaxy Generation
+		is_planet_class = pc_aso_gg_white_hole
 		# Darkspace
 		is_ds_zeitriss_gc = yes
 		# Gigastructural Engineering & More
@@ -377,6 +383,8 @@ merg_is_black_or_white_hole = {
 		is_planet_class = pc_black_hole
 		# ACOT
 		is_planet_class = pc_acot_void_hole
+		# Astro's Stellaris Overhaul - Galaxy Generation
+		is_planet_class = pc_aso_gg_white_hole
 		# Darkspace
 		is_ds_zeitriss_gc = yes
 		# Gigastructural Engineering & More
@@ -449,17 +457,28 @@ merg_is_hole_star_class = {
 		is_star_class = sc_black_hole
 		# ACOT
 		is_star_class = sc_acot_void_star
+		# Astro's Stellaris Overhaul - Galaxy Generation
+		is_star_class = sc_aso_gg_white_hole
 		# Gigastructural Engineering & More
-		is_star_class = sc_ehof_black_hole
 		is_star_class = sc_birch
 		is_star_class = sc_birch_built
-		is_star_class = sc_void_birch_built
+		is_star_class = sc_ehof_black_hole
 		is_star_class = sc_quasar
+		is_star_class = sc_void_birch_built
+		is_star_class = sc_white_hole # Also TimeMod
+		# More Precursors
+		is_star_class = sc_FHMP_1 # Neutron Star around a Black Hole
+		# Shadowgate
+		is_star_class = shadowgate
+		# Some Events of Outside Cluster
+		is_star_class = sc_Aemethms
+		is_star_class = sc_grand_seal
 		# TimeMod
 		is_star_class = sc_endless_time
-		is_star_class = sc_white_hole
 		is_star_class = sc_time_white_hole
 		is_star_class = sc_bright_pearl
+		# Unique Ascension Perks
+		is_star_class = sc_whitte_hole
 	}
 }
 
@@ -471,6 +490,7 @@ merg_is_void_system = {
 		is_star_class = sofe_inner_class
 		# Ancient Empire
 		is_star_class = sc_ag_void
+		is_star_class = sc_ag_void_alt
 		# Darkspace
 		is_star_class = sc_gc
 		# GF Nyto
@@ -480,6 +500,7 @@ merg_is_void_system = {
 		# History of the Lost Empire/Gigas
 		is_star_class = sc_empty_space
 		# Some Events of Outside Cluster
+		is_star_class = sc_Arena
 		is_star_class = sc_void_dummy
 		# Steven Universe Homeworld Gems
 		is_star_class = sc_no_star
