@@ -242,6 +242,7 @@ is_pd_nuked = { always = no }
 is_pd_ocean = { always = no }
 is_pd_planet_class_all = { always = no }
 is_pd_planetary_megaproject = { always = no }
+is_pd_radiotrophic_mutant = { always = no }
 is_pd_radiotrophic_world = { always = no }
 is_pd_rare = { always = no }
 is_pd_regular = { always = no }

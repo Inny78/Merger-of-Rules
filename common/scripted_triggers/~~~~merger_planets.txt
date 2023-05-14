@@ -116,7 +116,6 @@ merg_is_barren = {
 		is_pc_mem_broken_city = yes
 		# Planetary Diversity
 		is_pd_barren = yes
-		is_planet_class = pc_barren_cave
 	}
 }
 

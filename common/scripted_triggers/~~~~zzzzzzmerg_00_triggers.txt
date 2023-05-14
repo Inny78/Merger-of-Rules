@@ -639,7 +639,7 @@ is_phototrophic = {
 		has_trait = trait_harvested_radiotrophic
 		has_trait = trait_lithoid_radiotrophic
 		# Planetary Diversity
-		has_trait = trait_radiotrophic_mutants
+		is_pd_radiotrophic_mutant = yes
 		# V_Traits
 		has_trait = trait_v_kleptoplasty
 		has_trait = trait_v_solar_skin_b
@@ -680,7 +680,7 @@ has_phototrophic_energy_upkeep = {
 				has_trait = trait_harvested_radiotrophic
 				has_trait = trait_lithoid_radiotrophic
 				# Planetary Diversity
-				has_trait = trait_radiotrophic_mutants
+				is_pd_radiotrophic_mutant = yes
 			}
 			planet = { merg_is_nuked = no }
 		}
