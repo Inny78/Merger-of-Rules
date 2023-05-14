@@ -26,12 +26,15 @@ darkness_country = { ai = { enabled = no } }
 default_ev = { ai = { enabled = no } }
 dormant_aeternum = { ai = { enabled = no } }
 ds_nomads = { ai = { enabled = no } }
+endtime_star_fantasy_empire = { ai = { enabled = no } }
 eternal_empire = { ai = { enabled = no } }
 ev_leviathans_crisis = { ai = { enabled = no } }
 fallen_empire_ev = { ai = { enabled = no } }
+hfe_drone = { ai = { enabled = no } }
 hfe_fallen = { ai = { enabled = no } }
 hfe_features_exodus = { ai = { enabled = no } }
 hfe_pirate = { ai = { enabled = no } }
+hfe_thoth = { ai = { enabled = no } }
 katzenartig_imperium = { ai = { enabled = no } }
 kuat_awakened_fallen_empire = { ai = { enabled = no } }
 kuat_fallen_empire = { ai = { enabled = no } }
@@ -60,6 +63,7 @@ sbtg_sentinel_active = { ai = { enabled = no } }
 sbtg_stellarborne_empire = { ai = { enabled = no } }
 sbtg_stellarborne_empire_active = { ai = { enabled = no } }
 sbtg_stellarborne_empire_passive = { ai = { enabled = no } }
+star_fantasy_empire = { ai = { enabled = no } }
 TAC_debris_ship_country = { ai = { enabled = no } }
 TAC_machine_crisis_country = { ai = { enabled = no } }
 throng_country = { ai = { enabled = no } }

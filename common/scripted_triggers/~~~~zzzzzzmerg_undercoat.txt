@@ -9,9 +9,12 @@ is_playable = {
 is_planet_city = {
 	merg_is_arcology = yes
 }
+is_city_world = {
+	merg_is_arcology = yes
+}
 planet_gives_aquatics_bonus = {
 	OR = {
-		merg_is_ocean = yes
+		merg_is_aquatic = yes
 		has_modifier = flooded_habitat
 	}
 }
@@ -82,13 +85,23 @@ planet_is_neutron_star_including_pulsar = {
 		# Real Space
 		is_rs_collapsar = yes
 		is_rs_magnetar = yes
-		is_rs_microquasar = yes
 	}
 }
 planet_is_nonstandard_star = {
 	OR = {
-		planet_is_neutron_star_including_pulsar = yes
-		planet_is_black_hole = yes
+		is_planet_class = pc_neutron_star
+		is_planet_class = pc_pulsar
+		# Real Space
+		is_rs_collapsar = yes
+		is_rs_magnetar = yes
+		is_planet_class = pc_black_hole
+		# Gigastructural Engineering & More
+		giga_is_black_hole = yes
+		# TimeMod
+		is_tm_black_hole = yes
+		# The Abyss Contract
+		is_planet_class = pc_black_hole_02
+		is_planet_class = pc_black_hole_03
 	}
 }
 planet_is_black_hole = {
@@ -96,8 +109,18 @@ planet_is_black_hole = {
 		is_planet_class = pc_black_hole
 		# Gigastructural Engineering & More
 		giga_is_black_hole = yes
+		# TimeMod
+		is_tm_black_hole = yes
 		# The Abyss Contract
 		is_planet_class = pc_black_hole_02
 		is_planet_class = pc_black_hole_03
+	}
+}
+can_have_defense_platforms = {
+	is_scope_type = starbase
+	OR = {
+		has_starbase_size >= starbase_outpost
+		has_starbase_size >= orbital_ring_tier_1
+		is_precursor_starbase = yes
 	}
 }

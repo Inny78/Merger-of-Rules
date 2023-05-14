@@ -303,6 +303,7 @@ katzen_jump_blocked_system = { always = no }
 kuat_can_be_orbital_bombarment_country = { always = no }
 kuat_can_do_bombarment_country = { always = no }
 kuat_is_flagship_system_protection = { always = no }
+kuat_is_holy_world_planet = { always = no }
 kuat_is_kuat_system = { always = no }
 KZ_VOY_can_assemble_magic_puppet = { always = no }
 KZ_VOY_can_build_branch_offices = { always = no }

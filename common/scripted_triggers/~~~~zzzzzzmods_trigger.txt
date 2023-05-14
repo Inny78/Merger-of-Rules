@@ -1103,19 +1103,6 @@ FHMP_is_valid_werediran_planet = {
 	}
 }
 
-############################### NSC ###############################
-nsc_mothball_target_fleet_requirement = {
-	owner = { is_same_value = prev.owner }
-	OR = {
-		is_ship_class = shipclass_military
-		is_ship_class = shipclass_military_special
-        AND = {
-            is_ship_class = shipclass_starbase
-            fleet = { is_mobile = yes }
-        }
-	}
-}
-
 ############################### Organic Zealots ###############################
 is_valid_target_to_outlaw_cybernetics_or_robot_pops_or_ai = {
 	optimize_memory
@@ -1457,10 +1444,41 @@ kuat_is_defense_galaxy_fleet = {
 	}
 }
 kuat_is_ringworld = {
-	merg_is_hab_ringworld = yes
+	OR = {
+		is_ringworld = yes
+		merg_is_hab_ringworld = yes
+	}
 }
 kuat_is_habitat = {
 	merg_is_habitat = yes
+}
+kuat_is_event_borderment_ringworld = {
+	OR = {
+		merg_is_hab_ringworld = yes
+		merg_is_habitat = yes
+		AND = {
+			merg_has_ancient_empire = yes
+			kuat_is_holy_world_planet = yes
+		}
+	}
+}
+kuat_is_playable_country = {
+	OR = {
+		is_ai = no
+		merg_is_default_empire = yes
+		is_country_type = enclave_mercenary
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		is_country_type = ascended_empire
+		is_country_type = eternal_empire
+		is_country_type = sofe_light_seeker	
+		is_country_type = star_fantasy_empire
+		is_country_type = endtime_star_fantasy_empire
+		is_country_type = hfe_drone
+		is_country_type = hfe_thoth
+		is_country_type = hfe_pirate
+		is_country_type = hfe_features_exodus
+	}
 }
 ############################### ThaumStellaris ###############################
 tc_element_shard_candidate = {

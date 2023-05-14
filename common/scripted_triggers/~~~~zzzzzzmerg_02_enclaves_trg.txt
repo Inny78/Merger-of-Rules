@@ -2,6 +2,7 @@
 
 fleet_can_be_scrapped = {
 	owner = { is_same_value = root }
+	is_cloaked = no
 	OR = {
 		is_ship_class = shipclass_science_ship
 		is_ship_class = shipclass_military

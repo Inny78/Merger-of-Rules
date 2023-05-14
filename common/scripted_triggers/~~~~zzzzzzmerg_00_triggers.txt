@@ -644,6 +644,23 @@ is_phototrophic = {
 		has_trait = trait_v_kleptoplasty
 		has_trait = trait_v_solar_skin_b
 		has_trait = trait_v_solar_skin_l
+		AND = {
+			OR = {
+				has_trait = trait_v_grafting
+				has_trait = trait_v_adv_grafting
+			}
+			planet = {
+				any_owned_species = {
+					OR = {
+						has_trait = trait_plantoid_phototrophic
+						has_trait = trait_plantoid_radiotrophic
+						has_trait = trait_advanced_phototrophic
+						has_trait = trait_advanced_radiotrophic
+						has_trait = trait_lithoid_radiotrophic
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -667,6 +684,38 @@ has_phototrophic_energy_upkeep = {
 			}
 			planet = { merg_is_nuked = no }
 		}
+		# V_TRAITS
+		AND = {
+			OR = {
+				has_trait = trait_v_grafting
+				has_trait = trait_v_adv_grafting
+			}
+			planet = {
+				any_owned_species = {
+					OR = {
+						has_trait = trait_plantoid_phototrophic
+						has_trait = trait_advanced_phototrophic
+						has_trait = trait_plantoid_radiotrophic
+						has_trait = trait_advanced_radiotrophic
+						has_trait = trait_lithoid_radiotrophic
+					}
+				}
+			}
+			if = {
+				limit = {
+					planet = {
+						any_owned_species = {
+							OR = {
+								has_trait = trait_plantoid_radiotrophic
+								has_trait = trait_advanced_radiotrophic
+								has_trait = trait_lithoid_radiotrophic
+							}
+						}
+					}
+				}
+				planet = { merg_is_nuked = no }
+			}
+		}
 	}
 }
 
@@ -677,6 +726,7 @@ has_budding_trait = {
 		has_trait = trait_advanced_budding
 		# V_Traits
 		has_trait = trait_v_strobilation
+		has_trait = trait_v_asexual_reproduction
 		# Wula Fallen Empire
 		has_trait = trait_wula_tietie
 	}

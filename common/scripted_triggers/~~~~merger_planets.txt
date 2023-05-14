@@ -52,10 +52,12 @@ merg_is_alpine = {
 merg_is_arcology = {
 	OR = {
 		is_planet_class = pc_city
-		uses_district_set = city_world
-		# Excluding habitats
-		is_pc_mem_vazuran_habitat = no
-		is_ds_skycatcher = no
+		AND = {
+			uses_district_set = city_world
+			# Excluding habitats
+			is_pc_mem_vazuran_habitat = no
+			is_ds_skycatcher = no
+		}
 		# Ancient Empire
 		uses_district_set = ag_city_planet
 		# Azur Lane
@@ -71,6 +73,8 @@ merg_is_arcology = {
 		is_pd_robot_arcology = yes
 		# Pokémon
 		uses_district_set = EOE_city_world
+		# Star fantasy: Castle Scarlet
+		uses_district_set = castle_scarlet
 		# Star Wars: Kuat Ancient Empire
 		uses_district_set = Eternal_city
 		# Voyage to Eternity
