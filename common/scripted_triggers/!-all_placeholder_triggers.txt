@@ -203,6 +203,7 @@ is_hypo_stars_white_hole = { always = no }
 is_imperial = { always = no }
 is_khan_country_type = { always = no }
 is_KZ_VOY_organic_species = { always = no }
+is_lily_goverments = { always = no }
 is_living_architecture = { always = no }
 is_mage = { always = no }
 is_mindless_undead = { always = no }

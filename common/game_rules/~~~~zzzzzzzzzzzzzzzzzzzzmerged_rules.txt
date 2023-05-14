@@ -2807,7 +2807,7 @@ system_blocks_sensors = {
 		AND = {
 			merg_has_assault_lily = yes
 			exists = sector
-			sector = {
+			sector.sector_capital = {
 				exists = leader
 				leader = {
 					OR = {
@@ -4351,6 +4351,8 @@ can_modify_organic_portraits = {
 		has_tradition = tr_genetics_enhanced_expression
 		# Ascension - Biological Module
 		has_technology = tech_yanz_rs_genemod
+		# AssaultLily In Stellaris
+		is_lily_goverments = yes
 		# Kancolle
 		has_tradition = tr_shipbuilding_transform
 		# Madoka Magica NEW
