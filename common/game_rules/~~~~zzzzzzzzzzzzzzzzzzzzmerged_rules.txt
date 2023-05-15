@@ -59,7 +59,7 @@ can_add_claim = {
 				owner = {
 					NOR = {
 						has_authority = auth_democratic
-						has_authority = auth_cooperative
+						is_exp_cooperative = yes
 					}
 				}
 			}
