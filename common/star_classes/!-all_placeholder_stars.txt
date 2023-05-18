@@ -22,6 +22,7 @@ sc_ehof_black_hole = { class = g_star spawn_odds = 0 }
 sc_empty_space = { class = g_star spawn_odds = 0 }
 sc_endless_time = { class = g_star spawn_odds = 0 }
 sc_f_super = { class = g_star spawn_odds = 0 }
+sc_FHMP_1 = { class = g_star spawn_odds = 0 }
 sc_g_super = { class = g_star spawn_odds = 0 }
 sc_gc = { class = g_star spawn_odds = 0 }
 sc_GF_endler = { class = g_star spawn_odds = 0 }

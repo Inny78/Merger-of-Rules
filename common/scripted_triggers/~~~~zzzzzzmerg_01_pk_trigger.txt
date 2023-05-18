@@ -1444,93 +1444,6 @@ can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM_TURRET = {
 	}
 }
 
-############################### ACOT ###############################
-can_destroy_planet_with_ACOT_EMISSARY_BEAM = {
-	custom_tooltip = {
-		text = acot_emissary_on_cooldown
-		FROM = {
-			NOT = {
-				has_fleet_flag = acot_emissary_beam_delay
-			}
-		}
-	}
-	custom_tooltip = {
-		fail_text = is_shielded
-		NOR = {
-			is_planet_class = pc_shielded
-			is_planet_class = pc_ringworld_shielded
-			is_planet_class = pc_habitat_shielded
-		}
-	}
-	OR = {
-		custom_tooltip = {
-			text = acot_is_valid_for_emissary_beam
-			OR = {
-				NOT = { exists = space_owner }
-				AND = {
-					exists = space_owner
-					space_owner = { is_same_value = from.owner }
-				}
-			}
-			is_a_planet = yes
-			is_asteroid = no
-			is_star = no
-			is_artificial = no
-			NOR = {
-				merg_is_gas_giant = yes
-				merg_is_habitat = yes
-				merg_is_hab_ringworld = yes
-			}
-		}		
-	}
-}
-
-can_destroy_planet_with_ACOT_EMISSARY_BEAM_LANDING = {
-	custom_tooltip = {
-		text = acot_emissary_on_cooldown
-		FROM = {
-			NOT = { has_fleet_flag = acot_emissary_beam_delay }
-		}
-	}
-	OR = {
-		custom_tooltip = {
-			text = is_not_hostile_cracker
-			exists = owner
-			is_colony = yes
-			owner = { merg_is_at_war = yes }
-		}
-		custom_tooltip = {
-			text = acot_is_valid_for_emissary_beam
-			exists = space_owner
-			space_owner = { is_same_value = from.owner }
-			is_colonizable = yes
-		}		
-	}
-}
-
-can_destroy_planet_with_ACOT_EMISSARY_BEAM_REMOVE = {
-	custom_tooltip = {
-		text = acot_emissary_on_cooldown
-		FROM = {
-			NOT = { has_fleet_flag = acot_emissary_beam_delay }
-		}
-	}
-	OR = {
-		custom_tooltip = {
-			text = acot_is_valid_for_emissary_beam
-			exists = space_owner
-			space_owner = { is_same_value = from.owner }
-			is_star = no
-			OR = {
-				is_artificial = no
-				merg_is_habitat = yes
-			}
-			merg_is_hab_ringworld = no
-		}		
-	}
-}
-
-
 ############################### AOT ###############################
 can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
 
@@ -3045,6 +2958,7 @@ merg_is_untargetable = {
 		is_pc_mem_synthetic_sun = yes
 		# ACOT
 		is_acot_awesome_planet_class = yes
+		is_acot_void_hole = yes
 		# Darkspace
 		is_ds_stellar_engine = yes
 		# Gigastructural Engineering & More

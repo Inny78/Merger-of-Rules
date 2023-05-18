@@ -381,8 +381,6 @@ merg_is_dense_star = {
 merg_is_black_or_white_hole = {
 	OR = {
 		is_planet_class = pc_black_hole
-		# ACOT
-		is_planet_class = pc_acot_void_hole
 		# Astro's Stellaris Overhaul - Galaxy Generation
 		is_planet_class = pc_aso_gg_white_hole
 		# Darkspace

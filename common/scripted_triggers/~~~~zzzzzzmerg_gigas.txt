@@ -333,9 +333,8 @@ ndb_can_target_system = {
 			merg_has_acot = yes
 			any_ship_in_system = {
 				OR = {
-					is_ship_size = sofe_ancient_weapon
-					# is_acot_sbtg_arkship = yes
-					is_ship_size = precursor_colossus
+					is_acot_sbtg_arkship = yes
+					is_acot_herculean = yes
 				}
 			}
 		}

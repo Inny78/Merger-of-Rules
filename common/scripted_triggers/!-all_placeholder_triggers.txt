@@ -128,6 +128,8 @@ is_acot_fractured_planet_class = { always = no }
 is_acot_pmc_vault = { always = no }
 is_acot_sbtg_arkship = { always = no }
 is_acot_void_hole = { always = no }
+is_acot_sbtg_arkship = { always = no }
+is_acot_herculean = { always = no }
 is_aot_habitat = { always = no }
 is_aot_macripp = { always = no }
 is_ascended_juggernaut = { always = no }
