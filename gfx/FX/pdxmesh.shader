@@ -8,6 +8,7 @@ Includes = {
 	"pdxmesh_samplers.fxh"
 	"pdxmesh_ship.fxh"
 	"aot_shaders.fxh"
+	"giga_shaders.fxh"
 }
 
 VertexShader =
