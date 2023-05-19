@@ -12,6 +12,11 @@ complex_specialist_job_check_trigger = {
 				owner = { has_technology = tech_droid_workers }
 				owner = { NOT = { has_policy_flag = ai_outlawed } }
 			}
+			# Holofrixit Revisited / Silfae's Portraits: Revisited
+			AND = {
+				has_species_trait_holofrixit = yes
+				owner = { has_auth_holofrixit = yes }
+			}
 		}
 	}
 }

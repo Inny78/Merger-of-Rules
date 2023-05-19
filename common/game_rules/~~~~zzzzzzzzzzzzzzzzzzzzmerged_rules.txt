@@ -438,10 +438,14 @@ species_can_live_on_planet = {
 		NOR = {
 			has_trait = trait_machine_unit
 			has_trait = trait_mechanical
+			# Ethics and Civics Bug Branch
+			is_bugged_happy_machine = yes
+			# FCSS
 			AND = {
 				merg_has_fcss = yes
 				has_trait = trait_cybernetic
 			}
+			# Vanilla
 			AND = {
 				has_trait = trait_cybernetic
 				exists = root.owner
@@ -456,8 +460,6 @@ species_can_live_on_planet = {
 			}
 			# Girls Frontline
 			has_trait = GF_trait_doll
-			# Ethics and Civics Bug Branch
-			is_bugged_happy_machine = yes
 		}
 	}
 	# Vanilla
@@ -1507,9 +1509,10 @@ can_species_procreate = {
 	NOR = {
 		has_trait = trait_machine_unit
 		has_trait = trait_mechanical
+		# # Ethics and Civics Bug Branch
 		is_bugged_happy_machine = yes
 		AND = {
-			has_trait = trait_clones
+			is_exp_clone = yes
 			root = {
 				owner = {
 					OR = {
