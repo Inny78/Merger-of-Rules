@@ -84,7 +84,7 @@ orbital_bombardment = {
 				is_country_type = ascended_empire
 				# EMEX
 				has_valid_civic = civic_bringers_of_death
-				# 
+				# Organic Zealots
 				has_valid_civic = civic_organic_zealots
 			}
 		}
@@ -104,7 +104,7 @@ orbital_bombardment = {
 					has_valid_civic = civic_galactic_superpower
 					# EMEX
 					has_valid_civic = civic_bringers_of_death
-					# 
+					# Organic Zealots
 					has_valid_civic = civic_organic_zealots
 				}
 			}

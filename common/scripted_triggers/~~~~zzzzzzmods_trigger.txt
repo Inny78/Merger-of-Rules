@@ -365,7 +365,7 @@ is_barren_planet = {
 	merg_is_barren = yes
 }
 is_nuked_planet = {
-    merg_is_nuked = yes
+    merg_is_nuked_basic = yes
 }
 
 ############################### Exalted Domination ###############################
@@ -499,7 +499,7 @@ is_alpine = {
 	merg_is_alpine = yes
 }
 is_nuked = {
-	merg_is_nuked = yes
+	merg_is_nuked_basic = yes
 }
 is_hive = {
 	merg_is_hive_world = yes
@@ -600,7 +600,7 @@ gpm_is_planet_class_normal_habitable = {
 	is_artificial = no
 }
 gpm_is_planet_class_nuked = {
-	merg_is_nuked = yes
+	merg_is_nuked_basic = yes
 }
 gpm_is_planet_class_gas_giant = {
 	optimize_memory
@@ -797,7 +797,7 @@ afk_target_planet = {
 		is_artificial = yes
 		uninhabitable_regular_planet = yes
 		# Planetary Diversity
-		merg_is_nuked = yes
+		merg_is_nuked_basic = yes
 		# Gigastructures
 		giga_is_katzenland = yes
 		# SW:UnknownWorld Shipgirls Story
@@ -852,7 +852,7 @@ hfe_trigger_terminator_event = {
 			is_dry = yes
 			is_cold = yes
 			merg_is_gaia = yes
-			merg_is_nuked = yes
+			merg_is_nuked_basic = yes
 		}
 	}
 	any_relation = {
@@ -1274,7 +1274,7 @@ planetary_catastrophe_is_possible = {
 		merg_is_alpine = yes
 		merg_is_tundra = yes
 		merg_is_gaia = yes
-		merg_is_nuked = yes
+		merg_is_nuked_basic = yes
 		merg_is_hive_world = yes
 		merg_is_arcology = yes
 		merg_is_relic_world = yes

@@ -209,7 +209,7 @@ giga_is_gaia = {
 }
 giga_is_nuked = { 
 	optimize_memory
-	merg_is_nuked = yes
+	merg_is_nuked_basic = yes
 }
 giga_is_arcology = {
 	optimize_memory
