@@ -1230,11 +1230,13 @@ is_special_colony_type = {
 can_remove_beneficial_genetic_traits = {
 	hidden_trigger = { exists = from }
 	from = {
-		has_tradition = tr_genetics_resequencing
-		# Planetary Diversity - Unique Worlds
-		has_tradition = pd_tr_biosynth_perk_2a
-		# Rogue Maid
-		has_technology = tech_advanced_gene_tailoring
+		OR = {
+			has_tradition = tr_genetics_resequencing
+			# Planetary Diversity - Unique Worlds
+			has_tradition = pd_tr_biosynth_perk_2a
+			# Rogue Maid
+			has_technology = tech_advanced_gene_tailoring
+		}
 	}
 }
 
