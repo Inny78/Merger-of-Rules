@@ -472,7 +472,11 @@ species_can_live_on_planet = {
 				exists = root.owner
 				root.owner = {
 					is_hive_empire = yes
-					has_origin = origin_necrophage
+					OR = {
+						has_origin = origin_necrophage
+						# Decision Origins
+						has_country_flag = decision_necrophage
+					}
 					prev = { species_can_be_necrophaged = yes }
 				}
 			}
@@ -569,7 +573,11 @@ can_generate_leader_from_pop = {
 		is_same_species = root
 		root = {
 			NAND = {
-				has_origin = origin_necrophage
+				OR = {
+					has_origin = origin_necrophage
+					# Decision Origins
+					has_country_flag = decision_necrophage
+				}
 				has_trait = trait_necrophage
 			}
 		}
@@ -3186,6 +3194,8 @@ should_force_decline_species = {
 							OR = {
 								NOR = {	# Can't have Vats.
 									has_origin = origin_clone_army
+									# Decision Origins
+									has_country_flag = decision_clone_army
 									# Galactic Imperium Origins
 									has_origin = origin_clone_guard
 								}
@@ -4531,7 +4541,11 @@ can_fill_ruler_job = {
 		limit = {
 			exists = owner
 			owner = {
-				has_origin = origin_necrophage
+				OR = {
+					has_origin = origin_necrophage
+					# Decision Origins
+					has_country_flag = decision_necrophage
+				}
 				has_trait = trait_necrophage
 			}
 		}

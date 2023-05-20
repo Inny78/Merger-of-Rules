@@ -169,6 +169,9 @@ has_encountered_other_species = {
 		has_origin = origin_necrophage
 		has_origin = origin_payback
 		has_valid_civic = civic_machine_servitor
+		# Decision Origins
+		has_country_flag = decision_necrophage
+		has_country_flag = decision_payback
 		# Ethics and Civics Classic and all its variants
 		has_valid_civic = civic_symbiotic_race
 		has_valid_civic = civic_slave_race
@@ -1221,5 +1224,30 @@ is_special_colony_type = {
 		has_modifier = bdoe_feudal_world
 		# Real Space - Planetary Stations
 		has_planet_flag = planetary_station
+	}
+}
+
+can_remove_beneficial_genetic_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		has_tradition = tr_genetics_resequencing
+		# Planetary Diversity - Unique Worlds
+		has_tradition = pd_tr_biosynth_perk_2a
+		# Rogue Maid
+		has_technology = tech_advanced_gene_tailoring
+	}
+}
+
+can_remove_overtuned_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		OR = {
+			has_tradition = tr_genetics_resequencing
+			has_origin = origin_overtuned
+			# Decision Origins
+			has_country_flag = decision_overtuned
+			# Ascension - Biological Module
+			has_technology = tech_yanz_rs_genemod
+		}
 	}
 }
