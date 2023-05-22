@@ -190,7 +190,7 @@ merg_has_shroud_rising = { has_global_flag = shroud_rising_active }
 merg_has_holofrixit = { has_holosphere_portraits_revisited_active = yes }
 
 # Some Events of Outside Cluster
-merg_has_seooc = { has_global_flag = has_nsc_active }
+merg_has_seooc = { has_global_flag = nep_SEoOC_active }
 
 # Special Colonies Overhaul
 merg_has_special_colonies = { has_global_flag = SCO_enabled_flag }
