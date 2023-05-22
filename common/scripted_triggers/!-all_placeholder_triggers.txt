@@ -229,6 +229,7 @@ is_pd_arid = { always = no }
 is_pd_barren = { always = no }
 is_pd_barren_cold = { always = no }
 is_pd_continental = { always = no }
+is_pd_crucible = { always = no }
 is_pd_desert = { always = no }
 is_pd_exotic = { always = no }
 is_pd_gaia = { always = no }

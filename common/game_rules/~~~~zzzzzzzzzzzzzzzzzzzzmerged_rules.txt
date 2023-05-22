@@ -3403,31 +3403,33 @@ can_support_branch_offices = {
 	}
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_ON_MEGACORP_PLANET
-		NOR = {
-			AND = {
-				merg_has_more_authorities = no
-				is_megacorp = yes
-			}
-			# Azur Lane Stellaris DLC
-			has_authority = auth_azur_lane_1
-			# Arknights Near Future
-			has_valid_civic = civic_business_union
-			# BlueArchive species pack
-			has_authority = auth_kivotos
-			# Girls Frontline
-			has_civic = civic_gf_GK
-			# More Corporate Authorities
-			has_valid_civic = civic_galactic_sovereign_megacorp
-			# Rogue Maid
-			Maid_trigger_1_can_support_branch_offices = yes
-			# Warship Girls R And MIST Species
-			AND = {
-				has_authority = auth_shenhai
-				OR = {
-					has_country_flag = pantsu_shop_origin
-					has_valid_civic = civic_sh_criminal_syndicate
+		OR = {
+			NOR = {
+				AND = {
+					merg_has_more_authorities = no
+					is_megacorp = yes
+				}
+				# Azur Lane Stellaris DLC
+				has_authority = auth_azur_lane_1
+				# Arknights Near Future
+				has_valid_civic = civic_business_union
+				# BlueArchive species pack
+				has_authority = auth_kivotos
+				# Girls Frontline
+				has_civic = civic_gf_GK
+				# More Corporate Authorities
+				has_valid_civic = civic_galactic_sovereign_megacorp
+				# Warship Girls R And MIST Species
+				AND = {
+					has_authority = auth_shenhai
+					OR = {
+						has_country_flag = pantsu_shop_origin
+						has_valid_civic = civic_sh_criminal_syndicate
+					}
 				}
 			}
+			# Rogue Maid
+			Maid_trigger_1_can_support_branch_offices = yes
 		}
 	}
 	custom_tooltip = {
