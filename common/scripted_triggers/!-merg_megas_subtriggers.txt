@@ -2,8 +2,6 @@
 
 # is_megastructure lists have been replaced with a dynamic trigger
 
-# We repeat with has_megastructure ----------------------------------------------------------------------
-
 merg_has_vanilla_type = {
 	OR = {
 		has_megastructure = dyson_sphere_0
@@ -189,6 +187,7 @@ merg_has_hab_type = {
 
 # ACOT
 merg_has_acot_type = {
+	has_acot = yes
 	OR = {
 		has_megastructure = acot_dark_matter_obelisk_core
 		has_megastructure = acot_dark_matter_obelisk_core_ae
@@ -216,6 +215,7 @@ merg_has_acot_type = {
 
 # Acquisition of Technologies
 merg_has_aot_type = {
+	merg_has_aot = yes
 	OR = {
 		has_megastructure = star_imploder_0
 		has_megastructure = star_imploder_1
@@ -243,6 +243,7 @@ merg_has_aot_type = {
 
 # Ancient Empire
 merg_has_ancient_empire_type = {
+	merg_has_ancient_empire = yes
 	OR = {
 		has_megastructure = ag_ancient_construction_section
 		has_megastructure = ag_ancient_construction_section_megashipyard
@@ -310,6 +311,7 @@ merg_has_ancient_empire_type = {
 
 # Azur Lane Stellaris DLC
 merg_has_azur_type = {
+	merg_has_azur_lane = yes
 	OR = {
 		has_megastructure = azur_matter_decompressor_0
 		has_megastructure = azur_matter_decompressor_1
@@ -357,6 +359,7 @@ merg_has_giga_manip_type = {
 
 # Gigastructural Engineering & More
 merg_has_gigas_type = {
+	has_gigastructures = yes
 	OR = {
 		has_megastructure = alderson_disk_0
 		has_megastructure = alderson_disk_1
@@ -876,6 +879,7 @@ merg_has_lex_type = {
 
 # ThaumStellaris
 merg_has_thaum_type = {
+	merg_has_thaumstellaris = yes
 	OR = {
 		has_megastructure = tc_ancient_alchemical_furnace_00
 		has_megastructure = tc_ancient_alchemical_furnace_01
@@ -937,6 +941,7 @@ merg_has_thaum_type = {
 
 # Warship Girls R and MIST Species
 merg_has_wsg_type = {
+	merg_has_warship_girls = yes
 	OR = {
 		has_megastructure = wsg_station
 		has_megastructure = dyson_yamato
@@ -1041,6 +1046,7 @@ merg_has_abyss_contract_type = {
 
 # Assault Lily
 merg_has_assault_lily_type = {
+	merg_has_assault_lily = yes
 	OR = {
 		has_megastructure = recovery_matter_0
 		has_megastructure = recovery_matter_1
@@ -1142,8 +1148,6 @@ merg_has_assault_lily_type = {
 merg_is_gate_mega = {
 	optimize_memory
 	OR = {
-		is_megastructure_type = blokkat_gigarelay_2
-		is_megastructure_type = compound_wormhole_portal
 		is_megastructure_type = crisis_sphere_0
 		is_megastructure_type = crisis_sphere_1
 		is_megastructure_type = crisis_sphere_2
@@ -1225,6 +1229,8 @@ merg_is_gate_mega = {
 		is_megastructure_type = ehof_megastructure_wormhole_destination
 		is_megastructure_type = ehof_trader_wormhole_01
 		is_megastructure_type = ehof_trader_wormhole_external
+		is_megastructure_type = blokkat_gigarelay_2
+		is_megastructure_type = compound_wormhole_portal
 		# MEM
 		is_megastructure_type = mem_vazuran_gateway_nexus
 		is_megastructure_type = mem_vazuran_gateway

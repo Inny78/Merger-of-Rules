@@ -382,7 +382,7 @@ merg_is_black_or_white_hole = {
 	OR = {
 		is_planet_class = pc_black_hole
 		# Astro's Stellaris Overhaul - Galaxy Generation
-		is_planet_class = pc_aso_gg_white_hole
+		is_aso_gg_white_hole = yes
 		# Darkspace
 		is_ds_zeitriss_gc = yes
 		# Gigastructural Engineering & More
@@ -449,7 +449,6 @@ merg_is_empty_space = {
 	}
 }
 
-# WIP
 merg_is_hole_star_class = {
 	OR = {
 		is_star_class = sc_black_hole
@@ -466,6 +465,9 @@ merg_is_hole_star_class = {
 		is_star_class = sc_white_hole # Also TimeMod
 		# More Precursors
 		is_star_class = sc_FHMP_1 # Neutron Star around a Black Hole
+		# Real Space
+		is_star_class = sc_microquasar_1
+		is_star_class = sc_microquasar_2
 		# Shadowgate
 		is_star_class = shadowgate
 		# Some Events of Outside Cluster
@@ -477,6 +479,25 @@ merg_is_hole_star_class = {
 		is_star_class = sc_bright_pearl
 		# Unique Ascension Perks
 		is_star_class = sc_whitte_hole
+	}
+}
+
+merg_is_neutron_star_class = {
+	OR = {
+		is_star_class = sc_binary_2
+		is_star_class = sc_neutron_star
+	}
+}
+
+merg_is_pulsar_star_class = {
+	OR = {
+		is_star_class = sc_binary_1
+		is_star_class = sc_pulsar
+		# Real Space
+		is_star_class = sc_collapsar
+		is_star_class = sc_magnetar
+		is_star_class = sc_binary_pl_pl
+		is_star_class = sc_binary_pl_n
 	}
 }
 
@@ -636,5 +657,13 @@ merg_is_isolated_system = {
 		has_star_flag = Paluush_system
 		has_star_flag = wg_sealed_system
 		has_star_flag = wg_psionic_systems
+	}
+}
+
+# Shortens two checks in game rules
+merg_is_sapient = {
+	NOR = {
+		is_sapient = no
+		has_trait = trait_zombie
 	}
 }

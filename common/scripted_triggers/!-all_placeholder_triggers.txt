@@ -78,6 +78,7 @@ has_acot = { always = no }
 has_apsr_modifiers = { always = no }
 has_artificial_aristocracy_emex = { always = no }
 has_artificial_wombs = { always = no }
+has_aso_space_exploration = { always = no }
 has_auth_holofrixit = { always = no }
 has_bug_branch = { always = no }
 has_civic_organic_zealots_active = { always = no }
@@ -133,6 +134,8 @@ is_acot_herculean = { always = no }
 is_aot_habitat = { always = no }
 is_aot_macripp = { always = no }
 is_ascended_juggernaut = { always = no }
+is_aso_gg_white_hole = { always = no }
+is_aso_gg_ice_giant = { always = no }
 is_bugged_evolutionary_architects = { always = no }
 is_bugged_interventionalist = { always = no }
 is_bugged_slave_race = { always = no }

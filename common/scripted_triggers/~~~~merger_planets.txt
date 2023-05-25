@@ -188,8 +188,7 @@ merg_is_gas_giant_habitable = {
 	OR = {
 		# Gigastructural Engineering & More
 		is_giga_habitable_gas_giant = yes
-		is_planet_class = pc_giga_maginot_gas_giant
-		# giga_is_maginot_gas_giant = yes
+		giga_is_maginot_gas_giant = yes
 		# Planetary Diversity
 		is_pd_gas_giant_habitable = yes
 		# TimeMod
@@ -202,6 +201,8 @@ merg_is_gas_giant = {
 		is_planet_class = pc_gas_giant
 		# All these worlds
 		atw_is_gas_giant = yes
+		# Astro's Stellaris Overhaul - Galaxy Generation
+		is_aso_gg_ice_giant = yes
 		# Azur Lane
 		is_planet_class = pc_azur_gas_giant
 		# Planetary Diversity

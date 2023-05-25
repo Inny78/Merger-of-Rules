@@ -1186,7 +1186,10 @@ can_terraform_planet = {
 		fail_text = "legendary_leader_planet_no_terraform"
 		exists = root
 		this = {
-			NOT = { has_planet_flag = legendary_leader_planet }
+			NAND = {
+				has_planetary_diversity = yes
+				has_planet_flag = legendary_leader_planet
+			}
 		}
 	}
 	custom_tooltip = {
@@ -1255,15 +1258,8 @@ can_colonize_with_pop = {
 	}
 	# Vanilla
 	if = {
-		limit = {
-			OR = {
-				is_sapient = no
-				has_trait = trait_zombie
-			}
-		}
-		custom_tooltip = {
-			always = no
-		}
+		limit = { merg_is_sapient = no }
+		custom_tooltip = { always = no }
 	}
 	else = { always = yes }
 }
@@ -1315,12 +1311,7 @@ can_colonize_with_species = {
 	}
 	# Vanilla
 	if = {
-		limit = {
-			OR = {
-				is_sapient = no
-				has_trait = trait_zombie
-			}
-		}
+		limit = { merg_is_sapient = no }
 		custom_tooltip = { always = no }
 	}
 	else_if = {
@@ -2757,30 +2748,26 @@ system_blocks_sensors = {
 		has_star_flag = ss_abyssal_shockwave
 		# Sensor Expansion
 		AND = { # Neutron stars
-			merg_has_sensor_expansion = yes
 			OR = {
-				is_star_class = sc_binary_2
-				is_star_class = sc_neutron_star
+				merg_has_sensor_expansion = yes
+				has_aso_space_exploration = yes
 			}
+			merg_is_neutron_star_class = yes
 			ROOT = { NOT = { has_technology = tech_sensors_4 } }
 		}
 		AND = { # Pulsars
-			merg_has_sensor_expansion = yes
 			OR = {
-				is_star_class = sc_binary_1
-				is_star_class = sc_pulsar
-				# Real Space
-				is_star_class = sc_collapsar
-				is_star_class = sc_magnetar
-				is_star_class = sc_binary_pl_pl
-				is_star_class = sc_binary_pl_n
+				merg_has_sensor_expansion = yes
+				has_aso_space_exploration = yes
 			}
+			merg_is_pulsar_star_class = yes
 			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_pulsar } }
 		}
 		AND = { # Wormholes
 			OR = {
 				merg_has_sensor_expansion = yes
 				merg_has_wild_space = yes
+				has_aso_space_exploration = yes
 			}
 			has_natural_wormhole = yes
 			ROOT = {
@@ -2790,28 +2777,18 @@ system_blocks_sensors = {
 				}
 			}
 		}
-		AND = { # Black Holes
-			merg_has_sensor_expansion = yes
+		AND = { # Black and White Holes
 			OR = {
-				is_star_class = sc_black_hole
-				# Real Space
-				is_star_class = sc_microquasar_1
-				is_star_class = sc_microquasar_2
-				# Gigastructural Engineering & More
-				is_star_class = sc_birch
-				is_star_class = sc_birch_built
-				is_star_class = sc_ehof_black_hole
-				is_star_class = sc_quasar
-				is_star_class = sc_void_birch_built
+				merg_has_sensor_expansion = yes
+				has_aso_space_exploration = yes
 			}
+			merg_is_hole_star_class = yes
 			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_black_hole } }
 		}
 		AND = { # Jammer
 			merg_has_sensor_expansion = yes
 			exists = starbase
-			starbase = {
-				has_starbase_building = ariphaos_sensors_jammer_starbase
-			}
+			starbase = { has_starbase_building = ariphaos_sensors_jammer_starbase }
 			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_jammed } }
 		}
 		# Assault Lily

@@ -742,14 +742,6 @@ eligible_for_living_metal = {
 		is_star = yes
 	}
 }
-is_terraforming_candidate = {
-	optimize_memory
-	OR = {
-		has_modifier = terraforming_candidate
-		has_modifier = toxic_terraforming_candidate
-		has_modifier = frozen_terraforming_candidate
-	}
-}
 gpm_has_required_terraform_modifier = {
 	optimize_memory
 	is_terraforming_candidate = yes

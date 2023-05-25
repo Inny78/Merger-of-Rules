@@ -41,6 +41,9 @@ merg_has_assault_lily = { has_global_flag = Assault_Lily_activated }
 # Ascension Enhancements
 merg_has_uac = { has_global_flag = has_uac_mod }
 
+# Azur Lane Stellaris DLC
+merg_has_azur_lane = { has_global_flag = azurlane_KuRUMiiii }
+
 # Buildings and Districts Overhaul and Expansion
 merg_has_bdoe = { has_global_flag = bdoe_active }
 
@@ -76,6 +79,9 @@ merg_has_ethics_redux = { has_global_flag = cultural_overhaul_redux_active }
 
 # Expanded Gestalts 
 merg_has_expanded_gestalts = { has_global_flag = complex_hive }
+
+# Expanded Stellaris Ascension Perks
+merg_has_expanded_stel_perks = { has_global_flag = esap_mod_in_use }
 
 # Expanded Stellaris Traditions
 merg_has_expanded_stel_trad = { has_global_flag = expanded_stellaris_traditions_mod_in_use }
