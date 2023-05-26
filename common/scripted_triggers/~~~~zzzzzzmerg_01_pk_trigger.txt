@@ -2864,6 +2864,28 @@ can_destroy_planet_with_Sweepers = {
 	}
 }
 
+############################### Protoss ###############################
+can_destroy_planet_with_archon_power_pouring = {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		is_asteroid = no
+		NOR = {
+			is_planet_class = pc_shattered
+			is_planet_class = pc_shattered_2
+		}
+		merg_is_forbidden_target = no
+	}
+	OR = {
+		NOT = { solar_system = { exists = owner } }
+		AND = {
+			solar_system = { 
+				exists = owner
+				owner = { is_hostile = from.owner }
+			}
+		}
+	}
+}
+
 # ===========================================================================================================================
 
 # PK Triggers here

@@ -244,3 +244,4 @@ hfe_building_thoth_module_food = { potential = { always = no } allow = { always 
 hfe_building_thoth_module_science = { potential = { always = no } allow = { always = no } }
 PR_BLDN_Army_sp_shield_T3 = { potential = { always = no } allow = { always = no } }
 PR_BLDN_Res_food_farm_T4 = { potential = { always = no } allow = { always = no } }
+protoss_building_bf = { potential = { always = no } allow = { always = no } }

@@ -103,6 +103,8 @@ merg_is_hab_ringworld = {
 		is_planetary_ringworld_city = yes
 		is_planetary_ringworld_hive = yes
 		is_planetary_ringworld_machine = yes
+		# Protoss
+		uses_district_set = protoss_ringworld
 		# Star Wars: Kuat Ancient Empire
 		AND = {
 			# pc_kuat_eternal_ringworld_habitable

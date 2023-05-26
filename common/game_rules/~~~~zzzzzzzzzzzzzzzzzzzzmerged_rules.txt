@@ -542,6 +542,8 @@ can_generate_leader_from_pop = {
 		is_pearl_born_drone = yes
 		# Plentiful Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
+		# Protoss
+		has_trait = trait_protoss_probe
 		# Rogue Maid (Rogue Servitor Completely Remake)
 		has_trait = trait_working_machine
 		# Wandering Witch: Voyagers
@@ -794,9 +796,7 @@ can_take_hostile_actions = {
 	else_if = {
 		limit = {
 			has_country_flag = fotd_seperatist_country@ROOT
-			ROOT = {
-				has_origin = origin_fear_of_the_dark
-			}
+			ROOT = { has_origin = origin_fear_of_the_dark }
 		}
 		custom_tooltip = {
 			text = "CAN_TAKE_HOSTILE_ACTION_FOTD"
@@ -853,9 +853,7 @@ can_take_hostile_actions = {
 		limit = {
 			root = {
 				merg_is_default_empire = yes
-				NOT = {
-					has_policy_flag = interference_aggressive
-				}
+				NOT = { has_policy_flag = interference_aggressive }
 			}
 			is_primitive = yes
 		}
@@ -869,11 +867,7 @@ can_take_hostile_actions = {
 			is_primitive = yes
 			root = { merg_is_default_empire = yes }
 			capital_scope = {
-				root = {
-					NOT = {
-						any_planet_within_border = { is_same_value = prevprev }
-					}
-				}
+				root = { NOT = { any_planet_within_border = { is_same_value = prevprev } } }
 			}
 		}
 		custom_tooltip = {
@@ -1000,9 +994,7 @@ can_take_hostile_actions = {
 	else_if = {
 		# SEoOC_side_story
 		limit = {
-			root = {
-				is_ai = no
-			}
+			root = { is_ai = no }
 			OR = {
 				AND = {
 					root = { has_country_flag = nep_gaia_assist_war }
@@ -1036,7 +1028,7 @@ can_take_hostile_actions = {
 		}
 	}
 	else_if = {
-		#SEoOC_side_2
+		# Some Events of Outside Cluster
 		limit = {
 			is_country_type = nep_arena_hologram
 			is_country_type = nep_bounty_hologram

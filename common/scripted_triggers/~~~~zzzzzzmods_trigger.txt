@@ -1731,6 +1731,8 @@ has_active_wg_foundry_building_lv_high = {
 		has_active_building = building_avb_foundry_4
 		has_active_building = building_avb_foundry_5
 		has_active_building = building_avb_foundry_6
+		# Protoss
+		has_active_building = protoss_building_bf
 		# Warship Girls R and MIST Species
 		has_active_building = building_sep_foundry2
 		has_active_building = building_wsg_foundry
