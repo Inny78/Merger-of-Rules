@@ -568,7 +568,6 @@ can_destroy_planet_with_PLANET_KILLER_EOE = {
 		}
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
@@ -628,7 +627,6 @@ can_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 
 ############################### AshArms Aquarius History ###############################
 can_destroy_planet_with_PLANET_KILLER_Ark_CRACKER = { can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = yes }
-
 can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
@@ -942,7 +940,6 @@ can_destroy_planet_with_PLANET_KILLER_OVO = {
 		}
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_PSH = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -998,7 +995,6 @@ can_destroy_planet_with_PLANET_KILLER_PSH = {
 		}
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_CM = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -1039,7 +1035,6 @@ can_destroy_planet_with_PLANET_KILLER_CM = {
 		}
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_SK = {
 	custom_tooltip = {
 		fail_text = is_your_megastructure_system
@@ -1084,7 +1079,6 @@ can_destroy_planet_with_PLANET_KILLER_SK = {
 		merg_is_forbidden_target = no
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_WATERB = {
 	OR = {
 		hidden_trigger = {
@@ -1142,7 +1136,6 @@ can_destroy_planet_with_PLANET_KILLER_WATERB = {
 		}
 	}
 }
-
 wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
@@ -1333,7 +1326,6 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 		}
 	}
 }
-
 can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 	custom_tooltip = {
 		fail_text = "tc_planet_killer_excavation_not_target"
@@ -1393,7 +1385,6 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 		}
 	}
 }
-
 can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -1418,7 +1409,6 @@ can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM = {
 		merg_is_shielded = no
 	}
 }
-
 can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM_TURRET = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
@@ -1446,10 +1436,21 @@ can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM_TURRET = {
 
 ############################### AOT ###############################
 can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
-
+can_destroy_planet_with_ACOT_PLANET_KILLER_SHIELDER = { can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes }
+can_destroy_planet_with_ACOT_PLANET_KILLER_NEUTRON = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes }
+can_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = { can_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = yes }
+can_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = { can_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = yes }
 can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
-
+can_destroy_planet_with_ACOT_SE_PLANET_KILLER_SHIELDER = { can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes }
+can_destroy_planet_with_ACOT_SE_PLANET_KILLER_NEUTRON = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes }
+can_destroy_planet_with_ACOT_SE_PLANET_KILLER_GODRAY = { can_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = yes }
+can_destroy_planet_with_ACOT_SE_PLANET_KILLER_NANOBOTS = { can_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = yes }
 can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
+can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
+can_destroy_planet_with_ACOT_HE_PLANET_KILLER_SHIELDER = { can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes }
+can_destroy_planet_with_ACOT_HE_PLANET_KILLER_NEUTRON = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes }
+can_destroy_planet_with_ACOT_HE_PLANET_KILLER_GODRAY = { can_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = yes }
+can_destroy_planet_with_ACOT_HE_PLANET_KILLER_NANOBOTS = { can_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = yes }
 
 ############################### Arknights Near Future ###############################
 can_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = {
@@ -1692,7 +1693,6 @@ can_destroy_planet_with_planet_killer_kancolle_kari = {
 		}
 	}
 }
-
 can_destroy_planet_with_planet_killer_kancolle_water_world = { can_destroy_planet_with_PLANET_KILLER_DELUGE = yes }
 
 # The Empty Vagrant
@@ -1815,7 +1815,6 @@ can_destroy_planet_with_azur_shippart_W2_T4 = {
 		}
 	}
 }
-
 can_destroy_planet_with_milky_way_terminal_test_1 = {
 	is_star = yes
 	merg_is_dense_star = no
@@ -1844,7 +1843,6 @@ can_destroy_planet_with_milky_way_terminal_test_1 = {
 		}
 	}
 }
-
 can_destroy_planet_with_milky_way_terminal_test_2 = {
 	is_star = yes
 	merg_is_dense_star = no
@@ -1873,7 +1871,6 @@ can_destroy_planet_with_milky_way_terminal_test_2 = {
 		}
 	}
 }
-
 can_destroy_planet_with_azur_shippart_W3_T3 = {
 	is_star = yes
 	custom_tooltip = {
@@ -2082,7 +2079,6 @@ can_destroy_planet_with_PLANET_KILLER_BLOKKAT_GENERATOR = {
 		is_asteroid = yes
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_BLOKKAT_HARVESTER = {
 	custom_tooltip = {
 		fail_text = "needs_regular_star_blokkat_harvest"
@@ -2167,7 +2163,6 @@ can_destroy_planet_with_PLANET_KILLER_METHANE_FREEZE_RAY = {
 		}
 	}
 }
-
 can_destroy_planet_with_PLANET_KILLER_PD_NECRO_RAY = {
 	custom_tooltip = {
 		fail_text = is_habitable_non_artificial
@@ -2328,7 +2323,6 @@ can_destroy_planet_with_EE_PLANETKILLER_GAIA = {
 		merg_is_forbidden_target = no
 	}
 }
-
 can_destroy_planet_with_EE_PLANETKILLER_BARREN = {
 	custom_tooltip = {
 		fail_text = is_not_hostile
@@ -2631,27 +2625,21 @@ can_destroy_planet_with_GE_PLANET_KILLER_Crasher = {
 	}
 	is_star = yes
 }
-
 can_destroy_planet_with_GE_PLANET_KILLER_CRACKER = {
 	can_destroy_planet_with_PLANET_KILLER_CRACKER = yes
 }
-
 can_destroy_planet_with_GE_PLANET_KILLER_SHIELDER = {
 	can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes
 }
-
 can_destroy_planet_with_GE_PLANET_KILLER_NEUTRON = {
 	can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes
 }
-
 can_destroy_planet_with_GE_PLANET_KILLER_GODRAY = {
 	can_destroy_planet_with_PLANET_KILLER_GODRAY = yes
 }
-
 can_destroy_planet_with_GE_PLANET_KILLER_NANOBOTS = {
 	can_destroy_planet_with_PLANET_KILLER_NANOBOTS = yes
 }
-
 can_destroy_planet_with_GE_PLANET_KILLER_DELUGE = {
 	can_destroy_planet_with_PLANET_KILLER_DELUGE = yes
 }
@@ -2886,6 +2874,52 @@ can_destroy_planet_with_archon_power_pouring = {
 	}
 }
 
+############################### Shroud Expanded - The Decadence of Sanity ###############################
+can_destroy_planet_with_PLANET_KILLER_SHROUD = {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		is_a_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		merg_is_shielded = no
+	}
+	OR = {
+		custom_tooltip = {
+			text = is_not_hostile_cracker
+			OR = {
+				AND = {
+					exists = space_owner
+					space_owner = { merg_is_at_war = yes }
+				}
+				AND = { # colony
+					exists = owner
+					owner = { merg_is_at_war = yes }
+				}
+				AND = { # crisis
+					exists = space_owner
+					space_owner = { merg_is_at_war = yes }
+				}
+			}
+		}
+		custom_tooltip = {
+			text = is_not_a_standard_planet_or_megastructure
+			OR = {
+				NOT = { exists = space_owner }
+				AND = {
+					exists = space_owner
+					space_owner = { is_same_value = from.owner }
+				}
+			}
+			OR = {
+				merg_is_hab_ringworld = yes
+				merg_is_habitat = yes
+			}
+		}
+	}
+}
+
 # ===========================================================================================================================
 
 # PK Triggers here
@@ -2980,6 +3014,7 @@ merg_is_untargetable = {
 		is_pc_mem_synthetic_sun = yes
 		# ACOT
 		is_acot_awesome_planet_class = yes
+		is_acot_pmc_vault = yes
 		is_acot_void_hole = yes
 		# Darkspace
 		is_ds_stellar_engine = yes

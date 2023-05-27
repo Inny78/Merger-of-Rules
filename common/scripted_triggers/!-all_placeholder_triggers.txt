@@ -47,6 +47,7 @@ galactic_diversity_habitable_planet = { always = no }
 GF_can_build_doll_species = { always = no }
 giga_ai_should_restrict_system = { always = no }
 giga_country_gets_bank_exclude = { always = no }
+giga_habitable_structure = { always = no }
 giga_has_any_farming_district_or_buildings = { always = no }
 giga_has_any_generator_district_or_building = { always = no }
 giga_has_any_industrial_district = { always = no }

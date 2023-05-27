@@ -117,6 +117,8 @@ has_any_megastructure_in_empire = {
 			# Real Space - Planetary Station
 			has_megastructure = planet_crack_0
 			has_megastructure = planetary_station_0
+			# Shroud Expanded - The Decadence of Sanity
+			has_megastructure = shroud_outpost
 			# Some Events of Outside Cluster
 			has_megastructure = nep_station_whitegoo_mega
 			has_megastructure = nep_sealphantom_nexus

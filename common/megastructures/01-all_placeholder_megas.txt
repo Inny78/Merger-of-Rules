@@ -849,6 +849,7 @@ shenhai_energy_core_2 = { entity = "" potential = { always = no } possible = { a
 shenhai_energy_core_3 = { entity = "" potential = { always = no } possible = { always = no } }
 shenhai_energy_core_4 = { entity = "" potential = { always = no } possible = { always = no } }
 Shield_Gate = { entity = "" potential = { always = no } possible = { always = no } }
+shroud_outpost = { entity = "" potential = { always = no } possible = { always = no } }
 skypalace_0 = { entity = "" potential = { always = no } possible = { always = no } }
 slgt_central_mining_station = { entity = "" potential = { always = no } possible = { always = no } }
 sofe_inner_gate = { entity = "" potential = { always = no } possible = { always = no } }

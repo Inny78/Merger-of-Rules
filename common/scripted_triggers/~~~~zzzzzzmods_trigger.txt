@@ -456,66 +456,6 @@ is_spy_empire = {
 		has_valid_civic = civic_shadow_state
 	}
 }
-is_barren = {
-	merg_is_barren = yes
-}
-is_molten = {
-	merg_is_molten = yes
-}
-is_frozen = {
-	merg_is_frozen = yes
-}
-is_toxic = {
-	merg_is_toxic = yes
-}
-is_gas_giant = {
-	merg_is_gas_giant = yes # Also Kancolle
-}
-is_desert = {
-	merg_is_desert = yes
-}
-is_arid = {
-	merg_is_arid = yes
-}
-is_savannah = {
-	merg_is_savannah = yes
-}
-is_tropical = {
-	merg_is_tropical = yes
-}
-is_continental = {
-	merg_is_continental = yes
-}
-is_ocean = {
-	merg_is_ocean = yes
-}
-is_tundra = {
-	merg_is_tundra = yes
-}
-is_arctic = {
-	merg_is_arctic = yes
-}
-is_alpine = {
-	merg_is_alpine = yes
-}
-is_nuked = {
-	merg_is_nuked_basic = yes
-}
-is_hive = {
-	merg_is_hive_world = yes
-}
-is_machine = {
-	merg_is_machine_world = yes
-}
-is_gaia = {
-	OR = {
-		merg_is_gaia = yes
-		is_planet_class = pc_ancient
-	}
-}
-is_city = {
-	merg_is_arcology = yes
-}
 living_metal_candidate = {
 	NOT = { has_deposit_for = shipclass_research_station }
 	OR = {
@@ -917,6 +857,9 @@ infmod_is_relevant = {
 		merg_is_awakened_fe = yes
 	}
 }
+
+############################### Kancolle ###############################
+is_gas_giant = { merg_is_gas_giant = yes }
 
 ############################### Legendary Worlds ###############################
 legw_planet_uninhabitable = {
