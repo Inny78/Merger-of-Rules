@@ -1,6 +1,7 @@
 # Irony this is a placeholder file please ignore it
 
 esc_tech_synthetic_lifeform_studies = { cost = 0 area = society category = { materials } tier = 5 potential = { merg_has_esc_next = yes } }
+tech_advanced_gene_tailoring = { cost = 0 area = society category = { materials } tier = 5 potential = { merg_has_rogue_maid = yes } }
 tech_ariphaos_sensors_black_hole = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_sensor_expansion = yes } }
 tech_ariphaos_sensors_jammed = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_sensor_expansion = yes } }
 tech_ariphaos_sensors_nebula = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_sensor_expansion = yes } }
