@@ -3,606 +3,481 @@
 # this/root = planet that have been fired upon
 # from = fleet that fired
 
-# on_destroy_planet_with_PLANET_KILLER_SHIELDER = giga_paluush.101 giga_habcap.008 arknights_KWYATA.4 apsr.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 apsr_sao.1 apsr_sao.91
-#	mem_blacksite.1000 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 cruel_pk.1
-# on_destroy_planet_with_PLANET_KILLER_NEUTRON = giga_paluush.102 arknights_KWYATA.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 maginot_destruction.1002 ap_wg_crisis.12
-# 	aot_planetary_shields_event.1 cruel_pk.7
 # on_destroy_planet_with_PLANET_KILLER_CRACKER = giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
-#	gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2
-# on_destroy_planet_with_PLANET_KILLER_GODRAY = giga_paluush.104 arknights_KWYATA.5 sleeper_dormant.12 cruel_pk.3
-# on_destroy_planet_with_PLANET_KILLER_NANOBOTS = giga_paluush.105 anomalymod.73 sleeper_dormant.12 maginot_destruction.1002 giga_katzen.0933 ap_wg_crisis.12
-#	cruel_pk.4
+#	gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+#	xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+#	crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
+#
+# on_destroy_planet_with_PLANET_KILLER_SHIELDER = giga_paluush.101 giga_habcap.008 arknights_KWYATA.4 apsr.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 apsr_sao.1 apsr_sao.91
+#	mem_blacksite.1000 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 cruel_pk.1 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 AL_fallen_empire.3
+#	wula_fallen_empire_machine.32 civicsexpanded.76 civicsexpanded.103 crowis.42 PF22.160 giga_aeternum.9994 projcrim.16
+#
+# on_destroy_planet_with_PLANET_KILLER_NEUTRON = giga_paluush.102 arknights_KWYATA.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 maginot_destruction.1002 ap_wg_crisis.12
+# 	aot_planetary_shields_event.1 cruel_pk.7 time_crisis_country.10 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.77
+#	civicsexpanded.103 onactionpops.12 AL_fallen_empire.6 crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 projcrim.17
+#
+# on_destroy_planet_with_PLANET_KILLER_GODRAY = giga_paluush.104 arknights_KWYATA.5 sleeper_dormant.12 cruel_pk.3 time_crisis_country.10 fourth_crisis.7 xvcv_mdlc_situation_warfare.18
+#	AL_fallen_empire.7 crowis.42 PF22.160 giga_aeternum.9994 projcrim.18
+#
+# on_destroy_planet_with_PLANET_KILLER_NANOBOTS = giga_paluush.105 anomalymod.73 sleeper_dormant.12 maginot_destruction.1002 giga_katzen.0933 ap_wg_crisis.12 fourth_crisis.7
+#	cruel_pk.4 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.103 onactionpops.12 AL_fallen_empire.8 crowis.42 PF22.160 giga_aeternum.9994
+#	projcrim.18
+#
+# on_destroy_planet_with_PLANET_KILLER_DELUGE = time_crisis_country.10 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.103
+#	onactionpops.12 crowis.42 PF22.160 d_factions.52 d_factions.94 projcrim.18
+#
+# on_destroy_planet_with_PLANET_KILLER_TOXIFIER = fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 crowis.42 PF22.160 d_factions.50 d_factions.92
+#	projcrim.16
+#
+# on_destroy_planet_with_PLANET_KILLER_DEVOLUTION = MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32
 
 on_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 	events = {
-		arknights_KWYATA.2
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5
+		fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32
+		AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12
+		AL_magic_bullet.5 AL_fallen_empire.4 crowis.42
+		PF22.160 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
-
 on_destroy_planet_with_ACOT_PLANET_KILLER_SHIELDER = {
 	events = {
-		arknights_KWYATA.4
-		apsr.3
-		apsr_sao.1
-		apsr_sao.91
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		cruel_pk.1
+		arknights_KWYATA.4 apsr.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 apsr_sao.1 apsr_sao.91
+		mem_blacksite.1000 ap_wg_crisis.12 aot_planetary_shields_event.1 cruel_pk.1 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 AL_fallen_empire.3
+		wula_fallen_empire_machine.32 civicsexpanded.76 civicsexpanded.103 crowis.42 PF22.160 projcrim.16
 	}
 }
-
 on_destroy_planet_with_ACOT_PLANET_KILLER_NEUTRON = {
 	events = {
-		arknights_KWYATA.3
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		ap_wg_crisis.12
-		cruel_pk.7
+		arknights_KWYATA.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 ap_wg_crisis.12
+		aot_planetary_shields_event.1 cruel_pk.7 time_crisis_country.10 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.77
+		civicsexpanded.103 onactionpops.12 AL_fallen_empire.6 crowis.42 PF22.160 d_factions.50 projcrim.17
 	}
 }
-
 on_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = {
 	events = {
-		arknights_KWYATA.5
-		sleeper_dormant.12
-		cruel_pk.3
+		arknights_KWYATA.5 sleeper_dormant.12 cruel_pk.3 time_crisis_country.10 fourth_crisis.7 xvcv_mdlc_situation_warfare.18
+		AL_fallen_empire.7 crowis.42 PF22.160 projcrim.18
 	}
 }
-
 on_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = {
 	events = {
-		anomalymod.73
-		sleeper_dormant.12
-		ap_wg_crisis.12
-		cruel_pk.4
+		anomalymod.73 sleeper_dormant.12 ap_wg_crisis.12 fourth_crisis.7
+		cruel_pk.4 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32
+		civicsexpanded.103 onactionpops.12 AL_fallen_empire.8 crowis.42 PF22.160 projcrim.18
 	}
 }
-
 on_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = {
 	events = {
-		arknights_KWYATA.2
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5
+		fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32
+		AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12
+		AL_magic_bullet.5 AL_fallen_empire.4 crowis.42
+		PF22.160 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
-
 on_destroy_planet_with_ACOT_SE_PLANET_KILLER_SHIELDER = {
 	events = {
-		arknights_KWYATA.4
-		apsr.3
-		apsr_sao.1
-		apsr_sao.91
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		cruel_pk.1
+		arknights_KWYATA.4 apsr.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 apsr_sao.1 apsr_sao.91
+		mem_blacksite.1000 ap_wg_crisis.12 aot_planetary_shields_event.1 cruel_pk.1 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 AL_fallen_empire.3
+		wula_fallen_empire_machine.32 civicsexpanded.76 civicsexpanded.103 crowis.42 PF22.160 projcrim.16
 	}
 }
-
 on_destroy_planet_with_ACOT_SE_PLANET_KILLER_NEUTRON = {
 	events = {
-		arknights_KWYATA.3
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		ap_wg_crisis.12
-		cruel_pk.7
+		arknights_KWYATA.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 ap_wg_crisis.12
+		aot_planetary_shields_event.1 cruel_pk.7 time_crisis_country.10 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.77
+		civicsexpanded.103 onactionpops.12 AL_fallen_empire.6 crowis.42 PF22.160 d_factions.50 projcrim.17
 	}
 }
-
 on_destroy_planet_with_ACOT_SE_PLANET_KILLER_GODRAY = {
 	events = {
-		arknights_KWYATA.5
-		sleeper_dormant.12
-		cruel_pk.3
+		arknights_KWYATA.5 sleeper_dormant.12 cruel_pk.3 time_crisis_country.10 fourth_crisis.7 xvcv_mdlc_situation_warfare.18
+		AL_fallen_empire.7 crowis.42 PF22.160 projcrim.18
 	}
 }
-
 on_destroy_planet_with_ACOT_SE_PLANET_KILLER_NANOBOTS = {
 	events = {
-		anomalymod.73
-		sleeper_dormant.12
-		ap_wg_crisis.12
-		cruel_pk.4
+		anomalymod.73 sleeper_dormant.12 ap_wg_crisis.12 fourth_crisis.7
+		cruel_pk.4 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32
+		civicsexpanded.103 onactionpops.12 AL_fallen_empire.8 crowis.42 PF22.160 projcrim.18
 	}
 }
-
 on_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = {
 	events = {
-		arknights_KWYATA.2
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		ap_wg_crisis.12
-		osom_subterranean_change.1
-		cruel_pk.2
+		arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5
+		fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32
+		AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12
+		AL_magic_bullet.5 AL_fallen_empire.4 crowis.42
+		PF22.160 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
-
 on_destroy_planet_with_ACOT_HE_PLANET_KILLER_SHIELDER = {
 	events = {
-		arknights_KWYATA.4
-		apsr.3
-		apsr_sao.1
-		apsr_sao.91
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		ap_wg_crisis.12
-		cruel_pk.1
+		arknights_KWYATA.4 apsr.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 apsr_sao.1 apsr_sao.91
+		mem_blacksite.1000 ap_wg_crisis.12 aot_planetary_shields_event.1 cruel_pk.1 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 AL_fallen_empire.3
+		wula_fallen_empire_machine.32 civicsexpanded.76 civicsexpanded.103 crowis.42 PF22.160 projcrim.16
 	}
 }
-
 on_destroy_planet_with_ACOT_HE_PLANET_KILLER_NEUTRON = {
 	events = {
-		arknights_KWYATA.3
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		ap_wg_crisis.12
-		cruel_pk.7
+		arknights_KWYATA.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 ap_wg_crisis.12
+		aot_planetary_shields_event.1 cruel_pk.7 time_crisis_country.10 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.77
+		civicsexpanded.103 onactionpops.12 AL_fallen_empire.6 crowis.42 PF22.160 d_factions.50 projcrim.17
 	}
 }
-
 on_destroy_planet_with_ACOT_HE_PLANET_KILLER_GODRAY = {
 	events = {
-		arknights_KWYATA.5
-		sleeper_dormant.12
-		cruel_pk.3
+		arknights_KWYATA.5 sleeper_dormant.12 cruel_pk.3 time_crisis_country.10 fourth_crisis.7 xvcv_mdlc_situation_warfare.18
+		AL_fallen_empire.7 crowis.42 PF22.160 projcrim.18
 	}
 }
-
 on_destroy_planet_with_ACOT_HE_PLANET_KILLER_NANOBOTS = {
 	events = {
-		anomalymod.73
-		sleeper_dormant.12
-		ap_wg_crisis.12
-		cruel_pk.4
+		anomalymod.73 sleeper_dormant.12 ap_wg_crisis.12 fourth_crisis.7
+		cruel_pk.4 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32
+		civicsexpanded.103 onactionpops.12 AL_fallen_empire.8 crowis.42 PF22.160 projcrim.18
 	}
 }
 
-# on_destroy_planet_with_ACOT_HERCULEAN_PLANET_RESONANT_BEAM_8E = {
-# 	events = {
-# 	}
-# }
-
-# Gigas - new events, already adds his to ACOT
-
+# Gigas - already adds his to ACOT
 on_destroy_planet_with_COMPOUND_HM_RESHAPER = { # Cracker
 	events = {
-		arknights_KWYATA.2
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000 gpm_planet_destruction.1
+		ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 d_factions.50 d_factions.92 projcrim.16
 	}
 }
-
 on_destroy_planet_with_PLANET_KILLER_CRACKER_SYSTEMCRAFT = {
 	events = {
-		arknights_KWYATA.2
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000 gpm_planet_destruction.1
+		ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7
+		MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103
+		onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4 crowis.42
+		PF22.160 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
-
 on_destroy_planet_with_PLANET_KILLER_SHIELDER_SYSTEMCRAFT = {
 	events = {
-		arknights_KWYATA.4
-		apsr.3
-		apsr_sao.1
-		apsr_sao.91
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		cruel_pk.1
+		arknights_KWYATA.4 apsr.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 apsr_sao.1 apsr_sao.91
+		mem_blacksite.1000 ap_wg_crisis.12 aot_planetary_shields_event.1 cruel_pk.1 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 AL_fallen_empire.3
+		wula_fallen_empire_machine.32 civicsexpanded.76 civicsexpanded.103 crowis.42 PF22.160 projcrim.16
 	}
 }
-
 on_destroy_planet_with_PLANET_KILLER_NEUTRON_SYSTEMCRAFT = {
 	events = {
-		arknights_KWYATA.3
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		cruel_pk.7
+		arknights_KWYATA.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 ap_wg_crisis.12
+		aot_planetary_shields_event.1 cruel_pk.7 time_crisis_country.10 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.77
+		civicsexpanded.103 onactionpops.12 AL_fallen_empire.6 crowis.42 PF22.160 d_factions.50 projcrim.17
 	}
 }
-
 on_destroy_planet_with_PLANET_KILLER_GODRAY_SYSTEMCRAFT = {
 	events = {
-		arknights_KWYATA.5
-		sleeper_dormant.12
-		cruel_pk.3
+		arknights_KWYATA.5 sleeper_dormant.12 cruel_pk.3 time_crisis_country.10 fourth_crisis.7 xvcv_mdlc_situation_warfare.18
+		AL_fallen_empire.7 crowis.42 PF22.160 projcrim.18
 	}
 }
-
 on_destroy_planet_with_PLANET_KILLER_NANOBOTS_SYSTEMCRAFT = {
 	events = {
-		anomalymod.73
-		sleeper_dormant.12
-		ap_wg_crisis.12
-		cruel_pk.4
+		anomalymod.73 sleeper_dormant.12 ap_wg_crisis.12 fourth_crisis.7
+		cruel_pk.4 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32
+		civicsexpanded.103 onactionpops.12 AL_fallen_empire.8 crowis.42 PF22.160 projcrim.18
 	}
 }
-
-# on_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = {
-# 	events = {
-# 		# giga_o_star.2001 #O stars
-# 	}
-# }
-
-# Ancient Empire
-# Complicated, might need patching
-# on_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = { # Cracker/Starploder
-# 	events = {
-# 	}
-# }
 
 # Arknights Near Future
 on_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = { # Cracker
 	events = {
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000 gpm_planet_destruction.1
+		maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5
+		fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75
+		civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4 crowis.42 tiyres_events.7
 	}
 }
 
 # Girls Frontline
 on_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = { # Cracker
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
 
 #ThaumStellaris - all crackers
 on_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
-
 on_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
-
 on_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM = {
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
-
 on_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM_TURRET = {
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
-
 on_destroy_planet_with_TC_PLANET_KILLER_FROST = {
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
-
 on_destroy_planet_with_TC_PLANET_KILLER_FROST_TURRET = {
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
-
 on_destroy_planet_with_TC_PLANET_KILLER_LIQUEFACTION = {
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
-
 on_destroy_planet_with_TC_PLANET_KILLER_LIQUEFACTION_TURRET = {
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
+	}
+}
+on_destroy_planet_with_TC_PLANET_KILLER_DISINTEGRATION = {
+	events = {
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
+	}
+}
+on_destroy_planet_with_TC_PLANET_KILLER_DISINTEGRATION_TURRET = {
+	events = {
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
 
 # A Deadly Tempest
 on_destroy_planet_with_PLANET_KILLER_HARVESTER = { # Nanites
 	events = {
-		giga_paluush.105
-		anomalymod.73
-		sleeper_dormant.12
-		maginot_destruction.1002
-		giga_katzen.0933
-		ap_wg_crisis.12
-		cruel_pk.4
+		giga_paluush.105 anomalymod.73 sleeper_dormant.12 maginot_destruction.1002 giga_katzen.0933 ap_wg_crisis.12 fourth_crisis.7
+		cruel_pk.4 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.103 onactionpops.12 AL_fallen_empire.8 crowis.42 PF22.160 giga_aeternum.9994
+		projcrim.18
 	}
 }
 
 # Empire of Eveelution
 on_destroy_planet_with_PLANET_KILLER_EOE = { # Cracker
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
-
 on_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
-
 on_destroy_planet_with_PLANET_KILLER_FIRE_EOE_SMALL = {
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
 
 # Warship Girls
 on_destroy_planet_with_PLANET_KILLER_GRAYGOO_GRAY = { # Nanites
 	events = {
-		giga_paluush.105
-		anomalymod.73
-		sleeper_dormant.12
-		maginot_destruction.1002
-		giga_katzen.0933
-		cruel_pk.4
+		giga_paluush.105 anomalymod.73 sleeper_dormant.12 maginot_destruction.1002 giga_katzen.0933 ap_wg_crisis.12 fourth_crisis.7
+		cruel_pk.4 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.103 onactionpops.12 AL_fallen_empire.8 crowis.42 PF22.160 giga_aeternum.9994
+		projcrim.18
 	}
 }
 
 # Twinks Kaldorei
 on_destroy_planet_with_PLANET_KILLER_CRACKER_ARCANE = { # Cracker
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
 
 # Star Wars: UnknownWorld Shipgirls Story
 on_destroy_planet_with_PLANET_KILLER_JUMP_SWGS = { # Cracker
 	events = {
-		arknights_KWYATA.2
-		giga_paluush.103
-		giga_habcap.008
-		apsr.4
-		anomalymod.73
-		expandedrelics.17
-		sleeper_dormant.12
-		mem_blacksite.1000
-		gpm_planet_destruction.1
-		maginot_destruction.1002
-		ap_wg_crisis.12
-		aot_planetary_shields_event.1
-		osom_subterranean_change.1
-		cruel_pk.2
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
 	}
 }
 
 # Nanite Expansion
 on_destroy_planet_with_PLANET_KILLER_NANO = { # Nanites
 	events = {
-		giga_paluush.105
-		anomalymod.73
-		sleeper_dormant.12
-		maginot_destruction.1002
-		giga_katzen.0933
-		# cruel_pk.4
+		giga_paluush.105 anomalymod.73 sleeper_dormant.12 maginot_destruction.1002 giga_katzen.0933 ap_wg_crisis.12 fourth_crisis.7
+		cruel_pk.4 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.103 onactionpops.12 AL_fallen_empire.8 crowis.42 PF22.160 giga_aeternum.9994
+		projcrim.18
 	}
 }
+
+# Shroud Expanded
+on_destroy_planet_with_PLANET_KILLER_SHROUD = { # Cracker
+	events = {
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
+	}
+}
+
+# Voyage to Eternity
+on_destroy_planet_with_PLANET_KILLER_CRACKER_KZ_VOY_battlestar = { # Cracker
+	events = {
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
+	}
+}
+on_destroy_planet_with_PLANET_KILLER_SHIELDER_KZ_VOY_battlestar = { # Shielder
+	events = {
+		giga_paluush.101 giga_habcap.008 arknights_KWYATA.4 apsr.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 apsr_sao.1 apsr_sao.91
+		mem_blacksite.1000 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 cruel_pk.1 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 AL_fallen_empire.3
+		wula_fallen_empire_machine.32 civicsexpanded.76 civicsexpanded.103 crowis.42 PF22.160 giga_aeternum.9994 projcrim.16
+	}
+}
+on_destroy_planet_with_PLANET_KILLER_NEUTRON_KZ_VOY_battlestar = { # Neutron
+	events = {
+		giga_paluush.102 arknights_KWYATA.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 maginot_destruction.1002 ap_wg_crisis.12
+		aot_planetary_shields_event.1 cruel_pk.7 time_crisis_country.10 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.77
+		civicsexpanded.103 onactionpops.12 AL_fallen_empire.6 crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 projcrim.17
+	}
+}
+on_destroy_planet_with_PLANET_KILLER_GODRAY_KZ_VOY_battlestar = { # Godray
+	events = {
+		giga_paluush.104 arknights_KWYATA.5 sleeper_dormant.12 cruel_pk.3 time_crisis_country.10 fourth_crisis.7 xvcv_mdlc_situation_warfare.18
+		AL_fallen_empire.7 crowis.42 PF22.160 giga_aeternum.9994 projcrim.18
+	}
+}
+on_destroy_planet_with_PLANET_KILLER_NANOBOTS_KZ_VOY_battlestar = { # Nanites
+	events = {
+		giga_paluush.105 anomalymod.73 sleeper_dormant.12 maginot_destruction.1002 giga_katzen.0933 ap_wg_crisis.12 fourth_crisis.7
+		cruel_pk.4 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.103 onactionpops.12 AL_fallen_empire.8 crowis.42 PF22.160 giga_aeternum.9994
+		projcrim.18
+	}
+}
+on_destroy_planet_with_PLANET_KILLER_DELUGE_KZ_VOY_battlestar = { # Deluge
+	events = {
+		time_crisis_country.10 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.103
+		onactionpops.12 crowis.42 PF22.160 d_factions.52 d_factions.94 projcrim.18
+	}
+}
+on_destroy_planet_with_PLANET_KILLER_TOXIFIER_KZ_VOY_battlestar = { # Toxifier
+	events = {
+		fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 crowis.42 PF22.160 d_factions.50 d_factions.92
+		projcrim.16
+	}
+}
+on_destroy_planet_with_PLANET_KILLER_DEVOLUTION_KZ_VOY_battlestar = { # Devolution
+	events = {
+		MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32
+	}
+}
+
+# Electroids
+on_destroy_planet_with_PLANET_KILLER_ELEC_FOCUS = { # Cracker
+	events = {
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16
+	}
+}
+
+# Rozen Maiden Suigintou Leader Pack
+on_destroy_planet_with_GE_PLANET_KILLER_CRACKER = {
+	events = {
+		giga_paluush.103 giga_habcap.008 arknights_KWYATA.2 apsr.4 anomalymod.73 expandedrelics.17 sleeper_dormant.12 mem_blacksite.1000
+		gpm_planet_destruction.1 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 osom_subterranean_change.1 cruel_pk.2 time_crisis_country.5 fourth_crisis.7 MECR.3036
+		xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 AAA.11 AAA_galcom.3 civicsexpanded.75 civicsexpanded.103 onactionpops.12 AL_magic_bullet.5 AL_fallen_empire.4
+		crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 d_factions.92 projcrim.16 tiyres_events.7
+	}
+}
+on_destroy_planet_with_GE_PLANET_KILLER_SHIELDER = {
+	events = {
+		giga_paluush.101 giga_habcap.008 arknights_KWYATA.4 apsr.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 apsr_sao.1 apsr_sao.91
+		mem_blacksite.1000 maginot_destruction.1002 ap_wg_crisis.12 aot_planetary_shields_event.1 cruel_pk.1 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 AL_fallen_empire.3
+		wula_fallen_empire_machine.32 civicsexpanded.76 civicsexpanded.103 crowis.42 PF22.160 giga_aeternum.9994 projcrim.16
+	}
+}
+on_destroy_planet_with_GE_PLANET_KILLER_NEUTRON = {
+	events = {
+		giga_paluush.102 arknights_KWYATA.3 anomalymod.73 expandedrelics.17 sleeper_dormant.12 maginot_destruction.1002 ap_wg_crisis.12
+		aot_planetary_shields_event.1 cruel_pk.7 time_crisis_country.10 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.77
+		civicsexpanded.103 onactionpops.12 AL_fallen_empire.6 crowis.42 PF22.160 giga_aeternum.9994 d_factions.50 projcrim.17
+	}
+}
+on_destroy_planet_with_GE_PLANET_KILLER_GODRAY = {
+	events = {
+		giga_paluush.104 arknights_KWYATA.5 sleeper_dormant.12 cruel_pk.3 time_crisis_country.10 fourth_crisis.7 xvcv_mdlc_situation_warfare.18
+		AL_fallen_empire.7 crowis.42 PF22.160 giga_aeternum.9994 projcrim.18
+	}
+}
+on_destroy_planet_with_GE_PLANET_KILLER_NANOBOTS = {
+	events = {
+		giga_paluush.105 anomalymod.73 sleeper_dormant.12 maginot_destruction.1002 giga_katzen.0933 ap_wg_crisis.12 fourth_crisis.7
+		cruel_pk.4 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.103 onactionpops.12 AL_fallen_empire.8 crowis.42 PF22.160 giga_aeternum.9994
+		projcrim.18
+	}
+}
+on_destroy_planet_with_GE_PLANET_KILLER_DELUGE = {
+	events = {
+		time_crisis_country.10 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.103
+		onactionpops.12 crowis.42 PF22.160 d_factions.52 d_factions.94 projcrim.18
+	}
+}
+

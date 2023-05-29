@@ -644,13 +644,10 @@ is_phototrophic = {
 		# Planetary Diversity
 		is_pd_radiotrophic_mutant = yes
 		# V_Traits
-		has_trait = trait_v_kleptoplasty
-		has_trait = trait_v_solar_skin_b
-		has_trait = trait_v_solar_skin_l
+		has_v_phototrophic_trait = yes
 		AND = {
 			OR = {
-				has_trait = trait_v_grafting
-				has_trait = trait_v_adv_grafting
+				has_v_grafting_trait = yes
 			}
 			planet = {
 				any_owned_species = {
@@ -672,9 +669,7 @@ has_phototrophic_energy_upkeep = {
 		has_trait = trait_plantoid_phototrophic
 		has_trait = trait_advanced_radiotrophic
 		# V_Traits
-		has_trait = trait_v_kleptoplasty
-		has_trait = trait_v_solar_skin_b
-		has_trait = trait_v_solar_skin_l
+		has_v_phototrophic_trait = yes
 		# Vanilla
 		AND = {
 			OR = {
@@ -689,10 +684,7 @@ has_phototrophic_energy_upkeep = {
 		}
 		# V_TRAITS
 		AND = {
-			OR = {
-				has_trait = trait_v_grafting
-				has_trait = trait_v_adv_grafting
-			}
+			has_v_grafting_trait = yes
 			planet = {
 				any_owned_species = {
 					OR = {
@@ -728,8 +720,7 @@ has_budding_trait = {
 		has_trait = trait_lithoid_budding
 		has_trait = trait_advanced_budding
 		# V_Traits
-		has_trait = trait_v_strobilation
-		has_trait = trait_v_asexual_reproduction
+		has_v_budding_trait = yes
 		# Wula Fallen Empire
 		has_trait = trait_wula_tietie
 	}
@@ -1195,7 +1186,7 @@ can_think = {
 		# Rogue Maid
 		has_trait = trait_working_machine
 		# V_Traits
-		has_trait = trait_v_cyborg_servitor
+		has_v_non_thinking_trait = yes
 	}
 }
 

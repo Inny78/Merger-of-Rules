@@ -75,6 +75,7 @@ giga_uses_industrial_district = { always = no }
 gpm_has_positive_energy_planet_modifier = { always = no }
 gpm_has_positive_food_planet_modifier = { always = no }
 gpm_has_positive_mineral_planet_modifier = { always = no }
+gpm_mod_active = yes
 has_acot = { always = no }
 has_apsr_modifiers = { always = no }
 has_artificial_aristocracy_emex = { always = no }
@@ -115,6 +116,15 @@ has_species_trait_holofrixigram = { always = no }
 has_str_genemodding_tech = { always = no }
 has_strict_democratic_auth = { always = no }
 has_upgraded_penal_capital = { always = no }
+has_v_asexual_reproduction = { always = no }
+has_v_budding_trait = { always = no }
+has_v_difficult_reproduction = { always = no }
+has_v_grafting_trait = { always = no }
+has_v_heterogamous_reproduction = { always = no }
+has_v_no_crime = { always = no }
+has_v_non_thinking_trait = { always = no }
+has_v_presapient_trait = { always = no }
+has_v_phototrophic_trait = { always = no }
 has_wg_traits = { always = no }
 has_wsg_genemodding_tech = { always = no }
 has_zofe_mc = { always = no }
@@ -298,6 +308,7 @@ is_tm_reassembler = { always = no }
 is_the_belt_active = { always = no }
 is_undead = { always = no }
 is_v_mobile = { always = yes }
+is_v_social_parasite = { always = no }
 is_valid_GF_OGAS_subnet = { always = no }
 is_valid_organic_zealots = { always = no }
 is_valid_pop_for_PLANET_KILLER_CM = { always = no }

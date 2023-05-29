@@ -1537,7 +1537,7 @@ can_species_procreate = {
 		# Plentiful Traditions - Extra Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
 		# V_TRAITs
-		has_trait = trait_v_difficult_reproduction
+		has_v_asexual_reproduction = yes
 		# Wandering Witch: Voyagers
 		has_trait = trait_dummy
 	}
@@ -1607,11 +1607,13 @@ can_species_procreate = {
 	# Human Fallen Empires
 	NOT = { has_trait = hfe_species_trait_brainworm }
 	# V_Traits
-	NAND = {
-		has_trait = trait_v_specific_breeders
-		root = {
-			habitability = { who = prev value >= 0.6 }
-		}
+	if = {
+		limit = { has_v_difficult_reproduction = yes }
+		root = { habitability = { who = this value >= 0.8 } }
+	}
+	if = {
+		limit = { has_v_heterogamous_reproduction = yes }
+		root = { habitability = { who = this value <= 0.8 } }
 	}
 	# Wandering Witch: Voyagers
 	if = {
@@ -1923,6 +1925,20 @@ can_species_be_assembled = {
 					has_building = building_techno_04_clone_vat
 					NOT = { check_variable = { which = techno_pops_missing value = 0 }
 					}
+				}
+			}
+			# V_TRAITS
+			else_if = {
+				limit = { has_v_asexual_reproduction = yes }
+				root = {
+					any_owned_species = { is_exact_same_species = prevprev }
+				}
+			}
+			else_if = {
+				limit = { has_v_heterogamous_reproduction = yes }
+				root = {
+					any_owned_species = { is_exact_same_species = prevprev }
+					habitability = { who = this value >= 0.6 }
 				}
 			}
 			# Wandering Witch: Voyagers
@@ -3130,7 +3146,7 @@ pop_generates_crime = {
 		# AshArms Aquarius history
 		has_trait = adf_trait_dolls
 		# V_TRAITS
-		has_trait = trait_v_cyborg_no_crime
+		has_v_no_crime = no
 	}
 }
 
@@ -4407,10 +4423,7 @@ can_fill_drone_job = {
 			}
 		}
 		# V_Traits
-		NOR = {
-			has_trait = trait_v_social_parasite
-			has_trait = trait_v_adv_social_parasite
-		}
+		is_v_social_parasite = no
 	}
 }
 
@@ -4469,12 +4482,7 @@ can_fill_worker_job = {
 		}
 		# V_Traits
 		if = {
-			limit = {
-				OR = {
-					has_trait = trait_v_social_parasite
-					has_trait = trait_v_adv_social_parasite
-				}
-			}
+			limit = { is_v_social_parasite = yes }
 			has_citizenship_type = { type = citizenship_slavery }
 		}
 		# TimeMod

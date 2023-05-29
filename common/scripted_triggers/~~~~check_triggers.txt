@@ -105,12 +105,7 @@ merg_has_galaxius = { has_global_flag = ie_flag }
 merg_has_gigastructures = { has_gigastructures = yes }
 
 # Guilli's Planet Modifiers and Features
-merg_has_gpm = {
-	OR = {
-		has_global_flag = has_guillis_planet_modifiers_mod
-		has_global_flag = guillis_planet_modifiers_active
-	}
-}
+merg_has_gpm = { gpm_mod_active = yes }
 
 # Human Fallen Empire
 merg_has_human_fallen = { has_global_flag = hfe_installed }
