@@ -472,6 +472,23 @@ est_is_evil_dip_empire = {
 		has_valid_civic = civic_machine_assimilator	
 	}
 }
+est_uses_robots = {
+	OR = {
+		has_origin = origin_mechanists
+		has_country_flag = est_built_robot
+	}
+	NOR = {
+		has_policy_flag = robots_outlawed
+		# Organic Zealots
+		has_country_flag = lost_robot_policy_war
+		is_valid_organic_zealots = yes
+		AND = {
+			is_subject = yes
+			exists = overlord
+			overlord = { is_valid_organic_zealots = yes }
+		}
+	}
+}
 est_uses_slaves = {
 	OR = {
 		has_policy_flag = slavery_allowed
