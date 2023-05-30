@@ -718,6 +718,8 @@ can_release_vassal_from_species = {
 				prev.this = { has_authority = auth_hive_mind }
 			}
 			can_think = no
+			has_trait = trait_clone_soldier_infertile
+			has_trait = trait_clone_soldier_infertile_full_potential
 			# Empires Expanded
 			AND = {
 				OR = {
@@ -878,9 +880,7 @@ can_take_hostile_actions = {
 	else_if = {
 		limit = {
 			ROOT = {
-				any_agreement = {
-					agreement_preset = preset_satrapy
-				}
+				any_agreement = { agreement_preset = preset_satrapy }
 			}
 			is_country_type = faction
 			root = {
@@ -1887,7 +1887,6 @@ can_species_be_assembled = {
 				}
 				root = {
 					# Event 'clones.3' should cover this, but extra safety check.
-					has_building = building_clone_army_clone_vat
 					merg_has_clone_army_building = yes
 					NOT = { check_variable = { which = clone_pops_missing value = 0 } }
 				}
@@ -1912,9 +1911,7 @@ can_species_be_assembled = {
 			}
 			# Planetary Diversity
 			else_if = {
-				limit = {
-					is_organic_fourschildren = yes
-				}
+				limit = { is_organic_fourschildren = yes }
 				root = {
 					has_building = building_techno_04_clone_vat
 					NOT = { check_variable = { which = techno_pops_missing value = 0 }
@@ -2700,8 +2697,8 @@ system_blocks_sensors = {
 	OR = {
 		AND = { # Nebulae
 			OR = {
-				has_modifier = space_storm
 				is_inside_nebula = yes
+				has_modifier = space_storm
 				has_modifier = zroni_storm
 				merg_is_nebulae = yes
 				# Wild Space

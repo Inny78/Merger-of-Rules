@@ -1105,6 +1105,8 @@ has_special_star_flag_trigger = {
 		has_star_flag = outercluster
 		# Assault Lily
 		has_star_flag = al_huge_home_bed
+		# Battle for the Core
+		has_star_flag = Midrimguardian
 		# Fatherland
 		has_star_flag = mil_relic_system
 		# Gigastructural Engineering and More
@@ -1129,44 +1131,54 @@ has_special_star_flag_trigger = {
 		# Scripted Trigger Undercoat
 		has_star_flag = stu_has_special_star_flag
 		# Some Events of Outside Cluster
-		has_star_flag = nep_Krahen_cluster
-		has_star_flag = nep_dragon_system
-		has_star_flag = nep_heptagram_cluster
-		has_star_flag = nep_Scrus_cluster
-		has_star_flag = nep_seal_system
-		has_star_flag = nep_highway_station_system
-		has_star_flag = nep_highway_note_system
-		has_star_flag = nep_Step_to_the_Void_1
-		has_star_flag = nep_Step_to_the_Void_2
-		has_star_flag = nep_Step_to_the_Void_3
-		has_star_flag = nep_Step_to_the_Void_4
-		has_star_flag = nep_Step_to_the_Void_5
-		has_star_flag = nep_Step_to_the_Void_6
-		has_star_flag = nep_Step_to_the_Void_7
-		has_star_flag = nep_Step_to_the_Void_8
-		has_star_flag = nep_Step_to_the_Void_9
-		has_star_flag = nep_Step_to_the_Void_10
-		has_star_flag = nep_wohp_system
-		has_star_flag = nep_deus_system
-		has_star_flag = nep_deus_system_2
-		has_star_flag = nep_deus_system_3
-		has_star_flag = nep_deus_system_4
-		has_star_flag = nep_whitegoo_portal_1
-		has_star_flag = nep_whitegoo_portal_2
-		has_star_flag = nep_whitegoo_origin
-		has_star_flag = nep_ugo_system 
+		AND = {
+			merg_has_seooc = yes
+			OR = {
+				has_star_flag = nep_Krahen_cluster
+				has_star_flag = nep_dragon_system
+				has_star_flag = nep_heptagram_cluster
+				has_star_flag = nep_Scrus_cluster
+				has_star_flag = nep_seal_system
+				has_star_flag = nep_highway_station_system
+				has_star_flag = nep_highway_note_system
+				has_star_flag = nep_Step_to_the_Void_1
+				has_star_flag = nep_Step_to_the_Void_2
+				has_star_flag = nep_Step_to_the_Void_3
+				has_star_flag = nep_Step_to_the_Void_4
+				has_star_flag = nep_Step_to_the_Void_5
+				has_star_flag = nep_Step_to_the_Void_6
+				has_star_flag = nep_Step_to_the_Void_7
+				has_star_flag = nep_Step_to_the_Void_8
+				has_star_flag = nep_Step_to_the_Void_9
+				has_star_flag = nep_Step_to_the_Void_10
+				has_star_flag = nep_wohp_system
+				has_star_flag = nep_deus_system
+				has_star_flag = nep_deus_system_2
+				has_star_flag = nep_deus_system_3
+				has_star_flag = nep_deus_system_4
+				has_star_flag = nep_whitegoo_portal_1
+				has_star_flag = nep_whitegoo_portal_2
+				has_star_flag = nep_whitegoo_origin
+				has_star_flag = nep_ugo_system 
+			}
+		}
 		# SW:Kuat Ancient Empire
-		has_star_flag = Kuat_system
-		has_star_flag = Kuat_system_1
-		has_star_flag = Kuat_system_2
-		has_star_flag = Kuat_system_3
-		has_star_flag = kuat_initial_system
-		has_star_flag = Kuat_system_int
-		has_star_flag = Kuat_system_int_1
-		has_star_flag = Kuat_system_int_2
-		has_star_flag = Kuat_system_int_3
-		has_star_flag = Kuat_system_int_4
-		has_star_flag = starkiller_system
+		AND = {
+			merg_has_kuat = yes
+			OR = {
+				has_star_flag = Kuat_system
+				has_star_flag = Kuat_system_1
+				has_star_flag = Kuat_system_2
+				has_star_flag = Kuat_system_3
+				has_star_flag = kuat_initial_system
+				has_star_flag = Kuat_system_int
+				has_star_flag = Kuat_system_int_1
+				has_star_flag = Kuat_system_int_2
+				has_star_flag = Kuat_system_int_3
+				has_star_flag = Kuat_system_int_4
+				has_star_flag = starkiller_system
+			}
+		}
 		# THE ABYSS CONTRACT
 		has_star_flag = TAC_ag_signal_system
 		# Warship Girls R And MIST Species
