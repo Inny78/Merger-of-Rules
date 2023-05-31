@@ -1,0 +1,4 @@
+# Irony this is a placeholder file please ignore it
+giga_toxic_attendant_growth = { base = 0 }
+giga_bonus_desired_constructors_min = { base = 0 }
+giga_bonus_desired_constructors_max = { base = 0 }
