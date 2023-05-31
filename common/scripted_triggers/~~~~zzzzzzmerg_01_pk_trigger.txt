@@ -533,7 +533,7 @@ can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = {
 
 ###################################### Mods start here ######################################
 
-############################### Acquisition of Technology ###############################
+############################### Acquisition of Technologies ###############################
 can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
 can_destroy_planet_with_ACOT_PLANET_KILLER_SHIELDER = { can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes }
 can_destroy_planet_with_ACOT_PLANET_KILLER_NEUTRON = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes }
@@ -550,6 +550,41 @@ can_destroy_planet_with_ACOT_HE_PLANET_KILLER_SHIELDER = { can_destroy_planet_wi
 can_destroy_planet_with_ACOT_HE_PLANET_KILLER_NEUTRON = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes }
 can_destroy_planet_with_ACOT_HE_PLANET_KILLER_GODRAY = { can_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = yes }
 can_destroy_planet_with_ACOT_HE_PLANET_KILLER_NANOBOTS = { can_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = yes }
+
+############################### Ancient Caches of Technologies ###############################
+can_destroy_planet_with_ACOT_EMISSARY_BEAM = {
+	custom_tooltip = {
+		text = acot_emissary_on_cooldown
+		FROM = { NOT = { has_fleet_flag = acot_emissary_beam_delay } }
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+		}
+	}
+	OR = {
+		custom_tooltip = {
+			text = acot_is_valid_for_emissary_beam
+			OR = {
+				NOT = { exists = space_owner }
+				AND = {
+					exists = space_owner
+					space_owner = { is_same_value = from.owner }
+				}
+			}
+			is_a_planet = yes
+			is_asteroid = no
+			is_star = no
+			is_artificial = no
+			merg_is_gas_giant = no
+			merg_is_habitat = no
+			merg_is_hab_ringworld = no
+		}		
+	}
+}
 
 ############################### Ancient Empire ###############################
 can_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = {
