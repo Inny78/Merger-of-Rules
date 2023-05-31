@@ -176,6 +176,7 @@ is_ds_core = { always = no }
 is_ds_galactic_plague = { always = no }
 is_ds_gray_tempest = { always = no }
 is_ds_halo = { always = no }
+is_ds_holosphere = { always = no }
 is_ds_hyperflora = { always = no }
 is_ds_immortal = { always = no }
 is_ds_kompass = { always = no }
@@ -343,6 +344,7 @@ planet_has_symbiotes = { always = no }
 policies_allow_breeding = { always = yes }
 prob_forced_armageddon_bombardment = { always = no }
 robot_has_rare_crystal_comp = { always = no }
+rs_microquasar = { always = no }
 systems_blokkats_wont_stripmine = { always = no }
 td_has_no_happiness = { always = no }
 TIME_RULE_trgr_spcs_CAN_live_on_planet = { always = yes }

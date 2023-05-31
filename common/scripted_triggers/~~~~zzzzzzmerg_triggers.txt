@@ -38,9 +38,7 @@ default_site_visible_trigger = {
 			level >= low
 			system = from.solar_system
 		}
-		from.planet = {
-			is_within_borders_of = root
-		}
+		from.planet = { is_within_borders_of = root }
 	}
 }
 

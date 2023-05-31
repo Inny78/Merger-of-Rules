@@ -1,7 +1,5 @@
 is_hive_species = {
-	species = {
-		merg_has_hive_trait = yes
-	}
+	species = { merg_has_hive_trait = yes }
 }
 
 is_azaryn_preferred_terraform_pc = {

@@ -909,15 +909,9 @@ legw_megaplanet = {
 		uses_district_set = utopian_machine_world
 	}
 }
-legw_is_dry = {
-	is_dry = yes
-}
-legw_is_wet = {
-	is_wet = yes
-}
-legw_is_cold = {
-	is_cold = yes
-}
+legw_is_dry = { is_dry = yes }
+legw_is_wet = { is_wet = yes }
+legw_is_cold = { is_cold = yes }
 legw_fallen_empire_planet = {
 	optimize_memory
 	owner = {
@@ -947,11 +941,14 @@ mem_has_happiness = {
 		# Diagraphers Trait Mod
 		is_multihive_drone = yes
 		# ThaumStellaris
-		species = {
-			OR = {
-				is_archetype = TC_GOLEM
-				is_archetype = TC_GOLEM_HIVE
-				is_archetype = TC_GOLEM_MACHINE
+		AND = {
+			merg_has_thaumstellaris = yes
+			species = {
+				OR = {
+					is_archetype = TC_GOLEM
+					is_archetype = TC_GOLEM_HIVE
+					is_archetype = TC_GOLEM_MACHINE
+				}
 			}
 		}
 		# Trait Diversity
@@ -1276,9 +1273,7 @@ star_catastrophe_is_possible = {
 				any_system_megastructure = { is_megastructure_type = ring_world_ruined }
 			}
 		}
-		any_system_planet = {
-			planetary_catastrophe_is_possible = yes
-		}
+		any_system_planet = { planetary_catastrophe_is_possible = yes }
 	}
 }
 

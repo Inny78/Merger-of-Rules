@@ -39,11 +39,6 @@ merg_is_default_empire = {
 	}
 }
 
-# Warning, this is a resource intensive trigger
-merg_is_playable_empire = {
-    any_playable_country = { is_same_empire = prev }
-}
-
 # List of dormant/standard Fallen Empires
 merg_is_fallen_empire = {
 	OR = {
@@ -51,7 +46,7 @@ merg_is_fallen_empire = {
 		# History of the Lost Empire
 		is_country_type = LsE_fallen_empire
 		# Human Fallen Empire
-		is_country_type = hfe_fallen
+		hfe_trigger_is_human_fallen = yes
 		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_fallen_empire
 		# The Empty Vagrant
@@ -107,7 +102,6 @@ merg_is_hab_ringworld = {
 		uses_district_set = protoss_ringworld
 		# Star Wars: Kuat Ancient Empire
 		AND = {
-			# pc_kuat_eternal_ringworld_habitable
 			is_ringworld = yes
 			uses_district_set = Eternal_city
 		}
@@ -368,6 +362,7 @@ merg_is_dense_star = {
 		is_rs_collapsar = yes
 		is_rs_magnetar = yes
 		is_rs_microquasar = yes
+		rs_microquasar = yes
 		# Solar Storm
 		is_planet_class = pc_ss_abyssal_black_hole
 		# The Abyss Contract
@@ -397,6 +392,7 @@ merg_is_black_or_white_hole = {
 		is_pc_mem_micro_black_hole = yes
 		# Real Space
 		is_rs_microquasar = yes
+		rs_microquasar = yes
 		# Solar Storm
 		is_planet_class = pc_ss_abyssal_black_hole
 		# The Abyss Contract
