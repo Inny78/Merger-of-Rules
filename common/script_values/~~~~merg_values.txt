@@ -112,7 +112,7 @@ desired_constructors_min = {
 		OR = {
 			is_country_type = default
 			is_country_type = awakened_fallen_empire
-			# mod
+			# Human Fallen Empires
 			is_country_type = hfe_drone
 			is_country_type = hfe_pirate
 			is_country_type = hfe_fallen
@@ -122,7 +122,7 @@ desired_constructors_min = {
 		factor = 2
 		or = {
 			is_country_type = default
-			# mod
+			# Human Fallen Empires
 			is_country_type = hfe_pirate
 			is_country_type = hfe_drone
 		}
@@ -143,7 +143,7 @@ desired_constructors_max = {
 		set = 3
 		is_country_type = awakened_fallen_empire
 	}
-	# mod
+	# Human Fallen Empires
 	modifier = {
 		set = 3
 		or = {
