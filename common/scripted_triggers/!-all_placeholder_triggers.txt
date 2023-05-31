@@ -75,7 +75,7 @@ giga_uses_industrial_district = { always = no }
 gpm_has_positive_energy_planet_modifier = { always = no }
 gpm_has_positive_food_planet_modifier = { always = no }
 gpm_has_positive_mineral_planet_modifier = { always = no }
-gpm_mod_active =  = { always = no }
+gpm_mod_active = { always = no }
 has_acot = { always = no }
 has_apsr_modifiers = { always = no }
 has_artificial_aristocracy_emex = { always = no }
