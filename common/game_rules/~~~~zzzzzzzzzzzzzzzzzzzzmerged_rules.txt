@@ -1996,6 +1996,8 @@ can_species_be_assembled = {
 				OR = {
 					# Assault Lily
 					is_archetype = LILY
+					# EDA
+					is_archetype = Areta
 					# Star Wars: UnknownWorld Shipgirls Story
 					is_archetype = STARSHIPGIRLS
 					# The DAL Species Mod
@@ -3328,6 +3330,8 @@ can_build_branch_offices = {
 			has_authority = auth_azur_lane_K
 			# BlueArchive species pack
 			has_authority = auth_kivotos
+			# EDA
+			has_authority = auth_traveler
 			# Ethical Gestalts
 			has_valid_civic = civic_hive_guest
 			has_policy_flag = infiltration_allowed
@@ -3631,6 +3635,13 @@ can_build_branch_office_on_planet = {
 			AND = {
 				owner = { is_gestalt = yes }
 				root = { has_ascension_perk = ap_megacorp }
+			}
+			# EDA
+			owner = {
+				AND = {
+					OR = { has_authority = auth_traveler }
+					is_same_value = root
+				}
 			}
 		}
 	}
@@ -4258,12 +4269,14 @@ can_add_advanced_traits = {
 	has_utopia = yes
 	OR = {
 		has_tradition = tr_genetics_creation
-		# Warship Girls R And MIST Species
-		has_wsg_genemodding_tech = yes
+		# EDA
+		has_valid_civic = civic_eda
 		# Madoka Magica NEW
 		has_str_genemodding_tech = yes
 		# Nirvana Empire DLC
 		is_nirvana_empire = yes
+		# Warship Girls R And MIST Species
+		has_wsg_genemodding_tech = yes
 	}
 	# Better Performances and Utilities
 	NOT = { has_country_flag = PF_flg_cntr_STOP_ai_species_mod }
@@ -4278,6 +4291,8 @@ can_add_negative_traits_organic = {
 		has_tradition = tr_cybernetics_assimilator_integrated_anatomy
 		# Ascension - Biological Module
 		has_technology = tech_yanz_rs_genemod
+		# EDA
+		has_valid_civic = civic_eda
 		# Kancolle
 		has_tradition = tr_shipbuilding_transform
 		# Madoka Magica NEW
@@ -4306,6 +4321,10 @@ can_remove_positive_traits_organic = {
 				has_tradition = tr_cybernetics_assimilator_integrated_anatomy
 				# Ascension - Biological Module
 				has_technology = tech_yanz_rs_genemod
+				# EDA
+				has_civic = civic_eda
+				is_eda_empire = yes
+				has_technology = tech_eda_core
 				# Kancolle
 				has_tradition = tr_shipbuilding_transform
 				# Planetary Diversity

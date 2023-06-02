@@ -10,6 +10,7 @@ civic_closed_network = { potential = { always = no } }
 civic_corp_security = { potential = { always = no } }
 civic_crusaders = { potential = { always = no } }
 civic_divine_order = { potential = { always = no } }
+civic_eda = { potential = { always = no } }
 civic_elec_stellar_devourers = { potential = { always = no } }
 civic_engineering_cult = { potential = { always = no } }
 civic_ev_criminal_ship = { potential = { always = no } }

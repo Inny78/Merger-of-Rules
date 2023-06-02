@@ -835,6 +835,8 @@ has_research_building = {
 		has_district = district_bdoe_501_scrapyard
 		has_district = district_bdoe_502_workshops
 		has_district = district_bdoe_502_university
+		# EDA
+		has_building = eda_building_research_lab
 		# EUTAB
 		eutab_has_research_building = yes
 		# Extra Districts
@@ -1221,7 +1223,7 @@ is_special_colony_type = {
 		has_modifier = resort_colony
 		has_modifier = slave_colony
 		# ACOT
-		has_enigmatic_capital = yes
+		# has_enigmatic_capital = yes
 		# District Overhaul
 		has_modifier = bdoe_cemetery_world
 		has_modifier = bdoe_storage_world

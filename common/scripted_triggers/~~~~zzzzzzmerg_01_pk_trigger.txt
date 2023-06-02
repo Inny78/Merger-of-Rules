@@ -506,8 +506,6 @@ can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = {
 	custom_tooltip = {
 		fail_text = is_not_star
 		is_star = yes
-		exists = system_star
-		system_star = { merg_is_untargetable = no }
 		solar_system = {
 			any_system_planet = { merg_is_untargetable = no }
 		}
@@ -1049,6 +1047,9 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 		}
 	}
 }
+
+############################### EDA ###############################
+can_destroy_planet_with_PLANET_KILLER_EDA_STAR_CRACKER = { can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = yes }
 
 ############################### Electroids ###############################
 can_destroy_planet_with_PLANET_KILLER_ELEC_FOCUS = {

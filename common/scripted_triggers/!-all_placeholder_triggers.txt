@@ -192,13 +192,13 @@ is_ds_stellar_engine = { always = no }
 is_ds_surrelist = { always = no }
 is_ds_zeitriss_gc = { always = no }
 is_ecocentric = { always = no }
+is_eda_empire = { always = no }
 is_exile_country = { always = no }
 is_exp_memorex_comatos = { always = no }
 is_exp_tree_caretaker = { always = no }
 is_exp_private_auth = { always = no }
 is_exp_cooperative = { always = no }
 is_extsynth_synthetic = { always = no }
-is_infested_basic = { always = no }
 is_exp_clone = { always = no }
 is_exp_pheremone = { always = no }
 is_exp_lithoid_shiny = { always = no }
@@ -219,6 +219,7 @@ is_hypo_stars_quasi_star = { always = no }
 is_hypo_stars_strange_star = { always = no }
 is_hypo_stars_white_hole = { always = no }
 is_imperial = { always = no }
+is_infested_basic = { always = no }
 is_khan_country_type = { always = no }
 is_KZ_VOY_organic_species = { always = no }
 is_lily_goverments = { always = no }

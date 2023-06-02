@@ -25,6 +25,8 @@ has_upgraded_capital = {
 				has_building = building_phanon_palace
 				# AVB
 				has_building = building_avb_resort_capital_3
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
@@ -56,6 +58,8 @@ has_upgraded_capital = {
 				has_building = building_phanon_palace
 				# AVB
 				has_building = building_avb_slave_capital_3
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
@@ -98,6 +102,8 @@ has_upgraded_capital = {
 				has_building = building_avb_hab_capital_3
 				# Dawn of the Republic
 				has_building = building_galactic_senate
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
@@ -135,6 +141,8 @@ has_upgraded_capital = {
 				# AVB
 				has_building = building_avb_hive_capital_3
 				has_building = building_avb_hive_capital_4
+				# EDA
+				has_building = eda_building_imperial_capital
 				# galacot
 				has_building = building_dm_galactic_hive_capital
                	has_building = building_ae_galactic_hive_capital
@@ -168,6 +176,8 @@ has_upgraded_capital = {
 				has_building = building_avb_machine_capital_4
 				has_building = building_avb_machine_capital_5
 				has_building = building_avb_machine_capital_6
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Empires Expanded
 				has_building = building_bok_capital_1
 				has_building = building_bok_capital_2
@@ -213,6 +223,8 @@ has_upgraded_capital = {
 				has_building = azur_building_mind_net_capital
 				# Dawn of the Republic
 				has_building = building_galactic_senate
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_major_capital
 				# Nirvana Empire Project
@@ -270,6 +282,8 @@ has_major_upgraded_capital = {
 				has_building = building_phanon_hive_cluster
 				# AVB
 				has_building = building_avb_resort_capital_3
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
@@ -300,6 +314,8 @@ has_major_upgraded_capital = {
 				has_building = building_phanon_palace
 				# AVB
 				has_building = building_avb_slave_capital_3
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
@@ -339,6 +355,8 @@ has_major_upgraded_capital = {
 				has_building = building_avb_hab_capital_3
 				# Dawn of the Republic
 				has_building = building_galactic_senate
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
@@ -375,6 +393,8 @@ has_major_upgraded_capital = {
 				# AVB
 				has_building = building_avb_hive_capital_3
 				has_building = building_avb_hive_capital_4
+				# EDA
+				has_building = eda_building_imperial_capital
 				# galacot
 				has_building = building_dm_galactic_hive_capital
                 has_building = building_ae_galactic_hive_capital
@@ -407,6 +427,8 @@ has_major_upgraded_capital = {
 				has_building = building_avb_machine_capital_4
 				has_building = building_avb_machine_capital_5
 				has_building = building_avb_machine_capital_6
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Empires Expanded
 				has_building = building_bok_capital_2
 				has_building = building_bok_capital_3
@@ -450,6 +472,8 @@ has_major_upgraded_capital = {
 				has_building = azur_building_mind_net_capital
 				# Dawn of the Republic
 				has_building = building_galactic_senate
+				# EDA
+				has_building = eda_building_imperial_capital
 				# galacot
 				has_building = building_dm_galactic_capital
                	has_building = building_ae_galactic_capital
@@ -499,6 +523,8 @@ has_fully_upgraded_capital = {
 				has_building = building_phanon_palace
 				# AVB
 				has_building = building_avb_resort_capital_3
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
@@ -529,6 +555,8 @@ has_fully_upgraded_capital = {
 				has_building = building_phanon_palace
 				# AVB
 				has_building = building_avb_slave_capital_3
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
@@ -570,6 +598,8 @@ has_fully_upgraded_capital = {
 				has_building = building_avb_hab_capital_3
 				# Dawn of the Republic
 				has_building = building_galactic_senate
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
@@ -605,6 +635,8 @@ has_fully_upgraded_capital = {
 				# AVB
 				has_building = building_avb_hive_capital_3
 				has_building = building_avb_hive_capital_4
+				# EDA
+				has_building = eda_building_imperial_capital
 				# galacot
 				has_building = building_dm_galactic_hive_capital
                 has_building = building_ae_galactic_hive_capital
@@ -635,6 +667,8 @@ has_fully_upgraded_capital = {
 				has_building = building_avb_machine_capital_4
 				has_building = building_avb_machine_capital_5
 				has_building = building_avb_machine_capital_6
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Empires Expanded
 				has_building = building_bok_capital_3
 				# galacot
@@ -674,6 +708,8 @@ has_fully_upgraded_capital = {
 				has_building = azur_building_mind_net_capital
 				# Dawn of the Republic
 				has_building = building_galactic_senate
+				# EDA
+				has_building = eda_building_imperial_capital
 				# galacot
 				has_building = building_dm_galactic_capital
    	            has_building = building_ae_galactic_capital
@@ -714,6 +750,8 @@ has_enigmatic_capital = {
 				# AOT
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_hive_cluster
+				# EDA
+				has_building = eda_building_imperial_capital
 				# galacot
 				has_building = building_dm_galactic_hive_capital
                 has_building = building_ae_galactic_hive_capital
@@ -734,6 +772,8 @@ has_enigmatic_capital = {
 				# AOT
 				has_building = building_stellarite_control_center
 				has_building = building_phanon_control_center
+				# EDA
+				has_building = eda_building_imperial_capital
 				# galacot
 				has_building = building_dm_galactic_machine_capital
                 has_building = building_ae_galactic_machine_capital
@@ -755,6 +795,8 @@ has_enigmatic_capital = {
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_phanon_palace
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Twinks Atlantean
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
@@ -785,6 +827,8 @@ has_ascended_capital = {
 				# AOT
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_hive_cluster
+				# EDA
+				has_building = eda_building_imperial_capital
 				# galacot
                 has_building = building_ae_galactic_hive_capital
 				has_building = building_stellarite_galactic_hive_capital
@@ -803,6 +847,8 @@ has_ascended_capital = {
 				# AOT
 				has_building = building_stellarite_control_center
 				has_building = building_phanon_control_center
+				# EDA
+				has_building = eda_building_imperial_capital
 				# galacot
                 has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
@@ -822,6 +868,8 @@ has_ascended_capital = {
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_phanon_palace
+				# EDA
+				has_building = eda_building_imperial_capital
 				# Twinks Atlantean
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
@@ -849,6 +897,8 @@ has_stellarite_capital = {
 				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_hive_cluster
+				# EDA
+				has_building = eda_building_imperial_capital
 				# GALACOT
 				has_building = building_stellarite_galactic_hive_capital
 			}
@@ -865,6 +915,8 @@ has_stellarite_capital = {
 				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_control_center
+				# EDA
+				has_building = eda_building_imperial_capital
 				# GALACOT
 				has_building = building_stellarite_galactic_machine_capital
 			}
@@ -880,6 +932,8 @@ has_stellarite_capital = {
 				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_palace
+				# EDA
+				has_building = eda_building_imperial_capital
 				# GALACOT
 				has_building = building_stellarite_galactic_capital
 				has_building = building_stellarite_galactic_hive_capital
@@ -974,6 +1028,8 @@ has_advanced_fort = {
 			has_district = district_acot_enigmapolis_fortress
 			is_planet_class = pc_phanon_macripp
 			is_planet_class = pc_sigma_solaripp
+			# EDA
+			has_building = eda_building_imperial_capital
 			# Twinks Mods
 			has_building = building_precinct_house_at_b
 			has_building = building_tw_arcane_hold
