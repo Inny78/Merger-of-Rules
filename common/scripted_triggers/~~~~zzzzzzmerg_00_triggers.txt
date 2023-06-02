@@ -1220,6 +1220,8 @@ is_special_colony_type = {
 		has_modifier = penal_colony
 		has_modifier = resort_colony
 		has_modifier = slave_colony
+		# ACOT
+		has_enigmatic_capital = yes
 		# District Overhaul
 		has_modifier = bdoe_cemetery_world
 		has_modifier = bdoe_storage_world
