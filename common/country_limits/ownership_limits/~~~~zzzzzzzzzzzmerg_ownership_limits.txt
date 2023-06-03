@@ -14,22 +14,23 @@ default_ev = {
 		CSS_TI_REJUVENATOR_limit
 		CSS_JG_DREADNOUGHT_limit
 		# DarkSpace		
-		ds_nomads_main_ships_limit
-		ds_nomads_ark_ships_limit
-		ds_nomads_res_ships_limit
-		ds_deathstar_ships_limit
-		ds_endzeit_ships_limit
-		ds_will_ships_limit
+		seele_ships_limit
+        ds_nomads_main_ships_limit
+        ds_nomads_ark_ships_limit
+        ds_deathstar_ships_limit
+        ds_endzeit_ships_limit
+        ds_will_ships_limit
+        ds_sw_projectile_ships_limit
+		ds_gray_tempest_titan_limit
 		# Hypertraversal Manipulation Augur
 		htm_augur_ships_limit
 		# NSC
 		headquarters_ship_limit
 		explorationship_ship_limit
+		Flagship_ship_limit
 		# Unique Ascension Perks
 		civilian_factory_ships_limit
 		civilian_industrial_ships_limit
-		# Wiirlak Additional Civics & Origins
-		wiirlak_ac_flotilla_ship_ships_limit
 	}
 }
 
@@ -48,10 +49,9 @@ darkspace_ownership_limit = {
 		# NSC
 		headquarters_ship_limit
 		explorationship_ship_limit
+		Flagship_ship_limit
 		# Unique Ascension Perks
 		civilian_factory_ships_limit
 		civilian_industrial_ships_limit
-		# Wiirlak Additional Civics & Origins
-		wiirlak_ac_flotilla_ship_ships_limit
 	}
 }

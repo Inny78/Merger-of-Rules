@@ -121,7 +121,7 @@ has_v_budding_trait = { always = no }
 has_v_difficult_reproduction = { always = no }
 has_v_grafting_trait = { always = no }
 has_v_heterogamous_reproduction = { always = no }
-has_v_no_crime = { always = no }
+has_v_no_crime = { always = yes }
 has_v_non_thinking_trait = { always = no }
 has_v_presapient_trait = { always = no }
 has_v_phototrophic_trait = { always = no }
