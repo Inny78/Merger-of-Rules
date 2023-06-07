@@ -227,6 +227,7 @@ is_living_architecture = { always = no }
 is_mage = { always = no }
 is_mindless_undead = { always = no }
 is_multihive_drone = { always = no }
+is_mzilli_shadow = { always = no }
 is_necromage = { always = no }
 is_nirvana_empire = { always = no }
 is_organic_fourschildren = { always = no }
@@ -302,6 +303,8 @@ is_subsapient_form = { always = no }
 is_symbiote = { always = no }
 is_symbiote_of_prevprev = { always = no }
 is_td_multi_hiveminded = { always = no }
+is_time_black_hole_planet_class = { always = no }
+is_time_black_hole_star_class = { always = no }
 is_tm_black_hole = { always = no }
 is_tm_gas_colony = { always = no }
 is_tm_psionic_world = { always = no }

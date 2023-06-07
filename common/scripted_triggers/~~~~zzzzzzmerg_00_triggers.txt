@@ -31,7 +31,7 @@ colonizable_planet = {
 		# APSR: Anomalies, Planetary and Space Resources
 		has_apsr_modifiers = yes
 		# Endless Frontier
-		is_planet_class = pc_mzilli_shadow
+		is_mzilli_shadow = yes
 		# TimeMod
 		is_tm_gas_colony = yes
 		is_tm_psionic_world = yes

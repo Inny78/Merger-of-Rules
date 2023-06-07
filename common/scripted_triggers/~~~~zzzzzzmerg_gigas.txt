@@ -89,7 +89,7 @@ is_maginotable_restricted = {
 		# Star Wars: Kuat Ancient Empire
 		AND = {
 			is_ringworld = yes
-			uses_district_set Eternal_city
+			uses_district_set = Eternal_city
 		}
 		# Star Wars: UnknownWorld Shipgirls Story
 		uses_district_set = rw_swgs_engineer_world

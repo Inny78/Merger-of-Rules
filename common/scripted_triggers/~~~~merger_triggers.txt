@@ -343,7 +343,7 @@ merg_is_dense_star = {
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
 		# ACOT
-		is_planet_class = pc_acot_void_hole
+		is_acot_void_hole = yes
 		# Astro's Stellaris Overhaul - Galaxy Generation
 		is_planet_class = pc_aso_gg_white_hole
 		# Darkspace
@@ -369,7 +369,7 @@ merg_is_dense_star = {
 		is_planet_class = pc_black_hole_02
 		is_planet_class = pc_black_hole_03
 		# TimeMod
-		is_tm_black_hole = yes
+		is_time_black_hole_planet_class = yes
 		# Voyage to Eternity
 		is_planet_class = pc_KZ_VOY_micro_black_hole
 	}
@@ -378,6 +378,8 @@ merg_is_dense_star = {
 merg_is_black_or_white_hole = {
 	OR = {
 		is_planet_class = pc_black_hole
+		# ACOT
+		is_acot_void_hole = yes
 		# Astro's Stellaris Overhaul - Galaxy Generation
 		is_aso_gg_white_hole = yes
 		# Darkspace
@@ -399,7 +401,7 @@ merg_is_black_or_white_hole = {
 		is_planet_class = pc_black_hole_02
 		is_planet_class = pc_black_hole_03
 		# TimeMod
-		is_tm_black_hole = yes
+		is_time_black_hole_planet_class = yes
 		# Voyage to Eternity
 		is_planet_class = pc_KZ_VOY_micro_black_hole
 	}
@@ -472,9 +474,7 @@ merg_is_hole_star_class = {
 		is_star_class = sc_Aemethms
 		is_star_class = sc_grand_seal
 		# TimeMod
-		is_star_class = sc_endless_time
-		is_star_class = sc_time_white_hole
-		is_star_class = sc_bright_pearl
+		is_time_black_hole_star_class = yes
 		# Unique Ascension Perks
 		is_star_class = sc_whitte_hole
 	}
