@@ -69,7 +69,6 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 				}
 			}
 			OR = {
-				# Rewriting this part for max compatibility, inspired by Planetary Diversity
 				colonizable_planet = yes
 				is_artificial = yes
 				uninhabitable_regular_planet = yes
@@ -1686,6 +1685,86 @@ can_destroy_planet_with_PLANET_KILLER_HARVESTER = {
 	}
 }
 
+############################### Null Void Colossus ###############################
+can_destroy_planet_with_PLANET_KILLER_NULLVOID = {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		is_a_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		merg_is_shielded = no
+	}
+	custom_tooltip = {
+		fail_text = fotd_cant_collossus
+		NOT = { has_planet_flag = fotd_seperatist_planet@from.owner }
+		exists = from.owner
+		from.owner = {
+			NOT = { has_country_flag = fotd_seperatist_country@from.owner }
+		}
+	}
+	OR = {
+		custom_tooltip = {
+			text = is_not_hostile_cracker
+			OR = {
+				AND = {
+					exists = space_owner
+					space_owner = {
+						merg_is_at_war = yes
+					}
+				}
+				AND = { # colony
+					exists = owner
+					owner = {
+						merg_is_at_war = yes
+					}
+				}
+			}
+		}
+		AND = {
+			# primitive target
+			custom_tooltip = {
+				text = cannot_crack_pre_ftl_planet_ownership
+				exists = space_owner
+				exists = owner
+				owner = {
+					is_primitive = yes
+				}
+				space_owner = {
+					merg_is_at_war = yes
+				}
+			}
+			custom_tooltip = {
+				text = cannot_crack_pre_ftl_planet_interference
+				# primitive
+				exists = owner
+				owner = {
+					is_primitive = yes
+				}
+				from.owner = {
+					has_policy_flag = interference_aggressive
+				}
+			}
+		}
+		custom_tooltip = {
+			text = not_barren_molten_frozen_toxic_test_fire
+			NOT = { exists = owner }
+			OR = {
+				NOT = { exists = space_owner }
+				AND = {
+					exists = space_owner
+					space_owner = { is_same_value = from.owner }
+				}
+			}
+			OR = {
+				habitable_planet = yes
+				uninhabitable_regular_planet = yes
+				is_artificial = yes
+			}
+		}
+	}
+}
 ############################### Nyto Species Pack ###############################
 can_destroy_planet_with_tech_GFnyto_accelerating_coil3 = {
 	custom_tooltip = {

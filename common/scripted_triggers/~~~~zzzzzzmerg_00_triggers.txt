@@ -887,6 +887,8 @@ has_any_industry_district = {
         giga_has_any_industrial_district = yes
 		# GPM
 		has_district = district_gpm_precursor_manufactorium
+		# Nanite Machines & Distant Stars Overhaul
+		has_district = district_nanite_forgeworld_industry
 		# Planetary Diversity
 		has_district = district_corp_industrial
 		has_district = district_mf_alloy
@@ -912,8 +914,6 @@ has_any_industry_district = {
 		has_district = PR_DSTR_hab_crafter
 		has_district = PR_DSTR_hab_forge
 		has_district = PR_DSTR_hab_catalytic
-		# Nanite Machines & Distant Stars Overhaul
-		has_district = district_nanite_forgeworld_industry
 		# Warship Girls R and MIST Species
 		has_district = district_dr_industrial
 		# Wula Fallen Empire

@@ -9,26 +9,11 @@ event = {
 	
 	immediate = {
 		if = {
-			limit = {
-				NOT =  { has_global_flag = merged_rules }
-			}
+			limit = { NOT =  { has_global_flag = merged_rules } }
 			set_global_flag = merged_rules
 		}
 	}
 }
-
-# event = {
-# 	id = merg.2
-# 	title = merg.2.name
-# 	desc = merg.2.desc
-# 	picture = GFX_evt_exploding_planet
-# 	show_sound = event_red_alert
-# 	is_triggered_only = yes
-# 	trigger = { merg_has_ugrp = yes }
-# 	option = {
-# 		name = OOPS
-# 	}
-# }
 
 event = {
 	id = merg.3

@@ -2308,13 +2308,13 @@ has_full_sensor_range = {
 		# Core Framework & Modmenu
 		has_country_flag = z_fw_r_celestial_orrey_activited
 		has_country_flag = z_fw_r_cheat_quantum_beacon_activited
+		# BlueArchive species pack
+		has_modifier = modifier_BA_Veritas_4
 		# Galaxius
 		AND = {
 			merg_has_galaxius = yes
 			any_owned_planet = { has_deposit = d_ie_sa }
 		}
-		# BlueArchive species pack
-		has_modifier = modifier_BA_Veritas_4
 	}
 	# Core Framework & Modmenu
 	NOT = { has_country_flag = z_fw_misc_full_sensor_off }
@@ -2840,20 +2840,14 @@ can_enter_system_by_jump = {
 					# Clusters and forbidden systems
 					NOR = {
 						has_star_flag = lcluster
-						# Ancient Empire
-						has_star_flag = ag_no_jump_in_system
 						# ACOT
 						has_star_flag = outercluster
-						# Warship Girls R And MIST Species
-						has_star_flag = wg_sealed_system
-						has_star_flag = wg_psionic_systems
-						# SW:Kuat Ancient Empire
-						kuat_is_kuat_system = yes
-						has_star_flag = ag_kae_e_area_system
-						AND = {
-							has_global_flag = starkillerbase_not_passed
-							has_star_flag = starkiller_system	
-						}
+						# Ancient Empire
+						has_star_flag = ag_no_jump_in_system
+						# Assault Lily
+						has_star_flag = al_huge_home_bed
+						# BlueArchive
+						has_star_flag = BA_FE_SYS
 						# Gigastructural Engineering and More
 						has_star_flag = ehof_compound_system
 						has_star_flag = giga_core_03
@@ -2863,23 +2857,6 @@ can_enter_system_by_jump = {
 						katzen_jump_blocked_system = yes
 						has_star_flag = maginot_anti_jump_star
 						has_star_flag = siegfried_anti_jump_star
-						# Some Events of Outside Cluster
-						has_star_flag = nep_Krahen_cluster
-						has_star_flag = nep_Scrus_cluster
-						AND = {
-							has_global_flag = nep_not_pass_Aemethms
-							OR = {
-								has_star_flag = nep_dragon_system
-								has_star_flag = nep_heptagram_cluster
-							}
-						}
-						has_star_flag = nep_arena
-						# THE ABYSS CONTRACT
-						has_star_flag = TAC_ag_signal_system
-						# Assault Lily
-						has_star_flag = al_huge_home_bed
-						# BlueArchive
-						has_star_flag = BA_FE_SYS
 						# Origin Beings
 						has_star_flag = darhmod_seres_home_system
 						has_star_flag = sealed_seres_system
@@ -2899,7 +2876,30 @@ can_enter_system_by_jump = {
 								has_star_flag = last_baol_system
 								has_star_flag = Zrocursor
 							}
-						}	
+						}
+						# Some Events of Outside Cluster
+						has_star_flag = nep_Krahen_cluster
+						has_star_flag = nep_Scrus_cluster
+						AND = {
+							has_global_flag = nep_not_pass_Aemethms
+							OR = {
+								has_star_flag = nep_dragon_system
+								has_star_flag = nep_heptagram_cluster
+							}
+						}
+						has_star_flag = nep_arena
+						# SW:Kuat Ancient Empire
+						kuat_is_kuat_system = yes
+						has_star_flag = ag_kae_e_area_system
+						AND = {
+							has_global_flag = starkillerbase_not_passed
+							has_star_flag = starkiller_system
+						}
+						# THE ABYSS CONTRACT
+						has_star_flag = TAC_ag_signal_system
+						# Warship Girls R And MIST Species
+						has_star_flag = wg_sealed_system
+						has_star_flag = wg_psionic_systems
 					}
 					# Gigastructural Engineering and More
 					# This is gonna be a bit annoying, BUT it needs to be done for eager explorers
