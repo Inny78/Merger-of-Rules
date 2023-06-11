@@ -935,35 +935,6 @@ can_take_hostile_actions = {
 		limit = { root = { is_country_type = void_lifeforms_2 } }
 		custom_tooltip = { always = yes }
 	}
-	# Planet States
-	else_if = {
-		limit = {
-			is_country_type = planet_state
-			root = { merg_is_default_empire = yes }
-			capital_scope = {
-				root = { NOT = { any_planet_within_border = { is_same_value = prevprev } } }
-			}
-		}
-		custom_tooltip = {
-			text = "CAN_TAKE_HOSTILE_ACTION_PLANET_STATE"
-			always = no
-		}
-	}
-	else_if = {
-		limit = {
-			is_country_type = planet_state
-			root = {
-				OR = {
-					is_country_type = dormant_marauders
-					is_country_type = ruined_marauders
-					is_country_type = awakened_marauders
-					# The Empty Vagrant
-					is_country_type = awakened_marauders_ev
-				}
-			}
-		}
-		always = no
-	}
 	# Some Events of Outside Cluster
 	else_if = {
 		limit = {

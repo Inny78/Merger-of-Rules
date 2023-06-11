@@ -1163,9 +1163,6 @@ merg_is_gate_mega = {
 		is_megastructure_type = gateway_restored
 		is_megastructure_type = gateway_ruined
 		is_megastructure_type = gateway_final
-		is_megastructure_type = hyper_relay
-		is_megastructure_type = hyper_relay_restored
-		is_megastructure_type = hyper_relay_ruined
 		is_megastructure_type = lgate_base
 		# ACOT
 		is_megastructure_type = sofe_inner_gate
