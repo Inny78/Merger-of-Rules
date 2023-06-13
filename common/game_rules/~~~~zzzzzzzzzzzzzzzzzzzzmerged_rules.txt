@@ -2032,19 +2032,15 @@ can_species_be_assembled = {
 		}
 		# Steven Universe Homeworld Gems
 		has_trait = trait_geoloid
+		# Voyage to Eternity
+		KZ_VOY_trgr_plnt_CLONE = yes
 	}
 	# Expanded Gestalts
 	NAND = {
 		root = { owner = { has_valid_civic = civic_machine_replicators } }
 		has_trait = trait_machine_central
 	}
-	OR = {
-		merg_has_voyage_eternity = no
-		AND = {
-			merg_has_voyage_eternity = yes
-			KZ_VOY_trgr_plnt_CLONE = yes
-		}
-	}
+	# Voyage to Eternity
 	if = {
 		limit = { 
 			OR = {
