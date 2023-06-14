@@ -519,7 +519,7 @@ decision_consecrate_habitat_knights = {
 		owner = {
 			change_variable = {
 				which = toxic_castles_available
-				value = 1
+				value = -1
 			}
 		}
 	}
@@ -528,7 +528,7 @@ decision_consecrate_habitat_knights = {
 		owner = {
 			change_variable = {
 				which = toxic_castles_available
-				value = -1
+				value = 1
 			}
 		}
 	}
