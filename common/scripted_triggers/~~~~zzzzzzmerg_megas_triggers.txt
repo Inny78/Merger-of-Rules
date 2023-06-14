@@ -1,16 +1,16 @@
 # Vanilla scripted triggers
-has_no_non_gate_megastructure = {
-	optimize_memory
-	OR = {
-		has_any_megastructure = no
-		NOR = {
-			has_star_flag = ring_world_built
-			any_system_megastructure = {
-				NOT = { merg_is_gate_mega = yes } # exclude gateways
-			}
-		}
-	}
-}
+# has_no_non_gate_megastructure = {
+# 	optimize_memory
+# 	OR = {
+# 		has_any_megastructure = no
+# 		NOR = {
+# 			has_star_flag = ring_world_built
+# 			any_system_megastructure = {
+# 				NOT = { merg_is_gate_mega = yes } # exclude gateways
+# 			}
+# 		}
+# 	}
+# }
 
 has_any_megastructure_in_empire = {
 	optimize_memory
