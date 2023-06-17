@@ -138,6 +138,7 @@ is_abyssal_black_hole = { always = no }
 is_acot_advanced_starbase = { always = no }
 is_acot_awesome_planet_class = { always = no }
 is_acot_fractured_planet_class = { always = no }
+is_acot_fractured_world = { always = no }
 is_acot_pmc_vault = { always = no }
 is_acot_sbtg_arkship = { always = no }
 is_acot_void_hole = { always = no }

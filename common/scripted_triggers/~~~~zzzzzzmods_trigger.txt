@@ -81,12 +81,11 @@ acot_is_partially_affected_by_cascade = {
 #### ONLY USE THIS IF THE PLANET IS TRULY CAPABLE OF BEING IMMUNE TO DIMENSIONAL FUCKERY.
 acot_is_not_affected_by_cascade = {
     OR = {
-        is_planet_class = pc_dark_fractured
-        is_planet_class = pc_dark_fractured_ae
+        is_acot_fractured_planet_class = yes
         is_planet_class = pc_dark_fractured_unstable
         is_planet_class = pc_dark_fractured_ae_unstable
 		is_acot_awesome_planet_class = yes
-		is_acot_pmc_vault = yes
+		is_planet_class = pc_acot_pmc_vault
 		# Ancient Empire
 		ag_is_ancient_system = yes
 		# APSR
@@ -94,6 +93,26 @@ acot_is_not_affected_by_cascade = {
 		# Darkspace
 		is_ds_holosphere = yes
 		is_ds_stellar_engine = yes
+		# Gigastructural Engineering & More
+		is_planet_class = pc_ehof_cplanet
+		is_planet_class = pc_whc_star
+		giga_is_birch_world = yes
+		AND = {
+			is_planet_class = pc_black_hole
+			system = { is_star_class = sc_ehof_black_hole }
+		}
+		AND = {
+			exists = owner
+			owner = {
+				AND = {
+					is_country_type = katzenartig_imperium
+					OR = {
+						has_global_flag = katzenartig_stellarite
+						has_global_flag = katzenartig_improbable
+					}
+				}
+			}
+		}
 		# Secrets of the Shroud
 		is_sots_soulsphere = yes
     }
@@ -101,9 +120,12 @@ acot_is_not_affected_by_cascade = {
 #### USE THIS IF THE PLANET LOGICALLY SHOULD BE BLOWN UP, BUT THE OWNER HAS SOME WAYS TO BLOCK THE CASCADE SIGNAL
 acot_system_immune_to_cascade = {
     OR = {
-        owner = {
-            is_progenitor_empires = yes
-        }
+		AND = {
+			exists = owner
+			owner = {
+				is_progenitor_empires = yes
+			}
+		}
         has_star_flag = acot_star_cascade_cooldown
         has_star_flag = acot_star_cascade_primed
         has_star_flag = outergate
