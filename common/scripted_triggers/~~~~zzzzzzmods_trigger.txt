@@ -69,16 +69,19 @@ is_playable_country = {
 		is_country_type = sbtg_stellarborne_empire_active
 	}
 }
-#### USE THIS IF THE PLANET SHOULD ONLY BE DAMAGED, BUT NOT DESTROYED AND ALTERED
+
 acot_is_partially_affected_by_cascade = {
     OR = {
         is_planet_class = pc_shattered
         is_planet_class = pc_shattered_2
         is_planet_class = pc_shielded
         is_planet_class = pc_acot_pmc_vault_unshielded
+		# Gigastructural Engineering & More
+		is_giga_maginot_world = yes
+		has_star_flag = maginot_anti_jump_star
+		has_star_flag = siegfried_anti_jump_star
     }
 }
-#### ONLY USE THIS IF THE PLANET IS TRULY CAPABLE OF BEING IMMUNE TO DIMENSIONAL FUCKERY.
 acot_is_not_affected_by_cascade = {
     OR = {
         is_acot_fractured_planet_class = yes
@@ -97,11 +100,12 @@ acot_is_not_affected_by_cascade = {
 		# Gigastructural Engineering & More
 		is_planet_class = pc_ehof_cplanet
 		is_planet_class = pc_whc_star
+		has_planet_flag = paluushia
+		has_planet_flag = corrona
+		has_planet_flag = ndb_immune_planet
+		has_planet_flag = cant_build_here
 		giga_is_birch_world = yes
-		AND = {
-			is_planet_class = pc_black_hole
-			system = { is_star_class = sc_ehof_black_hole }
-		}
+		system = { is_star_class = sc_ehof_black_hole }
 		AND = {
 			exists = owner
 			owner = {
@@ -118,23 +122,7 @@ acot_is_not_affected_by_cascade = {
 		is_sots_soulsphere = yes
     }
 }
-#### USE THIS IF THE PLANET LOGICALLY SHOULD BE BLOWN UP, BUT THE OWNER HAS SOME WAYS TO BLOCK THE CASCADE SIGNAL
-acot_system_immune_to_cascade = {
-    OR = {
-		AND = {
-			exists = owner
-			owner = {
-				is_progenitor_empires = yes
-			}
-		}
-        has_star_flag = acot_star_cascade_cooldown
-        has_star_flag = acot_star_cascade_primed
-        has_star_flag = outergate
-        any_system_megastructure = {
-            is_megastructure_type = sofe_outer_gate
-        }
-    }
-}
+
 ############################### All these worlds ###############################
 is_fallen_empire_planet = {
 	optimize_memory
@@ -165,9 +153,7 @@ ag_is_habitat = {
 ag_is_compact_star = {
 	optimize_memory
 	OR = {
-		is_planet_class = pc_black_hole
-		is_planet_class = pc_neutron_star
-		is_planet_class = pc_pulsar
+		merg_is_standard_dense_star = yes
 		# Hypothetical Stars
 		is_hypo_stars_black_dwarf_star = yes
 		is_hypo_stars_strange_star = yes
@@ -176,6 +162,7 @@ ag_is_compact_star = {
 		is_rs_collapsar = yes
 		is_rs_magnetar = yes
 		is_rs_microquasar = yes
+		rs_microquasar = yes
 	}
 }
 ag_is_common_country = {

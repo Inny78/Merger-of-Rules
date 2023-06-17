@@ -3114,6 +3114,7 @@ merg_is_untargetable = {
 		is_ds_stellar_engine = yes
 		# Gigastructural Engineering & More
 		has_planet_flag = ndb_immune_planet
+		has_planet_flag = cant_build_here
 		# Secrets of the Shroud
 		is_sots_soulsphere = yes
 		# ACOT/Gigas

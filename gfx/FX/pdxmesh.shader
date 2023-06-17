@@ -3641,7 +3641,7 @@ Effect PdxMeshShipDiffuseEmissiveAlphaCloaked
 		"USE_EMPIRE_COLOR_MASK_FOR_EMISSIVE"
 		"NO_ALPHA_MULTIPLIED_EMISSIVE"
 		"CLOAKED"
-}
+	}
 }
 
 Effect PdxMeshShipDiffuseEmissiveAlphaCloakedSkinned
@@ -4719,6 +4719,13 @@ Effect PdxMeshRainbowBlokkatPortraitSkinnedShadow
 	VertexShader = "VertexPdxMeshStandardShadow"
 	PixelShader = "PixelPdxMeshStandardShadow"
 	Defines = { "IS_SHADOW" }
+}
+
+Effect PdxMeshRainbowBlokkatPortraitAnimateUVSkinned
+{
+	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
+	PixelShader = "PixelRainbowBlokkatAnim"
+	BlendState = "BlendStateAlphaBlendWriteAlpha";
 }
 
 Effect PdxMeshMarchPortrait
