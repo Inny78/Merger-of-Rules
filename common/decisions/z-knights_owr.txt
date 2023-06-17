@@ -2,18 +2,14 @@
 decision_consecrated_worlds = {
 	resources = {
 		category = decisions
-		cost = {
-			unity = 500
-		}
+		cost = { unity = 500 }
 	}
 
 	potential = {
 		exists = space_owner
 		exists = from
 		space_owner = { is_same_value = from }
-		from = {
-			has_ascension_perk = ap_consecrated_worlds
-		}
+		from = { has_ascension_perk = ap_consecrated_worlds }
 		is_star = no
 		is_artificial = no
 		is_ringworld = no
@@ -28,12 +24,7 @@ decision_consecrated_worlds = {
 
 	allow = {
 		custom_tooltip = {
-			from = {
-				check_variable = {
-					which = num_consecrated_worlds
-					value < 3
-				}
-			}
+			from = { check_variable = { which = num_consecrated_worlds value < 3 } }
 			fail_text = consecrated_worlds_too_many
 		}
 		custom_tooltip = {
@@ -54,26 +45,12 @@ decision_consecrated_worlds = {
 			from = {
 				if = {
 					limit = { check_variable = { which = num_consecrated_worlds value < 1 }	}
-					set_variable = {
-						which = num_consecrated_worlds
-						value = 0
-					}
+					set_variable = { which = num_consecrated_worlds value = 0 }
 				}
-				change_variable = {
-					which = num_consecrated_worlds
-					value = 1
-				}
+				change_variable = { which = num_consecrated_worlds value = 1 }
 				if = {
-					limit = {
-						check_variable = {
-							which = consecrated_variable
-							value < 1
-						}
-					}
-					set_variable = {
-						which = consecrated_variable
-						value = 0
-					}
+					limit = { check_variable = { which = consecrated_variable value < 1 } }
+					set_variable = { which = consecrated_variable value = 0 }
 				}
 			}
 			if = {
@@ -88,10 +65,7 @@ decision_consecrated_worlds = {
 				}
 				random_country = {
 					limit = { has_country_flag = fallen_empire_2 }
-					add_opinion_modifier = {
-						who = from
-						modifier = opinion_worships_our_holy_world
-					}
+					add_opinion_modifier = { who = from modifier = opinion_worships_our_holy_world }
 				}
 			}
 			if = {
@@ -121,37 +95,19 @@ decision_consecrated_worlds = {
 								merg_is_relic_world = yes
 							}
 						}
-						add_modifier = {
-							modifier = consecrated_quality_1
-							days = -1
-						}
+						add_modifier = { modifier = consecrated_quality_1 days = -1 }
 
-						from = {
-							change_variable = {
-								which = consecrated_variable
-								value = 1
-							}
-						}
+						from = { change_variable = { which = consecrated_variable value = 1 } }
 					}
 					20 = {
-						add_modifier = {
-							modifier = consecrated_quality_2
-							days = -1
-						}
+						add_modifier = { modifier = consecrated_quality_2 days = -1 }
 						create_ambient_object = {
 							type = consecrated_planet_stage_1_object
 							location = this
-
 							use_3d_location = yes
 							entity_scale_to_size = yes
 						}
-
-						from = {
-							change_variable = {
-								which = consecrated_variable
-								value = 2
-							}
-						}
+						from = { change_variable = { which = consecrated_variable value = 2 } }
 					}
 					0 = {
 						add_modifier = {
@@ -161,17 +117,11 @@ decision_consecrated_worlds = {
 						create_ambient_object = {
 							type = consecrated_planet_stage_2_object
 							location = this
-
 							use_3d_location = yes
 							entity_scale_to_size = yes
 						}
 
-						from = {
-							change_variable = {
-								which = consecrated_variable
-								value = 3
-							}
-						}
+						from = { change_variable = { which = consecrated_variable value = 3 } }
 					}
 					0 = {
 						add_modifier = {

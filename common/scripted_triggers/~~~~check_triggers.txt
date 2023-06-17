@@ -47,6 +47,9 @@ merg_has_azur_lane = { has_global_flag = azurlane_KuRUMiiii }
 # Buildings and Districts Overhaul and Expansion
 merg_has_bdoe = { has_global_flag = bdoe_active }
 
+# Casako's Framework & Modmenu
+merg_has_cas_framework = { has_global_flag = FW_installed }
+
 # Coop: Start in Teams
 merg_has_coop_teams = { has_global_flag = coop_base_mod }
 

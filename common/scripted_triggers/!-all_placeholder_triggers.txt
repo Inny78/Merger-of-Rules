@@ -78,6 +78,7 @@ gpm_has_positive_mineral_planet_modifier = { always = no }
 gpm_mod_active = { always = no }
 has_acot = { always = no }
 has_apsr_modifiers = { always = no }
+has_apsr_resource_local = { always = no }
 has_artificial_aristocracy_emex = { always = no }
 has_artificial_wombs = { always = no }
 has_aso_space_exploration = { always = no }

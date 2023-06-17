@@ -5,13 +5,6 @@
 # Root = target country
 # This = country
 is_valid_rival = {
-	# Powerful & Realistic Orbital Bombardments
-	hidden_trigger = {
-		if = {
-			limit = { merg_has_power_bombard = yes }
-			always = yes
-		}
-	}
 	# Vanilla
 	custom_tooltip = {
 		fail_text = INVALID_RIVAL_DESC
@@ -3172,15 +3165,23 @@ should_force_decline_species = {
 		}
 		# Expanded Traits, Civics, Pops, and More
 		# Caretakers die without the Tree of Life
-		custom_tooltip = {
-			success_text = TREEFOLK_FORCE_DECLINE
-			is_exp_tree_caretaker = yes
-			from = {
-				NOR = {
-					has_deposit = d_tree_of_life_colony
-					has_deposit = d_tree_of_life_home
+		AND = {
+			# Caretakers die without the Tree of Life
+			custom_tooltip = {
+				success_text = TREEFOLK_FORCE_DECLINE
+				is_exp_tree_caretaker = yes
+				from = {
+					NOR = {
+						has_deposit = d_tree_of_life_colony
+						has_deposit = d_tree_of_life_home
+					}
 				}
 			}
+		}
+		# Expadnded Events
+		AND = {
+			has_global_flag = expanded_events_active
+			is_exp_memorex_comatos = yes
 		}
 		# Planetary Diversity
 		custom_tooltip = {
@@ -4226,6 +4227,15 @@ can_planet_auto_migrate = {
 	}
 	# Better Performance & Utilities
 	NOT = { has_global_flag = z_pf2_flg_vam_disabled }
+	# Casako's Framework & Modmenu
+	custom_tooltip = {
+		fail_text = UGRC_failtips_PF_VAM
+		NOT = { has_global_flag = PF_flg_VAM_disabled }
+	}
+	custom_tooltip = {
+		fail_text = UGRC_failtips_PR_planet
+		NOT = { has_planet_flag = PR_flg_plnt_ASCENDED }
+	}
 }
 
 # can_planet_receive_auto_migration

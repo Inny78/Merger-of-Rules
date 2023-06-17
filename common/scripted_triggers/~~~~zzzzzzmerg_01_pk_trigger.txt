@@ -3006,21 +3006,11 @@ can_destroy_planet_with_PLANET_KILLER_Pilgrimage = {
 	}
 	custom_tooltip = {
 		fail_text = can_not_deploy_near_other_empire
-		solar_system = {
-			any_neighbor_system = {
-				NOT = {
-					exists = owner
-				}
-			}
-		}
+		solar_system = { any_neighbor_system = { NOT = { exists = owner } } }
 	}
 	custom_tooltip = {
 		fail_text = can_not_deploy_if_system_owned
-		solar_system = {
-			NOT = {
-				exists = owner
-			}
-		}
+		solar_system = { NOT = { exists = owner } }
 	}
 }
 # ===========================================================================================================================
