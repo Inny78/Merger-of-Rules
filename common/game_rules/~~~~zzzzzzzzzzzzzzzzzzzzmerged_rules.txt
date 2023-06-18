@@ -3243,6 +3243,7 @@ should_force_decline_species = {
 		AND = {
 			custom_tooltip = {
 				success_text = lonely_hive_mind_pops_kill_themselves_citizenship
+				merg_has_ethical_gestalts = yes
 				has_trait = trait_hive_mind
 				exists = from
 				NOR = {
