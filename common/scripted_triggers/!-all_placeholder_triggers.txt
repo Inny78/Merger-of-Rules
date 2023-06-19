@@ -84,6 +84,7 @@ has_artificial_aristocracy_emex = { always = no }
 has_artificial_wombs = { always = no }
 has_aso_space_exploration = { always = no }
 has_auth_holofrixit = { always = no }
+has_battle_thrall_military_leaders_active = { always = no }
 has_bug_branch = { always = no }
 has_civic_organic_zealots_active = { always = no }
 has_civic_organic_zealots_active = { always = no }

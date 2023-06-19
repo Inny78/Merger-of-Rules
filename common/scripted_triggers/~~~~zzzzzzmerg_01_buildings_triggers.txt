@@ -1016,6 +1016,14 @@ has_advanced_fort = {
 			has_building = building_giga_fortress_lab
 			has_building = building_giga_fortress_obelisk
 			has_building = building_giga_fortress_fe
+			# Ad Astra Technology Mod
+			has_building = building_fortress_city
+			has_building = building_planetary_citadel
+			has_building = building_aegis_city
+			has_building = building_panopticon_fortress
+			has_building = building_wyrmguard_citadel
+			has_building = building_alpha_fortress
+			has_building = building_occulari_tower
 			# AOT
 			has_building = building_stellarite_stronghold
 			has_building = building_phanon_stronghold
@@ -1026,8 +1034,7 @@ has_advanced_fort = {
 			has_building = building_phanon_giga_fortress_lab
 			has_building = building_phanon_giga_fortress_obelisk
 			has_district = district_acot_enigmapolis_fortress
-			is_planet_class = pc_phanon_macripp
-			is_planet_class = pc_sigma_solaripp
+			is_aot_macripp = yes
 			# EDA
 			has_building = eda_building_imperial_capital
 			# Twinks Mods

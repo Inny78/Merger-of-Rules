@@ -605,6 +605,14 @@ can_generate_leader_from_species = {
 			has_trait = trait_mechanical
 		}
 		has_citizenship_type = { type = citizenship_full country = root }
+		# Special Leadership Privileges for Battle Thralls & Bio-Trophies
+		AND = {
+			has_species_flag = allow_leaders_organic_advisors@root
+			has_citizenship_type = {
+				type = citizenship_organic_trophy
+				country = root
+			}
+		}
 	}
 	NOR = {
 		# ThaumStellaris
@@ -755,6 +763,14 @@ can_generate_army_from_species = {
             has_military_service_type = { type = military_service_limited country = prev }
             prev = { is_primitive = yes }
         }
+		# Special Leadership Privileges for Battle Thralls & Bio-Trophies
+		OR = {
+			has_battle_thrall_military_leaders_active = no
+			NAND = {
+				prev = { has_valid_civic = civic_machine_servitor }
+				is_robotic = no
+			}
+		}
     }
 }
 
@@ -1995,6 +2011,11 @@ can_species_be_assembled = {
 								owner = { has_civic = civic_permanent_employment }
 							}
 							has_planet_flag = can_organic_assemble_flag #for mod compatibility
+							# Omega's Stellaris Additions
+							AND = {
+								merg_has_omega_add = yes
+								merg_has_hospital = yes
+							}
 						}
 						# ANZ Advanced Cloning
 						NOT = { has_modifier = planet_cloning_limits }
@@ -3374,6 +3395,7 @@ can_support_branch_offices = {
 			NOR = {
 				AND = {
 					merg_has_more_authorities = no
+					merg_has_omega_add = no
 					is_megacorp = yes
 				}
 				# Azur Lane Stellaris DLC
@@ -3507,7 +3529,13 @@ can_build_branch_office_on_planet = {
 		OR = {
 			root = {
 				OR = {
-					is_criminal_syndicate = yes
+					AND = {
+						is_criminal_syndicate = yes
+						OR = {
+							merg_has_omega_add = no
+							NOT = { is_same_value = prevprev.owner }
+						}
+					}
 					# Assault Lily
 					has_authority = auth_AL_democratic
 					has_authority = auth_AL_arsenal
@@ -3703,7 +3731,14 @@ can_build_branch_office_on_planet = {
 				}
 			}
 			AND = {
-				root = { is_criminal_syndicate = yes }
+				root = {
+					is_criminal_syndicate = yes
+					# Omega's Stellaris Additions
+					OR = {
+						merg_has_omega_add = no
+						NOT = { has_country_flag = prob_no_criminal_branch@root.owner }
+					}
+				}
 				NOT = { has_planet_flag = criminal_branch_closed_cooldown_planet@root }
 			}
 		}

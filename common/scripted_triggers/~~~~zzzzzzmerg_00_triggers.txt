@@ -798,6 +798,8 @@ has_research_building = {
 		has_building = building_fe_institute
 		has_building = building_ae_enigmatic_lab
 		has_building = building_ae_institute
+		# Ad Astra Technology Mod
+		has_building = building_grand_academy
 		# AOT
 		has_building = building_phanon_enigmatic_lab
 		has_building = building_phanon_institute
