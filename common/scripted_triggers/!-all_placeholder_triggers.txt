@@ -1,6 +1,7 @@
 # Irony this is a placeholder file please ignore it
 ag_can_be_orbital_bombardment_country = { always = no }
 ag_can_do_orbital_bombardment_country = { always = no }
+ag_is_ancient_ringworld = { always = no }
 ag_is_ancient_system = { always = no }
 ag_is_mod_country = { always = no }
 ag_is_mod_habitable_ringworld = { always = no }

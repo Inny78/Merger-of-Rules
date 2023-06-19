@@ -84,11 +84,10 @@ acot_is_partially_affected_by_cascade = {
 }
 acot_is_not_affected_by_cascade = {
     OR = {
-        is_acot_fractured_planet_class = yes
-        is_planet_class = pc_dark_fractured_unstable
-        is_planet_class = pc_dark_fractured_ae_unstable
+        is_acot_fractured_world = yes
 		is_acot_awesome_planet_class = yes
 		is_planet_class = pc_acot_pmc_vault
+		merg_is_empty_space = yes
 		# Ancient Empire
 		ag_is_ancient_system = yes
 		ag_is_ancient_ringworld = yes
@@ -105,7 +104,7 @@ acot_is_not_affected_by_cascade = {
 		has_planet_flag = ndb_immune_planet
 		has_planet_flag = cant_build_here
 		giga_is_birch_world = yes
-		system = { is_star_class = sc_ehof_black_hole }
+		solar_system = { is_star_class = sc_ehof_black_hole }
 		AND = {
 			exists = owner
 			owner = {

@@ -24,12 +24,12 @@
 #	projcrim.18
 #
 # on_destroy_planet_with_PLANET_KILLER_DELUGE = time_crisis_country.10 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.103
-#	onactionpops.12 crowis.42 PF22.160 d_factions.52 d_factions.94 projcrim.18
+#	onactionpops.12 crowis.42 PF22.160 d_factions.52 d_factions.94 projcrim.18 maginot_destruction.1002
 #
 # on_destroy_planet_with_PLANET_KILLER_TOXIFIER = fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 crowis.42 PF22.160 d_factions.50 d_factions.92
-#	projcrim.16
+#	projcrim.16 maginot_destruction.1002
 #
-# on_destroy_planet_with_PLANET_KILLER_DEVOLUTION = MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32
+# on_destroy_planet_with_PLANET_KILLER_DEVOLUTION = MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 maginot_destruction.1002
 
 on_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = {
 	events = {
@@ -413,18 +413,18 @@ on_destroy_planet_with_PLANET_KILLER_NANOBOTS_KZ_VOY_battlestar = { # Nanites
 on_destroy_planet_with_PLANET_KILLER_DELUGE_KZ_VOY_battlestar = { # Deluge
 	events = {
 		time_crisis_country.10 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.103
-		onactionpops.12 crowis.42 PF22.160 d_factions.52 d_factions.94 projcrim.18
+		onactionpops.12 crowis.42 PF22.160 d_factions.52 d_factions.94 projcrim.18 maginot_destruction.1002
 	}
 }
 on_destroy_planet_with_PLANET_KILLER_TOXIFIER_KZ_VOY_battlestar = { # Toxifier
 	events = {
 		fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 crowis.42 PF22.160 d_factions.50 d_factions.92
-		projcrim.16
+		projcrim.16 maginot_destruction.1002
 	}
 }
 on_destroy_planet_with_PLANET_KILLER_DEVOLUTION_KZ_VOY_battlestar = { # Devolution
 	events = {
-		MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32
+		MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 maginot_destruction.1002
 	}
 }
 
@@ -477,7 +477,7 @@ on_destroy_planet_with_GE_PLANET_KILLER_NANOBOTS = {
 on_destroy_planet_with_GE_PLANET_KILLER_DELUGE = {
 	events = {
 		time_crisis_country.10 fourth_crisis.7 MECR.3036 xvcv_mdlc_situation_warfare.18 wula_fallen_empire_machine.32 civicsexpanded.103
-		onactionpops.12 crowis.42 PF22.160 d_factions.52 d_factions.94 projcrim.18
+		onactionpops.12 crowis.42 PF22.160 d_factions.52 d_factions.94 projcrim.18 maginot_destruction.1002
 	}
 }
 
