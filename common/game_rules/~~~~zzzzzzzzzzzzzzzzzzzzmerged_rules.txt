@@ -1480,7 +1480,7 @@ can_species_procreate = {
 	NOR = {
 		has_trait = trait_machine_unit
 		has_trait = trait_mechanical
-		# # Ethics and Civics Bug Branch
+		# Ethics and Civics Bug Branch
 		is_bugged_happy_machine = yes
 		AND = {
 			is_exp_clone = yes
@@ -1506,6 +1506,23 @@ can_species_procreate = {
 		is_dimorphic_male = yes
 		# Expanded Events
 		is_exp_memorex_comatos = yes
+		# Expanded Megastructures and Technology
+		AND = {
+			has_global_flag = expanded_megastructures_installed
+			is_exp_clone = yes
+			root = {
+				owner = {
+					OR = {
+						has_country_flag = clone_infertility_5
+						AND = {
+							NOT = { has_origin = origin_clones }
+							years_passed > 200
+						}
+					}
+				}
+			}
+		}
+
 		# Girls Frontline
 		has_trait = GF_trait_doll
 		# Holofrixit Revisited / Silfae's Portraits: Revisited

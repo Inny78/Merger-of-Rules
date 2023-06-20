@@ -86,6 +86,9 @@ merg_has_ethics_redux = { has_global_flag = cultural_overhaul_redux_active }
 # Expanded Gestalts 
 merg_has_expanded_gestalts = { has_global_flag = complex_hive }
 
+# Expanded Megastructures and Technology
+merg_has_expanded_megas = { has_global_flag = expanded_megastructures_installed }
+
 # Expanded Stellaris Ascension Perks
 merg_has_expanded_stel_perks = { has_global_flag = esap_mod_in_use }
 

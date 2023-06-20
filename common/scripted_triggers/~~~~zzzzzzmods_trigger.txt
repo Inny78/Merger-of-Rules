@@ -103,6 +103,7 @@ acot_is_not_affected_by_cascade = {
 		has_planet_flag = corrona
 		has_planet_flag = ndb_immune_planet
 		has_planet_flag = cant_build_here
+		has_planet_flag = cant_target_this_planet
 		giga_is_birch_world = yes
 		solar_system = { is_star_class = sc_ehof_black_hole }
 		AND = {
