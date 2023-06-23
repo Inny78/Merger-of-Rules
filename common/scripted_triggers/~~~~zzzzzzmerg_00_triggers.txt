@@ -247,6 +247,7 @@ planet_can_be_liberated_from_owner = {
 			is_country_type = lost_empire
 			# ACOT
 			is_progenitor_empires = yes
+			is_country_type = sbtg_light_seeker
 		}
 	}
 }
