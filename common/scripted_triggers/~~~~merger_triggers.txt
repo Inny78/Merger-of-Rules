@@ -364,7 +364,7 @@ merg_is_dense_star = {
 		is_rs_microquasar = yes
 		rs_microquasar = yes
 		# Solar Storm
-		is_planet_class = pc_ss_abyssal_black_hole
+		is_abyssal_black_hole = yes
 		# The Abyss Contract
 		is_planet_class = pc_black_hole_02
 		is_planet_class = pc_black_hole_03
@@ -396,7 +396,7 @@ merg_is_black_or_white_hole = {
 		is_rs_microquasar = yes
 		rs_microquasar = yes
 		# Solar Storm
-		is_planet_class = pc_ss_abyssal_black_hole
+		is_abyssal_black_hole = yes
 		# The Abyss Contract
 		is_planet_class = pc_black_hole_02
 		is_planet_class = pc_black_hole_03

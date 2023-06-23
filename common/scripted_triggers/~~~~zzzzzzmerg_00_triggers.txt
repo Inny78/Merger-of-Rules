@@ -230,6 +230,8 @@ is_crisis_faction = {
 		is_country_type = shroud_horrors
 		# Solar Storm
 		is_country_type = abyssal_host_invaders_type
+		is_country_type = SSAB_ab_country_v2
+		is_country_type = SSAB_ab_remnant 
 	}
 }
 
