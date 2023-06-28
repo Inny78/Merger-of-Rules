@@ -2,5 +2,6 @@
 gpm_purge_all_planetary_modifiers = { }
 gpm_purge_all_core_modifiers = { }
 gpm_roll_machine_world_modifiers = { }
+gpm_random_modifier_crisis_purge = { }
 gpm_remove_planetary_features = { }
 gpm_roll_planetary_features = { }

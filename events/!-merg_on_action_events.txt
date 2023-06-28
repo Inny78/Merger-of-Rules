@@ -6,6 +6,138 @@
 #########################################
 namespace = action
 
+# 81
+# Planet is turned into tomb world by special bombing stance
+planet_event = {
+	id = action.81
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_orbital_bombardment_stance = armageddon
+			has_orbital_bombardment_stance = pox
+			# Ariphaos Patch
+			has_planet_flag = ariphaos_patch_flag_tomb_bombardment
+			# Expanded Traits, Civics, Pops, and More
+			has_orbital_bombardment_stance = death
+		}
+		from = {
+			OR = {
+				is_default_or_fallen = yes
+				# Ariphaos Patch
+				is_country_type = vol
+			}
+		}
+		habitable_planet = yes
+	}
+
+	immediate = {
+		owner = {
+			if = {
+				limit = { is_at_war_with = from } # STU/PD
+				add_static_war_exhaustion = {
+					attacker = from
+					location = root
+					value_for_planet_destruction = 0.5
+				}
+			}
+			if = {
+				limit = {
+					NAND = {
+						has_origin = origin_progenitor_hive
+						root = { is_capital = yes }
+					}
+				}
+				country_event = { id = action.82 }
+			}
+			# Expanded Traits, Civics, Pops, and More
+			else_if = {
+				limit = {
+					NAND = {
+						has_origin = origin_master_computer
+						root = { is_capital = yes }
+					}
+				}
+				country_event = { id = civicsexpanded.105 }
+			}
+			# Vanilla
+			else = {
+				country_event = { id = origin.3265 }
+			}
+		}
+		from = { country_event = { id = action.83 } }
+		# Planetary Diversity
+		if = {
+			limit = { is_pd_cave = yes }
+			change_pc = pc_nuked_cave
+		} 
+		else_if = {
+			limit = { is_pd_superhab = yes }
+			change_pc = pc_nuked_superhab
+		} 
+		else_if = {
+			limit = { is_pd_tidally_locked = yes }
+			change_pc = pc_nuked_tl
+		} 
+		else_if = {
+			limit = {
+				has_planetary_diversity = yes
+				OR = {
+					is_planet_class = pc_city
+					is_planet_class = pc_relic
+					is_pd_arcology = yes
+				}
+			}
+			change_pc = pc_nuked_relic
+		} 
+		else = {
+			change_pc = pc_nuked
+		}
+		# Vanilla
+		set_planet_flag = nuked_planet_anomalies_disabled
+		remove_all_buildings = yes
+		remove_all_districts = yes # Ariphaos Patch
+		reroll_deposits = yes
+		remove_modifier = "natural_beauty"
+		remove_modifier = "atmospheric_aphrodisiac"
+		remove_modifier = "atmospheric_hallucinogen"
+		remove_modifier = "lush_planet"
+		remove_modifier = "dangerous_wildlife"
+		# GPM
+		gpm_purge_all_planetary_modifiers = yes
+		gpm_random_modifier_crisis_purge = yes
+		gpm_remove_planetary_features = yes
+		gpm_roll_planetary_features = yes
+		# Vanilla
+		set_planet_flag = armageddon_nuked
+		# Expanded Traits, Civics, Pops, and More
+		if = {
+			limit = {
+				merg_has_expanded_pops = yes
+				has_modifier = holy_planet
+				any_country = {
+					has_ai_personality_behaviour = holy_planets # not awakened
+					NOT = { is_at_war_with = from }
+				}
+			}
+			random_country = {
+				limit = {
+					has_ai_personality_behaviour = holy_planets # not awakened
+					NOT = { is_at_war_with = from }
+				}
+				save_event_target_as = outraged_FE
+			}
+			from = {
+				save_event_target_as = FE_outrager
+				country_event = { id = planet_destruction.610 days = 5 }
+			}
+		}
+	}
+}
+
+# 90
 event = {
 	id = action.90
 	hide_window = yes

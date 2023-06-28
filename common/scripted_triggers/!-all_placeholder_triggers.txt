@@ -1,4 +1,5 @@
 # Irony this is a placeholder file please ignore it
+acot_is_uniquely_affected_by_cascade = { always = no }
 ag_can_be_orbital_bombardment_country = { always = no }
 ag_can_do_orbital_bombardment_country = { always = no }
 ag_is_ancient_ringworld = { always = no }
@@ -142,6 +143,8 @@ is_acot_awesome_planet_class = { always = no }
 is_acot_fractured_planet_class = { always = no }
 is_acot_fractured_world = { always = no }
 is_acot_pmc_vault = { always = no }
+is_acot_pmc_vault_strong = { always = no }
+is_acot_pmc_vault_weak = { always = no }
 is_acot_sbtg_arkship = { always = no }
 is_acot_void_hole = { always = no }
 is_acot_sbtg_arkship = { always = no }
@@ -298,6 +301,7 @@ is_rs_collapsar = { always = no }
 is_rs_magnetar = { always = no }
 is_rs_microquasar = { always = no }
 is_servitor_empire = { always = no }
+is_shadowgate_world = { always = no }
 is_sots_soulsphere = { always = no }
 is_special_affection_leader = { always = no }
 is_special_kancolle_leader = { always = no }
