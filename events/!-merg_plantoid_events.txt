@@ -1,0 +1,98 @@
+namespace = plant
+
+# Gaia Seed building chain completed.
+planet_event = {
+	id = plant.100
+	is_triggered_only = yes
+	title = "plant.100.name"
+	desc = "plant.100.desc"
+	picture = GFX_evt_gaia
+
+	trigger = {
+		last_building_changed = building_gaiaseeders_4
+		merg_is_gaia = no
+	}
+
+	immediate = {
+		# Planetary Diversity
+		if = {
+			limit = { is_pd_tidally_locked = yes }
+			change_pc = pc_tidallygaia
+		}
+		else_if = {
+			limit = { is_pd_superhab = yes }
+			change_pc = pc_gaia_superhab
+		}
+		else_if = {
+			limit = { is_pd_cave = yes }
+			change_pc = pc_gaia_cave
+		}
+		# Vanilla
+		else = {
+			change_pc = pc_gaia
+		}
+		# GPM
+		planet_event = { id = gpm_terraform.78871 }
+		# Vanilla
+		remove_building = building_gaiaseeders_4
+		# Expanded Traits, Civics, Pops, and More
+		if = {
+			limit = { merg_has_expanded_pops = yes }
+			owner = {
+				remove_country_flag = spread_idyllic_bloom
+				set_timed_country_flag = { flag = spread_idyllic_bloom days = 3600 }
+			}
+		}
+		if = {
+			limit = {
+				merg_has_expanded_pops = yes
+				owner = { has_origin = origin_terraformer }
+				NOT = { has_modifier = terraformer_homeworld }
+			}
+			add_modifier = { modifier = terraformer_homeworld days = -1 }
+		}
+		if = {
+			limit = {
+				merg_has_expanded_pops = yes
+				OR = {
+					owner = { has_ascension_perk = ap_world_shaper }
+					AND = {
+						is_planet_class = pc_hive
+						owner = { has_ascension_perk = ap_hive_worlds }
+					}
+					AND = {
+						is_machine_world = yes
+						owner = { has_ascension_perk = ap_machine_worlds }
+					}
+				}
+				NOT = { has_modifier = world_shaper_mod }
+			}
+			add_modifier = { modifier = world_shaper_mod days = -1 }
+		}
+	}
+
+	option = {
+		name = plant.100.a
+		trigger = {
+			owner = { is_hive_empire = no }
+		}
+		add_modifier = {
+			modifier = celebrate_idyllic_bloom
+			days = 180
+		}
+	}
+
+	option = {
+		name = plant.100.b
+		trigger = {
+			owner = { is_hive_empire = yes }
+		}
+	}
+
+	after = {
+		tooltip = {
+			change_pc = pc_gaia
+			remove_building = building_gaiaseeders_4
+		}
+	}
+}

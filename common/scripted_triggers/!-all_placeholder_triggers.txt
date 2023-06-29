@@ -252,6 +252,7 @@ is_pd_arctic = { always = no }
 is_pd_arid = { always = no }
 is_pd_barren = { always = no }
 is_pd_barren_cold = { always = no }
+is_pd_cave = { always = no }
 is_pd_continental = { always = no }
 is_pd_crucible = { always = no }
 is_pd_desert = { always = no }
@@ -277,6 +278,8 @@ is_pd_regular = { always = no }
 is_pd_robot_arcology = { always = no }
 is_pd_savannah = { always = no }
 is_pd_shroud_world = { always = no }
+is_pd_superhab = { always = no }
+is_pd_tidally_locked = { always = no }
 is_pd_toxic = { always = no }
 is_pd_tropical = { always = no }
 is_pd_tundra = { always = no }

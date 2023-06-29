@@ -1097,6 +1097,7 @@ is_valid_target_to_outlaw_cybernetics_or_robot_pops_or_ai = {
 	optimize_memory
 	merg_is_default_empire = yes
 	is_robot_empire = no
+	is_valid_organic_zealots = no
 	OR = {
 		has_ascension_perk = ap_the_flesh_is_weak
 		has_ascension_perk = ap_organo_machine_interfacing

@@ -3436,6 +3436,8 @@ can_support_branch_offices = {
 			}
 			# Rogue Maid
 			Maid_trigger_1_can_support_branch_offices = yes
+			# Unique Ascension Perks
+			has_ascension_perk = ap_megacorp
 		}
 	}
 	custom_tooltip = {
@@ -3520,7 +3522,7 @@ can_build_branch_office_on_planet = {
 				owner = { is_primitive = yes }
 			}
 			has_observation_outpost = yes
-			observation_outpost_owner = { is_same_value = root }
+			observation_outpost_owner = { is_same_empire = root }
 		}
 	}
 	# Civic: Organic Zealots 
@@ -3584,9 +3586,7 @@ can_build_branch_office_on_planet = {
 			owner = { is_in_federation_with = root }
 			AND = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_modifier = preftl_action_trade_pact
-				}
+				observation_outpost = { has_modifier = preftl_action_trade_pact }
 			}
 			# Expanded Traits, Civics, Pops, and More
 			AND = {
@@ -3613,30 +3613,45 @@ can_build_branch_office_on_planet = {
 			# allow branch offices in subsidiaries and vice versa (and fellow subjects)
 			root = {
 				is_subject = yes
-				is_megacorp = yes
+				OR = {
+					is_megacorp = yes
+					has_civic = civic_galactic_sovereign_megacorp
+				}
+				exists = overlord
 				overlord = {
 					OR = {
-						is_same_value = prevprev.owner
-						is_same_value = prevprev.owner.overlord
+						is_same_empire = prevprev.owner
+						AND = {
+							exists = prevprev.owner.overlord
+							is_same_empire = prevprev.owner.overlord
+						}
 					}
 				}
 			}
 			owner = {
 				is_subject = yes
+				exists = overlord
 				overlord = {
 					OR = {
-						is_same_value = root
-						is_same_value = root.overlord
+						is_same_empire = root
+						AND = {
+							exists = root.overlord
+							is_same_empire = root.overlord
+						}
 					}
-					is_megacorp = yes
+					OR = {
+						is_megacorp = yes
+						has_civic = civic_galactic_sovereign_megacorp
+					}
 				}
 			}
 			AND = {
-				root = { has_valid_civic = civic_galactic_sovereign_megacorp }
-				owner = { is_galactic_community_member = yes }
-			}
-			AND = {
-				root = { has_modifier = imperial_charter }
+				root = {
+					OR = {
+						has_valid_civic = civic_galactic_sovereign_megacorp
+						has_modifier = imperial_charter
+					}
+				}
 				owner = { is_galactic_community_member = yes }
 			}
 			# Vassals Expanded and Reworked
@@ -3646,26 +3661,29 @@ can_build_branch_office_on_planet = {
 				OR = {
 					root = {
 						is_subject = yes
+						exists = overlord
 						overlord = {
 							OR = {
-								is_same_value = prevprev.owner
-								is_same_value = prevprev.owner.overlord
+								is_same_empire = prevprev.owner
+								is_same_empire = prevprev.owner.overlord
 							}
 						}
 					}
 					owner = {
 						is_subject = yes
-						overlord = { is_same_value = root }
+						exists = overlord
+						overlord = { is_same_empire = root }
 					}
 				}
 			}
 			# Unique Ascension Perks
 			AND = {
-				owner = { merg_is_default_empire = yes }
-				root = { has_ascension_perk = ap_megacorp }
-			}
-			AND = {
-				owner = { is_gestalt = yes }
+				owner = {
+					OR = {
+						is_megacorp = yes
+						is_gestalt = yes
+					}
+				}
 				root = { has_ascension_perk = ap_megacorp }
 			}
 			# EDA
@@ -3689,7 +3707,13 @@ can_build_branch_office_on_planet = {
 					# Or if your overlord isn't a megacorp.
 					root = {
 						is_subject = yes
-						overlord = { is_megacorp = no }
+						exists = overlord
+						overlord = {
+							NOR = {
+								is_megacorp = yes
+								has_civic = civic_galactic_sovereign_megacorp
+							}
+						}
 					}
 				}
 			}
@@ -3699,14 +3723,21 @@ can_build_branch_office_on_planet = {
 			AND = {
 				root = {
 					is_subject = yes
-					overlord = { is_megacorp = yes }
+					exists = overlord
+					overlord = {
+						OR = {
+							is_megacorp = yes
+							has_civic = civic_galactic_sovereign_megacorp
+						}
+					}
 				}
 				owner = {
 					OR = {
 						is_subject = no
 						AND = {
 							is_subject = yes
-							overlord = { NOT = { is_same_value = root.overlord } }
+							exists = overlord
+							overlord = { NOT = { is_same_empire = root.overlord } }
 						}
 					}
 				}

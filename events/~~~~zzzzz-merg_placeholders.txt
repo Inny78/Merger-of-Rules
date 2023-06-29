@@ -30,13 +30,16 @@ planet_event = { id = sleeper_dormant.12 hide_window = yes is_triggered_only = y
 namespace = mem_blacksite
 planet_event = { id = mem_blacksite.1000 hide_window = yes is_triggered_only = yes immediate = { } }
 
-namespace = gpm_planet_destruction
-planet_event = { id = gpm_planet_destruction.1 hide_window = yes is_triggered_only = yes immediate = { } }
-
 namespace = gpm_crisis
 planet_event = { id = gpm_crisis.1 hide_window = yes is_triggered_only = yes immediate = { } }
 planet_event = { id = gpm_crisis.2 hide_window = yes is_triggered_only = yes immediate = { } }
 planet_event = { id = gpm_crisis.3 hide_window = yes is_triggered_only = yes immediate = { } }
+
+namespace = gpm_planet_destruction
+planet_event = { id = gpm_planet_destruction.1 hide_window = yes is_triggered_only = yes immediate = { } }
+
+namespace = gpm_terraform
+planet_event = { id = gpm_terraform.78871 hide_window = yes is_triggered_only = yes immediate = { } }
 
 namespace = osom_subterranean_change
 planet_event = { id = osom_subterranean_change.1 hide_window = yes is_triggered_only = yes immediate = { } }
