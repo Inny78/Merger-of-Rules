@@ -752,7 +752,7 @@ has_food_upkeep = {
 			# Assault Lily
 			is_archetype = LILY
 			# Azur Lane Stellaris DLC
-			is_archetype = KANSEN
+			is_KANSEN_species = yes
 			# Empire of Eeveelution
 			is_archetype = POKEMON
 			# Expanded Traits, Civics, Pops, and More

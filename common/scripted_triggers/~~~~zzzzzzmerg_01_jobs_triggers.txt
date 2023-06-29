@@ -159,7 +159,7 @@ is_organic_species = {
 				# Assault Lily
 				is_archetype = LILY
 				# Azur Lane Stellaris DLC
-				is_archetype = KANSEN
+				is_KANSEN_species = yes
 				# BlueArchive species pack
 				is_archetype = Schale
 				# Cryogenesis Unofficial Species Pack
