@@ -51,12 +51,12 @@ orbital_bombardment = {
 		valid = {
 			NOR = {
 				is_pacifist = yes
-				# Expanded Gestalts
-				has_valid_civic = civic_mutualistic_behavior
 				# Ethics and Civics Alternative - Redux
 				has_valid_civic = civic_xeno_militarist
 				# Ethics & Civics: Bug Branch
 				is_bugged_interventionalist = yes
+				# Expanded Gestalts
+				has_valid_civic = civic_mutualistic_behavior
 			}
 		}
 		AI_weight = {
@@ -80,12 +80,18 @@ orbital_bombardment = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_machine_terminator
-				# ZOFE
-				is_country_type = ascended_empire
 				# EMEX
 				has_valid_civic = civic_bringers_of_death
+				has_valid_civic = civic_machine_destructive_programming
+				# Omega's Stellaris Additions
+				AND = {
+					merg_has_omega_add = yes
+					has_valid_civic = civic_hive_devouring_swarm
+				}
 				# Organic Zealots
 				has_valid_civic = civic_organic_zealots
+				# ZOFE
+				is_country_type = ascended_empire
 			}
 		}
 
@@ -100,12 +106,12 @@ orbital_bombardment = {
 				OR = {
 					has_valid_civic = civic_fanatic_purifiers
 					has_valid_civic = civic_machine_terminator
-					# ZOFE
-					has_valid_civic = civic_galactic_superpower
 					# EMEX
 					has_valid_civic = civic_bringers_of_death
 					# Organic Zealots
 					has_valid_civic = civic_organic_zealots
+					# ZOFE
+					has_valid_civic = civic_galactic_superpower
 				}
 			}
 			modifier = {

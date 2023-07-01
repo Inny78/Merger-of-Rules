@@ -31,6 +31,7 @@ civic_isolationism = { potential = { always = no } }
 civic_living_hosts = { potential = { always = no } }
 civic_machine_cult = { potential = { always = no } }
 civic_machine_cult_corpo = { potential = { always = no } }
+civic_machine_destructive_programming = { potential = { always = no } }
 civic_machine_emotions = { potential = { always = no } }
 civic_machine_mighty_processors = { potential = { always = no } }
 civic_machine_replicators = { potential = { always = no } }
