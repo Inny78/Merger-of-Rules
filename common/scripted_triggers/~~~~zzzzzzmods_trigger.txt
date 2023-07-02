@@ -564,6 +564,25 @@ ESC_TRIGGER_is_city_planet = {
         }
     }
 }
+ESC_TRIGGER_is_naked_mantle_planet = {
+	OR = {
+		# Alphamod (removed as outdated)
+		# is_planet_class = pc_molten_habitable
+		# Gigastructural Engineering & More
+		is_planet_class = pc_equatorial_shipyard
+		# Planetary Stations
+		is_planet_class = pc_molten_station
+		is_pd_crucible = yes
+		# Real Space - New Frontiers
+		has_modifier = infernal_world
+		has_modifier = lava_world
+		has_modifier = volcanic_world
+		# Real Space - Planetary Diversity
+		is_planet_class = pc_pd_molten_hab
+		# The Belt (3.7, still should work for now)
+		is_planet_class = pc_bdoe_molten_habitable
+	}
+}
 
 ############################### Guilli's Planetary Modifiers ###############################
 gpm_is_planet_class_normal_uninhabitable = {
@@ -1174,6 +1193,27 @@ ai_should_build_pd_habitats = {
 		}
 	}
 	NOT = { any_neighbor_country = { is_crisis_faction = yes } }
+}
+
+############################### Planet States ###############################
+is_appropriate_planet_state_system = {
+	NOR = {
+		is_fe_cluster = yes
+		has_star_flag = empire_home_system
+		has_star_flag = empire_cluster
+		has_star_flag = enclave
+		has_star_flag = guardian
+		has_star_flag = hostile_system
+		has_star_flag = marauder_system
+		has_star_flag = caravaneer_home
+		has_star_flag = primitive_system
+		merg_is_void_system = yes
+		has_special_star_flag_trigger = yes
+	}
+	any_system_planet = {
+		uninhabitable_regular_planet = yes
+		has_anomaly = no
+	}
 }
 
 ############################### Primitive Conquest Enhancements ###############################
