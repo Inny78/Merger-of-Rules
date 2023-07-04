@@ -840,6 +840,8 @@ has_research_building = {
 		has_district = district_bdoe_501_scrapyard
 		has_district = district_bdoe_502_workshops
 		has_district = district_bdoe_502_university
+		# Decadence of Sanity
+		has_district = district_shroud_research
 		# EDA
 		has_building = eda_building_research_lab
 		# EUTAB
@@ -984,6 +986,8 @@ has_any_mining_district = {
 		has_district = district_bdoe_04_deep_mining
 		has_district = district_bdoe_04_mountain_mining
 		has_district = district_bdoe_501_rw_asteroid_belt_mining
+		# Decadence of Sanity
+		has_district = district_shroud_resource
 		# Extra Districts
 		ED_has_mining_district = yes
 		# Gigastructures
@@ -1031,6 +1035,8 @@ has_any_generator_district_or_building = {
 		has_district = district_bdoe_03_solar_generator
 		has_district = district_bdoe_03_tidal_generator
 		has_district = district_bdoe_03_biomass_generator
+		# Decadence of Sanity
+		has_district = district_shroud_resource
 		# EUTAB
 		eutab_has_generator_building = yes
 		# Extra Districts

@@ -142,6 +142,7 @@ building_giga_fortress_lab = { potential = { always = no } allow = { always = no
 building_giga_fortress_obelisk = { potential = { always = no } allow = { always = no } }
 building_giga_planetary_shield_generator_1 = { potential = { always = no } allow = { always = no } }
 building_giga_planetary_shield_generator_2 = { potential = { always = no } allow = { always = no } }
+building_grand_academy = { potential = { always = no } allow = { always = no } }
 building_gray_nano_factory = { potential = { always = no } allow = { always = no } }
 building_gray_nano_foundry = { potential = { always = no } allow = { always = no } }
 building_gray_nano_foundry2 = { potential = { always = no } allow = { always = no } }
