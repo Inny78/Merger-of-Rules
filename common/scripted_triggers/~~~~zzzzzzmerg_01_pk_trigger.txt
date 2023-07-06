@@ -534,19 +534,19 @@ can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = {
 can_destroy_planet_with_ACOT_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
 can_destroy_planet_with_ACOT_PLANET_KILLER_SHIELDER = { can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes }
 can_destroy_planet_with_ACOT_PLANET_KILLER_NEUTRON = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes }
-can_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = { can_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = yes }
-can_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = { can_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = yes }
+can_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = { can_destroy_planet_with_PLANET_KILLER_GODRAY = yes }
+can_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = { can_destroy_planet_with_PLANET_KILLER_NANOBOTS = yes }
 can_destroy_planet_with_ACOT_SE_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
 can_destroy_planet_with_ACOT_SE_PLANET_KILLER_SHIELDER = { can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes }
 can_destroy_planet_with_ACOT_SE_PLANET_KILLER_NEUTRON = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes }
-can_destroy_planet_with_ACOT_SE_PLANET_KILLER_GODRAY = { can_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = yes }
-can_destroy_planet_with_ACOT_SE_PLANET_KILLER_NANOBOTS = { can_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = yes }
+can_destroy_planet_with_ACOT_SE_PLANET_KILLER_GODRAY = { can_destroy_planet_with_PLANET_KILLER_GODRAY = yes }
+can_destroy_planet_with_ACOT_SE_PLANET_KILLER_NANOBOTS = { can_destroy_planet_with_PLANET_KILLER_NANOBOTS = yes }
 can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
 can_destroy_planet_with_ACOT_HE_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
 can_destroy_planet_with_ACOT_HE_PLANET_KILLER_SHIELDER = { can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes }
 can_destroy_planet_with_ACOT_HE_PLANET_KILLER_NEUTRON = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes }
-can_destroy_planet_with_ACOT_HE_PLANET_KILLER_GODRAY = { can_destroy_planet_with_ACOT_PLANET_KILLER_GODRAY = yes }
-can_destroy_planet_with_ACOT_HE_PLANET_KILLER_NANOBOTS = { can_destroy_planet_with_ACOT_PLANET_KILLER_NANOBOTS = yes }
+can_destroy_planet_with_ACOT_HE_PLANET_KILLER_GODRAY = { can_destroy_planet_with_PLANET_KILLER_GODRAY = yes }
+can_destroy_planet_with_ACOT_HE_PLANET_KILLER_NANOBOTS = { can_destroy_planet_with_PLANET_KILLER_NANOBOTS = yes }
 
 ############################### Ancient Caches of Technologies ###############################
 can_destroy_planet_with_ACOT_EMISSARY_BEAM = {
