@@ -8,6 +8,8 @@ is_memeable_space_habitat = {
 		habitable_structure = yes
 		merg_is_habitat = yes
 		merg_is_hab_ringworld = yes
+		# Decadence of Sanity
+		is_shroud_entrepot = yes
 		# Gigastructural Engineering & More
 		giga_habitable_structure = yes
 	}
@@ -989,6 +991,8 @@ mem_is_spherical_world = {
 		habitable_structure = yes
 		merg_is_habitat = yes
 		merg_is_hab_ringworld = yes
+		# Decadence of Sanity
+		is_shroud_entrepot = yes
 		# Gigastructural Engineering & More
 		giga_habitable_structure = yes
 	}

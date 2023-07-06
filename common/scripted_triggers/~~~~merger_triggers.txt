@@ -208,6 +208,8 @@ merg_is_habitat_non_PD = {
 		is_aot_habitat = yes
 		# Blue Archive
 		uses_district_set = BA_auto_habitat
+		# Decadence of Sanity
+		is_shroud_entrepot = yes
 		# Habitation
 		has_planet_flag = hab_init
 		# Living Space
