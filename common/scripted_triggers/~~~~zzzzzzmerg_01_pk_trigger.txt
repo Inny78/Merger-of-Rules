@@ -2076,6 +2076,49 @@ can_destroy_planet_with_PLANET_KILLER_SHROUD = {
 	}
 }
 
+############################### Sirens ###############################
+can_destroy_planet_with_PLANET_KILLER_SIREN_UPLOARD = {
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		is_a_habitable_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		merg_is_shielded = no
+	}
+	custom_tooltip = {
+		fail_text = fotd_cant_collossus
+		NOT = { has_planet_flag = fotd_seperatist_planet@from.owner }
+		exists = from.owner
+		from.owner = { NOT = { has_country_flag = fotd_seperatist_country@from.owner } }
+	}
+	custom_tooltip = {
+		fail_text = is_not_hostile
+		OR = {
+			planet_is_hostile_or_crisis = yes
+			AND = {
+				exists = owner
+				owner = { is_country_type = primitive }
+				from.owner = { is_xenophobe = yes }
+			}
+			AND = {
+				exists = space_owner
+				exists = owner
+				owner = { is_primitive = yes }
+				space_owner = { merg_is_at_war = yes }
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_unpopulated
+		OR = {
+			num_pops > 0
+			is_planet_class = pc_infested
+		}
+	}
+}
+
 ############################### Some Events of Outside Cluster ###############################
 can_destroy_planet_with_PLANET_KILLER_NEP_UGO = {
 	custom_tooltip = {
@@ -2438,7 +2481,6 @@ can_destroy_planet_with_EE_PLANETKILLER_BARREN = {
 		fail_text = is_not_hostile
 		OR = {
 			AND = {
-				#exists = space_owner
 				space_owner = {
 					OR = {
 						is_same_value = from.owner
@@ -2446,11 +2488,11 @@ can_destroy_planet_with_EE_PLANETKILLER_BARREN = {
 					}
 				}
 			}
-			AND = { # Ownelerless
+			AND = {
 				NOT = { exists = space_owner }
 				NOT = { is_at_war_with = from.owner }
 			}
-			AND = { # primitive
+			AND = {
 				exists = space_owner
 				exists = owner
 				owner = { is_primitive = yes }
@@ -2472,7 +2514,6 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER_ARCANE = {
 		fail_text = is_not_hostile
 		OR = {
 			AND = {
-				#exists = space_owner
 				space_owner = {
 					OR = {
 						is_same_value = from.owner
@@ -2481,18 +2522,14 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER_ARCANE = {
 				}
 			}
 			AND = {
-				# Ownelerless
 				NOT = { exists = space_owner }
 				NOT = { is_at_war_with = from.owner }
 			}
 			AND = {
-				# primitive
 				exists = space_owner
 				exists = owner
 				owner = { is_primitive = yes }
-				space_owner = {
-					merg_is_at_war = yes
-				}
+				space_owner = { merg_is_at_war = yes }
 			}
 		}
 		NOT = { is_owned_by = event_target:origin_crisis_country }

@@ -311,6 +311,8 @@ merg_is_ocean = {
 merg_is_relic_world = {
 	OR = {
 		is_planet_class = pc_relic
+		# Planetary Diversity
+		is_pd_relic = yes
 	}
 }
 

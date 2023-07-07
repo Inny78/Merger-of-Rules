@@ -1220,6 +1220,59 @@ is_appropriate_planet_state_system = {
 	}
 }
 
+############################### Precursor Story Pack ###############################
+pspmod_sless_digsite_spawn_rules = {
+	exists = star
+	OR = {
+		has_owner = no
+		owner = { is_same_value = root.owner }
+	}
+	NOR = {
+		is_same_value = root.solar_system
+		any_system_planet = {
+			OR = {
+				is_capital = yes #there should be no capital world in the system
+				has_planet_flag = precursor_world
+				has_planet_flag = pspmod_sless_colony
+			}
+		}
+	}
+	any_system_planet = {
+		has_anomaly = no
+		OR = {
+			merg_is_barren = yes
+			merg_is_barren_cold = yes
+			merg_is_nuked_basic = yes
+		}
+		NOT = { exists = archaeological_site }
+	}
+}
+pspmod_astanine_digsite_spawn_rules = {
+	exists = star
+	OR = {
+		has_owner = no
+		owner = { is_same_value = root.owner }
+	}
+	NOR = {
+		is_same_value = root.solar_system
+		any_system_planet = {
+			OR = {
+				is_capital = yes
+				has_planet_flag = precursor_world
+				has_planet_flag = pspmod_astanine_colony
+			}
+		}
+	}
+	any_system_planet = {
+		is_star = no
+		has_anomaly = no
+		NOR = {
+			merg_is_gas_giant = yes
+			exists = archaeological_site
+		}
+	}
+}
+
 ############################### Primitive Conquest Enhancements ###############################
 pce_planet_uses_district_farming_uncapped = {
 	optimize_memory

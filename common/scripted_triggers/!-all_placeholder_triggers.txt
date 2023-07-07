@@ -276,6 +276,7 @@ is_pd_radiotrophic_mutant = { always = no }
 is_pd_radiotrophic_world = { always = no }
 is_pd_rare = { always = no }
 is_pd_regular = { always = no }
+is_pd_relic = { always = no }
 is_pd_robot_arcology = { always = no }
 is_pd_savannah = { always = no }
 is_pd_shroud_world = { always = no }
