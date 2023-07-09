@@ -229,6 +229,7 @@ is_imperial = { always = no }
 is_infested_basic = { always = no }
 is_KANSEN_species = { always = no }
 is_khan_country_type = { always = no }
+is_kilostructure = { always = no }
 is_KZ_VOY_organic_species = { always = no }
 is_lily_goverments = { always = no }
 is_living_architecture = { always = no }

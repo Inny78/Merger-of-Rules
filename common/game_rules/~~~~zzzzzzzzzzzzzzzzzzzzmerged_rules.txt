@@ -698,6 +698,11 @@ can_release_vassal = {
 		fail_text = default
 		NOT = { is_country_type = eternal_empire }
 	}
+	# Electroids Species Pack
+	custom_tooltip = {
+		fail_text = default
+		NOT = { has_valid_civic = civic_elec_stellar_devourers }
+	}
 }
 
 #Root = species
@@ -4109,6 +4114,7 @@ can_be_part_of_galactic_community = {
 		fail_text = "community_homicidal_failtext"
 		NOR = {
 			is_homicidal = yes
+			# Galactic Imperium Origin
 			has_origin = origin_chosen_of_the_shroud
 		}
 	}

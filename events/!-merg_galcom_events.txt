@@ -1,0 +1,165 @@
+name = galcom
+
+country_event = {
+	id = galcom.16
+	title = "galcom.5.name"
+	desc = "galcom.16.desc"
+	picture = GFX_evt_galactic_community
+	show_sound = event_galactic_community
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_galactic_community_member = no
+		NOT = { has_country_flag = galcom_form_nay }
+	}
+
+	immediate = {
+		if = {
+			limit = { is_homicidal = yes }
+			set_country_flag = galcom_form_nay
+		}
+	}
+	
+	after = {
+		# Expanded Traits, Civics, Pops, and More
+		hidden_effect = {
+			if = {
+				limit = {
+					merg_has_expanded_pops = yes
+					has_country_flag = human_1
+					NOT = { has_country_flag = found_com }
+				}
+				country_event = { id = countryexpanded.44 days = 1 }
+			}
+		}
+	}
+
+	option = {
+		name = galcom.16.a
+		allow = {
+			is_homicidal = no
+			# B5 Species - Shadows
+			NOT = { has_civic = civic_shadows1 }
+		}
+		add_to_galactic_community = yes
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 3
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_civic = civic_diplomatic_corps
+					has_civic = civic_public_relations_specialists
+					has_civic = civic_hive_empath
+					has_civic = civic_machine_servitor
+					# STU
+					is_servitor_empire = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = galcom.16.b
+		trigger = {
+			is_homicidal = no
+			# B5 Species - Shadows
+			NOT = { has_civic = civic_shadows1 }
+		}
+		hidden_effect = {
+			set_country_flag = galcom_form_nay
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 3
+				OR = {
+					has_ethic = ethic_xenophobe
+					# Expanded Traits, Civics, Pops, and More
+					has_civic = civic_living_hosts
+				}
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = ethic_fanatic_xenophobe
+					# Expanded Traits, Civics, Pops, and More
+					has_civic = civic_closed_collective
+					has_civic = civic_closed_network
+				}
+			}
+		}
+	}
+	option = {
+		name = SCUM
+		trigger = {
+			has_civic = civic_fanatic_purifiers
+		}
+	}
+	option = {
+		name = anomaly.3089.b
+		trigger = {
+			has_civic = civic_machine_terminator
+		}
+	}
+	option = {
+		name = anomaly.180.e
+		trigger = {
+			has_civic = civic_hive_devouring_swarm
+		}
+	}
+	# B5 Species - Shadows
+	option = {
+		name = galcom_shadows
+		trigger = {
+			has_civic = civic_shadows1
+		}
+		hidden_effect = {
+			set_country_flag = galcom_form_nay
+		}
+	}
+	# Electroids Species Pack
+	option = {
+		name = anomaly.180.e
+		trigger = {
+			has_civic = civic_elec_stellar_devourers
+		}
+	}
+	# Organic Zealots
+	option = {
+		name = "galcom.16.c.organic_zealots"
+		trigger = { is_organic_zealots = yes }
+	}
+	option = { # fallback for other, unknown homicidals
+		name = DISGUSTING
+		trigger = {
+			hidden_trigger = {
+				is_homicidal = yes
+				NOR = {
+					has_civic = civic_fanatic_purifiers
+					has_civic = civic_machine_terminator
+					has_civic = civic_hive_devouring_swarm
+					is_organic_zealots = yes
+				}
+			}
+		}
+	}
+
+	# Vanilla
+	option = { #This will make the Solarpunk Empire refuse to join the galcom until they return to the galaxy.
+		exclusive_trigger = {
+			has_country_flag = solarpunk_country
+			NOT = {
+				has_country_flag = solarpunk_returned
+			}
+		}
+		name = NO
+	}
+}

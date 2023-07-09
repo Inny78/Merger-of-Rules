@@ -198,7 +198,7 @@ allows_purge = {
 			# Expanded Gestalts: Forgotten Queens
 			NOT = {  has_valid_civic = civic_mutualistic_behavior }
 		}
-		# Electroids
+		# Electroids Species Pack
 		has_valid_civic = civic_elec_stellar_devourers
 		# Civic: Organic Zealots
 		is_valid_organic_zealots = yes
@@ -497,6 +497,8 @@ is_homicidal = {
 		has_valid_civic = civic_fanatic_purifiers
 		has_valid_civic = civic_machine_terminator
 		has_valid_civic = civic_hive_devouring_swarm
+		# Electroids Species Pack
+		has_valid_civic = civic_elec_stellar_devourers
 		# Expanded Traits, Civics, Pops, and More
 		has_valid_civic = civic_infestation
 		# Organic Zealots
@@ -1268,6 +1270,26 @@ can_remove_overtuned_traits = {
 			has_country_flag = decision_overtuned
 			# Ascension - Biological Module
 			has_technology = tech_yanz_rs_genemod
+		}
+	}
+}
+
+has_any_megastructure_in_empire = {
+	any_owned_megastructure = {
+		AND = {
+			exists = this
+			NOR = {
+				merg_is_gate_mega = yes
+				merg_is_habitat = yes
+				is_megastructure_type = orbital_ring
+				is_megastructure_type = orbital_ring_ruined
+				is_megastructure_type = orbital_ring_restored
+				# Gigastructural Engineering & More
+				is_kilostructure = yes
+				# Machine & Robot Expansion
+				is_megastructure_type = xvcv_mdlc_planet_cracker_incomplete
+				is_megastructure_type = xvcv_mdlc_planet_cracker
+			}
 		}
 	}
 }

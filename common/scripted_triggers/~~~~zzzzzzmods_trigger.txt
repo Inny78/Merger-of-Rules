@@ -44,6 +44,12 @@ can_build_precursor_ship = {
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_8
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9_2
+				any_ship_in_system = {
+					OR = {
+						is_precursor_starbase = yes
+						has_starbase_building = acot_precursor_database		
+					}
+				}
 			}
 		}
 		AND = {
@@ -51,9 +57,9 @@ can_build_precursor_ship = {
 			OR = {
 				has_starbase_size = juggernaut
 				has_starbase_building = acot_precursor_database	
-				is_acot_advanced_starbase = yes
+				is_precursor_starbase = yes
 				has_starbase_size = precursor_juggernaut
-				is_ascended_juggernaut = yes
+				is_acot_advanced_starbase = yes
 				# Assault Lily
 				has_starbase_size >= lily_super_college_ship
 				# Gigastructural Engineering & More
@@ -71,7 +77,6 @@ is_playable_country = {
 		is_country_type = sbtg_stellarborne_empire_active
 	}
 }
-
 acot_is_partially_affected_by_cascade = {
     OR = {
         is_planet_class = pc_shattered
@@ -381,8 +386,15 @@ elec_hyperlane_create = {
 	NOR = {
 		is_same_value = prev
 		has_hyperlane_to = prev
+		has_star_flag = ds_se_system_fixed
+		has_star_flag = empire_home_system
+		has_star_flag = empire_cluster
+		has_star_flag = fallen_shield_world
+		has_star_flag = fallen_empire_world
 		merg_is_isolated_system = yes
+		# Darkspace
 		has_star_flag = darkspace_void_control
+		# Gigastructural Engineering & More
 		giga_is_core_system = yes
 		cohesive_system = yes
 		compound_cluster = yes

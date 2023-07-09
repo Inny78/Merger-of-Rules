@@ -21,6 +21,9 @@ planet_event = { id = anomalymod.73 hide_window = yes is_triggered_only = yes im
 namespace = civicsexpanded
 country_event = { id = civicsexpanded.105 hide_window = yes is_triggered_only = yes immediate = { } }
 
+namespace = countryexpanded
+country_event = { id = countryexpanded.44 hide_window = yes is_triggered_only = yes immediate = { } }
+
 namespace = expandedrelics
 planet_event = { id = expandedrelics.17 hide_window = yes is_triggered_only = yes immediate = { } }
 
