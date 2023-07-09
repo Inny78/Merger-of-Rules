@@ -4736,7 +4736,7 @@ can_fill_ruler_job = {
 			OR = {
 				NOT = { has_trait = trait_dummy }
 				owner = {
-					has_origin = origin_garbage_princesses
+					is_species_class = WV_MAGIC_PUPPET
 				}
 				AND = {
 					owner = {
@@ -4747,9 +4747,21 @@ can_fill_ruler_job = {
 						} 
 					}
 					owner = {
-						has_policy_flag = ai_full_rights 					
+						has_policy_flag = ai_full_rights
 					}
 				}	
+			}
+			OR = {
+				NOR = {
+					has_trait = trait_reanimated_materials
+					has_trait = trait_houki
+				}
+				owner = {
+					OR = {
+						has_policy_flag = object_full_rights
+						has_ascension_perk = ap_matters_all_have_minds
+					}
+				}
 			}
 			# Vanilla
 			can_think = yes
