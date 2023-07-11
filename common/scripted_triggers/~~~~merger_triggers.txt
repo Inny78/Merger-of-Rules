@@ -367,9 +367,6 @@ merg_is_dense_star = {
 		rs_microquasar = yes
 		# Solar Storm
 		is_abyssal_black_hole = yes
-		# The Abyss Contract
-		is_planet_class = pc_black_hole_02
-		is_planet_class = pc_black_hole_03
 		# TimeMod
 		is_time_black_hole_planet_class = yes
 		# Voyage to Eternity
@@ -399,9 +396,6 @@ merg_is_black_or_white_hole = {
 		rs_microquasar = yes
 		# Solar Storm
 		is_abyssal_black_hole = yes
-		# The Abyss Contract
-		is_planet_class = pc_black_hole_02
-		is_planet_class = pc_black_hole_03
 		# TimeMod
 		is_time_black_hole_planet_class = yes
 		# Voyage to Eternity

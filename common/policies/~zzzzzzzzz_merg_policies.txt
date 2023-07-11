@@ -161,3 +161,42 @@ orbital_bombardment = {
 		}
 	}
 }
+
+merger_fake_policy = {
+
+	potential = { always = no }
+	allow = { always = no }
+
+	option = {
+		name = merg.1.name
+		potential = {
+			always = no
+		}
+		policy_flags = {
+			hostile_all_gestalts
+			gestalt_liberation
+			gestalt_punishment
+			enemy_gestalt_elimination_forbidden
+			GF_doll_right_full
+			GF_doll_right_limited
+			infiltration_allowed
+			ev_no_use_galactic_market
+		}
+	}
+
+	option = {
+		name = merg.2.name
+		potential = {
+			always = no
+		}
+		policy_flags = {
+			GF_doll_work_policy_high
+			GF_doll_work_policy_free
+			GF_doll_work_policy_middle
+			object_full_rights
+			artificial_aristocracy
+			GF_doll_right_low
+		}
+	}
+
+}

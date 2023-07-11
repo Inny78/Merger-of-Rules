@@ -77,6 +77,8 @@ merg_is_arcology = {
 		uses_district_set = castle_scarlet
 		# Star Wars: Kuat Ancient Empire
 		uses_district_set = Eternal_city
+		# The Abyss Contract
+		uses_district_set = TAC_AI_world
 		# Voyage to Eternity
 		uses_district_set = KZ_VOY_hyper_ecumenopolis
 		# Warhammer 40K Planets

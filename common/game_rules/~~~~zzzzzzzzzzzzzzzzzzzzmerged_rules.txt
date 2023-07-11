@@ -3951,11 +3951,6 @@ can_crossbreed_species_on_planet = {
 	NOT = {
 		owner = { has_country_flag = redlight_no_crossbreeding }
 	}
-	# Planet Builders
-	OR = {
-		is_planet_class = pc_pb_pleasure
-        owner = { has_ascension_perk = ap_xeno_compatibility }
-    }
 }
 
 # This = species one
@@ -4675,7 +4670,7 @@ can_fill_ruler_job = {
 				# Ethics and Civics Bug Branch
 				is_bugged_slave_gene = yes
 				# Ethics and Civics Classic
-				has_trait = trait_slave_gene
+				has_ecc_slave_gene = yes
 				# Lithoid Supremacy
 				is_pearl_born_drone = yes
 			}

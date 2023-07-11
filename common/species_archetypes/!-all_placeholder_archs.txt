@@ -21,6 +21,8 @@ KANSEN = { uses_modifiers = no }
 Schale = { uses_modifiers = no }
 # Cryogenesis Unofficial Species Pack
 sm_ELEMENTAL = { uses_modifiers = no }
+# EDA
+Areta = { uses_modifiers = no }
 # Empire of Eeveelution
 POKEMON = { uses_modifiers = no }
 # Expanded Traits, Civics, Pops, and More

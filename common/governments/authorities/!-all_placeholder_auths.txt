@@ -1,0 +1,20 @@
+# Irony this is a placeholder file please ignore it
+auth_AL_arsenal = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_AL_democratic = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_azur_dictatorial = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_direct_democratic = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_azur_lane_1 = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_azur_lane_2 = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_azur_lane_K = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_grey_witch_council = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_kancolle = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_kc_fe = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_kivotos = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_sh_fe = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_shenhai = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_siren_group = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_traveler = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_warshipgirls = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_wg_fe = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_witch_dictatorial = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+GF_auth_commonwealth = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }

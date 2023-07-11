@@ -1,4 +1,3 @@
-# Dummy buildings - to be overwritten by their respective mods.
 # Irony this is a placeholder file please ignore it
 AAR_bldn_VEIL_shield_generator_T5 = { potential = { always = no } allow = { always = no } }
 ag_ancient_lab = { potential = { always = no } allow = { always = no } }

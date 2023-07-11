@@ -54,7 +54,7 @@ entertainer_job_check_trigger = {
 			# Diagraphers Trait Mod
 			is_subsapient_form = yes
 			# Ethics and Civics Classic
-			has_trait = trait_slave_gene
+			has_ecc_slave_gene = yes
 		}
 		can_think = yes
 		OR = {
@@ -101,9 +101,9 @@ can_fill_specialist_job = {
 			# Ethics and Civics Bug Branch
 			is_bugged_slave_gene = yes
 			# Ethics and Civics Classic
-			has_trait = trait_slave_gene
+			has_ecc_slave_gene = yes
 			# Expanded Traits, Civics, Pops, and More
-			has_trait = trait_tree_caretaker
+			is_exp_tree_caretaker = yes
 			has_trait = trait_presapient_docile_livestock
 		}
 		can_think = yes

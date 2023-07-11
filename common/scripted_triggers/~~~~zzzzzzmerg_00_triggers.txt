@@ -568,7 +568,7 @@ is_crossbreeding_possible = {
 		# Planetary Diversity - Unique Worlds
 		is_organic_fourschildren = yes
 		# Expanded Traits, Civics, Pops, and More
-		has_trait = trait_clones
+		is_exp_clone = yes
 		AND = {
 			is_half_species = any
 			# Expanded Gestalts: Forgotten Queens

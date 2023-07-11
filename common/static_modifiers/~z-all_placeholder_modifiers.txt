@@ -1,4 +1,3 @@
-# Dummy modifiers - to be overwritten by their respective mods. File is FIOS!
 # Irony this is a placeholder file please ignore it
 apocalypse = {}
 ag_debug_modifier_buff_common = {}

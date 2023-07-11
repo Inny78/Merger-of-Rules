@@ -1,4 +1,10 @@
-name = galcom
+################################
+#
+# Galactic Community Events
+#
+###############################
+
+namespace = galcom
 
 country_event = {
 	id = galcom.16

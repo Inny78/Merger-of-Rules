@@ -99,9 +99,6 @@ planet_is_nonstandard_star = {
 		giga_is_black_hole = yes
 		# TimeMod
 		is_tm_black_hole = yes
-		# The Abyss Contract
-		is_planet_class = pc_black_hole_02
-		is_planet_class = pc_black_hole_03
 	}
 }
 planet_is_black_hole = {
@@ -111,9 +108,6 @@ planet_is_black_hole = {
 		giga_is_black_hole = yes
 		# TimeMod
 		is_tm_black_hole = yes
-		# The Abyss Contract
-		is_planet_class = pc_black_hole_02
-		is_planet_class = pc_black_hole_03
 	}
 }
 can_have_defense_platforms = {

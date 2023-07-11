@@ -983,8 +983,7 @@ has_fort = {
 			has_building = building_phanon_giga_fortress_lab
 			has_building = building_phanon_giga_fortress_obelisk
 			has_district = district_acot_enigmapolis_fortress
-			is_planet_class = pc_phanon_macripp
-			is_planet_class = pc_sigma_solaripp
+			is_aot_macripp = yes
 			# GPM
 			has_building = gpm_building_stronghold
 			# Plentiful Traditions

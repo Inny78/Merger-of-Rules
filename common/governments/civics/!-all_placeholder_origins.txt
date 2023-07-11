@@ -1,4 +1,3 @@
-# Dummy origins - to be overwritten by their respective mods.
 # Irony this is a placeholder file please ignore it
 origin_anz_cyborgs_collective = { is_origin = yes potential = { always = no } }
 origin_chosen_of_the_shroud = { is_origin = yes potential = { always = no } }
