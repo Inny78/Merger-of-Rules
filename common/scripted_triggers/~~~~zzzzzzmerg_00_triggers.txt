@@ -21,7 +21,6 @@ colonizable_planet = {
 		merg_is_shroud_habitable = yes
 		habitable_structure = yes
 		habitable_planet = yes
-		is_artificial = yes
 		# ACOT
 		is_acot_fractured_planet_class = yes
 		is_acot_awesome_planet_class = yes
