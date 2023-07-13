@@ -18,6 +18,9 @@ planet_gives_aquatics_bonus = {
 		has_modifier = flooded_habitat
 	}
 }
+is_habitat = {
+	merg_is_habitat = yes
+}
 is_shielded = {
 	merg_is_shielded = yes
 }
