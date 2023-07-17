@@ -84,8 +84,7 @@ can_add_claim = {
 			owner = {
 				NOR = {
 					merg_is_default_empire = yes
-					is_country_type = fallen_empire
-					is_country_type = awakened_fallen_empire
+					is_fallen_empire = yes
 					# ACOT
 					is_country_type = sbtg_stellarborne_empire_active
 					is_country_type = sbtg_light_seeker
@@ -738,6 +737,8 @@ can_release_vassal_from_species = {
 					Maid_trigger_4_can_release_vassal_from_species = yes
 				}
 			}
+			# Ethical Gestalts
+			has_trait = trait_machine_unit
 			# Plentiful Perks
 			has_trait = trait_plentiful_traditions_pt_cocoon
 			# Girls Frontline
@@ -3151,6 +3152,7 @@ can_resettle_planet = {
 # can_resettle_planet_no_owner_check
 # should_spawn_deposits
 # is_new_colony
+
 # This = pop
 pop_generates_crime = {
 	is_sapient = yes

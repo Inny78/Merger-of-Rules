@@ -2,15 +2,6 @@
 has_merger_of_rules = { always = yes }
 
 # Misc vanilla scripted triggers
-mineral_candidate = {
-	NOT = { has_deposit_for = shipclass_research_station }
-	OR = {
-		is_asteroid = yes
-		uninhabitable_regular_planet = yes
-		# Real Space
-		is_planet_class = pc_c_giant_star
-	}
-}
 
 is_doomsday_planet = {
 	OR = {
@@ -30,20 +21,6 @@ is_doomsday_planet = {
 		has_modifier = mzilli_decaying_moon_3
 	}
 }
-
-default_site_visible_trigger = {
-	merg_is_default_empire = yes
-	exists = from
-	exists = from.solar_system
-	OR = {
-		intel_level = {
-			level >= low
-			system = from.solar_system
-		}
-		from.solar_system = { is_within_borders_of = root }
-	}
-}
-
 
 has_blocked_random_devastating_pre_ftl_events = {
 	OR = {

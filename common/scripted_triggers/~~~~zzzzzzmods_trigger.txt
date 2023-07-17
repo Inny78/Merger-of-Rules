@@ -236,6 +236,74 @@ is_planet_habitable = {
 		colonizable_planet = yes
 	}
 }
+has_active_al_factory_building = {
+	OR = {
+		has_active_building = building_lily_couture
+		has_active_building = building_factory_1
+		has_active_building = building_factory_2
+		has_active_building = building_factory_3
+		has_active_building = building_affluence_center
+		# ACOT
+		has_active_building = building_fe_factory
+		has_active_building = building_ae_factory
+		has_active_building = building_ae_affluence_center
+		# AOT
+		has_active_building = building_fe_affluence_center
+		has_active_building = building_phanon_affluence_center
+		has_active_building = building_phanon_civilian_factory
+		has_active_building = building_stellarite_affluence_center
+		# AVB
+		has_active_building = building_avb_factory_4
+		has_active_building = building_avb_factory_5
+		has_active_building = building_avb_factory_6
+		# EDA
+		has_active_building = eda_building_factory
+		# GPM
+		has_active_building = gpm_building_manufactory_hub
+		# Warship Girls R and MIST Species
+		has_active_building = building_sep_foundry
+		has_active_building = building_gray_nano_factory
+	}
+}
+has_active_al_foundry_building = {
+	OR = {
+		has_active_building = building_lily_construction_group
+		has_active_building = building_foundry_1
+		has_active_building = building_foundry_2
+		has_active_building = building_foundry_3
+		has_active_building = building_nano_forge
+		# ACOT
+		has_active_building = building_fe_alloy_forge
+		has_active_building = building_ae_alloy_forge
+		has_active_building = building_ae_nano_forge
+		# AOT
+		has_active_building = building_fe_nano_forge
+		has_active_building = building_phanon_nano_forge
+		has_active_building = building_phanon_alloy_forge
+		has_active_building = building_stellarite_nano_forge
+		has_active_building = building_stellarite_alloy_forge
+		# AVB
+		has_active_building = building_avb_foundry_4
+		has_active_building = building_avb_foundry_5
+		has_active_building = building_avb_foundry_6
+		# EDA
+		has_active_building = eda_building_alloy_foundry
+		# Protoss
+		has_active_building = protoss_building_bf
+		# Warship Girls R and MIST Species
+		has_active_building = building_sep_foundry2
+		has_active_building = building_wsg_foundry
+		has_active_building = building_gray_nano_foundry2
+		has_active_building = building_sh_foundryU
+		# Wula Fallen Empire
+		has_active_building = building_wula_foundry
+		# Warship Girls R and MIST Species
+		has_active_building = building_sep_foundry
+		has_active_building = building_wsg_foundry
+		has_active_building = building_gray_nano_foundry
+		has_active_building = building_sh_foundry
+	}
+}
 
 ############################### BlueArchive ###############################
 is_BA_fallen_empire = {

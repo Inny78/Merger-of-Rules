@@ -1,0 +1,109 @@
+default_site_visible_trigger = {
+	OR = {
+		intel_level = {
+			level >= low
+			system = from.solar_system
+		}
+		from.planet = { is_within_borders_of = root }
+	}
+}
+
+# Surveyor
+energy_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		is_planet_class = pc_a_star
+		is_planet_class = pc_b_star
+		is_planet_class = pc_f_star
+		is_planet_class = pc_g_star
+		is_planet_class = pc_k_star
+		is_planet_class = pc_m_star
+		is_planet_class = pc_m_giant_star
+		is_planet_class = pc_t_star
+		merg_is_gas_giant = yes
+		merg_is_molten = yes
+		is_planet_class = pc_ice_asteroid
+		# Real Space
+		is_planet_class = pc_l_star
+		is_planet_class = pc_t_star
+		is_planet_class = pc_y_star
+		is_planet_class = pc_d_star
+		is_planet_class = pc_o_star
+		is_planet_class = pc_protostar
+		is_planet_class = pc_tt_red_star
+		is_planet_class = pc_tt_orange_star
+		is_planet_class = pc_tt_white_star
+		is_planet_class = pc_ae_star
+		is_planet_class = pc_fu_star
+		is_planet_class = pc_g_giant_star
+		is_planet_class = pc_k_giant_star
+		is_planet_class = pc_m_giant_star
+		is_planet_class = pc_c_giant_star
+		is_planet_class = pc_s_giant_star
+		is_planet_class = pc_o_super_star
+		is_planet_class = pc_a_super_star
+		is_planet_class = pc_b_super_star
+		is_planet_class = pc_f_super_star
+		is_planet_class = pc_g_super_star
+		is_planet_class = pc_k_super_star
+		is_planet_class = pc_m_super_star
+		is_planet_class = pc_w_azure_star
+		is_planet_class = pc_w_red_star
+		is_planet_class = pc_w_green_star
+		is_planet_class = pc_w_purple_star
+		is_planet_class = pc_lbv_blue_star
+		is_planet_class = pc_lbv_green_star
+		is_planet_class = pc_lbv_red_star
+		is_planet_class = pc_o_hyper_star
+		is_planet_class = pc_m_hyper_star
+	}
+}
+alloy_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		is_planet_class = pc_asteroid
+		merg_is_molten = yes
+		merg_is_toxic = yes
+		merg_is_frozen = yes
+		merg_is_barren = yes
+		merg_is_barren_cold = yes
+		is_planet_class = pc_broken
+		is_planet_class = pc_shattered
+	}
+}
+mineral_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		is_asteroid = yes
+		merg_is_molten = yes
+		merg_is_toxic = yes
+		merg_is_frozen = yes
+		merg_is_barren = yes
+		merg_is_barren_cold = yes
+		is_planet_class = pc_broken
+		is_planet_class = pc_shattered
+		# Real Space
+		is_planet_class = pc_c_giant_star
+	}
+}
+exotic_gas_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		merg_is_gas_giant = yes
+		merg_is_toxic = yes
+	}
+}
+rare_crystal_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		merg_is_frozen = yes
+		is_planet_class = pc_ice_asteroid
+	}
+}
+volatile_motes_candidate = {
+	NOT = { has_deposit_for = shipclass_research_station }
+	OR = {
+		merg_is_molten = yes
+		is_planet_class = pc_asteroid
+	}
+}
