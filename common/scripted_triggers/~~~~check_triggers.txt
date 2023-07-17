@@ -74,6 +74,9 @@ merg_has_espionage_extended = { has_global_flag = has_mod_espionage_extended }
 # Ethical Gestalts
 merg_has_ethical_gestalts = { has_global_flag = using_mod_ethical_gestalts }
 
+# Ethics and Civics Alternative - FunEFork
+merg_has_ecaf = { has_ecaf_triggers = yes }
+
 # Ethics and Civics Bug Branch 2517213262
 merg_has_ethics_bug = { has_bug_branch = yes }
 
@@ -145,9 +148,9 @@ merg_has_origin_beings = { has_global_flag = darhmod_precursor_seres }
 # Star Wars: Kuat Ancient Empire
 merg_has_kuat = { has_global_flag = install_kuat_mod }
 
-# More Authorities/Ethics and Civics Alternative - FunEFork
-merg_has_more_authorities = { has_ecaf_triggers = yes }
-merg_has_ecaf = { has_ecaf_triggers = yes }
+# More Authorities
+merg_has_more_authorities = { has_more_authorities_triggers = yes }
+
 # More Corporate Authorities
 merg_has_mca = { has_global_flag = using_mod_more_corporate_authorities }
 
