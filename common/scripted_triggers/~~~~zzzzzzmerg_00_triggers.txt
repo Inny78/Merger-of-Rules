@@ -626,6 +626,7 @@ default_endgame_early_start_triggers = {
 }
 
 no_resource_for_component = {
+	days_passed > 0 # typically use this to reduce the heavy pre-game start cpu usage.
 	merg_is_default_empire = yes
 	OR = {
 		NOT = { can_buy_on_market = $RESOURCE$ }

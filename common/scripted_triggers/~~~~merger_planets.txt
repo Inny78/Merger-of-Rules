@@ -221,7 +221,6 @@ merg_is_hive_world = {
 		is_pd_hive_world = yes
 		is_pd_hive_arcology = yes
 		is_pd_megaflora_hive = yes
-		uses_district_set = pdnecrohive
 		# Planetary Ringworlds
 		is_planetary_ringworld_hive = yes
 		# ZOFE
