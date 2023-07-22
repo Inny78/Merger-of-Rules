@@ -419,6 +419,7 @@ should_abduct_pop = {
 	}
 	# V_TRAITS
 	is_v_mobile = yes
+	has_v_stealth_trait = no
 }
 
 #Root = planet

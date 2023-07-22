@@ -131,6 +131,26 @@ merg_is_gate_mega = {
 		is_megastructure_type = tc_elder_gate_off
 		is_megastructure_type = tc_elder_gate_on
 		is_megastructure_type = tc_ancient_gate
+		# THE ABYSS CONTRACT
+		is_megastructure_type = TACgate_opened
+		is_megastructure_type = TACgate_closed
+		is_megastructure_type = TACgate_system_01
+		is_megastructure_type = TACgate_system_02
+		is_megastructure_type = TAC_DebrisFleet_gate_open
+		is_megastructure_type = TAC_DebrisFleet_gate_open_crisis_type
+		is_megastructure_type = TAC_DebrisFleet_gate_open_player_type
+		is_megastructure_type = TAC_DebrisFleet_gate_close
+		is_megastructure_type = TACgate_opened_A
+		is_megastructure_type = TACgate_system_01_A
+		is_megastructure_type = TACgate_opened_B
+		is_megastructure_type = TACgate_system_01_B
+		is_megastructure_type = TACgate_opened_C
+		is_megastructure_type = TACgate_system_01_C
+		is_megastructure_type = TAC_gateway_control_01
+		is_megastructure_type = TAC_gateway_control_02
+		# Through the Veil
+		is_megastructure_type = ttvl_dimensional_rift
+		is_megastructure_type = ttvl_rift_site
 		# Twinks Atlanteans
 		is_megastructure_type = gateway_heaven
 		is_megastructure_type = gateway_titan
@@ -157,23 +177,6 @@ merg_is_gate_mega = {
 		is_megastructure_type = monolith_crisis_gate_1
 		is_megastructure_type = monolith_crisis_gate_2
 		is_megastructure_type = monolith_crisis_gate_3
-		# THE ABYSS CONTRACT
-		is_megastructure_type = TACgate_opened
-		is_megastructure_type = TACgate_closed
-		is_megastructure_type = TACgate_system_01
-		is_megastructure_type = TACgate_system_02
-		is_megastructure_type = TAC_DebrisFleet_gate_open
-		is_megastructure_type = TAC_DebrisFleet_gate_open_crisis_type
-		is_megastructure_type = TAC_DebrisFleet_gate_open_player_type
-		is_megastructure_type = TAC_DebrisFleet_gate_close
-		is_megastructure_type = TACgate_opened_A
-		is_megastructure_type = TACgate_system_01_A
-		is_megastructure_type = TACgate_opened_B
-		is_megastructure_type = TACgate_system_01_B
-		is_megastructure_type = TACgate_opened_C
-		is_megastructure_type = TACgate_system_01_C
-		is_megastructure_type = TAC_gateway_control_01
-		is_megastructure_type = TAC_gateway_control_02
 		# Voyage to Eternity
 		is_megastructure_type = KZ_VOY_terran_ancient_gateway
 		# Wandering Witch: Voyagers

@@ -130,6 +130,7 @@ has_v_no_crime = { always = yes }
 has_v_non_thinking_trait = { always = no }
 has_v_presapient_trait = { always = no }
 has_v_phototrophic_trait = { always = no }
+has_v_stealth_trait = { always = no }
 has_wg_traits = { always = no }
 has_wsg_genemodding_tech = { always = no }
 has_zofe_mc = { always = no }
