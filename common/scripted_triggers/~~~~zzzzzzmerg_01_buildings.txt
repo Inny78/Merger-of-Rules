@@ -1003,7 +1003,7 @@ has_fort = {
 
 has_advanced_fort = {
 	custom_tooltip = {
-		fail_text = acot_alpha_matter_events.1.a
+		fail_text = acot_requires_fort_building
 		OR = {
 			# ACOT/AOT/SOS
 			has_building = building_dm_stronghold
