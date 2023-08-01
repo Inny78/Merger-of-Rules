@@ -588,6 +588,34 @@ living_metal_candidate = {
 	}
 }
 
+############################### Expanded Mods Base ###############################
+is_gaia_world = { merg_is_gaia = yes }
+is_hive_world = { merg_is_hive_world = yes }
+is_machine_world = { merg_is_machine_world = yes }
+is_nuked_world = { merg_is_nuked_basic = yes }
+is_continental_world = { merg_is_continental = yes }
+is_tropical_world = { merg_is_tropical = yes }
+is_ocean_world = { merg_is_ocean = yes }
+is_desert_world = { merg_is_desert = yes }
+is_arid_world = { merg_is_arid = yes }
+is_savannah_world = { merg_is_savannah = yes }
+is_arctic_world = { merg_is_arctic = yes }
+is_tundra_world = { merg_is_tundra = yes }
+is_alpine_world = { merg_is_alpine = yes }
+is_toxic_world = { merg_is_toxic = yes }
+is_barren_cold_world = { merg_is_barren_cold = yes }
+is_barren_world = { merg_is_barren = yes }
+is_molten_world = { merg_is_molten = yes }
+is_barren = {
+	OR = {
+		merg_is_barren = yes
+		merg_is_barren_cold = yes
+	}
+}
+is_city = {
+	merg_is_arcology = yes
+}
+
 ############################### Expanded Stellaris Traditions ###############################
 est_is_evil_dip_empire = {
 	OR = {
