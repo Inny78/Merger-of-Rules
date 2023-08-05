@@ -44,13 +44,12 @@ planet_event = {
 						merg_is_habitat = yes
 						merg_is_gas_giant = yes
 						merg_is_nuked = yes
-						merg_is_forbidden_target = no
+						merg_is_forbidden_target = yes
 						# Gigastructural Engineering & More
 						giga_habitable_structure = yes
 						# Madoka Magica
 						uses_district_set = outpost
 						# Planetary Diversity
-						is_pd_arcology = yes
 						is_pd_unique = yes
 					    # Starborn
 					    uses_district_set = starborn_start
