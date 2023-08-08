@@ -3927,22 +3927,14 @@ is_criminal_syndicate_rule = {
 # This = planet
 can_crossbreed_species_on_planet = {
 	exists = owner
-	count_species = {
-		limit = { is_crossbreeding_possible = yes }
-		count >= 2
-	}
 	OR = {
-		owner = {
-			has_ascension_perk = ap_xeno_compatibility
-		}
+		owner = { has_ascension_perk = ap_xeno_compatibility }
 		# Red Light Demeanor
 		has_building = building_brothel_house
 		has_building = building_brothel_house_branch_office
 	}
 	# Better Performance & Utilities
-	NOT = {
-		has_global_flag = z_pf2_flg_glbl_no_hybird
-	}
+	NOT = { has_global_flag = z_pf2_flg_glbl_no_hybird }
 	# Warship Girls R And MIST Species
 	any_owned_species = {
 		NOR = {
@@ -3951,8 +3943,11 @@ can_crossbreed_species_on_planet = {
 		}
 	}
 	# Red Light Demeanor
-	NOT = {
-		owner = { has_country_flag = redlight_no_crossbreeding }
+	NOT = { owner = { has_country_flag = redlight_no_crossbreeding } }
+	# Vanilla - putting this last for performance
+	count_species = {
+		limit = { is_crossbreeding_possible = yes }
+		count >= 2
 	}
 }
 
