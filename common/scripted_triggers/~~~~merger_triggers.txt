@@ -712,3 +712,8 @@ merg_has_planetary_shield = {
 		has_active_building = building_tc_rune_shield_t3
 	}
 }
+
+# merg_is_modded_voidborn = {
+# 	OR = {
+# 	}
+# }

@@ -1,6 +1,7 @@
 # Irony this is a placeholder file please ignore it
 origin_anz_cyborgs_collective = { is_origin = yes potential = { always = no } }
 origin_chosen_of_the_shroud = { is_origin = yes potential = { always = no } }
+origin_clone_guard = { is_origin = yes potential = { always = no } }
 origin_clones = { is_origin = yes potential = { always = no } }
 origin_ev_both_choosen = { is_origin = yes potential = { always = no } }
 origin_garbage_princesses = { is_origin = yes potential = { always = no } }
@@ -14,8 +15,8 @@ origin_pd_shroud = { is_origin = yes potential = { always = no } }
 origin_pd_tree_of_life = { is_origin = yes potential = { always = no } }
 origin_sacred_tree = { is_origin = yes potential = { always = no } }
 origin_sm_cryogenesis = { is_origin = yes potential = { always = no } }
+origin_slave_race = { is_origin = yes potential = { always = no } }
+origin_starborn = { is_origin = yes potential = { always = no } }
+origin_symbiotic_race = { is_origin = yes potential = { always = no } }
 origin_techno_world = { is_origin = yes potential = { always = no } }
 origin_vb_psi_soul_eater = { is_origin = yes potential = { always = no } }
-origin_symbiotic_race = { is_origin = yes potential = { always = no } }
-origin_slave_race = { is_origin = yes potential = { always = no } }
-origin_clone_guard = { is_origin = yes potential = { always = no } }

@@ -100,11 +100,7 @@ planet_event = {
 		remove_all_buildings = yes
 		remove_all_districts = yes # Ariphaos Patch
 		reroll_deposits = yes
-		remove_modifier = "natural_beauty"
-		remove_modifier = "atmospheric_aphrodisiac"
-		remove_modifier = "atmospheric_hallucinogen"
-		remove_modifier = "lush_planet"
-		remove_modifier = "dangerous_wildlife"
+		tomb_world_modifier_cleanup = yes
 		# GPM
 		gpm_purge_all_planetary_modifiers = yes
 		gpm_random_modifier_crisis_purge = yes
@@ -334,7 +330,17 @@ event = {
 						}
 					}
 				}
-				planet_event = { id = action.91 }
+				# Fruitful Origin - the outpost is being created for the first time
+				if = {
+					limit = {
+						has_planet_flag = seed_pods_colonization
+					}
+					planet_event = { id = origin.7400 }
+				}
+				# else, fire the normal "Outpost Rebuilt!" event
+				else = {
+					planet_event = { id = action.91 }
+				}
 			}
 		}
 	}

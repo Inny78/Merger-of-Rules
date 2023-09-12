@@ -355,3 +355,22 @@ ndb_can_target_system = {
 		}
 	}
 }
+giga_are_habitats_available = {
+    optimize_memory
+    is_giga_one_planet_origin = no
+    OR = {
+        and = {
+            has_technology = tech_habitat_1
+            or = {
+                NOT = { has_global_flag = giga_habitats_disabled }
+                has_origin = origin_void_dwellers
+                has_origin = origin_toxic_knights
+            }
+        }
+        has_civic = civic_diadochi
+        has_civic = civic_great_khans_legacy
+        has_country_flag = democratic_khanate_flag
+		# Starborn
+		has_origin = origin_starborn
+    }
+}

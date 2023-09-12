@@ -13,7 +13,10 @@ is_valid_rival = {
 				prev = { merg_is_default_empire = no }
 				AND = {
 					relative_power = { who = prev value >= inferior }
-					relative_power = { who = prev value <= superior }
+					OR = {
+						relative_power = { who = prev value <= superior }
+						prev = { has_policy_flag = diplo_stance_animosity }
+					}
 				}
 			}
 		}
@@ -2048,6 +2051,7 @@ can_species_be_assembled = {
 					# Misc
 					is_archetype = NANITES_CROP
 					is_archetype = ASCENDED
+					is_archetype = KANMUSU
 					root = {
 						OR = {
 							# Vanilla
@@ -4799,6 +4803,13 @@ can_fill_ruler_job = {
 
 # this = leader
 can_dismiss_leader = {
+	custom_tooltip = {
+		fail_text = "requires_actor_not_feudal_society"
+		exists = owner
+		owner = {
+			NOT = { has_valid_civic = civic_feudal_realm }
+		}
+	}
 	if = {
 		limit = {
 			leader_class = admiral
@@ -4903,6 +4914,7 @@ can_trade_leader = {
 			# Rogue Maid
 			has_specialist_subject_leader_trait_maid = yes
 		}
+		is_heir = no
 	}
 	# The subject and overlord must both be regular empires, machine intelligences or hive-minds.
 	OR = {

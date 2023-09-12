@@ -217,6 +217,7 @@ is_geode_world = { always = no }
 is_giga_habitable_gas_giant = { always = no }
 is_giga_habitat = { always = no }
 is_giga_maginot_world = { always = no }
+is_giga_one_planet_origin = { always = no }
 is_giga_ringworld = { always = no }
 is_green = { always = no }
 is_harvester_country = { always = no }
@@ -335,6 +336,7 @@ is_v_social_parasite = { always = no }
 is_valid_GF_OGAS_subnet = { always = no }
 is_valid_organic_zealots = { always = no }
 is_valid_pop_for_PLANET_KILLER_CM = { always = no }
+is_valid_pop_for_PLANET_KILLER_COMPOSER = { always = no }
 is_valid_pop_for_PLANET_KILLER_SLUMBER = { always = no }
 is_wg_event_leader = { always = no }
 is_wg_event_limit_ships = { always = no }

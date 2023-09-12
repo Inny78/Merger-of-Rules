@@ -278,15 +278,11 @@ is_valid_target_fe_stop_atrocities = {
 }
 
 is_regular_empire = {
-	merg_is_standard_empire = yes
-	is_gestalt = no
-}
-
-is_regular_empire_or_primitive = {
 	OR = {
-		is_regular_empire = yes
-		is_regular_pre_ftl = yes
+		merg_is_standard_empire = yes
+		is_country_type = awakened_marauders
 	}
+	is_gestalt = no
 }
 
 is_default_or_fallen = {
@@ -1075,6 +1071,7 @@ has_special_star_flag_trigger = {
 		has_star_flag = neighbor_t1_first_colony
 		has_star_flag = neighbor_t2
 		has_star_flag = neighbor_t2_second_colony
+		has_star_flag = empire_cluster
 		# Enclaves
 		has_star_flag = enclave
 		has_star_flag = caravaneer_home

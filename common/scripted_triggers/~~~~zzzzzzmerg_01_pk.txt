@@ -1341,6 +1341,85 @@ can_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = {
 	#}
 }
 
+# Halo: Forerunner Ships & Portraits 
+can_destroy_planet_with_PLANET_KILLER_COMPOSER = {
+	custom_tooltip = {
+		fail_text = no_pops_to_compose
+		OR = {
+			num_pops > 0
+			is_under_colonization = yes
+			is_planet_class = pc_infested
+			is_planet_class = pc_ai
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		is_a_habitable_planet_megastructure = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		merg_is_shielded = no
+	}
+	custom_tooltip = {
+		fail_text = is_not_hostile_or_primitive
+		OR = {
+			planet_is_hostile = yes
+			AND = {
+				exists = owner
+				owner = {
+					is_country_type = primitive
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_country_type = primitive }
+		}
+		custom_tooltip = {
+			fail_text = primitives_not_in_borders
+			exists = space_owner
+			space_owner = { is_same_value = from.owner }
+		}
+		custom_tooltip = {
+			fail_text = primitives_not_full_interference
+			from.owner = {
+				has_policy_flag = interference_aggressive
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = no_assimilatable_pops
+		any_owned_pop = {
+			is_valid_pop_for_PLANET_KILLER_COMPOSER = yes
+		}
+	}
+}
+can_destroy_planet_with_PLANET_KILLER_FORERUNNER_ATTENUATION_WEAPON = {
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		OR = {
+			is_a_habitable_planet_megastructure = yes
+			is_planet_class = pc_ai 
+			merg_is_shielded = no
+			merg_is_forbidden_target = no
+		}
+	}
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_country_type = primitive }
+		}
+		custom_tooltip = {
+			fail_text = primitives_not_full_interference
+			from.owner = {
+				has_policy_flag = interference_aggressive
+			}
+		}
+	}
+}
 ############################### Hypertraversal Manipulation ###############################
 can_destroy_planet_with_hyperspace_augur_beam = {
 	is_star = yes
@@ -3151,6 +3230,7 @@ can_destroy_planet_with_PLANET_KILLER_Pilgrimage = {
 		solar_system = { NOT = { exists = owner } }
 	}
 }
+
 # ===========================================================================================================================
 
 # PK Triggers here
