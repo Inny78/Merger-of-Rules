@@ -31,6 +31,8 @@ colonizable_planet = {
 		has_apsr_modifiers = yes
 		# Endless Frontier
 		is_mzilli_shadow = yes
+		# Nanite Machine and Distant Stars Overhaul
+		is_planet_class = pc_nanite_forgeworld
 		# TimeMod
 		is_tm_gas_colony = yes
 		is_tm_psionic_world = yes
@@ -281,6 +283,11 @@ is_regular_empire = {
 	OR = {
 		merg_is_standard_empire = yes
 		is_country_type = awakened_marauders
+		# Nanite Machines and Distant Stars Overhaul
+		AND = {
+			merg_has_distar_ov = yes
+			is_country_type = gate_builders
+		}
 	}
 	is_gestalt = no
 }
@@ -540,6 +547,11 @@ is_fallen_empire = {
 		}
 		# History of the Lost Empire
 		is_country_type = LsE_fallen_empire
+		# Nanite Machines and Distant Stars Overhaul
+		AND = {
+			merg_has_distar_ov = yes
+			is_country_type = gate_builders
+		}
 		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_fallen_empire
 		is_country_type = kuat_awakened_fallen_empire
@@ -873,6 +885,31 @@ has_research_building = {
 		has_building = building_plentiful_traditions_cybernetics_facility
 		has_building = building_plentiful_traditions_experimental_weapons_facility
 		has_building = building_plentiful_traditions_biogenesis_lab
+	}
+}
+
+can_have_sensory_readings = {
+	OR = {
+		is_asteroid = yes
+		merg_is_frozen = yes
+		merg_is_barren = yes
+		merg_is_barren_cold = yes
+		merg_is_desert = yes
+		merg_is_tropical = yes
+		merg_is_arid = yes
+		merg_is_continental = yes
+		merg_is_ocean = yes
+		merg_is_tundra = yes
+		merg_is_arctic = yes
+		merg_is_alpine = yes
+		merg_is_savannah = yes
+		merg_is_gaia = yes
+		merg_is_relic_world = yes
+		merg_is_arcology = yes
+		# Planetary Diversity
+		is_pd_unique = yes
+		is_pd_rare = yes
+		is_pd_exotic = yes
 	}
 }
 

@@ -1811,6 +1811,15 @@ Effect PdxMeshWPOAlphaBlendShadow
 }
 
 
+Effect PdxMeshPortraitAnimateUV
+{
+	VertexShader = "VertexPdxMeshPortraitStandard"
+	PixelShader = "PixelPdxMeshPortrait"
+	BlendState = "BlendStateAlphaBlendWriteAlpha"
+	DepthStencilState = "DepthStencilNoZ"
+	Defines = { "FLOWMAP" }
+}
+
 Effect PdxMeshPortraitAnimateUVSkinned
 {
 	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
@@ -2877,6 +2886,13 @@ Effect PdxMeshSimpleSkinned
 }
 
 ## ------------- SHADOWS UNUSED ------------------
+
+Effect PdxMeshPortraitAnimateUVShadow
+{
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
+	PixelShader = "PixelPdxMeshNoShadow"
+	Defines = { "IS_SHADOW" }
+}
 
 Effect PdxMeshPortraitAnimateUVSkinnedShadow
 {

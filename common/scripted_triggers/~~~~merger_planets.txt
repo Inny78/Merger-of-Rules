@@ -181,6 +181,8 @@ merg_is_gaia_basic = {
 		is_planet_class = pc_gaia
 		# All These Worlds
 		atw_is_gaia = yes
+		# Nanite Machine and Distant Stars Overhaul
+		is_planet_class = pc_nanite_gaia
 		# Planetary Diversity
 		is_pd_gaia = yes
 	}
@@ -207,6 +209,8 @@ merg_is_gas_giant = {
 		is_aso_gg_ice_giant = yes
 		# Azur Lane
 		is_planet_class = pc_azur_gas_giant
+		# Nanite Machine and Distant Stars Overhaul
+		is_planet_class = pc_nanite_gas_giant
 		# Planetary Diversity
 		is_pd_gas_giant = yes
 	}
@@ -313,6 +317,8 @@ merg_is_ocean = {
 merg_is_relic_world = {
 	OR = {
 		is_planet_class = pc_relic
+		# Nanite Machine and Distant Stars Overhaul
+		is_planet_class = pc_dessanu_relic
 		# Planetary Diversity
 		is_pd_relic = yes
 	}
@@ -333,6 +339,8 @@ merg_is_shielded_world = {
 		is_planet_class = pc_habitat_shielded
 		is_planet_class = pc_ringworld_shielded
 		is_planet_class = pc_shielded
+		# Nanite Machine and Distant Stars Overhaul
+		is_planet_class = pc_nanite_habitat_shielded
 	}
 }
 
