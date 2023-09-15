@@ -238,13 +238,13 @@ merg_is_special_colony = {
 		uses_district_set = giga_planetary_computer
 		uses_district_set = virtual_ring
 		uses_district_set = virtual_ring_industry
-		is_planet_class = pc_flat_world
+		is_pc_flat_world = yes
 		uses_district_set = interstellar_ring
 		uses_district_set = giga_habitat
 		uses_district_set = giga_orbital
 		uses_district_set = penrose_ring
 		uses_district_set = giga_equatorial_shipyard
-		is_planet_class = pc_squareworld_habitable
+		is_pc_squareworld_habitable = yes
 		is_giga_habitable_gas_giant = yes
 		giga_is_alderson_disk = yes
 		giga_is_birch_world = yes
@@ -347,7 +347,7 @@ merg_is_dense_star = {
 		# ACOT
 		is_acot_void_hole = yes
 		# Astro's Stellaris Overhaul - Galaxy Generation
-		is_planet_class = pc_aso_gg_white_hole
+		is_aso_gg_white_hole = yes
 		# Darkspace
 		is_ds_zeitriss_gc = yes
 		# Gigastructural Engineering & More
@@ -439,7 +439,7 @@ merg_is_empty_space = {
 		# Some Events of Outside Cluster
 		is_planet_class = pc_star_void_dummy_01
 		# Steven Universe Homeworld Gems
-		is_planet_class = pc_no_star
+		# is_planet_class = pc_no_star
 		# ThaumStellaris
 		is_planet_class = pc_tc_not_texture
 	}
@@ -712,8 +712,3 @@ merg_has_planetary_shield = {
 		has_active_building = building_tc_rune_shield_t3
 	}
 }
-
-# merg_is_modded_voidborn = {
-# 	OR = {
-# 	}
-# }

@@ -124,6 +124,7 @@ has_upgraded_penal_capital = { always = no }
 has_v_asexual_reproduction = { always = no }
 has_v_budding_trait = { always = no }
 has_v_difficult_reproduction = { always = no }
+has_v_embryonic_diapause = { always = no }
 has_v_grafting_trait = { always = no }
 has_v_heterogamous_reproduction = { always = no }
 has_v_no_crime = { always = yes }
@@ -131,6 +132,8 @@ has_v_non_thinking_trait = { always = no }
 has_v_presapient_trait = { always = no }
 has_v_phototrophic_trait = { always = no }
 has_v_stealth_trait = { always = no }
+is_v_symbiont_a = { always = no }
+is_v_symbiont_b = { always = no }
 has_wg_traits = { always = no }
 has_wsg_genemodding_tech = { always = no }
 has_zofe_mc = { always = no }
@@ -244,12 +247,16 @@ is_necromage = { always = no }
 is_nirvana_empire = { always = no }
 is_organic_fourschildren = { always = no }
 is_organic_zealots = { always = no }
+is_pc_flat_world = { always = no }
+is_pc_giga_frameworld = { always = no }
 is_pc_mem_broken_city = { always = no }
 is_pc_mem_death = { always = no }
 is_pc_mem_destroyed_barren = { always = no }
 is_pc_mem_micro_black_hole = { always = no }
 is_pc_mem_synthetic_sun = { always = no }
 is_pc_mem_vazuran_habitat = { always = no }
+is_pc_pouchkinn_black_hole = { always = no }
+is_pc_squareworld_habitable = { always = no }
 is_pd_alpine = { always = no }
 is_pd_aquatics = { always = no }
 is_pd_arcology = { always = no }

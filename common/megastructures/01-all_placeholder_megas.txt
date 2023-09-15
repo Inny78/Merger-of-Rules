@@ -181,6 +181,10 @@ tc_celestial_gateway_1 = { entity = "" potential = { always = no } possible = { 
 tc_celestial_gateway_2 = { entity = "" potential = { always = no } possible = { always = no } }
 tc_elder_gate_off = { entity = "" potential = { always = no } possible = { always = no } }
 tc_elder_gate_on = { entity = "" potential = { always = no } possible = { always = no } }
+the_vat_1 = { entity = "" potential = { always = no } possible = { always = no } }
+the_vat_2 = { entity = "" potential = { always = no } possible = { always = no } }
+the_vat_3 = { entity = "" potential = { always = no } possible = { always = no } }
+the_vat_4 = { entity = "" potential = { always = no } possible = { always = no } }
 Transwarp_hub_1 = { entity = "" potential = { always = no } possible = { always = no } }
 Transwarp_hub_2 = { entity = "" potential = { always = no } possible = { always = no } }
 Transwarp_hub_3 = { entity = "" potential = { always = no } possible = { always = no } }

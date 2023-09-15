@@ -1880,8 +1880,8 @@ can_reduce_upkeep_dummy = {
 is_habitat_wg = {
 	optimize_memory
 	OR = {
-		is_planet_class = pc_flat_world
-		is_planet_class = pc_squareworld_habitable
+		is_pc_flat_world = yes
+		is_pc_squareworld_habitable = yes
 		merg_is_habitat = yes
 	}
 }

@@ -119,8 +119,9 @@ can_add_claim = {
 			root = {
 				OR = {
 					has_valid_civic = civic_machine_assimilator
-					# Expanded Traits, Civics, Pops, and More
+					# Expanded Mods Base
 					has_valid_civic = civic_infestation
+					has_government = gov_parasitic_overmind
 					# Ethical Gestalts
 					has_valid_civic = civic_hive_assimilator
 				}
@@ -159,6 +160,8 @@ can_add_claim = {
 					has_valid_civic = civic_machine_assimilator
 					# Ethical Gestalts
 					has_valid_civic = civic_hive_assimilator
+					# Expanded Mods Base
+					has_government = gov_parasitic_overmind
 				}
 			}
 			root = {
@@ -167,6 +170,8 @@ can_add_claim = {
 					has_valid_civic = civic_machine_assimilator
 					# Ethical Gestalts
 					has_valid_civic = civic_hive_assimilator
+					# Expanded Mods Base
+					has_government = gov_parasitic_overmind
 				}
 			}
 		}
@@ -407,7 +412,7 @@ should_abduct_pop = {
 	}
 	OR = {
 		ROOT = { has_valid_civic = civic_living_hosts }
-		# Expanded Traits, Civics, Pops, and More
+		# Expanded Mods Base
 		ROOT = { has_government = gov_parasitic_overmind }
 		# Vanilla
 		NAND = {
@@ -1577,8 +1582,27 @@ can_species_procreate = {
 		# Plentiful Traditions - Extra Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
 		# V_TRAITs
-		has_v_asexual_reproduction = yes
-		# Wandering Witch: Voyagers
+		if = {
+			limit = { has_v_difficult_reproduction = yes }
+			root = { habitability = { who = this value >= 0.8 } }
+		}
+		if = { 
+			limit = { has_v_heterogamous_reproduction = yes }
+			root = { habitability = { who = this value <= 0.8 } }
+		}
+		if = {
+			limit = { has_v_embryonic_diapause = yes }
+			root = { NOT = { has_v_diapause_modifier = yes } }
+		}
+		if = {
+			limit = { is_v_symbiont_a = yes }
+			root = { check_variable = { which = v_num_symbiont value <= 0 } }
+		}
+		if = {
+			limit = { is_v_symbiont_b = yes }
+			root = { check_variable = { which = v_num_symbiont value >= 0 } }
+		}
+			# Wandering Witch: Voyagers
 		has_trait = trait_dummy
 	}
 	OR = {
@@ -2113,7 +2137,7 @@ can_species_be_assembled = {
 			root = { check_modifier_value = { modifier = planet_pop_assembly_organic_add value > 0 } }
 		}
 		# Steven Universe Homeworld Gems
-		has_trait = trait_geoloid
+		# has_trait = trait_geoloid
 		# Voyage to Eternity
 		KZ_VOY_trgr_plnt_CLONE = yes
 	}
@@ -2417,6 +2441,8 @@ can_orbitable_repair_ships = {
 				is_megastructure_type = acot_amerigo_se
 				is_megastructure_type = acot_amerigo_oe
 				is_megastructure_type = acot_phanon_master_reactor_sphere
+				# Assault Lily
+				is_megastructure_type = college_ship_creater_3
 				# Gigastructural Engineering & More
 				is_megastructure_type = the_vat_1
 				is_megastructure_type = the_vat_2
@@ -3385,6 +3411,41 @@ should_force_decline_species = {
 				}
 			}
 		}
+		# V_TRAITS
+		AND = {
+			custom_tooltip = {
+				success_text = ALLELOPATHY_FORCE_DECLINE
+				NOR = {
+					has_v_allelopathy = yes
+					has_v_cyborg_bubble = yes
+					has_trait = trait_machine_unit
+					has_trait = trait_mechanical
+				}
+				from = {
+					any_owned_species = {
+						has_v_allelopathy = yes
+					}
+					check_variable = { which = v_num_allelopathic_pops value >= 0 }
+				}
+			}
+		}
+		AND = {
+			custom_tooltip = {
+				success_text = WEAK_IMMUNE_SYSTEM_FORCE_DECLINE
+				has_v_weak_immune_system = yes
+				has_v_cyborg_bubble = no
+				from = {
+					any_owned_species = {
+						NOR = {
+							has_v_weak_immune_system = yes
+							has_v_cyborg_bubble = yes
+							has_trait = trait_machine_unit
+							has_trait = trait_mechanical
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -3399,7 +3460,6 @@ can_build_branch_offices = {
 			has_valid_civic = civic_business_union
 			# Asssault Lily
 			has_authority = auth_AL_democratic
-			has_authority = auth_AL_arsenal
 			# Azur Lane Stellaris DLC
 			has_authority = auth_azur_lane_0
 			has_authority = auth_azur_lane_1
@@ -3467,6 +3527,8 @@ can_support_branch_offices = {
 					merg_has_omega_add = no
 					is_megacorp = yes
 				}
+				# Assault Lily
+				is_country_type = huge_country
 				# Azur Lane Stellaris DLC
 				has_authority = auth_azur_lane_1
 				# Arknights Near Future
@@ -3609,7 +3671,6 @@ can_build_branch_office_on_planet = {
 					}
 					# Assault Lily
 					has_authority = auth_AL_democratic
-					has_authority = auth_AL_arsenal
 					# Azur Lane Stellaris DLC
 					has_authority = auth_azur_lane_1
 					# BlueArchive species pack
@@ -3805,7 +3866,6 @@ can_build_branch_office_on_planet = {
 					is_criminal_syndicate = no
 					# Assault Lily
 					has_authority = auth_AL_democratic
-					has_authority = auth_AL_arsenal
 				}
 			}
 			owner = {
@@ -3827,7 +3887,6 @@ can_build_branch_office_on_planet = {
 					is_criminal_syndicate = no
 					# Assault Lily
 					has_authority = auth_AL_democratic
-					has_authority = auth_AL_arsenal
 				}
 			}
 			AND = {
@@ -4913,6 +4972,15 @@ can_trade_leader = {
 			has_specialist_subject_leader_trait = yes
 			# Rogue Maid
 			has_specialist_subject_leader_trait_maid = yes
+			# Girls Frontline
+			AND = {
+				species = { is_robotic = yes }
+				ROOT = { is_valid_GF_OGAS_subnet = yes }
+				FROM = {
+					is_overlord_to = ROOT
+					has_authority = GF_auth_commonwealth
+				}
+			}
 		}
 		is_heir = no
 	}
@@ -4941,15 +5009,6 @@ can_trade_leader = {
 		AND = {
 			ROOT = { is_hive_empire = yes }
 			FROM = { is_hive_empire = yes }
-		}
-		# Girls Frontline
-		AND = {
-			ROOT = { is_valid_GF_OGAS_subnet = yes }
-			FROM = {
-				is_overlord_to = ROOT
-				has_authority = GF_auth_commonwealth
-			}
-			this = { species = { is_robotic = yes } }
 		}
 		# Ethics and Civics Infinity
 		ROOT = { is_servitor_empire = yes }

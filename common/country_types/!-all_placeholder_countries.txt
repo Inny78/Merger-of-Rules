@@ -35,6 +35,7 @@ hfe_fallen = { ai = { enabled = no } }
 hfe_features_exodus = { ai = { enabled = no } }
 hfe_pirate = { ai = { enabled = no } }
 hfe_thoth = { ai = { enabled = no } }
+huge_country = { ai = { enabled = no } }
 katzenartig_imperium = { ai = { enabled = no } }
 kuat_awakened_fallen_empire = { ai = { enabled = no } }
 kuat_fallen_empire = { ai = { enabled = no } }
