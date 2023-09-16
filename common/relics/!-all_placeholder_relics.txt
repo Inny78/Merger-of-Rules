@@ -1,0 +1,2 @@
+# Irony this is a placeholder file please ignore it
+r_darhmod_infernal = { activation_duration = 3600 portrait = "GFX_relic_dragon_trophy" resources = { category = relics } possible = { always = no } }

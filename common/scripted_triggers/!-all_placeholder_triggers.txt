@@ -123,6 +123,7 @@ has_strict_democratic_auth = { always = no }
 has_upgraded_penal_capital = { always = no }
 has_v_asexual_reproduction = { always = no }
 has_v_budding_trait = { always = no }
+has_v_diapause_modifier = { always = no }
 has_v_difficult_reproduction = { always = no }
 has_v_embryonic_diapause = { always = no }
 has_v_grafting_trait = { always = no }

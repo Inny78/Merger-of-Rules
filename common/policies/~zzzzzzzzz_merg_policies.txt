@@ -120,6 +120,7 @@ orbital_bombardment = {
 			}
 		}
 	}
+	# Gigastructural Engineering & More
 	option = {
 		name = "orbital_bombardment_redtoxin"
 		in_breach_of = { { key = resolution_rulesofwar_independent_tribunals } }
@@ -160,6 +161,24 @@ orbital_bombardment = {
 			}
 		}
 	}
+	# Origin Beings
+	option = {
+		name = "orbital_bombardment_infernal"
+
+		policy_flags = {
+			orbital_bombardment_infernal
+		}
+
+		modifier = {}
+
+		potential = {
+			has_relic = r_darhmod_infernal
+		}
+		
+		AI_weight = {
+			factor = 1
+		}
+	}
 }
 
 merger_fake_policy = {
@@ -198,5 +217,4 @@ merger_fake_policy = {
 			GF_doll_right_low
 		}
 	}
-
 }

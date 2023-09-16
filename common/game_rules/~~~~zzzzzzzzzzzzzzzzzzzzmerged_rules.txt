@@ -1581,27 +1581,6 @@ can_species_procreate = {
 		has_trait = trait_mahoshoujo
 		# Plentiful Traditions - Extra Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
-		# V_TRAITs
-		if = {
-			limit = { has_v_difficult_reproduction = yes }
-			root = { habitability = { who = this value >= 0.8 } }
-		}
-		if = { 
-			limit = { has_v_heterogamous_reproduction = yes }
-			root = { habitability = { who = this value <= 0.8 } }
-		}
-		if = {
-			limit = { has_v_embryonic_diapause = yes }
-			root = { NOT = { has_v_diapause_modifier = yes } }
-		}
-		if = {
-			limit = { is_v_symbiont_a = yes }
-			root = { check_variable = { which = v_num_symbiont value <= 0 } }
-		}
-		if = {
-			limit = { is_v_symbiont_b = yes }
-			root = { check_variable = { which = v_num_symbiont value >= 0 } }
-		}
 			# Wandering Witch: Voyagers
 		has_trait = trait_dummy
 	}
@@ -1675,9 +1654,21 @@ can_species_procreate = {
 		limit = { has_v_difficult_reproduction = yes }
 		root = { habitability = { who = this value >= 0.8 } }
 	}
-	if = {
+	if = { 
 		limit = { has_v_heterogamous_reproduction = yes }
 		root = { habitability = { who = this value <= 0.8 } }
+	}
+	if = {
+		limit = { has_v_embryonic_diapause = yes }
+		root = { NOT = { has_v_diapause_modifier = yes } }
+	}
+	if = {
+		limit = { is_v_symbiont_a = yes }
+		root = { check_variable = { which = v_num_symbiont value <= 0 } }
+	}
+	if = {
+		limit = { is_v_symbiont_b = yes }
+		root = { check_variable = { which = v_num_symbiont value >= 0 } }
 	}
 	# Wandering Witch: Voyagers
 	if = {
