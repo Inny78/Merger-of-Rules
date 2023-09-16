@@ -41,7 +41,11 @@ orbital_bombardment = {
 	option = {
 		name = "orbital_bombardment_indiscriminate"
 
-		in_breach_of = { { key = resolution_rulesofwar_independent_tribunals } }
+		in_breach_of = {
+			{ key = resolution_rulesofwar_independent_tribunals }
+			{ key = resolution_rulesofwar_last_resort_doctrine }
+			{ key = resolution_rulesofwar_demobilization_initiative }
+		}
 
 		policy_flags = {
 			orbital_bombardment_indiscriminate
@@ -74,7 +78,11 @@ orbital_bombardment = {
 	option = {
 		name = "orbital_bombardment_armageddon"
 
-		in_breach_of = { { key = resolution_rulesofwar_independent_tribunals } }
+		in_breach_of = {
+			{ key = resolution_rulesofwar_independent_tribunals }
+			{ key = resolution_rulesofwar_last_resort_doctrine }
+			{ key = resolution_rulesofwar_demobilization_initiative }
+		}
 
 		potential = {
 			OR = {
@@ -123,7 +131,12 @@ orbital_bombardment = {
 	# Gigastructural Engineering & More
 	option = {
 		name = "orbital_bombardment_redtoxin"
-		in_breach_of = { { key = resolution_rulesofwar_independent_tribunals } }
+		in_breach_of = {
+			{ key = resolution_rulesofwar_independent_tribunals }
+			{ key = resolution_rulesofwar_last_resort_doctrine }
+			{ key = resolution_rulesofwar_demobilization_initiative }
+		}
+
 		potential = {
 			merg_has_gigastructures = yes
 			OR = {
@@ -156,7 +169,7 @@ orbital_bombardment = {
 				}
 			}
 			modifier = {
-				factor = 10
+				factor = 9
 				has_ascension_perk = ap_become_the_crisis
 			}
 		}
