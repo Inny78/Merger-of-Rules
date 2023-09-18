@@ -4216,7 +4216,24 @@ Effect PdxMeshTerraAnimateUVSkinnedShadow
 
 
 # // Additions
+# // Engineering Test Site Shield
+Effect PdxMeshAlphaAdditiveECB
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshAdditive"
+	BlendState = "BlendStateAdditiveBlend"
+	DepthStencilState = "DepthStencilNoZWrite"
+	Defines = { "ANIMATE_UV" "DISSOLVE" "USE_EMPIRE_COLOR"}
+}
 
+Effect PdxMeshAlphaAdditiveECBSkinned
+{
+	VertexShader = "VertexPdxMeshStandardSkinned"
+	PixelShader = "PixelPdxMeshAdditive"
+	BlendState = "BlendStateAdditiveBlend"
+	DepthStencilState = "DepthStencilNoZWrite"
+	Defines = { "ANIMATE_UV" "DISSOLVE" "USE_EMPIRE_COLOR" }
+}
 
 Effect OmniMeshShip
 {
@@ -4737,11 +4754,17 @@ Effect PdxMeshRainbowBlokkatPortraitSkinnedShadow
 	Defines = { "IS_SHADOW" }
 }
 
-Effect PdxMeshRainbowBlokkatPortraitAnimateUVSkinned
+Effect GigaBlokkatAnimateUVSkinned
 {
 	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
-	PixelShader = "PixelRainbowBlokkatAnim"
+	PixelShader = "GigaBlokkat"
 	BlendState = "BlendStateAlphaBlendWriteAlpha";
+}
+Effect GigaBlokkatAnimateUVSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
 }
 
 Effect PdxMeshMarchPortrait
@@ -4780,6 +4803,22 @@ Effect PdxMeshMCPortraitSkinned
 }
 
 Effect PdxMeshMCPortraitSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect PdxMeshMCPortrait128Skinned
+{
+	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
+	PixelShader = "PixelMCPortrait"
+	BlendState = "BlendStateAlphaBlendWriteAlpha";
+	RasterizerState = "RasterizerStateNoCulling"
+	Defines = { "SIZE_128" }
+}
+
+Effect PdxMeshMCPortrait128SkinnedShadow
 {
 	VertexShader = "VertexPdxMeshStandardShadow"
 	PixelShader = "PixelPdxMeshStandardShadow"
@@ -4843,18 +4882,3 @@ Effect PdxMeshCloudsAnimateUVShadow #// required to exist by the game, but unuse
 
 # // Bees
 
-Effect PdxMeshMCPortrait128Skinned
-{
-	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
-	PixelShader = "PixelMCPortrait"
-	BlendState = "BlendStateAlphaBlendWriteAlpha";
-	RasterizerState = "RasterizerStateNoCulling"
-	Defines = { "SIZE_128" }
-}
-
-Effect PdxMeshMCPortrait128SkinnedShadow
-{
-	VertexShader = "VertexPdxMeshStandardShadow"
-	PixelShader = "PixelPdxMeshStandardShadow"
-	Defines = { "IS_SHADOW" }
-}
