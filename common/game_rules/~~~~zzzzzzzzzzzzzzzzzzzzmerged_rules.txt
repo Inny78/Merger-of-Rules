@@ -454,6 +454,7 @@ species_can_live_on_planet = {
 					is_machine_empire = yes
 					OR = {
 						has_civic = civic_machine_assimilator
+						has_ascension_perk = ap_mechromancy
 						# Ethical Gestalts
 						has_ascension_perk = ap_gestaltization
 					}
