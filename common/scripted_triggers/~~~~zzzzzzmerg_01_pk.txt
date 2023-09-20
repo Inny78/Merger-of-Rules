@@ -2220,7 +2220,7 @@ can_destroy_planet_with_PLANET_KILLER_SIREN_UPLOARD = {
 	custom_tooltip = {
 		fail_text = is_not_hostile
 		OR = {
-			planet_is_hostile_or_crisis = yes
+			merg_planet_is_hostile_or_crisis = yes
 			AND = {
 				exists = owner
 				owner = { is_country_type = primitive }

@@ -279,6 +279,7 @@ is_pd_hive_world = { always = no }
 is_pd_machine = { always = no }
 is_pd_megaflora_hive = { always = no }
 is_pd_molten = { always = no }
+is_pd_molten_hab = { always = no }
 is_pd_necro_world = { always = no }
 is_pd_nuked = { always = no }
 is_pd_ocean = { always = no }

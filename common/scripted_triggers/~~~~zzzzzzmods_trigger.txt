@@ -681,7 +681,7 @@ ESC_TRIGGER_is_naked_mantle_planet = {
 		# Gigastructural Engineering & More
 		uses_district_set = giga_equatorial_shipyard
 		# Planetary Diversity
-		is_planet_class = pc_pd_molten_hab
+		is_pd_molten_hab = yes
 		is_pd_crucible = yes
 		# Real Space - Planetary Stations
 		is_planet_class = pc_molten_station
@@ -1851,6 +1851,19 @@ KZ_VOY_has_communications_normal_country = {
 	}
 	has_communications = prev
 	NOT = { is_country = prev }
+}
+KZ_VOY_is_normal_habitable_planet = {
+	OR = {
+		merg_is_alpine = yes
+		merg_is_arctic = yes
+		merg_is_arid = yes
+		merg_is_continental = yes
+		merg_is_desert = yes
+		merg_is_ocean = yes
+		merg_is_savannah = yes
+		merg_is_tropical = yes
+		merg_is_tundra = yes
+	}
 }
 
 ############################### Wandering Witch: Voyagers ###############################
