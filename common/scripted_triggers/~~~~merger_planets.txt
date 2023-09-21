@@ -187,7 +187,7 @@ merg_is_gaia_basic = {
 		# All These Worlds
 		atw_is_gaia = yes
 		# Nanite Machine and Distant Stars Overhaul
-		is_planet_class = pc_nanite_gaia
+		is_nanite_gaia = yes
 		# Planetary Diversity
 		is_pd_gaia = yes
 		pd_is_planet_class_gaia = yes

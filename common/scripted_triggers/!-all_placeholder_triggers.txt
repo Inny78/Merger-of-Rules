@@ -244,6 +244,8 @@ is_mage = { always = no }
 is_mindless_undead = { always = no }
 is_multihive_drone = { always = no }
 is_mzilli_shadow = { always = no }
+is_nanite_gaia = { always = no }
+is_nanite_forgeworld = { always = no }
 is_necromage = { always = no }
 is_nirvana_empire = { always = no }
 is_organic_fourschildren = { always = no }
