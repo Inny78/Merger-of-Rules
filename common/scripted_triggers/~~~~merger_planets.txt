@@ -42,10 +42,11 @@ merg_is_basic_habitable = {
 merg_is_alpine = {
 	OR = {
 		is_planet_class = pc_alpine
-		# Planetary Diversity
-		is_pd_alpine = yes
 		# All These Worlds
 		atw_is_alpine = yes
+		# Planetary Diversity
+		is_pd_alpine = yes
+		pd_is_alpine = yes
 	}
 }
 
@@ -91,20 +92,22 @@ merg_is_arcology = {
 merg_is_arctic = {
 	OR = {
 		is_planet_class = pc_arctic
-		# Planetary Diversity
-		is_pd_arctic = yes
 		# All These Worlds
 		atw_is_arctic = yes
+		# Planetary Diversity
+		is_pd_arctic = yes
+		pd_is_arctic = yes
 	}
 }
 
 merg_is_arid = {
 	OR = {
 		is_planet_class = pc_arid
-		# Planetary Diversity
-		is_pd_arid = yes
 		# All These Worlds
 		atw_is_arid = yes
+		# Planetary Diversity
+		is_pd_arid = yes
+		pd_is_arid = yes
 	}
 }
 
@@ -134,20 +137,22 @@ merg_is_barren_cold = {
 merg_is_continental = {
 	OR = {
 		is_planet_class = pc_continental
-		# Planetary Diversity
-		is_pd_continental = yes
 		# All These Worlds
 		atw_is_continental = yes
+		# Planetary Diversity
+		is_pd_continental = yes
+		pd_is_continental = yes
 	}
 }
 
 merg_is_desert = {
 	OR = {
 		is_planet_class = pc_desert
-		# Planetary Diversity
-		is_pd_desert = yes
 		# All These Worlds
 		atw_is_desert = yes
+		# Planetary Diversity
+		is_pd_desert = yes
+		pd_is_desert = yes
 	}
 }
 
@@ -185,6 +190,7 @@ merg_is_gaia_basic = {
 		is_planet_class = pc_nanite_gaia
 		# Planetary Diversity
 		is_pd_gaia = yes
+		pd_is_planet_class_gaia = yes
 	}
 }
 
@@ -286,6 +292,7 @@ merg_is_nuked_basic = {
 		# Planetary Diversity
 		is_pd_nuked = yes
 		is_pd_radiotrophic_world = yes
+		pd_is_planet_class_nuked = yes
 	}
 }
 
@@ -311,6 +318,8 @@ merg_is_ocean = {
 		# Planetary Diversity
 		is_pd_ocean = yes
 		is_pd_aquatics = yes
+		pd_is_ocean = yes
+		is_pd_planet_for_aqua_trait = yes
 	}
 }
 
@@ -327,10 +336,11 @@ merg_is_relic_world = {
 merg_is_savannah = {
 	OR = {
 		is_planet_class = pc_savannah
-		# Planetary Diversity
-		is_pd_savannah = yes
 		# All These Worlds
 		atw_is_savannah = yes
+		# Planetary Diversity
+		is_pd_savannah = yes
+		pd_is_savannah = yes
 	}
 }
 
@@ -372,22 +382,24 @@ merg_is_toxic = {
 merg_is_tropical = {
 	OR = {
 		is_planet_class = pc_tropical
-		# Planetary Diversity
-		is_pd_tropical = yes
 		# All These Worlds
 		atw_is_tropical = yes
 		# More Events Mod
 		is_pc_mem_death = yes
+		# Planetary Diversity
+		is_pd_tropical = yes
+		pd_is_tropical = yes
 	}
 }
 
 merg_is_tundra = {
 	OR = {
 		is_planet_class = pc_tundra
-		# Planetary Diversity
-		is_pd_tundra = yes
 		# All These Worlds
 		atw_is_tundra = yes
+		# Planetary Diversity
+		is_pd_tundra = yes
+		pd_is_tundra = yes
 	}
 }
 
