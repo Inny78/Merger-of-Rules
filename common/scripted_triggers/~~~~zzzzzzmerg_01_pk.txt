@@ -711,6 +711,80 @@ can_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = {
 	}
 }
 
+############################### APSR: Anomalies, Planetary and Space Resources ###############################
+can_destroy_planet_with_PLANET_KILLER_APSR_DARK_ANGEL = {
+	custom_tooltip = {
+		text = apsr_dark_angel_only_for_standart_hostile_planets
+		merg_is_forbidden_target = no
+		AND = {
+			is_a_planet = yes
+			OR = {
+				AND = {
+					exists = space_owner
+					space_owner = { merg_is_at_war = yes }
+				}
+				AND = {
+					exists = owner
+					owner = { merg_is_at_war = yes }
+				}
+				AND = {
+					exists = space_owner
+					exists = owner
+					owner = { is_primitive = yes }
+					space_owner = { merg_is_at_war = yes }
+				}
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = apsr_dark_angel_planet_lives_matter
+		NOR = {
+			merg_is_arcology = yes
+			has_planet_flag = apsr_planet
+		}
+	}
+	custom_tooltip = {
+		fail_text = apsr_dark_angel_dark_planet
+		NOT = { is_planet_class = pc_apsr_dark }
+	}
+}
+can_destroy_planet_with_PLANET_KILLER_APSR_INATOR = {
+	custom_tooltip = {
+		text = apsr_inator_only_for_unhabitat_planet
+		merg_is_forbidden_target = no
+		NOT = { exists = owner }
+		OR = {
+			NOT = { exists = space_owner }
+			AND = {
+				exists = space_owner
+				space_owner = { 
+					OR = {
+						is_same_value = from.owner 
+						AND = {
+							is_subject = yes
+							overlord = { is_same_value = from.owner  }
+						}
+					}
+				}
+			}
+		}
+		uninhabitable_regular_planet = yes
+	}
+	custom_tooltip = {
+		fail_text = apsr_inator_planet_lives_matter
+		NOR = {
+			has_apsr_modifiers = yes
+			has_modifier = terraforming_candidate
+			has_modifier = frozen_terraforming_candidate
+			has_modifier = toxic_terraforming_candidate
+			has_modifier = apsr_terraforming_candidate
+			has_modifier = apsr_restoration_candidate
+			has_modifier = apsr_unshielded_candidate
+			has_modifier = apsr_uninfected_candidate
+		}
+	}
+}	
+
 ############################### Arknights Near Future ###############################
 can_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = {
 	custom_tooltip = {

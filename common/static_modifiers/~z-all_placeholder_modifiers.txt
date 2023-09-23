@@ -1,6 +1,10 @@
 # Irony this is a placeholder file please ignore it
 apocalypse = {}
 ag_debug_modifier_buff_common = {}
+apsr_terraforming_candidate = {}
+apsr_restoration_candidate = {}
+apsr_unshielded_candidate = {}
+apsr_uninfected_candidate = {}
 bdoe_cemetery_world = {}
 bdoe_storage_world = {}
 bdoe_waste_world = {}

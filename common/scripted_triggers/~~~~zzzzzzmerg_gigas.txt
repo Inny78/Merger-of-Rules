@@ -65,7 +65,7 @@ is_maginotable_restricted = {
 		uses_district_set = giga_planetary_computer
 		has_planet_flag = has_planet_pc_mega
 		# APSR
-		has_apsr_modifiers = yes
+		has_planet_flag = apsr_planet
 		# ACOT
 		is_acot_awesome_planet_class = yes
 		# Ancient Empire
@@ -279,6 +279,7 @@ is_ndb_immune_star_planet = {
 	OR = {
 		merg_is_black_or_white_hole = yes
 		has_planet_flag = ndb_immune_planet
+		has_planet_flag = apsr_planet # APSR
 		solar_system = {
 			has_star_flag = ndb_immune_system
 		}
@@ -362,9 +363,9 @@ giga_are_habitats_available = {
     optimize_memory
     is_giga_one_planet_origin = no
     OR = {
-        and = {
+        AND = {
             has_technology = tech_habitat_1
-            or = {
+            OR = {
                 NOT = { has_global_flag = giga_habitats_disabled }
                 has_origin = origin_void_dwellers
                 has_origin = origin_toxic_knights
