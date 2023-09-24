@@ -712,3 +712,96 @@ merg_has_planetary_shield = {
 		has_active_building = building_tc_rune_shield_t3
 	}
 }
+
+merg_has_happiness = {
+	NOR = {
+		has_trait = trait_machine_unit
+		has_trait = trait_hive_mind
+		can_think = no
+		# Diagraphers Trait Mod
+		is_multihive_drone = yes
+		# ThaumStellaris
+		AND = {
+			merg_has_thaumstellaris = yes
+			species = {
+				OR = {
+					is_archetype = TC_GOLEM
+					is_archetype = TC_GOLEM_HIVE
+					is_archetype = TC_GOLEM_MACHINE
+				}
+			}
+		}
+		# Trait Diversity
+		td_has_no_happiness = yes
+		# Wandering Witch: Voyagers
+		has_trait = trait_servitude
+		AND = {
+			has_trait = trait_dummy
+			OR = {
+				NOT = { exists = from }
+				from = { 
+					NOR = { 
+						has_technology = tech_synthetic_workers 
+						has_technology = tech_dummy_leaders
+						has_origin = origin_garbage_princesses
+						has_country_flag = synthetic_empire
+					} 
+				}
+				from = { has_policy_flag = ai_outlawed }
+			}
+		}
+		# Warship Girls R And MIST Species
+		has_trait = sh_trait_shenhai
+		has_trait = sh_trait_shenhai1
+		has_trait = sh_trait_shenhai2
+		has_trait = sh_trait_silent
+		has_trait = sh_trait_silent1
+		# Vanilla
+		AND = {
+			has_trait = trait_mechanical
+			# Animated Synthetics Portraits Expanded: Reborn
+			OR = {
+				merg_has_animated_synth = no
+				AND = {
+					merg_has_animated_synth = yes
+					from = { is_machine_empire = yes }
+					is_extsynth_synthetic = yes
+					NOT = { has_trait = trait_psionic }
+				}
+				AND = {
+					merg_has_animated_synth = yes
+					NAND = {
+						from = { is_machine_empire = yes }
+						is_extsynth_synthetic = yes
+					}
+				}
+			}
+			# Vanilla
+			OR = {
+				NOT = { exists = from }
+				from = {
+					OR = {
+						is_machine_empire = yes
+						NOR = {
+							has_technology = tech_synthetic_workers
+							# Wandering Witch: Voyagers
+							has_technology = tech_dummy_leaders
+						}
+						has_policy_flag = ai_outlawed
+					}
+				}
+			}
+		}
+		AND = {
+			has_trait = trait_cybernetic
+			exists = from
+			from = {
+				is_machine_empire = yes
+				OR = {
+					has_civic = civic_machine_assimilator # Assimilator empire
+					has_ascension_perk = ap_gestaltization # Ethical Gestalts
+				}
+			}
+		}
+	}
+}

@@ -3568,7 +3568,7 @@ can_support_branch_offices = {
 			}
 		}
 	}
-	# More Authorities
+	# E&C FunEFork
 	# As some mods allow megacorps to build branch offices in other megacorps, we need to check that we're not building one on our own empire.
 	custom_tooltip = {
 		fail_text = ACTION_RECIPIENT_NOT_YOUR_CORP

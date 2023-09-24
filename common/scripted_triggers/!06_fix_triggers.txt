@@ -1,3 +1,0 @@
-# Fixing an issue with UAP
-# Irony this is a placeholder file please ignore it
-is_zofe_country = { always = no }

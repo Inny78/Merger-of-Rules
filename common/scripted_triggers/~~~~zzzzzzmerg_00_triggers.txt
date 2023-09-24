@@ -309,7 +309,7 @@ is_megacorp = {
 		# Expanded Traits, Civics, Pops, and More
 		is_exp_private_auth = yes
 		is_exp_cooperative = yes
-		# More Authorities/E&C FunEFork
+		# E&C FunEFork
 		has_corporate_imperial_auth = yes
 		# More Corporate Authorities
 		has_mca_auth_cooperative = yes
@@ -328,7 +328,7 @@ is_autocracy = {
 		is_bugged_dynastic_enterprise = yes
 		# Expanded Traits, Civics, Pops, and More
 		is_exp_private_auth = yes
-		# More Authorities
+		# E&C FunEFork
 		is_imperial = yes
 		is_dictatorial = yes
 		# More Corporate Authorities
@@ -372,7 +372,7 @@ is_democracy = {
 		has_authority = auth_direct_democratic
 		# Expanded Traits, Civics, Pops, and More
 		is_exp_cooperative = yes
-		# More Authorities/E&C FunEFork
+		# E&C FunEFork
 		has_strict_democratic_auth = yes
 		AND = {
 			has_dict_democratic_auth = yes

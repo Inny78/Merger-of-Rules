@@ -1,0 +1,204 @@
+# Overwrite of terra.10 that accounts for Planetary Diversity and various mods, while fixing some bits of code.
+planet_event = {
+	id = terra.10
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = space_owner
+		NOR = {
+			has_planet_flag = terraformed_once
+			has_planet_flag = no_terraform_event
+			is_planet_class = pc_relic
+			is_planet_class = pc_city
+		}
+		can_have_habitable_deposits = yes
+	}
+	# All the NAND modifiers in here set up like a trigger, if anything in the NAND is not true then the event will have 0 chance of firing
+	immediate = {
+		set_planet_flag = terraformed_once
+		random_list = {
+			3 = {
+				modifier = {
+					factor = 0
+					free_district_slots = 0
+				}
+				modifier = {
+					factor = 0
+					is_colony = no
+				}
+				space_owner = { country_event = { id = terra.15 } } # Superfluous Terraforming Equipment
+			}
+			3 = {
+				modifier = {
+					factor = 0
+					merg_is_nuked_basic = yes
+				}
+				space_owner = { country_event = { id = terra.20 } } # Engineered Beauty
+			}
+			3 = {
+				modifier = {
+					factor = 0
+					free_district_slots >= 4
+				}
+				space_owner = { country_event = { id = terra.25 } } # Terraforming Complications
+			}
+			2 = {
+				modifier = {
+					factor = 0
+					OR = {
+						is_ideal_planet_class = {
+							who = space_owner
+							status = no
+						}
+						space_owner = { has_country_flag = terraformed_homeworld_2 }
+					}
+				}
+				space_owner = { country_event = { id = terra.35 } } # Homeworld 2
+			}
+			2 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_planet_flag = nuked_terraform
+						has_planet_flag = barren_terraform
+						has_planet_flag = barren_cold_terraform
+						merg_is_gaia = yes
+						merg_is_nuked_basic = yes
+						is_colony = yes
+					}
+				}
+				space_owner = { country_event = { id = terra.40 } } # Intentionally Tidally Locked
+			}
+			3 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_planet_flag = barren_terraform
+						has_planet_flag = barren_cold_terraform
+						merg_is_gaia = yes
+					}
+				}
+				space_owner = { country_event = { id = terra.45 } } # Add relevant deposit
+			}
+			1 = {
+				modifier = { #Cannot use decimal places in the base for random_list
+					factor = 0.5
+					always = yes
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						space_owner = { is_gestalt = no }
+						has_planet_flag = barren_terraform
+						has_planet_flag = barren_cold_terraform
+						has_planet_flag = nuked_terraform
+						merg_is_nuked_basic = yes
+					}
+				}
+				space_owner = { country_event = { id = terra.50 } } # Free Hiveworld
+			}
+			2 = {
+				modifier = {
+					factor = 0
+					OR = {
+						space_owner = { is_gestalt = no }
+						has_planet_flag = barren_terraform
+						has_planet_flag = barren_cold_terraform
+						merg_is_nuked_basic = yes
+					}
+				}
+				space_owner = { country_event = { id = terra.55 } } # Perfect Organization
+			}
+			2 = {
+				modifier = {
+					factor = 0
+					NAND = {
+						OR = {
+							has_planet_flag = barren_terraform
+							has_planet_flag = barren_cold_terraform
+						}
+						has_overlord_dlc = yes
+					}
+				}
+				space_owner = { country_event = { id = terra.60 } } # Pre-FTLs
+			}
+			3 = {
+				modifier = {
+					factor = 0
+					NOR = {
+						has_planet_flag = barren_terraform
+						has_planet_flag = barren_cold_terraform
+					}
+				}
+				space_owner = { country_event = { id = terra.65 } } # Refund and Gas
+			}
+			2 = {
+				modifier = {
+					factor = 0
+					NAND = {
+						merg_is_gaia = yes
+						is_colony = yes
+						space_owner = {
+							country_uses_consumer_goods = yes
+							NOT = { has_origin = origin_life_seeded }
+						}
+					}
+				}
+				space_owner = { country_event = { id = terra.70 } } # Gain Gaia Preference
+			}
+			2 = {
+				modifier = {
+					factor = 0
+					NAND = {
+						merg_is_gaia = yes
+						space_owner = {
+							is_gestalt = no
+							NOT  = { has_country_flag = made_paradise }
+						}
+						is_homeworld = no
+					}
+				}
+				space_owner = { country_event = { id = terra.75 } } # Make Paradise
+			}
+			2 = {
+				modifier = {
+					factor = 0
+					NAND = {
+						has_planet_flag = nuked_terraform
+						has_plantoids = yes
+						space_owner = {
+							NOT  = { has_country_flag = harvested_radiotrophic_dna }
+							species = { NOR = { has_trait = trait_plantoid_radiotrophic is_pd_radiotrophic_mutant = yes } }
+						}
+						is_homeworld = no
+					}
+				}
+				space_owner = { country_event = { id = terra.80 } } # Radiotrophic presapients
+			}
+			2 = {
+				modifier = {
+					factor = 0
+					NAND = {
+						has_planet_flag = nuked_terraform
+						has_ancrel = yes
+						space_owner = {
+							NOT = { has_country_flag = tombworld_weapon_cache_spawned }
+						}
+						is_homeworld = no
+					}
+				}
+				modifier = {
+					factor = 50
+					OR = {
+						has_planet_flag = planet_earth
+						has_planet_flag = nuked_earth
+					}
+				}
+				space_owner = { country_event = { id = terra.90 } } # Weapon Cache
+			}
+			20 = {} # Do nothing
+		}
+	}
+}
