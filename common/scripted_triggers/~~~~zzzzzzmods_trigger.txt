@@ -1094,8 +1094,71 @@ mem_is_spherical_world = {
 		giga_habitable_structure = yes
 	}
 }
-mem_has_happiness = { merg_has_happiness = yes }
-
+mem_has_happiness = {
+	NOR = {
+		species = {
+			has_trait = trait_machine_unit
+			has_trait = trait_hive_mind
+			has_trait = trait_nerve_stapled
+		}		
+		AND = {
+			species = {
+				has_trait = trait_mechanical
+			}			
+			OR = {
+				NOT = { exists = owner }
+				owner = { has_authority = auth_machine_intelligence }
+				owner = { NOT = { has_technology = tech_synthetic_workers } }
+				owner = { has_policy_flag = ai_outlawed }
+			}
+			# Animated Synthetics Portraits Expanded: Reborn
+			OR = {
+				merg_has_animated_synth = no
+				AND = {
+					merg_has_animated_synth = yes
+					from = { is_machine_empire = yes }
+					is_extsynth_synthetic = yes
+					NOT = { has_trait = trait_psionic }
+				}
+				AND = {
+					merg_has_animated_synth = yes
+					NAND = {
+						from = { is_machine_empire = yes }
+						is_extsynth_synthetic = yes
+					}
+				}
+			}
+		}
+		AND = {
+			species = {
+				has_trait = trait_cybernetic
+			}
+			exists = owner
+			owner = {
+				has_authority = auth_machine_intelligence
+				OR = {
+					has_civic = civic_machine_assimilator # Assimilator empire
+					has_ascension_perk = ap_gestaltization # Ethical Gestalts
+				}
+			}
+		}
+		# ThaumStellaris
+		AND = {
+			merg_has_thaumstellaris = yes
+			species = {
+				OR = {
+					is_archetype = TC_GOLEM
+					is_archetype = TC_GOLEM_HIVE
+					is_archetype = TC_GOLEM_MACHINE
+				}
+			}
+		}
+		# Trait Diversity
+		species = {
+			td_has_no_happiness = yes
+		}
+	}
+}
 ############################### More Precursors ###############################
 FHMP_is_valid_precursor_planet = {
 	OR = {
