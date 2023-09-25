@@ -248,6 +248,7 @@ eda_building_alloy_foundry = { potential = { always = no } allow = { always = no
 eda_building_factory = { potential = { always = no } allow = { always = no } }
 eda_building_imperial_capital = { potential = { always = no } allow = { always = no } }
 eda_building_research_lab = { potential = { always = no } allow = { always = no } }
+esc_building_cerebral_node = { potential = { always = no } allow = { always = no } }
 gpm_building_manufactory_hub = { potential = { always = no } allow = { always = no } }
 gpm_building_stronghold = { potential = { always = no } allow = { always = no } }
 gpm_precursor_research_center = { potential = { always = no } allow = { always = no } }

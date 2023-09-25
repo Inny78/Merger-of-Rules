@@ -538,8 +538,6 @@ can_generate_leader_from_pop = {
 		# Expanded Events / Expanded Traits, Civics, Pops, and More
 		is_infested_basic = yes
 		is_exp_tree_caretaker = yes
-		# Expanded Gestalts
-		root = { has_origin = origin_hive_overmind }
 		# Lithoid Supremacy
 		is_pearl_born_drone = yes
 		# Plentiful Perks
@@ -680,8 +678,6 @@ can_generate_military_leader_from_pop = {
 			}
 		}
 	}
-	# Expanded Gestalts
-	NOT = { root = { has_origin = origin_hive_overmind } }
 }
 
 # can_generate_army_from_planet
@@ -1225,13 +1221,7 @@ can_terraform_planet = {
 	# Real Space New Frontiers
 	custom_tooltip = {
 		fail_text = NO_TERRAFORM_HOLLOW_WORLD
-		OR = {
-			merg_has_real_new_frontiers = no
-			AND = {
-				merg_has_real_new_frontiers = yes				# Let's not affect Expanded Gestalt's own pc_hollow
-				NOT = { is_planet_class = pc_hollow }
-			}
-		}
+		NOT = { is_planet_class = pc_hollow }
 	}
 	custom_tooltip = {
 		fail_text = NO_TERRAFORM_OVERMIND
@@ -1549,8 +1539,6 @@ can_species_procreate = {
 			root = { owner = { has_origin = origin_hive_queen } }
 			has_trait = trait_hive_mind
 		}
-		# Expanded Gestalts
-		has_trait = trait_hive_mind_overlord
 		# Diagraphers Trait Mod
 		is_dimorphic_male = yes
 		# Expanded Events
@@ -1861,14 +1849,10 @@ can_species_be_assembled = {
 			# Hives can only clone drones
 			if = {
 				limit = { root.owner = { is_hive_empire = yes } }
-				AND = {
-					OR = {
-						has_trait = trait_hive_mind
-						# Ethics and Civics - Bug Branch
-						is_bugged_happy_drone = yes
-					}
-					# Expanded Gestalts
-					NOT = { has_trait = trait_hive_mind_overlord }
+				OR = {
+					has_trait = trait_hive_mind
+					# Ethics and Civics - Bug Branch
+					is_bugged_happy_drone = yes
 				}
 			}
 			# Expanded Traits, Civics, Pops, and More
@@ -2132,11 +2116,6 @@ can_species_be_assembled = {
 		# has_trait = trait_geoloid
 		# Voyage to Eternity
 		KZ_VOY_trgr_plnt_CLONE = yes
-	}
-	# Expanded Gestalts
-	NAND = {
-		root = { owner = { has_valid_civic = civic_machine_replicators } }
-		has_trait = trait_machine_central
 	}
 	# Voyage to Eternity
 	if = {
@@ -2467,8 +2446,6 @@ can_spawn_debris = {
 			is_country_type = default_ev
 			# Twinks Atlantean
 			has_valid_civic = civic_tw_atlantis
-			# Expanded Gestalts
-			has_valid_civic = civic_hive_strong_connection
 			# Twinks Eternal Empire
 			has_government = gov_eternal_continuum
 		}

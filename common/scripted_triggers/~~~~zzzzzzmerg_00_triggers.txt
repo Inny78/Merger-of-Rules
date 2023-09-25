@@ -113,7 +113,7 @@ habitable_planet_not_urban = {
 		# Gigastructures
 		giga_is_lifeless = yes
 		giga_is_katzenland = yes
-		# Real Space - New Frontiers / Expanded Gestalts: Forgotten Queens
+		# Real Space - New Frontiers
 		is_planet_class = pc_hollow
 	}
 }
@@ -194,11 +194,7 @@ allows_purge = {
 	OR = {
 		has_valid_civic = civic_fanatic_purifiers
 		has_policy_flag = purge_allowed
-		AND = {
-			is_gestalt = yes
-			# Expanded Gestalts: Forgotten Queens
-			NOT = {  has_valid_civic = civic_mutualistic_behavior }
-		}
+		is_gestalt = yes
 		# Electroids Species Pack
 		has_valid_civic = civic_elec_stellar_devourers
 		# Civic: Organic Zealots
@@ -576,11 +572,7 @@ is_crossbreeding_possible = {
 		is_organic_fourschildren = yes
 		# Expanded Traits, Civics, Pops, and More
 		is_exp_clone = yes
-		AND = {
-			is_half_species = any
-			# Expanded Gestalts: Forgotten Queens
-			NOT = { has_species_flag = "tmp_main_species" }
-		}
+		is_half_species = any
 		AND = {
 			merg_has_expanded_pops = yes
 			count_galaxy_species = {

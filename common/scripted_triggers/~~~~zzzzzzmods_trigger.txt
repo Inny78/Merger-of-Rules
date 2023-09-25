@@ -654,18 +654,6 @@ est_uses_slaves = {
 	NOT = { has_policy_flag = slavery_not_allowed }
 }
 
-############################### Expanded Traits, Civics, Pops, and More ###############################
-is_open_gestalt = {
-	optimize_memory
-	OR = {
-		has_ai_personality = open_hive_mind
-		has_ai_personality = open_machine_intelligence
-		# Expanded Gestalts
-		has_valid_civic = civic_mutualistic_behavior
-		has_valid_civic = civic_machine_trading
-	}
-}
-
 ############################### Extra Ship Components NEXT ###############################
 ESC_TRIGGER_is_city_planet = {
     OR = {
@@ -692,8 +680,6 @@ ESC_TRIGGER_is_naked_mantle_planet = {
 		has_modifier = infernal_world
 		has_modifier = lava_world
 		has_modifier = volcanic_world
-		# The Belt (3.7, still should work for now)
-		is_planet_class = pc_bdoe_molten_habitable
 	}
 }
 

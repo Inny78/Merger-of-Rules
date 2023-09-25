@@ -1,11 +1,5 @@
 # Triggers when the game starts
-on_game_start = {
-	events = {
-		merg.1
-	}
-}
-
-on_single_player_save_game_load = {
+on_game_start_country = {
 	events = {
 		merg.1
 	}
