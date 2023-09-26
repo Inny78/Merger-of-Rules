@@ -4806,7 +4806,7 @@ can_fill_ruler_job = {
 	# Diagraphers Trait Mod
 	hidden_trigger = {
 		NAND = {
-			has_trait = trait_dimorphic_female
+			is_dimorphic_female = yes
 			owner = { is_patriarchy = yes }
 		}
 	}
