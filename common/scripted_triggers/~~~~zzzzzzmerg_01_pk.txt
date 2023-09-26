@@ -813,7 +813,7 @@ can_destroy_planet_with_PLANET_KILLER_APSR_DARK_ANGEL = {
 	}
 	custom_tooltip = {
 		fail_text = apsr_dark_angel_dark_planet
-		NOT = { is_planet_class = pc_apsr_dark }
+		is_apsr_dark = no
 	}
 }
 can_destroy_planet_with_PLANET_KILLER_APSR_INATOR = {

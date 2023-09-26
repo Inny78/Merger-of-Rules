@@ -28,7 +28,7 @@ colonizable_planet = {
 		# Planetary Diversity
 		is_pd_planetary_megaproject = yes
 		# APSR: Anomalies, Planetary and Space Resources
-		has_planet_flag = apsr_planet
+		is_apsr_habitable_planet = yes
 		# Endless Frontier
 		is_mzilli_shadow = yes
 		# Nanite Machine and Distant Stars Overhaul

@@ -122,8 +122,9 @@ KZ_VOY_terran_ancient_gateway = { entity = "" potential = { always = no } possib
 mem_sadrell_gateway_active = { entity = "" potential = { always = no } possible = { always = no } }
 mem_sadrell_gateway_inactive = { entity = "" potential = { always = no } possible = { always = no } }
 mem_vazuran_gateway = { entity = "" potential = { always = no } possible = { always = no } }
-mem_vazuran_gateway_nexus  = { entity = "" potential = { always = no } possible = { always = no } }
 mem_vazuran_gateway_nexus = { entity = "" potential = { always = no } possible = { always = no } }
+mom_junction_master = { entity = "" potential = { always = no } possible = { always = no } }
+mom_junction_termini = { entity = "" potential = { always = no } possible = { always = no } }
 monolith_crisis_gate_1 = { entity = "" potential = { always = no } possible = { always = no } }
 monolith_crisis_gate_2 = { entity = "" potential = { always = no } possible = { always = no } }
 monolith_crisis_gate_3 = { entity = "" potential = { always = no } possible = { always = no } }

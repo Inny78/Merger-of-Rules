@@ -4719,25 +4719,6 @@ can_fill_ruler_job = {
 		}
 		can_fill_holosphere_ruler_job = yes
 	}
-	else_if = {
-		limit = { merg_has_expanded_pops = yes }
-		hidden_trigger = {
-			NAND = {
-				has_trait = trait_dimorphic_female
-				has_reproductive_politics = yes
-				owner = { has_valid_civic = civic_patriarchy }
-			}
-			OR = {
-				traits_restrict_specialist_jobs = no
-				has_pop_flag = allow_priest_traits
-				has_pop_flag = allow_researcher_traits
-				has_pop_flag = allow_administrator_traits
-				has_pop_flag = allow_merchant_traits
-				has_pop_flag = allow_executive_traits
-				owner = { has_valid_civic = civic_aristocratic_elite }
-			}
-		}
-	}
 	else = {
 		custom_tooltip = RULER_JOB_TRIGGER
 		hidden_trigger = {
@@ -4771,9 +4752,7 @@ can_fill_ruler_job = {
 							has_country_flag = synthetic_empire
 						} 
 					}
-					owner = {
-						has_policy_flag = ai_full_rights
-					}
+					owner = { has_policy_flag = ai_full_rights }
 				}	
 			}
 			OR = {
@@ -4823,6 +4802,13 @@ can_fill_ruler_job = {
 	# TimeMod
 	hidden_trigger = {
 		NOT = { has_citizenship_type = { type = citizenship_adeptus_mechanicus } }
+	}
+	# Diagraphers Trait Mod
+	hidden_trigger = {
+		NAND = {
+			has_trait = trait_dimorphic_female
+			owner = { is_patriarchy = yes }
+		}
 	}
 }
 
