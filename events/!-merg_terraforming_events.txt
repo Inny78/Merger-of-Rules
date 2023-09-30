@@ -10,8 +10,8 @@ planet_event = {
 		NOR = {
 			has_planet_flag = terraformed_once
 			has_planet_flag = no_terraform_event
-			is_planet_class = pc_relic
-			is_planet_class = pc_city
+			merg_is_relic_world = yes
+			merg_is_arcology = yes
 		}
 		can_have_habitable_deposits = yes
 	}

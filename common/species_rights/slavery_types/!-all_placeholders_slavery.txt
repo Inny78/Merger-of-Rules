@@ -1,0 +1,2 @@
+# Irony this is a placeholder file please ignore it
+slavery_s_test_subjects = { pop_modifier = {} potential = { always = no } allow = { always = no } ai_will_do = { factor = 0 } }
