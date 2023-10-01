@@ -338,6 +338,7 @@ is_subsapient_form = { always = no }
 is_symbiote = { always = no }
 is_symbiote_of_prevprev = { always = no }
 is_td_multi_hiveminded = { always = no }
+is_terraforming_candidate = { always = no }
 is_time_black_hole_planet_class = { always = no }
 is_time_black_hole_star_class = { always = no }
 is_tm_black_hole = { always = no }

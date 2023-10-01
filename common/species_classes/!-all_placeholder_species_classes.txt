@@ -1,14 +1,14 @@
 # Irony this is a placeholder file please ignore it
 PUFFER = {
 	archetype = BIOLOGICAL
-	possible = { always = no }
+	playable = { always = no }
 	portraits = { "human" }
 	graphical_culture = humanoid_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 WV_MAGIC_PUPPET = {
 	archetype = BIOLOGICAL
-	possible = { always = no }
+	playable = { always = no }
 	portraits = { "human" }
 	graphical_culture = humanoid_01
 	move_pop_sound_effect = "moving_pop_confirmation"

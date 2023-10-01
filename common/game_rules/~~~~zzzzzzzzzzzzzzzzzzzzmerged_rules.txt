@@ -2040,6 +2040,12 @@ can_species_be_assembled = {
 					is_archetype = LILY
 					# EDA
 					is_archetype = Areta
+					# Eternal Empire
+					is_archetype = ASCENDED
+					# Kancolle
+					is_archetype = KANMUSU
+					# KDC Story Pack
+					is_archetype = NANITES_CROP
 					# Star Wars: UnknownWorld Shipgirls Story
 					is_archetype = STARSHIPGIRLS
 					# The DAL Species Mod
@@ -2048,10 +2054,6 @@ can_species_be_assembled = {
 					is_archetype = WARSHIPGIRL
 					is_archetype = SHENHAI
 					is_archetype = UNITED_FLEET
-					# Misc
-					is_archetype = NANITES_CROP
-					is_archetype = ASCENDED
-					is_archetype = KANMUSU
 					root = {
 						OR = {
 							# Vanilla

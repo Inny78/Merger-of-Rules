@@ -694,8 +694,6 @@ merg_has_planetary_shield = {
 		# Gigas
 		has_active_building = building_giga_planetary_shield_generator_1
 		has_active_building = building_giga_planetary_shield_generator_2
-		# Star Wars: Kuat Ancient Empire
-		has_active_building = building_kuat_shield
 		# More Events Mod
 		has_active_building = building_mem_planetary_shield_generator
 		has_active_building = building_mem_planetary_shield_generator_heavy
@@ -706,6 +704,8 @@ merg_has_planetary_shield = {
 		has_active_building = PR_BLDN_Army_sp_shield_T3
 		# Reworked Advanced Ascension
 		has_active_building = AAR_bldn_VEIL_shield_generator_T5
+		# Star Wars: Kuat Ancient Empire
+		has_active_building = building_kuat_shield
 		# ThaumStellaris
 		has_active_building = building_tc_rune_shield_t1
 		has_active_building = building_tc_rune_shield_t2
@@ -803,5 +803,22 @@ merg_has_happiness = {
 				}
 			}
 		}
+	}
+}
+
+merg_is_slaver = {
+	OR = {
+		has_valid_civic = civic_slaver_guilds
+		has_valid_civic = civic_indentured_assets
+		# DOA
+		has_valid_civic = civic_slave_masters
+		# ECAF
+		has_valid_civic = civic_slaving_despots
+		has_valid_civic = civic_slaving_despots_corpo
+		# ECBUG
+		has_valid_civic = civic_bugged_slaving_despots
+		has_valid_civic = civic_bugged_slaving_despots_corpo
+		# ZOFE
+		has_valid_civic = civic_master_race
 	}
 }

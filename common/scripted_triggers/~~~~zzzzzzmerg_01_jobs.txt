@@ -39,10 +39,7 @@ entertainer_job_check_trigger = {
 				NOT = { host_has_dlc = "Utopia" }
 				is_same_species = owner_main_species
 				owner = {
-					OR = {
-						has_valid_civic = civic_indentured_assets
-						has_valid_civic = civic_slaver_guilds
-					}
+					merg_is_slaver = yes
 				}
 			}
 		}
@@ -87,10 +84,7 @@ can_fill_specialist_job = {
 				NOT = { host_has_dlc = "Utopia" }
 				is_same_species = owner_main_species
 				owner = {
-					OR = {
-						has_valid_civic = civic_indentured_assets
-						has_valid_civic = civic_slaver_guilds
-					}
+					merg_is_slaver = yes
 				}
 			}
 		}

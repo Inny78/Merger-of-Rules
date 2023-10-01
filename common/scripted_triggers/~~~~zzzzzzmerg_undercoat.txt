@@ -1,22 +1,37 @@
 # Scripted Triggers Undercoat overwrites
 
-is_empire = {
-	merg_is_standard_empire = yes
-}
 is_playable = {
 	merg_is_default_empire = yes
 }
-is_planet_city = {
-	merg_is_arcology = yes
-}
-is_city_world = {
-	merg_is_arcology = yes
+is_empire = {
+	merg_is_standard_empire = yes
 }
 planet_gives_aquatics_bonus = {
 	OR = {
 		merg_is_aquatic = yes
 		has_modifier = flooded_habitat
 	}
+}
+is_endgame_crisis = {
+	OR = {
+		is_country_type = extradimensional
+		is_country_type = extradimensional_2
+		is_country_type = extradimensional_3
+		is_country_type = swarm
+		is_country_type = ai_empire
+		# ACOT
+		is_country_type = sbtg_stellarborne_empire 
+		# Gigastructural Engineering & More
+	}
+}
+has_slaver_civic = {
+	merg_is_slaver = yes
+}
+is_planet_city = {
+	merg_is_arcology = yes
+}
+is_city_world = {
+	merg_is_arcology = yes
 }
 is_habitat = {
 	merg_is_habitat = yes

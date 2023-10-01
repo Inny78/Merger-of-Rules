@@ -647,7 +647,7 @@ est_uses_slaves = {
 	OR = {
 		has_policy_flag = slavery_allowed
 		has_policy_flag = ai_servitude
-		has_civic =	civic_slaver_guilds
+		merg_is_slaver = yes
 		is_slaver = yes
 		has_country_flag = est_built_robot
 	}
@@ -1159,6 +1159,41 @@ mem_has_happiness = {
 		}
 	}
 }
+mem_has_shield_building = {
+    OR = {
+        has_building = "building_mem_planetary_shield_generator"
+        has_building = "building_mem_planetary_shield_generator_heavy"
+        has_building = "building_mem_planetary_shield_generator_orila"
+        #add more entries for compatibility
+		# has_building = building_planetary_shield_generator
+		has_building = building_planetary_shield_generator_fe
+		# ACOT
+		has_building = building_dark_energy_psg
+		has_building = building_ae_dark_energy_psg
+		# AOT
+		has_building = building_phanon_psg
+		has_building = building_stellarite_psg
+		# AVB
+		has_building = building_avb_planetary_shield_generator_2
+		has_building = building_avb_planetary_shield_generator_3
+		has_building = building_avb_dark_matter_planetary_shield_generator
+		# Gigas
+		has_building = building_giga_planetary_shield_generator_1
+		has_building = building_giga_planetary_shield_generator_2
+		# Nirvana Empire Project
+		has_building = building_sky_shield
+		# Production Revolution
+		has_building = PR_BLDN_Army_sp_shield_T3
+		# Reworked Advanced Ascension
+		has_building = AAR_bldn_VEIL_shield_generator_T5
+		# Star Wars: Kuat Ancient Empire
+		has_building = building_kuat_shield
+		# ThaumStellaris
+		has_building = building_tc_rune_shield_t1
+		has_building = building_tc_rune_shield_t2
+		has_building = building_tc_rune_shield_t3
+    }
+}
 ############################### More Precursors ###############################
 FHMP_is_valid_precursor_planet = {
 	OR = {
@@ -1182,6 +1217,11 @@ FHMP_is_valid_werediran_planet = {
 		merg_is_tropical = yes
 		merg_is_tundra = yes
 	}
+}
+
+############################### Omega's Stellaris Traditions ###############################
+has_planetary_shield_building = {
+	merg_has_planetary_shield = yes
 }
 
 ############################### Organic Zealots ###############################
@@ -1226,10 +1266,10 @@ darhmod_seres_digsite_spawn_rules = {
 		has_anomaly = no
 		is_capital = no
 		NOR = {
+			exists = archaeological_site
 			merg_is_shielded = yes
 			merg_is_gas_giant = yes
 			merg_is_empty_space = yes
-			exists = archaeological_site
 		}
 	}
 	NOT = {
@@ -1950,6 +1990,47 @@ has_active_wg_factory_building = {
 has_gate_megastructure = {
 	optimize_memory
 	merg_is_gate_mega = yes
+}
+
+############################### Wiirlak Additional Civics & Origins ###############################
+wiirlak_ac_project_entropy_system_check = {
+	is_surveyed = {
+		who = ROOT
+		status = yes
+	}
+	
+	NOR = {
+		merg_is_hole_star_class = yes
+		merg_is_neutron_star_class = yes
+		merg_is_pulsar_star_class = yes
+		is_star_class = sc_toxoid_star
+
+		has_star_flag = wiirlak_ac_flag_project_entropy_possible_target
+
+		any_fleet_in_system = {
+			owner = {
+				OR = {
+					is_country_type = caravaneer_home
+					is_country_type = enclave
+					is_country_type = enclave_mercenary
+				}
+			}
+		}
+
+		any_system_planet = {
+			OR = {
+				is_colony = yes
+				habitable_planet = yes
+				has_anomaly = yes
+				is_terraforming = yes
+				exists = archaeological_site
+			#	has_modifier = terraforming_candidate
+			#	has_modifier = frozen_terraforming_candidate
+			#	has_modifier = toxic_terraforming_candidate
+				has_modifier = wiirlak_ac_modifier_project_cradle
+			}
+		}
+	}
 }
 
 ############################### Wild Space ###############################
