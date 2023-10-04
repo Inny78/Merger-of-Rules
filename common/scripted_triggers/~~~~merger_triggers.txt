@@ -370,7 +370,7 @@ merg_is_dense_star = {
 		# TimeMod
 		is_time_black_hole_planet_class = yes
 		# Voyage to Eternity
-		is_planet_class = pc_KZ_VOY_micro_black_hole
+		is_KZ_VOY_micro_black_hole = yes
 	}
 }
 
@@ -399,7 +399,7 @@ merg_is_black_or_white_hole = {
 		# TimeMod
 		is_time_black_hole_planet_class = yes
 		# Voyage to Eternity
-		is_planet_class = pc_KZ_VOY_micro_black_hole
+		is_KZ_VOY_micro_black_hole = yes
 	}
 }
 

@@ -161,8 +161,7 @@ merg_is_frozen = {
 		# Arknights Near Future
 		is_planet_class = pc_ark_frozen
 		# Endless Frontier
-		is_planet_class = pc_mzilli_rogue
-		is_planet_class = pc_mzilli_rogue_moon
+		is_mzilli_rogue = yes
 	}
 }
 

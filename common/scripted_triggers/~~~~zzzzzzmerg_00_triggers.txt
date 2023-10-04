@@ -774,6 +774,8 @@ has_food_upkeep = {
 			is_archetype = half_amalgamated
 			# Kancolle
 			is_archetype = KANMUSU
+			# KDC Story Pack
+			is_archetype = NANITES_CROP
 			# Nyto Species Events Pack
 			is_archetype = NYTO
 			# SW:UnknownWorld Shipgirls Story
@@ -781,11 +783,9 @@ has_food_upkeep = {
 			# The DAL Species Mod
 			is_archetype = DATEALIVE
 			# Warship Girls R And MIST Species
-			is_archetype = WARSHIPGIRL
 			is_archetype = SHENHAI
-			# Others
 			is_archetype = UNITED_FLEET
-			is_archetype = NANITES_CROP
+			is_archetype = WARSHIPGIRL
 		}
 	}
 	NOT = { has_trait = trait_voidling }
@@ -1317,5 +1317,37 @@ has_any_megastructure_in_empire = {
 				is_megastructure_type = xvcv_mdlc_planet_cracker
 			}
 		}
+	}
+}
+
+has_precursor_intro = {
+	OR = {
+		has_country_flag = vultaum_intro
+		has_country_flag = yuht_intro
+		has_country_flag = first_league_intro
+		has_country_flag = irassian_intro
+		has_country_flag = cybrex_intro
+		has_country_flag = zroni_intro
+		has_country_flag = baol_intro
+		# Still in the early stages of 'On the Shoulders of Giants'
+		AND = {
+			has_origin = origin_shoulders_of_giants
+			NOT = { has_country_flag = origin_shoulders_closure }
+		}
+		# Forgotten History
+		has_country_flag = plexi_intro
+		has_country_flag = lartia_intro
+		# More Precursors
+		has_country_flag = ixardian_intro
+		has_country_flag = ezentian_intro
+		has_country_flag = werediran_intro
+		# Unavoidable Changes
+		has_country_flag = volgan_intro
+		# Precursor Story Pack
+		has_country_flag = pspmod_precursor_set_sless
+		has_country_flag = pspmod_precursor_set_coprean
+		has_country_flag = pspmod_precursor_set_astanine
+		# Gigastructural Engineering & More
+		has_origin = origin_incohesive
 	}
 }

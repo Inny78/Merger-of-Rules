@@ -91,6 +91,8 @@ can_add_claim = {
 					# ACOT
 					is_country_type = sbtg_stellarborne_empire_active
 					is_country_type = sbtg_light_seeker
+					# The Sleeper
+					is_country_type = awakened_sleeper
 					# Twinks Eternal Empire
 					is_country_type = eternal_empire
 					# ZOFE
@@ -2248,6 +2250,8 @@ can_orbital_bombard = {
 				# Shroud Rising
 				is_country_type = shroud_horrors
 				is_country_type = shroud_cult
+				# The Sleeper
+				is_sleeper = yes
 			}
 		}
 		root.CONTROLLER = {
@@ -2307,6 +2311,8 @@ can_orbital_bombard = {
 				is_country_type = TAC_machine_crisis_country
 				# The Empty Vagrant
 				is_country_type = default_ev
+				# The Sleeper
+				is_sleeper = yes
 				# Warship Girls R And MIST Species
 				is_country_type = wg_crisis_country
 			}
@@ -2654,6 +2660,54 @@ ai_should_restrict_system = {
 		}
 		# Scripted Triggers Undercoat
 		has_star_flag = stu_ai_restrict_system@root
+		# The Sleeper
+		AND = {
+			exists = owner
+			has_star_flag = sleeper_system
+			root = {
+				merg_is_default_empire = yes
+				is_homicidal = no
+				OR = {
+					AND = {
+						OR = {
+							has_valid_civic = civic_inwards_perfection
+							has_global_flag = sleeper_warning_happened
+						}
+						NOT = { has_ethic = ethic_fanatic_xenophobe }
+					}
+					AND = {
+						is_xenophile = yes
+						is_militarist = no
+					}
+					is_pacifist = yes
+					has_valid_civic = civic_machine_servitor
+					AND = {
+						is_active_resolution = resolution_sleeper_sanctions
+						is_militarist = no
+						OR = {
+							is_xenophobe = no
+							has_valid_civic = civic_inwards_perfection
+						}
+					}
+					any_neighbor_country = { is_country_type = the_sleeper_fallen check_variable = { which = sleeper_aggro value > 500 } }
+				}
+			}
+		}
+		AND = {
+			exists = owner
+			root = { merg_is_fallen_empire = yes }
+			OR = {
+				owner = { is_marauder = yes }
+				any_fleet_in_system = { # Stop FEs from just killing the Sleeper
+					exists = owner
+					owner = { is_country_type = berserker_awoken_hive }
+				}
+				AND = { # Stop FEs from just killing the Sleeper
+					owner = { is_country_type = the_sleeper_fallen }
+					has_star_flag = sleeper_system
+				}
+			}
+		}
 	}
 }
 

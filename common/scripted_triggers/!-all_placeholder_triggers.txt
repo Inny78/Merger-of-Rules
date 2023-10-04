@@ -242,11 +242,14 @@ is_KANSEN_species = { always = no }
 is_khan_country_type = { always = no }
 is_kilostructure = { always = no }
 is_KZ_VOY_organic_species = { always = no }
+is_KZ_VOY_micro_black_hole = { always = no }
 is_lily_goverments = { always = no }
 is_living_architecture = { always = no }
 is_mage = { always = no }
+is_marauder = { always = no }
 is_mindless_undead = { always = no }
 is_multihive_drone = { always = no }
+is_mzilli_rogue = { always = no }
 is_mzilli_shadow = { always = no }
 is_nanite_gaia = { always = no }
 is_nanite_forgeworld = { always = no }
@@ -329,6 +332,7 @@ is_servitor_empire = { always = no }
 is_shadowgate_world = { always = no }
 is_shroud_entrepot = { always = no }
 is_SIREN_species = { always = no }
+is_sleeper = { always = no }
 is_sots_soulsphere = { always = no }
 is_special_affection_leader = { always = no }
 is_special_kancolle_leader = { always = no }
