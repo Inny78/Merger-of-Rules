@@ -4596,7 +4596,7 @@ can_fill_drone_job = {
 			is_enslaved = no
 			AND = {
 				is_enslaved = yes
-				has_expanded_pops = yes
+				merg_has_expanded_pops = yes
 			}
 		}
 		is_being_assimilated = no
