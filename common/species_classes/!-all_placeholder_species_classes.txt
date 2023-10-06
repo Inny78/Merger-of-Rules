@@ -2,6 +2,7 @@
 PUFFER = {
 	archetype = BIOLOGICAL
 	playable = { always = no }
+	possible = { always = no }
 	portraits = { "human" }
 	graphical_culture = humanoid_01
 	move_pop_sound_effect = "moving_pop_confirmation"
@@ -9,6 +10,7 @@ PUFFER = {
 WV_MAGIC_PUPPET = {
 	archetype = BIOLOGICAL
 	playable = { always = no }
+	possible = { always = no }
 	portraits = { "human" }
 	graphical_culture = humanoid_01
 	move_pop_sound_effect = "moving_pop_confirmation"
