@@ -228,7 +228,9 @@ is_crisis_faction = {
 		# Solar Storm
 		is_country_type = abyssal_host_invaders_type
 		is_country_type = SSAB_ab_country_v2
-		is_country_type = SSAB_ab_remnant 
+		is_country_type = SSAB_ab_remnant
+		# The Sleeper
+		is_country_type = berserker_awoken_hive
 	}
 }
 
