@@ -36,74 +36,16 @@ toxic_attendant_growth = {
 		mult = 4
 		mode = add
 	}
-	# Planetary Diversity
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_pdhab_industrial
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_corp_industrial
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_mf_alloy
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_bioforge_stomach
-		}
-		mode = add
-	}
-	# Starborn
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_starborn_hab_industrial
-		}
-		mode = add
-	}
-	# Real Space Planetary Stations
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_manufacturing_complex
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_foundry_plant
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_assembly_factory
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_living_metal_processing
-		}
-		mode = add
-	}
-
+	# Extra Districts
+	add = value:toxic_attendant_growth_ED_districts
+	# Gigastructural Engineering & More
 	add = value:giga_toxic_attendant_growth
+	# Planetary Diversity
+	add = value:toxic_attendant_growth_PD_districts
+	# Real Space - Planetary Stations
+	add = value:toxic_attendant_growth_RS_PS_districts
+	# Starborn
+	add = value:toxic_attendant_growth_Starborn_districts
 }
 
 desired_constructors_min = {
@@ -154,4 +96,222 @@ desired_constructors_max = {
 
 	# add extra from gigas
 	add = value:giga_bonus_desired_constructors_max
+}
+
+leader_class_government_match_bonus_mult = {
+	# Though primarily used for Elections, this holds non-Election Government types too and can be used for e.g. generating rulers.
+	base = 1
+	modifier = {
+		# Check Leader Class vs PROMOTING Governments.
+		mult = 1.2
+		OR = {
+			AND = { # ADMIRAL good.
+				leader_class = admiral
+				owner = {
+					OR = {
+						has_government = gov_star_empire
+						has_government = gov_military_dictatorship
+						has_government = gov_military_junta
+						has_government = gov_military_commissariat
+						has_government = gov_martial_empire
+						has_government = gov_martial_dictatorship
+						has_government = gov_war_council
+						has_government = gov_assembly_of_clans
+						has_government = gov_citizen_stratocracy
+						has_government = gov_citizen_republic
+						has_government = gov_bandit_kingdom
+						has_government = gov_bandit_commune
+						has_government = gov_band_blood
+						# ECAF
+						has_government = lrsk_gov_var_gov_private_military_contractor_fam
+						# Government Variety Pack
+						has_government = lrsk_gov_var_gov_citizen_legion
+						has_government = lrsk_gov_var_gov_death_cult
+						has_government = lrsk_gov_var_gov_death_cult_imp
+						has_government = lrsk_gov_var_gov_doom_horde
+						has_government = lrsk_gov_var_gov_doom_horde_imp
+						has_government = lrsk_gov_var_gov_enterprise_authority
+						has_government = lrsk_gov_var_gov_enterprise_junta
+						has_government = lrsk_gov_var_gov_enterprise_society
+						has_government = lrsk_gov_var_gov_folkish_commonwealth
+						has_government = lrsk_gov_var_gov_folkish_league
+						has_government = lrsk_gov_var_gov_folkish_regime
+						has_government = lrsk_gov_var_gov_folkish_realm
+						has_government = lrsk_gov_var_gov_private_military_contractor
+						has_government = lrsk_gov_var_gov_pure_social_republic
+						has_government = lrsk_gov_var_gov_republican_protectorate
+						has_government = lrsk_gov_var_gov_revolutionary_republic
+					}
+				}
+			}
+			AND = { # GENERAL good.
+				leader_class = general
+				owner = {
+					OR = {
+						has_government = gov_star_empire
+						has_government = gov_military_dictatorship
+						has_government = gov_military_junta
+						has_government = gov_military_commissariat
+						has_government = gov_martial_empire
+						has_government = gov_martial_dictatorship
+						has_government = gov_war_council
+						has_government = gov_assembly_of_clans
+						has_government = gov_citizen_stratocracy
+						has_government = gov_citizen_republic
+						has_government = gov_bandit_kingdom
+						has_government = gov_bandit_commune
+						has_government = gov_band_blood
+						# ECAF
+						has_government = lrsk_gov_var_gov_private_military_contractor_fam
+						# Government Variety Pack
+						has_government = lrsk_gov_var_gov_citizen_legion
+						has_government = lrsk_gov_var_gov_death_cult
+						has_government = lrsk_gov_var_gov_death_cult_imp
+						has_government = lrsk_gov_var_gov_doom_horde
+						has_government = lrsk_gov_var_gov_doom_horde_imp
+						has_government = lrsk_gov_var_gov_enterprise_authority
+						has_government = lrsk_gov_var_gov_enterprise_junta
+						has_government = lrsk_gov_var_gov_enterprise_society
+						has_government = lrsk_gov_var_gov_folkish_commonwealth
+						has_government = lrsk_gov_var_gov_folkish_league
+						has_government = lrsk_gov_var_gov_folkish_regime
+						has_government = lrsk_gov_var_gov_folkish_realm
+						has_government = lrsk_gov_var_gov_private_military_contractor
+						has_government = lrsk_gov_var_gov_pure_social_republic
+						has_government = lrsk_gov_var_gov_republican_protectorate
+						has_government = lrsk_gov_var_gov_revolutionary_republic
+					}
+				}
+			}
+			AND = { # SCIENTIST good.
+				leader_class = scientist
+				owner = {
+					OR = {
+						has_government = gov_illuminated_autocracy
+						has_government = gov_irenic_monarchy
+						has_government = gov_irenic_dictatorship
+						has_government = gov_irenic_bureaucracy
+						has_government = gov_moral_democracy
+						has_government = gov_rational_consensus
+						has_government = gov_research_development_corp
+						has_government = gov_science_directorate
+						has_government = gov_technocratic_dictatorship
+						# ECAF
+						has_government = gov_optimized_venture_fam
+						has_government = lrsk_gov_var_gov_innovation_initiative_fam
+						has_government = lrsk_gov_var_gov_rationalist_managerial_firm
+						has_government = lrsk_gov_var_gov_rationalist_managerial_firm_fam
+						# Government Variety Pack
+						has_government = lrsk_gov_var_gov_innovation_initiative
+						has_government = lrsk_gov_var_gov_academy_state
+						has_government = lrsk_gov_var_gov_scholastic_commonwealth
+						has_government = lrsk_gov_var_gov_automated_worldcommune
+						# Venture Politics
+						has_government = gov_optimized_venture
+					}
+				}
+			}
+			AND = { # GOVERNOR good.
+				leader_class = governor
+				owner = {
+					OR = {
+						has_government = gov_band_blood
+						has_government = gov_celestial_empire
+						has_government = gov_citizen_republic
+						has_government = gov_criminal_syndicate
+						has_government = gov_divine_empire
+						has_government = gov_grim_council
+						has_government = gov_holy_tribunal
+						has_government = gov_irenic_bureaucracy
+						has_government = gov_irenic_dictatorship
+						has_government = gov_megachurch
+						has_government = gov_megacorporation
+						has_government = gov_military_commissariat
+						has_government = gov_moral_democracy
+						has_government = gov_mortal_empire
+						has_government = gov_pirate_haven
+						has_government = gov_sacrificial_megachurch
+						has_government = gov_subversive_cult
+						has_government = gov_theocratic_dictatorship
+						has_government = gov_theocratic_monarchy
+						has_government = gov_theocratic_oligarchy
+						has_government = gov_theocratic_republic      
+						has_government = gov_trade_league
+						has_government = gov_worker_coop
+						# ECAF
+						has_government = gov_anarch_capitalism
+						has_government = gov_anarchy_communism
+						has_government = gov_bur_collectivism
+						has_government = gov_communist_dictatorship
+						has_government = gov_cor_dictatorship
+						has_government = gov_enlighted_socialism
+						has_government = gov_liberal_democracy
+						has_government = gov_megachurch_fam
+						has_government = gov_par_monarchy
+						has_government = gov_peoples_commissariat
+						has_government = gov_peoples_republic
+						has_government = gov_sacrificial_megachurch_fam
+						has_government = gov_social_democracy
+						has_government = gov_soviet_republic
+						has_government = gov_stellar_bancorp_fam
+						has_government = gov_strasserism
+						has_government = gov_subversive_cult_fam
+						has_government = gov_timocracy
+						has_government = gov_trade_league_fam
+						has_government = gov_xenophile_democracy
+						has_government = lrsk_gov_var_gov_crusading_company_fam
+						has_government = lrsk_gov_var_gov_galactic_cartel_fam
+						# Government Variety Pack
+						has_government = lrsk_gov_var_gov_agrarian_monarchy
+						has_government = lrsk_gov_var_gov_agrarian_social_state
+						has_government = lrsk_gov_var_gov_anarcho_capitalism
+						has_government = lrsk_gov_var_gov_citizen_crusade
+						has_government = lrsk_gov_var_gov_communal_democracy
+						has_government = lrsk_gov_var_gov_constitutional_monarchy
+						has_government = lrsk_gov_var_gov_constitutional_plutocracy
+						has_government = lrsk_gov_var_gov_coop_enterprise
+						has_government = lrsk_gov_var_gov_corporate_banditry
+						has_government = lrsk_gov_var_gov_corporate_neofuedalism
+						has_government = lrsk_gov_var_gov_cosmic_choir
+						has_government = lrsk_gov_var_gov_cosmic_choir_olig
+						has_government = lrsk_gov_var_gov_crime_family
+						has_government = lrsk_gov_var_gov_crusader_kingdom
+						has_government = lrsk_gov_var_gov_crusader_order
+						has_government = lrsk_gov_var_gov_crusading_company
+						has_government = lrsk_gov_var_gov_entrepreneurial_council
+						has_government = lrsk_gov_var_gov_federal_republic
+						has_government = lrsk_gov_var_gov_feudal_socialism
+						has_government = lrsk_gov_var_gov_galactic_cartel
+						has_government = lrsk_gov_var_gov_libertarian_freehold
+						has_government = lrsk_gov_var_gov_market_socialism
+						has_government = lrsk_gov_var_gov_merchant_principality_d
+						has_government = lrsk_gov_var_gov_merchant_principality_i
+						has_government = lrsk_gov_var_gov_merchant_republic
+						has_government = lrsk_gov_var_gov_onestate_socialism
+						has_government = lrsk_gov_var_gov_peasant_commune_collective
+						has_government = lrsk_gov_var_gov_peasant_dictatorship
+						has_government = lrsk_gov_var_gov_proprietary_franchise
+						has_government = lrsk_gov_var_gov_pure_social_republic
+						has_government = lrsk_gov_var_gov_reactionary_socialism
+						has_government = lrsk_gov_var_gov_republic_of_virtue
+						has_government = lrsk_gov_var_gov_rogue_freehold
+						has_government = lrsk_gov_var_gov_rustic_republic
+						has_government = lrsk_gov_var_gov_saintly_assembly
+						has_government = lrsk_gov_var_gov_shareholder_commonwealth
+						has_government = lrsk_gov_var_gov_social_bureaucracy
+						has_government = lrsk_gov_var_gov_social_imperialism
+						has_government = lrsk_gov_var_gov_socialist_plenary
+						has_government = lrsk_gov_var_gov_stakeholder_polity
+						has_government = lrsk_gov_var_gov_utopian_despotism_dic
+						has_government = lrsk_gov_var_gov_utopian_despotism_dic
+						has_government = lrsk_gov_var_gov_utopian_despotism_imp
+						has_government = lrsk_gov_var_gov_utopian_socialism
+						has_government = lrsk_gov_var_gov_workers_republic
+						# Venture Politics
+						has_government = gov_stellar_bancorp
+					}
+				}
+			}
+		}
+	}
 }
