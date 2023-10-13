@@ -1145,8 +1145,6 @@ can_colonize_outside_borders = {
 	exists = root
 	root = {
 		OR = {
-			# Human Fallen Empires
-			is_country_type = hfe_features_exodus
 			# The Empty Vagrant
 			is_country_type = ev_leviathans_crisis
 			# Project Gestalt
@@ -1638,8 +1636,6 @@ can_species_procreate = {
 	}
 	# Planetary Population Restrictions
 	policies_allow_breeding = yes
-	# Human Fallen Empires
-	NOT = { has_trait = hfe_species_trait_brainworm }
 	# V_Traits
 	if = {
 		limit = { has_v_difficult_reproduction = yes }
@@ -1909,14 +1905,14 @@ can_species_be_assembled = {
 				limit = { 
 					OR = {
 						is_pearl_born_drone = yes 
-						has_trait = trait_pearl_born_royal
+						is_pearl_born_royal = yes
 					}
 				} 
 				root = {
 					any_owned_species = { 
 						OR = {
 							is_pearl_born_drone = yes 
-							has_trait = trait_pearl_born_royal
+							is_pearl_born_royal = yes
 						}
 					}
 				}
@@ -2024,16 +2020,6 @@ can_species_be_assembled = {
 					root = { has_building = building_anz_cc_mainframe }
 				}
 				is_same_species = root.owner.owner_main_species
-			}
-			# The Dark Arts of Necromancy
-			else_if = {
-				limit = {
-					OR = {
-						is_necromage = yes
-						is_undead = yes
-						is_mindless_undead = yes
-					}
-				}
 			}
 			# Vanilla
 			else = {
@@ -2206,8 +2192,6 @@ can_orbital_bombard = {
 			}
 			FROM.CONTROLLER = { is_country_type = vbp_machine }
 		}
-		# THE ABYSS CONTRACT
-		# ROOT = { has_component = AI_MATRICES }
 		# Vanilla
 		ROOT.CONTROLLER = { is_hostile = FROM.CONTROLLER }
 		root.CONTROLLER = { is_at_war_with = from.CONTROLLER }
@@ -2306,9 +2290,6 @@ can_orbital_bombard = {
 				kuat_can_do_bombarment_country = yes
 				# Star Wars: UnknownWorld Shipgirls Story
 				is_country_type = afk_crisis_country
-				# THE ABYSS CONTRACT
-				is_country_type = TAC_debris_ship_country
-				is_country_type = TAC_machine_crisis_country
 				# The Empty Vagrant
 				is_country_type = default_ev
 				# The Sleeper
@@ -2923,8 +2904,6 @@ can_enter_system_by_jump = {
 					# Core Framework & Modmenu
 					has_country_flag = z_fw_r_celestial_orrey_activited
 					has_country_flag = z_fw_r_cheat_quantum_beacon_activited
-					# THE ABYSS CONTRACT
-					has_country_flag = TAC_traveler
 				}
 			}
 			AND = {
@@ -2995,8 +2974,6 @@ can_enter_system_by_jump = {
 							has_global_flag = starkillerbase_not_passed
 							has_star_flag = starkiller_system
 						}
-						# THE ABYSS CONTRACT
-						has_star_flag = TAC_ag_signal_system
 						# Warship Girls R And MIST Species
 						has_star_flag = wg_sealed_system
 						has_star_flag = wg_psionic_systems
@@ -3502,8 +3479,6 @@ can_build_branch_offices = {
 			has_valid_civic = civic_machine_trading
 			# Girls Frontline
 			has_civic = civic_gf_GK
-			# Human Fallen Empires
-			is_country_type = hfe_pirate
 			# Kancolle
 			AND = {
 				has_authority = auth_kancolle
@@ -3700,11 +3675,6 @@ can_build_branch_office_on_planet = {
 					has_authority = auth_azur_lane_1
 					# BlueArchive species pack
 					has_ascension_perk = ap_BA_new_frontier
-					# Human Fallen Empires
-					AND = {
-						is_country_type = hfe_pirate
-						is_forced_friendly = prev.owner
-					}
 					# Kancolle
 					has_authority = auth_kancolle
 					# Rogue Maid
@@ -4313,8 +4283,6 @@ can_pop_auto_migrate = {
 				ideological_discomfort = yes
 				is_enslaved = yes
 			}
-			# Human Fallen Empires
-			hfe_trigger_unemployed_auto_migrate = yes
 		}
 	}
 	custom_tooltip = {

@@ -856,8 +856,6 @@ has_research_building = {
 		giga_has_research_building = yes
 		# GPM
 		has_building = gpm_precursor_research_center
-		# Human Fallen Empires
-		has_building = hfe_building_thoth_module_science
 		# Kancolle
 		has_building = building_kancolle_yubari_research1
 		has_building = building_kancolle_yubari_research2
@@ -985,8 +983,6 @@ has_any_farming_district_or_buildings = {
 		ED_has_farming_district = yes
 		# Gigastructures
         giga_has_any_farming_district_or_buildings = yes
-		# Human Fallen Empires
-		has_building = hfe_building_thoth_module_food
 		# Planetary Diversity
 		has_district = district_pdhab_food_unlimited
 		has_district = district_pdhab_food
@@ -1074,8 +1070,6 @@ has_any_generator_district_or_building = {
         giga_has_any_generator_district_or_building = yes
 		# GPM
 		has_district = district_gpm_precursor_power_plant
-		# Human Fallen Empires
-		has_building = hfe_building_thoth_module_energy
 		# Planetary Diversity
 		has_district = district_pdhab_energy_unlimited
 		has_district = district_pdhab_energy
@@ -1222,8 +1216,6 @@ has_special_star_flag_trigger = {
 				has_star_flag = starkiller_system
 			}
 		}
-		# THE ABYSS CONTRACT
-		has_star_flag = TAC_ag_signal_system
 		# Warship Girls R And MIST Species
 		has_star_flag = wg_sealed_system
 		has_star_flag = wg_psionic_systems

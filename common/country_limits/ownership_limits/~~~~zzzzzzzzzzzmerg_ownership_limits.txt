@@ -25,7 +25,6 @@ default_ev = {
 		# Hypertraversal Manipulation Augur
 		htm_augur_ships_limit
 		# NSC
-		headquarters_ship_limit
 		explorationship_ship_limit
 		Flagship_ship_limit
 		# Unique Ascension Perks
@@ -47,7 +46,6 @@ darkspace_ownership_limit = {
 		# Hypertraversal Manipulation Augur
 		htm_augur_ships_limit
 		# NSC
-		headquarters_ship_limit
 		explorationship_ship_limit
 		Flagship_ship_limit
 		# Unique Ascension Perks

@@ -75,12 +75,8 @@ merg_is_arcology = {
 		uses_district_set = castle_scarlet
 		# Star Wars: Kuat Ancient Empire
 		uses_district_set = Eternal_city
-		# The Abyss Contract
-		uses_district_set = TAC_AI_world
 		# Voyage to Eternity
 		uses_district_set = KZ_VOY_hyper_ecumenopolis
-		# Warhammer 40K Planets
-		merg_is_wh40k_planet = yes
 		# ZOFE
 		uses_district_set = utopian_city
 	}
@@ -272,9 +268,6 @@ merg_is_nuked = {
 		uses_district_set = BA_ruined_planet
 		# Gigastructural Engineering & More
 		giga_is_katzenland = yes
-		# Human Fallen Empires
-		uses_district_set = hfe_district_set_pc_memorial
-		uses_district_set = hfe_district_set_pc_urbanism
 	}
 }
 
@@ -396,21 +389,5 @@ merg_is_tundra = {
 		# Planetary Diversity
 		is_pd_tundra = yes
 		pd_is_tundra = yes
-	}
-}
-
-# WH40K Planets Renewed
-merg_is_wh40k_planet = {
-	OR = {
-		uses_district_set = fe_industrial_planet
-		uses_district_set = fe_forge_planet
-		uses_district_set = fe_refinery_planet
-		uses_district_set = fe_armory_planet
-		uses_district_set = mc_agri_world
-		uses_district_set = mc_shrine_world
-		uses_district_set = mc_penal
-		uses_district_set = mc_fortress_world
-		uses_district_set = fe_hive_planet
-		uses_district_set = fe_hive_planet_industrial
 	}
 }

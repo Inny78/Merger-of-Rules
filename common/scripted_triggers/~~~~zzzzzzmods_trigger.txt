@@ -927,103 +927,6 @@ afk_target_planet = {
 	merg_is_forbidden_target = no
 }
 
-############################### Human Fallen Empires ###############################
-hfe_trigger_is_asteroid = {
-	is_asteroid = yes
-}
-hfe_trigger_is_fallen = {
-	or = {
-		is_fallen_empire = yes
-		hfe_trigger_is_human_fallen = yes
-	}
-}
-hfe_trigger_system_in_free_space = {
-	hfe_trigger_system_in_someones_space = no
-	any_system = { has_hyperlane_to = prev }
-	merg_is_void_system = no
-}
-hfe_trigger_terminator_event = {
-	is_at_war = no
-	has_country_flag = hfe_marked_as_human
-	exists = ruler.species
-	ruler.species = {
-		or = {
-			is_species_class = HUM
-			is_same_species = prev
-		}
-	}
-	exists = capital_scope
-	capital_scope = {
-		or = {
-			habitable_structure = yes
-			is_wet = yes
-			is_dry = yes
-			is_cold = yes
-			merg_is_gaia = yes
-			merg_is_nuked_basic = yes
-		}
-	}
-	any_relation = {
-		opinion = {
-			who = prev
-			value > 100
-		}
-	}
-	any_planet_within_border = {
-		is_dry = yes
-		not = {
-			is_planet = prev.capital_scope
-		}
-	}
-	any_planet_within_border = {
-		merg_is_ocean = yes
-		not = {
-			is_planet = prev.capital_scope
-		}
-	}
-}
-hfe_trigger_ascension_points = {
-	custom_tooltip = {
-		fail_text = hfe_ascension_points
-		not = {
-			calc_true_if = {
-				amount = 2
-				has_ascension_perk = ap_engineered_evolution
-				has_tradition = tr_genetics_finish
-				has_ascension_perk = ap_the_flesh_is_weak
-				has_tradition = tr_synthetics_finish
-				has_ascension_perk = ap_mind_over_matter
-				has_tradition = tr_psionics_psionic_assimilation
-			}
-		}
-	}
-}
-hfe_trigger_is_assimilator = {
-	is_homicidal = no
-	OR = {
-		has_valid_civic = civic_machine_assimilator
-		hfe_trigger_brainworm_country = yes
-		AND = {
-			has_authority = auth_hive_mind
-			has_tradition = tr_genetics_finish
-		}
-		# Expanded Traits, Civics, Pops, and More
-		has_valid_civic = civic_infestation
-		# Ethical Gestalts
-		has_valid_civic = civic_hive_assimilator
-	}
-}
-hfe_trigger_planet_valid_for_settle = {
-	is_under_colonization = no
-	has_orbital_bombardment = no
-	is_controlled_by = owner
-	not = {
-		has_planet_flag = hfe_settle_pop_block
-	}
-	# Merger tweak
-	is_doomsday_planet = no
-}
-
 ############################### Infinity Stones ###############################
 infmod_is_relevant = {
 	optimize_memory
@@ -1683,27 +1586,6 @@ tc_element_shard_candidate = {
 		is_planet_class = pc_broken
 		is_planet_class = pc_shattered
 		is_planet_class = pc_shattered_2
-	}
-}
-
-############################### THE ABYSS CONTRACT ###############################
-TAC_is_common_country = {
-	optimize_memory
-	OR = {
-		merg_is_standard_empire = yes
-		is_country_type = awakened_marauders
-		is_country_type = primitive
-		is_crisis_faction = yes
-		is_country_type = gate_builders
-		is_country_type = gray_goo
-		is_country_type = ratlings
-	}
-}
-TAC_is_sc_void = {
-	optimize_memory
-	OR = {
-		merg_is_void_system = yes
-		NOT = { exists = star }
 	}
 }
 

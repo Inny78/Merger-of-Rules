@@ -13,7 +13,6 @@ ds_will_ships_limit = { ship_types = { placeholder_ship } base = 0 max = 0 show 
 ds_sw_projectile_ships_limit = { ship_types = { placeholder_ship } base = 0 max = 0 show = { } }
 ds_gray_tempest_titan_limit = { ship_types = { placeholder_ship } base = 0 max = 0 show = { } }
 htm_augur_ships_limit = { ship_types = { placeholder_ship } base = 0 max = 0 show = { } }
-headquarters_ship_limit = { ship_types = { placeholder_ship } base = 0 max = 0 show = { } }
 explorationship_ship_limit = { ship_types = { placeholder_ship } base = 0 max = 0 show = { } }
 Flagship_ship_limit = { ship_types = { placeholder_ship } base = 0 max = 0 show = { } }
 civilian_factory_ships_limit = { ship_types = { placeholder_ship } base = 0 max = 0 show = { } }

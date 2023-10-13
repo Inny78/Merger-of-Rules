@@ -45,8 +45,6 @@ merg_is_fallen_empire = {
 		is_country_type = fallen_empire
 		# History of the Lost Empire
 		is_country_type = LsE_fallen_empire
-		# Human Fallen Empire
-		hfe_trigger_is_human_fallen = yes
 		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_fallen_empire
 		# The Empty Vagrant
@@ -285,9 +283,6 @@ merg_has_cloning_building = {
 		# Lithoid Supremacy
 		has_building = building_crystallization_facilities
 		has_building = building_ocean_spawning_pool
-		# The Dark Arts of Necromancy
-		has_building = building_house_of_the_fleshsculpter
-		has_building = building_summoner_site
 		# Wandering Witch: Voyagers
 		has_building = building_dimensional_instrument
 	}

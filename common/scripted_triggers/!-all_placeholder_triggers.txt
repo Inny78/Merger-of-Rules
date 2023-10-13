@@ -311,6 +311,7 @@ is_pd_tundra = { always = no }
 is_pd_unique = { always = no }
 is_pd_wasteland = { always = no }
 is_pearl_born_drone = { always = no }
+is_pearl_born_royal = { always = no }
 is_planetary_diversity_ringworld = { always = no }
 is_planetary_ringworld = { always = no }
 is_planetary_ringworld_city = { always = no }
