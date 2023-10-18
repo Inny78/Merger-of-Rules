@@ -3762,28 +3762,6 @@ can_build_branch_office_on_planet = {
 				}
 				owner = { is_galactic_community_member = yes }
 			}
-			# Vassals Expanded and Reworked
-			# allow branch offices in all subjects and vice versa
-			AND = {
-				merg_has_vassals_expanded = yes
-				OR = {
-					root = {
-						is_subject = yes
-						exists = overlord
-						overlord = {
-							OR = {
-								is_same_empire = prevprev.owner
-								is_same_empire = prevprev.owner.overlord
-							}
-						}
-					}
-					owner = {
-						is_subject = yes
-						exists = overlord
-						overlord = { is_same_empire = root }
-					}
-				}
-			}
 			# Unique Ascension Perks
 			AND = {
 				owner = {
