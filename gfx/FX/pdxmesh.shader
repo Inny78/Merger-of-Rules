@@ -4740,6 +4740,7 @@ Effect PdxMeshPortraitHairDepthSkinnedShadow
 	Defines = { "IS_SHADOW" }
 }
 
+#// old blokkat
 Effect PdxMeshRainbowBlokkatPortraitSkinned
 {
 	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
@@ -4754,6 +4755,7 @@ Effect PdxMeshRainbowBlokkatPortraitSkinnedShadow
 	Defines = { "IS_SHADOW" }
 }
 
+#// new blokkat
 Effect GigaBlokkatAnimateUVSkinned
 {
 	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
@@ -4766,7 +4768,77 @@ Effect GigaBlokkatAnimateUVSkinnedShadow
 	PixelShader = "PixelPdxMeshStandardShadow"
 	Defines = { "IS_SHADOW" }
 }
+Effect GigaBlokkatVerticalAnimateUVSkinned
+{
+	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
+	PixelShader = "GigaBlokkat"
+	BlendState = "BlendStateAlphaBlendWriteAlpha";
+	Defines = { "VERTICAL" }
+}
+Effect GigaBlokkatVerticalAnimateUVSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "VERTICAL" "IS_SHADOW" }
+}
 
+#// cosmic blokkat
+Effect GigaBlokkatCosmicAnimateUVSkinned
+{
+	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
+	PixelShader = "GigaBlokkat"
+	BlendState = "BlendStateAlphaBlendWriteAlpha";
+	Defines = { "EXTENDED_GRADIENT" "COSMIC" }
+}
+Effect GigaBlokkatCosmicAnimateUVSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "EXTENDED_GRADIENT" "COSMIC" "IS_SHADOW" }
+}
+Effect GigaBlokkatCosmicVerticalAnimateUVSkinned
+{
+	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
+	PixelShader = "GigaBlokkat"
+	BlendState = "BlendStateAlphaBlendWriteAlpha";
+	Defines = { "EXTENDED_GRADIENT" "COSMIC" "VERTICAL" }
+}
+Effect GigaBlokkatCosmicVerticalAnimateUVSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "EXTENDED_GRADIENT" "COSMIC" "VERTICAL" "IS_SHADOW" }
+}
+
+#// screen space interior blokkat
+Effect GigaBlokkatScreenTextureAnimateUVSkinned
+{
+	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
+	PixelShader = "GigaBlokkat"
+	BlendState = "BlendStateAlphaBlendWriteAlpha";
+	Defines = { "EXTENDED_GRADIENT" "SCREEN_TEXTURE" }
+}
+Effect GigaBlokkatScreenTextureAnimateUVSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "EXTENDED_GRADIENT" "SCREEN_TEXTURE" "IS_SHADOW" }
+}
+Effect GigaBlokkatScreenTextureVerticalAnimateUVSkinned
+{
+	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
+	PixelShader = "GigaBlokkat"
+	BlendState = "BlendStateAlphaBlendWriteAlpha";
+	Defines = { "EXTENDED_GRADIENT" "SCREEN_TEXTURE" "VERTICAL" }
+}
+Effect GigaBlokkatScreenTextureVerticalAnimateUVSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "EXTENDED_GRADIENT" "SCREEN_TEXTURE" "VERTICAL" "IS_SHADOW" }
+}
+
+#// raymarching experiment
 Effect PdxMeshMarchPortrait
 {
 	VertexShader = GigaMarchedVertex

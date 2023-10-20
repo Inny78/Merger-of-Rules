@@ -35,4 +35,5 @@ planet_population_control_gestalt = {}
 ravenous_locusts = {}
 terraformer_homeworld = {}
 volcanic_world = {}
+wiirlak_ac_modifier_project_cradle = {}
 world_shaper_mod = {}

@@ -218,7 +218,7 @@ merg_is_hive_world = {
 	OR = {
 		is_planet_class = pc_hive
 		# Gigastructural Engineering & More
-		is_planet_class = pc_ringworld_hive
+		is_pc_ringworld_hive = yes
 		# Planetary Diversity
 		is_pd_hive_world = yes
 		is_pd_hive_arcology = yes
@@ -238,7 +238,7 @@ merg_is_machine_world = {
 		is_pd_machine = yes
 		is_pd_robot_arcology = yes
 		# Gigastructural Engineering & More
-		is_planet_class = pc_ringworld_machine
+		is_pc_ringworld_machine = yes
 		# Girls Frontline
 		uses_district_set = GF_sf_machine_world
 		# Origin - F.C.S.S & M.C.S.S
@@ -362,7 +362,7 @@ merg_is_toxic = {
 		# All These Worlds
 		atw_is_toxic = yes
 		# Gigastructural Engineering & More
-		is_planet_class = pc_red_toxic
+		is_pc_red_toxic = yes
 		# Planetary Diversity
 		is_pd_toxic = yes
 	}

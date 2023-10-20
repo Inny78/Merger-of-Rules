@@ -428,8 +428,6 @@ bdoe_can_have_random_districts = {
 		# The Belt
 		bdoe_is_habitable_asteroid = yes
 		bdoe_is_habitable_barren = yes
-		# WH40K Planets Renewed
-		merg_is_wh40k_planet = yes
 	}
 }
 bdoe_is_hive_planet = {
@@ -442,11 +440,7 @@ bdoe_is_ringworld = {
 	merg_is_hab_ringworld = yes
 }
 bdoe_is_ecu_planet = {
-	OR = {
-		merg_is_arcology = yes
-		# WH40K Planets Renewed
-		merg_is_wh40k_planet = yes
-	}
+	merg_is_arcology = yes
 }
 
 ############################### Dynamic Political Events ###############################
@@ -922,7 +916,7 @@ afk_target_planet = {
 		# Planetary Diversity
 		is_pd_planet_class_all = yes
 		# Gigastructural Engineering & More
-		is_planet_class = pc_red_toxic
+		is_pc_red_toxic = yes
 	}
 	merg_is_forbidden_target = no
 }
@@ -1570,10 +1564,6 @@ kuat_is_playable_country = {
 		is_country_type = sbtg_light_seeker	
 		is_country_type = star_fantasy_empire
 		is_country_type = endtime_star_fantasy_empire
-		is_country_type = hfe_drone
-		is_country_type = hfe_thoth
-		is_country_type = hfe_pirate
-		is_country_type = hfe_features_exodus
 	}
 }
 ############################### ThaumStellaris ###############################

@@ -433,8 +433,6 @@ merg_is_empty_space = {
 		is_planet_class = pc_sm_empty_space
 		# Some Events of Outside Cluster
 		is_planet_class = pc_star_void_dummy_01
-		# Steven Universe Homeworld Gems
-		# is_planet_class = pc_no_star
 		# ThaumStellaris
 		is_planet_class = pc_tc_not_texture
 	}

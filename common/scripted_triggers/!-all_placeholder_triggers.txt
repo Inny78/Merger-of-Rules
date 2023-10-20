@@ -259,6 +259,7 @@ is_organic_fourschildren = { always = no }
 is_organic_zealots = { always = no }
 is_patriarchy = { always = no }
 is_pc_flat_world = { always = no }
+is_pc_giga_empty_space = { always = no }
 is_pc_giga_frameworld = { always = no }
 is_pc_mem_broken_city = { always = no }
 is_pc_mem_death = { always = no }
@@ -267,6 +268,9 @@ is_pc_mem_micro_black_hole = { always = no }
 is_pc_mem_synthetic_sun = { always = no }
 is_pc_mem_vazuran_habitat = { always = no }
 is_pc_pouchkinn_black_hole = { always = no }
+is_pc_red_toxic = { always = no }
+is_pc_ringworld_hive = { always = no }
+is_pc_ringworld_machine = { always = no }
 is_pc_squareworld_habitable = { always = no }
 is_pd_alpine = { always = no }
 is_pd_aquatics = { always = no }
