@@ -418,7 +418,7 @@ merg_is_empty_space = {
 		is_planet_class = pc_ag_void_star
 		is_planet_class = pc_ag_void_planet
 		# Darkspace
-		is_planet_class = pc_gc_star
+		is_ds_gc_star = yes
 		# GF Nyto
 		is_planet_class = pc_GF_nyto_endles
 		# Gigastructural Engineering & More
