@@ -42,6 +42,8 @@ half_perfect = { uses_modifiers = no }
 half_amalgamated = { uses_modifiers = no }
 # Kancolle
 KANMUSU = { uses_modifiers = no }
+# Merger of Rules
+PLACEHOLDER = { uses_modifiers = no }
 # Nyto Species Events Pack
 NYTO = { uses_modifiers = no }
 # Silfae's Portrait Revisited

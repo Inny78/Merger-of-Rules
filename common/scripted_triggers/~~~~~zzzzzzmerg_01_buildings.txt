@@ -963,42 +963,14 @@ has_fort = {
 	custom_tooltip = {
 		fail_text = acot_requires_fort_building
 		OR = {
-			has_building = building_stronghold
-			has_building = building_fortress
-			# ACOT/AOT/SOS
-			has_building = building_dm_stronghold
-			has_building = building_fe_stronghold
-			has_building = building_ae_stronghold
-			has_building = building_giga_fortress_dm
-			has_building = building_giga_fortress
-			has_building = building_giga_fortress_array
-			has_building = building_giga_fortress_lab
-			has_building = building_giga_fortress_obelisk
-			has_building = building_giga_fortress_fe
-			# AOT
-			has_building = building_stellarite_stronghold
-			has_building = building_phanon_stronghold
-			has_building = building_stellarite_giga_fortress_array
-			has_building = building_stellarite_giga_fortress_lab
-			has_building = building_stellarite_giga_fortress_obelisk
-			has_building = building_phanon_giga_fortress_array
-			has_building = building_phanon_giga_fortress_lab
-			has_building = building_phanon_giga_fortress_obelisk
-			has_district = district_acot_enigmapolis_fortress
-			is_aot_macripp = yes
+			has_active_building = building_stronghold
+			has_active_building = building_fortress
+			# ACOT
+			has_advanced_fort = yes
 			# GPM
-			has_building = gpm_building_stronghold
+			has_active_building = gpm_building_stronghold
 			# Plentiful Traditions
-			has_building = building_zitadom
-			# Twinks Mods
-			has_building = building_precinct_house_at_b
-			has_building = building_tw_arcane_hold
-			has_building = building_nightelf_palace
-			has_building = building_ancient_palace_at
-			# Secrets of the Shroud
-			has_district = district_acot_soulsphere_fortress
-			# Wula Fallen Empire
-			has_building = building_wula_stronghold
+			has_active_building = building_zitadom
 		}
 	}
 }
@@ -1008,45 +980,49 @@ has_advanced_fort = {
 		fail_text = acot_requires_fort_building
 		OR = {
 			# ACOT/AOT/SOS
-			has_building = building_dm_stronghold
-			has_building = building_fe_stronghold
-			has_building = building_ae_stronghold
-			has_building = building_giga_fortress_dm
-			has_building = building_giga_fortress
-			has_building = building_giga_fortress_array
-			has_building = building_giga_fortress_lab
-			has_building = building_giga_fortress_obelisk
-			has_building = building_giga_fortress_fe
+			has_active_building = building_dm_stronghold
+			has_active_building = building_fe_stronghold
+			has_active_building = building_ae_stronghold
+			has_active_building = building_giga_fortress_dm
+			has_active_building = building_giga_fortress
+			has_active_building = building_giga_fortress_array
+			has_active_building = building_giga_fortress_lab
+			has_active_building = building_giga_fortress_obelisk
+			has_active_building = building_giga_fortress_fe
 			# Ad Astra Technology Mod
-			has_building = building_fortress_city
-			has_building = building_planetary_citadel
-			has_building = building_aegis_city
-			has_building = building_panopticon_fortress
-			has_building = building_wyrmguard_citadel
-			has_building = building_alpha_fortress
-			has_building = building_occulari_tower
+			has_active_building = building_fortress_city
+			has_active_building = building_planetary_citadel
+			has_active_building = building_aegis_city
+			has_active_building = building_panopticon_fortress
+			has_active_building = building_wyrmguard_citadel
+			has_active_building = building_alpha_fortress
+			has_active_building = building_occulari_tower
 			# AOT
-			has_building = building_stellarite_stronghold
-			has_building = building_phanon_stronghold
-			has_building = building_stellarite_giga_fortress_array
-			has_building = building_stellarite_giga_fortress_lab
-			has_building = building_stellarite_giga_fortress_obelisk
-			has_building = building_phanon_giga_fortress_array
-			has_building = building_phanon_giga_fortress_lab
-			has_building = building_phanon_giga_fortress_obelisk
+			has_active_building = building_stellarite_stronghold
+			has_active_building = building_phanon_stronghold
+			has_active_building = building_stellarite_giga_fortress_array
+			has_active_building = building_stellarite_giga_fortress_lab
+			has_active_building = building_stellarite_giga_fortress_obelisk
+			has_active_building = building_phanon_giga_fortress_array
+			has_active_building = building_phanon_giga_fortress_lab
+			has_active_building = building_phanon_giga_fortress_obelisk
 			has_district = district_acot_enigmapolis_fortress
 			is_aot_macripp = yes
+			# Ancient Empire
+			has_active_building = ag_ancient_fortress
+			has_active_building = ag_ancient_fortress_corp
+			has_active_building = ag_ancient_fortress_overlord
 			# EDA
-			has_building = eda_building_imperial_capital
+			has_active_building = eda_building_imperial_capital
 			# Twinks Mods
-			has_building = building_precinct_house_at_b
-			has_building = building_tw_arcane_hold
-			has_building = building_nightelf_palace
-			has_building = building_ancient_palace_at
+			has_active_building = building_precinct_house_at_b
+			has_active_building = building_tw_arcane_hold
+			has_active_building = building_nightelf_palace
+			has_active_building = building_ancient_palace_at
 			# Secrets of the Shroud
 			has_district = district_acot_soulsphere_fortress
 			# Wula Fallen Empire
-			has_building = building_wula_stronghold
+			has_active_building = building_wula_stronghold
 		}
 	}
 }

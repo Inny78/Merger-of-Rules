@@ -252,39 +252,45 @@ merg_is_special_colony = {
 merg_has_cloning_building = {
 	OR = {
 		# Vanilla
-		has_building = building_clone_vats
+		has_active_building = building_clone_vats
 		# ANZ Advanced Cloning
-		has_building = building_clone_vats_basic_organic
-		has_building = building_clone_vats_improved_organic
-		has_building = building_clone_vats_advanced_organic
-		has_building = building_clone_vats_augmented_organic
-		has_building = building_clone_vats_basic_mech
-		has_building = building_clone_vats_improved_mech
-		has_building = building_clone_vats_advanced_mech
-		has_building = building_clone_vats_augmented_mech
+		has_active_building = building_clone_vats_basic_organic
+		has_active_building = building_clone_vats_improved_organic
+		has_active_building = building_clone_vats_advanced_organic
+		has_active_building = building_clone_vats_augmented_organic
+		has_active_building = building_clone_vats_basic_mech
+		has_active_building = building_clone_vats_improved_mech
+		has_active_building = building_clone_vats_advanced_mech
+		has_active_building = building_clone_vats_augmented_mech
 		# ACOT
-		has_building = building_fe_clone_vats
-		has_building = building_ae_clone_vats
+		has_active_building = building_fe_clone_vats
+		has_active_building = building_ae_clone_vats
 		# AOT
-		has_building = building_stellarite_clone_vats
-		has_building = building_phanon_clone_vats
+		has_active_building = building_stellarite_clone_vats
+		has_active_building = building_phanon_clone_vats
 		# Additional Vanilla Buildings
-		has_building = building_avb_clone_vats_2
+		has_active_building = building_avb_clone_vats_2
+		# Ancient Empire
+		has_active_building = ag_advanced_clone_vats
 		# Ascension - Biological Module
-		has_building = building_omega_cloning_vats
+		has_active_building = building_omega_cloning_vats
 		# Civic: Organic Zealots
-		has_building = building_clone_birth_labs
+		has_active_building = building_clone_birth_labs
 		# Ethics and Civics Bug Branch
-		has_building = building_bugged_life_monastery
-		has_building = building_bugged_life_monastery_two
+		has_active_building = building_bugged_life_monastery
+		has_active_building = building_bugged_life_monastery_two
+		# EUTAB
+		has_active_building = building_eutab_adv_clone_vats
 		# Galaxius
-		has_building = building_ie_clone_vats
-		has_building = building_ie_spawning_pool
+		has_active_building = building_ie_clone_vats
+		has_active_building = building_ie_spawning_pool
 		# Lithoid Supremacy
-		has_building = building_crystallization_facilities
-		has_building = building_ocean_spawning_pool
+		has_active_building = building_crystallization_facilities
+		has_active_building = building_ocean_spawning_pool
+		# Unavoidable Changes
+		has_active_building = building_volgan_clone_vats
 		# Wandering Witch: Voyagers
-		has_building = building_dimensional_instrument
+		has_active_building = building_dimensional_instrument
 	}
 }
 
@@ -356,8 +362,8 @@ merg_is_dense_star = {
 		# MEM
 		is_pc_mem_micro_black_hole = yes
 		# Real Space
-		is_rs_collapsar = yes
-		is_rs_magnetar = yes
+		is_planet_class_pc_collapsar = yes
+		is_planet_class_pc_magnetar = yes
 		is_rs_microquasar = yes
 		rs_microquasar = yes
 		# Solar Storm
@@ -404,8 +410,8 @@ merg_is_standard_dense_star = {
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
 		# Real Space
-		is_rs_collapsar = yes
-		is_rs_magnetar = yes
+		is_planet_class_pc_collapsar = yes
+		is_planet_class_pc_magnetar = yes
 	}
 }
 
@@ -430,11 +436,11 @@ merg_is_empty_space = {
 		is_planet_class = pc_bwm_star_dummy
 		is_planet_class = pc_bwm_planet_dummy
 		# Secrets of the Shroud
-		is_planet_class = pc_sm_empty_space
+		# is_planet_class = pc_sm_empty_space
 		# Some Events of Outside Cluster
-		is_planet_class = pc_star_void_dummy_01
+		# is_planet_class = pc_star_void_dummy_01
 		# ThaumStellaris
-		is_planet_class = pc_tc_not_texture
+		is_tc_invisible = yes
 	}
 }
 
@@ -667,6 +673,8 @@ merg_has_hospital = {
 		# AOT
 		has_active_building = building_phanon_hospital
 		has_active_building = building_stellarite_hospital
+		# Eutab
+		has_active_building = building_eutab_medigel_cultivator
 	}
 }
 

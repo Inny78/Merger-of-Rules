@@ -2415,7 +2415,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 	}
 	custom_tooltip = {
 		fail_text = "tc_planet_killer_excavation_nothing_dig"
-		NOT = { is_planet_class = pc_tc_bedrock }
+		is_tc_bedrock = no
 	}
 	custom_tooltip = {
 		fail_text = "tc_planet_killer_excavation_not_hostile"
@@ -2476,7 +2476,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 	}
 	custom_tooltip = {
 		fail_text = "tc_planet_killer_excavation_nothing_dig"
-		NOT = { is_planet_class = pc_tc_bedrock }
+		is_tc_bedrock = no
 	}
 	custom_tooltip = {
 		fail_text = "tc_planet_killer_excavation_not_hostile"
@@ -2577,9 +2577,8 @@ can_destroy_planet_with_TC_PLANET_KILLER_FROST = {
 		NOR = {
 			merg_is_shielded = yes
 			merg_is_forbidden_target = yes
-			is_planet_class = pc_asteroid
-			is_planet_class = pc_tc_not_texture
-			is_planet_class = pc_tc_bedrock
+			is_asteroid = yes
+			is_tc_bedrock = yes
 			is_planet_class = pc_ringworld_habitable_damaged
 		}
 		NOT = { has_planet_flag = merg_forbidden_target }
@@ -2641,9 +2640,8 @@ can_destroy_planet_with_TC_PLANET_KILLER_FROST_TURRET = {
 		NOR = {
 			merg_is_shielded = yes
 			merg_is_forbidden_target = yes
-			is_planet_class = pc_asteroid
-			is_planet_class = pc_tc_not_texture
-			is_planet_class = pc_tc_bedrock
+			is_asteroid = yes
+			is_tc_bedrock = yes
 			is_planet_class = pc_ringworld_habitable_damaged
 		}
 		NOT = { has_planet_flag = merg_forbidden_target }
@@ -2705,9 +2703,8 @@ can_destroy_planet_with_TC_PLANET_KILLER_LIQUEFACTION = {
 		NOR = {
 			merg_is_shielded = yes
 			merg_is_forbidden_target = yes
-			is_planet_class = pc_asteroid
-			is_planet_class = pc_tc_not_texture
-			is_planet_class = pc_tc_bedrock
+			is_asteroid = yes
+			is_tc_bedrock = yes
 			is_planet_class = pc_ringworld_habitable_damaged
 		}
 		NOT = { has_planet_flag = merg_forbidden_target }
@@ -2769,9 +2766,8 @@ can_destroy_planet_with_TC_PLANET_KILLER_LIQUEFACTION_TURRET = {
 		NOR = {
 			merg_is_shielded = yes
 			merg_is_forbidden_target = yes
-			is_planet_class = pc_asteroid
-			is_planet_class = pc_tc_not_texture
-			is_planet_class = pc_tc_bedrock
+			is_asteroid = yes
+			is_tc_bedrock = yes
 			is_planet_class = pc_ringworld_habitable_damaged
 		}
 		NOT = { has_planet_flag = merg_forbidden_target }
@@ -2833,18 +2829,14 @@ can_destroy_planet_with_TC_PLANET_KILLER_DISINTEGRATION = {
 		NOR = {
 			merg_is_shielded = yes
 			merg_is_forbidden_target = yes
-			is_planet_class = pc_asteroid
-			is_planet_class = pc_tc_not_texture
+			is_asteroid = yes
 		}
-		NOT = { has_planet_flag = merg_forbidden_target }
 		NOT = { has_planet_flag = tc_not_pk_target }
 		is_star = no
 	}
 	custom_tooltip = {
 		fail_text = "tc_planet_killer_excavation_nothing_dig"
-		NOT = {
-			is_planet_class = pc_tc_bedrock
-		}
+		is_tc_bedrock = no
 	}
 	custom_tooltip = {
 		fail_text = "tc_planet_killer_not_hostile"
@@ -2896,17 +2888,13 @@ can_destroy_planet_with_TC_PLANET_KILLER_DISINTEGRATION_TURRET = {
 			merg_is_shielded = yes
 			merg_is_forbidden_target = yes
 			is_planet_class = pc_asteroid
-			is_planet_class = pc_tc_not_texture
 		}
-		NOT = { has_planet_flag = merg_forbidden_target }
 		NOT = { has_planet_flag = tc_not_pk_target }
 		is_star = no
 	}
 	custom_tooltip = {
 		fail_text = "tc_planet_killer_excavation_nothing_dig"
-		NOT = {
-			is_planet_class = pc_tc_bedrock
-		}
+		is_tc_bedrock = no
 	}
 	custom_tooltip = {
 		fail_text = "tc_planet_killer_not_hostile"
@@ -3799,6 +3787,8 @@ merg_is_untargetable = {
 		has_planet_flag = cant_build_here
 		# Secrets of the Shroud
 		is_sots_soulsphere = yes
+		# ThaumStellaris
+		has_planet_flag = tc_not_pk_target
 		# ACOT/Gigas
 		has_planet_flag = cant_target_this_planet
 		has_planet_flag = cant_build_here

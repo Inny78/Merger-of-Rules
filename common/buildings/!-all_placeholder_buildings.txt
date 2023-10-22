@@ -1,5 +1,6 @@
 # Irony this is a placeholder file please ignore it
 AAR_bldn_VEIL_shield_generator_T5 = { potential = { always = no } allow = { always = no } }
+ag_advanced_clone_vats = { potential = { always = no } allow = { always = no } }
 ag_ancient_lab = { potential = { always = no } allow = { always = no } }
 ag_ancient_lab_corp = { potential = { always = no } allow = { always = no } }
 ag_ancient_lab_overlord = { potential = { always = no } allow = { always = no } }
@@ -118,6 +119,8 @@ building_enigmatic_assembly_plant = { potential = { always = no } allow = { alwa
 building_enigmatic_lab = { potential = { always = no } allow = { always = no } }
 building_eternal_nexus_ai = { potential = { always = no } allow = { always = no } }
 building_eternal_palace = { potential = { always = no } allow = { always = no } }
+building_eutab_adv_clone_vats = { potential = { always = no } allow = { always = no } }
+building_eutab_medigel_cultivator = { potential = { always = no } allow = { always = no } }
 building_familiar_clone_vat = { potential = { always = no } allow = { always = no } }
 building_fe_affluence_center = { potential = { always = no } allow = { always = no } }
 building_fe_alloy_forge = { potential = { always = no } allow = { always = no } }
@@ -236,6 +239,7 @@ building_tc_rune_shield_t2 = { potential = { always = no } allow = { always = no
 building_tc_rune_shield_t3 = { potential = { always = no } allow = { always = no } }
 building_techno_04_clone_vat = { potential = { always = no } allow = { always = no } }
 building_tw_arcane_hold = { potential = { always = no } allow = { always = no } }
+building_volgan_clone_vats = { potential = { always = no } allow = { always = no } }
 building_wsg_foundry = { potential = { always = no } allow = { always = no } }
 building_wula_archive = { potential = { always = no } allow = { always = no } }
 building_wula_foundry = { potential = { always = no } allow = { always = no } }

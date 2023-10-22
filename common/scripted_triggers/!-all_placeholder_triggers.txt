@@ -331,8 +331,6 @@ is_real_KZ_VOY_Seclusion = { always = no }
 is_real_KZ_VOY_solaria = { always = no }
 is_regular_giga_maginot_world = { always = no }
 is_rooted_adult = { always = no }
-is_rs_collapsar = { always = no }
-is_rs_magnetar = { always = no }
 is_rs_microquasar = { always = no }
 is_servitor_empire = { always = no }
 is_shadowgate_world = { always = no }
@@ -347,6 +345,8 @@ is_submerged = { always = no }
 is_subsapient_form = { always = no }
 is_symbiote = { always = no }
 is_symbiote_of_prevprev = { always = no }
+is_tc_bedrock = { always = no }
+is_tc_invisible = { always = no }
 is_td_multi_hiveminded = { always = no }
 is_terraforming_candidate = { always = no }
 is_time_black_hole_planet_class = { always = no }
