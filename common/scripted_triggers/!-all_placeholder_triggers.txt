@@ -155,11 +155,13 @@ is_acot_sbtg_arkship = { always = no }
 is_acot_void_hole = { always = no }
 is_acot_sbtg_arkship = { always = no }
 is_acot_herculean = { always = no }
+is_ag_void = { always = no }
 is_aot_habitat = { always = no }
 is_aot_macripp = { always = no }
 is_apsr_dark = { always = no }
 is_apsr_habitable_planet = { always = no }
 is_ascended_juggernaut = { always = no }
+is_asharms_empty_space = { always = no }
 is_aso_gg_white_hole = { always = no }
 is_aso_gg_ice_giant = { always = no }
 is_bugged_evolutionary_architects = { always = no }

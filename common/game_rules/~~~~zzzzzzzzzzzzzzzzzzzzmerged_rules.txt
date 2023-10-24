@@ -1174,6 +1174,7 @@ can_colonize_outside_borders = {
 #Root = country
 #This = planet
 can_terraform_planet = {
+	NOT = { has_planet_flag = cant_terraform_planet }
 	custom_tooltip = {
 		fail_text = terraform_fail_no_presapient_protection_or_no_presapients
 		NAND = {

@@ -38,6 +38,7 @@ colonizable_planet = {
 		is_tm_psionic_world = yes
 		is_tm_nanites_world = yes
 	}
+	NOT = { has_planet_flag = cant_be_colonized }
 }
 
 habitable_planet = {

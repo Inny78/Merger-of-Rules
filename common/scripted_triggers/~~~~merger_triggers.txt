@@ -421,8 +421,7 @@ merg_is_empty_space = {
 		# ACOT
 		is_planet_class = pc_invisible_star
 		# Ancient Empires
-		is_planet_class = pc_ag_void_star
-		is_planet_class = pc_ag_void_planet
+		is_ag_void = yes
 		# Darkspace
 		is_ds_gc_star = yes
 		# GF Nyto
@@ -431,7 +430,7 @@ merg_is_empty_space = {
 		is_planet_class = giga_hidden
 		giga_is_empty_space = yes
 		# History of the Lost Empire
-		is_planet_class = pc_empty_space
+		is_planet_class = pc_empty_space # is_asharms_empty_space = yes
 		# LEX
 		is_planet_class = pc_bwm_star_dummy
 		is_planet_class = pc_bwm_planet_dummy
