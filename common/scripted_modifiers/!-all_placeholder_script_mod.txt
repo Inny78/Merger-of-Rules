@@ -1,0 +1,5 @@
+stu_deleterious_organic_modding_flag = {
+	hidden = yes
+	category = country
+	localize_with_value_key = yes
+}

@@ -856,8 +856,9 @@ can_destroy_planet_with_PLANET_KILLER_APSR_INATOR = {
 ############################### Arknights Near Future ###############################
 can_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = {
 	custom_tooltip = {
-		fail_text = is_not_a_habitable_planet_or_megastructure
-		is_a_habitable_planet_megastructure = yes
+		fail_text = is_not_a_standard_planet_or_megastructure
+		is_star = no
+		is_asteroid = no
 		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {

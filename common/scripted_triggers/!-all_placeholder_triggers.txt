@@ -57,6 +57,7 @@ giga_has_any_generator_district_or_building = { always = no }
 giga_has_any_industrial_district = { always = no }
 giga_has_any_mining_district = { always = no }
 giga_has_artificial_preference_trait = { always = no }
+giga_has_non_psionic_shields = { always = no }
 giga_has_research_building = { always = no }
 giga_is_alderson_disk = { always = no }
 giga_is_birch_world = { always = no }
@@ -123,8 +124,10 @@ has_species_trait_holofrixigram = { always = no }
 has_str_genemodding_tech = { always = no }
 has_strict_democratic_auth = { always = no }
 has_upgraded_penal_capital = { always = no }
+has_v_allelopathy = { always = no }
 has_v_asexual_reproduction = { always = no }
 has_v_budding_trait = { always = no }
+has_v_cyborg_bubble = { always = no }
 has_v_diapause_modifier = { always = no }
 has_v_difficult_reproduction = { always = no }
 has_v_embryonic_diapause = { always = no }
@@ -135,6 +138,7 @@ has_v_non_thinking_trait = { always = no }
 has_v_presapient_trait = { always = no }
 has_v_phototrophic_trait = { always = no }
 has_v_stealth_trait = { always = no }
+has_v_weak_immune_system = { always = no }
 is_v_symbiont_a = { always = no }
 is_v_symbiont_b = { always = no }
 has_wg_traits = { always = no }
@@ -178,7 +182,6 @@ is_bugged_group_firm = { always = no }
 is_bugged_dynastic_enterprise = { always = no }
 is_bugged_megacorp = { always = no }
 is_civic_materialist = { always = no }
-# is_civic_machine_servitor = { always = no }
 is_civic_militarist = { always = no }
 is_content_world = { always = no }
 is_corrupted_world_emex = { always = no }

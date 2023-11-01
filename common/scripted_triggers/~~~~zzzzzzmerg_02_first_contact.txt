@@ -70,5 +70,7 @@ has_non_psionic_shields = {
 		has_component = LARGE_ESC_SHIELD_ARMOR_2
 		has_component = SMALL_ESC_SHIELD_ARMOR_3
 		has_component = MEDIUM_ESC_SHIELD_ARMOR_3
+		# Gigas
+		giga_has_non_psionic_shields = yes
 	}
 }

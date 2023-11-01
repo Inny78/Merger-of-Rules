@@ -249,61 +249,6 @@ merg_is_special_colony = {
 	}
 }
 
-merg_has_cloning_building = {
-	OR = {
-		# Vanilla
-		has_active_building = building_clone_vats
-		# ANZ Advanced Cloning
-		has_active_building = building_clone_vats_basic_organic
-		has_active_building = building_clone_vats_improved_organic
-		has_active_building = building_clone_vats_advanced_organic
-		has_active_building = building_clone_vats_augmented_organic
-		has_active_building = building_clone_vats_basic_mech
-		has_active_building = building_clone_vats_improved_mech
-		has_active_building = building_clone_vats_advanced_mech
-		has_active_building = building_clone_vats_augmented_mech
-		# ACOT
-		has_active_building = building_fe_clone_vats
-		has_active_building = building_ae_clone_vats
-		# AOT
-		has_active_building = building_stellarite_clone_vats
-		has_active_building = building_phanon_clone_vats
-		# Additional Vanilla Buildings
-		has_active_building = building_avb_clone_vats_2
-		# Ancient Empire
-		has_active_building = ag_advanced_clone_vats
-		# Ascension - Biological Module
-		has_active_building = building_omega_cloning_vats
-		# Civic: Organic Zealots
-		has_active_building = building_clone_birth_labs
-		# Ethics and Civics Bug Branch
-		has_active_building = building_bugged_life_monastery
-		has_active_building = building_bugged_life_monastery_two
-		# EUTAB
-		has_active_building = building_eutab_adv_clone_vats
-		# Galaxius
-		has_active_building = building_ie_clone_vats
-		has_active_building = building_ie_spawning_pool
-		# Lithoid Supremacy
-		has_active_building = building_crystallization_facilities
-		has_active_building = building_ocean_spawning_pool
-		# Unavoidable Changes
-		has_active_building = building_volgan_clone_vats
-		# Wandering Witch: Voyagers
-		has_active_building = building_dimensional_instrument
-	}
-}
-
-merg_has_clone_army_building = {
-	OR = {
-		has_active_building = building_clone_army_clone_vat
-		# Galactic Imperium Origin
-		has_active_building = building_clone_guard_clone_vat
-		# AVB
-		has_active_building = building_avb_clone_army_clone_vat_2
-	}
-}
-
 merg_has_hive_trait = {
 	OR = {
 		has_trait = trait_hive_mind
@@ -657,59 +602,6 @@ merg_is_sapient = {
 	NOR = {
 		is_sapient = no
 		has_trait = trait_zombie
-	}
-}
-
-merg_has_hospital = {
-	OR = {
-		has_active_building = building_clinic
-		has_active_building = building_hospital
-		# ACOT
-		has_active_building = building_fe_hospital
-		has_active_building = building_ae_hospital
-		# Ad Astra Technology Mod
-		has_active_building = building_medical_mega_facility
-		# AOT
-		has_active_building = building_phanon_hospital
-		has_active_building = building_stellarite_hospital
-		# Eutab
-		has_active_building = building_eutab_medigel_cultivator
-	}
-}
-
-merg_has_planetary_shield = {
-	OR = {
-		has_active_building = building_planetary_shield_generator
-		has_active_building = building_planetary_shield_generator_fe
-		# ACOT
-		has_active_building = building_dark_energy_psg
-		has_active_building = building_ae_dark_energy_psg
-		# AOT
-		has_active_building = building_phanon_psg
-		has_active_building = building_stellarite_psg
-		# AVB
-		has_active_building = building_avb_planetary_shield_generator_2
-		has_active_building = building_avb_planetary_shield_generator_3
-		has_active_building = building_avb_dark_matter_planetary_shield_generator
-		# Gigas
-		has_active_building = building_giga_planetary_shield_generator_1
-		has_active_building = building_giga_planetary_shield_generator_2
-		# More Events Mod
-		has_active_building = building_mem_planetary_shield_generator
-		has_active_building = building_mem_planetary_shield_generator_heavy
-		has_active_building = building_mem_planetary_shield_generator_orila
-		# Nirvana Empire Project
-		has_active_building = building_sky_shield
-		# Production Revolution
-		has_active_building = PR_BLDN_Army_sp_shield_T3
-		# Reworked Advanced Ascension
-		has_active_building = AAR_bldn_VEIL_shield_generator_T5
-		# Star Wars: Kuat Ancient Empire
-		has_active_building = building_kuat_shield
-		# ThaumStellaris
-		has_active_building = building_tc_rune_shield_t1
-		has_active_building = building_tc_rune_shield_t2
-		has_active_building = building_tc_rune_shield_t3
 	}
 }
 

@@ -140,5 +140,5 @@ planet_event = { id = projcrim.16 hide_window = yes is_triggered_only = yes imme
 planet_event = { id = projcrim.17 hide_window = yes is_triggered_only = yes immediate = { } }
 planet_event = { id = projcrim.18 hide_window = yes is_triggered_only = yes immediate = { } }
 
-namespace = tiyres_events.7
+namespace = tiyres_events
 planet_event = { id = tiyres_events.7 hide_window = yes is_triggered_only = yes immediate = { } }

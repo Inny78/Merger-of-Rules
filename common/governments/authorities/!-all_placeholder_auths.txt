@@ -2,6 +2,7 @@
 auth_AL_arsenal = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
 auth_AL_democratic = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
 auth_azur_dictatorial = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
+auth_azur_lane_0 = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
 auth_direct_democratic = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
 auth_azur_lane_1 = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }
 auth_azur_lane_2 = { playable = { always = no } possible = { always = no } ruler_council_position = councilor_ruler_democratic }

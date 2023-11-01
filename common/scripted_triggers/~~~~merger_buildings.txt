@@ -1,0 +1,234 @@
+merg_has_cloning_building = {
+	OR = {
+		# Vanilla
+		has_active_building = building_clone_vats
+		# ANZ Advanced Cloning
+		has_active_building = building_clone_vats_basic_organic
+		has_active_building = building_clone_vats_improved_organic
+		has_active_building = building_clone_vats_advanced_organic
+		has_active_building = building_clone_vats_augmented_organic
+		has_active_building = building_clone_vats_basic_mech
+		has_active_building = building_clone_vats_improved_mech
+		has_active_building = building_clone_vats_advanced_mech
+		has_active_building = building_clone_vats_augmented_mech
+		# ACOT
+		has_active_building = building_fe_clone_vats
+		has_active_building = building_ae_clone_vats
+		# AOT
+		has_active_building = building_stellarite_clone_vats
+		has_active_building = building_phanon_clone_vats
+		# Additional Vanilla Buildings
+		has_active_building = building_avb_clone_vats_2
+		# Ancient Empire
+		has_active_building = ag_advanced_clone_vats
+		# Ascension - Biological Module
+		has_active_building = building_omega_cloning_vats
+		# Civic: Organic Zealots
+		has_active_building = building_clone_birth_labs
+		# Ethics and Civics Bug Branch
+		has_active_building = building_bugged_life_monastery
+		has_active_building = building_bugged_life_monastery_two
+		# EUTAB
+		has_active_building = building_eutab_adv_clone_vats
+		# Galaxius
+		has_active_building = building_ie_clone_vats
+		has_active_building = building_ie_spawning_pool
+		# Lithoid Supremacy
+		has_active_building = building_crystallization_facilities
+		has_active_building = building_ocean_spawning_pool
+		# Unavoidable Changes
+		has_active_building = building_volgan_clone_vats
+		# Wandering Witch: Voyagers
+		has_active_building = building_dimensional_instrument
+	}
+}
+
+merg_has_clone_army_building = {
+	OR = {
+		has_active_building = building_clone_army_clone_vat
+		# Galactic Imperium Origin
+		has_active_building = building_clone_guard_clone_vat
+		# AVB
+		has_active_building = building_avb_clone_army_clone_vat_2
+	}
+}
+
+merg_has_hospital = {
+	OR = {
+		has_active_building = building_clinic
+		has_active_building = building_hospital
+		# ACOT
+		has_active_building = building_fe_hospital
+		has_active_building = building_ae_hospital
+		# Ad Astra Technology Mod
+		has_active_building = building_medical_mega_facility
+		# AOT
+		has_active_building = building_phanon_hospital
+		has_active_building = building_stellarite_hospital
+		# Eutab
+		has_active_building = building_eutab_medigel_cultivator
+	}
+}
+
+merg_has_planetary_shield = {
+	OR = {
+		has_active_building = building_planetary_shield_generator
+		has_active_building = building_planetary_shield_generator_fe
+		# ACOT
+		has_active_building = building_dark_energy_psg
+		has_active_building = building_ae_dark_energy_psg
+		# AOT
+		has_active_building = building_phanon_psg
+		has_active_building = building_stellarite_psg
+		# AVB
+		has_active_building = building_avb_planetary_shield_generator_2
+		has_active_building = building_avb_planetary_shield_generator_3
+		has_active_building = building_avb_dark_matter_planetary_shield_generator
+		# Gigas
+		has_active_building = building_giga_planetary_shield_generator_1
+		has_active_building = building_giga_planetary_shield_generator_2
+		# More Events Mod
+		has_active_building = building_mem_planetary_shield_generator
+		has_active_building = building_mem_planetary_shield_generator_heavy
+		has_active_building = building_mem_planetary_shield_generator_orila
+		# Nirvana Empire Project
+		has_active_building = building_sky_shield
+		# Production Revolution
+		has_active_building = PR_BLDN_Army_sp_shield_T3
+		# Reworked Advanced Ascension
+		has_active_building = AAR_bldn_VEIL_shield_generator_T5
+		# Star Wars: Kuat Ancient Empire
+		has_active_building = building_kuat_shield
+		# ThaumStellaris
+		has_active_building = building_tc_rune_shield_t1
+		has_active_building = building_tc_rune_shield_t2
+		has_active_building = building_tc_rune_shield_t3
+	}
+}
+
+merg_has_minerals_building = {
+	OR = {
+		has_building = building_mineral_purification_plant
+		has_building = building_mineral_purification_hub
+	}
+}
+
+merg_has_energy_building = {
+	OR = {
+		has_building = building_energy_grid
+		has_building = building_energy_nexus
+        has_building = building_betharian_power_plant
+		has_building = building_waste_reprocessing_center
+		# Ancient Empire
+		has_building = ag_class_5_singularity
+		# APSR
+		has_building = apsr15_building_part21
+		has_building = apsr15_building_part31
+		has_building = apsr17_building_part1
+		has_building = apsr17_building_part2
+		has_building = apsr17_building_part3
+		has_building = apsr19_building_part_m1
+		has_building = apsr19_building_part_m2
+		has_building = apsr19_building_part_m3
+		# AVB
+		has_building = building_avb_betharian_power_plant_2
+		# EUTAB
+		eutab_has_generator_building = yes
+		# Plentiful Traditions
+		has_building = building_plentiful_traditions_trading_depot
+		# Wula Fallen Empire
+		has_building = building_wula_singularity
+	}
+}
+
+merg_has_food_building = {
+	OR = {
+		has_building = building_food_processing_facility
+		has_building = building_food_processing_center
+		has_building = building_hydroponics_farm
+		# APSR
+		has_building = apsr15_building_part32
+		has_building = apsr15_building_part33
+		has_building = apsr19_building_part_b1
+		has_building = apsr19_building_part_b2
+		has_building = apsr19_building_part_b3
+		# AVB
+		has_building = building_avb_hydroponics_farm_2
+		# EUTAB
+		eutab_has_farming_building = yes
+		# Production Revolution
+		has_building = PR_BLDN_Res_food_farm_T4
+		# Plentiful Traditions
+		has_building = building_plentiful_traditions_pillar_of_affliction
+		has_building = building_plentiful_traditions_advanced_pillar_of_affliction
+		# Wula Fallen Empire
+		has_building = building_wula_nourishment_center
+	}
+}
+
+merg_has_foundry_building = {
+	OR = {
+		has_active_building = building_foundry_1
+		has_active_building = building_foundry_2
+		has_active_building = building_foundry_3
+		has_active_building = building_nano_forge
+		# Warship Girls R and MIST Species
+		# ACOT
+		has_active_building = building_fe_alloy_forge
+		has_active_building = building_ae_alloy_forge
+		has_active_building = building_ae_nano_forge
+		# AOT
+		has_active_building = building_fe_nano_forge
+		has_active_building = building_phanon_nano_forge
+		has_active_building = building_phanon_alloy_forge
+		has_active_building = building_stellarite_nano_forge
+		has_active_building = building_stellarite_alloy_forge
+		# AVB
+		has_active_building = building_avb_foundry_4
+		has_active_building = building_avb_foundry_5
+		has_active_building = building_avb_foundry_6
+		# EDA
+		has_active_building = eda_building_alloy_foundry
+		# Protoss
+		has_active_building = protoss_building_bf
+		# Warship Girls R and MIST Species
+		has_active_building = building_sep_foundry
+		has_active_building = building_sep_foundry2
+		has_active_building = building_wsg_foundry
+		has_active_building = building_gray_nano_foundry
+		has_active_building = building_gray_nano_foundry2
+		has_active_building = building_sh_foundry
+		has_active_building = building_sh_foundryU
+		# Wula Fallen Empire
+		has_active_building = building_wula_foundry
+	}
+}
+
+merg_has_manufacturing_building = {
+	OR = {
+		has_active_building = building_factory_1
+		has_active_building = building_factory_2
+		has_active_building = building_factory_3
+		has_active_building = building_affluence_center
+		# ACOT
+		has_active_building = building_fe_factory
+		has_active_building = building_ae_factory
+		has_active_building = building_ae_affluence_center
+		# AOT
+		has_active_building = building_fe_affluence_center
+		has_active_building = building_phanon_affluence_center
+		has_active_building = building_phanon_civilian_factory
+		has_active_building = building_stellarite_affluence_center
+		# AVB
+		has_active_building = building_avb_factory_4
+		has_active_building = building_avb_factory_5
+		has_active_building = building_avb_factory_6
+		# EDA
+		has_active_building = eda_building_factory
+		# GPM
+		has_active_building = gpm_building_manufactory_hub
+		# Warship Girls R and MIST Species
+		has_active_building = building_sep_foundry
+		has_active_building = building_gray_nano_factory
+	}
+}
