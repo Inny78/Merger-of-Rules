@@ -35,6 +35,8 @@ cohesive_system = { always = no }
 compound_cluster = { always = no }
 diag_is_delicate = { always = no }
 diag_is_sterile = { always = no }
+do3f_is_habitable_asteroid = { always = no }
+do3f_is_habitable_barren = { always = no }
 ED_has_farming_district = { always = no }
 ED_has_generator_district = { always = no }
 ED_has_industry_district = { always = no }
@@ -188,6 +190,7 @@ is_cruel_mega = { always = no }
 is_dictatorial = { always = no }
 is_dimorphic_female = { always = no }
 is_dimorphic_male = { always = no }
+is_do3_active = { always = no }
 is_ds_ancient_ringworld = { always = no }
 is_ds_borg = { always = no }
 is_ds_constructor_ark = { always = no }

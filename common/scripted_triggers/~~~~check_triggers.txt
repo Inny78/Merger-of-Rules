@@ -59,6 +59,9 @@ merg_has_diag_fact = { has_global_flag = using_mod_dfactions }
 # Diagrapher's Trait Mod
 merg_has_diag_trait = { has_diagraphers_trait_mod = yes }
 
+# District Overhaul - FunEFork
+merg_has_district_ovfun = { is_do3_active = yes }
+
 # EDA
 merg_has_eda = { has_global_flag = eda_start }
 

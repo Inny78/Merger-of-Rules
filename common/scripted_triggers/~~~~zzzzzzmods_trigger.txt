@@ -401,6 +401,47 @@ ds_hyperlane_create = {
 	}
 }
 
+############################### District Overhaul - FunEFork ###############################
+do3f_is_hive_planet = { merg_is_hive_world = yes }
+do3f_is_machine_planet = { merg_is_machine_world = yes }
+do3f_is_ringworld = { merg_is_hab_ringworld = yes }
+do3f_is_habitable_structure = { OR = { merg_is_hab_ringworld = yes merg_is_habitat = yes } }
+do3f_can_have_random_districts = {
+	OR = {
+		merg_is_basic_habitable = yes
+		# Lithoid Supremacy
+		is_planet_class = pc_geode
+		# Real Space: New Frontiers
+		AND = {
+			has_global_flag = has_new_frontiers_mod
+			OR = {
+				is_planet_class = pc_tidallylocked
+				is_planet_class = pc_sterile
+				is_planet_class = pc_hollow
+			}
+		}
+		can_have_habitable_deposits = yes
+	}
+	NOR = {
+		# Planetary Ringworlds
+		is_planetary_ringworld = yes
+		is_planetary_ringworld_city = yes
+		is_planetary_ringworld_hive = yes
+		is_planetary_ringworld_machine = yes
+		do3f_is_habitable_asteroid = yes
+		do3f_is_habitable_barren = yes
+	}
+}
+do3f_can_have_random_housing_districts = {
+	do3f_can_have_random_districts = yes
+	NOR = {
+		# Vanilla
+		merg_is_habitat = yes
+		merg_is_arcology = yes
+		merg_is_hab_ringworld = yes
+	}
+}
+
 ############################### Dynamic Political Events ###############################
 cc_has_happiness = { merg_has_happiness = yes }
 

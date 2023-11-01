@@ -847,6 +847,12 @@ has_research_building = {
 		has_district = district_bdoe_502_university
 		# Decadence of Sanity
 		has_district = district_shroud_research
+		# District Overhaul - FunEFork
+		has_district = district_501_nature_reserve
+		has_district = district_501_research_complex
+		has_district = district_501_scrapyard
+		has_district = district_02_workshops
+		has_district = district_02_university
 		# EDA
 		has_building = eda_building_research_lab
 		# EUTAB
@@ -862,8 +868,6 @@ has_research_building = {
 		has_building = building_kancolle_yubari_research2
 		has_building = building_kancolle_yubari_research3
 		# More Standard Districts
-		has_district = district_hab_science
-		has_district = district_rw_science
 		has_district = district_standard_cm_science
 		# Planetary Diversity
 		has_building = building_storm_lab
@@ -913,9 +917,9 @@ has_any_industry_district = {
         has_district = district_rw_industrial
         has_district = district_arcology_arms_industry
         has_district = district_arcology_civilian_industry
-		# Buildings and Districts Overhaul and Expansion
-		has_district = district_bdoe_502_local_industry
-		has_district = district_bdoe_502_production_hub
+		# District Overhaul - FunEFork
+		has_district = district_02_local_industry
+		has_district = district_02_production_hub
 		# Extra Districts
 		ED_has_industry_district = yes
 		# Gigastructures
@@ -970,14 +974,14 @@ has_any_farming_district_or_buildings = {
 		has_building = apsr19_building_part_b3
 		# AVB
 		has_building = building_avb_hydroponics_farm_2
-		# Buildings and Districts Overhaul and Expansion
-		has_district = district_bdoe_05_nature_farms
-		has_district = district_bdoe_05_ocean_farms
-		has_district = district_bdoe_05_exotic_farms
-		has_district = district_bdoe_05_oasis_farms
-		has_district = district_bdoe_05_cave_farms
-		has_district = district_bdoe_05_industrial_farms
-		has_district = district_bdoe_502_hydroponic_bay
+		# District Overhaul - FunEFork
+		has_district = district_05_nature_farms
+		has_district = district_05_ocean_farms
+		has_district = district_05_exotic_farms
+		has_district = district_05_oasis_farms
+		has_district = district_05_cave_farms
+		has_district = district_05_industrial_farms
+		has_district = district_02_hydroponic_bay
 		# EUTAB
 		eutab_has_farming_building = yes
 		# Extra Districts
@@ -1005,15 +1009,15 @@ has_any_mining_district = {
         has_district = district_mining
         has_district = district_hab_mining
         has_district = district_mining_uncapped
-		# Buildings and Districts Overhaul and Expansion
-		has_district = district_bdoe_04_unstable_mining
-		has_district = district_bdoe_04_stable_mining
-		has_district = district_bdoe_04_surface_mining
-		has_district = district_bdoe_04_deep_mining
-		has_district = district_bdoe_04_mountain_mining
-		has_district = district_bdoe_501_rw_asteroid_belt_mining
 		# Decadence of Sanity
 		has_district = district_shroud_resource
+		# District Overhaul - FunEFork
+		has_district = district_04_unstable_mining
+		has_district = district_04_stable_mining
+		has_district = district_04_surface_mining
+		has_district = district_04_deep_mining
+		has_district = district_04_mountain_mining
+		has_district = district_501_rw_asteroid_belt_mining
 		# Extra Districts
 		ED_has_mining_district = yes
 		# Gigastructures
@@ -1053,16 +1057,16 @@ has_any_generator_district_or_building = {
 		has_building = apsr19_building_part_m3
 		# AVB
 		has_building = building_avb_betharian_power_plant_2
-		# Buildings and Districts Overhaul and Expansion
-		has_district = district_bdoe_03_fusion_generator
-		has_district = district_bdoe_03_fossil_fuel_generator
-		has_district = district_bdoe_03_wind_turbines
-		has_district = district_bdoe_03_geothermal_generator
-		has_district = district_bdoe_03_solar_generator
-		has_district = district_bdoe_03_tidal_generator
-		has_district = district_bdoe_03_biomass_generator
 		# Decadence of Sanity
 		has_district = district_shroud_resource
+		# District Overhaul - FunEFork
+		has_district = district_06_fusion_generator
+		has_district = district_06_fossil_fuel_generator
+		has_district = district_06_wind_turbines
+		has_district = district_06_geothermal_generator
+		has_district = district_06_solar_generator
+		has_district = district_06_tidal_generator
+		has_district = district_06_biomass_generator
 		# EUTAB
 		eutab_has_generator_building = yes
 		# Extra Districts

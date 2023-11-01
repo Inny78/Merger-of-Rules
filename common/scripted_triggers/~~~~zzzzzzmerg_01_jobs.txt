@@ -202,6 +202,13 @@ has_sr_producing_job = {
 		has_job = translucer_drone
 		# ACOT
 		has_job = acot_transmute_drone
+		# District Overhaul - FunEFork
+		has_job = 02_exotic_resource_collector
+		has_job = 02_exotic_resource_collection_drone
+		has_job = 02_siphon_pilot
+		has_job = 02_siphon_pilot_drone
+		has_job = 02_crystal_grower
+		has_job = 02_crystal_growing_drone
 	}
 }
 
@@ -234,6 +241,22 @@ has_research_job = {
 		has_job = stellarite_researcher_drone
 		has_job = stellarite_priest
 		has_job = stellarite_bureaucrat
+		# District Overhaul - FunEFork
+		has_job = 02_teacher
+		has_job = 02_engineer
+		has_job = 02_park_ranger
+		has_job = 02_physicist
+		has_job = 02_ecosystem_researcher
+		has_job = 02_biolumen_researcher
+		has_job = 02_technoorganic_researcher
+		has_job = 02_engineering_drone
+		has_job = 02_nature_research_drone
+		has_job = 02_experimental_drone
+		has_job = 02_ecosystem_researcher_drone
+		has_job = 02_biolumen_researcher_drone
+		has_job = 02_technoorganic_researcher_drone
+		has_job = 02_dark_matter_researcher
+		has_job = 02_dark_matter_brain_drone
 		# GPM
 		has_job = gpm_archaeologist
 		has_job = gpm_archaeologist_drone
