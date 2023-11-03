@@ -2502,7 +2502,10 @@ ai_should_restrict_system = {
 		AND = {
 			root = {
 				OR = {
-					is_crisis_faction = yes
+					AND = {
+						is_crisis_faction = yes
+						is_blokkat_country_type = no
+					}
 					merg_is_awakened_fe = yes
 				}
 			}
@@ -2593,7 +2596,10 @@ ai_should_restrict_system = {
 			merg_has_deadly_tempest = yes
 			root = {
 				OR = {
-					is_crisis_faction = yes
+					AND = {
+						is_crisis_faction = yes
+						is_blokkat_country_type = no
+					}
 					has_country_flag = pike_assisted_ai
 				}
 			}

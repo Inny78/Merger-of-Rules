@@ -724,7 +724,7 @@ can_destroy_planet_with_ag_ancient_alpha_planet_killer_weapon = {
 	custom_tooltip = {
 		fail_text = "is_not_hostile"
 		OR = {
-			planet_is_hostile_or_crisis = yes
+			merg_planet_is_hostile_or_crisis = yes
 			AND = {
 				exists = owner
 				owner = { is_country_type = primitive }
@@ -851,8 +851,33 @@ can_destroy_planet_with_PLANET_KILLER_APSR_INATOR = {
 			has_modifier = apsr_uninfected_candidate
 		}
 	}
-}	
+}
 
+############################### Archaeology Story Pack ###############################
+can_destroy_planet_with_PLANET_KILLER_GEOCENTRIC_DEVICE = {
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		merg_is_forbidden_target = no
+		OR = {
+			is_a_habitable_planet_megastructure = yes
+			is_planet_class = pc_ai
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_not_hostile_or_primitive
+		OR = {
+			merg_planet_is_hostile_or_crisis = yes
+			AND = {
+				exists = owner
+				owner = { is_country_type = primitive }
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		merg_is_shielded = no
+	}
+}
 ############################### Arknights Near Future ###############################
 can_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = {
 	custom_tooltip = {
