@@ -218,8 +218,6 @@ is_crisis_faction = {
 		# Cruel Conquerers
 		is_cruel_abomination_country_type = yes
 		# Gigastructural Engineering & More
-		is_country_type = katzenartig_imperium
-		is_country_type = dormant_aeternum
 		is_giga_crisis_faction = yes
 		# Destiny: The Darkness Crisis
 		is_country_type = darkness_country

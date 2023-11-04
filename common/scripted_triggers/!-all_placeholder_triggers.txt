@@ -288,6 +288,7 @@ is_pd_aquatics = { always = no }
 is_pd_arcology = { always = no }
 is_pd_arctic = { always = no }
 is_pd_arid = { always = no }
+is_pd_aw_wasteland_planet = { always = no }
 is_pd_barren = { always = no }
 is_pd_barren_cold = { always = no }
 is_pd_cave = { always = no }
