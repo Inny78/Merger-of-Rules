@@ -158,6 +158,8 @@ merg_is_frozen = {
 		is_planet_class = pc_ark_frozen
 		# Endless Frontier
 		is_mzilli_rogue = yes
+		# Planetary Diversity
+		is_pd_frozen = yes
 	}
 }
 
@@ -166,6 +168,8 @@ merg_is_gaia = {
 		merg_is_gaia_basic = yes
 		# Azur Lane
 		uses_district_set = azur_gaia
+		# Nanite Machine and Distant Stars Overhaul
+		is_nanite_gaia = yes
 		# Pokémon
 		uses_district_set = EOE_pokemon_world
 		# ZOFE
@@ -178,8 +182,6 @@ merg_is_gaia_basic = {
 		is_planet_class = pc_gaia
 		# All These Worlds
 		atw_is_gaia = yes
-		# Nanite Machine and Distant Stars Overhaul
-		is_nanite_gaia = yes
 		# Planetary Diversity
 		is_pd_gaia = yes
 		pd_is_planet_class_gaia = yes

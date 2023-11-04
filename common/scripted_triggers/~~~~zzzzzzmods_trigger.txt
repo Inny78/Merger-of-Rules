@@ -1947,13 +1947,12 @@ is_zofe_compatible = {
 	optimize_memory
 	merg_is_default_empire = yes
 }
-is_zofe_megacorp = {
-	optimize_memory
-	is_zofe_country = yes
-	OR = {
-		is_megacorp = yes
-		# Forgotten Queens
-		has_valid_civic = civic_mutualistic_behavior
-		has_valid_civic = civic_machine_trading
-	}
+
+############################### Zer0's Infinity Stones ###############################
+valid_to_recieve_infinity_stone = {
+	merg_is_default_empire = yes
+	is_subject = no
+}
+zero_is_targetable_empire_for_random_effects = {
+	is_default_or_fallen = yes
 }
