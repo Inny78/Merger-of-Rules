@@ -1229,6 +1229,19 @@ is_appropriate_planet_state_system = {
 	}
 }
 
+############################### WP's Planetary Features Expanded ###############################
+planetary_feature_expansion_is_arid = { merg_is_arid = yes }
+planetary_feature_expansion_is_savannah = { merg_is_savannah = yes }
+planetary_feature_expansion_is_desert = { merg_is_desert = yes }
+planetary_feature_expansion_is_alpine = { merg_is_alpine = yes }
+planetary_feature_expansion_is_arctic = { merg_is_arctic = yes }
+planetary_feature_expansion_is_tundra = { merg_is_tundra = yes }
+planetary_feature_expansion_is_continental = { merg_is_continental = yes }
+planetary_feature_expansion_is_tropical = { merg_is_tropical = yes }
+planetary_feature_expansion_is_ocean = { merg_is_ocean = yes }
+planetary_feature_expansion_is_nuked = { merg_is_nuked_basic = yes }
+planetary_feature_expansion_is_gaia = { merg_is_gaia_basic = yes }
+
 ############################### Precursor Story Pack ###############################
 pspmod_sless_digsite_spawn_rules = {
 	exists = star
