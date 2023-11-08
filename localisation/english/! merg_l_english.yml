@@ -1,5 +1,26 @@
 ﻿# Irony this is a placeholder file please ignore it
 l_english:
+
+# Buildings
+ building_dark_energy_psg: "Dark Energy Planetary Shield Generator"
+ building_ae_dark_energy_psg: "Sky Shield"
+ building_phanon_psg: "Planetary Runic Shield Generator"
+ building_stellarite_psg: "Planetary Transtemporal Shield Generator"
+ building_avb_planetary_shield_generator_2: "Planetary Defense Screen"
+ building_avb_planetary_shield_generator_3: "Planetary Antimatter Screen"
+ building_avb_dark_matter_planetary_shield_generator: "Dark Matter Planetary Shields"
+ building_giga_planetary_shield_generator_1: "Hypershield Defensive Screen"
+ building_giga_planetary_shield_generator_2: "Negative Mass Protector"
+ building_mem_planetary_shield_generator: "Planetary Shield Generator"
+ building_mem_planetary_shield_generator_heavy: "Planetary Barrier Shield Generator"
+ building_mem_planetary_shield_generator_orila: "Planetary Precursor Shield Generator"
+ building_sky_shield: "Sky Shield"
+ AAR_bldn_VEIL_shield_generator_T5: "Iron Veil Facility"
+ building_kuat_shield: "Kuat Planet Shield"
+ building_tc_rune_shield_t1: "§1Planetary Rune Shield§!"
+ building_tc_rune_shield_t2: "§RStrength§! §1Planetary Rune Shield§!"
+ building_tc_rune_shield_t3: "§MVoid§! §1Planetary Rune Shield§!"
+
 # Civics
  civic_anarchy_ideals: "Anarchist Ideals"
  civic_beacon_of_liberty_corpo: "Spirit of Freedom"

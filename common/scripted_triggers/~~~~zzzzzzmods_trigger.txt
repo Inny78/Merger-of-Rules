@@ -395,7 +395,6 @@ ds_hyperlane_create = {
 		has_star_flag = fe_xeno_zoo	
 		has_star_flag = fallen_shield_world
 		has_star_flag = fallen_empire_world
-		has_star_flag = surveillance_supercomputer_system
 		merg_is_isolated_system = yes
 		giga_is_core_system = yes
 		cohesive_system = yes
@@ -1220,6 +1219,7 @@ is_appropriate_planet_state_system = {
 		has_star_flag = marauder_system
 		has_star_flag = caravaneer_home
 		has_star_flag = primitive_system
+		has_star_flag = chosen_system
 		merg_is_void_system = yes
 		has_special_star_flag_trigger = yes
 	}
