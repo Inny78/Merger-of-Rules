@@ -886,6 +886,69 @@ has_ascended_capital = {
 	}	
 }
 
+has_phanon_capital = {
+	if = {
+		limit = {
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_building_phanon_capital_hive"
+			OR = {
+				has_building = building_imperial_hive_capital
+				has_building = building_eternal_palace
+				has_building = building_phanon_tower
+				has_building = building_phanon_hive_cluster
+				has_building = building_stellarite_hive_cluster
+				# EDA
+				has_building = eda_building_imperial_capital
+				# GALACOT
+				has_building = building_stellarite_galactic_hive_capital
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_building_phanon_capital_machine"
+			OR = {
+				has_building = building_imperial_machine_capital
+				has_building = building_eternal_palace
+				has_building = building_phanon_tower
+				has_building = building_phanon_control_center
+				has_building = building_stellarite_control_center
+				# EDA
+				has_building = eda_building_imperial_capital
+				# GALACOT
+				has_building = building_stellarite_galactic_machine_capital
+			}
+		}
+	}
+	else = {
+		custom_tooltip = {
+			fail_text = "requires_building_phanon_capital"
+			OR = {
+				has_building = building_imperial_capital
+				has_building = building_eternal_palace
+				has_building = building_phanon_tower
+				has_building = building_phanon_palace
+				has_building = building_stellarite_palace
+				# EDA
+				has_building = eda_building_imperial_capital
+				# GALACOT
+				has_building = building_stellarite_galactic_capital
+				has_building = building_stellarite_galactic_hive_capital
+				has_building = building_stellarite_galactic_machine_capital
+			}
+		}
+	}
+}
+
 # AOT/Twinks/galacot/Eternals
 has_stellarite_capital = {
 	if = {
