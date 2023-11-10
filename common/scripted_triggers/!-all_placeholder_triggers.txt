@@ -1,4 +1,5 @@
 # Irony this is a placeholder file please ignore it
+acot_has_planetary_shield_building = { always = no }
 acot_is_uniquely_affected_by_cascade = { always = no }
 ag_can_be_orbital_bombardment_country = { always = no }
 ag_can_do_orbital_bombardment_country = { always = no }

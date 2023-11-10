@@ -138,6 +138,7 @@ acot_is_not_affected_by_cascade = {
 		is_sots_soulsphere = yes
     }
 }
+acot_has_planetary_shield_building = { merg_has_planetary_shield = yes }
 
 ############################### All these worlds ###############################
 is_fallen_empire_planet = {
