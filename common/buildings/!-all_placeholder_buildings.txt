@@ -1,5 +1,6 @@
 # Irony this is a placeholder file please ignore it
 AAR_bldn_VEIL_shield_generator_T5 = { potential = { always = no } allow = { always = no } }
+ADF_building_PGF_0547 = { potential = { always = no } allow = { always = no } }
 ag_advanced_clone_vats = { potential = { always = no } allow = { always = no } }
 ag_ancient_fortress = { potential = { always = no } allow = { always = no } }
 ag_ancient_fortress_corp = { potential = { always = no } allow = { always = no } }

@@ -72,37 +72,38 @@ merg_has_hospital = {
 
 merg_has_planetary_shield = {
 	OR = {
-		has_active_building = building_planetary_shield_generator
-		has_active_building = building_planetary_shield_generator_fe
+		has_building = building_planetary_shield_generator # -0.5
 		# ACOT
-		has_active_building = building_dark_energy_psg
-		has_active_building = building_ae_dark_energy_psg
+		has_building = building_dark_energy_psg # -0.7
+		has_building = building_ae_dark_energy_psg # -0.95
 		# AOT
-		has_active_building = building_phanon_psg
-		has_active_building = building_stellarite_psg
+		has_building = building_phanon_psg # -0.99
+		has_building = building_stellarite_psg # -1
+		# AshArms Aquarius History
+		has_building = ADF_building_PGF_0547 # -5.5
 		# AVB
-		has_active_building = building_avb_planetary_shield_generator_2
-		has_active_building = building_avb_planetary_shield_generator_3
-		has_active_building = building_avb_dark_matter_planetary_shield_generator
+		has_building = building_avb_planetary_shield_generator_2 # -0.65
+		has_building = building_avb_planetary_shield_generator_3 # -0.85
+		has_building = building_avb_dark_matter_planetary_shield_generator # -0.95
 		# Gigas
-		has_active_building = building_giga_planetary_shield_generator_1
-		has_active_building = building_giga_planetary_shield_generator_2
+		has_building = building_giga_planetary_shield_generator_1 # -0.6
+		has_building = building_giga_planetary_shield_generator_2 # -0.7
 		# More Events Mod
-		has_active_building = building_mem_planetary_shield_generator
-		has_active_building = building_mem_planetary_shield_generator_heavy
-		has_active_building = building_mem_planetary_shield_generator_orila
+		has_building = building_mem_planetary_shield_generator # -0.5
+		has_building = building_mem_planetary_shield_generator_heavy # -0.6
+		has_building = building_mem_planetary_shield_generator_orila # -0.7
 		# Nirvana Empire Project
-		has_active_building = building_sky_shield
-		# Production Revolution
-		has_active_building = PR_BLDN_Army_sp_shield_T3
+		has_building = building_sky_shield # -1
 		# Reworked Advanced Ascension
-		has_active_building = AAR_bldn_VEIL_shield_generator_T5
+		has_building = AAR_bldn_VEIL_shield_generator_T5 # -0.35
 		# Star Wars: Kuat Ancient Empire
-		has_active_building = building_kuat_shield
+		has_building = building_kuat_shield # -1
 		# ThaumStellaris
-		has_active_building = building_tc_rune_shield_t1
-		has_active_building = building_tc_rune_shield_t2
-		has_active_building = building_tc_rune_shield_t3
+		has_building = building_tc_rune_shield_t1 # -0.5
+		has_building = building_tc_rune_shield_t2 # -0.7
+		has_building = building_tc_rune_shield_t3 # -0.9
+		# The Storm Cluster
+		has_building = building_planetary_shield_generator_fe # -0.5
 	}
 }
 
