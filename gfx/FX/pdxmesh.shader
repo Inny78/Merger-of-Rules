@@ -6,6 +6,7 @@ Includes = {
 	"shadow.fxh"
 	"tiled_pointlights.fxh"
 	"pdxmesh_samplers.fxh"
+	"pdxmesh_astral_rift.fxh"
 	"pdxmesh_ship.fxh"
 	"aot_shaders.fxh"
 	"giga_shaders.fxh"
@@ -40,7 +41,7 @@ ConstantBuffer( VFXConstants, 1, 28 )
 	#SGameShipConstants
 	float4 PrimaryColor;
 	float vEmissiveRecolorCrunch;
-	float vDamage;
+    float vDamage;
 
 	float2		WPODirection;
 	float		WPOSpeed;
@@ -263,47 +264,47 @@ VertexShader =
 	[[
 		VS_OUTPUT_PDXMESHSTANDARD main( const VS_INPUT_PDXMESHSTANDARD v )
 		{
-	VS_OUTPUT_PDXMESHSTANDARD Out;
+			VS_OUTPUT_PDXMESHSTANDARD Out;
 
-	float scale = WPOScale;
-	float bigScale = WPOBigScale;
-	float speed = WPOSpeed;
-	float2 direction = WPODirection;
+			float scale = WPOScale;
+			float bigScale = WPOBigScale;
+			float speed = WPOSpeed;
+			float2 direction = WPODirection;
 
-	float2 scrollingSpeed = WPOTime * speed * normalize( direction );
+			float2 scrollingSpeed = WPOTime * speed * normalize( direction );
 
-	float2 scrollingUV = v.vUV0 * bigScale + scrollingSpeed;
-	float2 scrollingUVSmall = v.vUV0 * scale + ( scrollingSpeed * 0.9f );
+			float2 scrollingUV = v.vUV0 * bigScale + scrollingSpeed;
+			float2 scrollingUVSmall = v.vUV0 * scale + ( scrollingSpeed * 0.9f );
 
-	float4 WPOMask = tex2Dlod0( WPOTexture, v.vUV0 );
-	float4 vWPOSpeed = tex2Dlod0( WPOTexture, scrollingUV );
-	float4 vWPOSpeedSmall = tex2Dlod0( WPOTexture, scrollingUVSmall );
-	float offsetStrength = OffsetStrength;
+			float4 WPOMask = tex2Dlod0( WPOTexture, v.vUV0 );
+			float4 vWPOSpeed = tex2Dlod0( WPOTexture, scrollingUV );
+			float4 vWPOSpeedSmall = tex2Dlod0( WPOTexture, scrollingUVSmall );
+			float offsetStrength = OffsetStrength;
 
-	float3 offset = ( offsetStrength * ( ( ( vWPOSpeed.y - 0.5f ) * 2.0f) * ( ( vWPOSpeedSmall.z - 0.5f ) * 2.0f ) ) * WPOMask.x ) * v.vNormal;
+			float3 offset = ( offsetStrength * ( ( ( vWPOSpeed.y - 0.5f ) * 2.0f) * ( ( vWPOSpeedSmall.z - 0.5f ) * 2.0f ) ) * WPOMask.x ) * v.vNormal;
 
-	float4 vPosition = float4( v.vPosition.xyz + offset, 1.0f );
+			float4 vPosition = float4( v.vPosition.xyz + offset, 1.0f );
 
-	Out.vSphere = float4( v.vPosition, 1.0f );
-	Out.vNormal = normalize( mul( CastTo3x3( WorldMatrix ), v.vNormal ) );
+			Out.vSphere = float4( v.vPosition, 1.0f );
+			Out.vNormal = normalize( mul( CastTo3x3( WorldMatrix ), v.vNormal ) );
 
 #ifdef IS_STAR
-	Out.vTangent = normalize( v.vPosition.xyz ); //Use tangent for position
+			Out.vTangent = normalize( v.vPosition.xyz ); //Use tangent for position
 #else
-	Out.vTangent = normalize( mul( CastTo3x3( WorldMatrix ), v.vTangent.xyz ) );
+			Out.vTangent = normalize( mul( CastTo3x3( WorldMatrix ), v.vTangent.xyz ) );
 #endif
-	Out.vBitangent = normalize( cross( Out.vNormal, Out.vTangent ) * v.vTangent.w );
+			Out.vBitangent = normalize( cross( Out.vNormal, Out.vTangent ) * v.vTangent.w );
 
-	Out.vPosition = mul( WorldMatrix, vPosition );
+			Out.vPosition = mul( WorldMatrix, vPosition );
 
-	Out.vPos = Out.vPosition;
-	Out.vPosition = mul( ViewProjectionMatrix, Out.vPosition );
+			Out.vPos = Out.vPosition;
+			Out.vPosition = mul( ViewProjectionMatrix, Out.vPosition );
 
-	Out.vUV0 = v.vUV0;
+			Out.vUV0 = v.vUV0;
 #ifdef PDX_MESH_UV1
-	Out.vUV1 = v.vUV1;
+			Out.vUV1 = v.vUV1;
 #else
-	Out.vUV1 = v.vUV0;
+			Out.vUV1 = v.vUV0;
 #endif
 
 			Out.vObjectNormal = Out.vNormal;
@@ -565,7 +566,7 @@ PixelShader =
 		float4 main( VS_OUTPUT_PDXMESHSTANDARD In ) : PDX_COLOR
 		{
 			const float MAX_BUILDINGS_FOR_NIGHT_LIGHTS = 14;
-
+		
 			float3 vPos = In.vPos.xyz / In.vPos.w;
 
 			LightingProperties lightingProperties;
@@ -595,14 +596,14 @@ PixelShader =
 			vDiffuse = lerp( vDiffuse, vDiffuseOffset, blendValue );
 		#else
 			float4 vDiffuse = tex2D( DiffuseMap, In.vUV0 + vUVAnimationDir * vUVAnimationTime );
-		#ifdef IS_CLOUDS
-			// Clip clouds at planet limit
-			clip( saturate( dot( vInNormal, lightingProperties._ToCameraDir ) ) - 0.27f );
+			#ifdef IS_CLOUDS
+				// Clip clouds at planet limit
+				clip( saturate( dot( vInNormal, lightingProperties._ToCameraDir ) ) - 0.27f );
 
 				// Bend normals for clouds to reduce edge
 				float3 vSystemLightDir = normalize( systemPointlight._Position - vPos );
 				vInNormal = normalize( lerp( vInNormal, vSystemLightDir, 0.01f + 0.10f * vDiffuse.a ) );
-		#endif
+			#endif
 			float3x3 TBN = Create3x3( normalize( In.vTangent ), normalize( In.vBitangent ), vInNormal );
 			float3 vNormalSample = UnpackRRxGNormal( vNormalMap );
 			float3 vNormal = normalize( mul( vNormalSample, TBN ) );
@@ -619,13 +620,13 @@ PixelShader =
 			clip(vDiffuse.a - 1.0);
 		#endif
 
-		float alpha = vDiffuse.a;
-
+			float alpha = vDiffuse.a;
+	
 			lightingProperties._Glossiness = vProperties.a;
-			lightingProperties._NonLinearGlossiness = GetNonLinearGlossiness(lightingProperties._Glossiness);
+			lightingProperties._NonLinearGlossiness = GetNonLinearGlossiness( lightingProperties._Glossiness );
 			lightingProperties._Normal = vNormal;
 
-		float vCubemapIntensity = CubemapIntensity;
+			float vCubemapIntensity = CubemapIntensity;
 
 		#ifdef EMISSIVE
 			float vEmissive = vNormalMap.b;
@@ -646,16 +647,16 @@ PixelShader =
 
 			float3 vColor = vDiffuse.rgb;
 		#ifndef ADD_COLOR //Adds empire/atmosphere color to parts of mesh, depending on mask
-				if( AtmosphereColor.a > 0.0f )
-				{
-			#endif
-					 // Gamma - Linear ping pong
-					 // All content is already created for gamma space math, so we do this in gamma space
-					vColor = ToGamma(vColor);
-					vColor = ToLinear(lerp( vColor, vColor * ( vProperties.r * AtmosphereColor.rgb ), vProperties.r ));
-			#ifndef ADD_COLOR
-				}
-			#endif
+			if( AtmosphereColor.a > 0.0f )
+			{
+		#endif
+				// Gamma - Linear ping pong
+				// All content is already created for gamma space math, so we do this in gamma space
+				vColor = ToGamma(vColor);
+				vColor = ToLinear(lerp( vColor, vColor * ( vProperties.r * AtmosphereColor.rgb ), vProperties.r ));
+		#ifndef ADD_COLOR
+			}
+		#endif
 
 			float SpecRemapped = vProperties.g * vProperties.g * 0.4;
 			float MetalnessRemapped = 1.0 - (1.0 - vProperties.b) * (1.0 - vProperties.b);
@@ -671,18 +672,18 @@ PixelShader =
 
 		#ifdef EMISSIVE
 			#ifndef IS_RING
-			#ifndef NO_PLANET_EMISSIVE
-				#ifdef IS_PLANET
-					// Emissive only on dark side of planets
-					float3 vSystemLightDir = normalize( systemPointlight._Position - lightingProperties._WorldSpacePos );
-					float NdotL = saturate( saturate( dot( vInNormal, -vSystemLightDir ) - 0.05f ) * 5.0f );
+				#ifndef NO_PLANET_EMISSIVE
+					#ifdef IS_PLANET
+						// Emissive only on dark side of planets
+						float3 vSystemLightDir = normalize( systemPointlight._Position - lightingProperties._WorldSpacePos );
+						float NdotL = saturate( saturate( dot( vInNormal, -vSystemLightDir ) - 0.05f ) * 5.0f );
 
-					float vDarksideEmissive = 1.0f - saturate( length( diffuseLight + specularLight ) );
-					vEmissive *= vDarksideEmissive * vProperties.r * NdotL;
+						float vDarksideEmissive = 1.0f - saturate( length( diffuseLight + specularLight ) );
+						vEmissive *= vDarksideEmissive * vProperties.r * NdotL;
 
-					vCubemapIntensity *= ( 1.0f - vDarksideEmissive ) / 2.0f;
+						vCubemapIntensity *= ( 1.0f - vDarksideEmissive ) / 2.0f;
+					#endif
 				#endif
-			#endif
 			#endif
 		#endif
 
@@ -699,20 +700,20 @@ PixelShader =
 			vColor = lerp( vColor, vDiffuse.rgb, vEmissive );
 
 			#ifndef IS_RING
-			#ifndef NO_PLANET_EMISSIVE
-				#ifdef IS_PLANET
+				#ifndef NO_PLANET_EMISSIVE
+					#ifdef IS_PLANET
 
-					float4 vCityColor = tex2D( CustomTexture, In.vUV0 );
-					float vLights = ( Colonized / MAX_BUILDINGS_FOR_NIGHT_LIGHTS );
+						float4 vCityColor = tex2D( CustomTexture, In.vUV0 );
+						float vLights = ( Colonized / MAX_BUILDINGS_FOR_NIGHT_LIGHTS );
 
-					float vBrightness = vDarksideEmissive * vProperties.r * dot( vCityColor.rgb, vec3( 0.5 ) );
-					const float NUM_STEPS = 4;
-					vLights = floor( ( 0.99f / NUM_STEPS + vLights ) * NUM_STEPS ) / (NUM_STEPS-1);
-					vBrightness *= saturate( ( vLights - (1.f-vCityColor.a) ) * NUM_STEPS );
-					vColor = saturate( vColor + vCityColor.rgb * vBrightness );
-					vEmissive = max( vEmissive, vBrightness );
+						float vBrightness = vDarksideEmissive * vProperties.r * dot( vCityColor.rgb, vec3( 0.5 ) );
+						const float NUM_STEPS = 4;
+						vLights = floor( ( 0.99f / NUM_STEPS + vLights ) * NUM_STEPS ) / (NUM_STEPS-1);
+						vBrightness *= saturate( ( vLights - (1.f-vCityColor.a) ) * NUM_STEPS );
+						vColor = saturate( vColor + vCityColor.rgb * vBrightness );
+						vEmissive = max( vEmissive, vBrightness );
+					#endif
 				#endif
-			#endif
 			#endif
 
 			#ifndef GUI_ICON
@@ -759,9 +760,9 @@ PixelShader =
 		#endif
 
 		#ifndef IS_RING
-		#ifdef IS_PLANET
-			vColor.rgb = ApplyPlanetDissolve( AtmosphereColor.rgb, vColor.rgb, In.vNormal, In.vUV0, vPlanetDissolveTime );
-		#endif
+			#ifdef IS_PLANET
+				vColor.rgb = ApplyPlanetDissolve( AtmosphereColor.rgb, vColor.rgb, In.vNormal, In.vUV0, vPlanetDissolveTime );
+			#endif
 		#endif
 
 			return float4(vColor, alpha);
@@ -1209,7 +1210,7 @@ PixelShader =
 	]]
 
 	MainCode PixelPdxMeshPortrait
-		ConstantBuffers = { PortraitCommon, TwelthKind }
+		ConstantBuffers = { PortraitCommon, EigthKind }
 	[[
 		float4 main( VS_OUTPUT_PDXMESHSTANDARD In ) : PDX_COLOR
 		{
@@ -1227,6 +1228,24 @@ PixelShader =
 					else
 						vDiffuse = tex2Dlod( DiffuseMap, UVLod );
 				#endif
+			#endif
+
+			#ifdef FLOWMAP
+				float4 vFlow = tex2D( NormalMap, In.vUV0 );
+				vFlow.xy = ( ( vFlow.xy - 0.5f ) * 2.0f ) * FlowMapIntensity * vFlow.z;
+
+				float2 flowUVs = UVLod.xy + ( vFlow.xy * frac( vUVAnimationTime ) );
+				float2 offsetFlowUVs = UVLod.xy + ( vFlow.xy * frac( vUVAnimationTime + 0.5f ) );
+
+				float4 vEffect = tex2Dlod( SpecularMap, float4( flowUVs.xy, UVLod.zw ) );
+				float4 vEffectOffset = tex2Dlod( SpecularMap, float4( offsetFlowUVs.xy, UVLod.zw ) );
+
+				float blendValue = abs( ( frac( vUVAnimationTime ) * 2.0f ) - 1.0f );
+				float4 blendEffect = lerp( vEffect, vEffectOffset, blendValue );
+
+				float4 finalPixel = lerp( vDiffuse, blendEffect, vFlow.b );
+
+				return float4( ToGamma( finalPixel.rgb ), finalPixel.a );
 			#endif
 
 			return float4( ToGamma( vDiffuse.rgb ), vDiffuse.a );
@@ -1823,10 +1842,10 @@ Effect PdxMeshPortraitAnimateUV
 Effect PdxMeshPortraitAnimateUVSkinned
 {
 	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
-	PixelShader = "PixelPdxMeshPortraitAnimateUV"
+	PixelShader = "PixelPdxMeshPortrait"
 	BlendState = "BlendStateAlphaBlendWriteAlpha"
 	DepthStencilState = "DepthStencilNoZ"
-	Defines = { "ANIMATE_UV" }
+	Defines = { "FLOWMAP" }
 }
 
 Effect PdxMeshAlphaAdditiveAnimateUV
@@ -2556,7 +2575,6 @@ Effect AlphaBlendNoDepth_00ConstructionAlphaBlendSkinned
 	defines = { BLEND_TO_DIFFUSE_ALPHA }
 }
 
-
 Effect PdxMeshTerraAlphaTest
 {
 	VertexShader = "VertexPdxMeshStandard"
@@ -2771,6 +2789,20 @@ Effect PdxMeshRingsSkinned
 	PixelShader = "PixelPdxMeshStandard"
 	BlendState = "BlendStateAlphaBlend";
 	Defines = { "IS_PLANET" "IS_RING"  }
+}
+
+Effect PdxMeshAstralRift
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshAstralRift"
+	BlendState = "BlendStateAlphaBlend";
+}
+
+Effect PdxMeshAstralRiftSkinned
+{
+	VertexShader = "VertexPdxMeshStandardSkinned"
+	PixelShader = "PixelPdxMeshAstralRift"
+	BlendState = "BlendStateAlphaBlend";
 }
 
 Effect PdxMeshAlphaBlendPlanet
@@ -3141,6 +3173,20 @@ Effect PdxMeshRingsSkinnedShadow
 	VertexShader = "VertexPdxMeshStandardShadow"
 	PixelShader = "PixelPdxMeshStandardShadow"
 	Defines = { "IS_SHADOW" "IS_PLANET" "IS_RING" }
+}
+
+Effect PdxMeshAstralRiftShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect PdxMeshAstralRiftSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
 }
 
 Effect PdxMeshAlphaBlendPlanetShadow

@@ -28,11 +28,7 @@ ship_event = {
 						# Gigastructural Engineering & More
 						giga_has_artificial_preference_trait = yes
 						# Planetary Diversity
-						has_trait = trait_pc_floating_preference
-						has_trait = trait_pc_crystal_preference
-						has_trait = trait_pc_technoorganic_preference
-						has_trait = trait_pc_pd_zro_preference
-						has_trait = trait_pc_graveyard_preference
+						has_pd_special_preference = yes
 						# Voyage to Eternity
 						has_trait = trait_pc_KZ_VOY_hyper_ecumenopolis_preference
 						has_trait = trait_pc_KZ_VOY_astral_world_preference

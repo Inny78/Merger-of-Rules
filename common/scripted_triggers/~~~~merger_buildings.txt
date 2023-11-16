@@ -107,10 +107,13 @@ merg_has_planetary_shield = {
 	}
 }
 
+# WIP
 merg_has_minerals_building = {
 	OR = {
 		has_building = building_mineral_purification_plant
 		has_building = building_mineral_purification_hub
+		# APSR
+		has_apsr_produce_minerals = yes
 	}
 }
 
@@ -123,14 +126,7 @@ merg_has_energy_building = {
 		# Ancient Empire
 		has_building = ag_class_5_singularity
 		# APSR
-		has_building = apsr15_building_part21
-		has_building = apsr15_building_part31
-		has_building = apsr17_building_part1
-		has_building = apsr17_building_part2
-		has_building = apsr17_building_part3
-		has_building = apsr19_building_part_m1
-		has_building = apsr19_building_part_m2
-		has_building = apsr19_building_part_m3
+		has_apsr_produce_energy = yes
 		# AVB
 		has_building = building_avb_betharian_power_plant_2
 		# EUTAB
@@ -148,11 +144,7 @@ merg_has_food_building = {
 		has_building = building_food_processing_center
 		has_building = building_hydroponics_farm
 		# APSR
-		has_building = apsr15_building_part32
-		has_building = apsr15_building_part33
-		has_building = apsr19_building_part_b1
-		has_building = apsr19_building_part_b2
-		has_building = apsr19_building_part_b3
+		has_apsr_produce_food = yes
 		# AVB
 		has_building = building_avb_hydroponics_farm_2
 		# EUTAB
@@ -173,7 +165,6 @@ merg_has_foundry_building = {
 		has_active_building = building_foundry_2
 		has_active_building = building_foundry_3
 		has_active_building = building_nano_forge
-		# Warship Girls R and MIST Species
 		# ACOT
 		has_active_building = building_fe_alloy_forge
 		has_active_building = building_ae_alloy_forge
@@ -184,6 +175,8 @@ merg_has_foundry_building = {
 		has_active_building = building_phanon_alloy_forge
 		has_active_building = building_stellarite_nano_forge
 		has_active_building = building_stellarite_alloy_forge
+		# APSR
+		has_apsr_produce_alloys = yes
 		# AVB
 		has_active_building = building_avb_foundry_4
 		has_active_building = building_avb_foundry_5
@@ -220,6 +213,8 @@ merg_has_manufacturing_building = {
 		has_active_building = building_phanon_affluence_center
 		has_active_building = building_phanon_civilian_factory
 		has_active_building = building_stellarite_affluence_center
+		# APSR
+		has_apsr_produce_goods = yes
 		# AVB
 		has_active_building = building_avb_factory_4
 		has_active_building = building_avb_factory_5

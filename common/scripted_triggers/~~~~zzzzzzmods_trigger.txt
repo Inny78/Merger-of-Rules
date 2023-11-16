@@ -1495,54 +1495,6 @@ maidai_has_minerals_food_building = {
 	}
 }
 
-############################### Starborn ###############################
-has_gene_clinic = {
-	optimize_memory
-	merg_has_hospital = yes
-}
-starborn_can_place_hab = {
-	optimize_memory
-	custom_tooltip = {
-		fail_text = "requires_surveyed_planet"
-		is_surveyed = {
-			# prevent leaking habitability information
-			who = prev.from
-			status = yes
-		}
-	}
-	custom_tooltip = {
-		fail_text = "requires_no_anomaly"
-		has_anomaly = no
-	}
-	custom_tooltip = {
-		fail_text = "requires_no_existing_megastructure"
-		NOR = {
-			has_planet_flag = megastructure
-			has_planet_flag = has_megastructure
-			solar_system = {
-				has_star_flag = ring_world_built
-			}
-			is_planet_class = pc_ringworld_habitable_damaged
-			is_planet_class = pc_ringworld_tech
-			is_planet_class = pc_ringworld_tech_damaged
-			is_planet_class = pc_ringworld_seam
-			is_planet_class = pc_ringworld_seam_damaged
-			merg_is_habitat_non_starborn = yes
-			merg_is_hab_ringworld = yes
-			# Gigastructural Engineering & More
-			giga_habitable_structure = yes
-		}
-	}
-	custom_tooltip = {
-		fail_text = "requires_no_orbital_debris"
-		NOR = { has_planet_flag = has_orbital_debris }
-	}
-	custom_tooltip = {
-		fail_text = "requires_not_solarpunk"
-		NOT = { solar_system = { has_star_flag = solarpunk_system_02 } }
-	}
-}
-
 ############################### Star Wars: Kuat Ancient Empire ###############################
 kuat_is_common_country = {
 	optimize_memory

@@ -1,4 +1,5 @@
 # Irony this is a placeholder file please ignore it
+acot_has_non_psionic_shields = { always = no }
 acot_is_uniquely_affected_by_cascade = { always = no }
 ag_can_be_orbital_bombardment_country = { always = no }
 ag_can_do_orbital_bombardment_country = { always = no }
@@ -42,6 +43,7 @@ ED_has_generator_district = { always = no }
 ED_has_industry_district = { always = no }
 ED_has_mining_district = { always = no }
 ED_has_research_district = { always = no }
+esc_TRIGGER_is_non_psionic_shield = { always = no }
 eutab_has_farming_building = { always = no }
 eutab_has_generator_building = { always = no }
 eutab_has_research_building = { always = no }
@@ -83,6 +85,12 @@ gpm_has_positive_mineral_planet_modifier = { always = no }
 gpm_mod_active = { always = no }
 has_acot = { always = no }
 has_apsr_modifiers = { always = no }
+has_apsr_produce_alloys = { always = no }
+has_apsr_produce_energy = { always = no }
+has_apsr_produce_food = { always = no }
+has_apsr_produce_goods = { always = no }
+has_apsr_produce_minerals = { always = no }
+has_apsr_produce_science = { always = no }
 has_apsr_resource_local = { always = no }
 has_artificial_aristocracy_emex = { always = no }
 has_artificial_wombs = { always = no }
@@ -109,6 +117,7 @@ has_mca_personality_principled_rogues = { always = no }
 has_mod_reproductive_tech_and_politics = { always = no }
 has_more_authorities_triggers = { always = no }
 has_origins_of_civilization = { always = no }
+has_pd_special_preference = { always = no }
 has_planetary_diversity = { always = no }
 has_planetary_diversity_planetaryhabitats = { always = no }
 has_policy_residentliving_restricted = { always = yes }

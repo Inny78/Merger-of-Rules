@@ -158,14 +158,6 @@ merg_is_true_ringworld = {
 # Listing habitats
 merg_is_habitat = {
 	OR = {
-		merg_is_habitat_non_starborn = yes
-		# Starborn: Improved Voidtouched
-		uses_district_set = starborn_start
-	}
-}
-
-merg_is_habitat_non_starborn = {
-	OR = {
 		is_planet_class = pc_habitat
 		uses_district_set = habitat
 		# Acquisition of Technology
@@ -218,8 +210,6 @@ merg_is_habitat_non_PD = {
 		uses_district_set = nsc_freebooter_habitat
 		# Nyto Species Pack
 		uses_district_set = GF_nyto_devil_furnace_world
-		# Starborn: Improved Voidtouched
-		uses_district_set = starborn_start
 		# Twinks Atlantean
 		uses_district_set = skypalace
 	}
@@ -372,7 +362,6 @@ merg_is_empty_space = {
 		# GF Nyto
 		is_planet_class = pc_GF_nyto_endles
 		# Gigastructural Engineering & More
-		is_planet_class = giga_hidden
 		giga_is_empty_space = yes
 		# History of the Lost Empire
 		is_planet_class = pc_empty_space # is_asharms_empty_space = yes

@@ -39,6 +39,20 @@ merg_is_basic_habitable = {
 	}
 }
 
+merg_is_standard_habitable = {
+	OR ={
+		merg_is_alpine = yes
+		merg_is_arctic = yes
+		merg_is_arid = yes
+		merg_is_continental = yes
+		merg_is_desert = yes
+		merg_is_ocean = yes
+		merg_is_savannah = yes
+		merg_is_tropical = yes
+		merg_is_tundra = yes
+	}
+}
+
 merg_is_alpine = {
 	OR = {
 		is_planet_class = pc_alpine

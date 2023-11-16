@@ -51,8 +51,6 @@ planet_event = {
 						uses_district_set = outpost
 						# Planetary Diversity
 						is_pd_unique = yes
-					    # Starborn
-					    uses_district_set = starborn_start
 					    # Warship Girls R And MIST Species
 						has_planet_flag = port_home
  						has_planet_flag = clovertheater_future_flag
@@ -122,35 +120,6 @@ planet_event = {
 						modify_species = {
 							species = this
 							add_trait = trait_repugnant
-						}
-					}
-					# Starborn
-					if = {
-						limit = { has_trait = trait_starborn_positive }
-						modify_species = {
-								species = this
-								remove_trait = trait_starborn_positive
-						}
-					}
-					if = {
-						limit = { has_trait = trait_starborn_negative_1 }
-						modify_species = {
-								species = this
-								remove_trait = trait_starborn_negative_1
-						}
-					}
-					if = {
-						limit = { has_trait = trait_starborn_negative_2 }
-						modify_species = {
-								species = this
-								remove_trait = trait_starborn_negative_2
-						}
-					}
-					if = {
-						limit = { has_trait = trait_starborn_negative_3 }
-						modify_species = {
-								species = this
-								remove_trait = trait_starborn_negative_3
 						}
 					}
 					# Vanilla

@@ -213,6 +213,7 @@ is_crisis_faction = {
 		is_country_type = ai_empire
 		is_country_type = gray_goo
 		is_country_type = awakened_marauders
+		is_country_type = formless
 		# ACOT
 		is_country_type = sbtg_stellarborne_empire 
 		# Cruel Conquerers
@@ -818,20 +819,7 @@ has_research_building = {
 		has_building = ag_ancient_lab_corp
 		has_building = ag_ancient_lab_overlord
 		# APSR
-		has_building = apsr6_building_part1
-		has_building = apsr6_building_part2
-		has_building = apsr6_building_part3
-		has_building = apsr6_building_part4
-		has_building = apsr9_building_part1
-		has_building = apsr9_building_part2
-		has_building = apsr16_building_part1
-		has_building = apsr16_building_part2
-		has_building = apsr16_building_part3
-		has_building = apsr3_building_part1
-		has_building = apsr3_building_part2
-		has_building = apsr3_building_part3
-		has_building = apsr3_building_part4
-		has_building = apsr15_building_part22
+		has_apsr_produce_science = yes
 		# AVB
 		has_building = building_avb_research_lab_4
 		has_building = building_avb_research_lab_5

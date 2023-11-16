@@ -71,7 +71,7 @@ entertainer_job_check_trigger = {
 	}
 }
 
-can_fill_specialist_job = {
+can_fill_specialist_job_trigger = {
 	custom_tooltip = SPECIALIST_JOB_TRIGGER
 	hidden_trigger = {
 		is_gestalt = no
@@ -224,6 +224,15 @@ has_research_job = {
 		has_job = necromancer
 		has_job = xeno_zoo_keeper
 		has_job = head_researcher
+		has_job = archaeoengineers
+		has_job = archaeo_drone
+		has_job = archaeo_unit
+		has_job = munitions_decommissioner
+		has_job = munitions_decommissioning_unit
+		has_job = munitions_decommissioning_drone
+		has_job = astral_researcher
+		has_job = astral_drone
+		has_job = astral_unit
 		# ACOT
 		has_job = acot_researcher
 		has_job = acot_researcher_drone

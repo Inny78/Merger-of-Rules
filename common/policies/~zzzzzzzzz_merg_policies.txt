@@ -194,6 +194,53 @@ orbital_bombardment = {
 	}
 }
 
+debris = {
+	potential = {
+		has_encountered_other_species = yes
+		OR = {
+			merg_is_default_empire = yes
+			merg_is_fallen_empire = yes
+			merg_is_awakened_fe = yes
+		}
+	}
+
+	option = {
+		name = "research_debris"
+
+		potential = {
+			is_scavenger = no
+		}
+
+		policy_flags = {
+			research_debris
+		}
+	}
+	option = {
+		name = "scavenge_debris"
+
+		potential = {
+			is_scavenger = no
+		}
+
+		policy_flags = {
+			scavenge_debris
+		}
+	}
+
+	option = {
+		name = "scavenge_and_research_debris"
+
+		potential = {
+			is_scavenger = yes
+		}
+
+		policy_flags = {
+			scavenge_and_research_debris
+		}
+	}
+}
+
+
 merger_fake_policy = {
 
 	potential = { always = no }

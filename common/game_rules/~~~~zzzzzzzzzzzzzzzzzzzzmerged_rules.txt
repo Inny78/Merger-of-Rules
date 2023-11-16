@@ -18,6 +18,7 @@ is_valid_rival = {
 						prev = { has_policy_flag = diplo_stance_animosity }
 					}
 				}
+				is_country_type = mirrored_country # Mirrored Empire doesn't have relative power but we want to be rivals anyway
 			}
 		}
 	}
@@ -484,21 +485,7 @@ species_can_live_on_planet = {
 					prev = { species_can_be_necrophaged = yes }
 				}
 			}
-			# Forgotten Queens
-			AND = { #Parasitic Embryos Necrophage Pops
-				exists = root.owner
-				root.owner = {
-					is_hive_empire = yes
-					has_valid_civic = civic_hive_parasitic
-					prev = { has_job = purge_parasitic }
-				}
-			}
 		}
-	}
-	# Forgotten Queens
-	NAND = {
-		root = { is_fq_matryoshka = no }
-		has_trait = trait_machine_digital
 	}
 	# Planetary Population Restrictions
 	custom_tooltip = {
@@ -1074,6 +1061,10 @@ can_take_hostile_actions = {
 #Root = country
 #This = planet
 can_colonize_planet = {
+	custom_tooltip = {
+		fail_text = "COLONIZATION_IMPOSSIBLE_UNDER_INVESTIGATION"
+		NOT = { has_planet_flag = planet_under_investigation }
+	}
 	# Diagrapher's Factions and Ethics Mod
 	hidden_trigger = {
 		OR = {
@@ -1112,29 +1103,6 @@ can_colonize_planet = {
 		}
 		always = no
 	}
-	# The Belt
-	# else_if = {
-	# 	limit = { merg_has_district_ovfun = yes }
-	# 	OR = {
-	# 		NOR = {
-	# 			do3f_is_habitable_asteroid = yes
-	# 			do3f_is_habitable_barren = yes
-	# 		}
-	# 		AND = {
-	# 			do3f_is_habitable_asteroid = yes
-	# 			root = {
-	# 				has_technology = tech_asteroid_adaption_0
-	# 			}
-	# 			NOT = { has_global_flag = do3f_disable_mechanics_asteroid_colonizing }
-	# 		}
-	# 		AND = {
-	# 			do3f_is_habitable_barren = yes
-	# 			root = {
-	# 				has_technology = tech_secondary_planets_adaption_0
-	# 			}
-	# 		}
-	# 	}
-	# }
 	# Vanilla
 	else = { always = yes }
 }
@@ -1731,6 +1699,9 @@ can_species_procreate = {
 # Root = Planet
 can_species_be_assembled = {
 	is_sapient = yes
+	NOT = {
+		has_trait = trait_exd
+	}
 	# Holofrixit Revisited / Silfae's Portraits: Revisited
 	has_species_trait_holodrone = no
 	# Kancolle
@@ -2254,7 +2225,10 @@ can_orbital_bombard = {
 				is_country_type = gray_goo
 				is_country_type = vol
 				AND = {
-					is_country_type = awakened_marauders
+					OR = {
+						is_country_type = awakened_marauders
+						is_country_type = formless
+					}
 					from.CONTROLLER = { is_hostile = prev }
 				}
 				is_khan_country_type = yes
@@ -2926,6 +2900,8 @@ can_enter_system_by_jump = {
 					# Clusters and forbidden systems
 					NOR = {
 						has_star_flag = lcluster
+						# Formless system
+						has_star_flag = formless_system
 						# ACOT
 						has_star_flag = outercluster
 						# Ancient Empire
@@ -3245,6 +3221,7 @@ should_force_decline_species = {
 			# Infertile Clone Army pops should decline if in Country that can't have Vats, or there is a Vat shortage.
 			custom_tooltip = {
 				success_text = CLONE_ARMY_FORCE_DECLINE
+				exists = this
 				OR = {
 					has_trait = trait_clone_soldier_infertile
 					has_trait = trait_clone_soldier_infertile_full_potential
@@ -3278,6 +3255,7 @@ should_force_decline_species = {
 		AND = {
 			custom_tooltip = {
 				success_text = sterile_force_decline
+				exists = this
 				diag_is_sterile = yes
 				from.owner = { has_artificial_wombs = no }
 			}
@@ -3285,6 +3263,7 @@ should_force_decline_species = {
 		AND = {
 			custom_tooltip = {
 				success_text = needs_exotic_gases
+				exists = this
 				has_exotic_gas_dependency = yes
 				from.owner = { has_deficit = exotic_gases }
 			}
@@ -3292,6 +3271,7 @@ should_force_decline_species = {
 		AND = {
 			custom_tooltip = {
 				success_text = delicate_enslaved
+				exists = this
 				diag_is_delicate = yes
 				has_citizenship_type = { type = citizenship_slavery country = from.owner }
 			}
@@ -3302,6 +3282,7 @@ should_force_decline_species = {
 			# Caretakers die without the Tree of Life
 			custom_tooltip = {
 				success_text = TREEFOLK_FORCE_DECLINE
+				exists = this
 				is_exp_tree_caretaker = yes
 				from = {
 					NOR = {
@@ -3311,15 +3292,17 @@ should_force_decline_species = {
 				}
 			}
 		}
-		# Expadnded Events
+		# Expanded Events
 		AND = {
 			has_global_flag = expanded_events_active
+			exists = this
 			is_exp_memorex_comatos = yes
 		}
 		# Planetary Diversity
 		AND = {
 			custom_tooltip = {
 				success_text = UNIT04CHILDREN_FORCE_DECLINE
+				exists = this
 				is_organic_fourschildren = yes
 				from = {
 					OR = {
@@ -3342,6 +3325,7 @@ should_force_decline_species = {
 			custom_tooltip = {
 				success_text = modification_assembly_force_decline
 				merg_has_diag_rtp_mod = yes
+				exists = this
 				is_robotic_species = no
 				from = {
 					merg_has_cloning_building = yes
@@ -3357,6 +3341,7 @@ should_force_decline_species = {
 			custom_tooltip = {
 				success_text = SYMBIOTE_FORCE_DECLINE
 				AND = {
+					exists = this
 					is_symbiote = yes
 					from = { NOT = { any_owned_pop = { is_symbiote_of_prevprev = yes } } }
 					from = { any_owned_pop = { is_same_species = prevprev } }
@@ -3369,6 +3354,7 @@ should_force_decline_species = {
 			custom_tooltip = {
 				success_text = lonely_hive_mind_pops_kill_themselves_citizenship
 				merg_has_ethical_gestalts = yes
+				exists = this
 				has_trait = trait_hive_mind
 				exists = from
 				NOR = {
@@ -3388,6 +3374,7 @@ should_force_decline_species = {
 		AND = {
 			custom_tooltip = {
 				success_text = OBJ_MASTER_FORCE_DECLINE
+				exists = this
 				has_trait = trait_reanimated_materials
 				AND = {
 					from = {
@@ -3424,6 +3411,7 @@ should_force_decline_species = {
 		AND = {
 			custom_tooltip = {
 				success_text = ALLELOPATHY_FORCE_DECLINE
+				exists = this
 				NOR = {
 					has_v_allelopathy = yes
 					has_v_cyborg_bubble = yes
@@ -3441,6 +3429,7 @@ should_force_decline_species = {
 		AND = {
 			custom_tooltip = {
 				success_text = WEAK_IMMUNE_SYSTEM_FORCE_DECLINE
+				exists = this
 				has_v_weak_immune_system = yes
 				has_v_cyborg_bubble = no
 				from = {
@@ -4690,7 +4679,7 @@ can_fill_worker_job = {
 #this/root = pop
 #checked if job's possible_precalc = can_fill_specialist_job
 can_fill_specialist_job = {
-	can_fill_specialist_job = yes
+	can_fill_specialist_job_trigger = yes
 	# Girls Frontline
 	if = {
 		limit = { has_trait = GF_trait_doll }
@@ -4849,21 +4838,15 @@ can_fill_ruler_job = {
 	}
 }
 
+# can_fill_precursor_job
 # should_planetary_automate
 # dismiss_leader_cost
 
 # this = leader
 can_dismiss_leader = {
-	custom_tooltip = {
-		fail_text = "requires_actor_not_feudal_society"
-		exists = owner
-		owner = {
-			NOT = { has_valid_civic = civic_feudal_realm }
-		}
-	}
 	if = {
 		limit = {
-			leader_class = admiral
+			leader_class = commander
 			is_idle = no
 			# Rulers and heirs can't be dismissed any way and can be non-idle
 			is_ruler = no
@@ -4890,6 +4873,20 @@ can_dismiss_leader = {
 		custom_tooltip = {
 			always = no
 			fail_text = "can_not_dismiss_rulers"
+		}
+	}
+	if = {
+		limit = {
+			leader_class = scientist
+		}
+		custom_tooltip = {
+			fail_text = "can_not_dismiss_rift_explorer"
+			NAND = {
+				exists = fleet
+				fleet = {
+					has_fleet_order = explore_astral_rift_fleet_order
+				}
+			}
 		}
 	}
 	# Assault Lily
@@ -5019,7 +5016,7 @@ can_trade_leader = {
 	}
 	NOR = { 
 		has_trait = leader_trait_fotd_scientist
-		has_trait = leader_trait_fotd_admiral
+		has_trait = leader_trait_fotd_commander
 	}
 	# Warship Girls R And MIST Species
 	custom_tooltip = {
@@ -5033,16 +5030,19 @@ can_trade_leader = {
 # Root = country, country that owns the fleet currently
 # From = country, country that would receive the fleet
 can_trade_fleet = {
-	ROOT = {
-		NAND = {
-			is_overlord = yes
-			OR = {
-				merg_is_fallen_empire = yes
-				merg_is_awakened_fe = yes
-				# ZOFE
-				is_country_type = original_empire
+	AND = {
+		ROOT = {
+			NAND = {
+				is_overlord = yes
+				OR = {
+					merg_is_fallen_empire = yes
+					merg_is_awakened_fe = yes
+					# ZOFE
+					is_country_type = original_empire
+				}
 			}
 		}
+		NOT = { has_fleet_flag = dimensional_fleet }
 	}
 	# Warship Girls R And MIST Species
 	custom_tooltip = {
@@ -5056,6 +5056,7 @@ can_trade_fleet = {
 	}
 }
 
+# can_leader_be_ruler
 # chance_for_external_leader_pool
 # council_agenda_early_activation_cost
 # leader_election_elect_cost
@@ -5072,3 +5073,10 @@ can_trade_fleet = {
 # can_build_military_station_around
 # can_build_observation_station_around
 # can_build_starbase_around
+# has_inworld_capital
+# has_relative_economy_power
+# can_trade_sensor
+# can_trade_favor
+# can_interact_with_astral_rift
+# can_explore_astral_rift
+# can_leader_explore_astral_rift

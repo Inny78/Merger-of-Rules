@@ -3715,6 +3715,16 @@ can_destroy_planet_with_PLANET_KILLER_Pilgrimage = {
 
 # PK Triggers here
 # Vanilla triggers
+can_destroy_planet_general = {
+	is_star = no
+	is_astral_scar = no
+	merg_is_forbidden_target = no
+	OR = {
+		NOT = { exists = owner }
+		owner = { is_hostile = from.owner }
+	}
+}
+
 is_a_planet = {
 	is_star = no
 	NOR = {
@@ -3722,15 +3732,6 @@ is_a_planet = {
 		is_asteroid = yes
 		merg_is_gas_giant = yes
 		is_planet_class = pc_shrouded
-	}
-}
-
-can_destroy_planet_general = {
-	is_star = no
-	merg_is_forbidden_target = no
-	OR = {
-		NOT = { exists = owner }
-		owner = { is_hostile = from.owner }
 	}
 }
 
