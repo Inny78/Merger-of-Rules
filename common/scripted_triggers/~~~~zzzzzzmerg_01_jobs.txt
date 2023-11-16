@@ -83,9 +83,7 @@ can_fill_specialist_job_trigger = {
 			AND = {
 				NOT = { host_has_dlc = "Utopia" }
 				is_same_species = owner_main_species
-				owner = {
-					merg_is_slaver = yes
-				}
+				owner = { merg_is_slaver = yes }
 			}
 		}
 		is_being_purged = no

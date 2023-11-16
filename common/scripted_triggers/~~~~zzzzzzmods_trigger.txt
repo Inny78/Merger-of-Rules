@@ -1030,9 +1030,7 @@ mem_has_happiness = {
 			}
 		}
 		AND = {
-			species = {
-				has_trait = trait_cybernetic
-			}
+			species = { has_trait = trait_cybernetic }
 			exists = owner
 			owner = {
 				has_authority = auth_machine_intelligence
@@ -1054,9 +1052,7 @@ mem_has_happiness = {
 			}
 		}
 		# Trait Diversity
-		species = {
-			td_has_no_happiness = yes
-		}
+		species = { td_has_no_happiness = yes }
 	}
 }
 mem_has_shield_building = {
@@ -1092,6 +1088,32 @@ mem_has_shield_building = {
 		has_building = building_tc_rune_shield_t1
 		has_building = building_tc_rune_shield_t2
 		has_building = building_tc_rune_shield_t3
+    }
+}
+mem_imperialist_intimidation_valid_bully = {
+    is_ai = yes
+    merg_is_default_empire = yes
+    has_ai_personality_behaviour = conqueror
+    NOR = { 
+        has_country_flag = mem_imperialist_intimidation_actor@root
+        is_overlord_to = root
+        ROOT = {
+            is_overlord_to = prev
+        }
+    }
+    OR = {
+        is_rival = root
+        is_hostile_to = root
+        is_domineering_to = root
+        root = {
+            is_rival = prev
+        }
+    }
+    NOT = {
+        relative_power = {
+            who = root
+            value = pathetic        
+        }
     }
 }
 ############################### More Precursors ###############################

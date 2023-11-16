@@ -305,6 +305,7 @@ is_pd_continental = { always = no }
 is_pd_crucible = { always = no }
 is_pd_desert = { always = no }
 is_pd_exotic = { always = no }
+is_pd_exotic_methaner = { always = no }
 is_pd_frozen = { always = no }
 is_pd_gaia = { always = no }
 is_pd_gas_giant = { always = no }

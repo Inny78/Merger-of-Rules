@@ -1215,6 +1215,26 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 	}
 }
 
+############################### Darkspace ###############################
+can_destroy_planet_with_PLANET_KILLER_DS_UPLOAD = {
+	custom_tooltip = { fail_text = is_unpopulated num_pops > 0 }
+	custom_tooltip = {
+		fail_text = is_not_hostile
+		planet_is_hostile_or_crisis = yes
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = cannot_crack_pre_ftl_planet_ownership
+		exists = owner
+		owner = {
+			NOR = {
+				is_country_type = primitive
+				is_primitive = yes
+			}
+		}
+	}
+}
+
 ############################### EDA ###############################
 can_destroy_planet_with_PLANET_KILLER_EDA_STAR_CRACKER = { can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = yes }
 
@@ -1989,7 +2009,7 @@ can_destroy_planet_with_PLANET_KILLER_METHANE_FREEZE_RAY = {
 	}
 	custom_tooltip = {
 		fail_text = is_not_methane
-		NOT = { is_planet_class = pc_methane }
+		is_pd_exotic_methaner = no
 	}
 	if = {
 		limit = { is_inside_border = from.owner }
@@ -2065,9 +2085,6 @@ can_destroy_planet_with_PLANET_KILLER_PD_NECRO_RAY = {
 			limit = { #Uninhabited and primitive planets are always fine, if own colony then check if pops would be purged
 				exists = owner
 				owner = { is_same_value = from.owner }
-				any_owned_species = {
-					NOT = { has_trait = trait_pc_methane_preference }
-				}
 			}
 			custom_tooltip = {
 				fail_text = requires_purge_allowed
