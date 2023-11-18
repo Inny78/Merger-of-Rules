@@ -534,6 +534,7 @@ merg_is_isolated_system = {
 		has_star_flag = sealed_system
 		has_star_flag = surveillance_supercomputer_system
 		has_star_flag = chosen_system
+		has_star_flag = formless_system
 		has_star_flag = ag_no_jump_in_system
 		has_star_flag = ds_galactic_core
 		has_star_flag = ds_se_system_fixed

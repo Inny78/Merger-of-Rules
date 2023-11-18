@@ -293,6 +293,7 @@ ndb_can_target_planet = {
 			owner = { is_same_value = root }
 		}
 		is_star = yes
+		is_astral_scar = yes
 		giga_is_birch_world = yes
 		giga_is_alderson_disk = yes
 		is_planet_class = pc_ai

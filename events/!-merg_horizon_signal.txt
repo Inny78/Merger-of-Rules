@@ -36,6 +36,7 @@ planet_event = {
 						is_planet_city = yes
 						is_planet_class = pc_relic
 						is_star = yes
+						is_astral_scar = yes
 						# Merger of Rules
 						habitable_structure = yes
 						is_ringworld = yes
