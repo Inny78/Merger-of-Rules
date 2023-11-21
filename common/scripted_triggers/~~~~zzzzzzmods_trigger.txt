@@ -82,7 +82,7 @@ acot_is_partially_affected_by_cascade = {
         is_planet_class = pc_shattered
         is_planet_class = pc_shattered_2
         is_planet_class = pc_shielded
-        is_planet_class = pc_acot_pmc_vault_unshielded # is_acot_pmc_vault_weak = yes
+        is_acot_pmc_vault_weak = yes
 		# Gigastructural Engineering & More
 		is_giga_maginot_world = yes
 		has_star_flag = maginot_anti_jump_star
@@ -102,7 +102,7 @@ acot_is_not_affected_by_cascade = {
 		}
         is_acot_fractured_world = yes
 		is_acot_awesome_planet_class = yes
-		is_planet_class = pc_acot_pmc_vault # is_acot_pmc_vault_strong = yes
+		is_acot_pmc_vault_strong = yes
 		merg_is_empty_space = yes
 		# Ancient Empire
 		ag_is_ancient_ringworld = yes

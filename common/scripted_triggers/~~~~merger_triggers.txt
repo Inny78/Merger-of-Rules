@@ -354,7 +354,7 @@ merg_is_standard_dense_star = {
 merg_is_empty_space = {
 	OR = {
 		# ACOT
-		is_planet_class = pc_invisible_star
+		is_acot_invisible_star = yes
 		# Ancient Empires
 		is_ag_void = yes
 		# Darkspace
