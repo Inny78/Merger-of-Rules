@@ -92,10 +92,10 @@ merg_is_hab_ringworld = {
 		# Planetary Diversity
 		is_planetary_diversity_ringworld = yes
 		# Planetary Ringworlds
-		is_planetary_ringworld = yes
-		is_planetary_ringworld_city = yes
-		is_planetary_ringworld_hive = yes
-		is_planetary_ringworld_machine = yes
+		# is_planetary_ringworld = yes
+		# is_planetary_ringworld_city = yes
+		# is_planetary_ringworld_hive = yes
+		# is_planetary_ringworld_machine = yes
 		# Protoss
 		uses_district_set = protoss_ringworld
 		# Star Wars: Kuat Ancient Empire
@@ -138,10 +138,10 @@ merg_is_true_ringworld = {
 		# Kancolle
 		uses_district_set = kancolle_ring_world
 		# Planetary Ringworlds
-		is_planetary_ringworld = yes
-		is_planetary_ringworld_city = yes
-		is_planetary_ringworld_hive = yes
-		is_planetary_ringworld_machine = yes
+		# is_planetary_ringworld = yes
+		# is_planetary_ringworld_city = yes
+		# is_planetary_ringworld_hive = yes
+		# is_planetary_ringworld_machine = yes
 		# Warship Girls and MIST species
 		uses_district_set = rw_sh_world
 		uses_district_set = rw_port_world

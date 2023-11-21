@@ -1,4 +1,7 @@
 # Overwrite of terra.10 that accounts for Planetary Diversity and various mods, while fixing some bits of code.
+
+namespace = terra
+
 planet_event = {
 	id = terra.10
 	hide_window = yes

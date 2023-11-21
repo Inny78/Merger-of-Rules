@@ -71,15 +71,15 @@ planet_event = {
 		# Planetary Diversity
 		if = {
 			limit = { is_pd_cave = yes }
-			change_pc = pc_nuked_cave
+			pd_change_to_nuked_cave = yes
 		} 
 		else_if = {
 			limit = { is_pd_superhab = yes }
-			change_pc = pc_nuked_superhab
+			pd_change_to_nuked_superhab = yes
 		} 
 		else_if = {
 			limit = { is_pd_tidally_locked = yes }
-			change_pc = pc_nuked_tl
+			pd_change_to_nuked_tl = yes
 		} 
 		else_if = {
 			limit = {
@@ -90,7 +90,7 @@ planet_event = {
 					is_pd_arcology = yes
 				}
 			}
-			change_pc = pc_nuked_relic
+			pd_change_to_nuked_relic = yes
 		} 
 		else = {
 			change_pc = pc_nuked

@@ -4973,6 +4973,8 @@ can_trade_leader = {
 		}
 		is_heir = no
 	}
+	# Can't trade gestalt nodes
+	is_gestalt_node = no
 	# The subject and overlord must both be regular empires, machine intelligences or hive-minds.
 	OR = {
 		AND = {

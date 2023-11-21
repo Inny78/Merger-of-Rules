@@ -2018,7 +2018,7 @@ can_destroy_planet_with_PLANET_KILLER_METHANE_FREEZE_RAY = {
 				exists = owner
 				owner = { is_same_value = from.owner }
 				any_owned_species = {
-					NOT = { has_trait = trait_pc_methane_preference }
+					NOT = { has_pd_methane_preference = yes }
 				}
 			}
 			custom_tooltip = {
@@ -3840,7 +3840,7 @@ merg_is_untargetable = {
 		giga_is_birch_world = yes
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target		# add this to your planet to dynamically exclude it.
-		has_planet_flag = merg_forbidden_target
+		has_planet_flag = merg_forbidden_target			# Some modders shortened the flag
 	}
 }
 

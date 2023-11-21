@@ -179,40 +179,28 @@ country_event = {
 			5 = {
 				modifier = {
 					factor = 0
-					has_monthly_income = { 
-						resource = sr_eludium
-						value < 1
-					}
+					pd_has_eludium_income = yes
 				}
 				set_country_flag = instrument_craving_eludium
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					has_monthly_income = { 
-						resource = sr_acean
-						value < 1
-					}
+					pd_has_acean_income = yes
 				}
 				set_country_flag = instrument_craving_acean
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					has_monthly_income = { 
-						resource = sr_rad_bloom
-						value < 1
-					}
+					pd_has_rad_bloom_income = yes
 				}
 				set_country_flag = instrument_craving_rad_bloom
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					has_monthly_income = { 
-						resource = sr_tiyanki_parts
-						value < 1
-					}
+					pd_has_tiyanki_parts_income = yes
 				}
 				set_country_flag = instrument_craving_tiyanki_parts
 			}	

@@ -17,15 +17,15 @@ planet_event = {
 		# Planetary Diversity
 		if = {
 			limit = { is_pd_tidally_locked = yes }
-			change_pc = pc_tidallygaia
+			pd_change_to_tidallygaia = yes
 		}
 		else_if = {
 			limit = { is_pd_superhab = yes }
-			change_pc = pc_gaia_superhab
+			pd_change_to_gaia_superhab = yes
 		}
 		else_if = {
 			limit = { is_pd_cave = yes }
-			change_pc = pc_gaia_cave
+			pd_change_to_gaia_cave = yes
 		}
 		# Vanilla
 		else = {

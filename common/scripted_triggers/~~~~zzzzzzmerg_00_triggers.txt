@@ -1104,6 +1104,8 @@ has_special_star_flag_trigger = {
 		has_star_flag = giga_system_two
 		has_star_flag = giga_system_three
 		has_star_flag = giga_system_four
+		has_star_flag = giga_system_five
+		has_star_flag = giga_system_six
 		has_star_flag = jupitwo_system
 		has_star_flag = pouchkinn_system
 		# LEX
