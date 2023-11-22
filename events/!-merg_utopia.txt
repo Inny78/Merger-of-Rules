@@ -203,7 +203,7 @@ country_event = {
 					pd_has_tiyanki_parts_income = yes
 				}
 				set_country_flag = instrument_craving_tiyanki_parts
-			}	
+			}
 		}
 		country_event = { id = utopia.3344 days = 720}
 	}
