@@ -6,6 +6,9 @@ origin_clones = { is_origin = yes potential = { always = no } }
 origin_elec_supernova = { is_origin = yes potential = { always = no } }
 origin_ev_both_choosen = { is_origin = yes potential = { always = no } }
 origin_garbage_princesses = { is_origin = yes potential = { always = no } }
+origin_gpm_death_world = { is_origin = yes potential = { always = no } }
+origin_gpm_fallen_empire_colony = { is_origin = yes potential = { always = no } }
+origin_gpm_precursor_world = { is_origin = yes potential = { always = no } }
 origin_hive_cx_hive_world = { is_origin = yes potential = { always = no } }
 origin_hive_overmind = { is_origin = yes potential = { always = no } }
 origin_hive_queen = { is_origin = yes potential = { always = no } }

@@ -44,12 +44,6 @@ can_build_precursor_ship = {
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_8
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9_2
-				any_ship_in_system = {
-					OR = {
-						is_precursor_starbase = yes
-						has_starbase_building = acot_precursor_database		
-					}
-				}
 			}
 		}
 		AND = {
@@ -863,7 +857,30 @@ gpm_has_required_terraform_modifier = {
 gpm_is_country_type_default = { merg_is_default_empire = yes }
 gpm_is_country_type_fallen_empire = { merg_is_fallen_empire = yes }
 gpm_is_country_type_awakened_fallen_empire = { merg_is_awakened_fe = yes }
-
+gpm_engine_forbidden_planets = {
+	optimize_memory
+	NOR = {
+		solar_system = {
+			exists = space_owner
+			space_owner = { has_origin = origin_gpm_death_world }
+		}
+		solar_system = {
+			exists = space_owner
+			space_owner = { has_origin = origin_gpm_fallen_empire_colony }
+		}
+		solar_system = {
+			exists = space_owner
+			space_owner = { has_origin = origin_gpm_precursor_world }
+		}
+		# space_owner = { has_origin = origin_scion} 							# keep it of for player story purposes
+		has_planet_flag	= hoard_planet
+		AND = {
+			is_planet_class = pc_relic
+			solar_system = { has_star_flag = mechanocalibrator_system }
+		}
+		merg_is_forbidden_target = yes
+	}
+}
 ############################### Harvest Engine Crisis ###############################
 harvester_is_crackable = {
 	merg_is_forbidden_target = no
@@ -1056,39 +1073,7 @@ mem_has_happiness = {
 	}
 }
 mem_has_shield_building = {
-    OR = {
-        has_building = "building_mem_planetary_shield_generator"
-        has_building = "building_mem_planetary_shield_generator_heavy"
-        has_building = "building_mem_planetary_shield_generator_orila"
-        #add more entries for compatibility
-		# has_building = building_planetary_shield_generator
-		has_building = building_planetary_shield_generator_fe
-		# ACOT
-		has_building = building_dark_energy_psg
-		has_building = building_ae_dark_energy_psg
-		# AOT
-		has_building = building_phanon_psg
-		has_building = building_stellarite_psg
-		# AVB
-		has_building = building_avb_planetary_shield_generator_2
-		has_building = building_avb_planetary_shield_generator_3
-		has_building = building_avb_dark_matter_planetary_shield_generator
-		# Gigas
-		has_building = building_giga_planetary_shield_generator_1
-		has_building = building_giga_planetary_shield_generator_2
-		# Nirvana Empire Project
-		has_building = building_sky_shield
-		# Production Revolution
-		has_building = PR_BLDN_Army_sp_shield_T3
-		# Reworked Advanced Ascension
-		has_building = AAR_bldn_VEIL_shield_generator_T5
-		# Star Wars: Kuat Ancient Empire
-		has_building = building_kuat_shield
-		# ThaumStellaris
-		has_building = building_tc_rune_shield_t1
-		has_building = building_tc_rune_shield_t2
-		has_building = building_tc_rune_shield_t3
-    }
+	merg_has_planetary_shield = yes
 }
 mem_imperialist_intimidation_valid_bully = {
     is_ai = yes
