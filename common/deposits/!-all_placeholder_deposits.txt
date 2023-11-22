@@ -5,6 +5,7 @@ d_ie_sa = { is_null = yes potential = { always = no } }
 d_mysterious_portal = { is_null = yes potential = { always = no } }
 d_offshore_fields = { is_null = yes potential = { always = no } }
 d_rich_lodes = { is_null = yes potential = { always = no } }
+d_venerable_elder_site = { is_null = yes potential = { always = no } }
 gpm_d_dense_metal_veins = { is_null = yes potential = { always = no } }
 gpm_d_floating_rocks = { is_null = yes potential = { always = no } }
 gpm_d_fossilized_egg_sacks = { is_null = yes potential = { always = no } }

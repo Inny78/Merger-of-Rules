@@ -4918,7 +4918,58 @@ can_dismiss_leader = {
 }
 
 # can_country_change_councilors
-# should_count_towards_leader_cap
+
+# this = leader
+should_count_towards_leader_cap = {
+	NOR = {
+		leader_class = envoy
+		is_hidden = yes
+		has_leader_flag = hired_admiral_merc_leader
+		has_leader_flag = legendary_leader
+		has_trait = leader_trait_rift_warped
+		AND = {
+			has_trait_tier1or2 = { TRAIT = leader_trait_eager }
+			has_skill < 4
+		}
+		AND = {
+			is_ruler = yes
+			OR = {
+				has_trait = leader_trait_ruler_machine_intelligence
+				has_trait = leader_trait_ruler_hive_mind
+			}
+		}
+		# Expanded Mods Base
+		AND = {
+			merg_has_expanded_pops = yes
+			OR = {
+				is_heir = yes
+				AND = {
+					has_trait = leader_trait_eager_3
+					has_skill < 8
+				}
+				AND = {
+					exists = owner
+					owner = {
+						any_owned_planet = {
+							exists = leader
+							leader = {
+								is_same_value = PREVPREVPREV
+							}
+							has_deposit = d_venerable_elder_site
+						}
+					}
+				}
+			}
+		}
+		# E&C Bug Branch
+		AND = {
+			has_trait = leader_trait_bugged_highborn
+			has_skill > 9
+		}
+		# Extra Origins
+		# 		has_trait = leader_trait_machine_creator
+	}
+}
 
 # From = country, country that tries to connect using relay network
 # ROOT/This = country, target country to connect to using relay network
