@@ -3200,7 +3200,7 @@ pop_generates_crime = {
 		# AshArms Aquarius history
 		has_trait = adf_trait_dolls
 		# V_TRAITS
-		has_v_no_crime = no
+		has_v_no_crime = yes
 	}
 }
 
