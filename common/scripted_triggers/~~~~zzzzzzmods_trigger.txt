@@ -1502,6 +1502,9 @@ maidai_has_minerals_food_building = {
 	}
 }
 
+############################### Sparble's Stellar Hyperconstructs ###############################
+ssh_is_any_gas_giant = { merg_is_gas_giant = yes }
+
 ############################### Star Wars: Kuat Ancient Empire ###############################
 kuat_is_common_country = {
 	optimize_memory

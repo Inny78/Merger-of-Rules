@@ -168,7 +168,7 @@ upkeep = {
 			has_country_flag = instrument_craving_negative_mass
 		}
 	}
-	ehof_sr_negative_mass = @instrument_upkeep_epic
+	ehof_sr_negative_mass = @instrument_upkeep_rare
 }
 
 upkeep = {
@@ -178,7 +178,7 @@ upkeep = {
 			has_country_flag = instrument_craving_sentient_metal
 		}
 	}
-	ehof_sr_sentient_metal = @instrument_upkeep_epic
+	ehof_sr_sentient_metal = @instrument_upkeep_rare
 }
 
 # Planetary Diversity

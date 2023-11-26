@@ -519,12 +519,14 @@ is_unfriendly = {
 	}
 }
 
-# Overwriting with vanilla for a correct use of the triggers
 is_wet = {
-	has_climate = wet
+	OR = {
+		has_climate = wet
+		# Gigastructural Engineering & More
+		giga_is_wet = yes
+	}
 }
 
-# Overwriting with vanilla for a correct use of the triggers
 is_dry = {
 	has_climate = dry
 	merg_is_arcology = no

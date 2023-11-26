@@ -155,22 +155,22 @@ country_event = {
 				}
 				set_country_flag = instrument_craving_psionic_sublimate
 			}
-			5 = {
+			10 = {
 				modifier = {
 					factor = 0
 					has_monthly_income = { 
 						resource = ehof_sr_negative_mass
-						value < 1
+						value < 10
 					}
 				}
 				set_country_flag = instrument_craving_negative_mass
 			}
-			5 = {
+			10 = {
 				modifier = {
 					factor = 0
 					has_monthly_income = { 
 						resource = ehof_sr_sentient_metal
-						value < 1
+						value < 10
 					}
 				}
 				set_country_flag = instrument_craving_sentient_metal

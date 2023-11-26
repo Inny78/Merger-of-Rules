@@ -76,7 +76,13 @@ giga_is_special_primitive = { always = no }
 giga_is_unscrappable = { always = no }
 giga_is_vat_leviathan = { always = no }
 giga_is_vat_normal = { always = no }
+giga_is_wet = { always = no }
 giga_is_white_hole = { always = no }
+giga_should_not_crave_iozidium = { always = yes }
+giga_should_not_crave_negative_mass = { always = yes }
+giga_should_not_crave_sentient_metal = { always = yes }
+giga_should_not_crave_sublimate = { always = yes }
+giga_should_not_crave_supertensiles = { always = yes }
 giga_uses_habitat_capitals = { always = no }
 giga_uses_industrial_district = { always = no }
 gpm_has_positive_energy_planet_modifier = { always = no }
@@ -361,6 +367,7 @@ is_shadowgate_world = { always = no }
 is_shroud_entrepot = { always = no }
 is_SIREN_species = { always = no }
 is_sleeper = { always = no }
+is_sm_empty_space = { always = no }
 is_sots_soulsphere = { always = no }
 is_special_affection_leader = { always = no }
 is_special_kancolle_leader = { always = no }
