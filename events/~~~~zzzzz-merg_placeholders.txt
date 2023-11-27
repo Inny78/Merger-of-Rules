@@ -17,6 +17,11 @@ planet_event = { id = apsr_sao.91 hide_window = yes is_triggered_only = yes imme
 
 namespace = anomalymod
 planet_event = { id = anomalymod.73 hide_window = yes is_triggered_only = yes immediate = { } }
+country_event = { id = anomalymod.100 hide_window = yes is_triggered_only = yes immediate = { } }
+country_event = { id = anomalymod.103 hide_window = yes is_triggered_only = yes immediate = { } }
+country_event = { id = anomalymod.107 hide_window = yes is_triggered_only = yes immediate = { } }
+country_event = { id = anomalymod.108 hide_window = yes is_triggered_only = yes immediate = { } }
+country_event = { id = anomalymod.109 hide_window = yes is_triggered_only = yes immediate = { } }
 
 namespace = civicsexpanded
 country_event = { id = civicsexpanded.105 hide_window = yes is_triggered_only = yes immediate = { } }

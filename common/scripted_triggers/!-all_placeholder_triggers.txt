@@ -113,6 +113,7 @@ has_ecaf_triggers = { always = no }
 has_ecc_slave_gene = { always = no }
 has_ethical_gestalts = { always = no }
 has_exotic_gas_dependency = { always = no }
+has_expanded_events = { always = no }
 has_fully_upgraded_penal_capital = { always = no }
 has_gigastructures = { always = no }
 has_holosphere_portraits_revisited_active = { always = no }

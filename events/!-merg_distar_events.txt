@@ -11,6 +11,24 @@ country_event = { #Atomic Clock follow-up: Selection
             0 = {
                 modifier = {
                     add = 1
+                    merg_has_expanded_events = no
+                    FROMFROM.solar_system = {
+                        any_system_planet = {
+                            uninhabitable_regular_planet = yes
+                            has_anomaly = no
+                            planet_size > 8
+                            planet_size < 25
+                            NOR = {
+                                is_planet_class = "pc_broken"
+                                is_planet_class = "pc_astral_scar"
+                            }
+                            is_star = no
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    merg_has_expanded_events = yes
                     FROMFROM.solar_system = {
                         any_system_planet = {
                             uninhabitable_regular_planet = yes
@@ -30,6 +48,14 @@ country_event = { #Atomic Clock follow-up: Selection
             0 = {
                 modifier = {
                     add = 1
+                    merg_has_expanded_events = no
+                    FROMFROM.solar_system = {
+                        has_access_fleet = root
+                    }
+                }
+                modifier = {
+                    add = 50
+                    merg_has_expanded_events = yes
                     FROMFROM.solar_system = {
                         has_access_fleet = root
                     }
@@ -39,6 +65,18 @@ country_event = { #Atomic Clock follow-up: Selection
             0 = {
                 modifier = {
                     add = 1
+                    merg_has_expanded_events = no
+                    FROMFROM.solar_system = {
+                        any_system_planet = {
+                            uninhabitable_regular_planet = yes
+                            has_anomaly = no
+                            is_star = no
+                        }
+                    }
+                }
+                modifier = {
+                    add = 50
+                    merg_has_expanded_events = yes
                     FROMFROM.solar_system = {
                         any_system_planet = {
                             uninhabitable_regular_planet = yes
@@ -52,6 +90,19 @@ country_event = { #Atomic Clock follow-up: Selection
             0 = {
                 modifier = {
                     add = 1
+                    merg_has_expanded_events = no
+                    FROMFROM.solar_system = {
+                        any_system_planet = {
+                            merg_is_basic_habitable = yes
+                            has_anomaly = no
+                            exists = owner
+                            owner = { is_primitive = yes }
+                        }
+                    }
+                }
+                modifier = {
+                    add = 40
+                    merg_has_expanded_events = yes
                     FROMFROM.solar_system = {
                         any_system_planet = {
                             merg_is_basic_habitable = yes
@@ -66,6 +117,19 @@ country_event = { #Atomic Clock follow-up: Selection
             0 = {
                 modifier = {
                     add = 1
+                    merg_has_expanded_events = no
+                    FROMFROM.solar_system = {
+                        any_system_planet = {
+                            merg_is_basic_habitable = yes
+                            is_colony = no
+                            is_under_colonization = no
+                            has_anomaly = no
+                        }
+                    }
+                }
+                modifier = {
+                    add = 40
+                    merg_has_expanded_events = yes
                     FROMFROM.solar_system = {
                         any_system_planet = {
                             merg_is_basic_habitable = yes
@@ -76,6 +140,63 @@ country_event = { #Atomic Clock follow-up: Selection
                     }
                 }
                 country_event = { id = distar.335 } #Habitable planet is nuked
+            }
+            0 = {
+                modifier = {
+                    add = 20
+                    merg_has_expanded_events = yes
+                }
+                country_event = { id = anomalymod.100 }
+            }
+            0 = {
+                modifier = {
+                    add = 20
+                    merg_has_expanded_events = yes
+                }
+                country_event = { id = anomalymod.103 }
+            }
+            0 = {
+                modifier = {
+                    add = 15
+                    merg_has_expanded_events = yes
+                }
+                country_event = { id = anomalymod.107 }
+            }
+            0 = {
+                modifier = {
+                    add = 5
+                    merg_has_expanded_events = yes
+                }
+                country_event = { id = anomalymod.108 }
+            }
+            0 = {
+                modifier = {
+                    add = 1
+                    merg_has_expanded_events = yes
+                }
+                modifier = {
+                    factor = 0
+                    FROMFROM.solar_system = {
+                        OR = {
+                            any_neighbor_system = {
+                                is_capital_system = yes
+                            }
+                            any_neighbor_system = {
+                                any_neighbor_system = {
+                                    is_capital_system = yes
+                                }
+                            }
+                            any_neighbor_system = {
+                                any_neighbor_system = {
+                                    any_neighbor_system = {
+                                        is_capital_system = yes
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                country_event = { id = anomalymod.109 }
             }
         }
     }
