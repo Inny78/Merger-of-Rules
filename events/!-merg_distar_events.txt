@@ -1,0 +1,140 @@
+namespace = distar
+
+country_event = { #Atomic Clock follow-up: Selection
+    id = distar.310
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        random_list = {
+            0 = {
+                modifier = {
+                    add = 1
+                    FROMFROM.solar_system = {
+                        any_system_planet = {
+                            uninhabitable_regular_planet = yes
+                            has_anomaly = no
+                            planet_size > 8
+                            planet_size < 25
+                            NOR = {
+                                is_planet_class = "pc_broken"
+                                is_planet_class = "pc_astral_scar"
+                            }
+                            is_star = no
+                        }
+                    }
+                }
+                country_event = { id = distar.311 } #System planet is terraformed
+            }
+            0 = {
+                modifier = {
+                    add = 1
+                    FROMFROM.solar_system = {
+                        has_access_fleet = root
+                    }
+                }
+                country_event = { id = distar.315 } #Useable Gray Goo ship is built
+            }
+            0 = {
+                modifier = {
+                    add = 1
+                    FROMFROM.solar_system = {
+                        any_system_planet = {
+                            uninhabitable_regular_planet = yes
+                            has_anomaly = no
+                            is_star = no
+                        }
+                    }
+                }
+                country_event = { id = distar.320 } #Unmanned research facilities built (Phys + Eng)
+            }
+            0 = {
+                modifier = {
+                    add = 1
+                    FROMFROM.solar_system = {
+                        any_system_planet = {
+                            merg_is_basic_habitable = yes
+                            has_anomaly = no
+                            exists = owner
+                            owner = { is_primitive = yes }
+                        }
+                    }
+                }
+                country_event = { id = distar.330 } #Primitive planet is nuked
+            }
+            0 = {
+                modifier = {
+                    add = 1
+                    FROMFROM.solar_system = {
+                        any_system_planet = {
+                            merg_is_basic_habitable = yes
+                            is_colony = no
+                            is_under_colonization = no
+                            has_anomaly = no
+                        }
+                    }
+                }
+                country_event = { id = distar.335 } #Habitable planet is nuked
+            }
+        }
+    }
+}
+
+country_event = { #Atomic Clock follow-up: A system planet is terraformed
+    id = distar.311
+    title = distar.311.name
+    desc = distar.311.desc
+    picture = GFX_evt_clocks
+    show_sound = event_activating_unknown_technology
+    location = FROMFROMFROM
+
+    is_triggered_only = yes
+
+    immediate = {
+        FROMFROMFROM.solar_system = {
+            random_system_planet = {
+                limit = {
+                    uninhabitable_regular_planet = yes
+                    has_anomaly = no
+                    planet_size > 8
+                    planet_size < 25
+                    NOR = {
+                        is_planet_class = "pc_broken"
+                        is_planet_class = pc_astral_scar
+                    }
+                    is_star = no
+                }
+                save_event_target_as = atomic_clock_planet
+            }
+        }
+    }
+
+    option = {
+        name = "distar.311.a"
+        hidden_effect = { country_event = { id = distar.312 days = 30 } }
+    }
+
+    option = {
+        trigger = {
+            event_target:atomic_clock_planet.solar_system = {
+                any_fleet_in_system = {
+                    is_owned_by = root
+                    OR = {
+                        is_ship_class = shipclass_military_station
+                        is_ship_class = shipclass_military
+                    }
+                }
+            }
+        }
+        name = "distar.311.b"
+        custom_tooltip = "distar.311.b.tooltip"
+        add_monthly_resource_mult = {
+            resource = influence
+            value = @tier1influencereward
+            min = @tier1influencemin
+            max = @tier1influencemax
+        }
+        hidden_effect = { country_event = { id = distar.313 days = 10 } } #They gray goo the planet
+    }
+}
