@@ -90,7 +90,7 @@ merg_has_ethics_classic = { has_global_flag = ethic_civic_classic_active }
 merg_has_ethics_redux = { has_global_flag = cultural_overhaul_redux_active }
 
 # Expanded Events
-merg_has_expanded_events = { has_expanded_events = yes }
+merg_has_expanded_events = { has_global_flag = expanded_events_active }
 
 # Expanded Gestalts 
 merg_has_expanded_gestalts = { has_global_flag = complex_hive }
