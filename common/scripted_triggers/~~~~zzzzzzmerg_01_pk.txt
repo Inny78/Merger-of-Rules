@@ -587,17 +587,27 @@ can_destroy_planet_with_ACOT_EMISSARY_BEAM = {
 can_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = {
 	custom_tooltip = {
 		fail_text = "ag_requires_a_star_star_killer"
-		merg_is_forbidden_target = no
+		merg_is_empty_space = no
+		merg_is_untargetable = no
 	}
 	custom_tooltip = {
 		fail_text = "ag_requires_is_star_star_killer"
 		OR = {
 			AND = {
 				from.owner = {
-					has_country_flag = ag_ship_subsystem_enabled_501_19
 					OR = {
-						has_country_flag = ag_epsilon_star_killer_planet_killer_mode
-						has_country_flag = ag_epsilon_star_killer_planet_sweeper_mode
+						has_country_flag = ag_ship_subsystem_enabled_501_19
+						OR = {
+							has_country_flag = ag_epsilon_star_killer_planet_killer_mode
+							has_country_flag = ag_epsilon_star_killer_planet_sweeper_mode
+						}
+						AND = {
+							has_country_flag = ag_ship_subsystem_enabled_1001_19
+							OR = {
+								has_country_flag = ag_kappa_star_killer_planet_killer_mode
+								has_country_flag = ag_kappa_star_killer_planet_sweeper_mode
+							}
+						}
 					}
 				}
 				is_star = no
@@ -607,7 +617,7 @@ can_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = {
 	}
 	custom_tooltip = {
 		fail_text = "ag_requires_no_compact_star_star_killer"
-		merg_is_dense_star = no
+		merg_is_black_or_white_hole = no
 	}
 	custom_tooltip = {
 		fail_text = "ag_requires_outside_border_star_killer"
@@ -637,9 +647,7 @@ can_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = {
 					}
 				}
 				exists = owner
-				owner = {
-					is_same_value = from.owner
-				}
+				owner = { is_same_value = from.owner }
 			}
 		}
 	}
@@ -655,9 +663,7 @@ can_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = {
 				}
 				OR = {
 					is_inside_border = from.owner
-					solar_system = {
-						NOT = { exists = space_owner }
-					}
+					solar_system = { NOT = { exists = space_owner } }
 					solar_system = {
 						exists = space_owner
 						space_owner = { is_hostile = from.owner }
@@ -673,16 +679,10 @@ can_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = {
 				}
 				NAND = {
 					exists = owner
-					owner = {
-						NOT = { is_hostile = from.owner }
-					}
+					owner = { NOT = { is_hostile = from.owner } }
 				}
 			}
 		}
-	}
-	custom_tooltip = {
-		fail_text = "ag_requires_no_pacifist_star_killer"
-		from.owner = { is_pacifist = no }
 	}
 	custom_tooltip = {
 		fail_text = "ag_requires_no_ancient_system"
@@ -690,19 +690,17 @@ can_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = {
 	}
 	custom_tooltip = {
 		fail_text = "ag_requires_no_zeta_crisis_system"
-		NOT = {
-			has_star_flag = ag_zeta_crisis_core_system
-		}
+		NOT = { has_star_flag = ag_zeta_crisis_core_system }
 	}
 	custom_tooltip = {
 		fail_text = "ag_requires_no_special_system"
-		ag_is_special_system = no
+		ag_is_star_killer_special_system = no
 	}
 	custom_tooltip = {
 		fail_text = "ag_requires_no_charging_star_killer"
 		from = {
 			NOT = {
-				any_owned_ship = {
+				any_controlled_ship = {
 					is_ship_size = ag_epsilon_titan_1
 					has_ship_flag = ag_epsilon_firing_star_killer_weapon
 				}

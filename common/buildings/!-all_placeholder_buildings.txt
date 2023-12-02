@@ -150,6 +150,9 @@ building_giga_fortress_dm = { potential = { always = no } allow = { always = no 
 building_giga_fortress_fe = { potential = { always = no } allow = { always = no } }
 building_giga_fortress_lab = { potential = { always = no } allow = { always = no } }
 building_giga_fortress_obelisk = { potential = { always = no } allow = { always = no } }
+building_giga_elysium_host_capital = { potential = { always = no } allow = { always = no } }
+building_giga_elysium_host_hive_capital = { potential = { always = no } allow = { always = no } }
+building_giga_elysium_host_machine_capital = { potential = { always = no } allow = { always = no } }
 building_giga_planetary_shield_generator_1 = { potential = { always = no } allow = { always = no } }
 building_giga_planetary_shield_generator_2 = { potential = { always = no } allow = { always = no } }
 building_grand_academy = { potential = { always = no } allow = { always = no } }

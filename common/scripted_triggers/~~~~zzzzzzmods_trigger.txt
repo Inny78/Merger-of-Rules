@@ -92,6 +92,7 @@ acot_is_not_affected_by_cascade = {
 				merg_is_void_system = yes
 				ag_is_ancient_system = yes
 				is_star_class = sc_ehof_black_hole
+				has_star_flag = giga_birch_core
 			}
 		}
         is_acot_fractured_world = yes

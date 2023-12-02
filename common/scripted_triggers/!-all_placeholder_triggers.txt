@@ -1,6 +1,9 @@
 # Irony this is a placeholder file please ignore it
 acot_has_non_psionic_shields = { always = no }
 acot_is_uniquely_affected_by_cascade = { always = no }
+acot_should_not_crave_dark_energy = { always = yes }
+acot_should_not_crave_stellarite = { always = yes }
+aot_should_not_crave_runic_power = { always = yes }
 ag_can_be_orbital_bombardment_country = { always = no }
 ag_can_do_orbital_bombardment_country = { always = no }
 ag_is_ancient_ringworld = { always = no }
@@ -9,8 +12,6 @@ ag_is_mod_country = { always = no }
 ag_is_mod_habitable_ringworld = { always = no }
 ag_is_special_system = { always = no }
 annihilator_system = { always = no }
-aspmod_pc_nuked_colorful_trigger = { always = no }
-aspmod_pc_ocean_red_trigger = { always = no }
 atw_is_alpine = { always = no }
 atw_is_arctic = { always = no }
 atw_is_arid = { always = no }
@@ -180,6 +181,7 @@ is_acot_void_hole = { always = no }
 is_acot_sbtg_arkship = { always = no }
 is_acot_herculean = { always = no }
 is_ag_void = { always = no }
+is_al_puffer = { always = no }
 is_aot_habitat = { always = no }
 is_aot_macripp = { always = no }
 is_apsr_dark = { always = no }
@@ -422,10 +424,12 @@ Maid_trigger_4_can_release_vassal_from_species = { always = no }
 MECR_trigger_0_community_country_type = { always = no }
 MECR_trigger_1_can_be_part_of_galactic_community = { always = yes }
 MECR_trigger_2_can_be_part_of_galactic_empire = { always = yes }
+#
 pd_has_acean_income = { always = yes }
 pd_has_eludium_income = { always = yes }
 pd_has_rad_bloom_income = { always = yes }
 pd_has_tiyanki_parts_income = { always = yes }
+#
 pd_is_alpine = { always = no }
 pd_is_arctic = { always = no }
 pd_is_arid = { always = no }
@@ -438,6 +442,10 @@ pd_is_ocean = { always = no }
 pd_is_savannah = { always = no }
 pd_is_tropical = { always = no }
 pd_is_tundra = { always = no }
+pd_should_not_crave_acean = { always = yes }
+pd_should_not_crave_eludium = { always = yes }
+pd_should_not_crave_rad_bloom = { always = yes }
+pd_should_not_crave_tiyanki_parts = { always = yes }
 planet_has_symbiotes = { always = no }
 policies_allow_breeding = { always = yes }
 prob_forced_armageddon_bombardment = { always = no }

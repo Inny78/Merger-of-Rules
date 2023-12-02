@@ -106,7 +106,7 @@ upkeep = {
 			has_country_flag = instrument_craving_dark_energy
 		}
 	}
-	acot_sr_dark_energy = @instrument_upkeep_epic
+	acot_sr_dark_energy = @instrument_upkeep_rare
 }
 
 upkeep = {
@@ -116,7 +116,7 @@ upkeep = {
 			has_country_flag = instrument_craving_stellarite
 		}
 	}
-	acot_sr_stellarite = @instrument_upkeep_epic
+	acot_sr_stellarite = @instrument_upkeep_rare
 }
 
 # AOT
@@ -127,7 +127,7 @@ upkeep = {
 			has_country_flag = instrument_craving_runic_power
 		}
 	}
-	aot_sr_runic_power = @instrument_upkeep_epic
+	aot_sr_runic_power = @instrument_upkeep_rare
 }
 
 # Gigas
@@ -189,7 +189,7 @@ upkeep = {
 			has_country_flag = instrument_craving_eludium
 		}
 	}
-	sr_eludium = @instrument_upkeep_epic
+	sr_eludium = @instrument_upkeep_very_rare
 }
 
 upkeep = {
@@ -199,7 +199,7 @@ upkeep = {
 			has_country_flag = instrument_craving_acean
 		}
 	}
-	sr_acean = @instrument_upkeep_epic
+	sr_acean = @instrument_upkeep_very_rare
 }
 
 upkeep = {
@@ -209,7 +209,7 @@ upkeep = {
 			has_country_flag = instrument_craving_rad_bloom
 		}
 	}
-	sr_rad_bloom = @instrument_upkeep_epic
+	sr_rad_bloom = @instrument_upkeep_very_rare
 }
 
 upkeep = {
@@ -219,5 +219,5 @@ upkeep = {
 			has_country_flag = instrument_craving_tiyanki_parts
 		}
 	}
-	sr_tiyanki_parts = @instrument_upkeep_epic
+	sr_tiyanki_parts = @instrument_upkeep_very_rare
 }

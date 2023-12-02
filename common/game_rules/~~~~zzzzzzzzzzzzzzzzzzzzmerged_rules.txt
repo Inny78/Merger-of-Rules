@@ -519,7 +519,7 @@ can_generate_leader_from_pop = {
 	NOR = {
 		has_trait = trait_syncretic_proles
 		# Assault Lily
-		has_trait = trait_AL_puffer
+		is_al_puffer = yes
 		# Diagraphers Trait Mod
 		is_living_architecture = yes
 		# Ethics & Civics: Bug Branch

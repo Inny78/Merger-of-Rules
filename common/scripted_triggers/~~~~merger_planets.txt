@@ -292,8 +292,6 @@ merg_is_nuked_basic = {
 		is_planet_class = pc_nuked
 		# All these worlds
 		atw_is_nuked = yes
-		# Archeology Story Pack
-		aspmod_pc_nuked_colorful_trigger = yes
 		# Planetary Diversity
 		is_pd_nuked = yes
 		is_pd_radiotrophic_world = yes
@@ -318,8 +316,6 @@ merg_is_ocean = {
 		is_planet_class = pc_ocean
 		# All These Worlds
 		atw_is_ocean_basic = yes
-		# Archaeology Story Pack
-		aspmod_pc_ocean_red_trigger = yes
 		# Planetary Diversity
 		is_pd_ocean = yes
 		is_pd_aquatics = yes
