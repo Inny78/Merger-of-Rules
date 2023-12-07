@@ -27,6 +27,12 @@ can_build_precursor_ship = {
 		AND = {
 			is_scope_type = megastructure
 			OR = {
+				solar_system.starbase = {
+					OR = {
+						is_precursor_starbase = yes
+						has_starbase_building = acot_precursor_database
+					}
+				}
 				is_megastructure_type = acot_precursor_colossus_base
 				is_megastructure_type = acot_precursor_colossus_stage_two
 				is_megastructure_type = acot_amerigo

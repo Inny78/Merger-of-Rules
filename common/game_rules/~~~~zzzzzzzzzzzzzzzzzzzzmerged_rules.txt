@@ -3199,8 +3199,11 @@ pop_generates_crime = {
 		has_trait = kancolle_trait_kanmusu2
 		# AshArms Aquarius history
 		has_trait = adf_trait_dolls
-		# V_TRAITS
-		has_v_no_crime = yes
+	}
+	# V_TRAITS
+	AND = {
+		merg_has_v_traits = yes
+		has_v_no_crime = no
 	}
 }
 
