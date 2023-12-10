@@ -82,7 +82,6 @@ habitable_planet_not_urban = {
 		# Ocean
 		is_planet_class = pc_ocean
 		atw_is_ocean_basic = yes
-		aspmod_pc_ocean_red_trigger = yes
 		is_pd_ocean = yes
 		is_pd_aquatics = yes
 		uses_district_set = azur_ocean
@@ -1266,5 +1265,34 @@ has_any_megastructure_in_empire = {
 				is_megastructure_type = xvcv_mdlc_planet_cracker
 			}
 		}
+	}
+}
+
+# Country scope
+has_precursor_intro = {
+	OR = {
+		has_country_flag = vultaum_intro
+		has_country_flag = yuht_intro
+		has_country_flag = first_league_intro
+		has_country_flag = irassian_intro
+		has_country_flag = cybrex_intro
+		has_country_flag = zroni_intro
+		has_country_flag = baol_intro
+		has_country_flag = plexi_intro # Forgotten History
+		has_country_flag = lartia_intro # Forgotten History
+		has_country_flag = ixardian_intro # More Precursors
+		has_country_flag = ezentian_intro # More Precursors
+		has_country_flag = werediran_intro # More Precursors
+		has_country_flag = volgan_intro # Unavoidable Changes
+		has_country_flag = scfe_precursor_set_sless # Forgotten Empires
+		has_country_flag = scfe_precursor_set_coprean # Forgotten Empires
+		has_country_flag = scfe_precursor_set_astanine # Forgotten Empires
+		# Still in the early stages of 'On the Shoulders of Giants'
+		AND = {
+			has_origin = origin_shoulders_of_giants
+			NOT = { has_country_flag = origin_shoulders_closure }
+		}
+		# Gigas exclusion
+		has_origin = origin_incohesive
 	}
 }
