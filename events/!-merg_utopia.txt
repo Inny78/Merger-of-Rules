@@ -129,57 +129,34 @@ country_event = {
 			}
 			# Gigastructural Engineering & More
 			5 = {
-				modifier = {
-					factor = 0
-					has_monthly_income = { 
-						resource = sr_iodizium
-						value < 1
-					}
-					# giga_should_not_crave_iozidium = yes
-				}
+				giga_should_not_crave_iodizium = yes
 				set_country_flag = instrument_craving_iodizium
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					has_monthly_income = { 
-						resource = giga_sr_amb_megaconstruction
-						value < 1
-					}
-					# giga_should_not_crave_supertensiles = yes
+					giga_should_not_crave_supertensiles = yes
 				}
 				set_country_flag = instrument_craving_amb_megaconstruction
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					has_monthly_income = { 
-						resource = sr_psionic_sublimate
-						value < 1
-					}
-					# giga_should_not_crave_sublimate = yes
+					giga_should_not_crave_sublimate = yes
 				}
 				set_country_flag = instrument_craving_psionic_sublimate
 			}
 			10 = {
 				modifier = {
 					factor = 0
-					has_monthly_income = { 
-						resource = ehof_sr_negative_mass
-						value < 10
-					}
-					# giga_should_not_crave_negative_mass = yes
+					giga_should_not_crave_negative_mass = yes
 				}
 				set_country_flag = instrument_craving_negative_mass
 			}
 			10 = {
 				modifier = {
 					factor = 0
-					has_monthly_income = { 
-						resource = ehof_sr_sentient_metal
-						value < 10
-					}
-					# giga_should_not_crave_sentient_metal = yes
+					giga_should_not_crave_sentient_metal = yes
 				}
 				set_country_flag = instrument_craving_sentient_metal
 			}
@@ -187,16 +164,14 @@ country_event = {
 			5 = {
 				modifier = {
 					factor = 0
-					pd_has_acean_income = yes
-					#pd_should_not_crave_acean = yes
+					pd_should_not_crave_acean = yes
 				}
 				set_country_flag = instrument_craving_acean
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					pd_has_eludium_income = yes
-					# pd_should_not_crave_eludium = yes
+					pd_should_not_crave_eludium = yes
 
 				}
 				set_country_flag = instrument_craving_eludium
@@ -204,16 +179,14 @@ country_event = {
 			5 = {
 				modifier = {
 					factor = 0
-					pd_has_rad_bloom_income = yes
-					# pd_should_not_crave_rad_bloom = yes
+					pd_should_not_crave_rad_bloom = yes
 				}
 				set_country_flag = instrument_craving_rad_bloom
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					pd_has_tiyanki_parts_income = yes
-					# pd_should_not_crave_tiyanki_parts = yes
+					pd_should_not_crave_tiyanki_parts = yes
 				}
 				set_country_flag = instrument_craving_tiyanki_parts
 			}
