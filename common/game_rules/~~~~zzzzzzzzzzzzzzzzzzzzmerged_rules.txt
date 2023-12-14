@@ -3201,9 +3201,12 @@ pop_generates_crime = {
 		has_trait = adf_trait_dolls
 	}
 	# V_TRAITS
-	AND = {
-		merg_has_v_traits = yes
-		has_v_no_crime = no
+	OR = {
+		merg_has_v_traits = no
+		AND = {
+			merg_has_v_traits = yes
+			has_v_no_crime = no
+		}
 	}
 }
 
