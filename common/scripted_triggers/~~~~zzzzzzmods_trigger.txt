@@ -1939,3 +1939,21 @@ valid_to_recieve_infinity_stone = {
 zero_is_targetable_empire_for_random_effects = {
 	is_default_or_fallen = yes
 }
+
+# Misc
+has_desecration_traditions = {
+	OR = {
+		# More Traditions
+		has_tradition = tr_mt_history_adopt
+		# Forgotten History
+		has_tradition = tr_AAA_history_adopt
+	}
+}
+has_relic_theft_wargoal_from_desecration = {
+	OR = {
+		# More Traditions
+		has_tradition = tr_mt_history_repurposed_relics
+		# Forgotten History
+		has_tradition = tr_aaa_history_repurposed_relics
+	}
+}
