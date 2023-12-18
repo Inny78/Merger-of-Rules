@@ -673,29 +673,29 @@ can_generate_military_leader_from_pop = {
 #Root = planet
 #This = country
 can_release_vassal = {
-	hidden_trigger = {
-		if = {
-			limit = { merg_has_expanded_pops = yes }
-			always = yes
+	if = {
+		limit = { merg_has_expanded_pops = yes }
+		always = yes
+	}
+	else = {
+		custom_tooltip = {
+			fail_text = default
+			is_homicidal = no
 		}
-	}
-	custom_tooltip = {
-		fail_text = default
-		is_homicidal = no
-	}
-	custom_tooltip = {
-		fail_text = default
-		NOT = { has_valid_civic = civic_machine_assimilator }
-	}
-	# Twinks Eternal Empire
-	custom_tooltip = {
-		fail_text = default
-		NOT = { is_country_type = eternal_empire }
-	}
-	# Electroids Species Pack
-	custom_tooltip = {
-		fail_text = default
-		NOT = { has_valid_civic = civic_elec_stellar_devourers }
+		custom_tooltip = {
+			fail_text = default
+			NOT = { has_valid_civic = civic_machine_assimilator }
+		}
+		# Twinks Eternal Empire
+		custom_tooltip = {
+			fail_text = default
+			NOT = { is_country_type = eternal_empire }
+		}
+		# Electroids Species Pack
+		custom_tooltip = {
+			fail_text = default
+			NOT = { has_valid_civic = civic_elec_stellar_devourers }
+		}
 	}
 }
 
@@ -706,6 +706,13 @@ can_release_vassal_from_species = {
 		is_sapient = yes
 		NOR = {
 			AND = {
+				has_trait = trait_machine_unit
+				# Expanded Traits, Civics, Pops, and More
+				NOT = { prev.this = { has_origin = origin_master_computer } }
+				# Empires Expanded
+				NOT = { prev.this = { has_valid_civic = civic_machine_mighty_processors } }
+			}
+			AND = {
 				has_trait = trait_hive_mind
 				NOR = {
 					prev.this = { has_origin = origin_progenitor_hive }
@@ -714,8 +721,9 @@ can_release_vassal_from_species = {
 				}
 			}
 			AND = {
+				merg_has_ethical_gestalts = no
 				NOT = { has_trait = trait_hive_mind }
-				prev.this = { has_authority = auth_hive_mind }
+				prev.this = { is_hive_empire = yes }
 			}
 			can_think = no
 			has_trait = trait_clone_soldier_infertile
@@ -732,17 +740,11 @@ can_release_vassal_from_species = {
 					Maid_trigger_4_can_release_vassal_from_species = yes
 				}
 			}
-			# Ethical Gestalts
-			has_trait = trait_machine_unit
 			# Plentiful Perks
 			has_trait = trait_plentiful_traditions_pt_cocoon
 			# Girls Frontline
 			has_trait = trait_doll
 			# Expanded Traits, Civics, Pops, and More
-			AND = {
-				has_trait = trait_machine_unit
-				NOT = { prev.this = { has_origin = origin_master_computer } }
-			}
 			AND = {
 				NOT = { has_trait = trait_machine_unit }
 				prev.this = { has_authority = auth_machine_intelligence }
@@ -3048,7 +3050,10 @@ can_resettle_pop = {
 		}
 	}
 	else_if = {
-		limit = { owner = { is_gestalt = yes } }
+		limit = {
+			merg_has_ethical_gestalts = no
+			owner = { is_gestalt = yes }
+		}
 		always = yes
 	}
 	# Extra Origins
@@ -3103,6 +3108,7 @@ can_resettle_pop = {
 	# Ethical Gestalts
 	else_if = {
 		limit = {
+			merg_has_ethical_gestalts = yes
 			OR = {
 				AND = {
 					has_trait = trait_hive_mind
@@ -3460,6 +3466,7 @@ can_build_branch_offices = {
 		is_exile_country = no
 		OR = {
 			is_megacorp = yes
+			has_valid_civic = civic_galactic_sovereign_megacorp
 			# Arknights Near Future
 			has_valid_civic = civic_business_union
 			# Asssault Lily
@@ -3486,8 +3493,6 @@ can_build_branch_offices = {
 				has_authority = auth_kancolle
 				OR = { has_tradition = tr_akashi_shop_open_the_kanmusu_company }
 			}
-			# More Corporate Authorities
-			has_valid_civic = civic_galactic_sovereign_megacorp
 			# Rogue Maid
 			Maid_trigger_0_can_build_branch_offices = yes
 			# Voyage to Eternity
@@ -4563,7 +4568,10 @@ can_fill_drone_job = {
 	custom_tooltip = DRONE_JOB_TRIGGER
 	hidden_trigger = {
 		exists = owner
-		owner = { is_gestalt = yes }
+		AND = {
+			merg_has_ethical_gestalts = no
+			owner = { is_gestalt = yes }
+		}
 		is_being_purged = no
 		OR = {
 			is_enslaved = no
@@ -4624,8 +4632,14 @@ can_fill_drone_job = {
 can_fill_worker_job = {
 	custom_tooltip = WORKER_JOB_TRIGGER
 	hidden_trigger = {
-		is_gestalt = no
 		exists = owner
+		OR = {
+			merg_has_ethical_gestalts = yes
+			AND = {
+				merg_has_ethical_gestalts = no
+				is_gestalt = no
+			}
+		}
 		OR = {
 			is_being_purged = no
 			# Expanded Traits, Civics, Pops, and More

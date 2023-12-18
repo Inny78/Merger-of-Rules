@@ -74,8 +74,14 @@ entertainer_job_check_trigger = {
 can_fill_specialist_job_trigger = {
 	custom_tooltip = SPECIALIST_JOB_TRIGGER
 	hidden_trigger = {
-		is_gestalt = no
 		exists = owner
+		OR = {
+			merg_has_ethical_gestalts = yes
+			AND = {
+				merg_has_ethical_gestalts = no
+				is_gestalt = no
+			}
+		}
 		OR = {
 			is_enslaved = no
 			has_slavery_type = { type = slavery_indentured }
