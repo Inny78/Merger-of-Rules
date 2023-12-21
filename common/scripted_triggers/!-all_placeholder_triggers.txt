@@ -211,6 +211,7 @@ is_cruel_abomination_country_type = { always = no }
 is_cruel_abomination_crisis = { always = no }
 is_cruel_empire = { always = no }
 is_cruel_mega = { always = no }
+is_dessanu_relic = { always = no }
 is_dictatorial = { always = no }
 is_dimorphic_female = { always = no }
 is_dimorphic_male = { always = no }
@@ -284,6 +285,8 @@ is_mzilli_rogue = { always = no }
 is_mzilli_shadow = { always = no }
 is_nanite_gaia = { always = no }
 is_nanite_forgeworld = { always = no }
+is_nanite_gas_giant = { always = no }
+is_nanite_habitat_shielded = { always = no }
 is_necromage = { always = no }
 is_nirvana_empire = { always = no }
 is_organic_fourschildren = { always = no }

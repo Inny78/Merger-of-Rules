@@ -1,6 +1,9 @@
 # Irony this is a placeholder file please ignore it
 # File is FIOS
 
+namespace =  AL_fallen_empire
+planet_event = { id = AL_fallen_empire.28 hide_window = yes is_triggered_only = yes immediate = { } }
+
 namespace = arknights_KWYATA
 planet_event = { id = arknights_KWYATA.2 hide_window = yes is_triggered_only = yes immediate = { } }
 planet_event = { id = arknights_KWYATA.3 hide_window = yes is_triggered_only = yes immediate = { } }
@@ -83,8 +86,14 @@ event = { id = giga_katzen.0933 hide_window = yes is_triggered_only = yes immedi
 namespace = giga_aeternum
 event = { id = giga_aeternum.9994 hide_window = yes is_triggered_only = yes immediate = { } }
 
+namespace = giga_o_star
+planet_event = { id = giga_o_star.2001 hide_window = yes is_triggered_only = yes immediate = { } }
+
 namespace = maginot_destruction
 planet_event = { id = maginot_destruction.1002 hide_window = yes is_triggered_only = yes immediate = { } }
+
+namespace = origin
+planet_event = { id = origin.3245 hide_window = yes is_triggered_only = yes immediate = {} }
 
 namespace = time_crisis_country
 planet_event = { id = time_crisis_country.5 hide_window = yes is_triggered_only = yes immediate = { } }
@@ -130,6 +139,7 @@ planet_event = { id = AL_fallen_empire.8 hide_window = yes is_triggered_only = y
 
 namespace = crowis
 planet_event = { id = crowis.42 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = crowis.45 hide_window = yes is_triggered_only = yes immediate = { } }
 
 namespace = PF22
 planet_event = { id = PF22.160 hide_window = yes is_triggered_only = yes immediate = { } }
@@ -147,3 +157,29 @@ planet_event = { id = projcrim.18 hide_window = yes is_triggered_only = yes imme
 
 namespace = tiyres_events
 planet_event = { id = tiyres_events.7 hide_window = yes is_triggered_only = yes immediate = { } }
+
+namespace = scfe_strange_on_actions
+planet_event = { id = scfe_strange_on_actions.10 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.11 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.12 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.13 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.20 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.21 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.22 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.30 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.31 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.40 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.41 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.42 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.43 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.50 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.51 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.52 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.53 hide_window = yes is_triggered_only = yes immediate = { } }
+planet_event = { id = scfe_strange_on_actions.60 hide_window = yes is_triggered_only = yes immediate = { } }
+
+namespace = elec
+planet_event = { id = elec.31 hide_window = yes is_triggered_only = yes immediate = { } }
+
+namespace = dsXE
+planet_event = { id = dsXE.9 hide_window = yes is_triggered_only = yes immediate = { } }

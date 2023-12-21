@@ -224,7 +224,7 @@ merg_is_gas_giant = {
 		# Azur Lane
 		is_planet_class = pc_azur_gas_giant
 		# Nanite Machine and Distant Stars Overhaul
-		is_planet_class = pc_nanite_gas_giant
+		is_nanite_gas_giant = yes
 		# Planetary Diversity
 		is_pd_gas_giant = yes
 	}
@@ -328,7 +328,7 @@ merg_is_relic_world = {
 	OR = {
 		is_planet_class = pc_relic
 		# Nanite Machine and Distant Stars Overhaul
-		is_planet_class = pc_dessanu_relic
+		is_dessanu_relic = yes
 		# Planetary Diversity
 		is_pd_relic = yes
 	}
@@ -351,7 +351,7 @@ merg_is_shielded_world = {
 		is_planet_class = pc_ringworld_shielded
 		is_planet_class = pc_shielded
 		# Nanite Machine and Distant Stars Overhaul
-		is_planet_class = pc_nanite_habitat_shielded
+		is_nanite_habitat_shielded = yes
 	}
 }
 

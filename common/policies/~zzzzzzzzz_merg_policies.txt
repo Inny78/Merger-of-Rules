@@ -240,7 +240,6 @@ debris = {
 	}
 }
 
-
 merger_fake_policy = {
 
 	potential = { always = no }
