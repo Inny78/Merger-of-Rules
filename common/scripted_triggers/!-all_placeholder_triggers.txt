@@ -197,6 +197,7 @@ is_bugged_slave_race = { always = no }
 is_bugged_happy_drone = { always = no }
 is_bugged_slave_gene = { always = no }
 is_bugged_happy_machine = { always = no }
+is_bugged_highborn = { always = no }
 is_bugged_symbiotic = { always = no }
 is_bugged_direct_democratic = { always = no }
 is_bugged_group_firm = { always = no }

@@ -87,8 +87,6 @@ merg_is_hab_ringworld = {
 		is_ds_prism_world = yes
 		is_ds_ringworld_spectrals = yes
 		is_ds_stellar_engine = yes
-		# Kancolle
-		uses_district_set = kancolle_ring_world
 		# Planetary Diversity
 		is_planetary_diversity_ringworld = yes
 		# Planetary Ringworlds
@@ -135,13 +133,6 @@ merg_is_true_ringworld = {
 		uses_district_set = maginot_ringworld_districts
 		# Planetary Diversity
 		is_planetary_diversity_ringworld = yes
-		# Kancolle
-		uses_district_set = kancolle_ring_world
-		# Planetary Ringworlds
-		# is_planetary_ringworld = yes
-		# is_planetary_ringworld_city = yes
-		# is_planetary_ringworld_hive = yes
-		# is_planetary_ringworld_machine = yes
 		# Warship Girls and MIST species
 		uses_district_set = rw_sh_world
 		uses_district_set = rw_port_world

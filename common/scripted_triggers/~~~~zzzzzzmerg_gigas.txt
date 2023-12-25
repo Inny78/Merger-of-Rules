@@ -64,6 +64,8 @@ is_maginotable_restricted = {
 	OR = {
 		uses_district_set = giga_planetary_computer
 		has_planet_flag = has_planet_pc_mega
+		#
+		is_planet_class = pc_pki_flusion_ecu
 		# APSR
 		has_planet_flag = apsr_planet
 		# ACOT
@@ -80,8 +82,6 @@ is_maginotable_restricted = {
 		is_ds_prism_world = yes
 		is_ds_ringworld_spectrals = yes
 		is_ds_stellar_engine = yes
-		# Kancolle
-		uses_district_set = kancolle_ring_world
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target
 		# Planetary Diversity

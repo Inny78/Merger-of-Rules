@@ -459,7 +459,12 @@ has_total_war_cb = {
 				# Vanilla
 				AND = {
 					has_valid_civic = civic_machine_terminator
-					from = { is_machine_empire = yes }
+					from = {
+						NOR = {
+							has_country_flag = synthetic_empire
+							has_authority = auth_machine_intelligence
+						}
+					}
 				}
 				AND = {
 					has_valid_civic = civic_fanatic_purifiers
@@ -836,8 +841,6 @@ has_food_upkeep = {
 			is_archetype = half_aberration
 			is_archetype = half_perfect
 			is_archetype = half_amalgamated
-			# Kancolle
-			is_archetype = KANMUSU
 			# KDC Story Pack
 			is_archetype = NANITES_CROP
 			# Nyto Species Events Pack
@@ -905,10 +908,6 @@ has_research_building = {
 		giga_has_research_building = yes
 		# GPM
 		has_building = gpm_precursor_research_center
-		# Kancolle
-		has_building = building_kancolle_yubari_research1
-		has_building = building_kancolle_yubari_research2
-		has_building = building_kancolle_yubari_research3
 		# More Standard Districts
 		has_district = district_standard_cm_science
 		# Planetary Diversity
