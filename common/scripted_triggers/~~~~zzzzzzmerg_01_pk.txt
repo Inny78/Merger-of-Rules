@@ -1,9 +1,12 @@
 ###################################### Vanilla ######################################
 can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -78,11 +81,14 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 }
 can_destroy_planet_with_PLANET_KILLER_SHIELDER = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		OR = {
 			is_a_habitable_planet_megastructure = yes
 			is_planet_class = pc_ai
-			merg_is_forbidden_target = no
 		}
 	}
 	custom_tooltip = {
@@ -120,13 +126,16 @@ can_destroy_planet_with_PLANET_KILLER_SHIELDER = {
 }
 can_destroy_planet_with_PLANET_KILLER_NEUTRON = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		OR = {
 			AND = {
 				merg_has_safety_off = no
 				is_a_habitable_planet_megastructure = yes
 			}
-			merg_is_forbidden_target = no
 		}
 	}
 	custom_tooltip = {
@@ -176,12 +185,15 @@ can_destroy_planet_with_PLANET_KILLER_NEUTRON = {
 }
 can_destroy_planet_with_PLANET_KILLER_GODRAY = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		OR = {
 			is_a_habitable_planet_megastructure = yes
 			is_planet_class = pc_ai
 		}
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -249,9 +261,12 @@ can_destroy_planet_with_PLANET_KILLER_GODRAY = {
 }
 can_destroy_planet_with_PLANET_KILLER_NANOBOTS = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		is_a_habitable_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -303,12 +318,15 @@ can_destroy_planet_with_PLANET_KILLER_NANOBOTS = {
 }
 can_destroy_planet_with_PLANET_KILLER_DELUGE = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_habitable_non_artificial
 		OR = {
 			is_colonizable = yes
 			is_colony = yes
 		}
-		merg_is_forbidden_target = no
 		is_artificial = no
 	}
 	custom_tooltip = {
@@ -380,12 +398,15 @@ can_destroy_planet_with_PLANET_KILLER_DELUGE = {
 }
 can_destroy_planet_with_PLANET_KILLER_TOXIFIER = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_habitable_non_artificial
 		OR = {
 			is_colonizable = yes
 			is_colony = yes
 		}
-		merg_is_forbidden_target = no
 		is_artificial = no
 	}
 	custom_tooltip = {
@@ -444,6 +465,10 @@ can_destroy_planet_with_PLANET_KILLER_TOXIFIER = {
 	}
 }
 can_destroy_planet_with_PLANET_KILLER_DEVOLUTION = {
+	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		OR = {
@@ -586,9 +611,12 @@ can_destroy_planet_with_ACOT_EMISSARY_BEAM = {
 ############################### Ancient Empire ###############################
 can_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_untargetable = no
+	}
+	custom_tooltip = {
 		fail_text = "ag_requires_a_star_star_killer"
 		merg_is_empty_space = no
-		merg_is_untargetable = no
 	}
 	custom_tooltip = {
 		fail_text = "ag_requires_is_star_star_killer"
@@ -711,9 +739,12 @@ can_destroy_planet_with_ag_ancient_epsilon_planet_killer_weapon = {
 can_destroy_planet_with_ag_ancient_alpha_planet_killer_weapon = {
 	optimize_memory
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = "is_not_a_habitable_planet_or_megastructure"
 		is_a_habitable_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = "is_shielded"
@@ -740,9 +771,12 @@ can_destroy_planet_with_ag_ancient_alpha_planet_killer_weapon = {
 }
 can_destroy_planet_with_ag_adv_divine_enforcer = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = "is_not_a_habitable_planet_or_megastructure"
 		is_a_habitable_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = "is_shielded"
@@ -780,8 +814,11 @@ can_destroy_planet_with_ag_adv_divine_enforcer = {
 ############################### APSR: Anomalies, Planetary and Space Resources ###############################
 can_destroy_planet_with_PLANET_KILLER_APSR_DARK_ANGEL = {
 	custom_tooltip = {
-		text = apsr_dark_angel_only_for_standart_hostile_planets
+		fail_text = merg_forbidden_target
 		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		text = apsr_dark_angel_only_for_standart_hostile_planets
 		AND = {
 			is_a_planet = yes
 			OR = {
@@ -816,8 +853,11 @@ can_destroy_planet_with_PLANET_KILLER_APSR_DARK_ANGEL = {
 }
 can_destroy_planet_with_PLANET_KILLER_APSR_INATOR = {
 	custom_tooltip = {
-		text = apsr_inator_only_for_unhabitat_planet
+		fail_text = merg_forbidden_target
 		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		text = apsr_inator_only_for_unhabitat_planet
 		NOT = { exists = owner }
 		OR = {
 			NOT = { exists = space_owner }
@@ -854,8 +894,11 @@ can_destroy_planet_with_PLANET_KILLER_APSR_INATOR = {
 ############################### Archaeology Story Pack ###############################
 can_destroy_planet_with_PLANET_KILLER_GEOCENTRIC_DEVICE = {
 	custom_tooltip = {
-		fail_text = is_not_a_habitable_planet_or_megastructure
+		fail_text = merg_forbidden_target
 		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
 		OR = {
 			is_a_habitable_planet_megastructure = yes
 			is_planet_class = pc_ai
@@ -879,10 +922,13 @@ can_destroy_planet_with_PLANET_KILLER_GEOCENTRIC_DEVICE = {
 ############################### Arknights Near Future ###############################
 can_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_star = no
 		is_asteroid = no
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -924,9 +970,12 @@ can_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = {
 can_destroy_planet_with_PLANET_KILLER_Ark_CRACKER = { can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = yes }
 can_destroy_planet_with_PLANET_KILLER_JUMP_ADF = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -982,9 +1031,12 @@ can_destroy_planet_with_PLANET_KILLER_GODRAY_FAKE = { can_destroy_planet_with_PL
 can_destroy_planet_with_PLANET_KILLER_NANOBOTS_FAKE = { can_destroy_planet_with_PLANET_KILLER_NANOBOTS = yes }
 planet_is_hostile_or_crisis_FAKE = { merg_planet_is_hostile_or_crisis = yes }
 can_destroy_planet_with_PLANET_KILLER_PLANET_TO_NEST = {
+	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
 	NOT = { is_planet_class = pc_nest }
 	is_colony = yes
-	merg_is_forbidden_target = no
 }
 
 ############################### Azur Lane ###############################
@@ -1129,6 +1181,10 @@ can_destroy_planet_with_Sweepers = {
 ############################### Corsair's Custom Empires: Eldanær Stellar Authority ###############################
 can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		# intentionally omits crisis planet types (pc_ai, pc_infested) because Pops can't live there
 		# intentionally omits pc_machine because only Driven Assimilator cyborgs or robotic Pops can live there
@@ -1142,7 +1198,6 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 			}
 			habitable_structure = yes
 		}
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -1215,11 +1270,14 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 
 ############################### Darkspace ###############################
 can_destroy_planet_with_PLANET_KILLER_DS_UPLOAD = {
+	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
 	custom_tooltip = { fail_text = is_unpopulated num_pops > 0 }
 	custom_tooltip = {
 		fail_text = is_not_hostile
 		planet_is_hostile_or_crisis = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = cannot_crack_pre_ftl_planet_ownership
@@ -1239,8 +1297,11 @@ can_destroy_planet_with_PLANET_KILLER_EDA_STAR_CRACKER = { can_destroy_planet_wi
 ############################### Electroids ###############################
 can_destroy_planet_with_PLANET_KILLER_ELEC_FOCUS = {
 	custom_tooltip = {
-		fail_text = elec_must_be_colony
+		fail_text = merg_forbidden_target
 		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = elec_must_be_colony
 		is_colony = yes
 	}	
 	custom_tooltip = {
@@ -1278,9 +1339,12 @@ can_destroy_planet_with_PLANET_KILLER_ELEC_FOCUS = {
 ############################### Empires Expanded ###############################
 can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -1355,9 +1419,12 @@ can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
 ############################### Empire of Eveelution ###############################
 can_destroy_planet_with_PLANET_KILLER_EOE = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		is_a_habitable_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -1393,9 +1460,12 @@ can_destroy_planet_with_PLANET_KILLER_EOE = {
 }
 can_destroy_planet_with_PLANET_KILLER_FIRE_EOE = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -1471,9 +1541,12 @@ can_destroy_planet_with_PLANET_KILLER_BLOKKAT_HARVESTER = {
 ############################### Girls Frontline ###############################
 can_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -1530,6 +1603,10 @@ can_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = {
 # Halo: Forerunner Ships & Portraits 
 can_destroy_planet_with_PLANET_KILLER_COMPOSER = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = no_pops_to_compose
 		OR = {
 			num_pops > 0
@@ -1541,7 +1618,6 @@ can_destroy_planet_with_PLANET_KILLER_COMPOSER = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		is_a_habitable_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -1585,12 +1661,15 @@ can_destroy_planet_with_PLANET_KILLER_COMPOSER = {
 }
 can_destroy_planet_with_PLANET_KILLER_FORERUNNER_ATTENUATION_WEAPON = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		OR = {
 			is_a_habitable_planet_megastructure = yes
 			is_planet_class = pc_ai 
 			merg_is_shielded = no
-			merg_is_forbidden_target = no
 		}
 	}
 	if = {
@@ -1638,9 +1717,12 @@ can_destroy_planet_with_hyperspace_augur_beam = {
 ############################### KDC Story Pack ###############################
 can_destroy_planet_with_PLANET_KILLER_GRAYGOO = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_not_pc_graygoo
@@ -1694,9 +1776,12 @@ can_destroy_planet_with_PLANET_KILLER_GRAYGOO = {
 ############################### Krogan's Sci Fi Stuff Pack ###############################
 can_destroy_planet_with_DEATH_STAR_WEAPON = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -1707,9 +1792,12 @@ can_destroy_planet_with_DEATH_STAR_WEAPON = {
 ############################### Nanite Expansion ###############################
 can_destroy_planet_with_PLANET_KILLER_NANO = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -1768,9 +1856,12 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 # kills only the pops and keeps the planet intact, so Gigastructure planets are a valid target
 can_destroy_planet_with_PLANET_KILLER_HARBINGER = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_not_hostile
@@ -1836,9 +1927,12 @@ can_destroy_planet_with_PLANET_KILLER_NULLVOID = { can_destroy_planet_with_PLANE
 ############################### Nyto Species Pack ###############################
 can_destroy_planet_with_tech_GFnyto_accelerating_coil3 = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -1852,13 +1946,16 @@ can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER_SERES = { can_destroy_planet_
 ############################### Planetary Diversity ###############################
 can_destroy_planet_with_PLANET_KILLER_METHANE_FREEZE_RAY = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_habitable_non_artificial
 		OR = {
 			is_colonizable = yes
 			is_colony = yes
 		}
 		is_artificial = no
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -1920,13 +2017,16 @@ can_destroy_planet_with_PLANET_KILLER_METHANE_FREEZE_RAY = {
 }
 can_destroy_planet_with_PLANET_KILLER_PD_NECRO_RAY = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_habitable_non_artificial
 		OR = {
 			is_colonizable = yes
 			is_colony = yes
 		}
 		is_artificial = no
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -1987,13 +2087,16 @@ can_destroy_planet_with_PLANET_KILLER_PD_NECRO_RAY = {
 ############################### Protoss ###############################
 can_destroy_planet_with_archon_power_pouring = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_asteroid = no
 		NOR = {
 			is_planet_class = pc_shattered
 			is_planet_class = pc_shattered_2
 		}
-		merg_is_forbidden_target = no
 	}
 	OR = {
 		NOT = { solar_system = { exists = owner } }
@@ -2009,9 +2112,12 @@ can_destroy_planet_with_archon_power_pouring = {
 # Real Gray
 can_destroy_planet_with_RG_PLANET_KILLER = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_untargetable = no
+	}
+	custom_tooltip = {
 		fail_text = "RG_requires_a_star_star_killer"
 		merg_is_empty_space = no
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = "RG_requires_outside_border_star_killer"
@@ -2047,11 +2153,14 @@ can_destroy_planet_with_RG_PLANET_KILLER = {
 }
 can_destroy_planet_with_RG_PLANET_KILLER_SMALL = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_untargetable = no
+	}
+	custom_tooltip = {
 		fail_text = "RG_requires_a_star_star_killer"
 		NOR = {
 			is_star = yes
 			merg_is_empty_space = yes
-			merg_is_forbidden_target = yes
 		}
 	}
 	custom_tooltip = {
@@ -2088,11 +2197,14 @@ can_destroy_planet_with_RG_PLANET_KILLER_SMALL = {
 }
 can_destroy_planet_with_RG_PLANET_KILLER_SP = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_untargetable = no
+	}
+	custom_tooltip = {
 		fail_text = "RG_requires_a_star_star_killer"
 		NOR = {
 			is_star = yes
 			merg_is_empty_space = yes
-			merg_is_forbidden_target = yes
 		}
 	}
 	custom_tooltip = {
@@ -2109,6 +2221,10 @@ can_destroy_planet_with_RG_PLANET_KILLER_STAR_CRACKER = { can_destroy_planet_wit
 
 ############################### Return of Ragnarok ###############################
 can_destroy_planet_with_N_ISBS_RAGNAROK_SPEAR_OF_LONGINUS = {
+	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
 	if = {
 		limit = {
 			exists = owner
@@ -2120,10 +2236,6 @@ can_destroy_planet_with_N_ISBS_RAGNAROK_SPEAR_OF_LONGINUS = {
 				has_policy_flag = interference_aggressive
 			}
 		}
-	}
-	custom_tooltip = {
-		fail_text = is_not_a_standard_planet_or_megastructure
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = N_ISBS_longinus_triggers
@@ -2146,7 +2258,7 @@ can_destroy_planet_with_N_ISBS_RAGNAROK_SPEAR_OF_LONGINUS = {
 ############################### Rozen Maiden Suigintou Leader Pack ###############################
 can_destroy_planet_with_GE_PLANET_KILLER_Crasher = {
 	custom_tooltip = {
-		fail_text = is_not_a_standard_planet_or_megastructure
+		fail_text = merg_forbidden_target
 		merg_is_forbidden_target = no
 	}
 	is_star = yes
@@ -2161,11 +2273,14 @@ can_destroy_planet_with_GE_PLANET_KILLER_DELUGE = { can_destroy_planet_with_PLAN
 ############################### Sensible Late Game Techs ###############################
 can_destroy_planet_with_slgt_planet_killer_knid = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		OR = {
 			is_a_habitable_planet_megastructure = yes
 			is_planet_class = pc_ai
-			merg_is_forbidden_target = no
 		}
 	}
 	custom_tooltip = {
@@ -2199,9 +2314,12 @@ can_destroy_planet_with_slgt_planet_killer_knid = {
 ############################### Shroud Expanded - The Decadence of Sanity ###############################
 can_destroy_planet_with_PLANET_KILLER_SHROUD = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -2245,9 +2363,12 @@ can_destroy_planet_with_PLANET_KILLER_SHROUD = {
 ############################### Sirens ###############################
 can_destroy_planet_with_PLANET_KILLER_SIREN_UPLOARD = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		is_a_habitable_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -2288,9 +2409,12 @@ can_destroy_planet_with_PLANET_KILLER_SIREN_UPLOARD = {
 ############################### Some Events of Outside Cluster ###############################
 can_destroy_planet_with_PLANET_KILLER_NEP_UGO = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		is_a_habitable_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -2305,12 +2429,15 @@ can_destroy_planet_with_PLANET_KILLER_NEP_UGO = {
 ############################### ThaumStellaris ###############################
 can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = "tc_planet_killer_excavation_not_target"
 		NOR = {
 			merg_is_shielded = yes
 			is_asteroid = yes
 		}
-		merg_is_forbidden_target = no
 		is_star = no
 	}
 	custom_tooltip = {
@@ -2366,12 +2493,15 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION = {
 }
 can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = "tc_planet_killer_excavation_not_target"
 		NOR = {
 			merg_is_shielded = yes
 			is_asteroid = yes
 		}
-		merg_is_forbidden_target = no
 		is_star = no
 	}
 	custom_tooltip = {
@@ -2425,12 +2555,15 @@ can_destroy_planet_with_TC_PLANET_KILLER_EXCAVATION_TURRET = {
 }
 can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		OR = {
 			is_a_habitable_planet_megastructure = yes
 			is_planet_class = pc_ai
 		}
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_not_hostile_or_primitive
@@ -2449,12 +2582,15 @@ can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM = {
 }
 can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM_TURRET = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		OR = {
 			is_a_habitable_planet_megastructure = yes
 			is_planet_class = pc_ai
 		}
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_not_hostile_or_primitive
@@ -2473,10 +2609,13 @@ can_destroy_planet_with_TC_PLANET_KILLER_TAINTED_STORM_TURRET = {
 }
 can_destroy_planet_with_TC_PLANET_KILLER_FROST = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = "tc_planet_killer_not_target"
 		NOR = {
 			merg_is_shielded = yes
-			merg_is_forbidden_target = yes
 			is_asteroid = yes
 			is_tc_bedrock = yes
 			is_planet_class = pc_ringworld_habitable_damaged
@@ -2536,10 +2675,13 @@ can_destroy_planet_with_TC_PLANET_KILLER_FROST = {
 }
 can_destroy_planet_with_TC_PLANET_KILLER_FROST_TURRET = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = "tc_planet_killer_not_target"
 		NOR = {
 			merg_is_shielded = yes
-			merg_is_forbidden_target = yes
 			is_asteroid = yes
 			is_tc_bedrock = yes
 			is_planet_class = pc_ringworld_habitable_damaged
@@ -2599,10 +2741,13 @@ can_destroy_planet_with_TC_PLANET_KILLER_FROST_TURRET = {
 }
 can_destroy_planet_with_TC_PLANET_KILLER_LIQUEFACTION = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = "tc_planet_killer_not_target"
 		NOR = {
 			merg_is_shielded = yes
-			merg_is_forbidden_target = yes
 			is_asteroid = yes
 			is_tc_bedrock = yes
 			is_planet_class = pc_ringworld_habitable_damaged
@@ -2662,10 +2807,13 @@ can_destroy_planet_with_TC_PLANET_KILLER_LIQUEFACTION = {
 }
 can_destroy_planet_with_TC_PLANET_KILLER_LIQUEFACTION_TURRET = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = "tc_planet_killer_not_target"
 		NOR = {
 			merg_is_shielded = yes
-			merg_is_forbidden_target = yes
 			is_asteroid = yes
 			is_tc_bedrock = yes
 			is_planet_class = pc_ringworld_habitable_damaged
@@ -2725,10 +2873,13 @@ can_destroy_planet_with_TC_PLANET_KILLER_LIQUEFACTION_TURRET = {
 }
 can_destroy_planet_with_TC_PLANET_KILLER_DISINTEGRATION = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = "tc_planet_killer_not_target"
 		NOR = {
 			merg_is_shielded = yes
-			merg_is_forbidden_target = yes
 			is_asteroid = yes
 		}
 		NOT = { has_planet_flag = tc_not_pk_target }
@@ -2783,10 +2934,13 @@ can_destroy_planet_with_TC_PLANET_KILLER_DISINTEGRATION = {
 }
 can_destroy_planet_with_TC_PLANET_KILLER_DISINTEGRATION_TURRET = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = "tc_planet_killer_not_target"
 		NOR = {
 			merg_is_shielded = yes
-			merg_is_forbidden_target = yes
 			is_planet_class = pc_asteroid
 		}
 		NOT = { has_planet_flag = tc_not_pk_target }
@@ -2843,7 +2997,7 @@ can_destroy_planet_with_TC_PLANET_KILLER_DISINTEGRATION_TURRET = {
 ############################### The Crimson Throng ###############################
 can_destroy_planet_with_PLANET_KILLER_CLEANSER = {
 	custom_tooltip = {
-		fail_text = is_not_a_standard_planet_or_megastructure
+		fail_text = merg_forbidden_target
 		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
@@ -2874,9 +3028,12 @@ can_destroy_planet_with_PLANET_KILLER_CLEANSER = {
 ############################### The DAL Species Mod ###############################
 can_destroy_planet_with_PLANET_KILLER_EDEN = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		is_a_habitable_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -2928,9 +3085,12 @@ can_destroy_planet_with_PLANET_KILLER_EDEN = {
 ############################### The Empty Vagrant ###############################
 can_destroy_planet_with_PLANET_KILLER_TAKING = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -2978,6 +3138,10 @@ can_destroy_planet_with_PLANET_KILLER_TAKING = {
 ############################### Twinks Eternals ###############################
 can_destroy_planet_with_EE_PLANETKILLER_GAIA = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_hostile
 		OR = {
 			AND = {
@@ -3007,10 +3171,13 @@ can_destroy_planet_with_EE_PLANETKILLER_GAIA = {
 		}
 		is_star = no
 		is_asteroid = no
-		merg_is_forbidden_target = no
 	}
 }
 can_destroy_planet_with_EE_PLANETKILLER_BARREN = {
+	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
 	custom_tooltip = {
 		fail_text = is_not_hostile
 		OR = {
@@ -3038,12 +3205,15 @@ can_destroy_planet_with_EE_PLANETKILLER_BARREN = {
 		NOT = { is_owned_by = event_target:origin_crisis_country }
 		is_star = no
 		is_asteroid = no
-		merg_is_forbidden_target = no
 	}
 }
 
 ############################### Twinks Kaldorei ###############################
 can_destroy_planet_with_PLANET_KILLER_CRACKER_ARCANE = {
+	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
 	custom_tooltip = {
 		fail_text = is_not_hostile
 		OR = {
@@ -3069,22 +3239,21 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER_ARCANE = {
 		NOT = { is_owned_by = event_target:origin_crisis_country }
 		is_star = no
 		is_asteroid = no
-		custom_tooltip = {
-			fail_text = is_not_a_standard_planet_or_megastructure
-			merg_is_forbidden_target = no
-		}
-		custom_tooltip = {
-			fail_text = is_shielded
-			merg_is_shielded = no
-		}
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		merg_is_shielded = no
 	}
 }
 
 ############################### Voyage to Eternity ###############################
 KZ_VOY_can_not_destroy_by_planet_killer = {
 	custom_tooltip = {
-		fail_text = KZ_VOY_can_not_destroy_by_planet_killer
+		fail_text = merg_forbidden_target
 		merg_is_untargetable = no
+	}
+	custom_tooltip = {
+		fail_text = KZ_VOY_can_not_destroy_by_planet_killer
 		solar_system = {
 			NOR = {
 				has_star_flag = KZ_VOY_Alpha_Lupi_system_flag
@@ -3106,9 +3275,12 @@ KZ_VOY_can_not_destroy_by_planet_killer = {
 ############################### Wandering Witch: Voyagers ###############################
 can_destroy_planet_with_PLANET_KILLER_SLUMBER = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		is_a_habitable_planet_megastructure = yes
-		merg_is_forbidden_target = yes
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -3161,6 +3333,10 @@ can_destroy_planet_with_PLANET_KILLER_SLUMBER = {
 }
 can_destroy_planet_with_PLANET_KILLER_PRISCILLA = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		is_a_habitable_planet_megastructure = yes
 	}
@@ -3196,9 +3372,12 @@ can_destroy_planet_with_PLANET_KILLER_PRISCILLA = {
 ############################### Warship Girls R And MIST Species ###############################
 can_destroy_planet_with_PLANET_KILLER_OVO = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		is_a_habitable_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -3241,9 +3420,12 @@ can_destroy_planet_with_PLANET_KILLER_OVO = {
 }
 can_destroy_planet_with_PLANET_KILLER_PSH = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		is_a_habitable_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -3296,9 +3478,12 @@ can_destroy_planet_with_PLANET_KILLER_PSH = {
 }
 can_destroy_planet_with_PLANET_KILLER_CM = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		is_a_habitable_planet_megastructure = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
@@ -3335,6 +3520,10 @@ can_destroy_planet_with_PLANET_KILLER_CM = {
 	}
 }
 can_destroy_planet_with_PLANET_KILLER_SK = {
+	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_untargetable = no
+	}
 	custom_tooltip = {
 		fail_text = is_your_megastructure_system
 		NOT = {
@@ -3375,10 +3564,14 @@ can_destroy_planet_with_PLANET_KILLER_SK = {
 	}
 	custom_tooltip = {
 		fail_text = is_black_hole
-		merg_is_forbidden_target = no
+		merg_is_black_or_white_hole = no
 	}
 }
 can_destroy_planet_with_PLANET_KILLER_WATERB = {
+	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
 	OR = {
 		hidden_trigger = {
 			AND = {
@@ -3390,7 +3583,6 @@ can_destroy_planet_with_PLANET_KILLER_WATERB = {
 			custom_tooltip = {
 				fail_text = is_not_a_standard_planet_or_megastructure
 				is_a_planet_megastructure = yes
-				merg_is_forbidden_target = no
 			}
 			custom_tooltip = {
 				fail_text = is_shielded
@@ -3435,67 +3627,12 @@ can_destroy_planet_with_PLANET_KILLER_WATERB = {
 		}
 	}
 }
-wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = {
-	custom_tooltip = {
-		fail_text = is_not_a_standard_planet_or_megastructure
-		is_a_planet_megastructure = yes
-		merg_is_forbidden_target = no
-	}
-	custom_tooltip = {
-		fail_text = is_shielded
-		merg_is_shielded = no
-	}
-	OR = {
-		custom_tooltip = {
-			text = is_not_hostile_cracker
-			OR = {
-				AND = {
-					exists = space_owner
-					space_owner = { merg_is_at_war = yes }
-				}
-				AND = {
-					# colony
-					exists = owner
-					owner = { merg_is_at_war = yes }
-				}
-				AND = {
-					# primitive
-					exists = space_owner
-					exists = owner
-					owner = {
-						is_primitive = yes
-					}
-					space_owner = { merg_is_at_war = yes }
-				}
-			}
-		}
-		custom_tooltip = {
-			text = not_barren_molten_frozen_toxic_test_fire
-			NOT = {
-				exists = owner
-			}
-			OR = {
-				NOT = {
-					exists = space_owner
-				}
-				AND = {
-					exists = space_owner
-					space_owner = { is_same_value = root.owner }
-				}
-			}
-			OR = {
-				colonizable_planet = yes
-				is_artificial = yes
-				uninhabitable_regular_planet = yes
-			}
-		}
-	}
-}
+wg_event_can_destroy_planet_with_PLANET_KILLER_CRACKER = { can_destroy_planet_with_PLANET_KILLER_CRACKER = yes }
 
 ############################### WULA Fallen Empire ###############################
 can_destroy_planet_with_PLANET_KILLER_GENESIS = {
 	custom_tooltip = {
-		fail_text = is_not_a_standard_planet_or_megastructure
+		fail_text = merg_forbidden_target
 		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
@@ -3557,10 +3694,13 @@ can_destroy_planet_with_PLANET_KILLER_GENESIS = {
 }
 can_destroy_planet_with_PLANET_KILLER_IDC = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = is_not_a_default_empire_colony
 		is_colony = yes
 		owner = { merg_is_default_empire = yes }
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = has_another_IDC_in_system
@@ -3571,9 +3711,12 @@ can_destroy_planet_with_PLANET_KILLER_IDC = {
 }
 can_destroy_planet_with_PLANET_KILLER_Pilgrimage = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_untargetable = no
+	}
+	custom_tooltip = {
 		fail_text = can_only_deploy_on_star
 		is_star = yes
-		merg_is_forbidden_target = no
 	}
 	custom_tooltip = {
 		fail_text = can_not_deploy_near_other_empire
@@ -3592,7 +3735,6 @@ can_destroy_planet_with_PLANET_KILLER_Pilgrimage = {
 can_destroy_planet_general = {
 	is_star = no
 	is_astral_scar = no
-	merg_is_forbidden_target = no
 	OR = {
 		NOT = { exists = owner }
 		owner = { is_hostile = from.owner }
