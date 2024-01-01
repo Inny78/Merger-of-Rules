@@ -4959,7 +4959,7 @@ should_count_towards_leader_cap = {
 			has_skill > 9
 		}
 		# Playable Katzenartig Imperium
-		has_trait = pki_katzen_trait_elite
+		is_pki_katzen_trait_elite = yes
 	}
 }
 

@@ -3851,7 +3851,7 @@ merg_is_untargetable = {
 		giga_is_birch_world = yes
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target		# add this to your planet to dynamically exclude it.
-		has_planet_flag = merg_forbidden_target			# Some modders shortened the flag
+		has_planet_flag = merg_forbidden_target			# or this one.
 	}
 }
 

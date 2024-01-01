@@ -64,8 +64,8 @@ is_maginotable_restricted = {
 	OR = {
 		uses_district_set = giga_planetary_computer
 		has_planet_flag = has_planet_pc_mega
-		#
-		is_planet_class = pc_pki_flusion_ecu
+		# Playable Katzenartig Imperium
+		is_pki_flusion_ecu = yes
 		# APSR
 		has_planet_flag = apsr_planet
 		# ACOT
