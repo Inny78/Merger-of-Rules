@@ -43,6 +43,18 @@ remove_capital_building = {
 		building_SCO_slave_system_capital = { remove_building = building_SCO_slave_system_capital }
 		# Star Wars: Kuat Ancient Empire
 		building_kuat_command_center = { remove_building = building_kuat_command_center }
+		# Superstates
+		building_central_citadel = { remove_building = building_central_citadel }
+		building_simple_citadel = { remove_building = building_simple_citadel }
+		building_cmachine = { remove_building = building_cmachine }
+		building_grand_dvorets = { remove_building = building_grand_dvorets }
+		building_just_dvorets = { remove_building = building_just_dvorets }
+		building_csenatec = { remove_building = building_csenatec }
+		building_cgranhq = { remove_building = building_cgranhq }
+		building_bugfables = { remove_building = building_bugfables }
+		building_cspire = { remove_building = building_cspire }
+		building_cfcouncil = { remove_building = building_cfcouncil }
+		building_ccathedral = { remove_building = building_ccathedral }
 		# Twinks Atlantean
 		building_ancient_palace_at = { remove_building = building_ancient_palace_at }
 		# Twinks Kaldorei

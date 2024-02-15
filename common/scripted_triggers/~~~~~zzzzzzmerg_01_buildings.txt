@@ -107,6 +107,18 @@ has_upgraded_capital = {
 				has_building = eda_building_imperial_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
+				# Superstates
+				has_building = building_central_citadel
+				has_building = building_simple_citadel
+				has_building = building_cmachine
+				has_building = building_grand_dvorets
+				has_building = building_just_dvorets
+				has_building = building_csenatec
+				has_building = building_cgranhq
+				has_building = building_bugfables
+				has_building = building_cspire
+				has_building = building_cfcouncil
+				has_building = building_ccathedral
 				# Twinks Atlantean
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
@@ -152,6 +164,8 @@ has_upgraded_capital = {
 				has_building = building_giga_elysium_host_hive_major_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
+				# Superstates
+				has_building = building_bugfables
 			}
 		}
 	}
@@ -191,6 +205,10 @@ has_upgraded_capital = {
 				has_building = building_giga_elysium_host_machine_major_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
+				# Superstates
+				has_building = building_central_citadel
+				has_building = building_simple_citadel
+				has_building = building_cmachine
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
 			}
@@ -232,6 +250,14 @@ has_upgraded_capital = {
 				has_building = building_nirvana_empire_palace
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
+				# Superstates
+				has_building = building_grand_dvorets
+				has_building = building_just_dvorets
+				has_building = building_csenatec
+				has_building = building_cgranhq
+				has_building = building_cspire
+				has_building = building_cfcouncil
+				has_building = building_ccathedral
 				# Twinks Atlantean
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
@@ -240,7 +266,7 @@ has_upgraded_capital = {
 				has_building = building_eternal_palace
 				# galacot
 				has_building = building_dm_galactic_capital
-                has_building = building_ae_galactic_capital
+				has_building = building_ae_galactic_capital
 				has_building = building_stellarite_galactic_capital
 				has_building = building_dm_galactic_hive_capital
            	    has_building = building_ae_galactic_hive_capital
@@ -361,6 +387,18 @@ has_major_upgraded_capital = {
 				has_building = eda_building_imperial_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
+				# Superstates
+				has_building = building_central_citadel
+				has_building = building_simple_citadel
+				has_building = building_cmachine
+				has_building = building_grand_dvorets
+				has_building = building_just_dvorets
+				has_building = building_csenatec
+				has_building = building_cgranhq
+				has_building = building_bugfables
+				has_building = building_cspire
+				has_building = building_cfcouncil
+				has_building = building_ccathedral
 				# Twinks Atlantean
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
@@ -405,6 +443,8 @@ has_major_upgraded_capital = {
 				has_building = building_giga_elysium_host_hive_major_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
+				# Superstates
+				has_building = building_bugfables
 			}
 		}
 	}
@@ -442,6 +482,10 @@ has_major_upgraded_capital = {
 				has_building = building_giga_elysium_host_machine_major_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
+				#Superstates
+				has_building = building_central_citadel
+				has_building = building_simple_citadel
+				has_building = building_cmachine
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
 			}
@@ -492,6 +536,14 @@ has_major_upgraded_capital = {
 				has_building = building_eternal_palace
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
+				# Superstates
+				has_building = building_grand_dvorets
+				has_building = building_just_dvorets
+				has_building = building_csenatec
+				has_building = building_cgranhq
+				has_building = building_cspire
+				has_building = building_cfcouncil
+				has_building = building_ccathedral
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
 				# ZOFE Ascension
@@ -604,6 +656,18 @@ has_fully_upgraded_capital = {
 				has_building = eda_building_imperial_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
+				# Superstates
+				has_building = building_central_citadel
+				has_building = building_simple_citadel
+				has_building = building_cmachine
+				has_building = building_grand_dvorets
+				has_building = building_just_dvorets
+				has_building = building_csenatec
+				has_building = building_cgranhq
+				has_building = building_bugfables
+				has_building = building_cspire
+				has_building = building_cfcouncil
+				has_building = building_ccathedral
 				# Twinks Atlantean
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
@@ -647,6 +711,8 @@ has_fully_upgraded_capital = {
 				has_building = building_giga_elysium_host_hive_major_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
+				# Superstates
+				has_building = building_bugfables
 			}
 		}
 	}
@@ -681,6 +747,10 @@ has_fully_upgraded_capital = {
 				has_building = building_giga_elysium_host_machine_major_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
+				# Superstates
+				has_building = building_central_citadel
+				has_building = building_simple_citadel
+				has_building = building_cmachine
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
 			}
@@ -722,6 +792,14 @@ has_fully_upgraded_capital = {
 				has_building = building_nirvana_empire_palace
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
+				# Superstates
+				has_building = building_grand_dvorets
+				has_building = building_just_dvorets
+				has_building = building_csenatec
+				has_building = building_cgranhq
+				has_building = building_cspire
+				has_building = building_cfcouncil
+				has_building = building_ccathedral
 				# Twinks Atlantean
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
