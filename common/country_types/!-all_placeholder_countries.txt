@@ -31,6 +31,8 @@ endtime_star_fantasy_empire = { ai = { enabled = no } }
 eternal_empire = { ai = { enabled = no } }
 ev_leviathans_crisis = { ai = { enabled = no } }
 fallen_empire_ev = { ai = { enabled = no } }
+awakened_fallen_empire_event = { ai = { enabled = no } }
+giga_hypersiphon_major_incursion = { ai = { enabled = no } }
 hfe_pirate = { ai = { enabled = no } }
 huge_country = { ai = { enabled = no } }
 katzenartig_imperium = { ai = { enabled = no } }
@@ -45,6 +47,7 @@ master_ai_country = { ai = { enabled = no } }
 mem_ancestor_guardian = { ai = { enabled = no } }
 mem_surveyor_country_red = { ai = { enabled = no } }
 mem_vazurans = { ai = { enabled = no } }
+mercenary_fleet = { ai = { enabled = no } }
 mpo_lost_spacefarers = { ai = { enabled = no } }
 nep_arena_hologram = { ai = { enabled = no } }
 nep_bounty_hologram = { ai = { enabled = no } }

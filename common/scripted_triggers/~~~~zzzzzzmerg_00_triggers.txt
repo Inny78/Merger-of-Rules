@@ -118,6 +118,13 @@ habitable_planet_not_urban = {
 	}
 }
 
+is_urban_planet = {
+	OR = {
+		merg_is_arcology = yes
+		merg_is_relic_world = yes
+	}
+}
+
 is_starting_planet_type = {
 	OR = {
 		merg_is_desert = yes
@@ -311,6 +318,8 @@ is_megacorp = {
 		is_exp_cooperative = yes
 		# E&C FunEFork
 		has_corporate_imperial_auth = yes
+		# Girls Frontline
+		has_valid_civic = GF_civic_GK
 		# More Corporate Authorities
 		has_mca_auth_cooperative = yes
 		has_mca_auth_private = yes
@@ -577,7 +586,6 @@ is_unfriendly = {
 		has_valid_civic = civic_barbaric_despoilers
 		# Expanded Traits, Civics, Pops, and More
 		has_valid_civic = civic_living_hosts
-		has_valid_civic = civic_infestation
 		# Electroids
 		has_valid_civic = civic_elec_stellar_devourers
 	}
@@ -1275,6 +1283,8 @@ is_special_colony_type = {
 		has_modifier = bdoe_storage_world
 		has_modifier = bdoe_waste_world
 		has_modifier = bdoe_feudal_world
+		# Girls Frontline
+		uses_district_set = GF_automated_city_district_set
 		# Real Space - Planetary Stations
 		has_planet_flag = planetary_station
 	}
@@ -1353,5 +1363,120 @@ has_precursor_intro = {
 		}
 		# Gigas exclusion
 		has_origin = origin_incohesive
+	}
+}
+
+can_be_leader = {
+	has_citizenship_rights = yes
+	NOT = { has_trait = trait_syncretic_proles }
+	can_think = yes
+	OR = {
+		is_robot_pop = no
+		root = {
+			OR = {
+				has_technology = tech_synthetic_leaders
+				has_authority = auth_machine_intelligence
+				is_mechanical_empire = yes
+				# Girls Frontline
+				GF_allow_doll_leaders = yes
+			}
+		}
+	}
+	OR = {
+		is_same_species = root
+		root = {
+			NAND = {
+				has_origin = origin_necrophage
+				has_trait = trait_necrophage
+			}
+		}
+		# Silfae's Portraits: Revisited
+		species = {
+			has_species_flag = allow_leaders_organic_advisors@prev.owner
+			has_citizenship_type = { type = citizenship_organic_trophy country = prev.owner }
+		}
+		# Wandering Witch: Voyagers
+		root = { has_technology = tech_dummy_leaders }
+		# Girls Frontline
+		AND = {
+			has_trait = GF_trait_doll
+			root = {
+				OR = {
+					has_policy_flag = GF_doll_right_full
+					has_policy_flag = GF_doll_right_limited
+				}
+			}
+		}
+		# Holofrixit Revisited / Silfae's Portraits: Revisited
+		owner = {
+			has_origin = origin_holofrixit
+			prev.species = {
+				OR = {
+					has_species_trait_holofrixit = no
+					has_species_trait_holooverseer = yes
+					has_species_trait_hologanglion = yes
+					has_species_trait_holowarrior = yes
+				}
+			}
+		}
+	}
+}
+
+can_be_military_leader = {
+	is_enslaved = no
+	is_sapient = yes
+	OR = {
+		is_robot_pop = no
+		owner = { has_policy_flag = ai_full_rights }
+		owner = { has_authority = auth_machine_intelligence }
+	}
+	OR = {
+		AND = { # MIs only accept Fully Integrated leaders
+			owner = { has_authority = auth_machine_intelligence }
+			has_citizenship_type = { type = citizenship_full_machine country = owner }
+			has_military_service_type = { type = military_service_full }
+		}
+		AND = { # non-MIs accept whatever
+			NOT = { owner = { has_authority = auth_machine_intelligence } }
+			has_military_service_type = { type = military_service_full }
+		}
+		# Girls Frontline
+		AND = {
+			has_trait = GF_trait_doll
+			root = {
+				OR = {
+					has_policy_flag = GF_doll_right_full
+					has_policy_flag = GF_doll_right_limited
+				}
+			}
+		}
+		root = {
+			AND = {
+				has_origin = origin_holofrixit
+				PREV.species = { has_species_trait_holowarrior = yes }
+			}
+		}
+	}
+}
+	
+can_set_ai_policy = {
+	is_mechanical_empire = no
+	is_GF_authority = no
+	OR = {
+		has_technology = tech_synthetic_workers
+		has_technology = tech_sapient_ai
+		any_relation = {
+			has_communications = prev
+			OR = {
+				has_technology = tech_synthetic_workers
+				has_technology = tech_sapient_ai
+				has_authority = auth_machine_intelligence
+			}
+			OR = {
+				merg_is_default_empire = yes
+				has_ai_personality_behaviour = robot_exploiter
+				has_ai_personality_behaviour = robot_liberator
+			}
+		}
 	}
 }

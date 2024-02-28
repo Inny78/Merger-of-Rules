@@ -43,8 +43,7 @@ planet_event = {
 					remove_planet_flag = has_megastructure 
 				} 
 			}
-			destroy_colony = yes
-			remove_planet = yes
+			spawn_habitat_cracker_effect = yes
 		}
 		# Special artificial colonies can't be infested
 		else_if = {
@@ -127,8 +126,7 @@ planet_event = {
 					remove_planet_flag = has_megastructure 
 				} 
 			}
-			destroy_colony = yes
-			remove_planet = yes
+			spawn_habitat_cracker_effect = yes
 		}
 		# Special artificial colonies can't be infested
 		else_if = {
@@ -244,6 +242,125 @@ country_event = {
 			}
 			country_event = { id = origin.6136 }
 		}
+	}
+}
+
+# Colony Bombarded
+planet_event = {
+	id = crisis.1011
+	title = "crisis.1011.name"
+	desc = "crisis.1011.desc"
+	picture = GFX_evt_city_ruins
+	show_sound = event_ghost_town
+
+	is_triggered_only = yes
+
+	trigger = {
+		planet_devastation >= 100
+		FROM = {
+			OR = {
+				is_country_type = extradimensional
+				is_country_type = extradimensional_2
+				is_country_type = extradimensional_3
+			}
+		}
+	}
+
+	immediate = {
+		add_threat = { who = from amount = 2 }
+		every_owned_pop = {
+			kill_pop = yes
+		}
+		destroy_colony = yes
+		if = {
+			limit = {
+				is_artificial = no
+			}
+			random_list = {
+				50 = { change_pc = pc_barren }
+				50 = { change_pc = pc_barren_cold }
+			}
+			reset_planet = yes
+			add_modifier = {
+				modifier = "terraforming_candidate"
+				days = -1
+			}
+		}
+		else_if = {
+			limit = {
+				merg_is_true_ringworld = yes
+			}
+			change_pc = pc_ringworld_habitable_damaged
+			reset_planet = yes
+		}
+		else_if = {
+			limit = { merg_is_habitat_non_PD = yes }
+			spawn_habitat_cracker_effect = yes
+		}
+		if = {
+			limit = { FROM = { is_country_type = extradimensional } }
+			every_country = {
+				limit = { has_event_chain = "extradimensional_invasion_chain" }
+				add_event_chain_counter = {
+					event_chain = "extradimensional_invasion_chain"
+					counter = "extradimensional_planets_1"
+					amount = 1
+				}
+			}
+		}
+		else_if = {
+			limit = { FROM = { is_country_type = extradimensional_2 } }
+			every_country = {
+				limit = { has_event_chain = "extradimensional_invasion_chain_2" }
+				add_event_chain_counter = {
+					event_chain = "extradimensional_invasion_chain_2"
+					counter = "extradimensional_planets_2"
+					amount = 1
+				}
+			}
+		}
+		else_if = {
+			limit = { FROM = { is_country_type = extradimensional_3 } }
+			every_country = {
+				limit = { has_event_chain = "extradimensional_invasion_chain_3" }
+				add_event_chain_counter = {
+					event_chain = "extradimensional_invasion_chain_3"
+					counter = "extradimensional_planets_3"
+					amount = 1
+				}
+			}
+		}
+
+		solar_system = {
+			if = { # Build starbase if no other colonies are left
+				limit = {
+					NOT = {
+						exists = starbase
+						any_system_planet = {
+							has_owner = yes
+							owner = {
+								NOT = { is_same_value = from }
+							}
+						}
+					}
+				}
+				create_starbase = {
+					size = starbase_exd_0
+					owner = from
+				}
+				random_ship_in_system = {
+					limit = {
+						owner = { is_same_value = from }
+					}
+					ship_event = { id = crisis.1300 } # Check if starbase should be Anchor
+					ship_event = { id = crisis.1310 } # Create system effect
+				}
+			}
+		}
+	}
+
+	option = {
+		name = crisis.1011.a
 	}
 }
 

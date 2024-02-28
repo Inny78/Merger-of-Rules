@@ -67,5 +67,6 @@ civic_theocratic_republic = { potential = { always = no } }
 civic_tw_atlantis = { potential = { always = no } }
 civic_ultimate_collective = { potential = { always = no } }
 civic_xeno_militarist = { potential = { always = no } }
+GF_civic_GK = { potential = { always = no } }
 hfe_civic_egypt_fury = { potential = { always = no } }
 mc_civic_criminal_dominion = { potential = { always = no } }

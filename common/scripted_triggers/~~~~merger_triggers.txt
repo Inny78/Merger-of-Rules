@@ -14,7 +14,7 @@ merg_is_standard_empire = {
 		has_country_flag = is_playable
 		has_country_flag = is_empire
 		# The Empty Vagrant
-		is_country_type = default_ev
+		is_default_ev_country_type = yes
 		is_country_type = fallen_empire_ev
 		is_country_type = awakened_fallen_empire_ev
 		# ZOFE
@@ -33,7 +33,7 @@ merg_is_default_empire = {
 		# Scripted Triggers Undercoat
 		has_country_flag = is_playable
 		# The Empty Vagrant
-		is_country_type = default_ev
+		is_default_ev_country_type = yes
 		# ZOFE
 		is_zofe_country = yes
 	}
@@ -63,6 +63,7 @@ merg_is_awakened_fe = {
 		is_country_type = awakened_gate_builders
 		# The Empty Vagrant
 		is_country_type = awakened_fallen_empire_ev
+		is_country_type = awakened_fallen_empire_event
 	}
 }
 
@@ -89,11 +90,6 @@ merg_is_hab_ringworld = {
 		is_ds_stellar_engine = yes
 		# Planetary Diversity
 		is_planetary_diversity_ringworld = yes
-		# Planetary Ringworlds
-		# is_planetary_ringworld = yes
-		# is_planetary_ringworld_city = yes
-		# is_planetary_ringworld_hive = yes
-		# is_planetary_ringworld_machine = yes
 		# Protoss
 		uses_district_set = protoss_ringworld
 		# Star Wars: Kuat Ancient Empire
@@ -103,6 +99,8 @@ merg_is_hab_ringworld = {
 		}
 		# Star Wars: UnknownWorld Shipgirls Story
 		uses_district_set = rw_swgs_engineer_world
+		# StellarRegulator Array
+		uses_district_set = SRA_GZ_rw_world
 		# ThaumStellaris
 		uses_district_set = pc_tc_alchemical_ringworld
 		# Warship Girls and MIST species
@@ -171,6 +169,8 @@ merg_is_habitat = {
 		is_pd_habitat = yes
 		# NSC2 Modjam Freebooters Origin
 		uses_district_set = nsc_freebooter_habitat
+		# StellarRegulator Array
+		uses_district_set = SRA_city_world
 		# Twinks Atlantean
 		uses_district_set = skypalace
 		# ZOFE
@@ -201,6 +201,8 @@ merg_is_habitat_non_PD = {
 		uses_district_set = nsc_freebooter_habitat
 		# Nyto Species Pack
 		uses_district_set = GF_nyto_devil_furnace_world
+		# SRA
+		uses_district_set = SRA_city_world
 		# Twinks Atlantean
 		uses_district_set = skypalace
 	}

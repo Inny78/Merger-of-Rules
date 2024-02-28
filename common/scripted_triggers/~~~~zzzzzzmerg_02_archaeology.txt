@@ -1,14 +1,14 @@
 default_site_visible_trigger = {
 	merg_is_default_empire = yes
-	exists = from
-	exists = from.planet
-	exists = from.solar_system
 	OR = {
 		intel_level = {
 			level >= low
 			system = from.solar_system
 		}
-		from.planet = { is_within_borders_of = root }
+		AND = {
+			exists = from
+			from.planet = { is_within_borders_of = root }
+		}
 	}
 }
 

@@ -31,6 +31,7 @@ atw_is_tropical = { always = no }
 atw_is_tundra = { always = no }
 bdoe_is_habitable_asteroid = { always = no }
 bdoe_is_habitable_barren = { always = no }
+can_build_lily_garden = { always = no }
 can_build_senior_lily_garden = { always = no }
 can_fill_holosphere_ruler_job = { always = no }
 cohesive_system = { always = no }
@@ -51,7 +52,9 @@ eutab_has_research_building = { always = no }
 everchanging_system = { always = no }
 FW_trgr_ldr_SP = { always = no }
 galactic_diversity_habitable_planet = { always = no }
+GF_allow_doll_leaders = { always = no }
 GF_can_build_doll_species = { always = no }
+GF_can_trade_robotic_leader = { always = no }
 giga_ai_should_restrict_system = { always = no }
 giga_country_gets_bank_exclude = { always = no }
 giga_habitable_structure = { always = no }
@@ -144,6 +147,7 @@ has_strict_democratic_auth = { always = no }
 has_upgraded_penal_capital = { always = no }
 has_v_allelopathy = { always = no }
 has_v_asexual_reproduction = { always = no }
+has_v_behavioral_sink = { always = no }
 has_v_budding_trait = { always = no }
 has_v_cyborg_bubble = { always = no }
 has_v_diapause_modifier = { always = no }
@@ -212,6 +216,7 @@ is_cruel_abomination_country_type = { always = no }
 is_cruel_abomination_crisis = { always = no }
 is_cruel_empire = { always = no }
 is_cruel_mega = { always = no }
+is_default_ev_country_type = { always = no }
 is_dessanu_relic = { always = no }
 is_dictatorial = { always = no }
 is_dimorphic_female = { always = no }
@@ -254,6 +259,7 @@ is_exp_lithoid_shiny = { always = no }
 is_fq_hollow = { always = no }
 is_fq_matryoshka = { always = no }
 is_geode_world = { always = no }
+is_GF_authority = { always = no }
 is_giga_crisis_faction = { always = no }
 is_giga_habitable_gas_giant = { always = no }
 is_giga_habitat = { always = no }
@@ -397,7 +403,9 @@ is_tm_nanites_world = { always = no }
 is_tm_reassembler = { always = no }
 is_the_belt_active = { always = no }
 is_undead = { always = no }
+is_v_clockwork = { always = no }
 is_v_mobile = { always = yes }
+is_v_overgrown = { always = no }
 is_v_social_parasite = { always = no }
 is_valid_GF_OGAS_subnet = { always = no }
 is_valid_organic_zealots = { always = no }
@@ -441,8 +449,10 @@ pd_is_continental = { always = no }
 pd_is_desert = { always = no }
 is_pd_planet_for_aqua_trait = { always = no }
 pd_is_planet_class_gaia = { always = no }
+pd_is_planet_class_hive = { always = no }
 pd_is_planet_class_nuked = { always = no }
 pd_is_ocean = { always = no }
+pd_is_planet_class_machine = { always = no }
 pd_is_savannah = { always = no }
 pd_is_tropical = { always = no }
 pd_is_tundra = { always = no }
@@ -455,6 +465,9 @@ policies_allow_breeding = { always = yes }
 prob_forced_armageddon_bombardment = { always = no }
 robot_has_rare_crystal_comp = { always = no }
 rs_microquasar = { always = no }
+SRA_can_do_orbital_bombardment_country = { always = no }
+SRA_is_ancient_system = { always = no }
+SRA_is_special_system = { always = no }
 systems_blokkats_wont_stripmine = { always = no }
 td_has_no_happiness = { always = no }
 TIME_RULE_trgr_spcs_CAN_live_on_planet = { always = yes }

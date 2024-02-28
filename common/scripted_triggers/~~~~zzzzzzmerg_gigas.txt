@@ -221,7 +221,7 @@ giga_country_gets_bank_include = {
 		# Scripted Triggers Undercoat
 		has_country_flag = is_playable
 		# The Empty Vagrant
-		is_country_type = default_ev
+		is_default_ev_country_type = yes
 		# ZOFE
 		is_zofe_country = yes
 	}

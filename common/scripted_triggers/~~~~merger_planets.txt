@@ -239,6 +239,7 @@ merg_is_hive_world = {
 		is_pd_hive_world = yes
 		is_pd_hive_arcology = yes
 		is_pd_megaflora_hive = yes
+		pd_is_planet_class_hive = yes
 		# Planetary Ringworlds
 		is_planetary_ringworld_hive = yes
 		# ZOFE
@@ -253,6 +254,7 @@ merg_is_machine_world = {
 		# Planetary Diversity
 		is_pd_machine = yes
 		is_pd_robot_arcology = yes
+		pd_is_planet_class_machine = yes
 		# Gigastructural Engineering & More
 		is_pc_ringworld_machine = yes
 		# Girls Frontline

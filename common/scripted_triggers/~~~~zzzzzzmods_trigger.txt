@@ -377,6 +377,13 @@ has_active_al_foundry_building = {
 		has_active_building = building_sh_foundry
 	}
 }
+is_huge_can_colony_planet = {
+	OR = {
+		uninhabitable_regular_planet = yes
+		merg_is_basic_habitable = yes
+		can_build_lily_garden = yes
+	}
+}
 
 ############################### BlueArchive ###############################
 is_BA_fallen_empire = {
@@ -564,7 +571,7 @@ exalted_is_valid_as_vassal = {
 	OR = {
 		is_country_type = default
 		# The Empty Vagrant
-		is_country_type = default_ev
+		is_default_ev_country_type = yes
 		# Darkspace
 		is_country_type = ds_nomads
 	}
@@ -1172,6 +1179,8 @@ mem_imperialist_intimidation_valid_bully = {
         }
     }
 }
+mem_trigger = { is_homicidal = no }
+
 ############################### More Precursors ###############################
 FHMP_is_valid_precursor_planet = {
 	OR = {
@@ -1630,6 +1639,15 @@ kuat_is_playable_country = {
 		is_country_type = endtime_star_fantasy_empire
 	}
 }
+
+############################### StellarRegulator Array ###############################
+SRA_is_compact_star = {
+	merg_is_dense_star = yes
+}
+SRA_is_common_country = {
+	merg_is_standard_empire = yes
+}
+
 ############################### ThaumStellaris ###############################
 tc_element_shard_candidate = {
 	optimize_memory

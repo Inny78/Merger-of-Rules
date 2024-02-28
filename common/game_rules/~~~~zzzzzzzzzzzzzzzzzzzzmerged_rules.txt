@@ -431,6 +431,7 @@ should_abduct_pop = {
 	# V_TRAITS
 	is_v_mobile = yes
 	has_v_stealth_trait = no
+	is_v_overgrown = no
 }
 
 #Root = planet
@@ -485,6 +486,15 @@ species_can_live_on_planet = {
 					prev = { species_can_be_necrophaged = yes }
 				}
 			}
+			# Expanded Gestalts: Forgotten Queens
+			AND = { #Parasitic Embryos Necrophage Pops
+				exists = root.owner
+				root.owner = {
+					is_hive_empire = yes
+					has_valid_civic = civic_hive_parasitic
+					prev = { has_job = purge_parasitic }
+				}
+			}
 		}
 	}
 	# Planetary Population Restrictions
@@ -498,6 +508,11 @@ species_can_live_on_planet = {
 	}
 	# TimeMod
 	TIME_RULE_trgr_spcs_CAN_live_on_planet = yes
+	# Expanded Gestalts: Forgotten Queens
+	NAND = {
+		root = { is_fq_matryoshka = no }
+		has_trait = trait_machine_digital
+	}
 }
 
 # can_vote_in_democratic_election
@@ -507,15 +522,7 @@ species_can_live_on_planet = {
 #Root = country
 #This = pop
 can_generate_leader_from_pop = {
-	can_think = yes
-	OR = {
-		has_citizenship_rights = yes
-		# Silfae's Portraits: Revisited
-		species = {
-			has_species_flag = allow_leaders_organic_advisors@prev.owner
-			has_citizenship_type = { type = citizenship_organic_trophy country = prev.owner }
-		}
-	}
+	can_be_leader = yes
 	NOR = {
 		has_trait = trait_syncretic_proles
 		# Assault Lily
@@ -527,6 +534,8 @@ can_generate_leader_from_pop = {
 		# Expanded Events / Expanded Traits, Civics, Pops, and More
 		is_infested_basic = yes
 		is_exp_tree_caretaker = yes
+		# Expanded Gestalts: Forgotten Queens
+		root = { has_origin = origin_hive_overmind }
 		# Lithoid Supremacy
 		is_pearl_born_drone = yes
 		# Plentiful Perks
@@ -537,56 +546,6 @@ can_generate_leader_from_pop = {
 		has_trait = trait_working_machine
 		# Wandering Witch: Voyagers
 		has_trait = trait_servitude
-	}
-	OR = {
-		is_robot_pop = no
-		root = {
-			OR = {
-				has_technology = tech_synthetic_leaders
-				is_machine_empire = yes
-				is_mechanical_empire = yes
-				# Wandering Witch: Voyagers
-				has_technology = tech_dummy_leaders
-			}
-		}
-		# Girls Frontline
-		AND = {
-			has_trait = GF_trait_doll
-			root = {
-				OR = {
-					has_policy_flag = GF_doll_right_full
-					has_policy_flag = GF_doll_right_limited
-				}
-			}
-		}
-	}
-	OR = {
-		is_same_species = root
-		root = {
-			NAND = {
-				OR = {
-					has_origin = origin_necrophage
-					# Decision Origins
-					has_country_flag = decision_necrophage
-				}
-				has_trait = trait_necrophage
-			}
-		}
-	}
-	# Holofrixit Revisited / Silfae's Portraits: Revisited
-	OR = {
-		owner = { has_auth_holofrixit = no }
-		owner = {
-			has_origin = origin_holofrixit
-			prev.species = {
-				OR = {
-					has_species_trait_holofrixit = no
-					has_species_trait_holooverseer = yes
-					has_species_trait_hologanglion = yes
-					has_species_trait_holowarrior = yes
-				}
-			}
-		}
 	}
 }
 
@@ -632,41 +591,11 @@ can_generate_leader_from_species = {
 #Root = country
 #This = pop
 can_generate_military_leader_from_pop = {
+	# Expanded Gestalts: Forgotten Queens
+	NOT = { root = { has_origin = origin_hive_overmind } }
+	# Vanilla
+	can_be_leader = yes
 	can_be_military_leader = yes
-	OR = {
-		is_robot_pop = no
-		root = {
-			OR = {
-				has_technology = tech_synthetic_leaders
-				is_machine_empire = yes
-				is_mechanical_empire = yes
-				# Holofrixit Revisited / Silfae's Portraits: Revisited
-				AND = {
-					has_origin = origin_holofrixit
-					PREV.species = { has_species_trait_holowarrior = yes }
-				}
-			}
-		}
-		# Girls Frontline
-		AND = {
-			has_trait = GF_trait_doll
-			root = {
-				OR = {
-					has_policy_flag = GF_doll_right_full
-					has_policy_flag = GF_doll_right_limited
-				}
-			}
-		}
-	}
-	OR = {
-		is_same_species = root
-		root = {
-			NAND = {
-				has_origin = origin_necrophage
-				has_trait = trait_necrophage
-			}
-		}
-	}
 }
 
 # can_generate_army_from_planet
@@ -1217,9 +1146,9 @@ can_colonize_with_pop = {
 	# The Empty Vagrant
 	Root = {
 		OR = {
-			NOT = { is_country_type = default_ev }
+			is_default_ev_country_type = no
 			AND = {
-				is_country_type = default_ev
+				is_default_ev_country_type = yes
 				OR = {
 					has_origin = origin_ev_both_choosen
 					has_country_flag = has_ev_to_planets
@@ -1281,9 +1210,9 @@ can_colonize_with_species = {
 	# The Empty Vagrant
 	root = {
 		OR = {
-			NOT = { is_country_type = default_ev }
+			is_default_ev_country_type = no
 			AND = {
-				is_country_type = default_ev
+				is_default_ev_country_type = yes
 				OR = {
 					has_origin = origin_ev_both_choosen
 					has_country_flag = has_ev_to_planets
@@ -1514,6 +1443,8 @@ can_species_procreate = {
 		is_dimorphic_male = yes
 		# Expanded Events
 		is_exp_memorex_comatos = yes
+		# Expanded Gestalts: Forgotten Queens
+		has_trait = trait_hive_mind_overlord
 		# Expanded Megastructures and Technology
 		AND = {
 			has_global_flag = expanded_megastructures_installed
@@ -1541,7 +1472,7 @@ can_species_procreate = {
 		has_trait = trait_mahoshoujo
 		# Plentiful Traditions - Extra Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
-			# Wandering Witch: Voyagers
+		# Wandering Witch: Voyagers
 		has_trait = trait_dummy
 	}
 	OR = {
@@ -1628,6 +1559,10 @@ can_species_procreate = {
 		limit = { is_v_symbiont_b = yes }
 		root = { check_variable = { which = v_num_symbiont value >= 0 } }
 	}
+	if = {
+		limit = { has_v_behavioral_sink = yes }
+		root = { check_variable = { which = v_behavioral_sink_count value >= 0 } }
+	}
 	# Wandering Witch: Voyagers
 	if = {
 		limit = { has_trait = trait_reanimated_materials }
@@ -1701,8 +1636,11 @@ can_species_procreate = {
 # Root = Planet
 can_species_be_assembled = {
 	is_sapient = yes
-	NOT = {
-		has_trait = trait_exd
+	NOT = { has_trait = trait_exd }
+	# Expanded Gestalts: Forgotten Queens
+	NAND = {
+		root = { owner = { has_valid_civic = civic_machine_replicators } }
+		has_trait = trait_machine_central
 	}
 	# Holofrixit Revisited / Silfae's Portraits: Revisited
 	has_species_trait_holodrone = no
@@ -2204,6 +2142,8 @@ can_orbital_bombard = {
 				# Shroud Rising
 				is_country_type = shroud_horrors
 				is_country_type = shroud_cult
+				# StellarRegulator Array
+				SRA_can_do_orbital_bombardment_country = yes
 				# The Sleeper
 				is_sleeper = yes
 			}
@@ -2244,6 +2184,7 @@ can_orbital_bombard = {
 				is_country_type = katzenartig_imperium
 				is_country_type = acot_crazed_stellarite
 				is_country_type = compound_empire
+				is_country_type = giga_hypersiphon_major_incursion
 				# History of the Lost Empire
 				is_country_type = LsE_fallen_empire
 				# LEX
@@ -2260,11 +2201,12 @@ can_orbital_bombard = {
 				# Replicators
 				is_country_type = replicators
 				# Star Wars: Kuat Ancient Empire
+				is_country_type = mercenary_fleet
 				kuat_can_do_bombarment_country = yes
 				# Star Wars: UnknownWorld Shipgirls Story
 				is_country_type = afk_crisis_country
 				# The Empty Vagrant
-				is_country_type = default_ev
+				is_default_ev_country_type = yes
 				# The Sleeper
 				is_sleeper = yes
 				# Warship Girls R And MIST Species
@@ -2396,20 +2338,22 @@ can_spawn_debris = {
 	owner = {
 		NOR = {
 			has_ascension_perk = ap_enigmatic_engineering
-			# Warship Girls R And MIST Species
-			is_country_type = wg_crisis_country
-			is_country_type = wg_Khan_country_type
-			is_country_type = wg_Khan_country_type_auto_delete
-			# Star Wars: UnknownWorld Shipgirls Story
-			is_country_type = afk_crisis_country
+			# Expanded Gestalts: Forgotten Queens
+			has_civic = civic_hive_strong_connection
 			# History of the Lost Empire
 			is_country_type = LsE_fallen_empire
+			# Star Wars: UnknownWorld Shipgirls Story
+			is_country_type = afk_crisis_country
 			# The Empty Vagrant
-			is_country_type = default_ev
+			is_default_ev_country_type = yes
 			# Twinks Atlantean
 			has_valid_civic = civic_tw_atlantis
 			# Twinks Eternal Empire
 			has_government = gov_eternal_continuum
+			# Warship Girls R And MIST Species
+			is_country_type = wg_crisis_country
+			is_country_type = wg_Khan_country_type
+			is_country_type = wg_Khan_country_type_auto_delete
 		}
 	}
 }
@@ -3475,7 +3419,7 @@ can_build_branch_offices = {
 			# Ethical Gestalts
 			has_valid_civic = civic_hive_guest
 			has_policy_flag = infiltration_allowed
-			# Forgotten Queens
+			# Expanded Gestalts: Forgotten Queens
 			has_valid_civic = civic_mutualistic_behavior
 			has_valid_civic = civic_machine_trading
 			# Girls Frontline
@@ -4019,13 +3963,13 @@ can_crossbreed_species = {
 	NOR = {
 		is_subspecies = root
 		root = { is_subspecies = prev }
-		# Warship Girls R And MIST Species
-		has_wg_traits = yes
+		# Girls Frontline
+		has_trait = GF_trait_doll
 		# Misc
 		is_archetype = NANITES_CROP
 		is_archetype = UNITED_FLEET
-		# Girls Frontline
-		has_trait = GF_trait_doll
+		# Warship Girls R And MIST Species
+		has_wg_traits = yes
 	}
 }
 
@@ -4038,7 +3982,7 @@ can_use_galactic_market = {
 		is_country_type = sbtg_stellarborne_empire_active
 		# The Empty Vagrant
 		AND = {
-			is_country_type = default_ev
+			is_default_ev_country_type = yes
 			NOT = { has_policy_flag = ev_no_use_galactic_market }
 		}
 		# ZOFE
@@ -4665,7 +4609,12 @@ can_fill_worker_job = {
 		}
 		# V_Traits
 		if = {
-			limit = { is_v_social_parasite = yes }
+			limit = {
+				OR = {
+					is_v_social_parasite = yes
+					is_v_clockwork = yes
+				}
+			}
 			has_citizenship_type = { type = citizenship_slavery }
 		}
 		# TimeMod
@@ -5005,14 +4954,7 @@ can_trade_leader = {
 			# Rogue Maid
 			has_specialist_subject_leader_trait_maid = yes
 			# Girls Frontline
-			AND = {
-				species = { is_robotic = yes }
-				ROOT = { is_valid_GF_OGAS_subnet = yes }
-				FROM = {
-					is_overlord_to = ROOT
-					has_authority = GF_auth_commonwealth
-				}
-			}
+			GF_can_trade_robotic_leader = yes
 		}
 		is_heir = no
 	}
@@ -5125,3 +5067,6 @@ can_trade_fleet = {
 # can_interact_with_astral_rift
 # can_explore_astral_rift
 # can_leader_explore_astral_rift
+# can_ai_assign_governor
+# should_ai_support_galactic_empire
+# should_ai_undermine_galactic_empire
