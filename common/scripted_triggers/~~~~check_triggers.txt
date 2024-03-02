@@ -193,9 +193,6 @@ merg_has_real_space = { has_global_flag = has_real_space_mod }
 # Real Space New Frontiers
 merg_has_real_new_frontiers = { has_global_flag = has_new_frontiers_mod }
 
-# Reproductive Technology and Politics
-merg_has_diag_rtp_mod = { has_mod_reproductive_tech_and_politics = yes }
-
 # Rogue Maid
 merg_has_rogue_maid = { has_global_flag = flag_rogue_maid_mod_activated }
 

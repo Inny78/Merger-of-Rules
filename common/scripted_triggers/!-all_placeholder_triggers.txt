@@ -259,6 +259,7 @@ is_exp_lithoid_shiny = { always = no }
 is_fq_hollow = { always = no }
 is_fq_matryoshka = { always = no }
 is_geode_world = { always = no }
+is_geoloid = { always = no }
 is_GF_authority = { always = no }
 is_giga_crisis_faction = { always = no }
 is_giga_habitable_gas_giant = { always = no }

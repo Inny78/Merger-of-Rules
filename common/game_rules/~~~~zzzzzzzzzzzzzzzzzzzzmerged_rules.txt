@@ -2011,7 +2011,7 @@ can_species_be_assembled = {
 			root = { check_modifier_value = { modifier = planet_pop_assembly_organic_add value > 0 } }
 		}
 		# Steven Universe Homeworld Gems
-		# has_trait = trait_geoloid
+		is_geoloid = yes
 		# Voyage to Eternity
 		KZ_VOY_trgr_plnt_CLONE = yes
 	}
@@ -3152,7 +3152,30 @@ pop_generates_crime = {
 	}
 }
 
-# can_pops_grow_on_planet
+# This = planet
+can_pops_grow_on_planet = {
+	NOR = {
+		has_modifier = planet_population_control
+		AND = {
+			has_modifier = planet_population_control_gestalt
+			# Ethical Gestalts
+			owner = { NOT = { has_policy_flag = population_controls_not_allowed } }
+		}
+		# Vanilla
+		AND = { # conquered by crisis
+			exists = controller
+			controller = {
+				OR = {
+					is_country_type = ai_empire
+					is_country_type = swarm
+					# Shroud Rising
+					is_country_type = shroud_cult
+				}
+			}
+		}
+	}
+}
+
 # can_pops_assemble_on_planet
 # can_pops_decline_on_planet
 # can_force_grow_on_planet
@@ -3264,22 +3287,6 @@ should_force_decline_species = {
 							}
 						}
 						check_variable = { which = techno_pops_missing value < 0 }
-					}
-				}
-			}
-		}
-		# Reproductive Technology and Politics
-		AND = {
-			custom_tooltip = {
-				success_text = modification_assembly_force_decline
-				merg_has_diag_rtp_mod = yes
-				exists = this
-				is_robotic_species = no
-				from = {
-					merg_has_cloning_building = yes
-					assembling_species = {
-						is_same_species = prevprev
-						NOT = { is_exact_same_species = prevprev }					
 					}
 				}
 			}
