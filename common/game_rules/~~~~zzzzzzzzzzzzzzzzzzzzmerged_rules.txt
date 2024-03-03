@@ -1953,18 +1953,7 @@ can_species_be_assembled = {
 					root = {
 						OR = {
 							# Vanilla
-							AND = {
-								merg_has_diag_rtp_mod = no
-								merg_has_cloning_building = yes
-							}
-							AND = {
-								merg_has_diag_rtp_mod = yes
-								merg_has_cloning_building = yes
-								any_owned_species = {
-									is_same_species = prevprev
-									NOT = { is_exact_same_species = prevprev }
-								}
-							}
+							merg_has_cloning_building = yes
 							has_modifier = tiyanki_trophy
 							owner = { has_modifier = syamelles_curse }
 							AND = {
