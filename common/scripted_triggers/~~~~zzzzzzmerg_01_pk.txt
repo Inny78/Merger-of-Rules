@@ -4013,6 +4013,8 @@ is_a_habitable_planet_megastructure = {
 		is_acot_awesome_planet_class = yes
 		# Misc
 		merg_is_nuked = yes
+		# Planetary Diversity
+		pd_is_planet_class_all = yes
 	}
 }
 

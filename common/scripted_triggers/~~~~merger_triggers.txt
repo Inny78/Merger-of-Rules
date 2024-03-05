@@ -365,6 +365,8 @@ merg_is_empty_space = {
 		is_sm_empty_space = yes
 		# Some Events of Outside Cluster
 		# is_planet_class = pc_star_void_dummy_01
+		# Steven Universe Homeworld Gems
+		is_steven_no_star = yes
 		# ThaumStellaris
 		is_tc_invisible = yes
 	}

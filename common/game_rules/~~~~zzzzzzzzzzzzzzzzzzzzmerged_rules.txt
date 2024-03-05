@@ -599,6 +599,7 @@ can_generate_military_leader_from_pop = {
 }
 
 # can_generate_army_from_planet
+
 #Root = planet
 #This = country
 can_release_vassal = {
@@ -715,7 +716,13 @@ can_generate_army_from_species = {
 subject_can_expand = {
 	# Exalted domination totally disallow vassal expansion
 	merg_has_exalted_domination = no
-	root = { has_valid_civic = civic_feudal_realm }
+	NAND = {
+		is_ai = yes
+		AND = {
+			exists = overlord
+			overlord = { has_origin = origin_imperial_vassal_overlord }
+		}
+	}
 }
 
 #Root = country, attacker
@@ -2267,8 +2274,8 @@ has_full_sensor_range = {
 # can_have_robot_pops
 # can_stop_purge_pop_manually
 # can_purge_pop_manually
-
 # fleet_uses_templates
+
 # this = starbase, megastructure or planet
 can_orbitable_repair_ships = {
 	OR = {
@@ -3452,6 +3459,9 @@ can_support_branch_offices = {
 	}
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_ON_MEGACORP_PLANET
+		# Criminal Corp Rework
+		has_bccr = no
+		# Vanilla
 		OR = {
 			NOR = {
 				AND = {

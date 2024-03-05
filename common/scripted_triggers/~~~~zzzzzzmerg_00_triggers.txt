@@ -159,6 +159,7 @@ can_have_habitable_deposits = {
 		is_pd_radiotrophic_world = yes
 		is_pd_megaflora_hive = yes
 		is_pd_rare = yes
+		pd_is_planet_class_all = yes
 	}
 }
 

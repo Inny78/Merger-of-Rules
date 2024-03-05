@@ -107,6 +107,7 @@ has_artificial_wombs = { always = no }
 has_aso_space_exploration = { always = no }
 has_auth_holofrixit = { always = no }
 has_battle_thrall_military_leaders_active = { always = no }
+has_bccr = { always = no }
 has_bug_branch = { always = no }
 has_civic_organic_zealots_active = { always = no }
 has_civic_organic_zealots_active = { always = no }
@@ -388,6 +389,7 @@ is_sots_soulsphere = { always = no }
 is_special_affection_leader = { always = no }
 is_special_kancolle_leader = { always = no }
 is_spy_empire = { always = no }
+is_steven_no_star = { always = no }
 is_submerged = { always = no }
 is_subsapient_form = { always = no }
 is_symbiote = { always = no }
@@ -449,6 +451,7 @@ pd_is_arid = { always = no }
 pd_is_continental = { always = no }
 pd_is_desert = { always = no }
 is_pd_planet_for_aqua_trait = { always = no }
+pd_is_planet_class_all = { always = no }
 pd_is_planet_class_gaia = { always = no }
 pd_is_planet_class_hive = { always = no }
 pd_is_planet_class_nuked = { always = no }
