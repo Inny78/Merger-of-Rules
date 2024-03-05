@@ -1,4 +1,5 @@
 # Irony this is a placeholder file please ignore it
+civic_altruism = { potential = { always = no } }
 civic_anarchy_ideals = { potential = { always = no } }
 civic_beacon_of_liberty_corpo = { potential = { always = no } }
 civic_bugged_slaving_despots = { potential = { always = no } }
@@ -6,6 +7,7 @@ civic_bugged_slaving_despots_corpo = { potential = { always = no } }
 civic_bringers_of_death = { potential = { always = no } }
 civic_business_union = { potential = { always = no } }
 civic_caste_system = { potential = { always = no } }
+civic_coalition_government = { potential = { always = no } }
 civic_closed_collective = { potential = { always = no } }
 civic_closed_network = { potential = { always = no } }
 civic_corp_security = { potential = { always = no } }

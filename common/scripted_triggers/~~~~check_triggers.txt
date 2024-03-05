@@ -86,6 +86,9 @@ merg_has_ethics_bug = { has_bug_branch = yes }
 # Ethics and Civics Classic 1100284147
 merg_has_ethics_classic = { has_global_flag = ethic_civic_classic_active }
 
+# Ethics and Civics : Infinity
+merg_has_eci = { has_global_flag = ideological_revolution }
+
 # Ethics and Civics Redux 2387799348
 merg_has_ethics_redux = { has_global_flag = cultural_overhaul_redux_active }
 
