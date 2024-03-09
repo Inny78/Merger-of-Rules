@@ -1782,6 +1782,8 @@ can_species_be_assembled = {
 					has_trait = trait_hive_mind
 					# Ethics and Civics - Bug Branch
 					is_bugged_happy_drone = yes
+					# Ethics and Civics: Infinity
+					# has_trait = trait_psionic_link # Removed according to the author
 				}
 			}
 			# Expanded Traits, Civics, Pops, and More
@@ -3941,15 +3943,30 @@ is_criminal_syndicate_rule = {
 
 # This = planet
 can_crossbreed_species_on_planet = {
+	# Better Performance & Utilities
+	NOR = {
+		has_global_flag = z_pf2_flg_glbl_no_hybird
+		has_global_flag = PF_flg_glbl_Hybrid_no
+	}
+	# Vanilla
 	exists = owner
 	OR = {
-		owner = { has_ascension_perk = ap_xeno_compatibility }
+		owner = {
+			OR = {
+				has_ascension_perk = ap_xeno_compatibility
+				# ECI
+				AND = {
+					has_valid_civic = civic_liberty_of_libido
+					has_ascension_perk = ap_evolutionary_mastery
+				}
+			}
+		}
 		# Red Light Demeanor
 		has_building = building_brothel_house
 		has_building = building_brothel_house_branch_office
 	}
-	# Better Performance & Utilities
-	NOT = { has_global_flag = z_pf2_flg_glbl_no_hybird }
+	# Red Light Demeanor
+	NOT = { owner = { has_country_flag = redlight_no_crossbreeding } }
 	# Warship Girls R And MIST Species
 	any_owned_species = {
 		NOR = {
@@ -3957,8 +3974,6 @@ can_crossbreed_species_on_planet = {
 			is_archetype = SHENHAI
 		}
 	}
-	# Red Light Demeanor
-	NOT = { owner = { has_country_flag = redlight_no_crossbreeding } }
 	# Vanilla - putting this last for performance
 	count_species = {
 		limit = { is_crossbreeding_possible = yes }
@@ -4864,6 +4879,14 @@ can_dismiss_leader = {
 	custom_tooltip = {
 		fail_text = "cannot_fire_leader_during_crisis"
 		NOT = { has_leader_flag = cannot_be_fired }
+	}
+	# ECI
+	custom_tooltip = {
+		fail_text = "requires_actor_not_coalition_government_society"
+		exists = owner
+		owner = {
+			NOT = { has_valid_civic = civic_coalition_government }
+		}
 	}
 	# StellarisCraft
 	custom_tooltip = {

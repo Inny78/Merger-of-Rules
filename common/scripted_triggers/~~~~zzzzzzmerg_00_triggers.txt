@@ -113,7 +113,7 @@ habitable_planet_not_urban = {
 		# Gigastructures
 		giga_is_lifeless = yes
 		giga_is_katzenland = yes
-		# Real Space - New Frontiers
+		# Real Space - Planetary Stations
 		is_planet_class = pc_hollow
 	}
 }
@@ -658,6 +658,8 @@ is_crossbreeding_possible = {
 				limit = { is_half_species = PREV }
 			}
 		}
+		# ECI
+		has_trait = trait_fallen_god
 	}
 }
 
@@ -1003,6 +1005,8 @@ has_any_industry_district = {
 		has_district = PR_DSTR_hab_crafter
 		has_district = PR_DSTR_hab_forge
 		has_district = PR_DSTR_hab_catalytic
+		# Real Space - Planetary Stations
+		has_district = district_foundry_plant
 		# Warship Girls R and MIST Species
 		has_district = district_dr_industrial
 		# Wula Fallen Empire
@@ -1065,6 +1069,10 @@ has_any_mining_district = {
 		has_district = PR_DSTR_mining_uncapped
 		has_district = PR_DSTR_rw_mining
 		has_district = PR_DSTR_hab_mining
+		# Real Space - Planetary Stations
+		has_district = district_mining_complex
+		has_district = district_ore_processing_complex
+		has_district = district_mining_bay
 		# Wula Fallen Empire
 		has_district = district_wula_abandon_forge_world_core
 	}
@@ -1103,6 +1111,11 @@ has_any_generator_district_or_building = {
 		has_district = PR_DSTR_generator_uncapped
 		has_district = PR_DSTR_rw_generator
 		has_district = PR_DSTR_hab_energy
+		# Real Space - Planetary Stations
+		has_district = district_geothermal_power_plant
+		has_district = district_hydrocarbon_power_plant
+		has_district = district_solar_power_plant
+		has_district = district_atmospheric_power_plant
 		# Wula Fallen Empire
 		has_district = district_wula_abandon_forge_world_surface
 	}

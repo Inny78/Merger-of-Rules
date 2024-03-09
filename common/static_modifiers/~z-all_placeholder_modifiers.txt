@@ -32,6 +32,7 @@ planet_cloning_limits = {}
 planet_dal_war_in_eden = {}
 planet_population_control_rationed = {}
 planet_population_control_gestalt = {}
+pop_highly_educated = {}
 ravenous_locusts = {}
 terraformer_homeworld = {}
 volcanic_world = {}

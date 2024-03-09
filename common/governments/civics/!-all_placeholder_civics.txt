@@ -13,6 +13,7 @@ civic_closed_network = { potential = { always = no } }
 civic_corp_security = { potential = { always = no } }
 civic_crusaders = { potential = { always = no } }
 civic_divine_order = { potential = { always = no } }
+civic_du_contrat_social = { potential = { always = no } }
 civic_eda = { potential = { always = no } }
 civic_elec_stellar_devourers = { potential = { always = no } }
 civic_engineering_cult = { potential = { always = no } }
@@ -32,6 +33,7 @@ civic_infestation = { potential = { always = no } }
 civic_interventionalist = { potential = { always = no } }
 civic_interventionalist_corpo = { potential = { always = no } }
 civic_isolationism = { potential = { always = no } }
+civic_liberty_of_libido = { potential = { always = no } }
 civic_living_hosts = { potential = { always = no } }
 civic_machine_cult = { potential = { always = no } }
 civic_machine_cult_corpo = { potential = { always = no } }
@@ -43,6 +45,7 @@ civic_machine_trading = { potential = { always = no } }
 civic_master_race = { potential = { always = no } }
 civic_megastore = { potential = { always = no } }
 civic_memorialist_corp = { potential = { always = no } }
+civic_moth_chasing_flames = { potential = { always = no } }
 civic_mutualistic_behavior = { potential = { always = no } }
 civic_nirvana_empire_council = { potential = { always = no } }
 civic_nirvana_empire_dragon = { potential = { always = no } }
@@ -61,6 +64,7 @@ civic_slave_race = { potential = { always = no } }
 civic_slave_race_corpo = { potential = { always = no } }
 civic_slaving_despots = { potential = { always = no } }
 civic_slaving_despots_corpo = { potential = { always = no } }
+civic_sparta_spirit = { potential = { always = no } }
 civic_spiritual_democracy = { potential = { always = no } }
 civic_state_monopoly = { potential = { always = no } }
 civic_elec_stellar_devourers = { potential = { always = no } }

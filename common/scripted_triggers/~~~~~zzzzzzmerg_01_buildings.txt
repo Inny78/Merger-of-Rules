@@ -133,6 +133,42 @@ has_upgraded_capital = {
 			}
 		}
 	}
+	# Real Space - Planetary Stations
+	else_if = {
+		limit = { has_planet_flag = planetary_station }
+		custom_tooltip = {
+			fail_text = "requires_building_planetary_station_capital"
+			OR = {
+				has_building = building_station_capital
+				has_building = building_station_major_capital
+				has_building = building_station_fe_capital
+				has_building = building_station_system_capital
+				has_building = building_prison_capital
+				has_building = building_prison_major_capital
+				has_building = building_prison_system_capital
+				# ACOT
+				has_building = building_dm_ancient_palace
+				has_building = building_ae_ancient_palace
+				has_building = building_dm_ancient_hive_cluster
+				has_building = building_ae_ancient_hive_cluster
+				has_building = building_dm_ancient_control_center 
+				has_building = building_ae_ancient_control_center				
+				has_building = building_heaven_sanctuary
+				has_building = building_ancient_palace
+				has_building = building_phanon_tower
+				# AOT
+				has_building = building_stellarite_palace
+				has_building = building_stellarite_control_center
+				has_building = building_stellarite_hive_cluster
+				has_building = building_phanon_palace
+				has_building = building_phanon_hive_cluster
+				has_building = building_phanon_control_center
+				# ZOFE Ascension
+				zofeac_capital_buildings = yes
+			}
+		}
+	}
+	# Vanilla
 	else_if = {
 		limit = { owner = { is_hive_empire = yes } }
 		custom_tooltip = {
@@ -413,6 +449,38 @@ has_major_upgraded_capital = {
 			}
 		}
 	}
+	# Real Space - Planetary Stations
+	else_if = {
+		limit = { has_planet_flag = planetary_station }
+		custom_tooltip = {
+			fail_text = "requires_building_planetary_station_major_capital"
+			OR = {
+				has_building = building_station_major_capital
+				has_building = building_station_fe_capital
+				has_building = building_station_system_capital
+				has_building = building_prison_major_capital
+				has_building = building_prison_system_capital
+				# ACOT
+				has_building = building_dm_ancient_palace
+				has_building = building_ae_ancient_palace
+				has_building = building_dm_ancient_hive_cluster
+				has_building = building_ae_ancient_hive_cluster
+				has_building = building_dm_ancient_control_center 
+				has_building = building_ae_ancient_control_center				
+				has_building = building_heaven_sanctuary
+				has_building = building_ancient_palace
+				has_building = building_phanon_tower
+				# AOT
+				has_building = building_stellarite_palace
+				has_building = building_stellarite_control_center
+				has_building = building_stellarite_hive_cluster
+				has_building = building_phanon_palace
+				# ZOFE Ascension
+				zofeac_capital_buildings = yes
+			}
+		}
+	}
+	# Vanilla
 	else_if = {
 		limit = { owner = { is_hive_empire = yes } }
 		custom_tooltip = {
@@ -682,6 +750,38 @@ has_fully_upgraded_capital = {
 			}
 		}
 	}
+	# Real Space - Planetary Stations
+	else_if = {
+		limit = { has_planet_flag = planetary_station }
+		custom_tooltip = {
+			fail_text = "requires_building_planetary_station_system_capital"
+			OR = {
+				has_building = building_station_fe_capital
+				has_building = building_station_system_capital
+				has_building = building_prison_system_capital
+				# ACOT
+				has_building = building_dm_ancient_palace
+				has_building = building_ae_ancient_palace
+				has_building = building_dm_ancient_hive_cluster
+				has_building = building_ae_ancient_hive_cluster
+				has_building = building_dm_ancient_control_center 
+				has_building = building_ae_ancient_control_center				
+				has_building = building_heaven_sanctuary
+				has_building = building_ancient_palace
+				has_building = building_phanon_tower
+				# AOT
+				has_building = building_stellarite_palace
+				has_building = building_stellarite_control_center
+				has_building = building_stellarite_hive_cluster
+				has_building = building_phanon_palace
+				has_building = building_phanon_hive_cluster
+				has_building = building_phanon_control_center
+				# ZOFE Ascension
+				zofeac_capital_buildings = yes
+			}
+		}
+	}
+	# Vanilla
 	else_if = {
 		limit = { owner = { is_hive_empire = yes } }
 		custom_tooltip = {

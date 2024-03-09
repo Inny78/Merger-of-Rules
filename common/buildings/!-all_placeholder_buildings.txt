@@ -290,3 +290,10 @@ building_bugfables = { potential = { always = no } allow = { always = no } }
 building_cspire = { potential = { always = no } allow = { always = no } }
 building_cfcouncil = { potential = { always = no } allow = { always = no } }
 building_ccathedral = { potential = { always = no } allow = { always = no } }
+building_station_capital = { potential = { always = no } allow = { always = no } }
+building_station_major_capital = { potential = { always = no } allow = { always = no } }
+building_station_fe_capital = { potential = { always = no } allow = { always = no } }
+building_station_system_capital = { potential = { always = no } allow = { always = no } }
+building_prison_capital = { potential = { always = no } allow = { always = no } }
+building_prison_major_capital = { potential = { always = no } allow = { always = no } }
+building_prison_system_capital = { potential = { always = no } allow = { always = no } }

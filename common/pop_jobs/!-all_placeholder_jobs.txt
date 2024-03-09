@@ -16,6 +16,8 @@ gpm_precursor_archaeologist_drone = { category = worker resources = {} possible 
 gpm_orbital_researcher = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
 gpm_orbital_researcher_drone = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
 grunt = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+legendary_mage = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+magician = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
 matter_reanimator = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
 phanon_researcher = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
 phanon_researcher_drone = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
