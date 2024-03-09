@@ -469,7 +469,6 @@ planet_has_symbiotes = { always = no }
 policies_allow_breeding = { always = yes }
 prob_forced_armageddon_bombardment = { always = no }
 robot_has_rare_crystal_comp = { always = no }
-rs_microquasar = { always = no }
 SRA_can_do_orbital_bombardment_country = { always = no }
 SRA_is_ancient_system = { always = no }
 SRA_is_special_system = { always = no }

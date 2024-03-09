@@ -96,22 +96,14 @@ country_event = {
 			5 = {
 				modifier = {
 					factor = 0
-					has_monthly_income = { 
-						resource = acot_sr_dark_energy
-						value < 10
-					}
-					# acot_should_not_crave_dark_energy = yes
+					acot_should_not_crave_dark_energy = yes
 				}
 				set_country_flag = instrument_craving_dark_energy
 			}
 			5 = {
 				modifier = {
 					factor = 0
-					has_monthly_income = { 
-						resource = acot_sr_stellarite
-						value < 10
-					}
-					# acot_should_not_crave_stellarite = yes
+					acot_should_not_crave_stellarite = yes
 				}
 				set_country_flag = instrument_craving_stellarite
 			}
@@ -129,7 +121,10 @@ country_event = {
 			}
 			# Gigastructural Engineering & More
 			5 = {
-				giga_should_not_crave_iodizium = yes
+				modifier = {
+					factor = 0
+					giga_should_not_crave_iodizium = yes
+				}
 				set_country_flag = instrument_craving_iodizium
 			}
 			5 = {

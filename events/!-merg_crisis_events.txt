@@ -425,7 +425,7 @@ planet_event = {
 			}
 			effect = {
 				create_leader = {
-					class = admiral
+					class = commander
 					species = event_target:contingency_bot
 					name = random
 					effect = {
