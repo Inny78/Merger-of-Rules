@@ -1,7 +1,10 @@
 # Vanilla scripted triggers from 01_scripted_triggers_refugees.txt
 is_valid_refugee_pop = {
 	is_robot_pop = no
-	can_think = no
+	NOR = {
+		merg_has_hive_trait = yes
+		can_think = no
+	}
 	owner = {
 		any_relation = {
 			merg_is_default_empire = yes
