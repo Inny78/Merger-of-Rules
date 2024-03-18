@@ -117,6 +117,10 @@ has_diagraphers_trait_mod = { always = no }
 has_dict_democratic_auth = { always = no }
 has_ecaf_triggers = { always = no }
 has_ecc_slave_gene = { always = no }
+has_eci_fallen_god = { always = no }
+has_eci_flesh_components = { always = no }
+has_eci_psionic_link = { always = no }
+has_eci_slave_gene = { always = no }
 has_ethical_gestalts = { always = no }
 has_exotic_gas_dependency = { always = no }
 has_expanded_events = { always = no }
@@ -247,6 +251,7 @@ is_ds_stahl = { always = no }
 is_ds_stellar_engine = { always = no }
 is_ds_surrelist = { always = no }
 is_ds_zeitriss_gc = { always = no }
+is_eci_megacorp = { always = no }
 is_ecocentric = { always = no }
 is_eda_empire = { always = no }
 is_exile_country = { always = no }
@@ -260,6 +265,9 @@ is_exp_pheremone = { always = no }
 is_exp_lithoid_shiny = { always = no }
 is_fq_hollow = { always = no }
 is_fq_matryoshka = { always = no }
+is_fq_trait_hive_mind_overlord = { always = no }
+is_fq_trait_machine_central = { always = no }
+is_fq_trait_machine_digital = { always = no }
 is_geode_world = { always = no }
 is_geoloid = { always = no }
 is_GF_authority = { always = no }
@@ -514,3 +522,4 @@ is_planet_class_pc_w_red_star = { always = no }
 is_planet_class_pc_w_green_star = { always = no }
 is_planet_class_pc_w_purple_star = { always = no }
 is_planet_class_pc_y_star = { always = no }
+is_sparta_citizenship_full = { always = no }

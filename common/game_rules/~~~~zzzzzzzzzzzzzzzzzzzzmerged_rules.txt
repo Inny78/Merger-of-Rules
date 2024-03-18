@@ -511,7 +511,7 @@ species_can_live_on_planet = {
 	# Expanded Gestalts: Forgotten Queens
 	NAND = {
 		root = { is_fq_matryoshka = no }
-		has_trait = trait_machine_digital
+		is_fq_trait_machine_digital = yes
 	}
 }
 
@@ -670,6 +670,8 @@ can_release_vassal_from_species = {
 					Maid_trigger_4_can_release_vassal_from_species = yes
 				}
 			}
+			# Ethics & Civcs Infinity
+			has_eci_flesh_components = yes
 			# Plentiful Perks
 			has_trait = trait_plentiful_traditions_pt_cocoon
 			# Girls Frontline
@@ -707,7 +709,75 @@ can_generate_army_from_species = {
     }
 }
 
-# can_modify_species
+# Root = country
+# This = species
+can_modify_species = {
+	# Ariphaos Patch
+	root.owner = {
+		OR = {
+			is_ai = no
+			is_synthetic_empire = yes
+			count_exact_species = {
+				count < 3
+				limit = {
+					OR = {
+						is_same_species = prevprev
+						is_subspecies = prevprev
+					}
+					NOR = {
+						has_trait = trait_self_modified
+						# Ethics & Civics Infinity
+						has_eci_fallen_god = yes
+						has_trait = trait_unnatural
+						# has_eci_unnatural = yes
+					}
+				}
+			}
+			AND = {
+				owner_species = { is_same_species = prevprev }
+				OR = {
+					has_ascension_perk = ap_engineered_evolution
+					has_ascension_perk = ap_the_flesh_is_weak
+				}
+			}
+			AND = {
+				OR = {
+					owner_species = { is_same_species = prevprev }
+					has_ascension_perk = ap_engineered_evolution
+					has_ascension_perk = ap_the_flesh_is_weak
+				}
+				has_technology = tech_gene_expressions
+				count_exact_species = {
+					count < 6
+					limit = {
+						OR = {
+							is_same_species = prevprev
+							is_subspecies = prevprev
+						}
+						NOR = {
+							has_trait = trait_self_modified
+							# Ethics & Civics Infinity
+							has_eci_fallen_god = yes
+							has_trait = trait_unnatural
+							# has_eci_unnatural = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	# Vanilla
+	OR = {
+		NOR = {
+			has_trait = trait_self_modified
+			# Ethics & Civics Infinity
+			has_eci_fallen_god = yes
+			has_trait = trait_unnatural
+			# has_eci_unnatural = yes
+		}
+		is_same_species = root
+	}
+}
 
 #This = country, suject
 #Root = country, overlord
@@ -719,7 +789,7 @@ subject_can_expand = {
 	root = {
 		OR = {
 			has_valid_civic = civic_feudal_realm
-			# ECI
+			# Ethics & Civics Infinity
 			AND = {
 				merg_has_eci = yes
 				OR = {
@@ -1465,7 +1535,7 @@ can_species_procreate = {
 		# Expanded Events
 		is_exp_memorex_comatos = yes
 		# Expanded Gestalts: Forgotten Queens
-		has_trait = trait_hive_mind_overlord
+		is_fq_trait_hive_mind_overlord = yes
 		# Expanded Megastructures and Technology
 		AND = {
 			has_global_flag = expanded_megastructures_installed
@@ -1661,7 +1731,7 @@ can_species_be_assembled = {
 	# Expanded Gestalts: Forgotten Queens
 	NAND = {
 		root = { owner = { has_valid_civic = civic_machine_replicators } }
-		has_trait = trait_machine_central
+		is_fq_trait_machine_central = yes
 	}
 	# Holofrixit Revisited / Silfae's Portraits: Revisited
 	has_species_trait_holodrone = no
@@ -1783,7 +1853,7 @@ can_species_be_assembled = {
 					# Ethics and Civics - Bug Branch
 					is_bugged_happy_drone = yes
 					# Ethics and Civics: Infinity
-					# has_trait = trait_psionic_link # Removed according to the author
+					has_eci_psionic_link = yes
 				}
 			}
 			# Expanded Traits, Civics, Pops, and More
@@ -3493,6 +3563,8 @@ can_support_branch_offices = {
 				has_valid_civic = civic_business_union
 				# BlueArchive species pack
 				has_authority = auth_kivotos
+				# Ethics  & Civics Infinity
+				is_eci_megacorp = yes
 				# Girls Frontline
 				has_civic = civic_gf_GK
 				# More Corporate Authorities
@@ -3936,6 +4008,10 @@ is_criminal_syndicate_rule = {
 		has_country_flag = BA_club_onsen_department
 		# Ethical Gestalts
 		has_policy_flag = infiltration_allowed
+		# Ethics & Civics Infinity
+		has_valid_civic = civic_family_business
+		has_valid_civic = civic_underworld_society
+		has_valid_civic = civic_world_cooperative
 		# ZOFE Megacorp
 		has_valid_civic = mc_civic_criminal_dominion
 	}
@@ -3954,7 +4030,7 @@ can_crossbreed_species_on_planet = {
 		owner = {
 			OR = {
 				has_ascension_perk = ap_xeno_compatibility
-				# ECI
+				# Ethics & Civics Infinity
 				AND = {
 					has_valid_civic = civic_liberty_of_libido
 					has_ascension_perk = ap_evolutionary_mastery
@@ -4024,6 +4100,12 @@ can_use_galactic_market = {
 		is_zofe_oe = yes
 	}
 	is_homicidal = no
+	NAND = {
+        AND = {
+            is_gestalt = yes
+            NOT = {  has_tradition = tr_future_economy }
+        }
+	}
 }
 
 # root = country
@@ -4622,6 +4704,8 @@ can_fill_worker_job = {
 			limit = { divinity_right_to_work_job_check_trigger_exempt = no }
 			divinity_right_to_work_job_check_trigger_worker = yes
 		}
+		# Ethics & Civics Infinity
+		is_sparta_citizenship_full = no
 		# Diagraphers Trait mod
 		if = {
 			limit = { merg_has_diag_trait = yes }
@@ -4643,7 +4727,7 @@ can_fill_worker_job = {
 			}
 		}
 		# V_Traits
-		if = {
+		else_if = {
 			limit = {
 				OR = {
 					is_v_social_parasite = yes
@@ -4651,6 +4735,23 @@ can_fill_worker_job = {
 				}
 			}
 			has_citizenship_type = { type = citizenship_slavery }
+		}
+		# Ethics & Civics Infinity
+		else_if = {
+			limit = {
+				has_global_flag = eci_educated
+				exists = owner
+				owner = {
+					OR = {
+						has_valid_civic = civic_moth_chasing_flames
+						has_valid_civic = civic_ruthless_competition
+					}
+				}
+			}
+			custom_tooltip = {
+				text = POP_EDUCATED_LOW
+				has_modifier = pop_highly_educated
+			}
 		}
 		# TimeMod
 		NOT = { has_citizenship_type = { type = citizenship_adeptus_mechanicus } }
@@ -4661,8 +4762,25 @@ can_fill_worker_job = {
 #checked if job's possible_precalc = can_fill_specialist_job
 can_fill_specialist_job = {
 	can_fill_specialist_job_trigger = yes
+	# Ethics & Civics Infinity
+    if = {
+        limit = {
+            has_global_flag = eci_educated
+            exists = owner
+            owner = {
+                OR = {
+                    has_valid_civic = civic_moth_chasing_flames
+                    has_valid_civic = civic_ruthless_competition
+                }
+            }
+        }
+        custom_tooltip = {
+            text = POP_EDUCATED_LOW
+            has_modifier = pop_highly_educated
+        }
+    }
 	# Girls Frontline
-	if = {
+	else_if = {
 		limit = { has_trait = GF_trait_doll }
 		owner = {
 			OR = {
@@ -4698,7 +4816,11 @@ can_fill_ruler_job = {
 		custom_tooltip = {
 			text = RULER_JOB_NECROPHAGE_TRIGGER
 			has_trait = trait_necrophage
-			is_enslaved = no
+            OR = {
+                is_enslaved = no
+				# Ethics & Civcs Infinity
+                owner = { has_civic = civic_du_contrat_social }
+            }
 			is_being_purged = no
 			is_being_assimilated = no
 			NOR = {
@@ -4714,7 +4836,7 @@ can_fill_ruler_job = {
 		}
 	}
 	# Silfae's Portraits: Revisited - Holofrixit Revisited
-	else_if = {
+	if = {
 		limit = {
 			merg_has_holofrixit = yes
 			exists = owner
@@ -4726,6 +4848,24 @@ can_fill_ruler_job = {
 		}
 		can_fill_holosphere_ruler_job = yes
 	}
+	# Ethics & Civcs Infinity
+    else_if = {
+        limit = {
+            has_global_flag = eci_educated
+            exists = owner
+            owner = {
+                OR = {
+                    has_valid_civic = civic_moth_chasing_flames
+                    has_valid_civic = civic_ruthless_competition
+                }
+            }
+        }
+        custom_tooltip = {
+            text = POP_EDUCATED_LOW
+            has_modifier = pop_highly_educated
+        }
+    }
+	# Vanilla
 	else = {
 		custom_tooltip = RULER_JOB_TRIGGER
 		hidden_trigger = {
@@ -4738,6 +4878,9 @@ can_fill_ruler_job = {
 				has_trait = trait_syncretic_proles
 				has_trait = trait_nerve_stapled
 				has_trait = trait_presapient_docile_livestock
+				# Ethics & Civics Infinity
+				has_eci_flesh_components = yes
+				has_eci_fallen_god = yes
 				# Expanded Traits, Civics, Pops, and More
 				is_exp_tree_caretaker = yes
 				# Lithoid Supremacy
@@ -4793,6 +4936,13 @@ can_fill_ruler_job = {
 				limit = { divinity_right_to_work_job_check_trigger_exempt = no }
 				divinity_right_to_work_job_check_trigger_ruler = yes
 			}
+			# Ethics & Civics Infinity
+            if = {
+                limit = {
+                    owner = { has_valid_civic = civic_sparta_spirit }
+                    is_sparta_citizenship_full = yes
+                }
+            }
 		}
 		# Girls Frontline
 		if = {
@@ -4880,7 +5030,7 @@ can_dismiss_leader = {
 		fail_text = "cannot_fire_leader_during_crisis"
 		NOT = { has_leader_flag = cannot_be_fired }
 	}
-	# ECI
+	# Ethics & Civics Infinity
 	custom_tooltip = {
 		fail_text = "requires_actor_not_coalition_government_society"
 		exists = owner

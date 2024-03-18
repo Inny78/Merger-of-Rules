@@ -17,15 +17,13 @@ event = {
 }
 
 event = {
-	id = merg.3
+	id = merg.1000
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = { always = no }
 
 	immediate = {
-		set_variable = {
-			which = techno_pops_missing
-			value = 0
-		}
+		set_variable = { which = techno_pops_missing value = 0 }
+		set_variable = { which = sleeper_aggro value = 0 }
 	}
 }

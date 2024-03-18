@@ -76,3 +76,7 @@ civic_xeno_militarist = { potential = { always = no } }
 GF_civic_GK = { potential = { always = no } }
 hfe_civic_egypt_fury = { potential = { always = no } }
 mc_civic_criminal_dominion = { potential = { always = no } }
+civic_family_business = { potential = { always = no } }
+civic_underworld_society = { potential = { always = no } }
+civic_world_cooperative = { potential = { always = no } }
+civic_sparta_spirit = { potential = { always = no } }

@@ -7,3 +7,4 @@ tr_mt_history_adopt = { possible = { always = no } ai_weight = { factor = 0 } }
 tr_AAA_history_adopt = { possible = { always = no } ai_weight = { factor = 0 } }
 tr_aaa_history_repurposed_relics = { possible = { always = no } ai_weight = { factor = 0 } }
 tr_mt_history_repurposed_relics = { possible = { always = no } ai_weight = { factor = 0 } }
+tr_future_economy = { possible = { always = no } ai_weight = { factor = 0 } }
