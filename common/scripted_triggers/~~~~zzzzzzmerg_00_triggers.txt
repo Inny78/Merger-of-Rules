@@ -452,13 +452,11 @@ has_total_war_cb = {
 				is_progenitor_empires = yes
 			}
 			OR = {
-				merg_is_awakened_fe = yes
+				is_country_type = awakened_fallen_empire
 				has_valid_civic = civic_hive_devouring_swarm
 				has_valid_civic = civic_machine_assimilator
-				# Ethical Gestalts
 				AND = {
-					has_valid_civic = civic_hive_assimilator
-					has_policy_flag = unrestricted_wars
+					has_valid_civic = civic_machine_terminator
 					from = {
 						NOR = {
 							has_country_flag = synthetic_empire
@@ -466,19 +464,21 @@ has_total_war_cb = {
 						}
 					}
 				}
-				# Vanilla
-				AND = {
-					has_valid_civic = civic_machine_terminator
-					from = {
-						NOR = {
-							has_country_flag = synthetic_empire
-							has_authority = auth_machine_intelligence
-						}
-					}
-				}
 				AND = {
 					has_valid_civic = civic_fanatic_purifiers
 					NOT = { is_same_species = from }
+				}
+				# ACOT
+				is_progenitor_empires = yes
+				# Civic: Organic Zealots
+				AND = {
+					is_valid_organic_zealots = yes
+					from = {
+						OR = {
+							is_robot_empire = yes
+							is_fallen_empire_machine = yes
+						}
+					}
 				}
 				# Ethical Gestalts
 				AND = {
@@ -493,18 +493,6 @@ has_total_war_cb = {
 				}
 				# Expanded Traits, Civics, Pops, and More
 				has_valid_civic = civic_infestation
-				# ACOT
-				is_progenitor_empires = yes
-				# Civic: Organic Zealots
-				AND = {
-					is_valid_organic_zealots = yes
-					from = {
-						OR = {
-							is_robot_empire = yes
-							is_fallen_empire_machine = yes
-						}
-					}
-				}
 				# Loud but Deadly
 				has_country_flag = lbd_dathnak_country
 			}
@@ -520,7 +508,6 @@ has_total_war_cb = {
 				NOR = {
 					is_country_type = awakened_fallen_empire
 					is_homicidal = yes
-					has_valid_civic = civic_machine_assimilator
 					# Ethical Gestalts
 					has_valid_civic = civic_hive_assimilator
 					AND = {
@@ -533,29 +520,29 @@ has_total_war_cb = {
 						}
 					}
 				}
-				has_policy_flag = liberation_wars
-				has_policy_flag = no_wars
+ 				# Ethical Gestalts
+ 				has_policy_flag = liberation_wars
+ 				has_policy_flag = no_wars
 			}
 			from = {
 				OR = {
-					merg_is_awakened_fe = yes
+					is_country_type = awakened_fallen_empire
 					is_homicidal = yes
-					has_valid_civic = civic_machine_assimilator
 					# ACOT
 					is_progenitor_empires = yes
-					# Loud but Deadly
-					has_country_flag = lbd_dathnak_country
+ 					# Loud but Deadly
+ 					has_country_flag = lbd_dathnak_country
 					# Ethical Gestalts
 					has_valid_civic = civic_hive_assimilator
-					AND = {
-						has_policy_flag = ai_outlawed
-						prev = {
-							OR = {
-								has_country_flag = synthetic_empire
-								is_machine_empire = yes
-							}
-						}
-					}
+					# AND = {
+					# 	has_policy_flag = ai_outlawed
+					# 	prev = {
+					# 		OR = {
+					# 			has_country_flag = synthetic_empire
+					# 			is_machine_empire = yes
+					# 		}
+					# 	}
+					# }
 				}
 				# Ethical Gestalts
 				NOR = {
@@ -659,7 +646,7 @@ is_crossbreeding_possible = {
 			}
 		}
 		# ECI
-		has_trait = trait_fallen_god
+		has_eci_fallen_god = yes
 	}
 }
 

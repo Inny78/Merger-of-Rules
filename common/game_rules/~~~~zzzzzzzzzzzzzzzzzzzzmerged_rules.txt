@@ -511,7 +511,8 @@ species_can_live_on_planet = {
 	# Expanded Gestalts: Forgotten Queens
 	NAND = {
 		root = { is_fq_matryoshka = no }
-		is_fq_trait_machine_digital = yes
+		has_trait = trait_machine_digital
+		# is_fq_trait_machine_digital = yes
 	}
 }
 
@@ -1535,7 +1536,8 @@ can_species_procreate = {
 		# Expanded Events
 		is_exp_memorex_comatos = yes
 		# Expanded Gestalts: Forgotten Queens
-		is_fq_trait_hive_mind_overlord = yes
+		has_trait = trait_hive_mind_overlord
+		# is_fq_trait_hive_mind_overlord = yes
 		# Expanded Megastructures and Technology
 		AND = {
 			has_global_flag = expanded_megastructures_installed
@@ -1731,7 +1733,8 @@ can_species_be_assembled = {
 	# Expanded Gestalts: Forgotten Queens
 	NAND = {
 		root = { owner = { has_valid_civic = civic_machine_replicators } }
-		is_fq_trait_machine_central = yes
+		has_trait = trait_machine_central
+		# is_fq_trait_machine_central = yes
 	}
 	# Holofrixit Revisited / Silfae's Portraits: Revisited
 	has_species_trait_holodrone = no
