@@ -1,5 +1,474 @@
 # Scripted triggers from mods, expanded to acknowledge other mods.
 
+############################### Additional Vanilla Buildings ###############################
+has_any_organic_assembly_building = {
+	OR = {
+		merg_has_cloning_building = yes
+		merg_has_clone_army_building = yes
+	}
+}
+has_upgraded_capital_4 = {
+    if = {
+        limit = { has_modifier = resort_colony }
+        custom_tooltip = {
+		    fail_text = "requires_building_resort_capital_3"
+			has_building = building_avb_resort_capital_3
+			# ACOT
+			has_building = building_dm_ancient_palace
+			has_building = building_ae_ancient_palace
+			has_building = building_heaven_sanctuary
+			has_building = building_ancient_palace
+			has_building = building_phanon_tower
+			# AOT
+			has_building = building_stellarite_palace
+			has_building = building_stellarite_control_center
+			has_building = building_stellarite_hive_cluster
+			has_building = building_phanon_palace
+			# EDA
+			has_building = eda_building_imperial_capital
+			# Star Wars: Kuat Ancient Empire
+			has_building = building_kuat_command_center
+			# Twinks Atlantean
+			has_building = building_ancient_palace_at
+			# Twinks Kaldorei
+			has_building = building_nightelf_palace
+	    }
+    }
+    else_if = {
+        limit = { has_modifier = slave_colony }
+        custom_tooltip = {
+            fail_text = "requires_building_slave_capital_3"
+			has_building = building_avb_slave_capital_3
+			# ACOT
+			has_building = building_dm_ancient_palace
+			has_building = building_ae_ancient_palace
+			has_building = building_heaven_sanctuary
+			has_building = building_ancient_palace
+			has_building = building_phanon_tower
+			# AOT
+			has_building = building_stellarite_palace
+			has_building = building_stellarite_control_center
+			has_building = building_stellarite_hive_cluster
+			has_building = building_phanon_palace
+			# EDA
+			has_building = eda_building_imperial_capital
+			# Star Wars: Kuat Ancient Empire
+			has_building = building_kuat_command_center
+			# Twinks Atlantean
+			has_building = building_ancient_palace_at
+			# Twinks Kaldorei
+			has_building = building_nightelf_palace
+        }
+    }
+    else_if = {
+		limit = { uses_habitat_capitals = yes }
+		custom_tooltip = {
+			fail_text = "requires_building_hab_capital"
+			OR = {
+				has_building = building_imperial_capital
+				has_building = building_imperial_machine_capital
+				has_building = building_imperial_hive_capital
+				#AVB
+				has_building = building_avb_hab_capital_4
+				# ACOT
+				has_building = building_dm_ancient_palace
+				has_building = building_ae_ancient_palace
+				has_building = building_dm_ancient_hive_cluster
+				has_building = building_ae_ancient_hive_cluster
+				has_building = building_dm_ancient_control_center 
+				has_building = building_ae_ancient_control_center				
+				has_building = building_heaven_sanctuary
+				has_building = building_ancient_palace
+				has_building = building_phanon_tower
+				# AOT
+				has_building = building_stellarite_palace
+				has_building = building_stellarite_control_center
+				has_building = building_stellarite_hive_cluster
+				has_building = building_phanon_palace
+				has_building = building_phanon_hive_cluster
+				has_building = building_phanon_control_center
+				# Dawn of the Republic
+				has_building = building_galactic_senate
+				# EDA
+				has_building = eda_building_imperial_capital
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
+				# Twinks Atlantean
+				has_building = building_ancient_palace_at
+				# Twinks Kaldorei
+				has_building = building_nightelf_palace
+				# Twinks Eternal
+				has_building = building_eternal_nexus_ai
+				has_building = building_eternal_palace
+				# Wula Fallen Empire
+				merg_has_wula_capital = yes
+				# ZOFE Ascension
+				zofeac_capital_buildings = yes
+			}
+		}
+	}
+    else_if = {
+        limit = { owner = { is_hive_empire = yes } }
+        custom_tooltip = {
+            fail_text = "requires_building_hive_capital_3"
+		    OR = {
+		    	has_building = building_avb_hive_capital_3
+		    	has_building = building_avb_hive_capital_4
+		    	has_building = building_imperial_hive_capital
+				# ACOT
+				has_building = building_dm_ancient_hive_cluster
+				has_building = building_ae_ancient_hive_cluster
+				has_building = building_heaven_sanctuary
+				has_building = building_phanon_tower
+				# All That Is GRIMDARK
+				has_building = building_hive_major_capital_sick
+				# AOT
+				has_building = building_stellarite_hive_cluster
+				has_building = building_phanon_hive_cluster
+				# EDA
+				has_building = eda_building_imperial_capital
+				# galacot
+				has_building = building_dm_galactic_hive_capital
+               	has_building = building_ae_galactic_hive_capital
+				has_building = building_stellarite_galactic_hive_capital
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
+		    }
+        }
+    }
+    else_if = {
+        limit = { owner = { is_machine_empire = yes } }
+        custom_tooltip = {
+			fail_text = "requires_building_machine_capital_4"
+            OR = {
+				has_building = building_avb_machine_capital_4
+				has_building = building_avb_machine_capital_5
+				has_building = building_avb_machine_capital_6
+				has_building = building_imperial_machine_capital
+				# ACOT
+				has_building = building_dm_ancient_control_center
+				has_building = building_ae_ancient_control_center
+				has_building = building_heaven_sanctuary
+				has_building = building_ancient_control_center
+				has_building = building_phanon_tower
+				# AOT
+				has_building = building_stellarite_control_center
+				has_building = building_phanon_control_center
+				# galacot
+				has_building = building_dm_galactic_machine_capital
+              	has_building = building_ae_galactic_machine_capital
+				has_building = building_stellarite_galactic_machine_capital
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
+				# Twinks Eternal
+				has_building = building_eternal_nexus_ai
+			}
+        }
+    }
+    else = {
+        custom_tooltip = {
+            fail_text = "requires_building_capital_4"
+            OR = {
+			    has_building = building_avb_capital_4
+			    has_building = building_avb_capital_5
+			    has_building = building_avb_capital_6
+			    has_building = building_imperial_capital
+				# ACOT
+				has_building = building_dm_ancient_palace
+				has_building = building_ae_ancient_palace
+				has_building = building_heaven_sanctuary
+				has_building = building_ancient_palace
+				has_building = building_phanon_tower
+				# All That Is GRIMDARK
+				has_building = building_system_capital_gr
+				# AOT
+				has_building = building_stellarite_palace
+				has_building = building_phanon_palace
+				# Azur Lane Stellaris DlC
+				has_building = azur_building_mind_capital
+				has_building = azur_building_mind_net_capital
+				# Dawn of the Republic
+				has_building = building_galactic_senate
+				# EDA
+				has_building = eda_building_imperial_capital
+				# Nirvana Empire Project
+				has_building = building_nirvana_empire_palace
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
+				# Twinks Atlantean
+				has_building = building_ancient_palace_at
+				# Twinks Kaldorei
+				has_building = building_nightelf_palace
+				# Twinks Eternal
+				has_building = building_eternal_palace
+				# galacot
+				has_building = building_dm_galactic_capital
+				has_building = building_ae_galactic_capital
+				has_building = building_stellarite_galactic_capital
+				has_building = building_dm_galactic_hive_capital
+           	    has_building = building_ae_galactic_hive_capital
+				has_building = building_stellarite_galactic_hive_capital
+				has_building = building_dm_galactic_machine_capital
+   	            has_building = building_ae_galactic_machine_capital
+				has_building = building_stellarite_galactic_machine_capital
+				# Wula Fallen Empire
+				merg_has_wula_capital = yes
+				# ZOFE Ascension
+				zofeac_capital_buildings = yes
+            }
+        }
+    }
+}
+has_upgraded_capital_5 = {
+    if = {
+        limit = { owner = { is_hive_empire = yes } }
+        custom_tooltip = {
+            fail_text = "requires_building_hive_capital_3"
+		    OR = {
+		    	has_building = building_avb_hive_capital_3
+		    	has_building = building_avb_hive_capital_4
+		    	has_building = building_imperial_hive_capital
+				# ACOT
+				has_building = building_dm_ancient_hive_cluster
+				has_building = building_ae_ancient_hive_cluster
+				has_building = building_heaven_sanctuary
+				has_building = building_phanon_tower
+				# All That Is GRIMDARK
+				has_building = building_hive_major_capital_sick
+				# AOT
+				has_building = building_stellarite_hive_cluster
+				has_building = building_phanon_hive_cluster
+				# EDA
+				has_building = eda_building_imperial_capital
+				# galacot
+				has_building = building_dm_galactic_hive_capital
+               	has_building = building_ae_galactic_hive_capital
+				has_building = building_stellarite_galactic_hive_capital
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
+		    }
+        }
+    }
+    else_if = {
+        limit = { owner = { is_machine_empire = yes } }
+        custom_tooltip = {
+			fail_text = "requires_building_machine_capital_5"
+			OR = {
+				has_building = building_avb_machine_capital_5
+				has_building = building_avb_machine_capital_6
+				has_building = building_imperial_machine_capital
+				# ACOT
+				has_building = building_dm_ancient_control_center
+				has_building = building_ae_ancient_control_center
+				has_building = building_heaven_sanctuary
+				has_building = building_ancient_control_center
+				has_building = building_phanon_tower
+				# AOT
+				has_building = building_stellarite_control_center
+				has_building = building_phanon_control_center
+				# galacot
+				has_building = building_dm_galactic_machine_capital
+              	has_building = building_ae_galactic_machine_capital
+				has_building = building_stellarite_galactic_machine_capital
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
+				# Twinks Eternal
+				has_building = building_eternal_nexus_ai
+			}
+        }
+    }
+    else = {
+        custom_tooltip = {
+            fail_text = "requires_building_capital_5"
+            OR = {
+			    has_building = building_avb_capital_5
+			    has_building = building_avb_capital_6
+			    has_building = building_imperial_capital
+				# ACOT
+				has_building = building_dm_ancient_palace
+				has_building = building_ae_ancient_palace
+				has_building = building_heaven_sanctuary
+				has_building = building_ancient_palace
+				has_building = building_phanon_tower
+				# All That Is GRIMDARK
+				has_building = building_system_capital_gr
+				# AOT
+				has_building = building_stellarite_palace
+				has_building = building_phanon_palace
+				# Azur Lane Stellaris DlC
+				has_building = azur_building_mind_capital
+				has_building = azur_building_mind_net_capital
+				# Dawn of the Republic
+				has_building = building_galactic_senate
+				# EDA
+				has_building = eda_building_imperial_capital
+				# Nirvana Empire Project
+				has_building = building_nirvana_empire_palace
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
+				# Twinks Atlantean
+				has_building = building_ancient_palace_at
+				# Twinks Kaldorei
+				has_building = building_nightelf_palace
+				# Twinks Eternal
+				has_building = building_eternal_palace
+				# galacot
+				has_building = building_dm_galactic_capital
+				has_building = building_ae_galactic_capital
+				has_building = building_stellarite_galactic_capital
+				has_building = building_dm_galactic_hive_capital
+           	    has_building = building_ae_galactic_hive_capital
+				has_building = building_stellarite_galactic_hive_capital
+				has_building = building_dm_galactic_machine_capital
+   	            has_building = building_ae_galactic_machine_capital
+				has_building = building_stellarite_galactic_machine_capital
+				# Wula Fallen Empire
+				merg_has_wula_capital = yes
+				# ZOFE Ascension
+				zofeac_capital_buildings = yes
+            }
+        }
+    }
+}
+has_upgraded_capital_6 = {
+    if = {
+        limit = { owner = { is_hive_empire = yes } }
+        custom_tooltip = {
+            fail_text = "requires_building_hive_capital_4"
+		    OR = {
+		    	has_building = building_avb_hive_capital_4
+		    	has_building = building_imperial_hive_capital
+				# ACOT
+				has_building = building_dm_ancient_hive_cluster
+				has_building = building_ae_ancient_hive_cluster
+				has_building = building_heaven_sanctuary
+				has_building = building_phanon_tower
+				# All That Is GRIMDARK
+				has_building = building_hive_major_capital_sick
+				# AOT
+				has_building = building_stellarite_hive_cluster
+				has_building = building_phanon_hive_cluster
+				# EDA
+				has_building = eda_building_imperial_capital
+				# galacot
+				has_building = building_dm_galactic_hive_capital
+               	has_building = building_ae_galactic_hive_capital
+				has_building = building_stellarite_galactic_hive_capital
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
+		    }
+        }
+    }
+    else_if = {
+        limit = { owner = { is_machine_empire = yes } }
+        custom_tooltip = {
+			fail_text = "requires_building_machine_capital_6"
+			OR = {
+				has_building = building_avb_machine_capital_6
+				has_building = building_imperial_machine_capital
+				# ACOT
+				has_building = building_dm_ancient_control_center
+				has_building = building_ae_ancient_control_center
+				has_building = building_heaven_sanctuary
+				has_building = building_ancient_control_center
+				has_building = building_phanon_tower
+				# AOT
+				has_building = building_stellarite_control_center
+				has_building = building_phanon_control_center
+				# galacot
+				has_building = building_dm_galactic_machine_capital
+              	has_building = building_ae_galactic_machine_capital
+				has_building = building_stellarite_galactic_machine_capital
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
+				# Twinks Eternal
+				has_building = building_eternal_nexus_ai
+			}
+        }
+    }
+    else = {
+        custom_tooltip = {
+            fail_text = "requires_building_capital_6"
+            OR = {
+			    has_building = building_avb_capital_6
+			    has_building = building_imperial_capital
+				# ACOT
+				has_building = building_dm_ancient_palace
+				has_building = building_ae_ancient_palace
+				has_building = building_heaven_sanctuary
+				has_building = building_ancient_palace
+				has_building = building_phanon_tower
+				# All That Is GRIMDARK
+				has_building = building_system_capital_gr
+				# AOT
+				has_building = building_stellarite_palace
+				has_building = building_phanon_palace
+				# Azur Lane Stellaris DlC
+				has_building = azur_building_mind_capital
+				has_building = azur_building_mind_net_capital
+				# Dawn of the Republic
+				has_building = building_galactic_senate
+				# EDA
+				has_building = eda_building_imperial_capital
+				# Nirvana Empire Project
+				has_building = building_nirvana_empire_palace
+				# Star Wars: Kuat Ancient Empire
+				has_building = building_kuat_command_center
+				# Twinks Atlantean
+				has_building = building_ancient_palace_at
+				# Twinks Kaldorei
+				has_building = building_nightelf_palace
+				# Twinks Eternal
+				has_building = building_eternal_palace
+				# galacot
+				has_building = building_dm_galactic_capital
+				has_building = building_ae_galactic_capital
+				has_building = building_stellarite_galactic_capital
+				has_building = building_dm_galactic_hive_capital
+           	    has_building = building_ae_galactic_hive_capital
+				has_building = building_stellarite_galactic_hive_capital
+				has_building = building_dm_galactic_machine_capital
+   	            has_building = building_ae_galactic_machine_capital
+				has_building = building_stellarite_galactic_machine_capital
+				# Wula Fallen Empire
+				merg_has_wula_capital = yes
+				# ZOFE Ascension
+				zofeac_capital_buildings = yes
+            }
+        }
+    }
+}
+is_building_similar_to_clone_vats = {
+	planet = {
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_machine_empire = no }
+			}
+			custom_tooltip = {
+				fail_text = "avb_orb_is_building_similar_to_clone_vats_fail"
+				merg_has_cloning_building = yes
+			}
+		}
+	}
+}
+is_building_similar_to_foundry = {
+	planet = {
+		custom_tooltip = {
+			fail_text = "avb_orb_is_building_similar_to_foundry_fail"
+			merg_has_foundry_building = yes
+		}
+	}
+}
+is_building_similar_to_factory = {
+	planet = {
+		custom_tooltip = {
+			fail_text = "avb_orb_is_building_similar_to_factory_fail"
+			merg_has_manufacturing_building = yes
+		}
+	}
+}
+
 ############################### All these worlds ###############################
 is_fallen_empire_planet = {
 	optimize_memory
@@ -1453,6 +1922,12 @@ SRA_is_compact_star = {
 }
 SRA_is_common_country = {
 	merg_is_standard_empire = yes
+}
+
+############################### Stellaris Chronicles - Forgotten Empires ###############################
+scfe_is_valid_star = {
+	merg_is_dense_star = no
+	merg_is_forbidden_target = no
 }
 
 ############################### ThaumStellaris ###############################

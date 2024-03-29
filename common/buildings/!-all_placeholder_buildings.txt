@@ -297,3 +297,4 @@ building_station_system_capital = { potential = { always = no } allow = { always
 building_prison_capital = { potential = { always = no } allow = { always = no } }
 building_prison_major_capital = { potential = { always = no } allow = { always = no } }
 building_prison_system_capital = { potential = { always = no } allow = { always = no } }
+building_avb_hab_capital_4 = { potential = { always = no } allow = { always = no } }

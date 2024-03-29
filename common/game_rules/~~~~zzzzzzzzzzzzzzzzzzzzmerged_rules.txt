@@ -1293,7 +1293,7 @@ can_colonize_with_species = {
 			}
 		}
 		# Assault Lily
-		is_species_class = PUFFER
+		is_AL_puffer_species = yes
 	}
 	OR = {
 		NOT = { has_trait = trait_self_modified }
@@ -2111,7 +2111,7 @@ can_species_be_assembled = {
 		KZ_VOY_trgr_plnt_CLONE = yes
 	}
 	# TimeMod
-	is_tm_reassembler = no
+	TIME_RULE_trgr_CAN_spcs_be_assembled = yes
 	# Vanilla
 	has_population_control = { country = root.owner type = no }
 }
@@ -2327,6 +2327,8 @@ can_orbital_bombard = {
 			from = { has_planet_flag = is_shroud_attack_planet_target }
 		}
 	}
+	# TimeMod
+	TIME_RULE_trgr_CAN_orbital_bombard = yes
 }
 
 # can_planet_support_orbital_station
@@ -4666,6 +4668,8 @@ can_fill_drone_job = {
 		# V_Traits
 		is_v_social_parasite = no
 	}
+	# TimeMod
+	TIME_RULE_trgr_CAN_fill_drone_job = yes
 }
 
 #this/root = pop
@@ -4757,7 +4761,7 @@ can_fill_worker_job = {
 			}
 		}
 		# TimeMod
-		NOT = { has_citizenship_type = { type = citizenship_adeptus_mechanicus } }
+		TIME_RULE_trgr_CAN_fill_worker_job = yes
 	}
 }
 
@@ -4795,9 +4799,7 @@ can_fill_specialist_job = {
 		}
 	}
 	# TimeMod
-	hidden_trigger = {
-		NOT = { has_citizenship_type = { type = citizenship_adeptus_mechanicus } }
-	}
+	TIME_RULE_trgr_CAN_fill_specialist_job = yes
 }
 
 #this/root = pop
@@ -4960,9 +4962,7 @@ can_fill_ruler_job = {
 		}
 	}
 	# TimeMod
-	hidden_trigger = {
-		NOT = { has_citizenship_type = { type = citizenship_adeptus_mechanicus } }
-	}
+	TIME_RULE_trgr_CAN_fill_ruler_job = yes
 	# Diagraphers Trait Mod
 	hidden_trigger = {
 		NAND = {
