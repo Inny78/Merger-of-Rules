@@ -32,6 +32,7 @@ eternal_empire = { ai = { enabled = no } }
 ev_leviathans_crisis = { ai = { enabled = no } }
 fallen_empire_ev = { ai = { enabled = no } }
 awakened_fallen_empire_event = { ai = { enabled = no } }
+giga_eawaf_sirens = { ai = { enabled = no } }
 giga_hypersiphon_major_incursion = { ai = { enabled = no } }
 hfe_pirate = { ai = { enabled = no } }
 huge_country = { ai = { enabled = no } }

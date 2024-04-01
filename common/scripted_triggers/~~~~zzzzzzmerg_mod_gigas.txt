@@ -304,6 +304,7 @@ ndb_can_target_planet = {
 		uses_district_set = virtual_ring_industry
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target
+		has_planet_flag = merg_forbidden_target
 		merg_is_empty_space = yes
 		# ACOT
 		is_acot_awesome_planet_class = yes

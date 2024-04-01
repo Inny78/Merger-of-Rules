@@ -2218,6 +2218,7 @@ can_orbital_bombard = {
 				# Gigastructural Engineering & More
 				is_country_type = katzenartig_imperium
 				is_country_type = compound_empire
+				is_country_type = giga_eawaf_sirens
 				# LEX
 				is_country_type = mem_ancestor_guardian
 				# Scripted Triggers Undercoat
@@ -2270,6 +2271,7 @@ can_orbital_bombard = {
 				is_country_type = acot_crazed_stellarite
 				is_country_type = compound_empire
 				is_country_type = giga_hypersiphon_major_incursion
+				is_country_type = giga_eawaf_sirens
 				# History of the Lost Empire
 				is_country_type = LsE_fallen_empire
 				# LEX
@@ -2332,6 +2334,7 @@ can_orbital_bombard = {
 }
 
 # can_planet_support_orbital_station
+
 # Check if full sensor range in entire galaxy
 # root: country
 has_full_sensor_range = {
@@ -2507,6 +2510,7 @@ ai_should_restrict_system = {
 				OR = {
 					AND = {
 						is_crisis_faction = yes
+						# Gigastructural Engineering & More
 						is_blokkat_country_type = no
 					}
 					merg_is_awakened_fe = yes
@@ -2939,6 +2943,11 @@ can_enter_system_by_jump = {
 						has_star_flag = al_huge_home_bed
 						# BlueArchive
 						has_star_flag = BA_FE_SYS
+						# Forgotten Empires
+						AND = {
+							has_star_flag = scfe_shaded_colony_system
+							root = { scfe_can_jump_in_shaded_system = no }
+						}
 						# Gigastructural Engineering and More
 						has_star_flag = ehof_compound_system
 						has_star_flag = giga_core_03
@@ -2991,7 +3000,6 @@ can_enter_system_by_jump = {
 						has_star_flag = wg_psionic_systems
 					}
 					# Gigastructural Engineering and More
-					# This is gonna be a bit annoying, BUT it needs to be done for eager explorers
 					AND = {
 						cohesive_system = yes
 						ROOT = { is_eager_explorer_empire = yes }
