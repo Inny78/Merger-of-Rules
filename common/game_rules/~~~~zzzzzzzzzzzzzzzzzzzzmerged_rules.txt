@@ -4518,6 +4518,11 @@ can_add_advanced_traits = {
 		is_nirvana_empire = yes
 		# Warship Girls R And MIST Species
 		has_wsg_genemodding_tech = yes
+		# Wula Fallen Empire
+		AND = {
+			merg_has_wula_fe = yes
+			is_fallen_empire = yes
+		}
 	}
 	# Better Performances and Utilities
 	NOT = { has_country_flag = PF_flg_cntr_STOP_ai_species_mod }
@@ -4542,6 +4547,11 @@ can_add_negative_traits_organic = {
 		has_tradition = tr_objects_wv_integrated_physiology
 		# Warship Girls R And MIST Species
 		has_wsg_genemodding_tech = yes
+		# Wula Fallen Empire
+		AND = {
+			merg_has_wula_fe = yes
+			is_fallen_empire = yes
+		}
 	}
 	# Nirvana Empire DLC
 	is_nirvana_empire = no

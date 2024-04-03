@@ -620,7 +620,8 @@ is_fallen_empire = {
 		# The Empty Vagrant
 		is_country_type = fallen_empire_ev
 		is_country_type = awakened_fallen_empire_ev
-		# With its last submod, ZOFE's fallen and awakened empires work differently and should not be here.
+		# Wula Fallen Empire
+		is_country_type = first_emperor_awakened_fallen_empire
 	}
 }
 

@@ -15,6 +15,7 @@ al_fallen_empire_no_ai = { ai = { enabled = no } }
 Aris_mid = { ai = { enabled = no } }
 ascended_empire = { ai = { enabled = no } }
 awakened_fallen_empire_ev = { ai = { enabled = no } }
+awakened_fallen_empire_event = { ai = { enabled = no } }
 awakened_gate_builders = { ai = { enabled = no } }
 awakened_marauders_ev = { ai = { enabled = no } }
 awakened_original_empire = { ai = { enabled = no } }
@@ -31,7 +32,7 @@ endtime_star_fantasy_empire = { ai = { enabled = no } }
 eternal_empire = { ai = { enabled = no } }
 ev_leviathans_crisis = { ai = { enabled = no } }
 fallen_empire_ev = { ai = { enabled = no } }
-awakened_fallen_empire_event = { ai = { enabled = no } }
+first_emperor_awakened_fallen_empire = { ai = { enabled = no } }
 giga_eawaf_sirens = { ai = { enabled = no } }
 giga_hypersiphon_major_incursion = { ai = { enabled = no } }
 hfe_pirate = { ai = { enabled = no } }

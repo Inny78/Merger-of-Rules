@@ -260,5 +260,8 @@ merg_has_warship_girls = { has_global_flag = has_wsg_mod }
 # Wild Space
 merg_has_wild_space = { has_global_flag = has_wild_space_mod }
 
+# Wula Fallen Empires
+merg_has_wula_fe = { has_global_flag = wula_fallen_empire_mod_active }
+
 # ZOFE Megacorp
 merg_has_zofe_mc = { has_global_flag = zofe_megacorp_installed }
