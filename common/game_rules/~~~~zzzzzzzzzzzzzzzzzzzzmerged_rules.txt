@@ -4113,11 +4113,11 @@ can_use_galactic_market = {
 		is_zofe_oe = yes
 	}
 	is_homicidal = no
+	# Ethics and Civics : Infinity
 	NAND = {
-        AND = {
-            is_gestalt = yes
-            NOT = {  has_tradition = tr_future_economy }
-        }
+		merg_has_eci = yes
+        is_gestalt = yes
+        NOT = {  has_tradition = tr_future_economy }
 	}
 }
 
