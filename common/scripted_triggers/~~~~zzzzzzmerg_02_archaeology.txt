@@ -1,5 +1,11 @@
 default_site_visible_trigger = {
-	merg_is_default_empire = yes
+	OR = {
+		merg_is_default_empire = yes
+		AND = {
+			merg_has_wula_fe = yes
+			is_fallen_empire = yes
+		}
+	}
 	OR = {
 		intel_level = {
 			level >= low
