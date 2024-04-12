@@ -178,6 +178,8 @@ merg_is_habitat = {
 		uses_district_set = SRA_city_world
 		# Twinks Atlantean
 		uses_district_set = skypalace
+		# Wula Fallen Empire
+		uses_district_set = fe_rogue_trader_habitat
 		# ZOFE
 		uses_district_set = utopian_habitat
 	}
