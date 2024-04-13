@@ -57,6 +57,7 @@ GF_allow_doll_leaders = { always = no }
 GF_can_build_doll_species = { always = no }
 GF_can_trade_robotic_leader = { always = no }
 giga_ai_should_restrict_system = { always = no }
+giga_can_get_external_leader_pool_candidate = { always = no }
 giga_country_gets_bank_exclude = { always = no }
 giga_habitable_structure = { always = no }
 giga_has_any_farming_district_or_buildings = { always = no }
@@ -532,3 +533,5 @@ is_planet_class_pc_w_green_star = { always = no }
 is_planet_class_pc_w_purple_star = { always = no }
 is_planet_class_pc_y_star = { always = no }
 is_sparta_citizenship_full = { always = no }
+# Ethical Gestalts
+is_machine_assimilator = { always = no }

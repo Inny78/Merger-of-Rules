@@ -137,3 +137,98 @@ can_have_defense_platforms = {
 		is_precursor_starbase = yes
 	}
 }
+has_unrestricted_cbs = {
+	OR = {
+		NOT = { has_policy_flag = liberation_wars }
+		AND = {
+			$target$ = { is_robot_empire = yes }
+			NOR = {
+				has_policy_flag = ai_full_rights
+				is_robot_empire = yes
+			}
+		}
+		AND = {
+			$target$ = { is_gestalt = yes }
+			OR = {
+				AND = {
+					is_xenophile = yes
+					$target$ = { is_xenophile = no }
+				}
+				AND = {
+					is_xenophobe = yes
+					$target$ = { is_xenophobe = no }
+				}
+				AND = {
+					is_authoritarian = yes
+					$target$ = { is_authoritarian = no }
+				}
+				AND = {
+					is_egalitarian = yes
+					$target$ = { is_egalitarian = no }
+				}
+				AND = {
+					is_spiritualist = yes
+					$target$ = { is_spiritualist = no }
+				}
+				AND = {
+					is_materialist = yes
+					$target$ = { is_materialist = no }
+				}
+				AND = {
+					is_militarist = yes
+					$target$ = { is_militarist = no }
+				}
+				AND = {
+					is_pacifist = yes
+					$target$ = { is_pacifist = no }
+				}
+			}
+			# Restrictions on which GCs the AI considerss worth making ideologically-motivated claims against
+			[[check_ai_limits]
+			OR = {
+				is_ai = no
+				# They're unworthy of autonomy, weaken them until we can subjugate them
+				AND = {
+					has_ai_personality_behaviour = subjugator
+					from = { is_subject = no }
+					relative_power = {
+						who = $target$
+						category = all
+						value <= equivalent
+					}
+					# this is specifically for claims
+					NAND = {
+						exists = root
+						exists = $target$.capital_star
+						root = {
+							is_scope_type = galactic_object
+							is_same_value = $target$.capital_star
+						}
+					}
+				}
+				# They have subjects we need to "free"!
+				$target$ = {
+					any_owned_species = {
+						NOR = {
+							has_trait = trait_hive_mind
+							has_trait = trait_machine_unit
+						}
+						is_sapient = yes
+						can_think = yes
+					}
+				}
+				# They have drones we need to "free"!
+				AND = {
+					has_tradition = tr_genetics_creation
+					$target$ = { is_hive_empire = yes }
+					is_hive_empire = no
+					OR = {
+						is_xenophile = no
+						has_ethic = ethic_fanatic_egalitarian
+					}
+				}
+			}
+			]
+		}
+	}
+}

@@ -36,6 +36,14 @@ can_add_claim = {
 	custom_tooltip = {
 		fail_text = CANNOT_ADD_CLAIM_POLICY
 		OR = {
+			# Ethical Gestalts
+			root = {
+				# Ethical Gestalts
+				has_unrestricted_cbs = {
+					target = prev.owner
+					check_ai_limits = yes
+				}
+			}
 			root = {
 				has_policy_flag = unrestricted_wars
 				# Expanded Traits, Civics, Pops, and More
@@ -1740,6 +1748,13 @@ can_species_be_assembled = {
 	has_species_trait_holodrone = no
 	# Vanilla
 	OR = {
+		# Arknights Near Future
+		AND = {
+			has_trait = trait_ARK_ocean_seaborn
+			root.owner = {
+				has_country_flag = arknights_ocean_country
+			}
+		}
 		# Robots
 		AND = {
 			is_robotic = yes
@@ -5152,7 +5167,45 @@ can_country_connect_to_relay_network = {
 
 # should_ai_build_stronghold_on_vulnerable_planet
 # will_leader_retire
-# can_get_external_leader_pool_candidate
+
+# This = country, Country that wants to get an external leader
+# From = country, country that we are trying to get from
+can_get_external_leader_pool_candidate = {
+	exists = from
+	OR = {
+		has_diplo_migration_treaty = from
+		is_in_federation_with = from
+		is_overlord_to = from
+		giga_can_get_external_leader_pool_candidate = yes
+	}
+	# Both empires must be regular empires, machine intelligences or hive-minds.
+	OR = {
+		AND = {
+			ROOT = {
+				is_regular_empire = yes
+			}
+			FROM = {
+				is_regular_empire = yes
+			}
+		}
+		AND = {
+			ROOT = {
+				is_machine_empire = yes
+			}
+			FROM = {
+				is_machine_empire = yes
+			}
+		}
+		AND = {
+			ROOT = {
+				is_hive_empire = yes
+			}
+			FROM = {
+				is_hive_empire = yes
+			}
+		}
+	}
+}
 
 # This = leader, leader we'd like to trade
 # Root = country, country that owns the leader currently

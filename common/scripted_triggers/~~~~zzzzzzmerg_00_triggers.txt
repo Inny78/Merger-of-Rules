@@ -510,15 +510,7 @@ has_total_war_cb = {
 					is_homicidal = yes
 					# Ethical Gestalts
 					has_valid_civic = civic_hive_assimilator
-					AND = {
-						has_policy_flag = ai_outlawed
-						from = {
-							OR = {
-								has_country_flag = synthetic_empire
-								is_machine_empire = yes
-							}
-						}
-					}
+					is_machine_assimilator = yes
 				}
  				# Ethical Gestalts
  				has_policy_flag = liberation_wars
@@ -534,21 +526,10 @@ has_total_war_cb = {
  					has_country_flag = lbd_dathnak_country
 					# Ethical Gestalts
 					has_valid_civic = civic_hive_assimilator
-					# AND = {
-					# 	has_policy_flag = ai_outlawed
-					# 	prev = {
-					# 		OR = {
-					# 			has_country_flag = synthetic_empire
-					# 			is_machine_empire = yes
-					# 		}
-					# 	}
-					# }
+					is_machine_assimilator = yes
 				}
 				# Ethical Gestalts
-				NOR = {
-					has_policy_flag = liberation_wars
-					has_policy_flag = no_wars
-				}
+				NOT = { has_policy_flag = no_wars }
 			}
 		}
 	}
