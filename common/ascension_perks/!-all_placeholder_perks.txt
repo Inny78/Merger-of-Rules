@@ -6,3 +6,4 @@ ap_expactriate_service = { potential = { always = no } possible = { always = no 
 ap_BA_new_frontier = { potential = { always = no } possible = { always = no } }
 ap_gestaltization = { potential = { always = no } possible = { always = no } }
 ap_matters_all_have_minds = { potential = { always = no } possible = { always = no } }
+oxr_mdlc_ap_distributed_multikernel = { potential = { always = no } possible = { always = no } }

@@ -37,11 +37,14 @@ can_add_claim = {
 		fail_text = CANNOT_ADD_CLAIM_POLICY
 		OR = {
 			# Ethical Gestalts
-			root = {
-				# Ethical Gestalts
-				has_unrestricted_cbs = {
-					target = prev.owner
-					check_ai_limits = yes
+			AND = {
+				merg_has_ethical_gestalts = yes
+				root = {
+					# Ethical Gestalts
+					has_unrestricted_cbs = {
+						target = prev.owner
+						check_ai_limits = yes
+					}
 				}
 			}
 			root = {
@@ -642,56 +645,69 @@ can_release_vassal = {
 #This = country
 can_release_vassal_from_species = {
 	root = {
-		is_sapient = yes
-		NOR = {
+		OR = {
+			AND = {
+				is_sapient = yes
+				NOR = {
+					AND = {
+						has_trait = trait_machine_unit
+						# Expanded Traits, Civics, Pops, and More
+						NOT = { prev.this = { has_origin = origin_master_computer } }
+						# Empires Expanded
+						NOT = { prev.this = { has_valid_civic = civic_machine_mighty_processors } }
+					}
+					AND = {
+						has_trait = trait_hive_mind
+						NOR = {
+							prev.this = { has_origin = origin_progenitor_hive }
+							# Empires Expanded
+							prev.this = { has_valid_civic = civic_hive_semi_autonomous_drones }
+						}
+					}
+					AND = {
+						merg_has_ethical_gestalts = no
+						NOT = { has_trait = trait_hive_mind }
+						prev.this = { is_hive_empire = yes }
+					}
+					can_think = no
+					has_trait = trait_clone_soldier_infertile
+					has_trait = trait_clone_soldier_infertile_full_potential
+					# Empires Expanded
+					AND = {
+						OR = {
+							has_trait = trait_machine_unit
+							has_trait = trait_mechanical
+						}
+						NOR = {
+							prev.this = { has_valid_civic = civic_machine_mighty_processors }
+							# Rogue Maid
+							Maid_trigger_4_can_release_vassal_from_species = yes
+						}
+					}
+					# Ethics & Civcs Infinity
+					has_eci_flesh_components = yes
+					# Plentiful Perks
+					has_trait = trait_plentiful_traditions_pt_cocoon
+					# Girls Frontline
+					has_trait = trait_doll
+					# Expanded Traits, Civics, Pops, and More
+					AND = {
+						NOT = { has_trait = trait_machine_unit }
+						prev.this = { has_authority = auth_machine_intelligence }
+					}
+					is_infested_basic = yes
+					is_exp_tree_caretaker = yes
+				}
+			}
+			# Machines & Robot Expansion Continued
 			AND = {
 				has_trait = trait_machine_unit
-				# Expanded Traits, Civics, Pops, and More
-				NOT = { prev.this = { has_origin = origin_master_computer } }
-				# Empires Expanded
-				NOT = { prev.this = { has_valid_civic = civic_machine_mighty_processors } }
-			}
-			AND = {
-				has_trait = trait_hive_mind
-				NOR = {
-					prev.this = { has_origin = origin_progenitor_hive }
-					# Empires Expanded
-					prev.this = { has_valid_civic = civic_hive_semi_autonomous_drones }
+				prev.this = {
+					has_authority = auth_machine_intelligence
+					has_ascension_perk = oxr_mdlc_ap_distributed_multikernel
+					NOT = { has_civic = civic_machine_terminator }
 				}
 			}
-			AND = {
-				merg_has_ethical_gestalts = no
-				NOT = { has_trait = trait_hive_mind }
-				prev.this = { is_hive_empire = yes }
-			}
-			can_think = no
-			has_trait = trait_clone_soldier_infertile
-			has_trait = trait_clone_soldier_infertile_full_potential
-			# Empires Expanded
-			AND = {
-				OR = {
-					has_trait = trait_machine_unit
-					has_trait = trait_mechanical
-				}
-				NOR = {
-					prev.this = { has_valid_civic = civic_machine_mighty_processors }
-					# Rogue Maid
-					Maid_trigger_4_can_release_vassal_from_species = yes
-				}
-			}
-			# Ethics & Civcs Infinity
-			has_eci_flesh_components = yes
-			# Plentiful Perks
-			has_trait = trait_plentiful_traditions_pt_cocoon
-			# Girls Frontline
-			has_trait = trait_doll
-			# Expanded Traits, Civics, Pops, and More
-			AND = {
-				NOT = { has_trait = trait_machine_unit }
-				prev.this = { has_authority = auth_machine_intelligence }
-			}
-			is_infested_basic = yes
-			is_exp_tree_caretaker = yes
 		}
 	}
 }
@@ -4063,6 +4079,8 @@ can_crossbreed_species_on_planet = {
 					has_valid_civic = civic_liberty_of_libido
 					has_ascension_perk = ap_evolutionary_mastery
 				}
+				# Kek's Origins+
+				has_country_flag = kokobreeed
 			}
 		}
 		# Red Light Demeanor

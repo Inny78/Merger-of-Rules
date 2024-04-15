@@ -80,3 +80,4 @@ civic_family_business = { potential = { always = no } }
 civic_underworld_society = { potential = { always = no } }
 civic_world_cooperative = { potential = { always = no } }
 civic_sparta_spirit = { potential = { always = no } }
+KO_hive_asm = { potential = { always = no } }

@@ -493,6 +493,8 @@ has_total_war_cb = {
 				}
 				# Expanded Traits, Civics, Pops, and More
 				has_valid_civic = civic_infestation
+				# Kek's Origins+
+				has_valid_civic = KO_hive_asm
 				# Loud but Deadly
 				has_country_flag = lbd_dathnak_country
 			}
@@ -511,6 +513,8 @@ has_total_war_cb = {
 					# Ethical Gestalts
 					has_valid_civic = civic_hive_assimilator
 					is_machine_assimilator = yes
+					# Kek's Origins+
+					has_valid_civic = KO_hive_asm
 				}
  				# Ethical Gestalts
  				has_policy_flag = liberation_wars
@@ -527,6 +531,8 @@ has_total_war_cb = {
 					# Ethical Gestalts
 					has_valid_civic = civic_hive_assimilator
 					is_machine_assimilator = yes
+					# Kek's Origins+
+					has_valid_civic = KO_hive_asm
 				}
 				# Ethical Gestalts
 				NOT = { has_policy_flag = no_wars }
