@@ -475,6 +475,9 @@ pd_should_not_crave_acean = { always = yes }
 pd_should_not_crave_eludium = { always = yes }
 pd_should_not_crave_rad_bloom = { always = yes }
 pd_should_not_crave_tiyanki_parts = { always = yes }
+pki_is_katzenartig_imperium = { always = no }
+pki_is_katzprotektorat = { always = no }
+pki_is_allied_with_katzen = { always = no }
 planet_has_symbiotes = { always = no }
 policies_allow_breeding = { always = yes }
 prob_forced_armageddon_bombardment = { always = no }
