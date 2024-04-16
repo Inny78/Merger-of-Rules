@@ -4283,6 +4283,24 @@ can_be_part_of_galactic_community = {
 			NOT = { has_country_flag = wgfm_quit_community }
 		}
 	}
+	# Playable Katzenartig Imperium
+	custom_tooltip = {
+		fail_text = "community_declared_crisis_failtext"
+		OR = {
+			NOT = {
+				pki_is_katzenartig_imperium = yes
+				has_global_flag = pki_galactic_tension_stage_5
+			}
+			NOT = {
+				has_global_flag = galcom_kaiser_crusade
+				OR = {
+					pki_is_katzenartig_imperium = yes
+					pki_is_katzprotektorat = yes
+					pki_is_allied_with_katzen = yes
+				}
+			}
+		}
+	}
 	# B5 Species - Shadows
 	custom_tooltip = {
 		fail_text = "community_shadows_failtext"
