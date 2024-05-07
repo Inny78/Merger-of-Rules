@@ -298,3 +298,11 @@ building_prison_capital = { potential = { always = no } allow = { always = no } 
 building_prison_major_capital = { potential = { always = no } allow = { always = no } }
 building_prison_system_capital = { potential = { always = no } allow = { always = no } }
 building_avb_hab_capital_4 = { potential = { always = no } allow = { always = no } }
+building_seccouncilc = { potential = { always = no } allow = { always = no } }
+building_centrehq = { potential = { always = no } allow = { always = no } }
+building_git = { potential = { always = no } allow = { always = no } }
+building_divsanct = { potential = { always = no } allow = { always = no } }
+building_piratecovess = { potential = { always = no } allow = { always = no } }
+building_martlet = { potential = { always = no } allow = { always = no } }
+building_czenith = { potential = { always = no } allow = { always = no } }
+building_cbananas = { potential = { always = no } allow = { always = no } }

@@ -29,7 +29,7 @@ merg_has_cloning_building = {
 		has_active_building = building_bugged_life_monastery
 		has_active_building = building_bugged_life_monastery_two
 		# EUTAB
-		has_active_building = building_eutab_adv_clone_vats
+		eutab_has_active_cloning_building = yes
 		# Galaxius
 		has_active_building = building_ie_clone_vats
 		has_active_building = building_ie_spawning_pool

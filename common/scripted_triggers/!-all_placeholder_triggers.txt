@@ -47,6 +47,7 @@ ED_has_mining_district = { always = no }
 ED_has_research_district = { always = no }
 esc_TRIGGER_is_non_psionic_shield = { always = no }
 ethic_sparta_job_check_trigger = { always = no }
+eutab_has_active_cloning_building = { always = no }
 eutab_has_farming_building = { always = no }
 eutab_has_generator_building = { always = no }
 eutab_has_research_building = { always = no }
@@ -204,6 +205,7 @@ is_aso_gg_white_hole = { always = no }
 is_aso_gg_ice_giant = { always = no }
 is_blokkat_country_type = { always = no }
 is_bugged_evolutionary_architects = { always = no }
+is_bugged_happy_gestalt = { always = no }
 is_bugged_interventionalist = { always = no }
 is_bugged_slave_race = { always = no }
 is_bugged_happy_drone = { always = no }
