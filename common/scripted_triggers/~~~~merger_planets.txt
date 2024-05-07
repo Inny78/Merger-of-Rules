@@ -59,7 +59,6 @@ merg_is_alpine = {
 		# All These Worlds
 		atw_is_alpine = yes
 		# Planetary Diversity
-		is_pd_alpine = yes
 		pd_is_alpine = yes
 	}
 }
@@ -102,7 +101,6 @@ merg_is_arctic = {
 		# All These Worlds
 		atw_is_arctic = yes
 		# Planetary Diversity
-		is_pd_arctic = yes
 		pd_is_arctic = yes
 	}
 }
@@ -113,7 +111,6 @@ merg_is_arid = {
 		# All These Worlds
 		atw_is_arid = yes
 		# Planetary Diversity
-		is_pd_arid = yes
 		pd_is_arid = yes
 	}
 }
@@ -147,7 +144,6 @@ merg_is_continental = {
 		# All These Worlds
 		atw_is_continental = yes
 		# Planetary Diversity
-		is_pd_continental = yes
 		pd_is_continental = yes
 	}
 }
@@ -158,7 +154,6 @@ merg_is_desert = {
 		# All These Worlds
 		atw_is_desert = yes
 		# Planetary Diversity
-		is_pd_desert = yes
 		pd_is_desert = yes
 	}
 }
@@ -197,7 +192,6 @@ merg_is_gaia_basic = {
 		# All These Worlds
 		atw_is_gaia = yes
 		# Planetary Diversity
-		is_pd_gaia = yes
 		pd_is_planet_class_gaia = yes
 	}
 }
@@ -236,7 +230,6 @@ merg_is_hive_world = {
 		# Gigastructural Engineering & More
 		is_pc_ringworld_hive = yes
 		# Planetary Diversity
-		is_pd_hive_world = yes
 		is_pd_hive_arcology = yes
 		is_pd_megaflora_hive = yes
 		pd_is_planet_class_hive = yes
@@ -252,7 +245,6 @@ merg_is_machine_world = {
 	OR = {
 		is_planet_class = pc_machine
 		# Planetary Diversity
-		is_pd_machine = yes
 		is_pd_robot_arcology = yes
 		pd_is_planet_class_machine = yes
 		# Gigastructural Engineering & More
@@ -295,7 +287,6 @@ merg_is_nuked_basic = {
 		# All these worlds
 		atw_is_nuked = yes
 		# Planetary Diversity
-		is_pd_nuked = yes
 		is_pd_radiotrophic_world = yes
 		pd_is_planet_class_nuked = yes
 	}
@@ -319,8 +310,6 @@ merg_is_ocean = {
 		# All These Worlds
 		atw_is_ocean_basic = yes
 		# Planetary Diversity
-		is_pd_ocean = yes
-		is_pd_aquatics = yes
 		pd_is_ocean = yes
 		is_pd_planet_for_aqua_trait = yes
 	}
@@ -342,7 +331,6 @@ merg_is_savannah = {
 		# All These Worlds
 		atw_is_savannah = yes
 		# Planetary Diversity
-		is_pd_savannah = yes
 		pd_is_savannah = yes
 	}
 }
@@ -390,7 +378,6 @@ merg_is_tropical = {
 		# More Events Mod
 		is_pc_mem_death = yes
 		# Planetary Diversity
-		is_pd_tropical = yes
 		pd_is_tropical = yes
 	}
 }
@@ -401,7 +388,6 @@ merg_is_tundra = {
 		# All These Worlds
 		atw_is_tundra = yes
 		# Planetary Diversity
-		is_pd_tundra = yes
 		pd_is_tundra = yes
 	}
 }

@@ -807,6 +807,11 @@ elec_hyperlane_create = {
 	}
 }
 
+############################### ESC NEXT ###############################
+ESC_TRIGGER_is_city_planet = {
+	merg_is_arcology = yes
+}
+
 ############################### Ethics and Civics Bug Branch ###############################
 is_bugged_starbase = {
 	OR = {

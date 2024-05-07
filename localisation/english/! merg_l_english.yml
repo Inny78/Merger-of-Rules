@@ -133,5 +133,7 @@ l_english:
 # Tooltips and messages
  AUTO_MIGRATE_ROBOT_DROIDS: "§RNon-sapient and shackled robots can only auto-migrate with the§! §Y$tech_droid_workers$§! technology.§!\n"
  COUNTRY_IS_ASCENDED_EMPIRE: "£trigger_no£ §RWe cannot build branches on other Ascended Empires.§!"
- acot_requires_fort_building: "$TRIGGER_FAIL$Has a fortress or stronghold constructed on the planet."
- merg_forbidden_target: "§RThis can't be targeted by a colossus§!"
+ acot_requires_fort_building: "$TRIGGER_FAIL$ Has a fortress or stronghold constructed on the planet."
+ merg_forbidden_target: "$TRIGGER_FAIL$ §RThis can't be targeted by a colossus§!"
+ scfe_cant_terraform_special_planet: "$TRIGGER_FAIL$ Can't terraform special planets."
+ pd_planet_no_terraform: "$TRIGGER_FAIL$ This planet cannot be terraformed with standard procedures."

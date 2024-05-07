@@ -34,6 +34,7 @@ planet_population_control_rationed = {}
 planet_population_control_gestalt = {}
 pop_highly_educated = {}
 ravenous_locusts = {}
+scfe_rooted_doom = {}
 terraformer_homeworld = {}
 volcanic_world = {}
 wiirlak_ac_modifier_project_cradle = {}

@@ -1,4 +1,5 @@
 # Vanilla scripted triggers from 00_scripted_triggers.txt except megastructures ones
+
 uninhabitable_regular_planet = {
 	OR = {
 		merg_is_molten = yes
@@ -198,6 +199,101 @@ has_encountered_other_species = {
 	}
 }
 
+can_be_leader = {
+	has_citizenship_rights = yes
+	NOT = { has_trait = trait_syncretic_proles }
+	can_think = yes
+	OR = {
+		is_robot_pop = no
+		root = {
+			OR = {
+				has_technology = tech_synthetic_leaders
+				has_authority = auth_machine_intelligence
+				is_mechanical_empire = yes
+				is_individual_machine = yes
+				# Girls Frontline
+				GF_allow_doll_leaders = yes
+			}
+		}
+	}
+	OR = {
+		is_same_species = root
+		root = {
+			NAND = {
+				has_origin = origin_necrophage
+				has_trait = trait_necrophage
+			}
+		}
+		# Silfae's Portraits: Revisited
+		species = {
+			has_species_flag = allow_leaders_organic_advisors@prev.owner
+			has_citizenship_type = { type = citizenship_organic_trophy country = prev.owner }
+		}
+		# Wandering Witch: Voyagers
+		root = { has_technology = tech_dummy_leaders }
+		# Girls Frontline
+		AND = {
+			has_trait = GF_trait_doll
+			root = {
+				OR = {
+					has_policy_flag = GF_doll_right_full
+					has_policy_flag = GF_doll_right_limited
+				}
+			}
+		}
+		# Holofrixit Revisited / Silfae's Portraits: Revisited
+		owner = {
+			has_origin = origin_holofrixit
+			prev.species = {
+				OR = {
+					has_species_trait_holofrixit = no
+					has_species_trait_holooverseer = yes
+					has_species_trait_hologanglion = yes
+					has_species_trait_holowarrior = yes
+				}
+			}
+		}
+	}
+}
+
+can_be_military_leader = {
+	is_enslaved = no
+	is_sapient = yes
+	OR = {
+		is_robot_pop = no
+		owner = { has_policy_flag = ai_full_rights }
+		owner = { is_machine_empire = yes }
+		owner = { is_individual_machine = yes }
+	}
+	OR = {
+		AND = { # MIs only accept Fully Integrated leaders
+			owner = { is_machine_empire = yes }
+			has_citizenship_type = { type = citizenship_full_machine country = owner }
+			has_military_service_type = { type = military_service_full }
+		}
+		AND = { # non-MIs accept whatever
+			NOT = { owner = { is_machine_empire = yes } }
+			has_military_service_type = { type = military_service_full }
+		}
+		# Girls Frontline
+		AND = {
+			has_trait = GF_trait_doll
+			root = {
+				OR = {
+					has_policy_flag = GF_doll_right_full
+					has_policy_flag = GF_doll_right_limited
+				}
+			}
+		}
+		root = {
+			AND = {
+				has_origin = origin_holofrixit
+				PREV.species = { has_species_trait_holowarrior = yes }
+			}
+		}
+	}
+}
+
 allows_purge = {
 	OR = {
 		has_policy_flag = purge_allowed
@@ -209,10 +305,29 @@ allows_purge = {
 		has_valid_civic = civic_elec_stellar_devourers
 		# Civic: Organic Zealots
 		is_valid_organic_zealots = yes
-	}	
+	}
 }
 
-#FOR CUSTODIAN
+has_any_megastructure_in_empire = {
+	any_owned_megastructure = {
+		AND = {
+			exists = this
+			NOR = {
+				merg_is_gate_mega = yes
+				planet = { merg_is_habitat = yes }
+				is_megastructure_type = orbital_ring
+				is_megastructure_type = orbital_ring_ruined
+				is_megastructure_type = orbital_ring_restored
+				# Gigastructural Engineering & More
+				is_kilostructure = yes
+				# Machine & Robot Expansion
+				is_megastructure_type = xvcv_mdlc_planet_cracker_incomplete
+				is_megastructure_type = xvcv_mdlc_planet_cracker
+			}
+		}
+	}
+}
+
 is_crisis_faction = {
 	OR = {
 		is_country_type = swarm
@@ -223,8 +338,10 @@ is_crisis_faction = {
 		is_country_type = gray_goo
 		is_country_type = awakened_marauders
 		is_country_type = formless
+		is_country_type = synth_queen
+		is_country_type = synth_queen_storm
 		# ACOT
-		is_country_type = sbtg_stellarborne_empire 
+		is_country_type = sbtg_stellarborne_empire
 		# Cruel Conquerers
 		is_cruel_abomination_country_type = yes
 		# Gigastructural Engineering & More
@@ -391,19 +508,25 @@ is_democracy = {
 	}
 }
 
-is_organic_controllable_ship = {
+can_set_ai_policy = {
+	is_mechanical_empire = no
+	is_GF_authority = no
 	OR = {
-		is_ship_size = space_amoeba
-		is_ship_size = space_amoeba_mother
-		is_ship_size = space_amoeba_centenarian
-		is_ship_size = large_ship_swarm
-		is_ship_size = small_ship_swarm
-		is_ship_size = large_ship_carrier_swarm
-		AND = {
-			is_scope_type = fleet
-			has_fleet_flag = stu_is_organic_controllable_ship
+		has_technology = tech_synthetic_workers
+		has_technology = tech_sapient_ai
+		any_relation = {
+			has_communications = prev
+			OR = {
+				has_technology = tech_synthetic_workers
+				has_technology = tech_sapient_ai
+				has_authority = auth_machine_intelligence
+			}
+			OR = {
+				merg_is_default_empire = yes
+				has_ai_personality_behaviour = robot_exploiter
+				has_ai_personality_behaviour = robot_liberator
+			}
 		}
-		giga_is_vat_normal = yes 
 	}
 }
 
@@ -461,6 +584,7 @@ has_total_war_cb = {
 						NOR = {
 							has_country_flag = synthetic_empire
 							is_machine_empire = yes
+							is_individual_machine = yes
 						}
 					}
 				}
@@ -516,9 +640,9 @@ has_total_war_cb = {
 					# Kek's Origins+
 					has_valid_civic = KO_hive_asm
 				}
- 				# Ethical Gestalts
- 				has_policy_flag = liberation_wars
- 				has_policy_flag = no_wars
+				# Ethical Gestalts
+				has_policy_flag = liberation_wars
+				has_policy_flag = no_wars
 			}
 			from = {
 				OR = {
@@ -526,8 +650,8 @@ has_total_war_cb = {
 					is_homicidal = yes
 					# ACOT
 					is_progenitor_empires = yes
- 					# Loud but Deadly
- 					has_country_flag = lbd_dathnak_country
+					# Loud but Deadly
+					has_country_flag = lbd_dathnak_country
 					# Ethical Gestalts
 					has_valid_civic = civic_hive_assimilator
 					is_machine_assimilator = yes
@@ -571,6 +695,8 @@ is_wet = {
 		has_climate = wet
 		# Gigastructural Engineering & More
 		giga_is_wet = yes
+		# Wandering Witch: Voyagers
+		has_planet_flag = wet_planet
 	}
 }
 
@@ -638,6 +764,55 @@ is_crossbreeding_possible = {
 	}
 }
 
+is_special_colony_type = {
+	OR = {
+		has_modifier = penal_colony
+		has_modifier = resort_colony
+		has_modifier = slave_colony
+		has_modifier = gestation_colony
+		# ACOT
+		# has_enigmatic_capital = yes
+		# District Overhaul
+		has_modifier = bdoe_cemetery_world
+		has_modifier = bdoe_storage_world
+		has_modifier = bdoe_waste_world
+		has_modifier = bdoe_feudal_world
+		# Girls Frontline
+		uses_district_set = GF_automated_city_district_set
+		# Real Space - Planetary Stations
+		has_planet_flag = planetary_station
+	}
+}
+
+# Country scope
+has_precursor_intro = {
+	OR = {
+		has_country_flag = vultaum_intro
+		has_country_flag = yuht_intro
+		has_country_flag = first_league_intro
+		has_country_flag = irassian_intro
+		has_country_flag = cybrex_intro
+		has_country_flag = zroni_intro
+		has_country_flag = baol_intro
+		has_country_flag = plexi_intro # Forgotten History
+		has_country_flag = lartia_intro # Forgotten History
+		has_country_flag = ixardian_intro # More Precursors
+		has_country_flag = ezentian_intro # More Precursors
+		has_country_flag = werediran_intro # More Precursors
+		has_country_flag = volgan_intro # Unavoidable Changes
+		has_country_flag = scfe_precursor_set_sless # Forgotten Empires
+		has_country_flag = scfe_precursor_set_coprean # Forgotten Empires
+		has_country_flag = scfe_precursor_set_astanine # Forgotten Empires
+		# Still in the early stages of 'On the Shoulders of Giants'
+		AND = {
+			has_origin = origin_shoulders_of_giants
+			NOT = { has_country_flag = origin_shoulders_closure }
+		}
+		# Gigas exclusion
+		has_origin = origin_incohesive
+	}
+}
+
 # Merging and fixing
 default_endgame_early_start_triggers = {
 	AND = {
@@ -691,157 +866,6 @@ no_resource_for_component = {
 			resource_stockpile_compare = { resource = $RESOURCE$ value < 150 }
 		}
 	}
-}
-
-is_phototrophic = {
-	OR = {
-		has_trait = trait_plantoid_phototrophic
-		has_trait = trait_plantoid_radiotrophic
-		has_trait = trait_advanced_phototrophic
-		has_trait = trait_advanced_radiotrophic
-		has_trait = trait_harvested_radiotrophic
-		has_trait = trait_lithoid_radiotrophic
-		# Planetary Diversity
-		is_pd_radiotrophic_mutant = yes
-		# V_Traits
-		has_v_phototrophic_trait = yes
-		AND = {
-			OR = {
-				has_v_grafting_trait = yes
-			}
-			planet = {
-				any_owned_species = {
-					OR = {
-						has_trait = trait_plantoid_phototrophic
-						has_trait = trait_plantoid_radiotrophic
-						has_trait = trait_advanced_phototrophic
-						has_trait = trait_advanced_radiotrophic
-						has_trait = trait_lithoid_radiotrophic
-					}
-				}
-			}
-		}
-	}
-}
-
-has_phototrophic_energy_upkeep = {
-	OR = {
-		has_trait = trait_plantoid_phototrophic
-		has_trait = trait_advanced_radiotrophic
-		# V_Traits
-		has_v_phototrophic_trait = yes
-		# Vanilla
-		AND = {
-			OR = {
-				has_trait = trait_plantoid_radiotrophic
-				has_trait = trait_advanced_radiotrophic
-				has_trait = trait_harvested_radiotrophic
-				has_trait = trait_lithoid_radiotrophic
-				# Planetary Diversity
-				is_pd_radiotrophic_mutant = yes
-			}
-			planet = { merg_is_nuked = no }
-		}
-		# V_TRAITS
-		AND = {
-			has_v_grafting_trait = yes
-			planet = {
-				any_owned_species = {
-					OR = {
-						has_trait = trait_plantoid_phototrophic
-						has_trait = trait_advanced_phototrophic
-						has_trait = trait_plantoid_radiotrophic
-						has_trait = trait_advanced_radiotrophic
-						has_trait = trait_lithoid_radiotrophic
-					}
-				}
-			}
-			if = {
-				limit = {
-					planet = {
-						any_owned_species = {
-							OR = {
-								has_trait = trait_plantoid_radiotrophic
-								has_trait = trait_advanced_radiotrophic
-								has_trait = trait_lithoid_radiotrophic
-							}
-						}
-					}
-				}
-				planet = { merg_is_nuked = no }
-			}
-		}
-	}
-}
-
-has_budding_trait = {
-	OR = {
-		has_trait = trait_plantoid_budding
-		has_trait = trait_lithoid_budding
-		has_trait = trait_advanced_budding
-		# V_Traits
-		has_v_budding_trait = yes
-		# Wula Fallen Empire
-		has_trait = trait_wula_tietie
-	}
-}
-
-has_food_upkeep = {
-	species = {
-		NOT = { is_archetype = LITHOID }
-		# Can't check is_robotic_species as it will break hybrids like KANSEN.
-		OR= {
-			is_archetype = BIOLOGICAL
-			# Aquatic Portraits mod
-			is_archetype = JAYPEES_AQUATIC
-			is_archetype = JAYPEES_BRAIN
-			is_archetype = JAYPEES_CRAB
-			is_archetype = JAYPEES_DOLPHIN
-			is_archetype = JAYPEES_DUMBO
-			is_archetype = JAYPEES_ELESQUID
-			is_archetype = JAYPEES_FISH
-			is_archetype = JAYPEES_HAIRTENTACLE
-			is_archetype = JAYPEES_SEAL
-			is_archetype = JAYPEES_SQUID
-			is_archetype = JAYPEES_TURTLEHORSE
-			# AshArms Aquarius history
-			is_archetype = Dolls
-			# Assault Lily
-			is_archetype = LILY
-			# Azur Lane Stellaris DLC
-			is_KANSEN_species = yes
-			# Empire of Eeveelution
-			is_archetype = POKEMON
-			# Expanded Traits, Civics, Pops, and More
-			is_archetype = HUMANOID
-			is_archetype = MAMMALIAN
-			is_archetype = REPTILIAN
-			is_archetype = AVIAN
-			is_archetype = ARTHROPOID
-			is_archetype = MOLUSCOID
-			is_archetype = FUNGOID
-			is_archetype = PLANTOID
-			is_archetype = NECROID
-			is_archetype = half_species
-			is_archetype = half_species_special
-			is_archetype = half_aberration
-			is_archetype = half_perfect
-			is_archetype = half_amalgamated
-			# KDC Story Pack
-			is_archetype = NANITES_CROP
-			# Nyto Species Events Pack
-			is_archetype = NYTO
-			# SW:UnknownWorld Shipgirls Story
-			is_archetype = STARSHIPGIRLS
-			# The DAL Species Mod
-			is_archetype = DATEALIVE
-			# Warship Girls R And MIST Species
-			is_archetype = SHENHAI
-			is_archetype = UNITED_FLEET
-			is_archetype = WARSHIPGIRL
-		}
-	}
-	NOT = { has_trait = trait_voidling }
 }
 
 has_research_building = {
@@ -937,20 +961,36 @@ can_have_sensory_readings = {
 	}
 }
 
+is_organic_controllable_ship = {
+	OR = {
+		is_ship_size = space_amoeba
+		is_ship_size = space_amoeba_mother
+		is_ship_size = space_amoeba_centenarian
+		is_ship_size = large_ship_swarm
+		is_ship_size = small_ship_swarm
+		is_ship_size = large_ship_carrier_swarm
+		AND = {
+			is_scope_type = fleet
+			has_fleet_flag = stu_is_organic_controllable_ship
+		}
+		giga_is_vat_normal = yes 
+	}
+}
+
 has_any_industry_district = {
-    OR = {
-        has_district = district_industrial
-        has_district = district_hab_industrial
-        has_district = district_rw_industrial
-        has_district = district_arcology_arms_industry
-        has_district = district_arcology_civilian_industry
+	OR = {
+		has_district = district_industrial
+		has_district = district_hab_industrial
+		has_district = district_rw_industrial
+		has_district = district_arcology_arms_industry
+		has_district = district_arcology_civilian_industry
 		# District Overhaul - FunEFork
 		has_district = district_02_local_industry
 		has_district = district_02_production_hub
 		# Extra Districts
 		ED_has_industry_district = yes
 		# Gigastructures
-        giga_has_any_industrial_district = yes
+		giga_has_any_industrial_district = yes
 		# GPM
 		has_district = district_gpm_precursor_manufactorium
 		# Nanite Machines & Distant Stars Overhaul
@@ -986,11 +1026,11 @@ has_any_industry_district = {
 		has_district = district_dr_industrial
 		# Wula Fallen Empire
 		has_district = district_wandering_knight_order_industry
-    }
+	}
 }
 
 has_any_farming_district_or_buildings = {
-    OR = {
+	OR = {
 		has_district = district_farming
 		has_district = district_rw_farming
 		has_district = district_farming_uncapped
@@ -1006,7 +1046,7 @@ has_any_farming_district_or_buildings = {
 		# Extra Districts
 		ED_has_farming_district = yes
 		# Gigastructures
-        giga_has_any_farming_district_or_buildings = yes
+		giga_has_any_farming_district_or_buildings = yes
 		# Planetary Diversity
 		has_district = district_pdhab_food_unlimited
 		has_district = district_pdhab_food
@@ -1014,14 +1054,14 @@ has_any_farming_district_or_buildings = {
 		has_district = PR_DSTR_farming
 		has_district = PR_DSTR_farming_uncapped
 		has_district = PR_DSTR_rw_farming
-    }
+	}
 }
 
 has_any_mining_district = {
-    OR = {
-        has_district = district_mining
-        has_district = district_hab_mining
-        has_district = district_mining_uncapped
+	OR = {
+		has_district = district_mining
+		has_district = district_hab_mining
+		has_district = district_mining_uncapped
 		# Decadence of Sanity
 		has_district = district_shroud_resource
 		# District Overhaul - FunEFork
@@ -1034,12 +1074,12 @@ has_any_mining_district = {
 		# Extra Districts
 		ED_has_mining_district = yes
 		# Gigastructures
-        giga_has_any_mining_district = yes
+		giga_has_any_mining_district = yes
 		# Planetary Diversity
 		has_district = district_pdhab_mining
 		has_district = district_pdhab_mining_unlimited
 		has_district = district_scrapyard_mining
- 		# Production Revolution
+		# Production Revolution
 		has_district = PR_DSTR_mining
 		has_district = PR_DSTR_mining_uncapped
 		has_district = PR_DSTR_rw_mining
@@ -1054,11 +1094,11 @@ has_any_mining_district = {
 }
 
 has_any_generator_district_or_building = {
-    OR = {
-        has_district = district_generator
-        has_district = district_hab_energy
-        has_district = district_generator_uncapped
-        has_district = district_rw_generator
+	OR = {
+		has_district = district_generator
+		has_district = district_hab_energy
+		has_district = district_generator_uncapped
+		has_district = district_rw_generator
 		merg_has_energy_building = yes
 		# Decadence of Sanity
 		has_district = district_shroud_resource
@@ -1073,7 +1113,7 @@ has_any_generator_district_or_building = {
 		# Extra Districts
 		ED_has_generator_district = yes
 		# Gigastructures
-        giga_has_any_generator_district_or_building = yes
+		giga_has_any_generator_district_or_building = yes
 		# GPM
 		has_district = district_gpm_precursor_power_plant
 		# Planetary Diversity
@@ -1081,7 +1121,7 @@ has_any_generator_district_or_building = {
 		has_district = district_pdhab_energy
 		has_district = district_archive_energy
 		has_district = district_scrapyard_energy
- 		# Production Revolution
+		# Production Revolution
 		has_district = PR_DSTR_generator
 		has_district = PR_DSTR_generator_uncapped
 		has_district = PR_DSTR_rw_generator
@@ -1093,6 +1133,19 @@ has_any_generator_district_or_building = {
 		has_district = district_atmospheric_power_plant
 		# Wula Fallen Empire
 		has_district = district_wula_abandon_forge_world_surface
+	}
+}
+
+uses_habitat_capitals = {
+	OR = {
+		uses_district_set = habitat
+		# # BlueArchive
+		# uses_district_set = BA_auto_habitat
+		# Gigastructural Engineering & More
+		giga_uses_habitat_capitals = yes
+		has_planet_flag = giga_habitat_capital_compat
+		# Planetary Diversity
+		uses_district_set = pdplanethab
 	}
 }
 
@@ -1206,7 +1259,7 @@ has_special_star_flag_trigger = {
 				has_star_flag = nep_whitegoo_portal_1
 				has_star_flag = nep_whitegoo_portal_2
 				has_star_flag = nep_whitegoo_origin
-				has_star_flag = nep_ugo_system 
+				has_star_flag = nep_ugo_system
 			}
 		}
 		# SW:Kuat Ancient Empire
@@ -1244,228 +1297,5 @@ can_think = {
 		has_trait = trait_working_machine
 		# V_Traits
 		has_v_non_thinking_trait = yes
-	}
-}
-
-uses_habitat_capitals = {
-	OR = {
-		uses_district_set = habitat
-		# BlueArchive
-		uses_district_set = BA_auto_habitat
-		# Gigastructural Engineering & More
-		giga_uses_habitat_capitals = yes
-		has_planet_flag = giga_habitat_capital_compat
-		# Planetary Diversity
-		uses_district_set = pdplanethab
-	}
-}
-
-is_special_colony_type = {
-	OR = {
-		has_modifier = penal_colony
-		has_modifier = resort_colony
-		has_modifier = slave_colony
-		# ACOT
-		# has_enigmatic_capital = yes
-		# District Overhaul
-		has_modifier = bdoe_cemetery_world
-		has_modifier = bdoe_storage_world
-		has_modifier = bdoe_waste_world
-		has_modifier = bdoe_feudal_world
-		# Girls Frontline
-		uses_district_set = GF_automated_city_district_set
-		# Real Space - Planetary Stations
-		has_planet_flag = planetary_station
-	}
-}
-
-can_remove_beneficial_genetic_traits = {
-	hidden_trigger = { exists = from }
-	from = {
-		OR = {
-			has_tradition = tr_genetics_resequencing
-			# Planetary Diversity - Unique Worlds
-			has_tradition = pd_tr_biosynth_perk_2a
-			# Rogue Maid
-			has_technology = tech_advanced_gene_tailoring
-		}
-	}
-}
-
-can_remove_overtuned_traits = {
-	hidden_trigger = { exists = from }
-	from = {
-		OR = {
-			has_tradition = tr_genetics_resequencing
-			has_origin = origin_overtuned
-			# Decision Origins
-			has_country_flag = decision_overtuned
-			# Ascension - Biological Module
-			has_technology = tech_yanz_rs_genemod
-		}
-	}
-}
-
-has_any_megastructure_in_empire = {
-	any_owned_megastructure = {
-		AND = {
-			exists = this
-			NOR = {
-				merg_is_gate_mega = yes
-				planet = { merg_is_habitat = yes }
-				is_megastructure_type = orbital_ring
-				is_megastructure_type = orbital_ring_ruined
-				is_megastructure_type = orbital_ring_restored
-				# Gigastructural Engineering & More
-				is_kilostructure = yes
-				# Machine & Robot Expansion
-				is_megastructure_type = xvcv_mdlc_planet_cracker_incomplete
-				is_megastructure_type = xvcv_mdlc_planet_cracker
-			}
-		}
-	}
-}
-
-# Country scope
-has_precursor_intro = {
-	OR = {
-		has_country_flag = vultaum_intro
-		has_country_flag = yuht_intro
-		has_country_flag = first_league_intro
-		has_country_flag = irassian_intro
-		has_country_flag = cybrex_intro
-		has_country_flag = zroni_intro
-		has_country_flag = baol_intro
-		has_country_flag = plexi_intro # Forgotten History
-		has_country_flag = lartia_intro # Forgotten History
-		has_country_flag = ixardian_intro # More Precursors
-		has_country_flag = ezentian_intro # More Precursors
-		has_country_flag = werediran_intro # More Precursors
-		has_country_flag = volgan_intro # Unavoidable Changes
-		has_country_flag = scfe_precursor_set_sless # Forgotten Empires
-		has_country_flag = scfe_precursor_set_coprean # Forgotten Empires
-		has_country_flag = scfe_precursor_set_astanine # Forgotten Empires
-		# Still in the early stages of 'On the Shoulders of Giants'
-		AND = {
-			has_origin = origin_shoulders_of_giants
-			NOT = { has_country_flag = origin_shoulders_closure }
-		}
-		# Gigas exclusion
-		has_origin = origin_incohesive
-	}
-}
-
-can_be_leader = {
-	has_citizenship_rights = yes
-	NOT = { has_trait = trait_syncretic_proles }
-	can_think = yes
-	OR = {
-		is_robot_pop = no
-		root = {
-			OR = {
-				has_technology = tech_synthetic_leaders
-				has_authority = auth_machine_intelligence
-				is_mechanical_empire = yes
-				# Girls Frontline
-				GF_allow_doll_leaders = yes
-			}
-		}
-	}
-	OR = {
-		is_same_species = root
-		root = {
-			NAND = {
-				has_origin = origin_necrophage
-				has_trait = trait_necrophage
-			}
-		}
-		# Silfae's Portraits: Revisited
-		species = {
-			has_species_flag = allow_leaders_organic_advisors@prev.owner
-			has_citizenship_type = { type = citizenship_organic_trophy country = prev.owner }
-		}
-		# Wandering Witch: Voyagers
-		root = { has_technology = tech_dummy_leaders }
-		# Girls Frontline
-		AND = {
-			has_trait = GF_trait_doll
-			root = {
-				OR = {
-					has_policy_flag = GF_doll_right_full
-					has_policy_flag = GF_doll_right_limited
-				}
-			}
-		}
-		# Holofrixit Revisited / Silfae's Portraits: Revisited
-		owner = {
-			has_origin = origin_holofrixit
-			prev.species = {
-				OR = {
-					has_species_trait_holofrixit = no
-					has_species_trait_holooverseer = yes
-					has_species_trait_hologanglion = yes
-					has_species_trait_holowarrior = yes
-				}
-			}
-		}
-	}
-}
-
-can_be_military_leader = {
-	is_enslaved = no
-	is_sapient = yes
-	OR = {
-		is_robot_pop = no
-		owner = { has_policy_flag = ai_full_rights }
-		owner = { has_authority = auth_machine_intelligence }
-	}
-	OR = {
-		AND = { # MIs only accept Fully Integrated leaders
-			owner = { has_authority = auth_machine_intelligence }
-			has_citizenship_type = { type = citizenship_full_machine country = owner }
-			has_military_service_type = { type = military_service_full }
-		}
-		AND = { # non-MIs accept whatever
-			NOT = { owner = { has_authority = auth_machine_intelligence } }
-			has_military_service_type = { type = military_service_full }
-		}
-		# Girls Frontline
-		AND = {
-			has_trait = GF_trait_doll
-			root = {
-				OR = {
-					has_policy_flag = GF_doll_right_full
-					has_policy_flag = GF_doll_right_limited
-				}
-			}
-		}
-		root = {
-			AND = {
-				has_origin = origin_holofrixit
-				PREV.species = { has_species_trait_holowarrior = yes }
-			}
-		}
-	}
-}
-	
-can_set_ai_policy = {
-	is_mechanical_empire = no
-	is_GF_authority = no
-	OR = {
-		has_technology = tech_synthetic_workers
-		has_technology = tech_sapient_ai
-		any_relation = {
-			has_communications = prev
-			OR = {
-				has_technology = tech_synthetic_workers
-				has_technology = tech_sapient_ai
-				has_authority = auth_machine_intelligence
-			}
-			OR = {
-				merg_is_default_empire = yes
-				has_ai_personality_behaviour = robot_exploiter
-				has_ai_personality_behaviour = robot_liberator
-			}
-		}
 	}
 }

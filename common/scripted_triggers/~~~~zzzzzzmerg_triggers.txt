@@ -19,6 +19,8 @@ is_doomsday_planet = {
 		# Endless Frontier: An Event Mod
 		has_modifier = mzilli_events_dying_world
 		has_modifier = mzilli_decaying_moon_3
+		# Forgotten Empires
+		has_modifier = scfe_rooted_doom
 	}
 }
 

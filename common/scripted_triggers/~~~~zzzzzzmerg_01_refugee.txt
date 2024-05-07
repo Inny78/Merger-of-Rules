@@ -4,6 +4,15 @@ is_valid_refugee_pop = {
 	NOR = {
 		merg_has_hive_trait = yes
 		can_think = no
+		AND = {
+			has_virtual_species_trait = yes
+			exists = owner
+			owner = {
+				NOT = {
+					has_active_tradition = tr_virtuality_finish
+				}
+			}
+		}
 	}
 	owner = {
 		any_relation = {

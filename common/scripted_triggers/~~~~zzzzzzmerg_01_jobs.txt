@@ -118,6 +118,8 @@ can_fill_specialist_job_trigger = {
 		is_being_assimilated = no
 		NOR = {
 			has_trait = trait_syncretic_proles
+			has_trait = trait_zombie
+			has_trait = trait_nerve_stapled
 			# Ethics and Civics Bug Branch
 			is_bugged_slave_gene = yes
 			# Ethics and Civics Classic
@@ -126,9 +128,8 @@ can_fill_specialist_job_trigger = {
 			is_exp_tree_caretaker = yes
 			has_trait = trait_presapient_docile_livestock
 			# ECI
-			has_trait = trait_fallen_god
+			has_eci_fallen_god = yes
 		}
-		can_think = yes
 		OR = {
 			NOT = { has_trait = trait_mechanical }
 			owner = {
@@ -197,8 +198,8 @@ is_organic_species = {
 				is_archetype = LILY
 				# Azur Lane Stellaris DLC
 				is_KANSEN_species = yes
-				# BlueArchive species pack
-				is_archetype = Schale
+				# # BlueArchive species pack
+				# is_archetype = Schale
 				# Cryogenesis Unofficial Species Pack
 				is_archetype = sm_ELEMENTAL
 				# Empire of Eeveelution

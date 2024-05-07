@@ -1,0 +1,176 @@
+can_remove_beneficial_genetic_traits = {
+    hidden_trigger = { exists = from }
+    from = {
+        OR = {
+            has_tradition = tr_genetics_resequencing
+            # Planetary Diversity - Unique Worlds
+            has_tradition = pd_tr_biosynth_perk_2a
+            # Rogue Maid
+            has_technology = tech_advanced_gene_tailoring
+        }
+    }
+}
+
+can_remove_overtuned_traits = {
+    hidden_trigger = { exists = from }
+    from = {
+        OR = {
+            has_tradition = tr_genetics_resequencing
+            has_origin = origin_overtuned
+            # Decision Origins
+            has_country_flag = decision_overtuned
+            # Ascension - Biological Module
+            has_technology = tech_yanz_rs_genemod
+        }
+    }
+}
+
+is_phototrophic = {
+    OR = {
+        has_trait = trait_plantoid_phototrophic
+        has_trait = trait_plantoid_radiotrophic
+        has_trait = trait_advanced_phototrophic
+        has_trait = trait_advanced_radiotrophic
+        has_trait = trait_harvested_radiotrophic
+        has_trait = trait_lithoid_radiotrophic
+        # Planetary Diversity
+        is_pd_radiotrophic_mutant = yes
+        # V_Traits
+        has_v_phototrophic_trait = yes
+        AND = {
+            OR = {
+                has_v_grafting_trait = yes
+            }
+            planet = {
+                any_owned_species = {
+                    OR = {
+                        has_trait = trait_plantoid_phototrophic
+                        has_trait = trait_plantoid_radiotrophic
+                        has_trait = trait_advanced_phototrophic
+                        has_trait = trait_advanced_radiotrophic
+                        has_trait = trait_lithoid_radiotrophic
+                    }
+                }
+            }
+        }
+    }
+}
+
+has_phototrophic_energy_upkeep = {
+    OR = {
+        has_trait = trait_plantoid_phototrophic
+        has_trait = trait_advanced_radiotrophic
+        # V_Traits
+        has_v_phototrophic_trait = yes
+        # Vanilla
+        AND = {
+            OR = {
+                has_trait = trait_plantoid_radiotrophic
+                has_trait = trait_advanced_radiotrophic
+                has_trait = trait_harvested_radiotrophic
+                has_trait = trait_lithoid_radiotrophic
+                # Planetary Diversity
+                is_pd_radiotrophic_mutant = yes
+            }
+            planet = { merg_is_nuked = no }
+        }
+        # V_TRAITS
+        AND = {
+            has_v_grafting_trait = yes
+            planet = {
+                any_owned_species = {
+                    OR = {
+                        has_trait = trait_plantoid_phototrophic
+                        has_trait = trait_advanced_phototrophic
+                        has_trait = trait_plantoid_radiotrophic
+                        has_trait = trait_advanced_radiotrophic
+                        has_trait = trait_lithoid_radiotrophic
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    planet = {
+                        any_owned_species = {
+                            OR = {
+                                has_trait = trait_plantoid_radiotrophic
+                                has_trait = trait_advanced_radiotrophic
+                                has_trait = trait_lithoid_radiotrophic
+                            }
+                        }
+                    }
+                }
+                planet = { merg_is_nuked = no }
+            }
+        }
+    }
+}
+
+has_budding_trait = {
+    OR = {
+        has_trait = trait_plantoid_budding
+        has_trait = trait_lithoid_budding
+        has_trait = trait_advanced_budding
+        # V_Traits
+        has_v_budding_trait = yes
+        # Wula Fallen Empire
+        has_trait = trait_wula_tietie
+    }
+}
+
+has_food_upkeep = {
+    species = {
+        # Can't check is_robotic_species as it will break hybrids like KANSEN.
+        OR= {
+            is_archetype = BIOLOGICAL
+            # Aquatic Portraits mod
+            is_archetype = JAYPEES_AQUATIC
+            is_archetype = JAYPEES_BRAIN
+            is_archetype = JAYPEES_CRAB
+            is_archetype = JAYPEES_DOLPHIN
+            is_archetype = JAYPEES_DUMBO
+            is_archetype = JAYPEES_ELESQUID
+            is_archetype = JAYPEES_FISH
+            is_archetype = JAYPEES_HAIRTENTACLE
+            is_archetype = JAYPEES_SEAL
+            is_archetype = JAYPEES_SQUID
+            is_archetype = JAYPEES_TURTLEHORSE
+            # AshArms Aquarius history
+            is_archetype = Dolls
+            # Assault Lily
+            is_archetype = LILY
+            # Azur Lane Stellaris DLC
+            is_KANSEN_species = yes
+            # Empire of Eeveelution
+            is_archetype = POKEMON
+            # Expanded Traits, Civics, Pops, and More
+            is_archetype = HUMANOID
+            is_archetype = MAMMALIAN
+            is_archetype = REPTILIAN
+            is_archetype = AVIAN
+            is_archetype = ARTHROPOID
+            is_archetype = MOLUSCOID
+            is_archetype = FUNGOID
+            is_archetype = PLANTOID
+            is_archetype = NECROID
+            is_archetype = half_species
+            is_archetype = half_species_special
+            is_archetype = half_aberration
+            is_archetype = half_perfect
+            is_archetype = half_amalgamated
+            # KDC Story Pack
+            is_archetype = NANITES_CROP
+            # Nyto Species Events Pack
+            is_archetype = NYTO
+            # SW:UnknownWorld Shipgirls Story
+            is_archetype = STARSHIPGIRLS
+            # The DAL Species Mod
+            is_archetype = DATEALIVE
+            # Warship Girls R And MIST Species
+            is_archetype = SHENHAI
+            is_archetype = UNITED_FLEET
+            is_archetype = WARSHIPGIRL
+        }
+    }
+    NOT = { has_trait = trait_voidling }
+}

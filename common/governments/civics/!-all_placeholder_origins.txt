@@ -16,6 +16,7 @@ origin_holofrixit = { is_origin = yes potential = { always = no } }
 origin_incohesive = { is_origin = yes potential = { always = no } }
 origin_master_computer = { is_origin = yes potential = { always = no } }
 origin_militarist = { is_origin = yes potential = { always = no } }
+origin_obj_master = { is_origin = yes potential = { always = no } }
 origin_pd_shroud = { is_origin = yes potential = { always = no } }
 origin_pd_tree_of_life = { is_origin = yes potential = { always = no } }
 origin_sacred_tree = { is_origin = yes potential = { always = no } }
