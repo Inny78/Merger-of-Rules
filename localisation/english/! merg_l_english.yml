@@ -137,3 +137,4 @@ l_english:
  merg_forbidden_target: "$TRIGGER_FAIL$ §RThis can't be targeted by a colossus§!"
  scfe_cant_terraform_special_planet: "$TRIGGER_FAIL$ Can't terraform special planets."
  pd_planet_no_terraform: "$TRIGGER_FAIL$ This planet cannot be terraformed with standard procedures."
+ is_sc_black_hole: "\n£trigger_no£ Target system must be destroyed"

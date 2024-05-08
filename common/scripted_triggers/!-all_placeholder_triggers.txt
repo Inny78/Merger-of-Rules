@@ -305,6 +305,7 @@ is_mindless_undead = { always = no }
 is_multihive_drone = { always = no }
 is_mzilli_rogue = { always = no }
 is_mzilli_shadow = { always = no }
+is_mzilli_toxoid_planet = { always = no }
 is_nanite_gaia = { always = no }
 is_nanite_forgeworld = { always = no }
 is_nanite_gas_giant = { always = no }
@@ -454,7 +455,7 @@ Maid_trigger_4_can_release_vassal_from_species = { always = no }
 MECR_trigger_0_community_country_type = { always = no }
 MECR_trigger_1_can_be_part_of_galactic_community = { always = yes }
 MECR_trigger_2_can_be_part_of_galactic_empire = { always = yes }
-pd_aw_cant_terraform = { always = no }
+pd_aw_cant_terraform = { always = yes }
 pd_aw_is_necro_planet = { always = no }
 pd_has_acean_income = { always = yes }
 pd_has_eludium_income = { always = yes }

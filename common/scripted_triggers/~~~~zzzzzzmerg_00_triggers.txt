@@ -1299,3 +1299,25 @@ can_think = {
 		has_v_non_thinking_trait = yes
 	}
 }
+
+has_no_non_gate_megastructure = {
+	OR = {
+		has_any_megastructure = no
+		NOR = {
+			has_star_flag = ring_world_built
+			AND = {
+				has_any_megastructure = yes
+				merg_has_gate_mega = no
+			}
+		}
+	}
+}
+has_any_megastructure_in_empire = {
+	any_system_within_border = {
+		has_any_megastructure = yes
+		any_system_megastructure = {
+			merg_is_gate_mega = no
+			merg_is_habitat_mega = no
+		}
+	}
+}
