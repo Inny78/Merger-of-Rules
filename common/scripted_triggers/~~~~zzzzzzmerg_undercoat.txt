@@ -19,10 +19,12 @@ is_endgame_crisis = {
 		is_country_type = extradimensional_3
 		is_country_type = swarm
 		is_country_type = ai_empire
+		is_country_type = synth_queen
+		is_country_type = synth_queen_storm
 		# ACOT
 		is_country_type = sbtg_stellarborne_empire 
 		# Gigastructural Engineering & More
-		
+		is_giga_crisis_faction = yes
 	}
 }
 has_slaver_civic = {
