@@ -278,14 +278,14 @@ can_be_military_leader = {
 		# Girls Frontline
 		AND = {
 			has_trait = GF_trait_doll
-			root = {
+			owner = {
 				OR = {
 					has_policy_flag = GF_doll_right_full
 					has_policy_flag = GF_doll_right_limited
 				}
 			}
 		}
-		root = {
+		owner = {
 			AND = {
 				has_origin = origin_holofrixit
 				PREV.species = { has_species_trait_holowarrior = yes }
@@ -369,11 +369,13 @@ planet_can_be_liberated_from_owner = {
 			is_country_type = awakened_fallen_empire
 			is_country_type = fallen_empire
 			is_country_type = ascended_empire
-			# ZOFE
-			is_country_type = lost_empire
 			# ACOT
 			is_progenitor_empires = yes
 			is_country_type = sbtg_light_seeker
+			# Twinks Eternal Empire
+			is_country_type = eternal_empire
+			# ZOFE
+			is_country_type = lost_empire
 		}
 	}
 }
@@ -385,6 +387,8 @@ is_country_type_with_subjects = {
 		is_country_type = awakened_marauders
 		# ACOT
 		is_progenitor_empires = yes
+		# Twinks Eternal Empire
+		is_country_type = eternal_empire
 		# The Empty Vagrant
 		is_country_type = default_ev
 		# ZOFE

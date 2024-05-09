@@ -1,0 +1,202 @@
+# Baol Organism Lifeseed
+decision_baol_life_seed = {
+    owned_planets_only = yes
+    sound = event_laboratory_sound
+    icon = decision_resort_colony
+
+    enactment_time = 720
+
+    potential = {
+        merg_is_arcology = no
+        merg_is_machine_world = no
+        merg_is_relic_world = no
+        merg_is_hive_world = no
+        merg_is_gaia = no
+        # GPM
+        NOT = { is_planet_class = pc_gpm_precursor_tomb }
+        # Forgotten Empires
+        AND = {
+            has_planet_flag = cant_terraform_planet
+            NOT = { has_planet_flag = scfe_roots_peace }
+        }
+        # Vanilla
+        is_artificial = no
+        exists = owner
+        owner = { has_country_flag = relic_last_baol_activated }
+        owner = {
+            has_country_flag = not_activated_baol
+        }
+        NOT = { has_designation = col_nanotech_world }
+    }
+
+    allow = { }
+
+    effect = {
+        # Convert to Gaia world, spawn Nu-Baol pops
+        custom_tooltip = decision_baol_life_seed_effects
+        hidden_effect = {
+            # Planetary Diversity
+            if = {
+                limit = { merg_has_planetary_diversity = yes }
+                pd_make_all_gaia_worlds_effect = yes
+            }
+            # Vanilla
+            else = {
+                change_pc = pc_gaia
+            }
+            # Expanded Events
+            if = {
+                limit = { merg_has_expanded_events = yes }
+                random_list = {
+                    100 = { }
+                    10 = { add_deposit = d_dust_caverns }
+                    10 = { add_deposit = d_bubbling_swamp }
+                    10 = { add_deposit = d_crystalline_caverns }
+                    10 = { add_deposit = d_betharian_deposit }
+                    10 = { add_deposit = d_alien_pets_deposit }
+                }
+            }
+            # Vanilla
+            if = {
+                limit = { NOT = { exists = event_target:nu_baol_species } }
+                if = {
+                    limit = {
+                        owner = {
+                            is_hive_empire = yes
+                        }
+                    }
+                    create_hive_nu_baol_effect = yes
+                }
+                else = {
+                    create_nu_baol_effect = yes
+                }
+            }
+            while = {
+                count = 4
+                create_pop = {
+                    species = event_target:nu_baol_species
+                    ethos = {
+                        ethic = "ethic_pacifist"
+                    }
+                }
+            }
+            planet_event = { id = ancrel.2025 } #Notification event
+            # GPM
+            planet_event = { id = gpm_terraform.78871 }
+            # Planetary Diversity
+            if = {
+                limit = {
+                    has_planet_flag = planet_earth
+                }
+                set_planet_entity = {
+                    entity = "gaia_planet_earth_entity"
+                }
+            }
+            if = {
+                limit = {
+                    has_planet_flag = pdmars
+                }
+                set_planet_entity = {
+                    picture = pc_wet_mars
+                    entity = "gaiamars_planet_entity"
+                }
+            }
+            if = {
+                limit = {
+                    has_planet_flag = pdvenus
+                }
+                set_planet_entity = {
+                    picture = pc_wetvenus
+                    entity = "gaiavenus_planet_entity"
+                }
+            }
+            pd_gaia_flooded_check = yes
+        }
+    }
+
+    on_queued = {
+        owner = { remove_country_flag = not_activated_baol }
+    }
+
+    on_unqueued = {
+        owner = { set_country_flag = not_activated_baol }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+
+decision_baol_life_seed_enhance = {
+    owned_planets_only = yes
+    sound = event_laboratory_sound
+    icon = decision_resort_colony
+
+    potential = {
+        is_planet_class = pc_gaia
+        exists = owner
+        owner = { has_country_flag = relic_last_baol_activated }
+    }
+
+    allow = { }
+
+    effect = {
+        # Convert to Gaia world, spawn Nu-Baol pops
+        custom_tooltip = decision_baol_life_seed_enhance_effects
+        hidden_effect = {
+            owner = { remove_country_flag = relic_last_baol_activated }
+            if = {
+                limit = { NOT = { exists = event_target:nu_baol_species } }
+                if = {
+                    limit = {
+                        owner = {
+                            is_hive_empire = yes
+                        }
+                    }
+                    create_hive_nu_baol_effect = yes
+                }
+                else = {
+                    create_nu_baol_effect = yes
+                }
+            }
+            while = {
+                count = 4
+                create_pop = {
+                    species = event_target:nu_baol_species
+                    ethos = {
+                        ethic = "ethic_pacifist"
+                    }
+                }
+            }
+            while = {
+                count = 10
+                random_owned_pop = {
+                    limit = {
+                        NOR = {
+                            is_robot_pop = yes
+                            has_trait = trait_pc_gaia_preference_terraforming
+                        }
+                    }
+                    modify_species = {
+                        species = this
+                        ideal_planet_class = pc_nuked
+                    }
+                    modify_species = {
+                        species = this
+                        remove_trait = trait_pc_nuked_preference
+                        add_trait = trait_pc_gaia_preference_terraforming
+                    }
+                }
+            }
+            planet_event = { id = ancrel.2026 } #Notification event
+        }
+    }
+
+    on_queued = {
+        owner = { remove_country_flag = not_activated_baol }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}

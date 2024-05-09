@@ -12,3 +12,5 @@ pd_change_to_nuked_cave = { }
 pd_change_to_nuked_superhab = { }
 pd_change_to_nuked_tl = { }
 pd_change_to_nuked_relic = { }
+pd_make_all_gaia_worlds_effect = { }
+pd_gaia_flooded_check = { }
