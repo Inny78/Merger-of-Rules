@@ -1,0 +1,75 @@
+# Baol Organism Lifeseed
+decision_baol_life_seed = {
+    owned_planets_only = yes
+    sound = event_laboratory_sound
+    icon = decision_resort_colony
+
+    enactment_time = 720
+
+    potential = {
+        NOT = {
+            merg_is_arcology = yes
+            merg_is_machine_world = yes
+            merg_is_relic_world = yes
+            merg_is_hive_world = yes
+            merg_is_gaia = yes
+            AND = {
+                has_planet_flag = cant_terraform_planet
+                NOT = { has_planet_flag = scfe_roots_peace }
+            }
+        }
+        is_artificial = no
+        exists = owner
+        owner = { has_country_flag = relic_last_baol_activated }
+        owner = {
+            has_country_flag = not_activated_baol
+        }
+        NOT = { has_designation = col_nanotech_world }
+    }
+
+    allow = { }
+
+    effect = {
+        # Convert to Gaia world, spawn Nu-Baol pops
+        custom_tooltip = decision_baol_life_seed_effects
+        hidden_effect = {
+            change_pc = pc_gaia
+            if = {
+                limit = { NOT = { exists = event_target:nu_baol_species } }
+                if = {
+                    limit = {
+                        owner = {
+                            is_hive_empire = yes
+                        }
+                    }
+                    create_hive_nu_baol_effect = yes
+                }
+                else = {
+                    create_nu_baol_effect = yes
+                }
+            }
+            while = {
+                count = 4
+                create_pop = {
+                    species = event_target:nu_baol_species
+                    ethos = {
+                        ethic = "ethic_pacifist"
+                    }
+                }
+            }
+            planet_event = { id = ancrel.2025 } #Notification event
+        }
+    }
+
+    on_queued = {
+        owner = { remove_country_flag = not_activated_baol }
+    }
+
+    on_unqueued = {
+        owner = { set_country_flag = not_activated_baol }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
