@@ -253,6 +253,8 @@ can_be_leader = {
 				}
 			}
 		}
+		# Machines & Robots Expansion Continued
+		has_oxr_mdlc_mamp_frame_base = no
 	}
 }
 
@@ -320,9 +322,8 @@ has_any_megastructure_in_empire = {
 				is_megastructure_type = orbital_ring_restored
 				# Gigastructural Engineering & More
 				is_kilostructure = yes
-				# Machine & Robot Expansion
-				is_megastructure_type = xvcv_mdlc_planet_cracker_incomplete
-				is_megastructure_type = xvcv_mdlc_planet_cracker
+				# Machines & Robots Expansion Continued
+				xvcv_mdlc_is_non_gate_mega = yes
 			}
 		}
 	}

@@ -543,3 +543,8 @@ is_planet_class_pc_y_star = { always = no }
 is_sparta_citizenship_full = { always = no }
 # Ethical Gestalts
 is_machine_assimilator = { always = no }
+# Machines & Robots Expansion Continued
+has_machines_robots_expac_continued = { always = no }  # Check for this mod
+oxr_mdlc_can_release_vassal_from_species = { always = no }
+has_oxr_mdlc_mamp_frame_base = { always = no }  # Trait check
+xvcv_mdlc_is_non_gate_mega = { always = no }  # yes if it's a non-gate mega from this mod
