@@ -10,6 +10,8 @@ default_ev = {
         aot_gatekeeper_ships_limit
         aot_juggernaut_ships_limit
         aot_fe_juggernaut_ships_limit
+		# BlueArchive
+		BA_hub_ships_limit
 		# Culture Special Ships
 		CSS_TI_REJUVENATOR_limit
 		CSS_JG_DREADNOUGHT_limit
@@ -40,6 +42,8 @@ darkspace_ownership_limit = {
         aot_gatekeeper_ships_limit
         aot_juggernaut_ships_limit
         aot_fe_juggernaut_ships_limit
+		# BlueArchive
+		BA_hub_ships_limit
 		# Culture Special Ships
 		CSS_TI_REJUVENATOR_limit
 		CSS_JG_DREADNOUGHT_limit

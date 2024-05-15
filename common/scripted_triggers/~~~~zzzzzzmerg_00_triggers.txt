@@ -1144,7 +1144,7 @@ uses_habitat_capitals = {
 	OR = {
 		uses_district_set = habitat
 		# # BlueArchive
-		# uses_district_set = BA_auto_habitat
+		uses_district_set = BA_auto_habitat
 		# Gigastructural Engineering & More
 		giga_uses_habitat_capitals = yes
 		has_planet_flag = giga_habitat_capital_compat

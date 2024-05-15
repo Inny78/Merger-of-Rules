@@ -1188,26 +1188,26 @@ can_destroy_planet_with_azur_shippart_W3_T3 = {
 }
 
 ############################### BlueArchive ###############################
-# can_destroy_planet_with_Sweepers = {
-# 	custom_tooltip = {
-# 		fail_text = What_are_you_doing
-# 		NOR = {
-# 			uses_district_set = BA_planet
-# 			uses_district_set = BA_ruined_planet
-# 		}
-# 	}
-# 	custom_tooltip = {
-# 		fail_text = is_valid_target_for_sweeper
-# 		merg_is_forbidden_target = no
-# 		exists = owner
-# 		owner = {
-# 			OR = {
-# 				is_same_empire = FROM.owner
-# 				is_at_war_with = FROM.owner
-# 			}
-# 		}
-# 	}
-# }
+can_destroy_planet_with_Sweepers = {
+	custom_tooltip = {
+		fail_text = What_are_you_doing
+		NOR = {
+			uses_district_set = BA_planet
+			uses_district_set = BA_ruined_planet
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_valid_target_for_sweeper
+		merg_is_forbidden_target = no
+		exists = owner
+		owner = {
+			OR = {
+				is_same_empire = FROM.owner
+				is_at_war_with = FROM.owner
+			}
+		}
+	}
+}
 
 ############################### Corsair's Custom Empires: Eldanær Stellar Authority ###############################
 can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {

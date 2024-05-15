@@ -930,13 +930,13 @@ can_take_hostile_actions = {
 		}
 	}
 	# # BlueArchive
-	# else_if = {
-	# 	limit = {
-	# 		exists = from
-	# 		from = { has_country_flag = BA_Precursor_contactor }
-	# 		always = no
-	# 	}
-	# }
+	else_if = {
+		limit = {
+			exists = from
+			from = { has_country_flag = BA_Precursor_contactor }
+		}
+		always = no
+	}
 	# Origins of Civilization
 	else_if = {
 		limit = {
@@ -2417,7 +2417,7 @@ can_orbital_bombard = {
 				is_country_type = void_lifeforms_1
 				is_country_type = void_lifeforms_2
 				# # BlueArchive
-				# is_country_type = Aris_mid
+				is_country_type = Aris_mid
 				# Destiny: The Darkness Crisis
 				is_country_type = darkness_country
 				# Gigastructural Engineering & More
@@ -2501,7 +2501,7 @@ has_full_sensor_range = {
 		has_country_flag = z_fw_r_celestial_orrey_activited
 		has_country_flag = z_fw_r_cheat_quantum_beacon_activited
 		# # BlueArchive species pack
-		# has_modifier = modifier_BA_Veritas_4
+		has_modifier = modifier_BA_Veritas_4
 		# Galaxius
 		AND = {
 			merg_has_galaxius = yes
@@ -3096,8 +3096,8 @@ can_enter_system_by_jump = {
 						has_star_flag = ag_no_jump_in_system
 						# Assault Lily
 						has_star_flag = al_huge_home_bed
-						# # BlueArchive
-						# has_star_flag = BA_FE_SYS
+						# BlueArchive
+						has_star_flag = BA_FE_SYS
 						# Forgotten Empires
 						AND = {
 							has_star_flag = scfe_shaded_colony_system
@@ -3763,7 +3763,7 @@ can_build_branch_offices = {
 			has_authority = auth_azur_lane_2
 			has_authority = auth_azur_lane_K
 			# # BlueArchive species pack
-			# has_authority = auth_kivotos
+			has_authority = auth_kivotos
 			# EDA
 			has_authority = auth_traveler
 			# Ethical Gestalts
@@ -3823,7 +3823,7 @@ can_support_branch_offices = {
 				# Arknights Near Future
 				has_valid_civic = civic_business_union
 				# # BlueArchive species pack
-				# has_authority = auth_kivotos
+				has_authority = auth_kivotos
 				# Ethics  & Civics Infinity
 				is_eci_megacorp = yes
 				# Girls Frontline
@@ -3990,7 +3990,7 @@ can_build_branch_office_on_planet = {
 					# Azur Lane Stellaris DLC
 					has_authority = auth_azur_lane_1
 					# # BlueArchive species pack
-					# has_ascension_perk = ap_BA_new_frontier
+					has_ascension_perk = ap_BA_new_frontier
 					# Rogue Maid
 					Maid_trigger_0_can_build_branch_offices = yes
 					# Voyage to Eternity
@@ -4294,8 +4294,7 @@ is_criminal_syndicate_rule = {
 		# Cruel Conquerers
 		is_cruel_empire = yes
 		# # BlueArchive species pack
-		# has_country_flag = BA_Momoyado_unlimited
-		# has_country_flag = BA_club_onsen_department
+		has_ascension_perk = ap_BA_new_frontier
 		# Ethical Gestalts
 		has_policy_flag = infiltration_allowed
 		# Ethics & Civics Infinity

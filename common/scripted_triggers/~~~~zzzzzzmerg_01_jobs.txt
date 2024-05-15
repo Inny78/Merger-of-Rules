@@ -199,7 +199,7 @@ is_organic_species = {
 				# Azur Lane Stellaris DLC
 				is_KANSEN_species = yes
 				# # BlueArchive species pack
-				# is_archetype = Schale
+				is_archetype = Schale
 				# Cryogenesis Unofficial Species Pack
 				is_archetype = sm_ELEMENTAL
 				# Empire of Eeveelution
