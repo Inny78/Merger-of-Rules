@@ -453,6 +453,7 @@ should_abduct_pop = {
 species_can_live_on_planet = {
 	hidden_trigger = {
 		exists = root
+		# Machine Worlds
 		NAND = {
 			root = { merg_is_machine_world = yes }
 			NOR = {
@@ -483,6 +484,7 @@ species_can_live_on_planet = {
 				has_trait = GF_trait_doll
 			}
 		}
+		# Hive Worlds
 		if = {
 			limit = { root = { merg_is_hive_world = yes } }
 			OR = {
@@ -1861,7 +1863,30 @@ can_species_procreate = {
 		}
 	}
 	NOT = { has_species_flag = nivlac_no_procreation }
-	has_cybernetic_creed_trait = no
+	if = {
+		limit = {
+			has_cybernetic_creed_trait = yes
+		}
+		NOT = {
+			root = {
+				any_owned_species = {
+					has_population_control = { country = root.owner type = no }
+					has_cybernetic_creed_trait = no
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_cybernetic_creed_trait = no
+		}
+		root = {
+			any_owned_species = {
+				has_population_control = { country = root.owner type = no }
+				has_cybernetic_creed_trait = no
+			}
+		}
+	}
 }
 
 # Checks if a pop can be assembled
