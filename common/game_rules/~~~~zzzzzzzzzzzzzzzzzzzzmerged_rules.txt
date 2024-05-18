@@ -720,15 +720,8 @@ can_release_vassal_from_species = {
 					is_exp_tree_caretaker = yes
 				}
 			}
-			# Machines & Robot Expansion Continued
-			AND = {
-				has_trait = trait_machine_unit
-				prev.this = {
-					has_authority = auth_machine_intelligence
-					has_ascension_perk = oxr_mdlc_ap_distributed_multikernel
-					NOT = { has_civic = civic_machine_terminator }
-				}
-			}
+			# Machines & Robots Expansion Continued
+			oxr_mdlc_can_release_vassal_from_species = yes
 		}
 	}
 }
@@ -1981,6 +1974,8 @@ can_species_be_assembled = {
 			if = { limit = { has_trait = trait_KZ_VOY_magic_puppet }
 				KZ_VOY_can_assemble_magic_puppet = yes
 			}
+			# Machines & Robots Expansion Continued -- MAMP species cannot be assembled
+			has_oxr_mdlc_mamp_frame_base = no
 			# Vanilla
 			root = {
 				check_modifier_value = {
