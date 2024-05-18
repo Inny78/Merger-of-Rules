@@ -15,7 +15,7 @@ decision_baol_life_seed = {
         # GPM
         NOT = { is_planet_class = pc_gpm_precursor_tomb }
         # Forgotten Empires
-        AND = {
+        NAND = {
             has_planet_flag = cant_terraform_planet
             NOT = { has_planet_flag = scfe_roots_peace }
         }
