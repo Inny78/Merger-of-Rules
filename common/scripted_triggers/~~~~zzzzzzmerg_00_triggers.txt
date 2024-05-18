@@ -314,7 +314,7 @@ has_any_megastructure_in_empire = {
 			exists = this
 			NOR = {
 				merg_is_gate_mega = yes
-				planet = { merg_is_habitat = yes }
+				merg_is_habitat_mega = no
 				is_megastructure_type = orbital_ring
 				is_megastructure_type = orbital_ring_ruined
 				is_megastructure_type = orbital_ring_restored
@@ -1313,15 +1313,6 @@ has_no_non_gate_megastructure = {
 				has_any_megastructure = yes
 				merg_has_gate_mega = no
 			}
-		}
-	}
-}
-has_any_megastructure_in_empire = {
-	any_system_within_border = {
-		has_any_megastructure = yes
-		any_system_megastructure = {
-			merg_is_gate_mega = no
-			merg_is_habitat_mega = no
 		}
 	}
 }
