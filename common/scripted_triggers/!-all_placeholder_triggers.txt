@@ -503,3 +503,4 @@ pd_is_pd_arcology = { always = no }
 pd_is_pd_hive_world = { always = no }
 pd_is_pd_hive_arc = { always = no }
 pd_is_pd_machine_arc = { always = no }
+pd_aw_is_shroud_planet = { always = no }

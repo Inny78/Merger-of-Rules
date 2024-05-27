@@ -211,8 +211,6 @@ merg_is_gas_giant = {
 		is_planet_class = pc_azur_gas_giant
 		# Nanite Machine and Distant Stars Overhaul
 		is_nanite_gas_giant = yes
-		# Planetary Diversity
-		is_pd_gas_giant = yes
 	}
 }
 
@@ -339,7 +337,7 @@ merg_is_shroud_habitable = {
 		# Madoka Magica NEW
 		uses_district_set = outpost
 		# Planetary Diversity
-		is_pd_shroud_world = yes
+		pd_aw_is_shroud_planet = yes
 		# Rozen Maiden Suigintou
 		is_planet_class = pc_roz_YS_planet
 		# TimeMod
@@ -354,8 +352,6 @@ merg_is_toxic = {
 		atw_is_toxic = yes
 		# Gigastructural Engineering & More
 		is_pc_red_toxic = yes
-		# Planetary Diversity
-		is_pd_toxic = yes
 	}
 }
 
