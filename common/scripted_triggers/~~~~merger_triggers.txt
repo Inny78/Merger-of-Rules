@@ -45,6 +45,8 @@ merg_is_fallen_empire = {
 		is_country_type = fallen_empire
 		# History of the Lost Empire
 		is_country_type = LsE_fallen_empire
+		# Human Fallen Empire
+		hfe_trigger_is_human_fallen = yes
 		# SW:KUAT ANCIENT EMPIRE
 		is_country_type = kuat_fallen_empire
 		# The Empty Vagrant
@@ -56,14 +58,14 @@ merg_is_fallen_empire = {
 merg_is_awakened_fe = {
 	OR = {
 		is_country_type = awakened_fallen_empire
-		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_awakened_fallen_empire
-		is_country_type = awakened_return_kuat_empire
 		# A Deadly Tempest
 		AND = {
 			merg_has_deadly_tempest = yes
 			is_country_type = awakened_gate_builders
 		}
+		# SW:KUAT ANCIENT EMPIRE
+		is_country_type = kuat_awakened_fallen_empire
+		is_country_type = awakened_return_kuat_empire
 		# The Empty Vagrant
 		is_country_type = awakened_fallen_empire_ev
 		is_country_type = awakened_fallen_empire_event

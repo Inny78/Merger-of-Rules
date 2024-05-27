@@ -35,6 +35,8 @@ fallen_empire_ev = { ai = { enabled = no } }
 first_emperor_awakened_fallen_empire = { ai = { enabled = no } }
 giga_eawaf_sirens = { ai = { enabled = no } }
 giga_hypersiphon_major_incursion = { ai = { enabled = no } }
+hfe_fallen = { ai = { enabled = no } }
+hfe_features_exodus = { ai = { enabled = no } }
 hfe_pirate = { ai = { enabled = no } }
 huge_country = { ai = { enabled = no } }
 katzenartig_imperium = { ai = { enabled = no } }

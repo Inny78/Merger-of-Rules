@@ -57,7 +57,6 @@ civic_royal_trading_company = { potential = { always = no } }
 civic_self_experimentation = { potential = { always = no } }
 civic_shadow_council_megacorp = { potential = { always = no } }
 civic_shadow_state = { potential = { always = no } }
-civic_shadows1 = { potential = { always = no } }
 civic_sh_criminal_syndicate = { potential = { always = no } }
 civic_slave_masters = { potential = { always = no } }
 civic_slave_race = { potential = { always = no } }

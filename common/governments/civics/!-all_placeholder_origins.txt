@@ -27,3 +27,4 @@ origin_symbiotic_race = { is_origin = yes potential = { always = no } }
 origin_techno_world = { is_origin = yes potential = { always = no } }
 origin_terraformer = { is_origin = yes potential = { always = no } }
 origin_vb_psi_soul_eater = { is_origin = yes potential = { always = no } }
+origin_nsc_freebooter = { is_origin = yes potential = { always = no } }

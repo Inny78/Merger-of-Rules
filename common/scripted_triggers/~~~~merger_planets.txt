@@ -79,9 +79,9 @@ merg_is_arcology = {
 		# Gigastructural Engineering & More
 		uses_district_set = flusion_gaia_ecu
 		# Planetary Diversity
-		is_pd_arcology = yes
-		is_pd_hive_arcology = yes
-		is_pd_robot_arcology = yes
+		pd_is_pd_arcology = yes
+		pd_is_pd_hive_arc = yes
+		pd_is_pd_machine_arc = yes
 		# Pokémon
 		uses_district_set = EOE_city_world
 		# Star fantasy: Castle Scarlet
@@ -123,8 +123,6 @@ merg_is_barren = {
 		# Mem
 		is_pc_mem_destroyed_barren = yes
 		is_pc_mem_broken_city = yes
-		# Planetary Diversity
-		is_pd_barren = yes
 	}
 }
 
@@ -133,8 +131,6 @@ merg_is_barren_cold = {
 		is_planet_class = pc_barren_cold
 		# All These Worlds
 		atw_is_barren_cold = yes
-		# Planetary Diversity
-		is_pd_barren_cold = yes
 	}
 }
 
@@ -167,8 +163,6 @@ merg_is_frozen = {
 		is_planet_class = pc_ark_frozen
 		# Endless Frontier
 		is_mzilli_rogue = yes
-		# Planetary Diversity
-		is_pd_frozen = yes
 	}
 }
 
@@ -201,8 +195,6 @@ merg_is_gas_giant_habitable = {
 		# Gigastructural Engineering & More
 		is_giga_habitable_gas_giant = yes
 		giga_is_maginot_gas_giant = yes
-		# Planetary Diversity
-		is_pd_gas_giant_habitable = yes
 		# TimeMod
 		is_tm_gas_colony = yes
 	}
@@ -230,8 +222,7 @@ merg_is_hive_world = {
 		# Gigastructural Engineering & More
 		is_pc_ringworld_hive = yes
 		# Planetary Diversity
-		is_pd_hive_arcology = yes
-		is_pd_megaflora_hive = yes
+		pd_is_pd_hive_world = yes
 		pd_is_planet_class_hive = yes
 		# Planetary Ringworlds
 		is_planetary_ringworld_hive = yes
@@ -245,7 +236,7 @@ merg_is_machine_world = {
 	OR = {
 		is_planet_class = pc_machine
 		# Planetary Diversity
-		is_pd_robot_arcology = yes
+		pd_is_pd_machine_arc = yes
 		pd_is_planet_class_machine = yes
 		# Gigastructural Engineering & More
 		is_pc_ringworld_machine = yes
@@ -266,8 +257,6 @@ merg_is_molten = {
 		is_planet_class = pc_molten
 		# All These Worlds
 		atw_is_molten = yes
-		# Planetary Diversity
-		is_pd_molten = yes
 	}
 }
 

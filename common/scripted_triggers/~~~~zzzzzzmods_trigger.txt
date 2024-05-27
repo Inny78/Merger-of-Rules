@@ -1288,6 +1288,14 @@ afk_target_planet = {
 	merg_is_forbidden_target = no
 }
 
+############################### Human Fallen Empire ###############################
+hfe_trigger_is_fallen = {
+	OR = {
+		merg_is_fallen_empire = yes
+		merg_is_awakened_fe = yes
+	}
+}
+
 ############################### Infinity Stones ###############################
 infmod_is_relevant = {
 	optimize_memory

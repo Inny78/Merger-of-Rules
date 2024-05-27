@@ -1243,6 +1243,8 @@ can_colonize_outside_borders = {
 	exists = root
 	root = {
 		OR = {
+			# Human Fallen Empire
+			is_country_type = hfe_features_exodus
 			# The Empty Vagrant
 			is_country_type = ev_leviathans_crisis
 			# Project Gestalt
@@ -1395,6 +1397,8 @@ can_colonize_with_pop = {
 		custom_tooltip = { always = no }
 	}
 	else = { always = yes }
+	# Gigastructural Engineering & More
+	giga_can_colonize_with_pop = yes
 }
 
 #Root = country
@@ -3471,6 +3475,8 @@ can_resettle_planet = {
 		exists = this
 		is_under_colonization = no
 	}
+	# Gigastructural Engineering & More
+	giga_can_resettle_planet = yes
 }
 
 # can_resettle_planet_no_owner_check
@@ -3799,6 +3805,8 @@ can_build_branch_offices = {
 			has_valid_civic = civic_machine_trading
 			# Girls Frontline
 			has_civic = civic_gf_GK
+			# Human Fallen Empire
+			is_country_type = hfe_pirate
 			# Rogue Maid
 			Maid_trigger_0_can_build_branch_offices = yes
 			# Voyage to Eternity
@@ -4014,8 +4022,13 @@ can_build_branch_office_on_planet = {
 					has_authority = auth_AL_democratic
 					# Azur Lane Stellaris DLC
 					has_authority = auth_azur_lane_1
-					# # BlueArchive species pack
+					# BlueArchive species pack
 					has_ascension_perk = ap_BA_new_frontier
+					# Human Fallen Empire
+					AND = {
+						is_country_type = hfe_pirate
+						is_forced_friendly = prev.owner
+					}
 					# Rogue Maid
 					Maid_trigger_0_can_build_branch_offices = yes
 					# Voyage to Eternity
@@ -4573,11 +4586,6 @@ can_be_part_of_galactic_community = {
 			}
 		}
 	}
-	# B5 Species - Shadows
-	custom_tooltip = {
-		fail_text = "community_shadows_failtext"
-		NOT = { has_civic = civic_shadows1 }
-	}
 	# More Emperor & Custodian Resolutions, and Galactic Unification
 	MECR_trigger_1_can_be_part_of_galactic_community = yes
 }
@@ -4673,6 +4681,8 @@ can_pop_auto_migrate = {
 				ideological_discomfort = yes
 				is_enslaved = yes
 			}
+			# Human Fallen Empire
+			hfe_trigger_unemployed_auto_migrate = yes
 		}
 	}
 	custom_tooltip = {
@@ -5037,9 +5047,7 @@ can_fill_worker_job = {
 	custom_tooltip = WORKER_JOB_TRIGGER
 	if = {
 		limit = {
-			planet = {
-				is_planet_class = pc_cosmogenesis_world #Everyone can become a chip slave
-			}
+			planet = { is_planet_class = pc_cosmogenesis_world }
 		}
 		always = yes
 	}
@@ -5052,15 +5060,18 @@ can_fill_worker_job = {
 			}
 		}
 		exists = owner
-		is_being_purged = no
-		# Expanded Traits, Civics, Pops, and More
-		if = {
-			limit = { merg_has_expanded_pops = yes }
-			OR = {
-				has_purge_type = { type = purge_displacement }
-				has_purge_type = { type = purge_neutering }
+		OR = {
+			is_being_purged = no
+			# Expanded Traits, Civics, Pops, and More
+			if = {
+				limit = { merg_has_expanded_pops = yes }
+				OR = {
+					has_purge_type = { type = purge_displacement }
+					has_purge_type = { type = purge_neutering }
+				}
 			}
 		}
+		# Vanilla
 		is_being_assimilated = no
 		NOT = { has_citizenship_type = { type = citizenship_organic_trophy country = owner } }
 		NAND = {
@@ -5566,6 +5577,8 @@ can_trade_leader = {
 		OR = {
 			has_leader_flag = tradable_leader
 			has_specialist_subject_leader_trait = yes
+			# Freebooters Origin
+			root = { has_origin = origin_nsc_freebooter }
 			# Rogue Maid
 			has_specialist_subject_leader_trait_maid = yes
 			# Girls Frontline

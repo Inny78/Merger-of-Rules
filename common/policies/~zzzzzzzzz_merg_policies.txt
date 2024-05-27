@@ -259,6 +259,7 @@ merger_fake_policy = {
 			GF_doll_right_limited
 			infiltration_allowed
 			ev_no_use_galactic_market
+			coop_colony_policy_yes
 		}
 	}
 
