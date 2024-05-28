@@ -1549,22 +1549,22 @@ species_has_happiness = {
 		AND = {
 			has_trait = trait_mechanical
 			# Animated Synthetics Portraits Expanded: Reborn
-			OR = {
-				merg_has_animated_synth = no
-				AND = {
-					merg_has_animated_synth = yes
-					from = { is_machine_empire = yes }
-					is_extsynth_synthetic = yes
-					NOT = { has_trait = trait_psionic }
-				}
-				AND = {
-					merg_has_animated_synth = yes
-					NAND = {
-						from = { is_machine_empire = yes }
-						is_extsynth_synthetic = yes
-					}
-				}
-			}
+			#OR = {
+			#	merg_has_animated_synth = no
+			#	AND = {
+			#		merg_has_animated_synth = yes
+			#		from = { is_machine_empire = yes }
+			#		is_extsynth_synthetic = yes
+			#		NOT = { has_trait = trait_psionic }
+			#	}
+			#	AND = {
+			#		merg_has_animated_synth = yes
+			#		NAND = {
+			#			from = { is_machine_empire = yes }
+			#			is_extsynth_synthetic = yes
+			#		}
+			#	}
+			#}
 			# Vanilla
 			OR = {
 				NOT = { exists = from }
@@ -1937,16 +1937,16 @@ can_species_be_assembled = {
 			# Azur lane Stellaris DLC
 			NOT = { has_trait = trait_robot_mind_relic_core }
 			# Animated Synthetics Portraits Expanded: Reborn
-			OR = {
-				merg_has_animated_synth = no
-				AND = {
-					merg_has_animated_synth = yes
-					if = { #synth can never be built unless empire is a synth empire
-						limit = { root.owner = { has_country_flag = synthetic_empire } }
-						is_extsynth_synthetic = yes
-					}
-				}
-			}
+			#OR = {
+			#	merg_has_animated_synth = no
+			#	AND = {
+			#		merg_has_animated_synth = yes
+			#		if = { #synth can never be built unless empire is a synth empire
+			#			limit = { root.owner = { has_country_flag = synthetic_empire } }
+			#			is_extsynth_synthetic = yes
+			#		}
+			#	}
+			#}
 			# Diagraphers Trait Mod
 			NAND = {
 				robot_has_rare_crystal_comp = yes
