@@ -820,6 +820,7 @@ can_modify_species = {
 								has_origin = origin_life_seeded
 								has_origin = origin_ocean_machines
 								has_origin = origin_void_machines
+								has_origin = origin_shattered_ring
 							}
 						}
 					}
@@ -842,17 +843,6 @@ can_modify_species = {
 		fail_text = "CANNOT_MODIFY_SELF_MODIFIED_SPECIES"
 		NOT = {
 			has_trait = trait_self_modified
-		}
-	}
-	# Ritualistic Implants
-	custom_tooltip = {
-		fail_text = "CANNOT_MODIFY_RITUALISTIC_IMPLANTS_SPECIES"
-		OR = {
-			AND = {
-				root = { has_country_flag = can_genemod_cyborg_ritualistic_pops }
-				has_cybernetic_creed_trait = yes
-			}
-			has_cybernetic_creed_trait = no
 		}
 	}
 }
@@ -3247,7 +3237,7 @@ can_resettle_pop = {
 			owner = {
 				is_fallen_empire = no
 				NOT = {
-					has_active_tradition = tr_virtuality_finish
+					has_active_tradition = tr_virtuality_adopt
 				}
 
 			}
@@ -3857,7 +3847,7 @@ can_support_branch_offices = {
 				has_valid_civic = civic_business_union
 				# # BlueArchive species pack
 				has_authority = auth_kivotos
-				# Ethics  & Civics Infinity
+				# Ethics & Civics Infinity
 				is_eci_megacorp = yes
 				# Girls Frontline
 				has_civic = civic_gf_GK
@@ -3910,31 +3900,7 @@ can_support_branch_offices = {
 		}
 	}
 	# E&C FunEFork
-	# As some mods allow megacorps to build branch offices in other megacorps, we need to check that we're not building one on our own empire.
-	custom_tooltip = {
-		fail_text = ACTION_RECIPIENT_NOT_YOUR_CORP
-		OR = {
-			merg_has_more_authorities = no
-			AND = {
-				merg_has_more_authorities = yes
-				NAND = {
-					is_megacorp = yes
-					is_subject = no
-				}
-			}
-		}
-	}
-	# ZOFE Megacorp
-	custom_tooltip = {
-		fail_text = COUNTRY_IS_ASCENDED_EMPIRE
-		OR = {
-			has_zofe_mc = no
-			AND = {
-				has_zofe_mc = yes
-				NOT = { is_country_type = ascended_empire }
-			}
-		}
-	}
+	ecaf_can_support_branch_offices_trigger = yes
 }
 
 # This = planet
@@ -4035,11 +4001,6 @@ can_build_branch_office_on_planet = {
 					KZ_VOY_can_build_branch_offices = yes
 					# Warship Girls R And MIST Species
 					has_civic = civic_sh_criminal_syndicate
-					# ZOFE Megacorp
-					AND = {
-						is_zofe_country = yes
-						is_megacorp = yes
-					}
 				}
 			}
 			owner = { has_commercial_pact = root }
@@ -4254,22 +4215,6 @@ can_build_branch_office_on_planet = {
 		# Azur Lane Stellaris DLC
 		NOT = { root = { has_authority = auth_azur_lane_1 } }
 	}
-	# ZOFE Megacorp
-	custom_tooltip = {
-		fail_text = BRANCH_OFFICE_NOT_ON_MEGACORP_PLANET
-		OR = {
-			has_zofe_mc = no
-			owner = { is_megacorp = no }
-			root = { is_zofe_country = yes }
-		}
-	}
-	custom_tooltip = {
-		fail_text = COUNTRY_CLOSED_BORDERS
-		OR = {
-			has_zofe_mc = no
-			NOT = { owner = { has_closed_borders = root } }
-		}
-	}
 	# Warship Girls R And MIST Species
 	custom_tooltip = {
 		fail_text = requires_recipient_not_warshipgirls
@@ -4319,6 +4264,8 @@ can_build_branch_office_on_planet = {
 	}
 	# Rogue Maid
 	Maid_trigger_2_can_build_branch_office_on_planet = yes
+	# E&C FunEFork
+	ecaf_can_build_branch_office_on_planet_trigger = yes
 }
 
 # This = country
@@ -4339,8 +4286,6 @@ is_criminal_syndicate_rule = {
 		has_valid_civic = civic_family_business
 		has_valid_civic = civic_underworld_society
 		has_valid_civic = civic_world_cooperative
-		# ZOFE Megacorp
-		has_valid_civic = mc_civic_criminal_dominion
 	}
 }
 

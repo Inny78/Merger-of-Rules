@@ -274,7 +274,6 @@ merg_is_nuked_basic = {
 		# All these worlds
 		atw_is_nuked = yes
 		# Planetary Diversity
-		is_pd_radiotrophic_world = yes
 		pd_is_planet_class_nuked = yes
 	}
 }

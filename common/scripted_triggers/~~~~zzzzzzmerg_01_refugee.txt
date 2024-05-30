@@ -1,6 +1,6 @@
 # Vanilla scripted triggers from 01_scripted_triggers_refugees.txt
 is_valid_refugee_pop = {
-	is_robot_pop = no
+	is_non_sapient_robot = no
 	NOR = {
 		merg_has_hive_trait = yes
 		can_think = no
@@ -66,5 +66,6 @@ has_any_habitability = {
 		is_under_colonization = no
 		is_controlled_by = owner
 		has_orbital_bombardment = no
+		NOT = { is_planet_class = pc_cosmogenesis_world }
 	}
 }

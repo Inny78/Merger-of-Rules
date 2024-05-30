@@ -262,6 +262,3 @@ merg_has_wild_space = { has_global_flag = has_wild_space_mod }
 
 # Wula Fallen Empires
 merg_has_wula_fe = { wula_fallen_empire_mod_actived = yes }
-
-# ZOFE Megacorp
-merg_has_zofe_mc = { has_global_flag = zofe_megacorp_installed }

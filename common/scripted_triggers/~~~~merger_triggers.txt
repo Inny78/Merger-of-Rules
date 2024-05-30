@@ -653,23 +653,6 @@ merg_has_happiness = {
 		# Vanilla
 		AND = {
 			has_trait = trait_mechanical
-			# Animated Synthetics Portraits Expanded: Reborn
-			OR = {
-				merg_has_animated_synth = no
-				AND = {
-					merg_has_animated_synth = yes
-					from = { is_machine_empire = yes }
-					is_extsynth_synthetic = yes
-					NOT = { has_trait = trait_psionic }
-				}
-				AND = {
-					merg_has_animated_synth = yes
-					NAND = {
-						from = { is_machine_empire = yes }
-						is_extsynth_synthetic = yes
-					}
-				}
-			}
 			# Vanilla
 			OR = {
 				NOT = { exists = from }
