@@ -1042,12 +1042,12 @@ has_any_farming_district_or_buildings = {
 		has_district = district_farming_uncapped
 		merg_has_food_building = yes
 		# District Overhaul - FunEFork
-		has_district = district_05_nature_farms
-		has_district = district_05_ocean_farms
-		has_district = district_05_exotic_farms
-		has_district = district_05_oasis_farms
-		has_district = district_05_cave_farms
-		has_district = district_05_industrial_farms
+		has_district = district_f_nature_farms
+		has_district = district_f_ocean_farms
+		has_district = district_f_exotic_farms
+		has_district = district_f_oasis_farms
+		has_district = district_f_cave_farms
+		has_district = district_f_industrial_farms
 		has_district = district_02_hydroponic_bay
 		# Extra Districts
 		ED_has_farming_district = yes
@@ -1071,11 +1071,11 @@ has_any_mining_district = {
 		# Decadence of Sanity
 		has_district = district_shroud_resource
 		# District Overhaul - FunEFork
-		has_district = district_04_unstable_mining
-		has_district = district_04_stable_mining
-		has_district = district_04_surface_mining
-		has_district = district_04_deep_mining
-		has_district = district_04_mountain_mining
+		has_district = district_m_unstable_mining
+		has_district = district_m_stable_mining
+		has_district = district_m_surface_mining
+		has_district = district_m_deep_mining
+		has_district = district_m_mountain_mining
 		has_district = district_501_rw_asteroid_belt_mining
 		# Extra Districts
 		ED_has_mining_district = yes
@@ -1109,13 +1109,13 @@ has_any_generator_district_or_building = {
 		# Decadence of Sanity
 		has_district = district_shroud_resource
 		# District Overhaul - FunEFork
-		has_district = district_06_fusion_generator
-		has_district = district_06_fossil_fuel_generator
-		has_district = district_06_wind_turbines
-		has_district = district_06_geothermal_generator
-		has_district = district_06_solar_generator
-		has_district = district_06_tidal_generator
-		has_district = district_06_biomass_generator
+		has_district = district_e_fusion_generator
+		has_district = district_e_fossil_fuel_generator
+		has_district = district_e_wind_turbines
+		has_district = district_e_geothermal_generator
+		has_district = district_e_solar_generator
+		has_district = district_e_tidal_generator
+		has_district = district_e_biomass_generator
 		# Extra Districts
 		ED_has_generator_district = yes
 		# Gigastructures
