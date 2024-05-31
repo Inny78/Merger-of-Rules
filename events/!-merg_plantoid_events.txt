@@ -16,16 +16,8 @@ planet_event = {
 	immediate = {
 		# Planetary Diversity
 		if = {
-			limit = { is_pd_tidally_locked = yes }
-			pd_change_to_tidallygaia = yes
-		}
-		else_if = {
-			limit = { is_pd_superhab = yes }
-			pd_change_to_gaia_superhab = yes
-		}
-		else_if = {
-			limit = { is_pd_cave = yes }
-			pd_change_to_gaia_cave = yes
+			limit = { merg_has_planetary_diversity = yes }
+			pd_make_all_gaia_worlds_effect = yes
 		}
 		# Vanilla
 		else = {

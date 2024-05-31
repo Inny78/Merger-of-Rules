@@ -704,3 +704,11 @@ merg_is_slaver = {
 		has_valid_civic = civic_master_race
 	}
 }
+
+merg_is_void_dweller = {
+	OR = {
+		has_origin = origin_void_dwellers
+		has_origin = origin_void_machines
+		has_origin = origin_mem_eden_protocol
+	}
+}
