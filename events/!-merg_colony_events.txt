@@ -41,6 +41,7 @@ planet_event = {
 			has_global_flag = seismic_disturbance_global
 			has_planet_flag = colony_event
 		}
+		solar_system = { is_capital_system = no }
 	}
 
 	is_triggered_only = yes
@@ -86,6 +87,5 @@ planet_event = {
 			location = this
 			owner = root
 		}
-
 	}
 }

@@ -2230,11 +2230,6 @@ can_species_be_assembled = {
 								owner = { has_civic = civic_permanent_employment }
 							}
 							has_planet_flag = can_organic_assemble_flag #for mod compatibility
-							# Omega's Stellaris Additions
-							AND = {
-								merg_has_omega_add = yes
-								merg_has_hospital = yes
-							}
 						}
 						# ANZ Advanced Cloning
 						NOT = { has_modifier = planet_cloning_limits }
@@ -3836,7 +3831,6 @@ can_support_branch_offices = {
 			NOR = {
 				AND = {
 					merg_has_more_authorities = no
-					merg_has_omega_add = no
 					is_megacorp = yes
 				}
 				# Assault Lily
@@ -3977,13 +3971,7 @@ can_build_branch_office_on_planet = {
 		OR = {
 			root = {
 				OR = {
-					AND = {
-						is_criminal_syndicate = yes
-						OR = {
-							merg_has_omega_add = no
-							NOT = { is_same_value = prevprev.owner }
-						}
-					}
+					is_criminal_syndicate = yes
 					# Assault Lily
 					has_authority = auth_AL_democratic
 					# Azur Lane Stellaris DLC
@@ -4203,11 +4191,6 @@ can_build_branch_office_on_planet = {
 			AND = {
 				root = {
 					is_criminal_syndicate = yes
-					# Omega's Stellaris Additions
-					OR = {
-						merg_has_omega_add = no
-						NOT = { has_country_flag = prob_no_criminal_branch@root.owner }
-					}
 				}
 				NOT = { has_planet_flag = criminal_branch_closed_cooldown_planet@root }
 			}
@@ -4232,7 +4215,7 @@ can_build_branch_office_on_planet = {
 			}
 		}
 	}
-	# More Corportate Authorities
+	# More Corporate Authorities
 	# principled rogues won't build branch offices in countries they like
 	hidden_trigger = {
 		OR = {
