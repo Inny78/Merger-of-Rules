@@ -26,8 +26,6 @@ colonizable_planet = {
 		is_acot_fractured_planet_class = yes
 		is_acot_awesome_planet_class = yes
 		is_sots_soulsphere = yes
-		# Planetary Diversity
-		is_pd_planetary_megaproject = yes
 		# APSR: Anomalies, Planetary and Space Resources
 		is_apsr_habitable_planet = yes
 		# Endless Frontier
@@ -48,64 +46,24 @@ habitable_planet = {
 		galactic_diversity_habitable_planet = yes
 		merg_is_relic_world = yes
 		merg_is_arcology = yes
+		# Merger of Rules
+		has_planet_flag = merg_is_habitable_planet
 	}
+	NOT = { has_planet_flag = merg_is_uninhabitable_planet }
 }
 
 habitable_planet_not_urban = {
 	OR = {
-		# Alpine
-		is_planet_class = pc_alpine
-		is_pd_alpine = yes
-		atw_is_alpine = yes
-		# Arctic
-		is_planet_class = pc_arctic
-		is_pd_arctic = yes
-		atw_is_arctic = yes
-		# Arid
-		is_planet_class = pc_arid
-		is_pd_arid = yes
-		atw_is_arid = yes
-		# Continental
-		is_planet_class = pc_continental
-		is_pd_continental = yes
-		atw_is_continental = yes
-		# Desert
-		is_planet_class = pc_desert
-		is_pd_desert = yes
-		atw_is_desert = yes
-		# Gaia
-		is_planet_class = pc_gaia
-		atw_is_gaia = yes
-		is_pd_gaia = yes
-		uses_district_set = azur_gaia
-		uses_district_set = EOE_pokemon_world
-		uses_district_set = utopian_world
-		# Ocean
-		is_planet_class = pc_ocean
-		atw_is_ocean_basic = yes
-		is_pd_ocean = yes
-		is_pd_aquatics = yes
-		uses_district_set = azur_ocean
-		uses_district_set = BA_planet
-		giga_is_edge_of_eternity = yes
-		# Savannah
-		is_planet_class = pc_savannah
-		is_pd_savannah = yes
-		atw_is_savannah = yes
-		# Tropical
-		is_planet_class = pc_tropical
-		is_pd_tropical = yes
-		atw_is_tropical = yes
-		is_pc_mem_death = yes
-		# Tundra
-		is_planet_class = pc_tundra
-		is_pd_tundra = yes
-		atw_is_tundra = yes
-		# Planetary Diversity
-		is_pd_rare = yes
-		is_pd_exotic = yes
-		is_pd_radiotrophic_world = yes
-		is_pd_megaflora_hive = yes
+		merg_is_alpine = yes
+		merg_is_arctic = yes
+		merg_is_arid = yes
+		merg_is_continental = yes
+		merg_is_desert = yes
+		merg_is_gaia = yes
+		merg_is_ocean = yes
+		merg_is_savannah = yes
+		merg_is_tropical = yes
+		merg_is_tundra = yes
 		# Warship Girls R And MIST Species
 		uses_district_set = port_world
 		uses_district_set = sh_world
@@ -116,6 +74,8 @@ habitable_planet_not_urban = {
 		giga_is_katzenland = yes
 		# Real Space - Planetary Stations
 		is_planet_class = pc_hollow
+		# Planetary Diversity
+		pd_is_planet_class_all = yes
 	}
 }
 
@@ -157,9 +117,6 @@ can_have_habitable_deposits = {
 		# All These Worlds
 		galactic_diversity_habitable_planet = yes
 		# Planetary Diversity
-		is_pd_radiotrophic_world = yes
-		is_pd_megaflora_hive = yes
-		is_pd_rare = yes
 		pd_is_planet_class_all = yes
 	}
 }
