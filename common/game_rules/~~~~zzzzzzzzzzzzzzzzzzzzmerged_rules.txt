@@ -581,7 +581,7 @@ can_generate_leader_from_pop = {
 		# Rogue Maid (Rogue Servitor Completely Remake)
 		has_trait = trait_working_machine
 		# Wandering Witch: Voyagers
-		has_trait = trait_servitude
+		has_ww_servitude = yes
 	}
 }
 
@@ -1513,9 +1513,9 @@ species_has_happiness = {
 		# Trait Diversity
 		td_has_no_happiness = yes
 		# Wandering Witch: Voyagers
-		has_trait = trait_servitude
+		has_ww_servitude = yes
 		AND = {
-			has_trait = trait_dummy
+			has_ww_dummy = yes
 			OR = {
 				NOT = { exists = from }
 				from = { 
@@ -1701,7 +1701,7 @@ can_species_procreate = {
 		# Plentiful Traditions - Extra Perks
 		has_trait = trait_plentiful_traditions_pt_cocoon
 		# Wandering Witch: Voyagers
-		has_trait = trait_dummy
+		has_ww_dummy = yes
 	}
 	OR = {
 		has_ethical_gestalts = no
@@ -1793,7 +1793,7 @@ can_species_procreate = {
 	}
 	# Wandering Witch: Voyagers
 	if = {
-		limit = { has_trait = trait_reanimated_materials }
+		limit = { has_ww_reanimated_materials = yes }
 		OR = {
 			is_mage = yes
 			root.owner = {
@@ -1817,7 +1817,7 @@ can_species_procreate = {
 		}
 	}
 	if = {
-		limit = { has_trait = trait_houki }
+		limit = { has_ww_houki = yes }
 		root.owner = {
 			has_country_flag = newbirth_houki
 			NOT = { has_country_flag = max_houki_number_reached }
@@ -1954,7 +1954,7 @@ can_species_be_assembled = {
 				root.owner = { GF_can_build_doll_species = yes }
 			}
 			# Wandering Witch
-			if = { limit = { has_trait = trait_dummy }
+			if = { limit = { has_ww_dummy = yes }
 				if = { limit = { root.owner = { has_origin = origin_garbage_princesses } }
 					root = { 
 						OR = {
@@ -2155,8 +2155,8 @@ can_species_be_assembled = {
 			else_if = {
 				limit = { 
 					OR = {
-						has_trait = trait_houki
-						has_trait = trait_reanimated_materials
+						has_ww_houki = yes
+						has_ww_reanimated_materials = yes
 					}
 				}
 				root = {
@@ -2167,7 +2167,7 @@ can_species_be_assembled = {
 					}
 				}
 				if = {
-					limit = { has_trait = trait_houki }
+					limit = { has_ww_houki = yes }
 					root.owner = {
 						has_country_flag = newbirth_houki
 						NOT = { has_country_flag = max_houki_number_reached }
@@ -2175,7 +2175,7 @@ can_species_be_assembled = {
 				}
 			}
 			else_if = { # for Familiars
-				limit = { has_trait = trait_servitude }
+				limit = { has_ww_servitude = yes }
 				root = {
 					OR = {
 						merg_has_cloning_building = yes
@@ -2184,7 +2184,7 @@ can_species_be_assembled = {
 				}
 			}
 			else_if = { # for Familiars
-				limit = { has_trait = trait_reanimated_materials }
+				limit = { has_ww_reanimated_materials = yes }
 				root = {
 					OR = {
 						has_building = building_object_converter
@@ -3689,7 +3689,7 @@ should_force_decline_species = {
 			custom_tooltip = {
 				success_text = OBJ_MASTER_FORCE_DECLINE
 				exists = this
-				has_trait = trait_reanimated_materials
+				has_ww_reanimated_materials = yes
 				AND = {
 					from = {
 						exists = owner
@@ -3699,8 +3699,8 @@ should_force_decline_species = {
 					}	
 				}
 				NOR = {
-					has_trait = trait_psyborg_efficient_processors
-					has_trait = trait_cro_implants_psionics
+					has_ww_psyborg_efficient_processors = yes
+					has_ww_cro_implants_psionics = yes
 					has_trait = trait_psionic
 				}
 				from = {
@@ -4451,8 +4451,8 @@ can_be_sold_on_slave_market = {
 		# Planetary Diversity
 		is_organic_fourschildren = yes
 		# Wandering Witch: Voyagers
-		has_trait = trait_servitude
-		has_trait = trait_reanimated_materials
+		has_ww_servitude = yes
+		has_ww_reanimated_materials = yes
 		# Warship Girls R And MIST Species
 		has_wg_traits = yes
 	}
@@ -5200,13 +5200,13 @@ can_fill_ruler_job = {
 				# Lithoid Supremacy
 				is_pearl_born_drone = yes
 				# Wandering Witch: Voyagers
-				has_trait = trait_servitude
+				has_ww_servitude = yes
 			}
 			# Wandering Witch: Voyagers
 			OR = {
-				NOT = { has_trait = trait_dummy }
+				NOT = { has_ww_dummy = yes }
 				owner = {
-					is_species_class = WV_MAGIC_PUPPET
+					is_ww_magic_puppet_species = yes
 				}
 				AND = {
 					owner = {
@@ -5221,8 +5221,8 @@ can_fill_ruler_job = {
 			}
 			OR = {
 				NOR = {
-					has_trait = trait_reanimated_materials
-					has_trait = trait_houki
+					has_ww_reanimated_materials = yes
+					has_ww_houki = yes
 				}
 				owner = {
 					OR = {

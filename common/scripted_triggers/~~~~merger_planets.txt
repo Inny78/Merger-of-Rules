@@ -306,8 +306,6 @@ merg_is_relic_world = {
 		is_planet_class = pc_relic
 		# Nanite Machine and Distant Stars Overhaul
 		is_dessanu_relic = yes
-		# Planetary Diversity
-		is_pd_relic = yes
 	}
 }
 

@@ -508,7 +508,6 @@ ag_is_compact_star = {
 		is_planet_class_pc_collapsar = yes
 		is_planet_class_pc_magnetar = yes
 		is_rs_microquasar = yes
-		rs_microquasar = yes
 	}
 }
 ag_is_common_country = {
@@ -1009,9 +1008,6 @@ ESC_TRIGGER_is_naked_mantle_planet = {
 		# is_planet_class = pc_molten_habitable
 		# Gigastructural Engineering & More
 		uses_district_set = giga_equatorial_shipyard
-		# Planetary Diversity
-		is_pd_molten_hab = yes
-		is_pd_crucible = yes
 		# Real Space - Planetary Stations
 		is_planet_class = pc_molten_station
 		# Real Space - New Frontiers
@@ -1040,11 +1036,7 @@ gpm_is_planet_class_molten = {
 }
 gpm_is_planet_class_toxic = {
 	optimize_memory
-	OR = {
 		merg_is_toxic = yes
-		# Planetary Diversity
-		is_pd_exotic = yes
-	}
 }
 gpm_is_planet_class_frozen = {
 	merg_is_frozen = yes
@@ -1275,13 +1267,10 @@ afk_target_planet = {
 		# Warship Girls R And MIST Species
 		uses_district_set = port_world
 		uses_district_set = sh_world
-		# SW: UnknownWorld Shipgirls Story
-		uses_district_set = engineer_world
-		uses_district_set = rw_swgs_engineer_world
 		# APSR: Anomalies, Planetary and Space Resources
 		has_apsr_modifiers = yes
 		# Planetary Diversity
-		is_pd_planet_class_all = yes
+		pd_is_planet_class_all = yes
 		# Gigastructural Engineering & More
 		is_pc_red_toxic = yes
 	}
@@ -1322,11 +1311,8 @@ legw_megaplanet = {
 	optimize_memory
 	OR = {
 		is_artificial = yes
-		is_planet_class = pc_machine
+		merg_is_machine_world = yes
 		is_planet_class = pc_cybrex
-		# Planetary Diversity
-		is_pd_machine = yes
-		is_pd_robot_arcology = yes
 		# Girls Frontline
 		uses_district_set = GF_sf_machine_world
 		# Gigastructural Engineering & More
@@ -2073,7 +2059,7 @@ has_psi_jumpdrive = {
 	}
 }
 can_reduce_upkeep_dummy = {
-	has_trait = trait_dummy
+	has_ww_dummy = yes
 	planet = {
 		OR = {
 			merg_is_gaia = yes

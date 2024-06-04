@@ -162,7 +162,7 @@ can_fill_specialist_job_trigger = {
 		ethic_sparta_job_check_trigger = no
 		# Wandering Witch: Voyagers
 		OR = {
-			NOT = { has_trait = trait_dummy }
+			has_ww_dummy = no
 			owner = {
 				OR = {
 					has_technology = tech_droid_workers 

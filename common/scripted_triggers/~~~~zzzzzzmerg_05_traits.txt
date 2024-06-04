@@ -33,8 +33,6 @@ is_phototrophic = {
         has_trait = trait_advanced_radiotrophic
         has_trait = trait_harvested_radiotrophic
         has_trait = trait_lithoid_radiotrophic
-        # Planetary Diversity
-        is_pd_radiotrophic_mutant = yes
         # V_Traits
         has_v_phototrophic_trait = yes
         AND = {
@@ -69,8 +67,6 @@ has_phototrophic_energy_upkeep = {
                 has_trait = trait_advanced_radiotrophic
                 has_trait = trait_harvested_radiotrophic
                 has_trait = trait_lithoid_radiotrophic
-                # Planetary Diversity
-                is_pd_radiotrophic_mutant = yes
             }
             planet = { merg_is_nuked = no }
         }
