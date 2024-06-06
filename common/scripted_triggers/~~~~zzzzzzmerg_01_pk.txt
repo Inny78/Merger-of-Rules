@@ -635,7 +635,7 @@ can_destroy_planet_with_ACOT_EMISSARY_BEAM = {
 			merg_is_gas_giant = no
 			merg_is_habitat = no
 			merg_is_hab_ringworld = no
-		}		
+		}
 	}
 }
 
@@ -1072,6 +1072,10 @@ can_destroy_planet_with_PLANET_KILLER_PLANET_TO_NEST = {
 
 ############################### Azur Lane ###############################
 can_destroy_planet_with_azur_shippart_W2_T4 = {
+	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
 	is_star = yes
 	merg_is_dense_star = no
 	custom_tooltip = {
@@ -1098,6 +1102,10 @@ can_destroy_planet_with_azur_shippart_W2_T4 = {
 	}
 }
 can_destroy_planet_with_milky_way_terminal_test_1 = {
+	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
 	is_star = yes
 	merg_is_dense_star = no
 	custom_tooltip = {
@@ -1126,6 +1134,10 @@ can_destroy_planet_with_milky_way_terminal_test_1 = {
 	}
 }
 can_destroy_planet_with_milky_way_terminal_test_2 = {
+	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
 	is_star = yes
 	merg_is_dense_star = no
 	custom_tooltip = {
@@ -1154,13 +1166,16 @@ can_destroy_planet_with_milky_way_terminal_test_2 = {
 	}
 }
 can_destroy_planet_with_azur_shippart_W3_T3 = {
+	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
 	is_star = yes
 	custom_tooltip = {
 		fail_text = need_a_planet_with_pops
 		solar_system = {
 			any_system_planet = {
 				num_pops > 0
-				merg_is_forbidden_target = no
 			}
 		}
 	}
@@ -1190,6 +1205,10 @@ can_destroy_planet_with_azur_shippart_W3_T3 = {
 ############################### BlueArchive ###############################
 can_destroy_planet_with_Sweepers = {
 	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
 		fail_text = What_are_you_doing
 		NOR = {
 			uses_district_set = BA_planet
@@ -1198,7 +1217,6 @@ can_destroy_planet_with_Sweepers = {
 	}
 	custom_tooltip = {
 		fail_text = is_valid_target_for_sweeper
-		merg_is_forbidden_target = no
 		exists = owner
 		owner = {
 			OR = {
@@ -3953,8 +3971,8 @@ is_a_planet = {
 }
 
 is_a_planet_megastructure = {
+	is_star = no
 	NOR = {
-		is_star = yes
 		merg_is_gas_giant = yes
 		is_asteroid = yes
 		is_planet_class = pc_shrouded
