@@ -371,8 +371,6 @@ giga_are_habitats_available = {
                 NOT = { has_global_flag = giga_habitats_disabled }
                 has_origin = origin_void_dwellers
                 has_origin = origin_toxic_knights
-				# Starborn
-				has_origin = origin_starborn
             }
         }
         has_civic = civic_diadochi

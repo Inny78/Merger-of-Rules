@@ -53,8 +53,8 @@ entertainer_job_check_trigger = {
 			# Ethics and Civics Classic
 			has_ecc_slave_gene = yes
 			# ECI
-			# has_trait = trait_flesh_components # Removed according to the author
-			has_trait = trait_slave_gene
+			has_eci_flesh_components = yes
+			has_eci_slave_gene = yes
 		}
 		can_think = yes
 		OR = {
@@ -141,13 +141,13 @@ can_fill_specialist_job_trigger = {
 			}
 			# ECI
 			AND = {
-				NOT = { has_trait = trait_thl_doll }
+				has_eci_thl_doll = no
 				owner = {
 					has_technology = tech_droid_workers
 				}
 			}
 			AND = {
-				has_trait = trait_thl_doll
+				has_eci_thl_doll = yes
 				owner = {
 					has_technology = tech_automatic_dolls
 				}

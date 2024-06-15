@@ -123,6 +123,8 @@ has_eci_fallen_god = { always = no }
 has_eci_flesh_components = { always = no }
 has_eci_psionic_link = { always = no }
 has_eci_slave_gene = { always = no }
+has_eci_unnatural = { always = no }
+has_eci_thl_doll = { always = no }
 has_ethical_gestalts = { always = no }
 has_exotic_gas_dependency = { always = no }
 has_expanded_events = { always = no }
@@ -513,3 +515,6 @@ has_ww_reanimated_materials = { always = no }
 has_ww_psyborg_efficient_processors = { always = no }
 has_ww_cro_implants_psionics = { always = no }
 is_ww_magic_puppet_species = { always = no }
+pd_can_terraform_planet = { always = yes }
+oxr_mdlc_can_release_vassal_from_species = { always = no }
+oxr_mdlc_planet_decision_dismantle_habitat_active = { always = no }

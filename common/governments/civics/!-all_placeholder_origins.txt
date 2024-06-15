@@ -22,7 +22,6 @@ origin_pd_tree_of_life = { is_origin = yes potential = { always = no } }
 origin_sacred_tree = { is_origin = yes potential = { always = no } }
 origin_sm_cryogenesis = { is_origin = yes potential = { always = no } }
 origin_slave_race = { is_origin = yes potential = { always = no } }
-origin_starborn = { is_origin = yes potential = { always = no } }
 origin_symbiotic_race = { is_origin = yes potential = { always = no } }
 origin_techno_world = { is_origin = yes potential = { always = no } }
 origin_terraformer = { is_origin = yes potential = { always = no } }

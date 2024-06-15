@@ -44,8 +44,6 @@ toxic_attendant_growth = {
 	add = value:toxic_attendant_growth_PD_districts
 	# Real Space - Planetary Stations
 	add = value:toxic_attendant_growth_RS_PS_districts
-	# Starborn
-	add = value:toxic_attendant_growth_Starborn_districts
 	# Voidframe
 	add = value:voidframe_toxic_attendant_growth
 }

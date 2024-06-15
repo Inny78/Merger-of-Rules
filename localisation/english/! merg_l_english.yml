@@ -136,7 +136,6 @@ l_english:
  acot_requires_fort_building: "£trigger_no£ Has a fortress or stronghold constructed on the planet."
  merg_forbidden_target: "£trigger_no£ §RThis can't be targeted by a colossus§!"
  scfe_cant_terraform_special_planet: "£trigger_no£ Can't terraform special planets."
- pd_planet_no_terraform: "£trigger_no£ This planet cannot be terraformed with standard procedures."
  is_sc_black_hole: "\n£trigger_no£ Target system must be destroyed"
  is_colony_of_someone: "£trigger_no£ You can't sow life at the expense of destroying other lives."
  has_been_sowed_by_genesis: "£trigger_no£ Seeding programs have been implemented."

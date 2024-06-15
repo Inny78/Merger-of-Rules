@@ -720,15 +720,7 @@ can_release_vassal_from_species = {
 					is_exp_tree_caretaker = yes
 				}
 			}
-			# Machines & Robot Expansion Continued
-			AND = {
-				has_trait = trait_machine_unit
-				prev.this = {
-					has_authority = auth_machine_intelligence
-					has_ascension_perk = oxr_mdlc_ap_distributed_multikernel
-					NOT = { has_civic = civic_machine_terminator }
-				}
-			}
+			oxr_mdlc_can_release_vassal_from_species = yes
 		}
 	}
 }
@@ -1210,6 +1202,14 @@ can_colonize_planet = {
 			}
 		}
 	}
+	# Machine & Robot Expansion Continued
+	custom_tooltip = {
+		fail_text = oxr_mdlc_can_colonize_planet_pc_habitat.fail_active
+		NAND = {
+			is_planet_class = pc_habitat
+			oxr_mdlc_planet_decision_dismantle_habitat_active = yes
+		}
+	}
 	# StarnetAI/StarTech
 	if = {
 		limit = {
@@ -1264,13 +1264,11 @@ can_colonize_outside_borders = {
 #Root = country
 #This = planet
 can_terraform_planet = {
+	exists = root
 	custom_tooltip = {
 		fail_text = terraform_fail_no_presapient_protection_or_no_presapients
 		NAND = {
-			AND = {
-				exists = root
-				root = { has_policy_flag = pre_sapients_protect }
-			}
+			root = { has_policy_flag = pre_sapients_protect }
 			any_owned_pop = { is_sapient = no }
 		}
 	}
@@ -1279,12 +1277,9 @@ can_terraform_planet = {
 		fail_text = scfe_cant_terraform_special_planet
 		NOT = { has_planet_flag = cant_terraform_planet }
 	}
-	# Planetary Diversity
-	NOT = { root = { has_origin = origin_pd_tree_of_life } }
 	# Vanilla
 	custom_tooltip = {
 		fail_text = "requires_actor_not_devouring_swarm_lithoid"
-		exists = root
 		OR = {
 			# Ethics and Civics Bug Branch removes this check
 			merg_has_ethics_bug = yes
@@ -1296,11 +1291,10 @@ can_terraform_planet = {
 	}
 	custom_tooltip = {
 		fail_text = "legendary_leader_planet_no_terraform"
-		exists = root
 		this = {
-			NAND = {
-				has_planetary_diversity = yes
-				has_planet_flag = legendary_leader_planet
+			if = {
+				limit = { has_planetary_diversity = no }
+				NOT = { has_planet_flag = legendary_leader_planet }
 			}
 		}
 	}
@@ -1310,23 +1304,23 @@ can_terraform_planet = {
 	}
 	# Planetary Diversity
 	#PD CANT TERRAFORM
+	# pd_can_terraform_planet = yes
 	custom_tooltip = {
 		fail_text = "pd_planet_no_terraform"
-		exists = root
 		this = {
 			OR = {
 				pd_aw_cant_terraform = yes
 				AND = {
 					pd_aw_is_necro_planet = yes
-					NOT = {	is_planet_class = pc_hive }
+					NOT = { is_planet_class = pc_hive }
 				}
 			}
 		}
 	}
-	custom_tooltip = {
-		fail_text = "requires_actor_not_pdtol"
-		root = { NOT = { has_origin = origin_pd_tree_of_life } }
-	}
+#	custom_tooltip = {
+#		fail_text = "requires_actor_not_pdtol"
+#		root = { NOT = { has_origin = origin_pd_tree_of_life } }
+#	}
 	# Real Space New Frontiers
 	custom_tooltip = {
 		fail_text = NO_TERRAFORM_HOLLOW_WORLD
@@ -3629,27 +3623,27 @@ should_force_decline_species = {
 			is_exp_memorex_comatos = yes
 		}
 		# Planetary Diversity
-		AND = {
-			custom_tooltip = {
-				success_text = UNIT04CHILDREN_FORCE_DECLINE
-				exists = this
-				is_organic_fourschildren = yes
-				from = {
-					OR = {
-						AND = {
-							exists = owner
-							owner = {
-								NOR = {
-									has_origin = origin_techno_world
-									owner_main_species = { is_same_species = root }
-								}
-							}
-						}
-						check_variable = { which = techno_pops_missing value < 0 }
-					}
-				}
-			}
-		}
+		# AND = {
+		# 	custom_tooltip = {
+		# 		success_text = UNIT04CHILDREN_FORCE_DECLINE
+		# 		exists = this
+		# 		is_organic_fourschildren = yes
+		# 		from = {
+		# 			OR = {
+		# 				AND = {
+		# 					exists = owner
+		# 					owner = {
+		# 						NOR = {
+		# 							has_origin = origin_techno_world
+		# 							owner_main_species = { is_same_species = root }
+		# 						}
+		# 					}
+		# 				}
+		# 				check_variable = { which = techno_pops_missing value < 0 }
+		# 			}
+		# 		}
+		# 	}
+		# }
 		# Extra Origins
 		AND = {
 			custom_tooltip = {
