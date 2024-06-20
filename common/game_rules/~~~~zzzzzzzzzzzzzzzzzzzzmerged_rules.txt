@@ -4737,7 +4737,10 @@ can_planet_auto_migrate = {
 	custom_tooltip = {
 		fail_text = AUTO_MIGRATE_COLONY_TOO_NEW
 		OR = {
-			colony_age > 60
+			AND = {
+				is_colony = yes
+				colony_age > 60
+			}
 			is_capital = yes								# Don't break Doomsday!
 			# z Expanded Traits, Civics, Pops, and More
 			has_planet_flag = void_dweller_habitat			# Don't break Void Dwellers!
