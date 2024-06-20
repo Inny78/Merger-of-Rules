@@ -13,7 +13,7 @@ merg_has_cloning_building = {
 #		has_active_building = building_clone_vats_augmented_mech
 		# ACOT
 		has_active_building = building_fe_clone_vats
-		has_active_building = building_ae_clone_vats
+		has_active_building = building_acot_ae_clone_vats
 		# AOT
 		has_active_building = building_stellarite_clone_vats
 		has_active_building = building_phanon_clone_vats
@@ -59,7 +59,7 @@ merg_has_hospital = {
 		has_active_building = building_hospital
 		# ACOT
 		has_active_building = building_fe_hospital
-		has_active_building = building_ae_hospital
+		has_active_building = building_acot_ae_hospital
 		# Ad Astra Technology Mod
 		has_active_building = building_medical_mega_facility
 		# AOT
@@ -76,7 +76,7 @@ merg_has_planetary_shield = {
 		has_building = building_planetary_shield_generator_fe# -0.5
 		# ACOT
 		has_building = building_dark_energy_psg # -0.7
-		has_building = building_ae_dark_energy_psg # -0.95
+		has_building = building_acot_ae_dark_energy_psg # -0.95
 		# AOT
 		has_building = building_phanon_psg # -0.99
 		has_building = building_stellarite_psg # -1
@@ -166,8 +166,8 @@ merg_has_foundry_building = {
 		has_active_building = building_nano_forge
 		# ACOT
 		has_active_building = building_fe_alloy_forge
-		has_active_building = building_ae_alloy_forge
-		has_active_building = building_ae_nano_forge
+		has_active_building = building_acot_ae_alloy_forge
+		has_active_building = building_acot_ae_nano_forge
 		# AOT
 		has_active_building = building_fe_nano_forge
 		has_active_building = building_phanon_nano_forge
@@ -205,8 +205,8 @@ merg_has_manufacturing_building = {
 		has_active_building = building_affluence_center
 		# ACOT
 		has_active_building = building_fe_factory
-		has_active_building = building_ae_factory
-		has_active_building = building_ae_affluence_center
+		has_active_building = building_acot_ae_factory
+		has_active_building = building_acot_ae_affluence_center
 		# AOT
 		has_active_building = building_fe_affluence_center
 		has_active_building = building_phanon_affluence_center

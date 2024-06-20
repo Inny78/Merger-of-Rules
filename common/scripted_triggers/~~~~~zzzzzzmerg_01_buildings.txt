@@ -13,11 +13,13 @@ has_upgraded_capital = {
 				has_building = building_resort_capital
 				has_building = building_resort_major_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
@@ -46,11 +48,13 @@ has_upgraded_capital = {
 				has_building = building_slave_capital
 				has_building = building_slave_major_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
@@ -83,15 +87,17 @@ has_upgraded_capital = {
 				has_building = building_imperial_machine_capital
 				has_building = building_imperial_hive_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_dm_ancient_hive_cluster
-				has_building = building_ae_ancient_hive_cluster
-				has_building = building_dm_ancient_control_center 
-				has_building = building_ae_ancient_control_center				
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_building = building_acot_dm_ancient_hive_cluster
+				has_building = building_acot_ae_ancient_hive_cluster
+				has_building = building_acot_dm_ancient_control_center
+				has_building = building_acot_ae_ancient_control_center
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
@@ -155,15 +161,17 @@ has_upgraded_capital = {
 				has_building = building_prison_major_capital
 				has_building = building_prison_system_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_dm_ancient_hive_cluster
-				has_building = building_ae_ancient_hive_cluster
-				has_building = building_dm_ancient_control_center 
-				has_building = building_ae_ancient_control_center				
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_building = building_acot_dm_ancient_hive_cluster
+				has_building = building_acot_ae_ancient_hive_cluster
+				has_building = building_acot_dm_ancient_control_center
+				has_building = building_acot_ae_ancient_control_center
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
@@ -186,10 +194,11 @@ has_upgraded_capital = {
 				has_building = building_hive_major_capital
 				has_building = building_imperial_hive_capital
 				# ACOT
-				has_building = building_dm_ancient_hive_cluster
-				has_building = building_ae_ancient_hive_cluster
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_hive_cluster
+				has_building = building_acot_ae_ancient_hive_cluster
+				has_sbtg_upgraded_capital = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# All That Is GRIMDARK
 				has_building = building_hive_major_capital_sick
 				# AOT
@@ -201,8 +210,6 @@ has_upgraded_capital = {
 				# EDA
 				has_building = eda_building_imperial_capital
 				# galacot
-				has_building = building_dm_galactic_hive_capital
-               	has_building = building_ae_galactic_hive_capital
 				has_building = building_stellarite_galactic_hive_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_hive_major_capital
@@ -223,11 +230,13 @@ has_upgraded_capital = {
 				has_building = building_machine_system_capital
 				has_building = building_imperial_machine_capital
 				# ACOT
-				has_building = building_dm_ancient_control_center
-				has_building = building_ae_ancient_control_center
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_control_center
+				has_building = building_acot_ae_ancient_control_center
+				has_sbtg_upgraded_capital = yes
+				has_eternal_nexus_ai = yes
 				has_building = building_ancient_control_center
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_control_center
 				has_building = building_phanon_control_center
@@ -242,8 +251,6 @@ has_upgraded_capital = {
 				has_building = building_bok_capital_2
 				has_building = building_bok_capital_3
 				# galacot
-				has_building = building_dm_galactic_machine_capital
-              	has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_machine_major_capital
@@ -268,11 +275,13 @@ has_upgraded_capital = {
 				has_building = building_system_capital
 				has_building = building_imperial_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# All That Is GRIMDARK
 				has_building = building_system_capital_gr
 				# AOT
@@ -315,14 +324,8 @@ has_upgraded_capital = {
 				# Twinks Eternal
 				has_building = building_eternal_palace
 				# galacot
-				has_building = building_dm_galactic_capital
-				has_building = building_ae_galactic_capital
 				has_building = building_stellarite_galactic_capital
-				has_building = building_dm_galactic_hive_capital
-           	    has_building = building_ae_galactic_hive_capital
 				has_building = building_stellarite_galactic_hive_capital
-				has_building = building_dm_galactic_machine_capital
-   	            has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
@@ -345,11 +348,13 @@ has_major_upgraded_capital = {
 			OR = {
 				has_building = building_resort_major_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
@@ -379,11 +384,13 @@ has_major_upgraded_capital = {
 			OR = {
 				has_building = building_slave_major_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
@@ -415,15 +422,17 @@ has_major_upgraded_capital = {
 				has_building = building_imperial_machine_capital
 				has_building = building_imperial_hive_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_dm_ancient_hive_cluster
-				has_building = building_ae_ancient_hive_cluster
-				has_building = building_dm_ancient_control_center 
-				has_building = building_ae_ancient_control_center				
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_building = building_acot_dm_ancient_hive_cluster
+				has_building = building_acot_ae_ancient_hive_cluster
+				has_building = building_acot_dm_ancient_control_center
+				has_building = building_acot_ae_ancient_control_center
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
@@ -481,15 +490,17 @@ has_major_upgraded_capital = {
 				has_building = building_prison_major_capital
 				has_building = building_prison_system_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_dm_ancient_hive_cluster
-				has_building = building_ae_ancient_hive_cluster
-				has_building = building_dm_ancient_control_center 
-				has_building = building_ae_ancient_control_center				
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_building = building_acot_dm_ancient_hive_cluster
+				has_building = building_acot_ae_ancient_hive_cluster
+				has_building = building_acot_dm_ancient_control_center
+				has_building = building_acot_ae_ancient_control_center
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
@@ -509,10 +520,11 @@ has_major_upgraded_capital = {
 				has_building = building_hive_major_capital
 				has_building = building_imperial_hive_capital
 				# ACOT
-				has_building = building_dm_ancient_hive_cluster
-				has_building = building_ae_ancient_hive_cluster
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_hive_cluster
+				has_building = building_acot_ae_ancient_hive_cluster
+				has_sbtg_upgraded_capital = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# All that is GRIMDARK
 				has_building = building_hive_major_capital_sick
 				# AOT
@@ -524,8 +536,6 @@ has_major_upgraded_capital = {
 				# EDA
 				has_building = eda_building_imperial_capital
 				# galacot
-				has_building = building_dm_galactic_hive_capital
-                has_building = building_ae_galactic_hive_capital
 				has_building = building_stellarite_galactic_hive_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_hive_major_capital
@@ -545,11 +555,13 @@ has_major_upgraded_capital = {
 				has_building = building_machine_system_capital
 				has_building = building_imperial_machine_capital
 				# ACOT
-				has_building = building_dm_ancient_control_center	
-				has_building = building_ae_ancient_control_center	
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_control_center
+				has_building = building_acot_ae_ancient_control_center
+				has_sbtg_upgraded_capital = yes
+				has_eternal_nexus_ai = yes
 				has_building = building_ancient_control_center
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_control_center
 				has_building = building_phanon_control_center
@@ -563,8 +575,6 @@ has_major_upgraded_capital = {
 				has_building = building_bok_capital_2
 				has_building = building_bok_capital_3
 				# galacot
-				has_building = building_dm_galactic_machine_capital
-           	    has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_machine_major_capital
@@ -588,11 +598,13 @@ has_major_upgraded_capital = {
 				has_building = building_system_capital
 				has_building = building_imperial_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# All that is GRIMDARK
 				has_building = building_system_capital_gr
 				# AOT
@@ -610,8 +622,6 @@ has_major_upgraded_capital = {
 				# EDA
 				has_building = eda_building_imperial_capital
 				# galacot
-				has_building = building_dm_galactic_capital
-               	has_building = building_ae_galactic_capital
 				has_building = building_stellarite_galactic_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_major_capital
@@ -659,11 +669,13 @@ has_fully_upgraded_capital = {
 			OR = {
 				has_building = building_resort_major_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
@@ -691,11 +703,13 @@ has_fully_upgraded_capital = {
 			OR = {
 				has_building = building_slave_major_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
@@ -726,15 +740,17 @@ has_fully_upgraded_capital = {
 				has_building = building_imperial_machine_capital
 				has_building = building_imperial_hive_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_dm_ancient_hive_cluster
-				has_building = building_ae_ancient_hive_cluster
-				has_building = building_dm_ancient_control_center 
-				has_building = building_ae_ancient_control_center				
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_building = building_acot_dm_ancient_hive_cluster
+				has_building = building_acot_ae_ancient_hive_cluster
+				has_building = building_acot_dm_ancient_control_center
+				has_building = building_acot_ae_ancient_control_center
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
@@ -794,15 +810,17 @@ has_fully_upgraded_capital = {
 				has_building = building_station_system_capital
 				has_building = building_prison_system_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
-				has_building = building_dm_ancient_hive_cluster
-				has_building = building_ae_ancient_hive_cluster
-				has_building = building_dm_ancient_control_center 
-				has_building = building_ae_ancient_control_center				
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_building = building_acot_dm_ancient_hive_cluster
+				has_building = building_acot_ae_ancient_hive_cluster
+				has_building = building_acot_dm_ancient_control_center
+				has_building = building_acot_ae_ancient_control_center
+				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
@@ -824,9 +842,12 @@ has_fully_upgraded_capital = {
 				has_building = building_hive_major_capital
 				has_building = building_imperial_hive_capital
 				# ACOT
-				has_building = building_dm_ancient_hive_cluster
-				has_building = building_ae_ancient_hive_cluster
+				has_building = building_acot_dm_ancient_hive_cluster
+				has_building = building_acot_ae_ancient_hive_cluster
+				has_sbtg_upgraded_capital = yes
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# All that is GRIMDARK
 				has_building = building_hive_major_capital_sick
 				# AOT
@@ -838,8 +859,6 @@ has_fully_upgraded_capital = {
 				# EDA
 				has_building = eda_building_imperial_capital
 				# galacot
-				has_building = building_dm_galactic_hive_capital
-                has_building = building_ae_galactic_hive_capital
 				has_building = building_stellarite_galactic_hive_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_hive_major_capital
@@ -859,9 +878,12 @@ has_fully_upgraded_capital = {
 				has_building = building_machine_system_capital
 				has_building = building_imperial_machine_capital
 				# ACOT
-				has_building = building_dm_ancient_control_center 
-				has_building = building_ae_ancient_control_center
+				has_building = building_acot_dm_ancient_control_center
+				has_building = building_acot_ae_ancient_control_center
+				has_sbtg_upgraded_capital = yes
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_control_center
 				has_building = building_phanon_control_center
@@ -874,8 +896,6 @@ has_fully_upgraded_capital = {
 				# Empires Expanded
 				has_building = building_bok_capital_3
 				# galacot
-				has_building = building_dm_galactic_machine_capital
-                has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_machine_major_capital
@@ -898,9 +918,12 @@ has_fully_upgraded_capital = {
 				has_building = building_system_capital
 				has_building = building_imperial_capital
 				# ACOT
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_sbtg_upgraded_capital = yes
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
+				has_building = building_acot_ruined_giga_fortress
 				# All that is GRIMDARK
 				has_building = building_system_capital_gr
 				# AOT
@@ -918,8 +941,6 @@ has_fully_upgraded_capital = {
 				# EDA
 				has_building = eda_building_imperial_capital
 				# galacot
-				has_building = building_dm_galactic_capital
-   	            has_building = building_ae_galactic_capital
 				has_building = building_stellarite_galactic_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_major_capital
@@ -963,18 +984,18 @@ has_enigmatic_capital = {
 			fail_text = "requires_building_fe_capital_hive"
 			OR = {
 				has_building = building_imperial_hive_capital
-				has_building = building_dm_ancient_hive_cluster
-				has_building = building_ae_ancient_hive_cluster
+				has_building = building_acot_dm_ancient_hive_cluster
+				has_building = building_acot_ae_ancient_hive_cluster
+				has_sbtg_upgraded_capital = yes
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_hive_cluster
 				# EDA
 				has_building = eda_building_imperial_capital
 				# galacot
-				has_building = building_dm_galactic_hive_capital
-                has_building = building_ae_galactic_hive_capital
 				has_building = building_stellarite_galactic_hive_capital
 			}
 		}
@@ -985,18 +1006,18 @@ has_enigmatic_capital = {
 			fail_text = "requires_building_fe_capital_machine"
 			OR = {
 				has_building = building_imperial_machine_capital
-				has_building = building_dm_ancient_control_center 
-				has_building = building_ae_ancient_control_center
+				has_building = building_acot_dm_ancient_control_center
+				has_building = building_acot_ae_ancient_control_center
+				has_sbtg_upgraded_capital = yes
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_control_center
 				has_building = building_phanon_control_center
 				# EDA
 				has_building = eda_building_imperial_capital
 				# galacot
-				has_building = building_dm_galactic_machine_capital
-                has_building = building_ae_galactic_machine_capital
 				has_building = building_stellarite_galactic_machine_capital
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
@@ -1008,10 +1029,12 @@ has_enigmatic_capital = {
 			fail_text = "requires_building_fe_capital"
 			OR = {
 				has_building = building_imperial_capital
-				has_building = building_dm_ancient_palace
-				has_building = building_ae_ancient_palace
+				has_building = building_acot_dm_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_sbtg_upgraded_capital = yes
+				has_eternal_palace = yes
 				has_building = building_phanon_tower
-				has_building = building_heaven_sanctuary
+				has_building = building_acot_ruined_giga_fortress
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_phanon_palace
@@ -1024,8 +1047,6 @@ has_enigmatic_capital = {
 				# Twinks Eternal
 				has_building = building_eternal_palace
 				# galacot
-				has_building = building_dm_galactic_capital
-                has_building = building_ae_galactic_capital
 				has_building = building_stellarite_galactic_capital
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
@@ -1041,16 +1062,16 @@ has_ascended_capital = {
 			fail_text = "requires_building_fe_capital_hive"
 			OR = {
 				has_building = building_imperial_hive_capital
-				has_building = building_ae_ancient_hive_cluster
+				has_building = building_acot_ae_ancient_hive_cluster
+				has_eternal_palace = yes
+				has_sbtg_upgraded_capital = yes
 				has_building = building_phanon_tower
-				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_hive_cluster
 				# EDA
 				has_building = eda_building_imperial_capital
 				# galacot
-                has_building = building_ae_galactic_hive_capital
 				has_building = building_stellarite_galactic_hive_capital
 			}
 		}
@@ -1061,17 +1082,17 @@ has_ascended_capital = {
 			fail_text = "requires_building_fe_capital_machine"
 			OR = {
 				has_building = building_imperial_machine_capital
-				has_building = building_ae_ancient_control_center
+				has_building = building_acot_ae_ancient_control_center
+				has_eternal_palace = yes
+				has_sbtg_upgraded_capital = yes
 				has_building = building_phanon_tower
-				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_control_center
 				has_building = building_phanon_control_center
 				# EDA
 				has_building = eda_building_imperial_capital
 				# galacot
-                has_building = building_ae_galactic_machine_capital
-				has_building = building_stellarite_galactic_machine_capital
+ 				has_building = building_stellarite_galactic_machine_capital
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
 			}
@@ -1082,9 +1103,10 @@ has_ascended_capital = {
 			fail_text = "requires_building_fe_capital"
 			OR = {
 				has_building = building_imperial_capital
-				has_building = building_ae_ancient_palace
+				has_building = building_acot_ae_ancient_palace
+				has_eternal_palace = yes
+				has_sbtg_upgraded_capital = yes
 				has_building = building_phanon_tower
-				has_building = building_heaven_sanctuary
 				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_phanon_palace
@@ -1097,7 +1119,6 @@ has_ascended_capital = {
 				# Twinks Eternal
 				has_building = building_eternal_palace
 				# galacot
-                has_building = building_ae_galactic_capital
 				has_building = building_stellarite_galactic_capital
 			}
 		}
@@ -1261,21 +1282,22 @@ has_advanced_fort = {
 		fail_text = acot_requires_fort_building
 		OR = {
 			# ACOT/AOT/SOS
-			has_active_building = building_dm_stronghold
+			has_active_building = building_acot_dm_stronghold
 			has_active_building = building_fe_stronghold
-			has_active_building = building_ae_stronghold
-			has_active_building = building_giga_fortress_dm
-			has_active_building = building_giga_fortress
-			has_active_building = building_giga_fortress_array
-			has_active_building = building_giga_fortress_lab
-			has_active_building = building_giga_fortress_obelisk
-			has_active_building = building_giga_fortress_fe
+			has_active_building = building_fe_giga_fortress
+			has_active_building = building_acot_ae_stronghold
+			has_active_building = building_acot_giga_fortress_dm
+			has_active_building = building_acot_giga_fortress
+			has_active_building = building_acot_giga_fortress_array
+			has_active_building = building_acot_giga_fortress_lab
+			has_active_building = building_acot_giga_fortress_obelisk
+			has_active_building = building_acot_giga_fortress_fe
 			has_active_building = building_fe_machine_dome
-			has_active_building = building_ae_machine_dome
+			has_active_building = building_acot_ae_machine_dome
 			has_active_building = building_stellarite_machine_dome
 			has_active_building = building_phanon_machine_dome
 			has_active_building = building_fe_hive_evochamber
-			has_active_building = building_ae_hive_evochamber
+			has_active_building = building_acot_ae_hive_evochamber
 			has_active_building = building_stellarite_hive_evochamber
 			has_active_building = building_phanon_hive_evochamber
 			has_active_building = building_stellarite_stronghold

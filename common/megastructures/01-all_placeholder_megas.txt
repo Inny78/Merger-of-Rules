@@ -241,3 +241,4 @@ mem_reesan_habitat_ruined = { entity = "" potential = { always = no } possible =
 mem_reesan_habitat_restored = { entity = "" potential = { always = no } possible = { always = no } }
 mem_vazuran_habitat_ruined = { entity = "" potential = { always = no } possible = { always = no } }
 mem_vazuran_habitat = { entity = "" potential = { always = no } possible = { always = no } }
+acot_precursor_mega_shipyard = { entity = "" potential = { always = no } possible = { always = no } }

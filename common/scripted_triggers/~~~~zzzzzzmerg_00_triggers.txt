@@ -158,7 +158,6 @@ has_encountered_other_species = {
 
 can_be_leader = {
 	has_citizenship_rights = yes
-	NOT = { has_trait = trait_syncretic_proles }
 	can_think = yes
 	OR = {
 		is_robot_pop = no
@@ -839,10 +838,10 @@ has_research_building = {
 		has_building = building_institute
 		has_building = building_supercomputer
 		# ACOT
-		has_building = building_enigmatic_lab
-		has_building = building_fe_institute
-		has_building = building_ae_enigmatic_lab
-		has_building = building_ae_institute
+		has_building = building_acot_dm_enigmatic_lab
+		has_building = building_acot_dm_institute
+		has_building = building_acot_ae_enigmatic_lab
+		has_building = building_acot_ae_institute
 		# Ad Astra Technology Mod
 		has_building = building_grand_academy
 		# AOT
@@ -1250,8 +1249,10 @@ has_special_star_flag_trigger = {
 
 can_think = {
 	NOR = {
+		has_trait = trait_syncretic_proles
 		has_trait = trait_nerve_stapled
 		has_trait = trait_zombie
+		has_trait = trait_robot_suppressed
 		# Expanded Events
 		is_exp_memorex_comatos = yes
 		# Diagraphers Trait Mod

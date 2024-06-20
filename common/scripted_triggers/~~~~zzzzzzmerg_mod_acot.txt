@@ -24,12 +24,6 @@ can_build_precursor_ship = {
 		AND = {
 			is_scope_type = megastructure
 			OR = {
-				solar_system.starbase = {
-					OR = {
-						is_precursor_starbase = yes
-						has_starbase_building = acot_precursor_database
-					}
-				}
 				is_megastructure_type = acot_precursor_colossus_base
 				is_megastructure_type = acot_precursor_colossus_stage_two
 				is_megastructure_type = acot_amerigo
@@ -41,22 +35,37 @@ can_build_precursor_ship = {
 				is_megastructure_type = sofe_omega_nexus
                 is_megastructure_type = sofe_omega_spy_orb_center
                 is_megastructure_type = sofe_omega_dyson_sphere
+				is_megastructure_type = acot_precursor_mega_shipyard
+				is_sofe_megastructure_shipyard = yes
 				# Assault Lily
 				is_megastructure_type = college_ship_creater_3
 				# Universal Gateway Origin
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_8
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9_2
+				solar_system = {
+					OR = {
+						count_starbase_buildings = {
+							type = acot_precursor_database
+							count >= 1
+							include_being_constructed = no
+						}
+						starbase = {
+							is_precursor_starbase = yes
+						}
+					}
+				}
 			}
 		}
 		AND = {
 			is_scope_type = starbase
 			OR = {
-				has_starbase_size = juggernaut
+				has_starbase_size >= juggernaut
 				has_starbase_building = acot_precursor_database	
 				is_precursor_starbase = yes
 				has_starbase_size = precursor_juggernaut
 				is_acot_advanced_starbase = yes
+				is_sbtg_origin_starbase = yes
 				# Assault Lily
 				has_starbase_size >= lily_super_college_ship
 				# Gigastructural Engineering & More
@@ -71,7 +80,7 @@ is_playable_country = {
 	optimize_memory
 	OR = {
 		merg_is_standard_empire = yes
-		is_country_type = sbtg_stellarborne_empire_active
+		is_sbtg_playable_country = yes
 	}
 }
 acot_is_partially_affected_by_cascade = {

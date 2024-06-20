@@ -2311,7 +2311,7 @@ can_orbital_bombard = {
 		FROM.OWNER = { is_country_type = kuat_fire_base_hositle }
 		FROM = { has_planet_flag = enable_kuat_shield }
 		# ACOT
-		AND = {
+		NAND = {
 			OWNER = { is_progenitor_empires = no }
 			FROM = {
 				OR = {
@@ -2373,6 +2373,9 @@ can_orbital_bombard = {
 				is_country_type = sbtg_stellarborne_empire
 				is_country_type = void_lifeforms_1
 				is_country_type = void_lifeforms_2
+				is_country_type = katzenartig_imperium
+				is_country_type = acot_phanon_base
+				is_country_type = acot_phanon_retaliator
 				# Cruel Conquerers
 				is_cruel_abomination_crisis = yes
 				# Star Wars: Kuat Ancient Empire
@@ -2422,9 +2425,13 @@ can_orbital_bombard = {
 				ag_can_do_orbital_bombardment_country = yes
 				# ACOT
 				is_progenitor_empires = yes
+				is_country_type = katzenartig_imperium
 				is_country_type = void_lifeforms_1
 				is_country_type = void_lifeforms_2
-				# # BlueArchive
+				is_country_type = acot_crazed_stellarite
+				is_country_type = acot_phanon_base
+				is_country_type = acot_phanon_retaliator
+				# BlueArchive
 				is_country_type = Aris_mid
 				# Destiny: The Darkness Crisis
 				is_country_type = darkness_country
@@ -4239,6 +4246,10 @@ can_build_branch_office_on_planet = {
 		fail_text = NO_BRANCH_OFFICE_ON_NANITE_WORLD
 		NOT = { is_planet_class = pc_gray_goo }
 	}
+	custom_tooltip = {
+		fail_text = NO_BRANCH_OFFICE_ON_SYNAPTIC_LATHE
+		NOT = { is_planet_class = pc_cosmogenesis_world }
+	}
 	# Rogue Maid
 	Maid_trigger_2_can_build_branch_office_on_planet = yes
 	# E&C FunEFork
@@ -4613,21 +4624,7 @@ can_pop_auto_migrate = {
 	}
 	custom_tooltip = {
 		fail_text = AUTO_MIGRATE_VIRTUALITY
-		if = {
-			limit = {
-				has_virtual_species_trait = yes
-				exists = owner
-				owner = {
-					is_fallen_empire = no
-				}
-			}
-			exists = owner
-			owner = {
-				NOT = {
-					has_active_tradition = tr_virtuality_finish
-				}
-			}
-		}
+		has_virtual_species_trait = no
 	}
 	if = {
 		limit = {
@@ -5131,8 +5128,6 @@ can_fill_ruler_job = {
 			is_being_purged = no
 			is_being_assimilated = no
 			NOR = {
-				has_trait = trait_syncretic_proles
-				can_think = no
 				# Ethics and Civics Bug Branch
 				is_bugged_slave_gene = yes
 				# Ethics and Civics Classic
@@ -5182,10 +5177,8 @@ can_fill_ruler_job = {
 			is_being_purged = no
 			is_being_assimilated = no
 			# Rule out Traits for servitude & lack of free will
+			can_think = yes
 			NOR = {
-				has_trait = trait_syncretic_proles
-				has_trait = trait_nerve_stapled
-				has_trait = trait_presapient_docile_livestock
 				# Ethics & Civics Infinity
 				has_eci_flesh_components = yes
 				has_eci_fallen_god = yes

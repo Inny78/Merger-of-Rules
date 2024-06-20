@@ -46,7 +46,6 @@ entertainer_job_check_trigger = {
 		is_being_purged = no
 		is_being_assimilated = no
 		NOR = {
-			has_trait = trait_syncretic_proles
 			has_trait = trait_presapient_docile_livestock
 			# Diagraphers Trait Mod
 			is_subsapient_form = yes
@@ -116,10 +115,8 @@ can_fill_specialist_job_trigger = {
 		}
 		is_being_purged = no
 		is_being_assimilated = no
+		can_think = yes
 		NOR = {
-			has_trait = trait_syncretic_proles
-			has_trait = trait_zombie
-			has_trait = trait_nerve_stapled
 			# Ethics and Civics Bug Branch
 			is_bugged_slave_gene = yes
 			# Ethics and Civics Classic

@@ -518,3 +518,9 @@ is_ww_magic_puppet_species = { always = no }
 pd_can_terraform_planet = { always = yes }
 oxr_mdlc_can_release_vassal_from_species = { always = no }
 oxr_mdlc_planet_decision_dismantle_habitat_active = { always = no }
+has_sbtg_upgraded_capital = { always = no }
+has_eternal_palace = { always = no }
+has_eternal_nexus_ai = { always = no }
+is_sbtg_playable_country = { always = no }
+is_sofe_megastructure_shipyard = { always = no }
+is_sbtg_origin_starbase = { always = no }

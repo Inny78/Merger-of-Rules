@@ -34,6 +34,13 @@ is_valid_refugee_pop = {
 					}
 				}
 			}
+			OR = {
+				AND = {
+					has_policy_flag = robots_allowed
+					prevprev = { is_robotic_species = yes }
+				}
+				prevprev = { is_robotic_species = no }
+			}
 			any_owned_planet = {
 				is_under_colonization = no
 				is_controlled_by = owner
@@ -60,6 +67,13 @@ has_any_habitability = {
 			}
 			# Expanded Gestalts: Forgotten Queens
 			prev = { has_valid_civic = civic_mutualistic_behavior }
+		}
+		OR = {
+			AND = {
+				prev = { has_policy_flag = robots_allowed }
+				is_robotic_species = yes
+			}
+			is_robotic_species = no
 		}
 	}
 	any_owned_planet = {

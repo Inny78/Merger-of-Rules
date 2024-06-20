@@ -1,6 +1,8 @@
 # Irony this is a placeholder file please ignore it
 abyssal_host_invaders_type = { ai = { enabled = no } }
 acot_crazed_stellarite = { ai = { enabled = no } }
+acot_phanon_base = { ai = { enabled = no } }
+acot_phanon_retaliator = { ai = { enabled = no } }
 afk_crisis_country = { ai = { enabled = no } }
 ag_ancient_primitive_crisis = { ai = { enabled = no } }
 ag_ancient_gamma_guardian = { ai = { enabled = no } }
