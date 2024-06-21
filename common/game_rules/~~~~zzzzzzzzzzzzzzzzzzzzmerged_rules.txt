@@ -489,8 +489,10 @@ species_can_live_on_planet = {
 			limit = { root = { merg_is_hive_world = yes } }
 			OR = {
 				merg_has_hive_trait = yes
+				# Zob
+				has_trait = trait_zob_uplifted
 				AND = {
-					#Necrophage Hive Mind can have Necrophytes
+					# Necrophage Hive Mind can have Necrophytes
 					exists = root.owner
 					root.owner = {
 						is_hive_empire = yes
@@ -548,6 +550,16 @@ species_can_live_on_planet = {
 		root = { is_fq_matryoshka = no }
 		has_trait = trait_machine_digital
 		# is_fq_trait_machine_digital = yes
+	}
+	# Zob
+	if = {
+		limit = {
+			has_trait = trait_zob_uplifted
+		}
+		root = {
+			is_planet_class = pc_hive
+			has_planet_flag = zob_planet
+		}
 	}
 }
 
@@ -1529,6 +1541,8 @@ species_has_happiness = {
 		has_trait = sh_trait_shenhai2
 		has_trait = sh_trait_silent
 		has_trait = sh_trait_silent1
+		# Zob
+		has_trait = trait_zob_uplifted
 		# Vanilla
 		AND = {
 			has_trait = trait_mechanical
@@ -2302,6 +2316,17 @@ can_orbital_bombard = {
 			from.owner = { is_crisis_faction = yes }
 		}
 	}
+	# ACOT
+	NAND = {
+		OWNER = { is_progenitor_empires = no }
+		FROM = {
+			OR = {
+				is_acot_pmc_vault = yes
+				is_acot_awesome_planet_class = yes
+				is_sots_soulsphere = yes
+			}
+		}
+	}
 	# Vanilla
 	NOR = {
 		any_controlled_ship = { is_ship_size = colossus }
@@ -2310,17 +2335,6 @@ can_orbital_bombard = {
 		# Star Wars: Kuat Ancient Empire
 		FROM.OWNER = { is_country_type = kuat_fire_base_hositle }
 		FROM = { has_planet_flag = enable_kuat_shield }
-		# ACOT
-		NAND = {
-			OWNER = { is_progenitor_empires = no }
-			FROM = {
-				OR = {
-					is_acot_pmc_vault = yes
-					is_acot_awesome_planet_class = yes
-					is_sots_soulsphere = yes
-				}
-			}
-		}
 	}
 	OR = {
 		AND = {

@@ -172,8 +172,6 @@ merg_is_habitat = {
 		is_pc_mem_vazuran_habitat = yes
 		# Nyto Species Pack
 		uses_district_set = GF_nyto_devil_furnace_world
-		# Planetary Diversity
-		is_pd_habitat = yes
 		# NSC2 Modjam Freebooters Origin
 		uses_district_set = nsc_freebooter_habitat
 		# StellarRegulator Array
@@ -220,8 +218,6 @@ merg_is_habitat_non_PD = {
 # These can't be infested by the Prethoryn
 merg_is_special_colony = {
 	OR = {
-		# Planetary Diversity
-		is_pd_habitat = yes
 		# Gigastructural Engineering & More
 		has_planet_flag = enigmatic_colony_flag # pc_ehof_habitat
 		is_regular_giga_maginot_world = yes
@@ -650,6 +646,8 @@ merg_has_happiness = {
 		has_trait = sh_trait_shenhai2
 		has_trait = sh_trait_silent
 		has_trait = sh_trait_silent1
+		# Zob
+		has_trait = trait_zob_uplifted
 		# Vanilla
 		AND = {
 			has_trait = trait_mechanical
