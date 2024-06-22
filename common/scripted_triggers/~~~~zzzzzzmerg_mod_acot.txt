@@ -39,6 +39,8 @@ can_build_precursor_ship = {
 				is_sofe_megastructure_shipyard = yes
 				# Assault Lily
 				is_megastructure_type = college_ship_creater_3
+				# Standalone Ancient Ships
+				has_starbase_size >= sas_xxtitan_warship
 				# Universal Gateway Origin
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_8
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9
@@ -121,8 +123,8 @@ acot_is_not_affected_by_cascade = {
 		# Decadence of Sanity
 		is_shroud_entrepot = yes
 		# Gigastructural Engineering & More
-		is_planet_class = pc_ehof_cplanet
-		is_planet_class = pc_whc_star
+		#is_planet_class = pc_ehof_cplanet
+		#is_planet_class = pc_whc_star
 		has_planet_flag = paluushia
 		has_planet_flag = corrona
 		has_planet_flag = ndb_immune_planet
