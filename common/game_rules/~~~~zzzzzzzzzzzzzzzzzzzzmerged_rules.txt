@@ -490,7 +490,7 @@ species_can_live_on_planet = {
 			OR = {
 				merg_has_hive_trait = yes
 				# Zob
-				has_trait = trait_zob_uplifted
+				is_zob_uplifted = yes
 				AND = {
 					# Necrophage Hive Mind can have Necrophytes
 					exists = root.owner
@@ -553,9 +553,7 @@ species_can_live_on_planet = {
 	}
 	# Zob
 	if = {
-		limit = {
-			has_trait = trait_zob_uplifted
-		}
+		limit = { is_zob_uplifted = yes }
 		root = {
 			is_planet_class = pc_hive
 			has_planet_flag = zob_planet
@@ -1542,7 +1540,7 @@ species_has_happiness = {
 		has_trait = sh_trait_silent
 		has_trait = sh_trait_silent1
 		# Zob
-		has_trait = trait_zob_uplifted
+		is_zob_uplifted = yes
 		# Vanilla
 		AND = {
 			has_trait = trait_mechanical
