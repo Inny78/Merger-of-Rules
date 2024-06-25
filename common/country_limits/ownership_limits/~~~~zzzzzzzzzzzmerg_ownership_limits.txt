@@ -6,6 +6,8 @@
 # The Empty Vagrant
 default_ev = {
 	ship_of_size_limits = {
+		# ACOT
+		precursor_titan_ships_limit
 		# AOT
         aot_gatekeeper_ships_limit
         aot_juggernaut_ships_limit
@@ -38,6 +40,8 @@ default_ev = {
 # Darkspace
 darkspace_ownership_limit = {
 	ship_of_size_limits = {
+		# ACOT
+		precursor_titan_ships_limit
 		# AOT
         aot_gatekeeper_ships_limit
         aot_juggernaut_ships_limit

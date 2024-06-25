@@ -26,16 +26,6 @@ planet_event = {
 			habitable_structure = yes
 			is_artificial = yes
 			is_giga_maginot_world = yes
-			is_pd_habitat = yes
-			is_pd_planetary_megaproject = yes
-			is_pd_shroud_world = yes
-			is_pd_machine = yes
-			is_pd_hive_world = yes
-			is_pd_arcology = yes
-			is_pd_unique = yes
-			is_pd_exotic = yes
-			is_pd_wasteland = yes
-			is_pd_aw_wasteland_planet = yes
 		}
 		exists = owner
 		owner = { is_relentless_industrialist_empire = yes }

@@ -50,8 +50,6 @@ planet_event = {
 						giga_habitable_structure = yes
 						# Madoka Magica
 						uses_district_set = outpost
-						# Planetary Diversity
-						is_pd_unique = yes
 					    # Warship Girls R And MIST Species
 						has_planet_flag = port_home
  						has_planet_flag = clovertheater_future_flag
