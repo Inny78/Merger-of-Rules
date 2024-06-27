@@ -389,3 +389,26 @@ is_ndb_vulnerable_mega = {
 		has_megastructure_flag = ndb_immune_megastructure
 	}
 }
+giga_is_bitrinary = {
+	OR = {
+		is_star_class = sc_binary_1
+		is_star_class = sc_binary_2
+		is_star_class = sc_binary_3
+		is_star_class = sc_binary_4
+		is_star_class = sc_binary_5
+		is_star_class = sc_binary_6
+		is_star_class = sc_binary_7
+		is_star_class = sc_binary_8
+		is_star_class = sc_binary_9
+		is_star_class = sc_binary_10
+		is_star_class = sc_scfe_binary_1
+		is_star_class = sc_trinary_1
+		is_star_class = sc_trinary_2
+		is_star_class = sc_trinary_3
+		is_star_class = sc_trinary_4
+		# Real Space
+		is_binary = yes
+		is_trinary = yes
+		is_paired = yes
+	}
+}

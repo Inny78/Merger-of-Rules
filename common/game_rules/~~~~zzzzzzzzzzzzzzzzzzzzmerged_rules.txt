@@ -1313,24 +1313,8 @@ can_terraform_planet = {
 		NOT = { any_targeting_situation = { is_situation_type = relentless_industrialists_situation } }
 	}
 	# Planetary Diversity
-	#PD CANT TERRAFORM
-	# pd_can_terraform_planet = yes
-	custom_tooltip = {
-		fail_text = "pd_planet_no_terraform"
-		this = {
-			OR = {
-				pd_aw_cant_terraform = yes
-				AND = {
-					pd_aw_is_necro_planet = yes
-					NOT = { is_planet_class = pc_hive }
-				}
-			}
-		}
-	}
-#	custom_tooltip = {
-#		fail_text = "requires_actor_not_pdtol"
-#		root = { NOT = { has_origin = origin_pd_tree_of_life } }
-#	}
+	pd_can_terraform_planet = yes
+
 	# Real Space New Frontiers
 	custom_tooltip = {
 		fail_text = NO_TERRAFORM_HOLLOW_WORLD

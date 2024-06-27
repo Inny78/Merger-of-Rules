@@ -1,6 +1,6 @@
 namespace = crisis
 
-# Purge Complete
+# Purge Complete (202)
 planet_event = {
 	id = crisis.202
 	hide_window = yes
@@ -90,7 +90,7 @@ planet_event = {
 	}
 }
 
-# Planet Colonized
+# Planet Colonized (203)
 planet_event = {
 	id = crisis.203
 	hide_window = yes
@@ -137,7 +137,7 @@ planet_event = {
 	}
 }
 
-# Prethoryn Defeated
+# Prethoryn Defeated (211)
 country_event = {
 	id = crisis.211
 	title = "crisis.211.name"
@@ -245,7 +245,7 @@ country_event = {
 	}
 }
 
-# Colony Bombarded
+# Colony Bombarded (1011)
 planet_event = {
 	id = crisis.1011
 	title = "crisis.1011.name"
@@ -364,7 +364,7 @@ planet_event = {
 	}
 }
 
-# First Machine World (HIDDEN)
+# First Machine World (HIDDEN) (2025)
 planet_event = {
 	id = crisis.2025
 	hide_window = yes

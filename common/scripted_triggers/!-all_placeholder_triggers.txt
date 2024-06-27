@@ -525,3 +525,7 @@ is_sbtg_playable_country = { always = no }
 is_sofe_megastructure_shipyard = { always = no }
 is_sbtg_origin_starbase = { always = no }
 is_zob_uplifted = { always = no }
+KZ_VOY_can_not_destroy_by_planet_killer = { always = no }
+is_binary = { always = no }
+is_trinary = { always = no }
+is_paired = { always = no }

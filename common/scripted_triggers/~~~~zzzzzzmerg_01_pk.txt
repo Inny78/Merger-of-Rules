@@ -4066,6 +4066,8 @@ merg_is_untargetable = {
 		is_sots_soulsphere = yes
 		# ThaumStellaris
 		has_planet_flag = tc_not_pk_target
+		# Voyage to Eternity
+		KZ_VOY_can_not_destroy_by_planet_killer = yes
 		# ACOT/Gigas
 		has_planet_flag = cant_target_this_planet
 		has_planet_flag = cant_build_here

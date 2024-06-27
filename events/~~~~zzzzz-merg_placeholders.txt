@@ -92,9 +92,6 @@ planet_event = { id = giga_o_star.2001 hide_window = yes is_triggered_only = yes
 namespace = maginot_destruction
 planet_event = { id = maginot_destruction.1002 hide_window = yes is_triggered_only = yes immediate = { } }
 
-namespace = origin
-planet_event = { id = origin.3245 hide_window = yes is_triggered_only = yes immediate = {} }
-
 namespace = time_crisis_country
 planet_event = { id = time_crisis_country.5 hide_window = yes is_triggered_only = yes immediate = { } }
 planet_event = { id = time_crisis_country.10 hide_window = yes is_triggered_only = yes immediate = { } }
@@ -126,6 +123,9 @@ planet_event = { id = civicsexpanded.103 hide_window = yes is_triggered_only = y
 
 namespace = onactionpops
 planet_event = { id = onactionpops.12 hide_window = yes is_triggered_only = yes immediate = { } }
+
+namespace = pdshroudplanets
+planet_event = { id = pdshroudplanets.200 hide_window = yes is_triggered_only = yes immediate = { } }
 
 namespace = AL_magic_bullet
 planet_event = { id = AL_magic_bullet.5 hide_window = yes is_triggered_only = yes immediate = { } }
