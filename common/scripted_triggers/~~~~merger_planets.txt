@@ -1,7 +1,6 @@
 # Trigger library for planet types - use this for your cross-mod content.
 
 merg_is_basic_planet = {
-	optimize_memory
 	OR = {
 		merg_is_frozen = yes
 		merg_is_toxic = yes
@@ -24,7 +23,6 @@ merg_is_basic_planet = {
 }
 
 merg_is_basic_habitable = {
-	optimize_memory
 	OR ={
 		merg_is_alpine = yes
 		merg_is_arctic = yes
@@ -42,7 +40,6 @@ merg_is_basic_habitable = {
 }
 
 merg_is_standard_habitable = {
-	optimize_memory
 	OR ={
 		merg_is_alpine = yes
 		merg_is_arctic = yes
@@ -57,7 +54,6 @@ merg_is_standard_habitable = {
 }
 
 merg_is_standard_dry = {
-	optimize_memory
 	OR = {
 		merg_is_arid = yes
 		merg_is_desert = yes
@@ -65,7 +61,6 @@ merg_is_standard_dry = {
 	}
 }
 merg_is_standard_wet = {
-	optimize_memory
 	OR = {
 		merg_is_ocean = yes
 		merg_is_tropical = yes
@@ -73,7 +68,6 @@ merg_is_standard_wet = {
 	}
 }
 merg_is_standard_cold = {
-	optimize_memory
 	OR = {
 		merg_is_alpine = yes
 		merg_is_arctic = yes
@@ -82,7 +76,6 @@ merg_is_standard_cold = {
 }
 
 merg_is_alpine = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_alpine
 		# All These Worlds
@@ -93,7 +86,6 @@ merg_is_alpine = {
 }
 
 merg_is_arcology = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_city
 		AND = {
@@ -126,7 +118,6 @@ merg_is_arcology = {
 }
 
 merg_is_arctic = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_arctic
 		# All These Worlds
@@ -137,7 +128,6 @@ merg_is_arctic = {
 }
 
 merg_is_arid = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_arid
 		# All These Worlds
@@ -148,7 +138,6 @@ merg_is_arid = {
 }
 
 merg_is_barren = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_barren
 		# All These Worlds
@@ -160,7 +149,6 @@ merg_is_barren = {
 }
 
 merg_is_barren_cold = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_barren_cold
 		# All These Worlds
@@ -169,7 +157,6 @@ merg_is_barren_cold = {
 }
 
 merg_is_continental = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_continental
 		# All These Worlds
@@ -180,7 +167,6 @@ merg_is_continental = {
 }
 
 merg_is_desert = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_desert
 		# All These Worlds
@@ -191,7 +177,6 @@ merg_is_desert = {
 }
 
 merg_is_frozen = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_frozen
 		# All These Worlds
@@ -204,7 +189,6 @@ merg_is_frozen = {
 }
 
 merg_is_gaia = {
-	optimize_memory
 	OR = {
 		merg_is_gaia_basic = yes
 		# Azur Lane
@@ -219,7 +203,6 @@ merg_is_gaia = {
 }
 
 merg_is_gaia_basic = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_gaia
 		# All These Worlds
@@ -230,7 +213,6 @@ merg_is_gaia_basic = {
 }
 
 merg_is_gas_giant_habitable = {
-	optimize_memory
 	OR = {
 		# Gigastructural Engineering & More
 		is_giga_habitable_gas_giant = yes
@@ -241,7 +223,6 @@ merg_is_gas_giant_habitable = {
 }
 
 merg_is_gas_giant = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_gas_giant
 		# All these worlds
@@ -256,7 +237,6 @@ merg_is_gas_giant = {
 }
 
 merg_is_hive_world = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_hive
 		# Gigastructural Engineering & More
@@ -273,7 +253,6 @@ merg_is_hive_world = {
 }
 
 merg_is_machine_world = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_machine
 		# Planetary Diversity
@@ -294,7 +273,6 @@ merg_is_machine_world = {
 }
 
 merg_is_molten = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_molten
 		# All These Worlds
@@ -303,7 +281,6 @@ merg_is_molten = {
 }
 
 merg_is_nuked = {
-	optimize_memory
 	OR = {
 		merg_is_nuked_basic = yes
 		# BlueArchive
@@ -314,7 +291,6 @@ merg_is_nuked = {
 }
 
 merg_is_nuked_basic = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_nuked
 		# All these worlds
@@ -325,7 +301,6 @@ merg_is_nuked_basic = {
 }
 
 merg_is_aquatic = {
-	optimize_memory
 	OR = {
 		merg_is_ocean = yes
 		# Azur Lane
@@ -338,7 +313,6 @@ merg_is_aquatic = {
 }
 
 merg_is_ocean = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_ocean
 		# All These Worlds
@@ -350,7 +324,6 @@ merg_is_ocean = {
 }
 
 merg_is_relic_world = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_relic
 		# Nanite Machine and Distant Stars Overhaul
@@ -359,7 +332,6 @@ merg_is_relic_world = {
 }
 
 merg_is_savannah = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_savannah
 		# All These Worlds
@@ -370,7 +342,6 @@ merg_is_savannah = {
 }
 
 merg_is_shielded_world = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_habitat_shielded
 		is_planet_class = pc_ringworld_shielded
@@ -381,7 +352,6 @@ merg_is_shielded_world = {
 }
 
 merg_is_shroud_habitable = {
-	optimize_memory
 	OR = {
 		# Madoka Magica NEW
 		uses_district_set = outpost
@@ -395,7 +365,6 @@ merg_is_shroud_habitable = {
 }
 
 merg_is_toxic = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_toxic
 		# All These Worlds
@@ -406,7 +375,6 @@ merg_is_toxic = {
 }
 
 merg_is_tropical = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_tropical
 		# All These Worlds
@@ -419,7 +387,6 @@ merg_is_tropical = {
 }
 
 merg_is_tundra = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_tundra
 		# All These Worlds
