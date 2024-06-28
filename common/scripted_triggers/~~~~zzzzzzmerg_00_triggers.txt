@@ -81,7 +81,7 @@ habitable_planet_not_urban = {
 
 is_urban_planet = {
 	OR = {
-		merg_is_arcology = yes
+		is_planet_class = pc_city
 		merg_is_relic_world = yes
 	}
 }

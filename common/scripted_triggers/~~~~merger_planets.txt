@@ -101,7 +101,6 @@ merg_is_arcology = {
 		# Gigastructural Engineering & More
 		uses_district_set = flusion_gaia_ecu
 		# Planetary Diversity
-		# pd_is_pd_arcology = yes # Not really needed
 		pd_is_pd_hive_arc = yes
 		pd_is_pd_machine_arc = yes
 		# Pokémon
