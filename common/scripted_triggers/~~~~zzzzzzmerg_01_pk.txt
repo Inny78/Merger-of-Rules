@@ -3465,32 +3465,6 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER_ARCANE = {
 	}
 }
 
-############################### Voyage to Eternity ###############################
-KZ_VOY_can_not_destroy_by_planet_killer = {
-	custom_tooltip = {
-		fail_text = merg_forbidden_target
-		merg_is_untargetable = no
-	}
-	custom_tooltip = {
-		fail_text = KZ_VOY_can_not_destroy_by_planet_killer
-		solar_system = {
-			NOR = {
-				has_star_flag = KZ_VOY_Alpha_Lupi_system_flag
-				has_star_flag = KZ_VOY_terran_system_flag
-				has_star_flag = KZ_VOY_TES_simulation_battle_system_flag
-			}
-			any_system_planet = {
-				NOR = {
-					is_real_KZ_VOY_solaria = yes
-					is_real_KZ_VOY_luna = yes
-					is_real_KZ_VOY_Seclusion = yes
-					is_real_KZ_VOY_Library_tower = yes
-				}
-			}
-		}
-	}
-}
-
 ############################### Wandering Witch: Voyagers ###############################
 can_destroy_planet_with_PLANET_KILLER_SLUMBER = {
 	custom_tooltip = {

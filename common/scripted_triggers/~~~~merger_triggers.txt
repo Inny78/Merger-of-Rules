@@ -76,49 +76,8 @@ merg_is_awakened_fe = {
 
 # List of all habitable ringworld sections
 merg_is_hab_ringworld = {
-	OR = {
-		uses_district_set = ring_world
-		is_planet_class = pc_ringworld_habitable
-		is_planet_class = pc_shattered_ring_habitable
-		is_planet_class = pc_cybrex
-		# Gigastructural Engineering & More
-		is_giga_ringworld = yes
-		# Ancient Empire
-		ag_is_mod_habitable_ringworld = yes
-		# Assault Lily
-		uses_district_set = lily_ring_world
-		# AshArms Aquarius History
-		uses_district_set = rw_academycomplex_world
-		# Darkspace
-		is_ds_ancient_ringworld = yes
-		is_ds_constructor_ark = yes
-		is_ds_prism_world = yes
-		is_ds_ringworld_spectrals = yes
-		is_ds_stellar_engine = yes
-		# Planetary Diversity
-		is_planetary_diversity_ringworld = yes
-		# Protoss
-		uses_district_set = protoss_ringworld
-		# Star Wars: Kuat Ancient Empire
-		AND = {
-			is_ringworld = yes
-			uses_district_set = Eternal_city
-		}
-		# Star Wars: UnknownWorld Shipgirls Story
-		uses_district_set = rw_swgs_engineer_world
-		# StellarRegulator Array
-		uses_district_set = SRA_GZ_rw_world
-		# ThaumStellaris
-		uses_district_set = pc_tc_alchemical_ringworld
-		# Warship Girls and MIST species
-		is_wg_upgraded_ringworld = yes
-		uses_district_set = rw_auto_uf_world
-		uses_district_set = dyson_ring_world
-		# ZOFE
-		uses_district_set = utopian_ringworld
-		uses_district_set = utopian_machine_ringworld
-		uses_district_set = utopian_hive_ringworld
-	}
+	is_ringworld = yes
+	is_colonizable = yes
 }
 
 # Crisis trigger
@@ -130,24 +89,24 @@ merg_is_true_ringworld = {
 		# Ancient Empire
 		ag_is_mod_habitable_ringworld = yes
 		# Assault Lily
-		uses_district_set = lily_ring_world
+		# uses_district_set = lily_ring_world
 		# Darkspace
 		is_ds_ancient_ringworld = yes
 		is_ds_ringworld_spectrals = yes
 		# Gigastructural Engineering & More
-		uses_district_set = maginot_ringworld_districts
+		# uses_district_set = maginot_ringworld_districts
 		# Planetary Diversity
 		is_planetary_diversity_ringworld = yes
 		# Warship Girls and MIST species
-		uses_district_set = rw_sh_world
-		uses_district_set = rw_port_world
-		uses_district_set = rw_swim_world
+		# uses_district_set = rw_sh_world
+		# uses_district_set = rw_port_world
+		# uses_district_set = rw_swim_world
 		is_planet_class = pc_ringworld_habitable_water
-		uses_district_set = rw_uf_world
-		uses_district_set = rw_auto_uf_world
-		uses_district_set = dyson_ring_world
+		# uses_district_set = rw_uf_world
+		# uses_district_set = rw_auto_uf_world
+		# uses_district_set = dyson_ring_world
 		# ZOFE
-		uses_district_set = utopian_ringworld
+		# uses_district_set = utopian_ringworld
 	}
 }
 
@@ -155,11 +114,10 @@ merg_is_true_ringworld = {
 merg_is_habitat = {
 	OR = {
 		is_planet_class = pc_habitat
-		uses_district_set = habitat
 		# Acquisition of Technology
 		is_aot_habitat = yes
 		# Blue Archive
-		uses_district_set = BA_auto_habitat
+		# uses_district_set = BA_auto_habitat
 		# DarkSpace
 		is_ds_skycatcher = yes
 		# Gigastructural Engineering & More
@@ -171,17 +129,17 @@ merg_is_habitat = {
 		# More Events Mod
 		is_pc_mem_vazuran_habitat = yes
 		# Nyto Species Pack
-		uses_district_set = GF_nyto_devil_furnace_world
+		# uses_district_set = GF_nyto_devil_furnace_world
 		# NSC2 Modjam Freebooters Origin
-		uses_district_set = nsc_freebooter_habitat
+		# uses_district_set = nsc_freebooter_habitat
 		# StellarRegulator Array
-		uses_district_set = SRA_city_world
+		# uses_district_set = SRA_city_world
 		# Twinks Atlantean
-		uses_district_set = skypalace
+		# uses_district_set = skypalace
 		# Wula Fallen Empire
-		uses_district_set = fe_rogue_trader_habitat
+		# uses_district_set = fe_rogue_trader_habitat
 		# ZOFE
-		uses_district_set = utopian_habitat
+		# uses_district_set = utopian_habitat
 	}
 }
 
@@ -190,12 +148,12 @@ merg_is_habitat_non_PD = {
 	OR = {
 		is_planet_class = pc_habitat
 		# Gigastructural Engineering & More
-		uses_district_set = giga_elysium
-		uses_district_set = giga_orbital
+		# uses_district_set = giga_elysium
+		# uses_district_set = giga_orbital
 		# Acquisition of Technology
 		is_aot_habitat = yes
 		# Blue Archive
-		uses_district_set = BA_auto_habitat
+		# uses_district_set = BA_auto_habitat
 		# Decadence of Sanity
 		is_shroud_entrepot = yes
 		# Habitation
@@ -205,13 +163,13 @@ merg_is_habitat_non_PD = {
 		# More Events Mod
 		is_pc_mem_vazuran_habitat = yes
 		# NSC2 Modjam Freebooters Origin
-		uses_district_set = nsc_freebooter_habitat
+		# uses_district_set = nsc_freebooter_habitat
 		# Nyto Species Pack
-		uses_district_set = GF_nyto_devil_furnace_world
+		# uses_district_set = GF_nyto_devil_furnace_world
 		# SRA
-		uses_district_set = SRA_city_world
+		# uses_district_set = SRA_city_world
 		# Twinks Atlantean
-		uses_district_set = skypalace
+		# uses_district_set = skypalace
 	}
 }
 
@@ -221,15 +179,15 @@ merg_is_special_colony = {
 		# Gigastructural Engineering & More
 		has_planet_flag = enigmatic_colony_flag # pc_ehof_habitat
 		is_regular_giga_maginot_world = yes
-		uses_district_set = giga_planetary_computer
-		uses_district_set = virtual_ring
-		uses_district_set = virtual_ring_industry
+		# uses_district_set = giga_planetary_computer
+		# uses_district_set = virtual_ring
+		# uses_district_set = virtual_ring_industry
 		is_pc_flat_world = yes
-		uses_district_set = interstellar_ring
-		uses_district_set = giga_habitat
-		uses_district_set = giga_orbital
-		uses_district_set = penrose_ring
-		uses_district_set = giga_equatorial_shipyard
+		# uses_district_set = interstellar_ring
+		# uses_district_set = giga_habitat
+		# uses_district_set = giga_orbital
+		# uses_district_set = penrose_ring
+		# uses_district_set = giga_equatorial_shipyard
 		is_pc_squareworld_habitable = yes
 		is_giga_habitable_gas_giant = yes
 		giga_is_alderson_disk = yes

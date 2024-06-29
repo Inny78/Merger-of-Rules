@@ -1256,7 +1256,7 @@ uses_district_industrial = {
 		# Gigastructures
 		giga_uses_industrial_district = yes
 		# All That Is GRIMDARK
-		uses_district_set = infected_world
+		uses_grimdark_infected_world_district = yes
 	}
 }
 

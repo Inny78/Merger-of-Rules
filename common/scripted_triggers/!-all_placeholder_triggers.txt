@@ -529,3 +529,7 @@ KZ_VOY_can_not_destroy_by_planet_killer = { always = no }
 is_binary = { always = no }
 is_trinary = { always = no }
 is_paired = { always = no }
+uses_grimdark_infected_world_district = { always = no }
+is_non_giga_habitat = { always = no }
+is_phanon_macripp = { always = no }
+is_sigma_solaripp = { always = no }

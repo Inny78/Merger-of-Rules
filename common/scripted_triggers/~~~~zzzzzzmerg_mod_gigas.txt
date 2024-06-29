@@ -49,20 +49,23 @@ giga_habitable_structure = {
 		is_giga_habitable_gas_giant = yes
 		giga_is_birch_world = yes
 		giga_is_alderson_disk = yes
-		uses_district_set = virtual_ring
-		uses_district_set = virtual_ring_industry
+		is_non_giga_habitat = yes
+		is_planet_class = pc_virtual_reality
+		is_planet_class = pc_virtual_industry
+		is_planet_class = pc_virtual_stellar_industry
 		is_pc_pouchkinn_black_hole = yes
 		is_pc_flat_world = yes
 		is_pc_giga_frameworld = yes
-		uses_district_set = giga_equatorial_shipyard
+		is_planet_class = pc_equatorial_shipyard
 		# AOT
-		uses_district_set = phanon_macripp
+		is_phanon_macripp = yes
+		is_sigma_solaripp = yes
 	}
 }
 # extensible restriction list (can NOT build Maginots on these planet_classes)
 is_maginotable_restricted = {
 	OR = {
-		uses_district_set = giga_planetary_computer
+		is_planet_class = pc_giga_planetary_computer
 		has_planet_flag = has_planet_pc_mega
 		# Playable Katzenartig Imperium
 		is_pki_flusion_ecu = yes
@@ -73,9 +76,9 @@ is_maginotable_restricted = {
 		# Ancient Empire
 		ag_is_mod_habitable_ringworld = yes
 		# Assault Lily
-		uses_district_set = lily_ring_world
+		# uses_district_set = lily_ring_world
 		# AshArms Aquarius History
-		uses_district_set = rw_academycomplex_world
+		# uses_district_set = rw_academycomplex_world
 		# Darkspace
 		is_ds_ancient_ringworld = yes
 		is_ds_constructor_ark = yes
@@ -86,26 +89,23 @@ is_maginotable_restricted = {
 		has_planet_flag = merg_is_forbidden_target
 		# Planetary Diversity
 		is_planetary_diversity_ringworld = yes
-		# Planetary Ringworlds
-		uses_district_set = planet_ring
-		uses_district_set = planet_ring_city
 		# Star Wars: Kuat Ancient Empire
-		AND = {
-			is_ringworld = yes
-			uses_district_set = Eternal_city
-		}
+		# AND = {
+		#	is_ringworld = yes
+		# 	uses_district_set = Eternal_city
+		# }
 		# Star Wars: UnknownWorld Shipgirls Story
-		uses_district_set = rw_swgs_engineer_world
+		# uses_district_set = rw_swgs_engineer_world
 		# ThaumStellaris
-		uses_district_set = pc_tc_alchemical_ringworld
+		# uses_district_set = pc_tc_alchemical_ringworld
 		# Warship Girls and MIST species
 		is_wg_upgraded_ringworld = yes
-		uses_district_set = rw_auto_uf_world
-		uses_district_set = dyson_ring_world
+		# uses_district_set = rw_auto_uf_world
+		# uses_district_set = dyson_ring_world
 		# ZOFE
-		uses_district_set = utopian_ringworld
-		uses_district_set = utopian_machine_ringworld
-		uses_district_set = utopian_hive_ringworld
+		# uses_district_set = utopian_ringworld
+		# uses_district_set = utopian_machine_ringworld
+		# uses_district_set = utopian_hive_ringworld
 	}
 }
 mega_blokkats_wont_stripmine = {
@@ -164,7 +164,6 @@ giga_compat_hyperlane_exclude = {
 	}
 }
 giga_is_neutron_type_star = {
-	optimize_memory
 	OR = {
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
@@ -177,39 +176,30 @@ giga_gas_giant = { # Soon obsolete
 	merg_is_gas_giant = yes
 }
 giga_is_gas_giant = {
-	optimize_memory
 	merg_is_gas_giant = yes
 }
 giga_is_frozen = {
-	optimize_memory
 	merg_is_frozen = yes
 }
 giga_is_ocean = { 
-	optimize_memory
 	merg_is_aquatic = yes
 }
 giga_is_tropical = { 
-	optimize_memory
 	merg_is_tropical = yes
 }
 giga_is_hive = {
-	optimize_memory
 	merg_is_hive_world = yes
 }
 giga_is_machine = {
-	optimize_memory
 	merg_is_machine_world = yes
 }
 giga_is_gaia = { 
-	optimize_memory
 	merg_is_gaia = yes
 }
 giga_is_nuked = { 
-	optimize_memory
 	merg_is_nuked_basic = yes
 }
 giga_is_arcology = {
-	optimize_memory
 	merg_is_arcology = yes
 }
 giga_country_gets_bank_include = {
@@ -227,7 +217,6 @@ giga_country_gets_bank_include = {
 	}
 }
 giga_country_gets_bank = {
-	optimize_memory
 	giga_country_gets_bank_exclude = no
 	giga_mod_country_gets_bank_exclude = no
 	OR = {
@@ -299,9 +288,9 @@ ndb_can_target_planet = {
 		is_planet_class = pc_ai
 		is_pc_squareworld_habitable = yes
 		has_planet_flag = cant_build_here
-		has_planet_flag = cant_target_this_planet
-		uses_district_set = virtual_ring
-		uses_district_set = virtual_ring_industry
+		is_planet_class = pc_virtual_industry
+		is_planet_class = pc_virtual_reality
+		is_planet_class = pc_virtual_stellar_industry
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target
 		has_planet_flag = merg_forbidden_target
@@ -401,11 +390,12 @@ giga_is_bitrinary = {
 		is_star_class = sc_binary_8
 		is_star_class = sc_binary_9
 		is_star_class = sc_binary_10
-		is_star_class = sc_scfe_binary_1
 		is_star_class = sc_trinary_1
 		is_star_class = sc_trinary_2
 		is_star_class = sc_trinary_3
 		is_star_class = sc_trinary_4
+		# Forgotten Empires
+		is_star_class = sc_scfe_binary_1
 		# Real Space
 		is_binary = yes
 		is_trinary = yes
