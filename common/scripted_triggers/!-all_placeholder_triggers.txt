@@ -10,6 +10,11 @@ ag_is_ancient_system = { always = no }
 ag_is_mod_country = { always = no }
 ag_is_mod_habitable_ringworld = { always = no }
 ag_is_special_system = { always = no }
+azl_comp_aut_azur_lane_0 = { always = no }
+azl_comp_aut_azur_lane_1 = { always = no }
+azl_comp_aut_azur_lane_2 = { always = no }
+azl_comp_aut_azur_lane_k = { always = no }
+azl_comp_robot_mind_relic_core = { always = no }
 annihilator_system = { always = no }
 aot_should_not_crave_runic_power = { always = yes }
 atw_is_alpine = { always = no }
@@ -541,6 +546,8 @@ wg_compat_has_sh_trait = { always = no }
 wg_compat_has_auth_shenhai = { always = no }
 wg_compat_has_auth_warshipgirls = { always = no }
 wg_compat_is_pc_ringworld_habitable_water = { always = no }
+wg_compat_is_pc_wsg_port = { always = no }
+wg_compat_is_pc_shenhai = { always = no }
 wula_fallen_empire_mod_actived = { always = no }
 xvcv_mdlc_is_non_gate_mega = { always = no }
 zofeac_capital_buildings = { always = no }

@@ -1910,7 +1910,7 @@ can_species_be_assembled = {
 		AND = {
 			is_robotic = yes
 			# Azur lane Stellaris DLC
-			NOT = { has_trait = trait_robot_mind_relic_core }
+			NOT = { azl_comp_robot_mind_relic_core = yes }
 			# Diagraphers Trait Mod
 			NAND = {
 				robot_has_rare_crystal_comp = yes
@@ -1959,9 +1959,9 @@ can_species_be_assembled = {
 					NOR = {
 						has_country_flag = synth_assembly_stopped
 						# Azur lane Stellaris DLC
-						has_authority = auth_azur_lane_1
-						has_authority = auth_azur_lane_2
-						has_authority = auth_azur_lane_K
+						azl_comp_aut_azur_lane_1 = yes
+						azl_comp_aut_azur_lane_2 = yes
+						azl_comp_aut_azur_lane_k = yes
 						# Civic: Organic Zealots
 						AND = {
 							has_policy_flag = robots_outlawed
@@ -3733,10 +3733,10 @@ can_build_branch_offices = {
 			# Asssault Lily
 			has_authority = auth_AL_democratic
 			# Azur Lane Stellaris DLC
-			has_authority = auth_azur_lane_0
-			has_authority = auth_azur_lane_1
-			has_authority = auth_azur_lane_2
-			has_authority = auth_azur_lane_K
+			azl_comp_aut_azur_lane_0 = yes
+			azl_comp_aut_azur_lane_1 = yes
+			azl_comp_aut_azur_lane_2 = yes
+			azl_comp_aut_azur_lane_k = yes
 			# BlueArchive species pack
 			has_authority = auth_kivotos
 			# EDA
@@ -3793,7 +3793,7 @@ can_support_branch_offices = {
 				# Assault Lily
 				is_country_type = huge_country
 				# Azur Lane Stellaris DLC
-				has_authority = auth_azur_lane_1
+				azl_comp_aut_azur_lane_1 = yes
 				# Arknights Near Future
 				has_valid_civic = civic_business_union
 				# BlueArchive species pack
@@ -3932,7 +3932,7 @@ can_build_branch_office_on_planet = {
 					# Assault Lily
 					has_authority = auth_AL_democratic
 					# Azur Lane Stellaris DLC
-					has_authority = auth_azur_lane_1
+					azl_comp_aut_azur_lane_1 = yes
 					# BlueArchive species pack
 					has_ascension_perk = ap_BA_new_frontier
 					# Human Fallen Empire
@@ -3968,9 +3968,9 @@ can_build_branch_office_on_planet = {
 			owner = {
 				AND = {
 					OR = {
-						has_authority = auth_azur_lane_2
-						has_authority = auth_azur_lane_0
-						has_authority = auth_azur_lane_K
+						azl_comp_aut_azur_lane_2 = yes
+						azl_comp_aut_azur_lane_0 = yes
+						azl_comp_aut_azur_lane_k = yes
 					}
 					is_same_value = root
 				}
@@ -4132,7 +4132,7 @@ can_build_branch_office_on_planet = {
 			}
 		}
 		# Azur Lane Stellaris DLC
-		NOT = { root = { has_authority = auth_azur_lane_1 } }
+		NOT = { root = { azl_comp_aut_azur_lane_1 = yes } }
 	}
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_CRIMINAL_COOLDOWN
@@ -4153,7 +4153,7 @@ can_build_branch_office_on_planet = {
 			}
 		}
 		# Azur Lane Stellaris DLC
-		NOT = { root = { has_authority = auth_azur_lane_1 } }
+		NOT = { root = { azl_comp_aut_azur_lane_1 = yes } }
 	}
 	# Warship Girls R And MIST Species
 	custom_tooltip = {

@@ -19,7 +19,6 @@ colonizable_planet = {
 		merg_is_nuked = yes
 		merg_is_hive_world = yes
 		merg_is_machine_world = yes
-		merg_is_shroud_habitable = yes
 		habitable_structure = yes
 		habitable_planet = yes
 		# ACOT
@@ -65,8 +64,8 @@ habitable_planet_not_urban = {
 		merg_is_tropical = yes
 		merg_is_tundra = yes
 		# Warship Girls R And MIST Species
-		# uses_district_set = port_world
-		# uses_district_set = sh_world
+		wg_compat_is_pc_wsg_port = yes
+		wg_compat_is_pc_shenhai = yes
 		# SW: UnknownWorld Shipgirls Story
 		# uses_district_set = engineer_world
 		# Gigastructures
@@ -404,7 +403,7 @@ is_megacorp = {
 		has_mca_auth_cooperative = yes
 		has_mca_auth_private = yes
 		# Warship Girls R And MIST Species
-		has_authority = auth_warshipgirls
+		wg_compat_has_auth_warshipgirls = yes
 	}
 }
 
@@ -911,10 +910,6 @@ can_have_sensory_readings = {
 		merg_is_gaia = yes
 		merg_is_relic_world = yes
 		merg_is_arcology = yes
-		# Planetary Diversity
-		is_pd_unique = yes
-		is_pd_rare = yes
-		is_pd_exotic = yes
 	}
 }
 
