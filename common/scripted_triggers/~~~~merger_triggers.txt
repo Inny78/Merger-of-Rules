@@ -94,17 +94,11 @@ merg_is_true_ringworld = {
 		is_ds_ancient_ringworld = yes
 		is_ds_ringworld_spectrals = yes
 		# Gigastructural Engineering & More
-		# uses_district_set = maginot_ringworld_districts
+		giga_is_pc_maginot_ringworld = yes
 		# Planetary Diversity
 		is_planetary_diversity_ringworld = yes
 		# Warship Girls and MIST species
-		# uses_district_set = rw_sh_world
-		# uses_district_set = rw_port_world
-		# uses_district_set = rw_swim_world
-		is_planet_class = pc_ringworld_habitable_water
-		# uses_district_set = rw_uf_world
-		# uses_district_set = rw_auto_uf_world
-		# uses_district_set = dyson_ring_world
+		is_ringworld_wg = yes
 		# ZOFE
 		# uses_district_set = utopian_ringworld
 	}
@@ -177,21 +171,22 @@ merg_is_habitat_non_PD = {
 merg_is_special_colony = {
 	OR = {
 		# Gigastructural Engineering & More
-		has_planet_flag = enigmatic_colony_flag # pc_ehof_habitat
+		giga_is_pc_ehof_habitat = yes
 		is_regular_giga_maginot_world = yes
-		# uses_district_set = giga_planetary_computer
-		# uses_district_set = virtual_ring
-		# uses_district_set = virtual_ring_industry
-		is_pc_flat_world = yes
-		# uses_district_set = interstellar_ring
-		# uses_district_set = giga_habitat
-		# uses_district_set = giga_orbital
-		# uses_district_set = penrose_ring
-		# uses_district_set = giga_equatorial_shipyard
-		is_pc_squareworld_habitable = yes
+		giga_is_pc_giga_planetary_computer = yes
+		giga_is_pc_flat_world = yes
+		giga_is_pc_interstellar_ringworld_habitable = yes
+		giga_is_pc_interstellar_habitat = yes
+		giga_is_pc_gigaorbital_ring = yes
+		giga_is_pc_giga_penrose_habitable = yes
+		giga_is_pc_equatorial_shipyard = yes
+		giga_is_pc_squareworld_habitable = yes
 		is_giga_habitable_gas_giant = yes
 		giga_is_alderson_disk = yes
 		giga_is_birch_world = yes
+		# Warship Girls R and MIST Species
+		is_habitat_wg = yes
+		is_ringworld_wg = yes
 	}
 }
 
@@ -316,7 +311,7 @@ merg_is_empty_space = {
 		# GF Nyto
 		is_planet_class = pc_GF_nyto_endles
 		# Gigastructural Engineering & More
-		giga_is_empty_space = yes
+		giga_is_pc_giga_empty_space = yes
 		# History of the Lost Empire
 		is_planet_class = pc_empty_space # is_asharms_empty_space = yes
 		# LEX
@@ -582,9 +577,9 @@ merg_has_happiness = {
 		# Trait Diversity
 		td_has_no_happiness = yes
 		# Wandering Witch: Voyagers
-		has_trait = trait_servitude
+		has_ww_servitude = yes
 		AND = {
-			has_trait = trait_dummy
+			has_ww_dummy = yes
 			OR = {
 				NOT = { exists = from }
 				from = {
@@ -599,13 +594,9 @@ merg_has_happiness = {
 			}
 		}
 		# Warship Girls R And MIST Species
-		has_trait = sh_trait_shenhai
-		has_trait = sh_trait_shenhai1
-		has_trait = sh_trait_shenhai2
-		has_trait = sh_trait_silent
-		has_trait = sh_trait_silent1
+		wg_compat_has_sh_trait = yes
 		# Zob
-		has_trait = trait_zob_uplifted
+		is_zob_uplifted = yes
 		# Vanilla
 		AND = {
 			has_trait = trait_mechanical

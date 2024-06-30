@@ -39,33 +39,11 @@ giga_valid_planet_wrecked_ship = {
 	is_star = no
 	NOT = { has_planet_flag = has_giga_wrecked_ship }
 }
-# Overwriting to give support to other ringworlds
-giga_habitable_structure = {
-	OR = {
-		uses_district_set = habitat
-		merg_is_habitat = yes
-		merg_is_hab_ringworld = yes
-		# Gigastructural Engineering & More
-		is_giga_habitable_gas_giant = yes
-		giga_is_birch_world = yes
-		giga_is_alderson_disk = yes
-		is_non_giga_habitat = yes
-		is_planet_class = pc_virtual_reality
-		is_planet_class = pc_virtual_industry
-		is_planet_class = pc_virtual_stellar_industry
-		is_pc_pouchkinn_black_hole = yes
-		is_pc_flat_world = yes
-		is_pc_giga_frameworld = yes
-		is_planet_class = pc_equatorial_shipyard
-		# AOT
-		is_phanon_macripp = yes
-		is_sigma_solaripp = yes
-	}
-}
+
 # extensible restriction list (can NOT build Maginots on these planet_classes)
 is_maginotable_restricted = {
 	OR = {
-		is_planet_class = pc_giga_planetary_computer
+		giga_is_pc_giga_planetary_computer = yes
 		has_planet_flag = has_planet_pc_mega
 		# Playable Katzenartig Imperium
 		is_pki_flusion_ecu = yes
@@ -288,9 +266,6 @@ ndb_can_target_planet = {
 		is_planet_class = pc_ai
 		is_pc_squareworld_habitable = yes
 		has_planet_flag = cant_build_here
-		is_planet_class = pc_virtual_industry
-		is_planet_class = pc_virtual_reality
-		is_planet_class = pc_virtual_stellar_industry
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target
 		has_planet_flag = merg_forbidden_target

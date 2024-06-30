@@ -470,6 +470,7 @@ exists_collapsed_star = {
 	solar_system = { any_system_planet = { merg_is_standard_dense_star = yes } }
 }
 is_collapsed_star = {
+	optimize_memory
 	merg_is_standard_dense_star = yes
 }
 
@@ -478,9 +479,11 @@ ag_is_gateway_megastructure = {
 	merg_is_gate_mega = yes
 }
 ag_is_habitat = {
+	optimize_memory
 	merg_is_habitat = yes
 }
 ag_is_compact_star = {
+	optimize_memory
 	OR = {
 		merg_is_standard_dense_star = yes
 		# Hypothetical Stars
@@ -494,6 +497,7 @@ ag_is_compact_star = {
 	}
 }
 ag_is_common_country = {
+	optimize_memory
 	OR = {
 		merg_is_default_empire = yes
 		is_country_type = fallen_empire
@@ -504,6 +508,7 @@ ag_is_common_country = {
 	}
 }
 ag_is_special_constructable_shipyard = {
+	optimize_memory
 	custom_tooltip = {
 		fail_text = "ag_need_ancient_construction_facilities"
 		OR = {
@@ -529,9 +534,11 @@ ag_is_special_constructable_shipyard = {
 	}
 }
 ag_has_planetary_shield = {
+	optimize_memory
 	merg_has_planetary_shield = yes
 }
 ag_is_star_killer_special_system = {
+	optimize_memory
 	OR = {
 		has_star_flag = ag_no_star_killer_target_system
 		kuat_is_kuat_system = yes
@@ -543,6 +550,7 @@ ag_is_star_killer_special_system = {
 
 ############################### Assault Lily ###############################
 is_planet_habitable = {
+	optimize_memory
 	AND = {
 		is_artificial = no
 		colonizable_planet = yes
@@ -797,12 +805,6 @@ elec_hyperlane_create = {
 		annihilator_system = yes
 		urmazin_system = yes
 	}
-}
-
-############################### ESC NEXT ###############################
-ESC_TRIGGER_is_city_planet = {
-	optimize_memory
-	merg_is_arcology = yes
 }
 
 ############################### Ethics and Civics Bug Branch ###############################

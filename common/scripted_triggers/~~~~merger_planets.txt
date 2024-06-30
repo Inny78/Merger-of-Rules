@@ -259,7 +259,7 @@ merg_is_hive_world = {
 	OR = {
 		is_planet_class = pc_hive
 		# Gigastructural Engineering & More
-		is_pc_ringworld_hive = yes
+		giga_is_pc_ringworld_hive = yes
 		# Planetary Diversity
 		pd_is_pd_hive_world = yes
 		pd_is_planet_class_hive = yes
@@ -279,7 +279,7 @@ merg_is_machine_world = {
 		pd_is_pd_machine_arc = yes
 		pd_is_planet_class_machine = yes
 		# Gigastructural Engineering & More
-		is_pc_ringworld_machine = yes
+		giga_is_pc_ringworld_machine = yes
 		# Girls Frontline
 		# uses_district_set = GF_sf_machine_world
 		# Origin - F.C.S.S & M.C.S.S

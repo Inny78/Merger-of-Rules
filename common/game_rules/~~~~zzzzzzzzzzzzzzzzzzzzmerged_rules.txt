@@ -548,7 +548,7 @@ species_can_live_on_planet = {
 	# Expanded Gestalts: Forgotten Queens
 	NAND = {
 		root = { is_fq_matryoshka = no }
-		has_trait = trait_machine_digital
+		is_fq_trait_machine_digital = yes
 		# is_fq_trait_machine_digital = yes
 	}
 	# Zob
@@ -1518,11 +1518,7 @@ species_has_happiness = {
 			}
 		}
 		# Warship Girls R And MIST Species
-		has_trait = sh_trait_shenhai
-		has_trait = sh_trait_shenhai1
-		has_trait = sh_trait_shenhai2
-		has_trait = sh_trait_silent
-		has_trait = sh_trait_silent1
+		wg_compat_has_sh_trait = yes
 		# Zob
 		is_zob_uplifted = yes
 		# Vanilla
@@ -1897,8 +1893,7 @@ can_species_be_assembled = {
 	# Expanded Gestalts: Forgotten Queens
 	NAND = {
 		root = { owner = { has_valid_civic = civic_machine_replicators } }
-		has_trait = trait_machine_central
-		# is_fq_trait_machine_central = yes
+		is_fq_trait_machine_central = yes
 	}
 	# Holofrixit Revisited / Silfae's Portraits: Revisited
 	has_species_trait_holodrone = no
@@ -1916,17 +1911,6 @@ can_species_be_assembled = {
 			is_robotic = yes
 			# Azur lane Stellaris DLC
 			NOT = { has_trait = trait_robot_mind_relic_core }
-			# Animated Synthetics Portraits Expanded: Reborn
-			#OR = {
-			#	merg_has_animated_synth = no
-			#	AND = {
-			#		merg_has_animated_synth = yes
-			#		if = { #synth can never be built unless empire is a synth empire
-			#			limit = { root.owner = { has_country_flag = synthetic_empire } }
-			#			is_extsynth_synthetic = yes
-			#		}
-			#	}
-			#}
 			# Diagraphers Trait Mod
 			NAND = {
 				robot_has_rare_crystal_comp = yes
@@ -3479,7 +3463,7 @@ pop_generates_crime = {
 			merg_has_warship_girls = yes
 			OR = {
 				has_wg_traits = yes
-				has_trait = trait_intelligent_galo
+				wg_compat_has_intelligent_gallo = yes
 				species = {
 					OR = {
 						is_archetype = UNITED_FLEET
@@ -3625,28 +3609,6 @@ should_force_decline_species = {
 			exists = this
 			is_exp_memorex_comatos = yes
 		}
-		# Planetary Diversity
-		# AND = {
-		# 	custom_tooltip = {
-		# 		success_text = UNIT04CHILDREN_FORCE_DECLINE
-		# 		exists = this
-		# 		is_organic_fourschildren = yes
-		# 		from = {
-		# 			OR = {
-		# 				AND = {
-		# 					exists = owner
-		# 					owner = {
-		# 						NOR = {
-		# 							has_origin = origin_techno_world
-		# 							owner_main_species = { is_same_species = root }
-		# 						}
-		# 					}
-		# 				}
-		# 				check_variable = { which = techno_pops_missing value < 0 }
-		# 			}
-		# 		}
-		# 	}
-		# }
 		# Extra Origins
 		AND = {
 			custom_tooltip = {
@@ -3775,7 +3737,7 @@ can_build_branch_offices = {
 			has_authority = auth_azur_lane_1
 			has_authority = auth_azur_lane_2
 			has_authority = auth_azur_lane_K
-			# # BlueArchive species pack
+			# BlueArchive species pack
 			has_authority = auth_kivotos
 			# EDA
 			has_authority = auth_traveler
@@ -3795,7 +3757,7 @@ can_build_branch_offices = {
 			KZ_VOY_can_build_branch_offices = yes
 			# Warship Girls R And MIST Species
 			AND = {
-				has_authority = auth_shenhai
+				wg_compat_has_auth_shenhai = yes
 				OR = {
 					has_country_flag = pantsu_shop_origin
 					has_valid_civic = civic_sh_criminal_syndicate
@@ -3815,8 +3777,6 @@ can_support_branch_offices = {
 			# Assault Lily
 			is_country_type = al_fallen_empire
 			is_country_type = al_fallen_empire_no_ai
-			# Warship Girls R And MIST Species
-			has_authority = auth_azur_dictatorial
 		}
 	}
 	custom_tooltip = {
@@ -3836,7 +3796,7 @@ can_support_branch_offices = {
 				has_authority = auth_azur_lane_1
 				# Arknights Near Future
 				has_valid_civic = civic_business_union
-				# # BlueArchive species pack
+				# BlueArchive species pack
 				has_authority = auth_kivotos
 				# Ethics & Civics Infinity
 				is_eci_megacorp = yes
@@ -3846,7 +3806,7 @@ can_support_branch_offices = {
 				has_valid_civic = civic_galactic_sovereign_megacorp
 				# Warship Girls R And MIST Species
 				AND = {
-					has_authority = auth_shenhai
+					wg_compat_has_auth_shenhai = yes
 					OR = {
 						has_country_flag = pantsu_shop_origin
 						has_valid_civic = civic_sh_criminal_syndicate
@@ -4201,9 +4161,9 @@ can_build_branch_office_on_planet = {
 		exists = owner
 		owner = {
 			NOR = {
-				has_authority = auth_warshipgirls
+				wg_compat_has_auth_warshipgirls = yes
 				AND = {
-					has_authority = auth_shenhai
+					wg_compat_has_auth_shenhai = yes
 					OR = {
 						has_country_flag = pantsu_shop_origin
 						has_valid_civic = civic_sh_criminal_syndicate
