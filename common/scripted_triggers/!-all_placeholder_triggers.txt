@@ -414,6 +414,10 @@ is_real_KZ_VOY_solaria = { always = no }
 is_regular_giga_maginot_world = { always = no }
 is_ringworld_wg = { always = no }
 is_rooted_adult = { always = no }
+is_rs_fu_star = { always = no }
+is_rs_hollow = { always = no }
+is_rs_sterile = { always = no }
+is_rs_tidallylocked = { always = no }
 is_rs_microquasar = { always = no }
 is_sbtg_origin_starbase = { always = no }
 is_sbtg_playable_country = { always = no }

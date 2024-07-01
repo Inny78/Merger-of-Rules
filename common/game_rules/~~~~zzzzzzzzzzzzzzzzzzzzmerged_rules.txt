@@ -1318,7 +1318,7 @@ can_terraform_planet = {
 	# Real Space New Frontiers
 	custom_tooltip = {
 		fail_text = NO_TERRAFORM_HOLLOW_WORLD
-		NOT = { is_planet_class = pc_hollow }
+		is_rs_hollow = no
 	}
 	custom_tooltip = {
 		fail_text = NO_TERRAFORM_OVERMIND
@@ -1657,8 +1657,7 @@ can_species_procreate = {
 		# Expanded Events
 		is_exp_memorex_comatos = yes
 		# Expanded Gestalts: Forgotten Queens
-		has_trait = trait_hive_mind_overlord
-		# is_fq_trait_hive_mind_overlord = yes
+		is_fq_trait_hive_mind_overlord = yes
 		# Expanded Megastructures and Technology
 		AND = {
 			has_global_flag = expanded_megastructures_installed
@@ -3608,18 +3607,6 @@ should_force_decline_species = {
 			has_global_flag = expanded_events_active
 			exists = this
 			is_exp_memorex_comatos = yes
-		}
-		# Extra Origins
-		AND = {
-			custom_tooltip = {
-				success_text = SYMBIOTE_FORCE_DECLINE
-				AND = {
-					exists = this
-					is_symbiote = yes
-					from = { NOT = { any_owned_pop = { is_symbiote_of_prevprev = yes } } }
-					from = { any_owned_pop = { is_same_species = prevprev } }
-				}
-			}
 		}
 		# Ethical Gestalts
 		# lonely hive mind pops kill themselves

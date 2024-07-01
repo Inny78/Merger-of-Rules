@@ -754,9 +754,9 @@ do3f_can_have_random_districts = {
 		AND = {
 			has_global_flag = has_new_frontiers_mod
 			OR = {
-				is_planet_class = pc_tidallylocked
-				is_planet_class = pc_sterile
-				is_planet_class = pc_hollow
+				is_rs_tidallylocked = yes
+				is_rs_sterile = yes
+				is_rs_hollow = yes
 			}
 		}
 		can_have_habitable_deposits = yes
@@ -852,7 +852,7 @@ is_regular_star = {
 		is_planet_class_pc_magnetar = yes
 		is_rs_microquasar = yes
 		is_planet_class_pc_d_star = yes
-		is_planet_class = pc_fu_star
+		is_rs_fu_star = yes
 		is_planet_class_pc_l_star = yes
 		is_planet_class_pc_nova_1 = yes
 		is_planet_class_pc_nova_2 = yes
@@ -1267,7 +1267,7 @@ afk_target_planet = {
 		# Planetary Diversity
 		pd_is_planet_class_all = yes
 		# Gigastructural Engineering & More
-		is_pc_red_toxic = yes
+		giga_is_pc_red_toxic = yes
 	}
 	merg_is_forbidden_target = no
 }
@@ -1579,7 +1579,7 @@ planetary_catastrophe_is_possible = {
 		merg_is_relic_world = yes
 		merg_is_hab_ringworld = yes
 		merg_is_habitat = yes
-		is_planet_class = pc_sterile
+		is_rs_sterile = yes
 	}
 	NOR = {
 		has_planet_flag = colony_event
@@ -1979,8 +1979,8 @@ can_reduce_upkeep_dummy = {
 ############################### Warship Girls R and MIST Species ###############################
 is_habitat_wg = {
 	OR = {
-		is_pc_flat_world = yes
-		is_pc_squareworld_habitable = yes
+		giga_is_pc_flat_world = yes
+		giga_is_pc_squareworld_habitable = yes
 		merg_is_habitat = yes
 	}
 }
