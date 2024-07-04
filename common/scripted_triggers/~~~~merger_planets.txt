@@ -280,8 +280,8 @@ merg_is_machine_world = {
 		pd_is_planet_class_machine = yes
 		# Gigastructural Engineering & More
 		giga_is_pc_ringworld_machine = yes
-		# Girls Frontline
-		# uses_district_set = GF_sf_machine_world
+		# Maiden Frontier Gunstar Story Collection
+		msgsc_GF_sf_machine = yes
 		# Origin - F.C.S.S & M.C.S.S
 		# uses_district_set = awaken_ai_world
 		# Planetary Ringworlds
@@ -386,7 +386,7 @@ merg_is_toxic = {
 		# All These Worlds
 		atw_is_toxic = yes
 		# Gigastructural Engineering & More
-		is_pc_red_toxic = yes
+		giga_is_pc_red_toxic = yes
 	}
 }
 

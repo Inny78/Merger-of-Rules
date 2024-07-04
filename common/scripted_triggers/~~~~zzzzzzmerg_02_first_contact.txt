@@ -32,3 +32,15 @@ has_non_psionic_shields = {
 		giga_has_non_psionic_shields = yes
 	}
 }
+
+has_blocked_random_devastating_pre_ftl_events = {
+	OR = {
+		has_origin = origin_fear_of_the_dark
+		has_country_flag = fotd_hunter
+		has_country_flag = solarpunk_country
+		# Ancient Empire
+		has_country_flag = ag_no_random_devastating_pre_ftl_events
+		# Gigastructural Engineering & More
+		giga_is_special_primitive = yes
+	}
+}

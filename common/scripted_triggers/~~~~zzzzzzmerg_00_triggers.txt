@@ -166,7 +166,7 @@ can_be_leader = {
 				has_authority = auth_machine_intelligence
 				is_mechanical_empire = yes
 				is_individual_machine = yes
-				# Girls Frontline
+				# Maiden Frontier Gunstar Story Collection
 				GF_allow_doll_leaders = yes
 			}
 		}
@@ -188,7 +188,7 @@ can_be_leader = {
 		root = { has_technology = tech_dummy_leaders }
 		# Girls Frontline
 		AND = {
-			has_trait = GF_trait_doll
+			gf_comp_trait_doll = yes
 			root = {
 				OR = {
 					has_policy_flag = GF_doll_right_full
@@ -232,7 +232,7 @@ can_be_military_leader = {
 		}
 		# Girls Frontline
 		AND = {
-			has_trait = GF_trait_doll
+			gf_comp_trait_doll = yes
 			owner = {
 				OR = {
 					has_policy_flag = GF_doll_right_full
@@ -731,10 +731,8 @@ is_special_colony_type = {
 		has_modifier = resort_colony
 		has_modifier = slave_colony
 		has_modifier = gestation_colony
-		# ACOT
-		# has_enigmatic_capital = yes
 		# Girls Frontline
-		# uses_district_set = GF_automated_city_district_set
+		gf_comp_automated_city = yes
 		# Real Space - Planetary Stations
 		has_planet_flag = planetary_station
 	}

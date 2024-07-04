@@ -481,7 +481,7 @@ species_can_live_on_planet = {
 					}
 				}
 				# Girls Frontline
-				has_trait = GF_trait_doll
+				gf_comp_trait_doll = yes
 			}
 		}
 		# Hive Worlds
@@ -720,7 +720,7 @@ can_release_vassal_from_species = {
 					# Plentiful Perks
 					has_trait = trait_plentiful_traditions_pt_cocoon
 					# Girls Frontline
-					has_trait = trait_doll
+					gf_comp_trait_doll = yes
 					# Expanded Traits, Civics, Pops, and More
 					AND = {
 						NOT = { has_trait = trait_machine_unit }
@@ -1676,7 +1676,7 @@ can_species_procreate = {
 		}
 
 		# Girls Frontline
-		has_trait = GF_trait_doll
+		gf_comp_trait_doll = yes
 		# Holofrixit Revisited / Silfae's Portraits: Revisited
 		has_species_trait_hologanglion = yes
 		# Lithoid Supremacy
@@ -1923,7 +1923,7 @@ can_species_be_assembled = {
 			}
 			# Girls Frontline
 			if = {
-				limit = { has_trait = GF_trait_doll }
+				limit = { gf_comp_trait_doll = yes }
 				root.owner = { GF_can_build_doll_species = yes }
 			}
 			# Wandering Witch
@@ -4279,8 +4279,8 @@ can_crossbreed_species = {
 	NOR = {
 		is_subspecies = root
 		root = { is_subspecies = prev }
-		# Girls Frontline
-		has_trait = GF_trait_doll
+		# Maiden Frontier Gunstar Story Collection
+		is_msgsc_doll = yes
 		# Misc
 		is_archetype = NANITES_CROP
 		is_archetype = UNITED_FLEET
@@ -5033,10 +5033,10 @@ can_fill_specialist_job = {
     }
 	# Girls Frontline
 	else_if = {
-		limit = { has_trait = GF_trait_doll }
+		limit = { gf_comp_trait_doll = yes }
 		owner = {
 			OR = {
-				NOT = { has_authority = GF_auth_commonwealth }
+				gf_comp_auth_commonwealth = no
 				has_policy_flag = GF_doll_work_policy_high
 				has_policy_flag = GF_doll_work_policy_free
 				has_policy_flag = GF_doll_work_policy_middle
@@ -5195,10 +5195,10 @@ can_fill_ruler_job = {
 		}
 		# Girls Frontline
 		if = {
-			limit = { has_trait = GF_trait_doll }
+			limit = { gf_comp_trait_doll = yes }
 			owner = {
 				OR = {
-					NOT = { has_authority = GF_auth_commonwealth }
+					gf_comp_auth_commonwealth = no
 					has_policy_flag = GF_doll_work_policy_high
 					has_policy_flag = GF_doll_work_policy_free
 				}

@@ -64,6 +64,12 @@ galactic_diversity_habitable_planet = { always = no }
 GF_allow_doll_leaders = { always = no }
 GF_can_build_doll_species = { always = no }
 GF_can_trade_robotic_leader = { always = no }
+gf_comp_auth_commonwealth = { always = no }
+gf_comp_automated_city = { always = no }
+gf_comp_devil_furnace = { always = no }
+gf_comp_endles = { always = no }
+gf_comp_habitis = { always = no }
+gf_comp_trait_doll = { always = no }
 giga_ai_should_restrict_system = { always = no }
 giga_can_colonize_with_pop = { always = yes }
 giga_can_get_external_leader_pool_candidate = { always = no }
@@ -172,6 +178,10 @@ has_planetary_diversity_planetaryhabitats = { always = no }
 has_policy_residentliving_restricted = { always = yes }
 has_policy_slaveliving_restricted = { always = yes }
 has_reproductive_politics = { always = no }
+has_azur_comp_patch = { always = no }
+has_gf_comp_patch = { always = no }
+has_rs_comp_patch = { always = no }
+has_wsg_comp_patch = { always = no }
 has_sbtg_upgraded_capital = { always = no }
 has_specialist_subject_leader_trait_maid = { always = no }
 has_species_trait_holodrone = { always = no }
@@ -339,6 +349,7 @@ is_machine_assimilator = { always = no }
 is_mage = { always = no }
 is_marauder = { always = no }
 is_mindless_undead = { always = no }
+is_msgsc_doll = { always = no }
 is_multihive_drone = { always = no }
 is_mzilli_rogue = { always = no }
 is_mzilli_shadow = { always = no }
@@ -416,6 +427,7 @@ is_ringworld_wg = { always = no }
 is_rooted_adult = { always = no }
 is_rs_fu_star = { always = no }
 is_rs_hollow = { always = no }
+is_rs_molten_habitat = { always = no }
 is_rs_sterile = { always = no }
 is_rs_tidallylocked = { always = no }
 is_rs_microquasar = { always = no }
@@ -492,6 +504,7 @@ Maid_trigger_4_can_release_vassal_from_species = { always = no }
 MECR_trigger_0_community_country_type = { always = no }
 MECR_trigger_1_can_be_part_of_galactic_community = { always = yes }
 MECR_trigger_2_can_be_part_of_galactic_empire = { always = yes }
+msgsc_GF_sf_machine = { always = no }
 oxr_mdlc_can_release_vassal_from_species = { always = no }
 oxr_mdlc_planet_decision_dismantle_habitat_active = { always = no }
 pd_aw_cant_terraform = { always = yes }

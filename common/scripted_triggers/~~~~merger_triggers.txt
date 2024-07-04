@@ -122,10 +122,8 @@ merg_is_habitat = {
 		has_planet_flag = stpg_planetary_habitat
 		# More Events Mod
 		is_pc_mem_vazuran_habitat = yes
-		# Nyto Species Pack
-		# uses_district_set = GF_nyto_devil_furnace_world
-		# NSC2 Modjam Freebooters Origin
-		# uses_district_set = nsc_freebooter_habitat
+		# Girls Frontline
+		gf_comp_habitis = yes
 		# StellarRegulator Array
 		# uses_district_set = SRA_city_world
 		# Twinks Atlantean
@@ -309,7 +307,7 @@ merg_is_empty_space = {
 		# Darkspace
 		is_ds_gc_star = yes
 		# GF Nyto
-		is_planet_class = pc_GF_nyto_endles
+		gf_comp_endles = yes
 		# Gigastructural Engineering & More
 		giga_is_pc_giga_empty_space = yes
 		# History of the Lost Empire

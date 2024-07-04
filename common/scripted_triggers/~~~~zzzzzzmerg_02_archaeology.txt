@@ -63,7 +63,7 @@ energy_candidate = {
 		is_planet_class_pc_w_green_star = yes
 		is_planet_class_pc_w_purple_star = yes
 		is_planet_class_pc_w_red_star = yes
-		is_planet_class = pc_fu_star
+		is_rs_fu_star = yes
 	}
 }
 alloy_candidate = {

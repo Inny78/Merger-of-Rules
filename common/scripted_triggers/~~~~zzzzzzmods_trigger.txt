@@ -1006,9 +1006,11 @@ ESC_TRIGGER_is_city_planet = {
 ESC_TRIGGER_is_naked_mantle_planet = {
 	OR = {
 		# Gigastructural Engineering & More
-		# uses_district_set = giga_equatorial_shipyard
+		giga_is_pc_equatorial_shipyard = yes
+		# Girls Frontline
+		gf_comp_devil_furnace = yes
 		# Real Space - Planetary Stations
-		is_planet_class = pc_molten_station
+		is_rs_molten_habitat = yes
 		# Real Space - New Frontiers
 		has_modifier = infernal_world
 		has_modifier = lava_world
@@ -1027,8 +1029,10 @@ gpm_is_asteroid = {
 }
 gpm_is_planet_class_barren = {
 	optimize_memory
-	merg_is_barren = yes
-	merg_is_barren_cold = yes
+	OR = {
+		merg_is_barren = yes
+		merg_is_barren_cold = yes
+	}
 }
 gpm_is_planet_class_molten = {
 	optimize_memory
@@ -1240,38 +1244,6 @@ harvester_is_crackable = {
 	}
 }
 
-############################### History of the Lost Empire ###############################
-afk_target_planet = {
-	optimize_memory
-	OR = {
-		merg_is_arcology = yes
-		merg_is_relic_world = yes
-		merg_is_hive_world = yes
-		merg_is_machine_world = yes
-		colonizable_planet = yes
-		habitable_planet = yes
-		is_artificial = yes
-		uninhabitable_regular_planet = yes
-		# Planetary Diversity
-		merg_is_nuked_basic = yes
-		# Gigastructures
-		giga_is_katzenland = yes
-		# SW:UnknownWorld Shipgirls Story
-		uses_district_set = engineer_world
-		uses_district_set = rw_swgs_engineer_world
-		# Warship Girls R And MIST Species
-		uses_district_set = port_world
-		uses_district_set = sh_world
-		# APSR: Anomalies, Planetary and Space Resources
-		has_apsr_modifiers = yes
-		# Planetary Diversity
-		pd_is_planet_class_all = yes
-		# Gigastructural Engineering & More
-		giga_is_pc_red_toxic = yes
-	}
-	merg_is_forbidden_target = no
-}
-
 ############################### Human Fallen Empire ###############################
 hfe_trigger_is_fallen = {
 	OR = {
@@ -1307,10 +1279,10 @@ legw_megaplanet = {
 		is_artificial = yes
 		merg_is_machine_world = yes
 		is_planet_class = pc_cybrex
-		# Girls Frontline
-		# uses_district_set = GF_sf_machine_world
+		# Maiden Frontier Gunstar Story Collection
+		msgsc_GF_sf_machine = yes
 		# Gigastructural Engineering & More
-		# uses_district_set = giga_planetary_computer
+		giga_is_pc_giga_planetary_computer = yes
 		# Origin - F.C.S.S & M.C.S.S
 		# uses_district_set = awaken_ai_world
 		# ZOFE

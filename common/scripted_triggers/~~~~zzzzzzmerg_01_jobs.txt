@@ -67,7 +67,7 @@ entertainer_job_check_trigger = {
 		}
 		# Girls Frontline
 		NAND = {
-			has_trait = GF_trait_doll
+			gf_comp_trait_doll = yes
 			owner = { has_policy_flag = GF_doll_right_low }
 		}
 	}
