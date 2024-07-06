@@ -3042,13 +3042,7 @@ system_blocks_sensors = {
 			exists = sector
 			sector.sector_capital = {
 				exists = leader
-				leader = {
-					OR = {
-						has_trait = leader_trait_AL_Rareskill_governor_Uberzain
-						has_trait = leader_trait_AL_Rareskill_governor_UberzainS
-						has_trait = leader_trait_AL_Rareskill_governor_UberzainEX
-					}
-				}
+				leader = { al_has_rare_gov_skill = yes }
 			}
 		}
 		# Destiny: The Darkness Crisis
@@ -3916,7 +3910,7 @@ can_build_branch_office_on_planet = {
 				OR = {
 					is_criminal_syndicate = yes
 					# Assault Lily
-					has_authority = auth_AL_democratic
+					al_has_auth_democratic = yes
 					# Azur Lane Stellaris DLC
 					azl_comp_aut_azur_lane_1 = yes
 					# BlueArchive species pack
@@ -4107,7 +4101,7 @@ can_build_branch_office_on_planet = {
 				OR = {
 					is_criminal_syndicate = no
 					# Assault Lily
-					has_authority = auth_AL_democratic
+					al_has_auth_democratic = yes
 				}
 			}
 			owner = {
@@ -4128,7 +4122,7 @@ can_build_branch_office_on_planet = {
 				OR = {
 					is_criminal_syndicate = no
 					# Assault Lily
-					has_authority = auth_AL_democratic
+					al_has_auth_democratic = yes
 				}
 			}
 			AND = {
@@ -5279,19 +5273,6 @@ can_dismiss_leader = {
 	custom_tooltip = {
 		fail_text = "requires_not_special_lily_leader"
 		NOT = { has_leader_flag = AL_special_lily_leader }
-	}
-	# Civil Wars
-	custom_tooltip = {
-		fail_text = "cannot_fire_leader_during_crisis"
-		NOT = { has_leader_flag = cannot_be_fired }
-	}
-	# Ethics & Civics Infinity
-	custom_tooltip = {
-		fail_text = "requires_actor_not_coalition_government_society"
-		exists = owner
-		owner = {
-			NOT = { has_valid_civic = civic_coalition_government }
-		}
 	}
 	# StellarisCraft
 	custom_tooltip = {

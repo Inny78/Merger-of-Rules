@@ -310,3 +310,7 @@ building_cbananas = { potential = { always = no } allow = { always = no } }
 building_fe_giga_fortress = { potential = { always = no } allow = { always = no } }
 building_acot_dm_enigmatic_lab = { potential = { always = no } allow = { always = no } }
 building_acot_dm_institute = { potential = { always = no } allow = { always = no } }
+building_hab_cosmo_capital = { potential = { always = no } allow = { always = no } }
+building_cosmo_hive_capital = { potential = { always = no } allow = { always = no } }
+building_cosmo_machine_capital = { potential = { always = no } allow = { always = no } }
+building_cosmo_capital = { potential = { always = no } allow = { always = no } }

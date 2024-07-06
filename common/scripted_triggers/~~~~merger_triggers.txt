@@ -77,7 +77,10 @@ merg_is_awakened_fe = {
 # List of all habitable ringworld sections
 merg_is_hab_ringworld = {
 	is_ringworld = yes
-	is_colonizable = yes
+	OR = {
+		is_colonizable = yes
+		is_colony = yes
+	}
 }
 
 # Crisis trigger

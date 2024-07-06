@@ -111,6 +111,8 @@ has_upgraded_capital = {
 				has_building = building_galactic_senate
 				# EDA
 				has_building = eda_building_imperial_capital
+				# More Cosmogenesis Buildings
+				has_building = building_hab_cosmo_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Superstates
@@ -179,6 +181,8 @@ has_upgraded_capital = {
 				has_building = building_phanon_palace
 				has_building = building_phanon_hive_cluster
 				has_building = building_phanon_control_center
+				# More Cosmogenesis Buildings
+				has_building = building_hab_cosmo_capital
 				# ZOFE Ascension
 				zofeac_capital_buildings = yes
 			}
@@ -213,6 +217,8 @@ has_upgraded_capital = {
 				has_building = building_stellarite_galactic_hive_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_hive_major_capital
+				# More Cosmogenesis Buildings
+				has_building = building_cosmo_hive_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Superstates
@@ -254,6 +260,8 @@ has_upgraded_capital = {
 				has_building = building_stellarite_galactic_machine_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_machine_major_capital
+				# More Cosmogenesis Buildings
+				has_building = building_cosmo_machine_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Superstates
@@ -300,6 +308,8 @@ has_upgraded_capital = {
 				has_building = eda_building_imperial_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_major_capital
+				# More Cosmogenesis Buildings
+				has_building = building_cosmo_capital
 				# Nirvana Empire Project
 				has_building = building_nirvana_empire_palace
 				# Star Wars: Kuat Ancient Empire
@@ -444,6 +454,8 @@ has_major_upgraded_capital = {
 				has_building = building_galactic_senate
 				# EDA
 				has_building = eda_building_imperial_capital
+				# More Cosmogenesis Buildings
+				has_building = building_hab_cosmo_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Superstates
@@ -506,6 +518,8 @@ has_major_upgraded_capital = {
 				has_building = building_stellarite_control_center
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_palace
+				# More Cosmogenesis Buildings
+				has_building = building_hab_cosmo_capital
 				# ZOFE Ascension
 				zofeac_capital_buildings = yes
 			}
@@ -539,6 +553,8 @@ has_major_upgraded_capital = {
 				has_building = building_stellarite_galactic_hive_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_hive_major_capital
+				# More Cosmogenesis Buildings
+				has_building = building_cosmo_hive_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Superstates
@@ -578,6 +594,8 @@ has_major_upgraded_capital = {
 				has_building = building_stellarite_galactic_machine_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_machine_major_capital
+				# More Cosmogenesis Buildings
+				has_building = building_cosmo_machine_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				#Superstates
@@ -625,6 +643,8 @@ has_major_upgraded_capital = {
 				has_building = building_stellarite_galactic_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_major_capital
+				# More Cosmogenesis Buildings
+				has_building = building_cosmo_capital
 				# Nirvana Empire Project
 				has_building = building_nirvana_empire_palace
 				# Twinks Atlantean
@@ -764,6 +784,8 @@ has_fully_upgraded_capital = {
 				has_building = building_galactic_senate
 				# EDA
 				has_building = eda_building_imperial_capital
+				# More Cosmogenesis Buildings
+				has_building = building_hab_cosmo_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Superstates
@@ -828,6 +850,8 @@ has_fully_upgraded_capital = {
 				has_building = building_phanon_palace
 				has_building = building_phanon_hive_cluster
 				has_building = building_phanon_control_center
+				# More Cosmogenesis Buildings
+				has_building = building_hab_cosmo_capital
 				# ZOFE Ascension
 				zofeac_capital_buildings = yes
 			}
@@ -862,6 +886,8 @@ has_fully_upgraded_capital = {
 				has_building = building_stellarite_galactic_hive_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_hive_major_capital
+				# More Cosmogenesis Buildings
+				has_building = building_cosmo_hive_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Superstates
@@ -899,6 +925,8 @@ has_fully_upgraded_capital = {
 				has_building = building_stellarite_galactic_machine_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_machine_major_capital
+				# More Cosmogenesis Buildings
+				has_building = building_cosmo_machine_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Superstates
@@ -944,6 +972,8 @@ has_fully_upgraded_capital = {
 				has_building = building_stellarite_galactic_capital
 				# Gigastructural Engineering & More
 				has_building = building_giga_elysium_host_major_capital
+				# More Cosmogenesis Buildings
+				has_building = building_cosmo_capital
 				# Nirvana Empire Project
 				has_building = building_nirvana_empire_palace
 				# Star Wars: Kuat Ancient Empire
@@ -1265,14 +1295,22 @@ has_fort = {
 	custom_tooltip = {
 		fail_text = acot_requires_fort_building
 		OR = {
-			has_active_building = building_stronghold
-			has_active_building = building_fortress
+			has_building = building_stronghold
+			has_building = building_fortress
 			# ACOT
-			has_advanced_fort = yes
+			has_building = building_acot_dm_stronghold
+			has_building = building_fe_stronghold
+			has_building = building_acot_ae_stronghold
+			has_building = building_acot_giga_fortress
+			has_building = building_acot_giga_fortress_array
+			has_building = building_acot_giga_fortress_lab
+			has_building = building_acot_giga_fortress_obelisk
+			has_building = building_fe_giga_fortress
+			has_district = district_acot_enigmapolis_fortress
 			# GPM
-			has_active_building = gpm_building_stronghold
+			has_building = gpm_building_stronghold
 			# Plentiful Traditions
-			has_active_building = building_zitadom
+			has_building = building_zitadom
 		}
 	}
 }
@@ -1282,57 +1320,54 @@ has_advanced_fort = {
 		fail_text = acot_requires_fort_building
 		OR = {
 			# ACOT/AOT/SOS
-			has_active_building = building_acot_dm_stronghold
-			has_active_building = building_fe_stronghold
-			has_active_building = building_fe_giga_fortress
-			has_active_building = building_acot_ae_stronghold
-			has_active_building = building_acot_giga_fortress_dm
-			has_active_building = building_acot_giga_fortress
-			has_active_building = building_acot_giga_fortress_array
-			has_active_building = building_acot_giga_fortress_lab
-			has_active_building = building_acot_giga_fortress_obelisk
-			has_active_building = building_acot_giga_fortress_fe
-			has_active_building = building_fe_machine_dome
-			has_active_building = building_acot_ae_machine_dome
-			has_active_building = building_stellarite_machine_dome
-			has_active_building = building_phanon_machine_dome
-			has_active_building = building_fe_hive_evochamber
-			has_active_building = building_acot_ae_hive_evochamber
-			has_active_building = building_stellarite_hive_evochamber
-			has_active_building = building_phanon_hive_evochamber
-			has_active_building = building_stellarite_stronghold
-			has_active_building = building_phanon_stronghold
-			has_active_building = building_stellarite_giga_fortress_array
-			has_active_building = building_stellarite_giga_fortress_lab
-			has_active_building = building_stellarite_giga_fortress_obelisk
-			has_active_building = building_phanon_giga_fortress_array
-			has_active_building = building_phanon_giga_fortress_lab
-			has_active_building = building_phanon_giga_fortress_obelisk
+			has_building = building_acot_dm_stronghold
+			has_building = building_fe_stronghold
+			has_building = building_acot_ae_stronghold
+			has_building = building_acot_giga_fortress
+			has_building = building_acot_giga_fortress_array
+			has_building = building_acot_giga_fortress_lab
+			has_building = building_acot_giga_fortress_obelisk
+			has_building = building_fe_giga_fortress
+			has_district = district_acot_enigmapolis_fortress
+			has_building = building_stellarite_machine_dome
+			has_building = building_phanon_machine_dome
+			has_building = building_fe_hive_evochamber
+			has_building = building_acot_ae_hive_evochamber
+			has_building = building_stellarite_hive_evochamber
+			has_building = building_phanon_hive_evochamber
+			has_building = building_stellarite_stronghold
+			has_building = building_phanon_stronghold
+			has_building = building_stellarite_giga_fortress_array
+			has_building = building_stellarite_giga_fortress_lab
+			has_building = building_stellarite_giga_fortress_obelisk
+			has_building = building_phanon_giga_fortress_array
+			has_building = building_phanon_giga_fortress_lab
+			has_building = building_phanon_giga_fortress_obelisk
 			has_district = district_acot_enigmapolis_fortress
 			is_aot_macripp = yes
 			# Ad Astra Technology Mod
-			has_active_building = building_fortress_city
-			has_active_building = building_planetary_citadel
-			has_active_building = building_aegis_city
-			has_active_building = building_panopticon_fortress
-			has_active_building = building_wyrmguard_citadel
-			has_active_building = building_alpha_fortress
-			has_active_building = building_occulari_tower
+			has_building = building_fortress_city
+			has_building = building_planetary_citadel
+			has_building = building_aegis_city
+			has_building = building_panopticon_fortress
+			has_building = building_wyrmguard_citadel
+			has_building = building_alpha_fortress
+			has_building = building_occulari_tower
 			# Ancient Empire
-			has_active_building = ag_ancient_fortress
-			has_active_building = ag_ancient_fortress_corp
-			has_active_building = ag_ancient_fortress_overlord
+			has_building = ag_ancient_fortress
+			has_building = ag_ancient_fortress_corp
+			has_building = ag_ancient_fortress_overlord
 			# EDA
-			has_active_building = eda_building_imperial_capital
+			has_building = eda_building_imperial_capital
 			# Twinks Mods
-			has_active_building = building_precinct_house_at_b
-			has_active_building = building_tw_arcane_hold
-			has_active_building = building_nightelf_palace
-			has_active_building = building_ancient_palace_at
+			has_building = building_precinct_house_at_b
+			has_building = building_tw_arcane_hold
+			has_building = building_nightelf_palace
+			has_building = building_ancient_palace_at
 			# Secrets of the Shroud
 			has_district = district_acot_soulsphere_fortress
 			# Wula Fallen Empire
-			has_active_building = building_wula_stronghold
+			has_building = building_wula_stronghold
 		}
 	}
 }

@@ -10,6 +10,9 @@ ag_is_ancient_system = { always = no }
 ag_is_mod_country = { always = no }
 ag_is_mod_habitable_ringworld = { always = no }
 ag_is_special_system = { always = no }
+al_has_auth_democratic = { always = no }
+al_has_rare_gov_skill = { always = no }
+al_is_nest_planet = { always = no }
 azl_comp_aut_azur_lane_0 = { always = no }
 azl_comp_aut_azur_lane_1 = { always = no }
 azl_comp_aut_azur_lane_2 = { always = no }
@@ -83,6 +86,7 @@ giga_has_any_mining_district = { always = no }
 giga_has_artificial_preference_trait = { always = no }
 giga_has_non_psionic_shields = { always = no }
 giga_has_research_building = { always = no }
+giga_just_researched_fe_tech = { always = no }
 giga_is_alderson_disk = { always = no }
 giga_is_birch_world = { always = no }
 giga_is_black_hole = { always = no }

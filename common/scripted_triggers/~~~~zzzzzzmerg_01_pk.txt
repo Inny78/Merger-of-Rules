@@ -1066,7 +1066,7 @@ can_destroy_planet_with_PLANET_KILLER_PLANET_TO_NEST = {
 		fail_text = merg_forbidden_target
 		merg_is_forbidden_target = no
 	}
-	NOT = { is_planet_class = pc_nest }
+	NOT = { al_is_nest_planet = yes }
 	is_colony = yes
 }
 
