@@ -143,6 +143,7 @@ has_auth_holofrixit = { always = no }
 has_battle_thrall_military_leaders_active = { always = no }
 has_bccr = { always = no }
 has_bug_branch = { always = no }
+has_bugged_criminal_corp_rework = { always = no }
 has_civic_organic_zealots_active = { always = no }
 has_civic_organic_zealots_active = { always = no }
 has_corporate_imperial_auth = { always = no }

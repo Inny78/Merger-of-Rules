@@ -3787,8 +3787,6 @@ can_support_branch_offices = {
 				has_authority = auth_kivotos
 				# Ethics & Civics Infinity
 				is_eci_megacorp = yes
-				# Girls Frontline
-				has_civic = civic_gf_GK
 				# More Corporate Authorities
 				has_valid_civic = civic_galactic_sovereign_megacorp
 				# Warship Girls R And MIST Species
@@ -3892,10 +3890,11 @@ can_build_branch_office_on_planet = {
 			}
 		}
 	}
-	# BCCR
+	# Criminal Corp Rework
 	custom_tooltip = { # bccr Normal megacorps cant build on other corps, only criminal corps
 		fail_text = BRANCH_OFFICE_NOT_ON_MEGACORP_PLANET
 		OR = {
+			has_bugged_criminal_corp_rework = no
 			root = { is_criminal_syndicate = yes }
 			AND = {
 				root = { is_criminal_syndicate = yes }
