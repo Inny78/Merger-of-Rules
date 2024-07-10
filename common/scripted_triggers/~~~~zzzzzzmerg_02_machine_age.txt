@@ -44,10 +44,6 @@ just_researched_fe_tech = {
         # Gigastructural Engineeering & More
         giga_just_researched_fe_tech = yes
         # More Cosmogenesis Buildings
-        # mcb_just_researched_fe_tech = yes
-        last_increased_tech = tech_fe_shrine
-        last_increased_tech = tech_fe_archive
-        last_increased_tech = tech_fe_capital
-        last_increased_tech = tech_fe_habitat
+        mcb_just_researched_fe_tech = yes
     }
 }

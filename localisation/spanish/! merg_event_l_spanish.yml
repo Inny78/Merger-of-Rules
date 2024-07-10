@@ -1,5 +1,16 @@
 ﻿l_spanish:
 
-# Red Alert
+ # Red Alert
+ merg.1.name: "A"
  merg.2.name: "RED ALERT!"
  merg.2.desc: "Universial Games Rules Patch has been detected in your game. This mod is totally incompatible with the Merger of Rules and should NOT be used with it."
+ merger_fake_policy: "Fake policy"
+ merg_check_start: "has been detected by the Merger of Rules, but the"
+ merg_check_end: "is not present. Make sure to use it for a full support of this mod."
+ merg_check.2.desc: "§HReal Space§! $merg_check_start$ §HReal Space Triggers Compatibility Patch§! $merg_check_end$"
+ merg_check.3.desc: "§HWarship Girls R and MIST Species§! $merg_check_start$ §HWSG Triggers Compatibility Patch§! $merg_check_end$"
+ merg_check.4.desc: "§H(少女前线GirlsFrontline) 涅托种族事件包NytoSpeciesEventsPack§! $merg_check_start$ §HGirls Frontline Triggers Compatibility Patch§! $merg_check_end$"
+ merg_check.5.desc: "§HAzur Lane Stellaris DLC§! $merg_check_start$ §HAzur Lane Triggers Compatibility Patch§! $merg_check_end$"
+ merg_check.6.desc: "§HMaiden Frontier Gunstar 少女前线群星故事集 (正史线：危机联合)§! $merg_check_start$ §HMaiden Frontier Gunstar Triggers Compatibility Patch§! $merg_check_end$"
+ merg_check.7.desc: "§HVoyage to Eternity§! $merg_check_start$ §HVoyage to Eternity Triggers Compatibility Patch§! $merg_check_end$"
+ merg_check.8.desc: "§HBlue Archive§! $merg_check_start$ §HBlue Archive Triggers Compatibility Patch§! $merg_check_end$"

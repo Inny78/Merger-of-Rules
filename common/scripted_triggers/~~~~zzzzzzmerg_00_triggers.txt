@@ -646,8 +646,6 @@ is_unfriendly = {
 		has_valid_civic = civic_barbaric_despoilers
 		# Expanded Traits, Civics, Pops, and More
 		has_valid_civic = civic_living_hosts
-		# Electroids
-		has_valid_civic = civic_elec_stellar_devourers
 	}
 }
 
@@ -1089,12 +1087,13 @@ has_any_generator_district_or_building = {
 uses_habitat_capitals = {
 	OR = {
 		is_planet_class = pc_habitat
-		# uses_district_set = habitat
 		# BlueArchive
-		# uses_district_set = BA_auto_habitat
+		is_bluarch_comp_auto_habitat = yes
 		# Gigastructural Engineering & More
 		giga_uses_habitat_capitals = yes
 		has_planet_flag = giga_habitat_capital_compat
+		# Others
+		uses_district_set = habitat
 	}
 }
 

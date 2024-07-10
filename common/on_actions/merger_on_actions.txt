@@ -1,6 +1,11 @@
 # Triggers when the game starts
-on_game_start_country = {
+on_game_start = {
 	events = {
 		merg.1
+	}
+}
+on_game_start_country = {
+	events = {
+		merg_check.1
 	}
 }

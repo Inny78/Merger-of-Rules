@@ -114,7 +114,7 @@ merg_is_habitat = {
 		# Acquisition of Technology
 		is_aot_habitat = yes
 		# Blue Archive
-		# uses_district_set = BA_auto_habitat
+		is_bluarch_comp_auto_habitat = yes
 		# DarkSpace
 		is_ds_skycatcher = yes
 		# Gigastructural Engineering & More
@@ -143,12 +143,12 @@ merg_is_habitat_non_PD = {
 	OR = {
 		is_planet_class = pc_habitat
 		# Gigastructural Engineering & More
-		# uses_district_set = giga_elysium
-		# uses_district_set = giga_orbital
+		giga_is_pc_giga_elysium = yes
+		giga_is_pc_giga_orbital = yes
 		# Acquisition of Technology
 		is_aot_habitat = yes
 		# Blue Archive
-		# uses_district_set = BA_auto_habitat
+		is_bluarch_comp_auto_habitat = yes
 		# Decadence of Sanity
 		is_shroud_entrepot = yes
 		# Habitation
@@ -157,8 +157,6 @@ merg_is_habitat_non_PD = {
 		has_planet_flag = stpg_planetary_habitat
 		# More Events Mod
 		is_pc_mem_vazuran_habitat = yes
-		# NSC2 Modjam Freebooters Origin
-		# uses_district_set = nsc_freebooter_habitat
 		# Nyto Species Pack
 		# uses_district_set = GF_nyto_devil_furnace_world
 		# SRA

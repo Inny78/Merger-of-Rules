@@ -10,13 +10,24 @@ ag_is_ancient_system = { always = no }
 ag_is_mod_country = { always = no }
 ag_is_mod_habitable_ringworld = { always = no }
 ag_is_special_system = { always = no }
-al_has_auth_democratic = { always = no }
-al_has_rare_gov_skill = { always = no }
+al_has_auth_democratic = { has_authority = auth_AL_democratic } # Temp trigger
+al_has_rare_gov_skill = { # Temp trigger
+    OR = {
+        has_trait = leader_trait_AL_Rareskill_governor_Uberzain
+        has_trait = leader_trait_AL_Rareskill_governor_UberzainS
+        has_trait = leader_trait_AL_Rareskill_governor_UberzainEX
+    }
+}
 al_is_nest_planet = { always = no }
+ark_comp_ocean_seaborn = { has_trait = trait_ARK_ocean_seaborn } # Temp trigger
 azl_comp_aut_azur_lane_0 = { always = no }
 azl_comp_aut_azur_lane_1 = { always = no }
 azl_comp_aut_azur_lane_2 = { always = no }
 azl_comp_aut_azur_lane_k = { always = no }
+azl_comp_azur_ocean = { always = no }
+azl_comp_gaia = { always = no }
+azl_comp_gas_giant = { always = no }
+azl_comp_harbor = { always = no }
 azl_comp_robot_mind_relic_core = { always = no }
 annihilator_system = { always = no }
 aot_should_not_crave_runic_power = { always = yes }
@@ -101,7 +112,9 @@ giga_is_pc_ehof_cplanet = { always = no }
 giga_is_pc_ehof_habitat = { always = no }
 giga_is_pc_equatorial_shipyard = { always = no }
 giga_is_pc_flat_world = { always = no }
+giga_is_pc_giga_elysium = { always = no }
 giga_is_pc_giga_empty_space = { always = no }
+giga_is_pc_giga_orbital = { always = no }
 giga_is_pc_maginot_ringworld = { always = no }
 giga_is_pc_giga_penrose_habitable = { always = no }
 giga_is_pc_giga_planetary_computer = { always = no }
@@ -146,6 +159,8 @@ has_aso_space_exploration = { always = no }
 has_auth_holofrixit = { always = no }
 has_battle_thrall_military_leaders_active = { always = no }
 has_bccr = { always = no }
+has_bluearch_compatch = { always = no }
+has_bluarch_comp_auth_kitovos = { always = no }
 has_bug_branch = { always = no }
 has_bugged_criminal_corp_rework = { always = no }
 has_civic_organic_zealots_active = { always = no }
@@ -185,6 +200,7 @@ has_policy_slaveliving_restricted = { always = yes }
 has_reproductive_politics = { always = no }
 has_azur_comp_patch = { always = no }
 has_gf_comp_patch = { always = no }
+has_msgsc_compatch = { always = no }
 has_rs_comp_patch = { always = no }
 has_wsg_comp_patch = { always = no }
 has_sbtg_upgraded_capital = { always = no }
@@ -214,6 +230,7 @@ has_v_phototrophic_trait = { always = no }
 has_v_presapient_trait = { always = no }
 has_v_stealth_trait = { always = no }
 has_v_weak_immune_system = { always = no }
+has_vte_compatch = { always = no }
 has_wg_traits = { always = no }
 has_wsg_genemodding_tech = { always = no }
 has_ww_cro_implants_psionics = { always = no }
@@ -222,6 +239,7 @@ has_ww_houki = { always = no }
 has_ww_psyborg_efficient_processors = { always = no }
 has_ww_reanimated_materials = { always = no }
 has_ww_servitude = { always = no }
+has_ww_victorika = { always = no }
 has_zofe_mc = { always = no }
 hfe_trigger_brainworm_country = { always = no }
 hfe_trigger_is_human_fallen = { always = no }
@@ -253,6 +271,9 @@ is_asharms_empty_space = { always = no }
 is_aso_gg_ice_giant = { always = no }
 is_aso_gg_white_hole = { always = no }
 is_binary = { always = no }
+is_bluarch_comp_auto_habitat = { always = no }
+is_bluearch_comp_campus_planet = { always = no }
+is_bluarch_comp_ruined = { always = no }
 is_blokkat_country_type = { always = no }
 is_bugged_direct_democratic = { always = no }
 is_bugged_dynastic_enterprise = { always = no }
@@ -308,6 +329,7 @@ is_ds_zeitriss_gc = { always = no }
 is_eci_megacorp = { always = no }
 is_ecocentric = { always = no }
 is_eda_empire = { always = no }
+is_elaina = { always = no }
 is_exile_country = { always = no }
 is_exp_clone = { always = no }
 is_exp_cooperative = { always = no }
@@ -506,6 +528,7 @@ Maid_trigger_1_can_support_branch_offices = { always = no }
 Maid_trigger_2_can_build_branch_office_on_planet = { always = yes }
 Maid_trigger_3_can_declare_war = { always = no }
 Maid_trigger_4_can_release_vassal_from_species = { always = no }
+mcb_just_researched_fe_tech = { always = no }
 MECR_trigger_0_community_country_type = { always = no }
 MECR_trigger_1_can_be_part_of_galactic_community = { always = yes }
 MECR_trigger_2_can_be_part_of_galactic_empire = { always = yes }
@@ -527,10 +550,13 @@ pd_is_pd_hive_arc = { always = no }
 pd_is_pd_hive_world = { always = no }
 pd_is_pd_machine_arc = { always = no }
 pd_is_planet_class_all = { always = no }
+pd_is_planet_class_cave = { always = no }
 pd_is_planet_class_gaia = { always = no }
 pd_is_planet_class_hive = { always = no }
 pd_is_planet_class_machine = { always = no }
 pd_is_planet_class_nuked = { always = no }
+pd_is_planet_class_superhabitable = { always = no }
+pd_is_planet_class_tidally_locked = { always = no }
 pd_is_savannah = { always = no }
 pd_is_tropical = { always = no }
 pd_is_tundra = { always = no }
@@ -563,6 +589,9 @@ traits_restrict_worker_jobs = { always = no }
 UGRC_installed = { always = no }
 urmazin_system = { always = no }
 uses_grimdark_infected_world_district = { always = no }
+vte_compatch_hyper_ecu = { always = no }
+vte_compatch_magic_puppet = { always = no }
+vte_compatch_sub_dragon = { always = no }
 wg_compat_has_intelligent_gallo = { always = no }
 wg_compat_has_sh_trait = { always = no }
 wg_compat_has_auth_shenhai = { always = no }

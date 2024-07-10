@@ -98,19 +98,10 @@ merg_is_arcology = {
 		is_planet_class = pc_city
 		pd_is_pd_hive_arc = yes
 		pd_is_pd_machine_arc = yes
-		# AND = {
-		#	uses_district_set = city_world
-		#	# Excluding habitats
-		#	is_pc_mem_vazuran_habitat = no
-		#	is_ds_skycatcher = no
-		#}
 		# Ancient Empire
 		# uses_district_set = ag_city_planet
 		# Azur Lane
-		# uses_district_set = azur_harbour
-		# Gigastructural Engineering & More
-		# uses_district_set = flusion_gaia_ecu
-		# Planetary Diversity
+		azl_comp_harbor = yes
 		# Pokémon
 		# uses_district_set = EOE_city_world
 		# Star fantasy: Castle Scarlet
@@ -118,10 +109,12 @@ merg_is_arcology = {
 		# Star Wars: Kuat Ancient Empire
 		# uses_district_set = Eternal_city
 		# Voyage to Eternity
-		# uses_district_set = KZ_VOY_hyper_ecumenopolis
+		vte_compatch_hyper_ecu = yes
 		# ZOFE
 		# uses_district_set = utopian_city
+		uses_district_set = city_world
 	}
+	is_artificial = no
 }
 
 merg_is_arctic = {
@@ -207,7 +200,7 @@ merg_is_gaia = {
 	OR = {
 		merg_is_gaia_basic = yes
 		# Azur Lane
-		# uses_district_set = azur_gaia
+		azl_comp_gaia = yes
 		# Nanite Machine and Distant Stars Overhaul
 		is_nanite_gaia = yes
 		# Pokémon
@@ -248,7 +241,7 @@ merg_is_gas_giant = {
 		# Astro's Stellaris Overhaul - Galaxy Generation
 		is_aso_gg_ice_giant = yes
 		# Azur Lane
-		# is_planet_class = pc_azur_gas_giant
+		azl_comp_gas_giant = yes
 		# Nanite Machine and Distant Stars Overhaul
 		is_nanite_gas_giant = yes
 	}
@@ -306,7 +299,7 @@ merg_is_nuked = {
 	OR = {
 		merg_is_nuked_basic = yes
 		# BlueArchive
-		# uses_district_set = BA_ruined_planet
+		is_bluarch_comp_ruined = yes
 		# Gigastructural Engineering & More
 		giga_is_katzenland = yes
 	}
@@ -328,7 +321,7 @@ merg_is_aquatic = {
 	OR = {
 		merg_is_ocean = yes
 		# Azur Lane
-		# uses_district_set = azur_ocean
+		azl_comp_azur_ocean = yes
 		# Blue Archive
 		# uses_district_set = BA_planet
 		# Gigastructural Engineering & More

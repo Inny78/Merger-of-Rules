@@ -193,8 +193,8 @@ can_add_claim = {
 	}
 	# Reworked Advanced Ascension
 	custom_tooltip = {
-		fail_text = AAR_failtips_no_claim
-		NOT = { root = { has_country_flag = AAR_flg_cntr_no_claim } }
+		fail_text = AAR_failtip_PREROGATIVE_no_claim
+		NOT = { has_star_flag = AAR_flg_sstm_NO_claim@ROOT }
 	}
 	# StarnetAI/StarTech
 	custom_tooltip = {
@@ -584,8 +584,6 @@ can_generate_leader_from_pop = {
 		root = { has_origin = origin_hive_overmind }
 		# Lithoid Supremacy
 		is_pearl_born_drone = yes
-		# Plentiful Perks
-		has_trait = trait_plentiful_traditions_pt_cocoon
 		# Protoss
 		has_trait = trait_protoss_probe
 		# Rogue Maid (Rogue Servitor Completely Remake)
@@ -717,8 +715,6 @@ can_release_vassal_from_species = {
 					}
 					# Ethics & Civcs Infinity
 					has_eci_flesh_components = yes
-					# Plentiful Perks
-					has_trait = trait_plentiful_traditions_pt_cocoon
 					# Girls Frontline
 					gf_comp_trait_doll = yes
 					# Expanded Traits, Civics, Pops, and More
@@ -923,7 +919,7 @@ can_take_hostile_actions = {
 			always = no
 		}
 	}
-	# # BlueArchive
+	# BlueArchive
 	else_if = {
 		limit = {
 			exists = from
@@ -1359,8 +1355,6 @@ can_colonize_with_pop = {
 		}
 	}
 	NOR = {
-		# Plentiful Perks
-		has_trait = trait_plentiful_traditions_pt_cocoon
 		# Madoka Magica NEW
 		has_trait = trait_mahoshoujo
 		# Diagraphers Trait Mod
@@ -1391,8 +1385,6 @@ can_colonize_with_species = {
 		is_rooted_adult = yes
 		is_living_architecture = yes
 		is_dimorphic_male = yes
-		# Plentiful Perks
-		has_trait = trait_plentiful_traditions_pt_cocoon
 		# ThaumStellaris
 		AND = {
 			merg_has_thaumstellaris = yes
@@ -1439,23 +1431,6 @@ can_colonize_with_species = {
 			is_pearl_born_drone = yes
 		}
 		always = no
-	}
-	# Extra Origins
-	else_if = {
-		limit = { is_symbiote = yes }
-		OR = {
-			root = {
-				any_owned_species = {
-					is_symbiote_of_prevprev = yes
-				}
-			}
-			any_country = {
-				has_diplo_migration_treaty = root
-				any_owned_species = {
-					is_symbiote_of_prevprev = yes
-				}
-			}
-		}
 	}
 	# Lithoid Supremacy Content
 	else_if = {
@@ -1525,22 +1500,22 @@ species_has_happiness = {
 		AND = {
 			has_trait = trait_mechanical
 			# Animated Synthetics Portraits Expanded: Reborn
-			#OR = {
-			#	merg_has_animated_synth = no
-			#	AND = {
-			#		merg_has_animated_synth = yes
-			#		from = { is_machine_empire = yes }
-			#		is_extsynth_synthetic = yes
-			#		NOT = { has_trait = trait_psionic }
-			#	}
-			#	AND = {
-			#		merg_has_animated_synth = yes
-			#		NAND = {
-			#			from = { is_machine_empire = yes }
-			#			is_extsynth_synthetic = yes
-			#		}
-			#	}
-			#}
+			OR = {
+				merg_has_animated_synth = no
+				AND = {
+					merg_has_animated_synth = yes
+					from = { is_machine_empire = yes }
+					is_extsynth_synthetic = yes
+					NOT = { has_trait = trait_psionic }
+				}
+				AND = {
+					merg_has_animated_synth = yes
+					NAND = {
+						from = { is_machine_empire = yes }
+						is_extsynth_synthetic = yes
+					}
+				}
+			}
 			# Vanilla
 			OR = {
 				NOT = { exists = from }
@@ -1683,8 +1658,6 @@ can_species_procreate = {
 		is_pearl_born_drone = yes
 		# Madoka Magica NEW
 		has_trait = trait_mahoshoujo
-		# Plentiful Traditions - Extra Perks
-		has_trait = trait_plentiful_traditions_pt_cocoon
 		# Wandering Witch: Voyagers
 		has_ww_dummy = yes
 	}
@@ -1811,9 +1784,8 @@ can_species_procreate = {
 	if = {
 		limit = { 
 			OR = {
-				has_trait = trait_witch
+				is_elaina = yes
 				has_trait = trait_victorika
-				has_trait = trait_elaina_descendant
 			}
 		}
 		OR = {
@@ -1900,7 +1872,7 @@ can_species_be_assembled = {
 	OR = {
 		# Arknights Near Future
 		AND = {
-			has_trait = trait_ARK_ocean_seaborn
+			ark_comp_ocean_seaborn = yes
 			root.owner = {
 				has_country_flag = arknights_ocean_country
 			}
@@ -1945,7 +1917,7 @@ can_species_be_assembled = {
 			}
 			# Voyage to Eternity
 			KZ_VOY_trgr_plnt_ASSEMBLY = yes
-			if = { limit = { has_trait = trait_KZ_VOY_magic_puppet }
+			if = { limit = { vte_compatch_magic_puppet = yes }
 				KZ_VOY_can_assemble_magic_puppet = yes
 			}
 			# Vanilla
@@ -2083,11 +2055,6 @@ can_species_be_assembled = {
 					NOT = { check_variable = { which = clone_pops_missing value = 0 } }
 				}
 			}
-			# Plentiful Traditions - Extra Perks
-			else_if = {
-				limit = { root.owner = { has_ascension_perk = ap_total_assimilation } }
-				has_trait = trait_plentiful_traditions_pt_cocoon
-			}
 			# Nirvana Empire Project
 			else_if = {
 				limit = {
@@ -2115,13 +2082,6 @@ can_species_be_assembled = {
 				limit = { has_v_asexual_reproduction = yes }
 				root = {
 					any_owned_species = { is_exact_same_species = prevprev }
-				}
-			}
-			else_if = {
-				limit = { has_v_heterogamous_reproduction = yes }
-				root = {
-					any_owned_species = { is_exact_same_species = prevprev }
-					habitability = { who = this value >= 0.6 }
 				}
 			}
 			# Wandering Witch: Voyagers
@@ -2243,16 +2203,52 @@ can_species_be_assembled = {
 	}
 	# Voyage to Eternity
 	if = {
-		limit = { 
-			OR = {
-				has_trait = trait_KZ_VOY_sub_terran_dragon
-				has_trait = trait_KZ_VOY_sub_terran_dragon_SP
-			}
-		}
+		limit = { vte_compatch_sub_dragon = yes }
 		KZ_VOY_trgr_plnt_CLONE = yes
 	}
 	# TimeMod
 	TIME_RULE_trgr_CAN_spcs_be_assembled = yes
+	# V_TRAITS
+	if = {
+		limit = {
+			has_v_difficult_reproduction = yes
+		}
+		root = {
+			habitability = { who = this value >= 0.8 }
+		}
+	}
+	if = {
+		limit = {
+			has_v_embryonic_diapause = yes
+		}
+		root = {
+			NOT = { has_v_diapause_modifier = yes }
+		}
+	}
+	if = {
+		limit = {
+			is_v_symbiont_a = yes
+		}
+		root = {
+			check_variable = { which = v_num_symbiont value <= 0 }
+		}
+	}
+	if = {
+		limit = {
+			is_v_symbiont_b = yes
+		}
+		root = {
+			check_variable = { which = v_num_symbiont value >= 0 }
+		}
+	}
+	if = {
+		limit = {
+			has_v_behavioral_sink = yes
+		}
+		root = {
+			check_variable = { which = v_behavioral_sink_count value >= 0 }
+		}
+	}
 	# Vanilla
 	has_population_control = { country = root.owner type = no }
 }
@@ -2296,7 +2292,7 @@ can_orbital_bombard = {
 	NOR = {
 		any_controlled_ship = { is_ship_size = colossus }
 		# Real Space New Frontiers
-		from = { is_planet_class = pc_hollow }
+		from = { is_rs_hollow = yes }
 		# Star Wars: Kuat Ancient Empire
 		FROM.OWNER = { is_country_type = kuat_fire_base_hositle }
 		FROM = { has_planet_flag = enable_kuat_shield }
@@ -2494,7 +2490,7 @@ has_full_sensor_range = {
 		# Core Framework & Modmenu
 		has_country_flag = z_fw_r_celestial_orrey_activited
 		has_country_flag = z_fw_r_cheat_quantum_beacon_activited
-		# # BlueArchive species pack
+		# BlueArchive
 		has_modifier = modifier_BA_Veritas_4
 		# Galaxius
 		AND = {
@@ -3319,14 +3315,6 @@ can_resettle_pop = {
 		}
 		always = yes
 	}
-	# Extra Origins
-	else_if = {
-		limit = {
-			is_symbiote = yes
-			planet_has_symbiotes = no
-		}
-		always = yes
-	}
 	else_if = {
 		limit = {
 			is_being_purged = no
@@ -3404,14 +3392,6 @@ can_country_resettle = {
 			#don't need to show this as tooltip only shown when all game rule fails, and this is a special case
 			any_owned_planet = { is_doomsday_planet = yes }
 		}
-		# Extra Origins
-		hidden_trigger = {
-			any_owned_pop = {
-				is_symbiote = yes
-				is_being_purged = no
-				planet_has_symbiotes = no
-			}
-		}
 	}
 }
 
@@ -3449,8 +3429,6 @@ pop_generates_crime = {
 	is_non_sapient_robot = no
 	is_being_assimilated = no
 	NOR = {
-		# Plentiful Perks
-		has_trait = trait_plentiful_traditions_pt_cocoon
 		# Warship Girls R And MIST Species
 		AND = {
 			merg_has_warship_girls = yes
@@ -3662,38 +3640,17 @@ should_force_decline_species = {
 			}
 		}
 		# V_TRAITS
-		AND = {
-			custom_tooltip = {
-				success_text = ALLELOPATHY_FORCE_DECLINE
-				exists = this
-				NOR = {
-					has_v_allelopathy = yes
-					has_v_cyborg_bubble = yes
-					has_trait = trait_machine_unit
-					has_trait = trait_mechanical
-				}
-				from = {
-					any_owned_species = {
-						has_v_allelopathy = yes
-					}
-					check_variable = { which = v_num_allelopathic_pops value >= 0 }
-				}
-			}
-		}
-		AND = {
-			custom_tooltip = {
-				success_text = WEAK_IMMUNE_SYSTEM_FORCE_DECLINE
-				exists = this
-				has_v_weak_immune_system = yes
-				has_v_cyborg_bubble = no
-				from = {
-					any_owned_species = {
-						NOR = {
-							has_v_weak_immune_system = yes
-							has_v_cyborg_bubble = yes
-							has_trait = trait_machine_unit
-							has_trait = trait_mechanical
-						}
+		custom_tooltip = {
+			success_text = WEAK_IMMUNE_SYSTEM_FORCE_DECLINE
+			has_v_weak_immune_system = yes
+			has_v_cyborg_bubble = no
+			from = {
+				any_owned_species = {
+					NOR = {
+						has_v_weak_immune_system = yes
+						has_v_cyborg_bubble = yes
+						has_trait = trait_machine_unit
+						has_trait = trait_mechanical
 					}
 				}
 			}
@@ -3711,15 +3668,15 @@ can_build_branch_offices = {
 			has_valid_civic = civic_galactic_sovereign_megacorp
 			# Arknights Near Future
 			has_valid_civic = civic_business_union
-			# Asssault Lily
-			has_authority = auth_AL_democratic
+			# Assault Lily
+			al_has_auth_democratic = yes
 			# Azur Lane Stellaris DLC
 			azl_comp_aut_azur_lane_0 = yes
 			azl_comp_aut_azur_lane_1 = yes
 			azl_comp_aut_azur_lane_2 = yes
 			azl_comp_aut_azur_lane_k = yes
-			# BlueArchive species pack
-			has_authority = auth_kivotos
+			# BlueArchive
+			has_bluarch_comp_auth_kitovos = yes
 			# EDA
 			has_authority = auth_traveler
 			# Ethical Gestalts
@@ -3777,8 +3734,8 @@ can_support_branch_offices = {
 				azl_comp_aut_azur_lane_1 = yes
 				# Arknights Near Future
 				has_valid_civic = civic_business_union
-				# BlueArchive species pack
-				has_authority = auth_kivotos
+				# BlueArchive
+				has_bluarch_comp_auth_kitovos = yes
 				# Ethics & Civics Infinity
 				is_eci_megacorp = yes
 				# More Corporate Authorities
@@ -3913,7 +3870,7 @@ can_build_branch_office_on_planet = {
 					al_has_auth_democratic = yes
 					# Azur Lane Stellaris DLC
 					azl_comp_aut_azur_lane_1 = yes
-					# BlueArchive species pack
+					# BlueArchive
 					has_ascension_perk = ap_BA_new_frontier
 					# Human Fallen Empire
 					AND = {
@@ -4202,7 +4159,7 @@ is_criminal_syndicate_rule = {
 		has_valid_civic = civic_ev_criminal_ship
 		# Cruel Conquerers
 		is_cruel_empire = yes
-		# # BlueArchive species pack
+		# # BlueArchive
 		has_ascension_perk = ap_BA_new_frontier
 		# Ethical Gestalts
 		has_policy_flag = infiltration_allowed
@@ -4385,12 +4342,8 @@ can_be_sold_on_slave_market = {
 		# Diagraphers Trait Mod
 		is_living_architecture = yes
 		is_rooted_adult = yes
-		# Extra Origins
-		is_symbiote = yes
-		# Plentiful Perks
-		has_trait = trait_plentiful_traditions_cocoon
 		# Planetary Diversity
-		is_organic_fourschildren = yes
+		# is_organic_fourschildren = yes
 		# Wandering Witch: Voyagers
 		has_ww_servitude = yes
 		has_ww_reanimated_materials = yes
@@ -4637,19 +4590,6 @@ can_pop_auto_migrate = {
 		is_living_architecture = yes
 		is_rooted_adult = yes
 		has_trait = trait_presapient_earthbound
-	}
-	# Extra Origins
-	if = {
-		limit = {
-			is_symbiote = yes
-			planet_has_symbiotes = yes
-		}
-		root = {
-			any_owned_pop = {
-				is_same_species = prevprev
-				NOT = { is_same_value = prev }
-			}
-		}
 	}
 	# Ethical Gestalts
 	if = {

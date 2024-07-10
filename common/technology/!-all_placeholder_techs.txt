@@ -11,6 +11,7 @@ tech_ariphaos_sensors_wormhole = { cost = 0 area = physics category = { particle
 tech_advanced_dummy_workers = { cost = 0 area = engineering category = { industry } tier = 2 potential = { merg_has_wandering_witch = yes } weight = 0 }
 tech_dummy_leaders = { cost = 0 area = engineering category = { industry } tier = 4 potential = { merg_has_wandering_witch = yes } weight = 0 }
 tech_dummy_workers = { cost = 0 area = engineering category = { industry } tier = 1 potential = { merg_has_wandering_witch = yes } weight = 0 }
+tech_eda_core = { cost = 0 area = physics category = { industry } tier = 2 potential = { merg_has_eda = yes } weight = 0 }
 tech_nep_phantom_phase_shift = { cost = 0 area = physics tier = 5 category = { particles } potential = { merg_has_wild_space = yes } weight = 0 }
 tech_nep_whitegoo_3_2 = { cost = 0 area = society tier = 4 category = { statecraft } potential = { merg_has_wild_space = yes } weight = 0 }
 tech_pdhabitat_2 = { cost = 0 area = engineering category = { voidcraft } tier = 2 potential = { merg_has_pd_planetary_habitats = yes } weight = 0 }

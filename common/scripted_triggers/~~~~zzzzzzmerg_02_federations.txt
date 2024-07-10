@@ -1,0 +1,20 @@
+is_doomsday_planet = {
+    OR = {
+        has_modifier = doomsday_1
+        has_modifier = doomsday_2
+        has_modifier = doomsday_3
+        has_modifier = doomsday_4
+        has_modifier = doomsday_5
+        # Expanded Events
+        has_modifier = deteriorating_ecosystem
+        has_modifier = catastrophe_approach
+        has_modifier = apocalypse
+        has_modifier = ravenous_locusts
+        has_modifier = planet_active_worm
+        # Endless Frontier: An Event Mod
+        has_modifier = mzilli_events_dying_world
+        has_modifier = mzilli_decaying_moon_3
+        # Forgotten Empires
+        has_modifier = scfe_rooted_doom
+    }
+}

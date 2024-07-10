@@ -143,12 +143,12 @@ can_fill_specialist_job_trigger = {
 					has_technology = tech_droid_workers
 				}
 			}
-			AND = {
-				has_eci_thl_doll = yes
-				owner = {
-					has_technology = tech_automatic_dolls
-				}
-			}
+			#AND = {
+			#	has_eci_thl_doll = yes
+			#	owner = {
+			#		has_technology = tech_automatic_dolls
+			#	}
+			#}
 		}
 		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
 		if = {

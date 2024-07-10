@@ -70,15 +70,15 @@ planet_event = {
 		from = { country_event = { id = action.83 } }
 		# Planetary Diversity
 		if = {
-			limit = { is_pd_cave = yes }
+			limit = { pd_is_planet_class_cave = yes }
 			pd_change_to_nuked_cave = yes
 		} 
 		else_if = {
-			limit = { is_pd_superhab = yes }
+			limit = { pd_is_planet_class_superhabitable = yes }
 			pd_change_to_nuked_superhab = yes
 		} 
 		else_if = {
-			limit = { is_pd_tidally_locked = yes }
+			limit = { pd_is_planet_class_tidally_locked = yes }
 			pd_change_to_nuked_tl = yes
 		} 
 		else_if = {
@@ -87,7 +87,7 @@ planet_event = {
 				OR = {
 					is_planet_class = pc_city
 					is_planet_class = pc_relic
-					is_pd_arcology = yes
+					pd_is_pd_arcology = yes
 				}
 			}
 			pd_change_to_nuked_relic = yes

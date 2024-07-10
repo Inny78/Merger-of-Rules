@@ -44,6 +44,9 @@ merg_has_uac = { has_global_flag = has_uac_mod }
 # Azur Lane Stellaris DLC
 merg_has_azur_lane = { has_global_flag = azurlane_KuRUMiiii }
 
+# BlueArchive
+merg_has_bluearchive = { has_global_flag = Kivotos_detected }
+
 # Buildings and Districts Overhaul and Expansion
 merg_has_bdoe = { has_global_flag = bdoe_active }
 
@@ -125,6 +128,9 @@ merg_has_galaxius = { has_global_flag = ie_flag }
 # Gigastructural Engineering and More 1121692237
 merg_has_gigastructures = { has_gigastructures = yes }
 
+# Girls Frontline
+merg_has_girls_frontline = { has_global_flag = has_NYTO_mod }
+
 # Guilli's Planet Modifiers and Features
 merg_has_gpm = { gpm_mod_active = yes }
 
@@ -147,6 +153,9 @@ merg_has_kancolle = {
 
 # Lithoid Supremacy
 merg_has_lithoid_sup = { has_global_flag = lithoidsupremacy }
+
+# Maiden Frontier Gunstar Story Collection (少女前线群星故事集【正史线：危机联合】)
+merg_has_gunstar = { has_global_flag = GF_Stellairs_Crisis_Coalition_Installed }
 
 # Omega's Stellaris Additions
 merg_has_omega_add = { has_global_flag = osa_active }

@@ -978,7 +978,16 @@ can_destroy_planet_with_PLANET_KILLER_ARK_FROSTNOVA = {
 		fail_text = ark_psionic
 		NOR = {
 			is_planet_class = pc_shrouded
-			merg_is_shroud_habitable = yes
+			# merg_is_shroud_habitable = yes
+		}
+	}
+	custom_tooltip = {
+		fail_text = ark_shattered
+		NOR = {
+			is_planet_class = pc_shattered
+			is_planet_class = pc_shattered_2
+			is_planet_class = pc_broken
+			is_planet_class = pc_machine_broken
 		}
 	}
 	custom_tooltip = {
@@ -1210,10 +1219,8 @@ can_destroy_planet_with_Sweepers = {
 	}
 	custom_tooltip = {
 		fail_text = What_are_you_doing
-		NOR = {
-			uses_district_set = BA_planet
-			uses_district_set = BA_ruined_planet
-		}
+		is_bluearch_comp_campus_planet = no
+		is_bluarch_comp_ruined = no
 	}
 	custom_tooltip = {
 		fail_text = is_valid_target_for_sweeper
@@ -1222,96 +1229,6 @@ can_destroy_planet_with_Sweepers = {
 			OR = {
 				is_same_empire = FROM.owner
 				is_at_war_with = FROM.owner
-			}
-		}
-	}
-}
-
-############################### Corsair's Custom Empires: Eldanær Stellar Authority ###############################
-can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
-	custom_tooltip = {
-		fail_text = merg_forbidden_target
-		merg_is_forbidden_target = no
-	}
-	custom_tooltip = {
-		fail_text = is_not_a_habitable_planet_or_megastructure
-		# intentionally omits crisis planet types (pc_ai, pc_infested) because Pops can't live there
-		# intentionally omits pc_machine because only Driven Assimilator cyborgs or robotic Pops can live there
-		OR = {
-			habitable_planet = yes
-			merg_is_nuked_basic = yes
-			AND = {
-				# hive worlds are only allowed for hive empires
-				FROM.owner = { is_hive_empire = yes }
-				merg_is_hive_world = yes
-			}
-			habitable_structure = yes
-		}
-	}
-	custom_tooltip = {
-		fail_text = is_shielded
-		merg_is_shielded = no
-	}
-	custom_tooltip = {
-		fail_text = is_not_hostile_or_primitive
-		OR = {
-			planet_is_hostile = yes
-			AND = {
-				exists = owner
-				owner = { is_country_type = primitive }
-			}
-		}
-	}
-	if = {
-		limit = { exists = owner }
-		# primitive planet must be within borders
-		if = {
-			limit = {
-				owner = {
-					is_country_type = primitive
-				}
-			}
-			custom_tooltip = {
-				fail_text = primitives_not_in_borders
-				exists = space_owner
-				space_owner = { is_country = FROM.owner }
-			}
-		}
-		# planets owned by the attacker are targetable if they have any pops that can be necrophaged
-		else_if = {
-			limit = { is_owned_by = FROM.owner }
-			custom_tooltip = {
-				fail_text = no_necrophagable_pops
-				any_owned_pop = {
-					# similar logic as species_can_be_necrophaged (common\scripted_triggers\00_scripted_triggers.txt)
-					is_robot_pop = no
-					is_sapient = yes
-					NOT = { is_same_species = FROM.owner_species }
-					species = {
-						species_has_happiness_with_owner = FROM.owner
-					}
-				}
-			}
-		}
-		# otherwise at least half the pops must be either the main species of the attacker or necrophagable
-		else = {
-			custom_tooltip = {
-				fail_text = not_enough_necrophagable_pops
-				pop_percentage = {
-					percentage >= 0.5
-					limit = {
-						is_robot_pop = no
-						is_sapient = yes
-						# assumes that species of the same type as the attacker are compelled to revolt - so they count towards the minimum
-						species = {
-							species_has_happiness_with_owner = FROM.owner
-						}
-					}
-					exclude = {
-						is_robot_pop = no
-						is_sapient = no
-					}
-				}
 			}
 		}
 	}
