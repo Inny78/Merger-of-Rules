@@ -14,6 +14,9 @@ remove_capital_building = {
 		building_slave_major_capital = { remove_building = building_slave_major_capital }
 		building_ancient_palace = { remove_building = building_ancient_palace }
 		building_ancient_control_center = { remove_building = building_ancient_control_center }
+		building_ancient_hive_capital = { remove_building = building_ancient_hive_capital }
+		building_fe_xeno_zoo = { remove_building = building_fe_xeno_zoo }
+		building_hab_fe_capital = { remove_building = building_hab_fe_capital }
 		# All that is GRIMDARK
 		building_hive_major_capital_sick = { remove_building = building_hive_major_capital_sick }
 		building_system_capital_gr = { remove_building = building_system_capital_gr }
@@ -21,21 +24,30 @@ remove_capital_building = {
 		building_avb_capital_4 = { remove_building = building_avb_capital_4 }
 		building_avb_capital_5 = { remove_building = building_avb_capital_5 }
 		building_avb_capital_6 = { remove_building = building_avb_capital_6 }
+		building_avb_hab_capital_4 = { remove_building = building_avb_hab_capital_4 }
 		building_avb_hive_capital_3 = { remove_building = building_avb_hive_capital_3 }
 		building_avb_hive_capital_4 = { remove_building = building_avb_hive_capital_4 }
 		building_avb_machine_capital_4 = { remove_building = building_avb_machine_capital_4 }
 		building_avb_machine_capital_5 = { remove_building = building_avb_machine_capital_5 }
 		building_avb_machine_capital_6 = { remove_building = building_avb_machine_capital_6 }
 		building_avb_resort_capital_3 = { remove_building = building_avb_resort_capital_3 }
+		building_avb_slave_capital_3 = { remove_building = building_avb_slave_capital_3 }
 		# Azur Lane Stellaris DLC
 		azur_building_mind_capital = { remove_building = azur_building_mind_capital }
 		azur_building_mind_net_capital = { remove_building = azur_building_mind_net_capital }
 		# Dawn of the Republic
 		building_galactic_senate = { remove_building = building_galactic_senate }
+		# EDA
+		eda_building_imperial_capital = { remove_building = eda_building_imperial_capital }
 		# Empires Expanded
 		building_bok_capital_1 = { remove_building = building_bok_capital_1 }
 		building_bok_capital_2 = { remove_building = building_bok_capital_2 }
 		building_bok_capital_3 = { remove_building = building_bok_capital_3 }
+		# More Cosmogenesis Buildings
+		building_hab_cosmo_capital = { remove_building = building_hab_cosmo_capital }
+		building_cosmo_hive_capital = { remove_building = building_cosmo_hive_capital }
+		building_cosmo_machine_capital = { remove_building = building_cosmo_machine_capital }
+		building_cosmo_capital = { remove_building = building_cosmo_capital }
 		# Nirvana Empire Project
 		building_nirvana_empire_palace = { remove_building = building_nirvana_empire_palace }
 		# Real Space - Planetary Stations
@@ -76,11 +88,5 @@ remove_capital_building = {
 		building_wula_order_keep = { remove_building = building_wula_order_keep }
 		building_wula_gene_bank = { remove_building = building_wula_gene_bank }
 		building_fe_xeno_zoo = { remove_building = building_fe_xeno_zoo }
-		# ZOFE Ascension
-		building_fe_palace = { remove_building = building_fe_palace }
-		building_ae_palace = { remove_building = building_ae_palace }
-		building_lt_palace = { remove_building = building_lt_palace }
-		building_oe_palace = { remove_building = building_oe_palace }
-		building_le_origin_palace = { remove_building = building_le_origin_palace }
 	}
 }
