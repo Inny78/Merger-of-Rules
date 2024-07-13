@@ -846,12 +846,8 @@ has_research_building = {
 		has_building = ag_ancient_lab_overlord
 		# APSR
 		has_apsr_produce_science = yes
-		# AVB
-		has_building = building_avb_research_lab_4
-		has_building = building_avb_research_lab_5
-		has_building = building_avb_research_lab_6
-		has_building = building_avb_institute_2
-		has_building = building_avb_supercomputer_2
+		# Additional Vanilla Buildings
+		has_avb_research_building = yes
 		# Decadence of Sanity
 		has_district = district_shroud_research
 		# District Overhaul - FunEFork
@@ -1048,6 +1044,8 @@ has_any_generator_district_or_building = {
 		has_district = district_generator_uncapped
 		has_district = district_rw_generator
 		merg_has_energy_building = yes
+		# Additional Vanilla Buildings
+		has_avb_generator_building = yes
 		# Decadence of Sanity
 		has_district = district_shroud_resource
 		# District Overhaul - FunEFork

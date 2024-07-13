@@ -173,7 +173,7 @@ planet_event = {
 						has_plantoids = yes
 						space_owner = {
 							NOT  = { has_country_flag = harvested_radiotrophic_dna }
-							species = { NOR = { has_trait = trait_plantoid_radiotrophic is_pd_radiotrophic_mutant = yes } }
+							species = { NOT = { has_trait = trait_plantoid_radiotrophic} }
 						}
 						is_homeworld = no
 					}

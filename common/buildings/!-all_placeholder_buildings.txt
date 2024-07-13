@@ -314,3 +314,6 @@ building_hab_cosmo_capital = { potential = { always = no } allow = { always = no
 building_cosmo_hive_capital = { potential = { always = no } allow = { always = no } }
 building_cosmo_machine_capital = { potential = { always = no } allow = { always = no } }
 building_cosmo_capital = { potential = { always = no } allow = { always = no } }
+building_fallen_palace = { potential = { always = no } allow = { always = no } }
+building_fallen_ancient_palace = { potential = { always = no } allow = { always = no } }
+building_resort_cosmo_capital = { potential = { always = no } allow = { always = no } }

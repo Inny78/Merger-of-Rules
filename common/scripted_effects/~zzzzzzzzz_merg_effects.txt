@@ -44,6 +44,7 @@ remove_capital_building = {
 		building_bok_capital_2 = { remove_building = building_bok_capital_2 }
 		building_bok_capital_3 = { remove_building = building_bok_capital_3 }
 		# More Cosmogenesis Buildings
+		building_resort_cosmo_capital = { remove_building = building_resort_cosmo_capital }
 		building_hab_cosmo_capital = { remove_building = building_hab_cosmo_capital }
 		building_cosmo_hive_capital = { remove_building = building_cosmo_hive_capital }
 		building_cosmo_machine_capital = { remove_building = building_cosmo_machine_capital }

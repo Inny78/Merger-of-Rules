@@ -37,6 +37,9 @@ has_upgraded_capital = {
 				has_building = building_nightelf_palace
 				# Special Colonies Overhaul
 				has_building = building_SCO_resort_system_capital
+				# ZOFE
+				has_building = building_fallen_palace
+				has_building = building_fallen_ancient_palace
 			}
 		}
 	}
@@ -72,6 +75,9 @@ has_upgraded_capital = {
 				has_building = building_nightelf_palace
 				# Special Colonies Overhaul
 				has_building = building_SCO_slave_system_capital
+				# ZOFE
+				has_building = building_fallen_palace
+				has_building = building_fallen_ancient_palace
 			}
 		}
 	}
@@ -86,7 +92,7 @@ has_upgraded_capital = {
 				has_building = building_imperial_capital
 				has_building = building_imperial_machine_capital
 				has_building = building_imperial_hive_capital
-				# ACOT
+				# ACOT / AOT / ZOFE
 				has_building = building_acot_dm_ancient_palace
 				has_building = building_acot_ae_ancient_palace
 				has_building = building_acot_dm_ancient_hive_cluster
@@ -94,11 +100,11 @@ has_upgraded_capital = {
 				has_building = building_acot_dm_ancient_control_center
 				has_building = building_acot_ae_ancient_control_center
 				has_sbtg_upgraded_capital = yes
-				has_building = building_ancient_palace
+				has_building = building_hab_fe_capital
 				has_eternal_palace = yes
 				has_building = building_phanon_tower
 				has_building = building_acot_ruined_giga_fortress
-				# AOT
+				has_building = building_hab_fe_capital
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
 				has_building = building_stellarite_hive_cluster
@@ -144,8 +150,6 @@ has_upgraded_capital = {
 				has_building = building_eternal_palace
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
-				# ZOFE Ascension
-				zofeac_capital_buildings = yes
 			}
 		}
 	}
@@ -162,7 +166,7 @@ has_upgraded_capital = {
 				has_building = building_prison_capital
 				has_building = building_prison_major_capital
 				has_building = building_prison_system_capital
-				# ACOT
+				# ACOT / AOT / ZOFE
 				has_building = building_acot_dm_ancient_palace
 				has_building = building_acot_ae_ancient_palace
 				has_building = building_acot_dm_ancient_hive_cluster
@@ -170,11 +174,11 @@ has_upgraded_capital = {
 				has_building = building_acot_dm_ancient_control_center
 				has_building = building_acot_ae_ancient_control_center
 				has_sbtg_upgraded_capital = yes
-				has_building = building_ancient_palace
+				has_building = building_hab_fe_capital
 				has_eternal_palace = yes
 				has_building = building_phanon_tower
 				has_building = building_acot_ruined_giga_fortress
-				# AOT
+				has_building = building_hab_fe_capital
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
 				has_building = building_stellarite_hive_cluster
@@ -183,8 +187,6 @@ has_upgraded_capital = {
 				has_building = building_phanon_control_center
 				# More Cosmogenesis Buildings
 				has_building = building_hab_cosmo_capital
-				# ZOFE Ascension
-				zofeac_capital_buildings = yes
 			}
 		}
 	}
@@ -197,17 +199,17 @@ has_upgraded_capital = {
 				has_building = building_hive_capital
 				has_building = building_hive_major_capital
 				has_building = building_imperial_hive_capital
-				# ACOT
+				# ACOT / AOT / ZOFE
 				has_building = building_acot_dm_ancient_hive_cluster
 				has_building = building_acot_ae_ancient_hive_cluster
 				has_sbtg_upgraded_capital = yes
 				has_building = building_phanon_tower
 				has_building = building_acot_ruined_giga_fortress
-				# All That Is GRIMDARK
-				has_building = building_hive_major_capital_sick
-				# AOT
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_hive_cluster
+				has_building = building_ancient_hive_capital
+				# All That Is GRIMDARK
+				has_building = building_hive_major_capital_sick
 				# AVB
 				has_building = building_avb_hive_capital_3
 				has_building = building_avb_hive_capital_4
@@ -235,7 +237,7 @@ has_upgraded_capital = {
 				has_building = building_machine_major_capital
 				has_building = building_machine_system_capital
 				has_building = building_imperial_machine_capital
-				# ACOT
+				# ACOT / AOT / ZOFE
 				has_building = building_acot_dm_ancient_control_center
 				has_building = building_acot_ae_ancient_control_center
 				has_sbtg_upgraded_capital = yes
@@ -243,7 +245,7 @@ has_upgraded_capital = {
 				has_building = building_ancient_control_center
 				has_building = building_phanon_tower
 				has_building = building_acot_ruined_giga_fortress
-				# AOT
+				has_building = building_ancient_control_center
 				has_building = building_stellarite_control_center
 				has_building = building_phanon_control_center
 				# AVB
@@ -339,8 +341,9 @@ has_upgraded_capital = {
 				has_building = building_stellarite_galactic_machine_capital
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
-				# ZOFE Ascension
-				zofeac_capital_buildings = yes
+				# ZOFE
+				has_building = building_fallen_palace
+				has_building = building_fallen_ancient_palace
 			}
 		}
 	}
@@ -384,6 +387,9 @@ has_major_upgraded_capital = {
 				has_building = building_nightelf_palace
 				# Special Colonies Overhaul
 				has_building = building_SCO_resort_system_capital
+				# ZOFE
+				has_building = building_fallen_ancient_palace
+				has_building = building_fallen_palace
 			}
 		}
 	}
@@ -418,6 +424,9 @@ has_major_upgraded_capital = {
 				has_building = building_nightelf_palace
 				# Special Colonies Overhaul
 				has_building = building_SCO_slave_system_capital
+				# ZOFE
+				has_building = building_fallen_ancient_palace
+				has_building = building_fallen_palace
 			}
 		}
 	}
@@ -431,7 +440,7 @@ has_major_upgraded_capital = {
 				has_building = building_imperial_capital
 				has_building = building_imperial_machine_capital
 				has_building = building_imperial_hive_capital
-				# ACOT
+				# ACOT / AOT / ZOFE
 				has_building = building_acot_dm_ancient_palace
 				has_building = building_acot_ae_ancient_palace
 				has_building = building_acot_dm_ancient_hive_cluster
@@ -439,15 +448,17 @@ has_major_upgraded_capital = {
 				has_building = building_acot_dm_ancient_control_center
 				has_building = building_acot_ae_ancient_control_center
 				has_sbtg_upgraded_capital = yes
-				has_building = building_ancient_palace
+				has_building = building_hab_fe_capital
 				has_eternal_palace = yes
 				has_building = building_phanon_tower
 				has_building = building_acot_ruined_giga_fortress
-				# AOT
+				has_building = building_hab_fe_capital
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_palace
+				has_building = building_phanon_hive_cluster
+				has_building = building_phanon_control_center
 				# AVB
 				has_building = building_avb_hab_capital_3
 				# Dawn of the Republic
@@ -485,8 +496,6 @@ has_major_upgraded_capital = {
 				has_building = building_eternal_nexus_ai
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
-				# ZOFE Ascension
-				zofeac_capital_buildings = yes
 			}
 		}
 	}
@@ -501,7 +510,7 @@ has_major_upgraded_capital = {
 				has_building = building_station_system_capital
 				has_building = building_prison_major_capital
 				has_building = building_prison_system_capital
-				# ACOT
+				# ACOT / AOT / ZOFE
 				has_building = building_acot_dm_ancient_palace
 				has_building = building_acot_ae_ancient_palace
 				has_building = building_acot_dm_ancient_hive_cluster
@@ -509,19 +518,19 @@ has_major_upgraded_capital = {
 				has_building = building_acot_dm_ancient_control_center
 				has_building = building_acot_ae_ancient_control_center
 				has_sbtg_upgraded_capital = yes
-				has_building = building_ancient_palace
+				has_building = building_hab_fe_capital
 				has_eternal_palace = yes
 				has_building = building_phanon_tower
 				has_building = building_acot_ruined_giga_fortress
-				# AOT
+				has_building = building_hab_fe_capital
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_palace
+				has_building = building_phanon_hive_cluster
+				has_building = building_phanon_control_center
 				# More Cosmogenesis Buildings
 				has_building = building_hab_cosmo_capital
-				# ZOFE Ascension
-				zofeac_capital_buildings = yes
 			}
 		}
 	}
@@ -533,12 +542,13 @@ has_major_upgraded_capital = {
 			OR = {
 				has_building = building_hive_major_capital
 				has_building = building_imperial_hive_capital
-				# ACOT
+				# ACOT / AOT / ZOfE
 				has_building = building_acot_dm_ancient_hive_cluster
 				has_building = building_acot_ae_ancient_hive_cluster
 				has_sbtg_upgraded_capital = yes
 				has_building = building_phanon_tower
 				has_building = building_acot_ruined_giga_fortress
+				has_building = building_ancient_hive_capital
 				# All that is GRIMDARK
 				has_building = building_hive_major_capital_sick
 				# AOT
@@ -570,7 +580,7 @@ has_major_upgraded_capital = {
 				has_building = building_machine_major_capital
 				has_building = building_machine_system_capital
 				has_building = building_imperial_machine_capital
-				# ACOT
+				# ACOT / AOT / ZOFE
 				has_building = building_acot_dm_ancient_control_center
 				has_building = building_acot_ae_ancient_control_center
 				has_sbtg_upgraded_capital = yes
@@ -578,7 +588,7 @@ has_major_upgraded_capital = {
 				has_building = building_ancient_control_center
 				has_building = building_phanon_tower
 				has_building = building_acot_ruined_giga_fortress
-				# AOT
+				has_building = building_ancient_control_center
 				has_building = building_stellarite_control_center
 				has_building = building_phanon_control_center
 				# AVB
@@ -615,7 +625,7 @@ has_major_upgraded_capital = {
 				has_building = building_major_capital
 				has_building = building_system_capital
 				has_building = building_imperial_capital
-				# ACOT
+				# ACOT / AOT / ZOFE
 				has_building = building_acot_dm_ancient_palace
 				has_building = building_acot_ae_ancient_palace
 				has_sbtg_upgraded_capital = yes
@@ -623,11 +633,10 @@ has_major_upgraded_capital = {
 				has_eternal_palace = yes
 				has_building = building_phanon_tower
 				has_building = building_acot_ruined_giga_fortress
-				# All that is GRIMDARK
-				has_building = building_system_capital_gr
-				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_phanon_palace
+				# All that is GRIMDARK
+				has_building = building_system_capital_gr
 				# AVB
 				has_building = building_avb_capital_4
 				has_building = building_avb_capital_5
@@ -670,8 +679,9 @@ has_major_upgraded_capital = {
 				has_building = building_piratecovess
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
-				# ZOFE Ascension
-				zofeac_capital_buildings = yes
+				# ZOFE
+				has_building = building_fallen_palace
+				has_building = building_fallen_ancient_palace
 			}
 		}
 	}
@@ -705,6 +715,8 @@ has_fully_upgraded_capital = {
 				has_building = building_avb_resort_capital_3
 				# EDA
 				has_building = eda_building_imperial_capital
+				# More Cosmogenesis Buildings
+				has_building = building_resort_cosmo_capital
 				# Star Wars: Kuat Ancient Empire
 				has_building = building_kuat_command_center
 				# Twinks Atlantean
@@ -713,6 +725,9 @@ has_fully_upgraded_capital = {
 				has_building = building_nightelf_palace
 				# Special Colonies Overhaul
 				has_building = building_SCO_resort_system_capital
+				# ZOFE
+				has_building = building_fallen_ancient_palace
+				has_building = building_fallen_palace
 			}
 		}
 	}
@@ -747,6 +762,9 @@ has_fully_upgraded_capital = {
 				has_building = building_nightelf_palace
 				# Special Colonies Overhaul
 				has_building = building_SCO_slave_system_capital
+				# ZOFE
+				has_building = building_fallen_ancient_palace
+				has_building = building_fallen_palace
 			}
 		}
 	}
@@ -759,7 +777,7 @@ has_fully_upgraded_capital = {
 				has_building = building_imperial_capital
 				has_building = building_imperial_machine_capital
 				has_building = building_imperial_hive_capital
-				# ACOT
+				# ACOT / AOT / ZOFE
 				has_building = building_acot_dm_ancient_palace
 				has_building = building_acot_ae_ancient_palace
 				has_building = building_acot_dm_ancient_hive_cluster
@@ -767,11 +785,10 @@ has_fully_upgraded_capital = {
 				has_building = building_acot_dm_ancient_control_center
 				has_building = building_acot_ae_ancient_control_center
 				has_sbtg_upgraded_capital = yes
-				has_building = building_ancient_palace
 				has_eternal_palace = yes
 				has_building = building_phanon_tower
 				has_building = building_acot_ruined_giga_fortress
-				# AOT
+				has_building = building_hab_fe_capital
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
 				has_building = building_stellarite_hive_cluster
@@ -817,8 +834,6 @@ has_fully_upgraded_capital = {
 				has_building = building_eternal_palace
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
-				# ZOFE Ascension
-				zofeac_capital_buildings = yes
 			}
 		}
 	}
@@ -831,7 +846,7 @@ has_fully_upgraded_capital = {
 				has_building = building_station_fe_capital
 				has_building = building_station_system_capital
 				has_building = building_prison_system_capital
-				# ACOT
+				# ACOT / AOT / ZOFE
 				has_building = building_acot_dm_ancient_palace
 				has_building = building_acot_ae_ancient_palace
 				has_building = building_acot_dm_ancient_hive_cluster
@@ -839,11 +854,10 @@ has_fully_upgraded_capital = {
 				has_building = building_acot_dm_ancient_control_center
 				has_building = building_acot_ae_ancient_control_center
 				has_sbtg_upgraded_capital = yes
-				has_building = building_ancient_palace
 				has_eternal_palace = yes
 				has_building = building_phanon_tower
 				has_building = building_acot_ruined_giga_fortress
-				# AOT
+				has_building = building_hab_fe_capital
 				has_building = building_stellarite_palace
 				has_building = building_stellarite_control_center
 				has_building = building_stellarite_hive_cluster
@@ -852,8 +866,6 @@ has_fully_upgraded_capital = {
 				has_building = building_phanon_control_center
 				# More Cosmogenesis Buildings
 				has_building = building_hab_cosmo_capital
-				# ZOFE Ascension
-				zofeac_capital_buildings = yes
 			}
 		}
 	}
@@ -865,18 +877,17 @@ has_fully_upgraded_capital = {
 			OR = {
 				has_building = building_hive_major_capital
 				has_building = building_imperial_hive_capital
-				# ACOT
+				# ACOT / AOT
 				has_building = building_acot_dm_ancient_hive_cluster
 				has_building = building_acot_ae_ancient_hive_cluster
 				has_sbtg_upgraded_capital = yes
 				has_eternal_palace = yes
 				has_building = building_phanon_tower
 				has_building = building_acot_ruined_giga_fortress
-				# All that is GRIMDARK
-				has_building = building_hive_major_capital_sick
-				# AOT
 				has_building = building_stellarite_hive_cluster
 				has_building = building_phanon_hive_cluster
+				# All that is GRIMDARK
+				has_building = building_hive_major_capital_sick
 				# AVB
 				has_building = building_avb_hive_capital_3
 				has_building = building_avb_hive_capital_4
@@ -945,18 +956,17 @@ has_fully_upgraded_capital = {
 			OR = {
 				has_building = building_system_capital
 				has_building = building_imperial_capital
-				# ACOT
+				# ACOT / AOT
 				has_building = building_acot_dm_ancient_palace
 				has_building = building_acot_ae_ancient_palace
 				has_sbtg_upgraded_capital = yes
 				has_eternal_palace = yes
 				has_building = building_phanon_tower
 				has_building = building_acot_ruined_giga_fortress
-				# All that is GRIMDARK
-				has_building = building_system_capital_gr
-				# AOT
 				has_building = building_stellarite_palace
 				has_building = building_phanon_palace
+				# All that is GRIMDARK
+				has_building = building_system_capital_gr
 				# AVB
 				has_building = building_avb_capital_4
 				has_building = building_avb_capital_5
@@ -999,8 +1009,9 @@ has_fully_upgraded_capital = {
 				has_building = building_eternal_palace
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
-				# ZOFE Ascension
-				zofeac_capital_buildings = yes
+				# ZOFE
+				has_building = building_fallen_palace
+				has_building = building_fallen_ancient_palace
 			}
 		}
 	}

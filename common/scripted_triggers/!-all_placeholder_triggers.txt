@@ -601,4 +601,5 @@ wg_compat_is_pc_wsg_port = { always = no }
 wg_compat_is_pc_shenhai = { always = no }
 wula_fallen_empire_mod_actived = { always = no }
 xvcv_mdlc_is_non_gate_mega = { always = no }
-zofeac_capital_buildings = { always = no }
+has_avb_research_building = { always = no }
+has_avb_generator_building = { always = no }

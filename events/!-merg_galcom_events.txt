@@ -45,8 +45,6 @@ country_event = {
 		name = galcom.16.a
 		allow = {
 			is_homicidal = no
-			# B5 Species - Shadows
-			NOT = { has_civic = civic_shadows1 }
 		}
 		add_to_galactic_community = yes
 		ai_chance = {
@@ -76,8 +74,6 @@ country_event = {
 		name = galcom.16.b
 		trigger = {
 			is_homicidal = no
-			# B5 Species - Shadows
-			NOT = { has_civic = civic_shadows1 }
 		}
 		hidden_effect = {
 			set_country_flag = galcom_form_nay
@@ -119,16 +115,6 @@ country_event = {
 		name = anomaly.180.e
 		trigger = {
 			has_civic = civic_hive_devouring_swarm
-		}
-	}
-	# B5 Species - Shadows
-	option = {
-		name = galcom_shadows
-		trigger = {
-			has_civic = civic_shadows1
-		}
-		hidden_effect = {
-			set_country_flag = galcom_form_nay
 		}
 	}
 	# Electroids Species Pack

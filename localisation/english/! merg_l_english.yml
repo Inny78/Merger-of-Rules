@@ -207,3 +207,7 @@ l_english:
  CAN_NOT_JUMP_IN_WHITEGOO: "§RWhite Goo interferes with the use of the Jump Drive.§!"
  caretaker_refuse: "This species cannot survive away from the Tree of Life"
  is_v_mobile_cant_be_resetttled: "§RPop can't be resettled!§!"
+ requires_building_fe_capital: "§RTo further improve upon this building, an enigmatic capital complex is required. Elect a Dark Palace from the Planetary Decision!§!"
+ requires_building_fe_capital_machine: "§RTo further improve upon this building, an enigmatic capital complex is required. Construct a Dark Nexus from the Planetary Decision!§!"
+ requires_building_fe_capital_hive: "§RTo further improve upon this building, an enigmatic capital complex is required. Evolve a Dark Cluster from the Planetary Decision!§!"
+ galcom.16.c.organic_zealots: "Our cause is above some supra-national \"authority.\""
