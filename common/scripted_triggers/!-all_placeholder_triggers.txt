@@ -19,18 +19,9 @@ al_has_rare_gov_skill = { # Temp trigger
     }
 }
 al_is_nest_planet = { always = no }
-ark_comp_ocean_seaborn = { has_trait = trait_ARK_ocean_seaborn } # Temp trigger
-azl_comp_aut_azur_lane_0 = { always = no }
-azl_comp_aut_azur_lane_1 = { always = no }
-azl_comp_aut_azur_lane_2 = { always = no }
-azl_comp_aut_azur_lane_k = { always = no }
-azl_comp_azur_ocean = { always = no }
-azl_comp_gaia = { always = no }
-azl_comp_gas_giant = { always = no }
-azl_comp_harbor = { always = no }
-azl_comp_robot_mind_relic_core = { always = no }
 annihilator_system = { always = no }
 aot_should_not_crave_runic_power = { always = yes }
+ark_comp_ocean_seaborn = { has_trait = trait_ARK_ocean_seaborn } # Temp trigger
 atw_is_alpine = { always = no }
 atw_is_arctic = { always = no }
 atw_is_arid = { always = no }
@@ -48,6 +39,15 @@ atw_is_savannah = { always = no }
 atw_is_toxic = { always = no }
 atw_is_tropical = { always = no }
 atw_is_tundra = { always = no }
+azl_comp_aut_azur_lane_0 = { always = no }
+azl_comp_aut_azur_lane_1 = { always = no }
+azl_comp_aut_azur_lane_2 = { always = no }
+azl_comp_aut_azur_lane_k = { always = no }
+azl_comp_azur_ocean = { always = no }
+azl_comp_gaia = { always = no }
+azl_comp_gas_giant = { always = no }
+azl_comp_harbor = { always = no }
+azl_comp_robot_mind_relic_core = { always = no }
 bdoe_is_habitable_asteroid = { always = no }
 bdoe_is_habitable_barren = { always = no }
 can_build_lily_garden = { always = no }
@@ -97,7 +97,6 @@ giga_has_any_mining_district = { always = no }
 giga_has_artificial_preference_trait = { always = no }
 giga_has_non_psionic_shields = { always = no }
 giga_has_research_building = { always = no }
-giga_just_researched_fe_tech = { always = no }
 giga_is_alderson_disk = { always = no }
 giga_is_birch_world = { always = no }
 giga_is_black_hole = { always = no }
@@ -112,15 +111,16 @@ giga_is_pc_ehof_cplanet = { always = no }
 giga_is_pc_ehof_habitat = { always = no }
 giga_is_pc_equatorial_shipyard = { always = no }
 giga_is_pc_flat_world = { always = no }
+giga_is_pc_flusion_gaia_ecu = { always = no }
 giga_is_pc_giga_elysium = { always = no }
 giga_is_pc_giga_empty_space = { always = no }
 giga_is_pc_giga_orbital = { always = no }
-giga_is_pc_maginot_ringworld = { always = no }
 giga_is_pc_giga_penrose_habitable = { always = no }
 giga_is_pc_giga_planetary_computer = { always = no }
+giga_is_pc_gigaorbital_ring = { always = no }
 giga_is_pc_interstellar_habitat = { always = no }
 giga_is_pc_interstellar_ringworld_habitable = { always = no }
-giga_is_pc_gigaorbital_ring = { always = no }
+giga_is_pc_maginot_ringworld = { always = no }
 giga_is_pc_pouchkinn_black_hole = { always = no }
 giga_is_pc_red_toxic = { always = no }
 giga_is_pc_ringworld_hive = { always = no }
@@ -133,6 +133,7 @@ giga_is_vat_leviathan = { always = no }
 giga_is_vat_normal = { always = no }
 giga_is_wet = { always = no }
 giga_is_white_hole = { always = no }
+giga_just_researched_fe_tech = { always = no }
 giga_should_not_crave_iodizium  = { always = yes }
 giga_should_not_crave_negative_mass = { always = yes }
 giga_should_not_crave_sentient_metal = { always = yes }
@@ -157,10 +158,13 @@ has_artificial_aristocracy_emex = { always = no }
 has_artificial_wombs = { always = no }
 has_aso_space_exploration = { always = no }
 has_auth_holofrixit = { always = no }
+has_avb_generator_building = { always = no }
+has_avb_research_building = { always = no }
+has_azur_comp_patch = { always = no }
 has_battle_thrall_military_leaders_active = { always = no }
 has_bccr = { always = no }
-has_bluearch_compatch = { always = no }
 has_bluarch_comp_auth_kitovos = { always = no }
+has_bluearch_compatch = { always = no }
 has_bug_branch = { always = no }
 has_bugged_criminal_corp_rework = { always = no }
 has_civic_organic_zealots_active = { always = no }
@@ -182,6 +186,7 @@ has_ethical_gestalts = { always = no }
 has_exotic_gas_dependency = { always = no }
 has_expanded_events = { always = no }
 has_fully_upgraded_penal_capital = { always = no }
+has_gf_comp_patch = { always = no }
 has_gigastructures = { always = no }
 has_holosphere_portraits_revisited_active = { always = no }
 has_major_upgraded_penal_capital = { always = no }
@@ -190,6 +195,7 @@ has_mca_auth_private = { always = no }
 has_mca_personality_principled_rogues = { always = no }
 has_mod_reproductive_tech_and_politics = { always = no }
 has_more_authorities_triggers = { always = no }
+has_msgsc_compatch = { always = no }
 has_origins_of_civilization = { always = no }
 has_pd_methane_preference = { always = no }
 has_pd_special_preference = { always = no }
@@ -198,11 +204,7 @@ has_planetary_diversity_planetaryhabitats = { always = no }
 has_policy_residentliving_restricted = { always = yes }
 has_policy_slaveliving_restricted = { always = yes }
 has_reproductive_politics = { always = no }
-has_azur_comp_patch = { always = no }
-has_gf_comp_patch = { always = no }
-has_msgsc_compatch = { always = no }
 has_rs_comp_patch = { always = no }
-has_wsg_comp_patch = { always = no }
 has_sbtg_upgraded_capital = { always = no }
 has_specialist_subject_leader_trait_maid = { always = no }
 has_species_trait_holodrone = { always = no }
@@ -232,6 +234,7 @@ has_v_stealth_trait = { always = no }
 has_v_weak_immune_system = { always = no }
 has_vte_compatch = { always = no }
 has_wg_traits = { always = no }
+has_wsg_comp_patch = { always = no }
 has_wsg_genemodding_tech = { always = no }
 has_ww_cro_implants_psionics = { always = no }
 has_ww_dummy = { always = no }
@@ -271,10 +274,10 @@ is_asharms_empty_space = { always = no }
 is_aso_gg_ice_giant = { always = no }
 is_aso_gg_white_hole = { always = no }
 is_binary = { always = no }
-is_bluarch_comp_auto_habitat = { always = no }
-is_bluearch_comp_campus_planet = { always = no }
-is_bluarch_comp_ruined = { always = no }
 is_blokkat_country_type = { always = no }
+is_bluarch_comp_auto_habitat = { always = no }
+is_bluarch_comp_ruined = { always = no }
+is_bluearch_comp_campus_planet = { always = no }
 is_bugged_direct_democratic = { always = no }
 is_bugged_dynastic_enterprise = { always = no }
 is_bugged_evolutionary_architects = { always = no }
@@ -326,6 +329,7 @@ is_ds_stahl = { always = no }
 is_ds_stellar_engine = { always = no }
 is_ds_surrelist = { always = no }
 is_ds_zeitriss_gc = { always = no }
+is_ecc_direct_democracy = { always = no }
 is_eci_megacorp = { always = no }
 is_ecocentric = { always = no }
 is_eda_empire = { always = no }
@@ -454,10 +458,10 @@ is_ringworld_wg = { always = no }
 is_rooted_adult = { always = no }
 is_rs_fu_star = { always = no }
 is_rs_hollow = { always = no }
+is_rs_microquasar = { always = no }
 is_rs_molten_habitat = { always = no }
 is_rs_sterile = { always = no }
 is_rs_tidallylocked = { always = no }
-is_rs_microquasar = { always = no }
 is_sbtg_origin_starbase = { always = no }
 is_sbtg_playable_country = { always = no }
 is_servitor_empire = { always = no }
@@ -511,6 +515,14 @@ is_xenophobic_isolationists = { always = no }
 is_zob_uplifted = { always = no }
 is_zofe_country = { always = no }
 is_zofe_oe = { always = no }
+is_zofe_utopian_city = { always = no }
+is_zofe_utopian_gaia = { always = no }
+is_zofe_utopian_habitat = { always = no }
+is_zofe_utopian_hive = { always = no }
+is_zofe_utopian_hive_ringworld = { always = no }
+is_zofe_utopian_machine = { always = no }
+is_zofe_utopian_machine_ringworld = { always = no }
+is_zofe_utopian_ringworld = { always = no }
 katzen_jump_blocked_system = { always = no }
 kuat_can_be_orbital_bombarment_country = { always = no }
 kuat_can_do_bombarment_country = { always = no }
@@ -592,14 +604,12 @@ uses_grimdark_infected_world_district = { always = no }
 vte_compatch_hyper_ecu = { always = no }
 vte_compatch_magic_puppet = { always = no }
 vte_compatch_sub_dragon = { always = no }
-wg_compat_has_intelligent_gallo = { always = no }
-wg_compat_has_sh_trait = { always = no }
 wg_compat_has_auth_shenhai = { always = no }
 wg_compat_has_auth_warshipgirls = { always = no }
+wg_compat_has_intelligent_gallo = { always = no }
+wg_compat_has_sh_trait = { always = no }
 wg_compat_is_pc_ringworld_habitable_water = { always = no }
-wg_compat_is_pc_wsg_port = { always = no }
 wg_compat_is_pc_shenhai = { always = no }
+wg_compat_is_pc_wsg_port = { always = no }
 wula_fallen_empire_mod_actived = { always = no }
 xvcv_mdlc_is_non_gate_mega = { always = no }
-has_avb_research_building = { always = no }
-has_avb_generator_building = { always = no }

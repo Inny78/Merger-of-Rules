@@ -264,7 +264,7 @@ ndb_can_target_planet = {
 		giga_is_birch_world = yes
 		giga_is_alderson_disk = yes
 		is_planet_class = pc_ai
-		is_pc_squareworld_habitable = yes
+		giga_is_pc_squareworld_habitable = yes
 		has_planet_flag = cant_build_here
 		# Merger of Rules
 		has_planet_flag = merg_is_forbidden_target
@@ -313,7 +313,7 @@ ndb_can_target_system = {
 				}
 				giga_is_birch_world = yes
 				giga_is_alderson_disk = yes
-				is_pc_squareworld_habitable = yes
+				giga_is_pc_squareworld_habitable = yes
 				is_planet_class = pc_ai
 				has_planet_flag = cant_build_here
 				has_planet_flag = cant_target_this_planet

@@ -457,7 +457,7 @@ is_democracy = {
 		# Ethics and Civics Bug Branch
 		is_bugged_megacorp = yes
 		# Ethics and Civics Classic
-		has_authority = auth_direct_democratic
+		is_ecc_direct_democracy = yes
 		# Expanded Traits, Civics, Pops, and More
 		is_exp_cooperative = yes
 		# E&C FunEFork

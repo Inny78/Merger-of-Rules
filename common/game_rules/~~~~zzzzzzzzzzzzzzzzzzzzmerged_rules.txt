@@ -3315,47 +3315,6 @@ can_resettle_pop = {
 		}
 		always = yes
 	}
-	else_if = {
-		limit = {
-			is_being_purged = no
-			planet = {
-				AND = {
-					any_owned_pop = {
-						is_symbiote_of_prevprev = yes
-						is_being_purged = no
-						planet = {
-							any_owned_pop = {
-								is_same_species = prevprev
-								NOT = { is_same_value = prevprev }
-							}
-						}
-					}
-					NOT = {
-						any_owned_pop = {
-							is_same_species = prevprev
-							NOT = { is_same_value = prevprev }
-						}
-					}
-				}
-			}
-		}
-		custom_tooltip = {
-			fail_text = "would_cause_symbiote_decline"
-			always = no
-		}
-	}
-	else_if = {
-		limit = {
-			is_symbiote = yes
-			owner = {
-				any_owned_pop = {
-					is_symbiote_of_prevprev = yes
-					planet_has_symbiotes = no
-				}
-			}
-		}
-		always = yes
-	}
 	# Ethical Gestalts
 	else_if = {
 		limit = {

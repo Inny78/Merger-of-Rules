@@ -99,9 +99,11 @@ merg_is_arcology = {
 		pd_is_pd_hive_arc = yes
 		pd_is_pd_machine_arc = yes
 		# Ancient Empire
-		# uses_district_set = ag_city_planet
+		# is_pc_ag_city = yes
 		# Azur Lane
 		azl_comp_harbor = yes
+		# Gigastructural Engineering & More
+		giga_is_pc_flusion_gaia_ecu = yes
 		# Pokémon
 		# uses_district_set = EOE_city_world
 		# Star fantasy: Castle Scarlet
