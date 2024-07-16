@@ -11,20 +11,7 @@ can_remove_beneficial_genetic_traits = {
     }
 }
 
-can_remove_overtuned_traits = {
-    hidden_trigger = { exists = from }
-    from = {
-        OR = {
-            has_tradition = tr_genetics_resequencing
-            has_origin = origin_overtuned
-            # Decision Origins
-            has_country_flag = decision_overtuned
-            # Ascension - Biological Module
-            has_technology = tech_yanz_rs_genemod
-        }
-    }
-}
-
+# can_remove_overtuned_traits
 is_phototrophic = {
     OR = {
         has_trait = trait_plantoid_phototrophic

@@ -4643,8 +4643,6 @@ can_add_negative_traits_organic = {
 		has_tradition = tr_genetics_resequencing
 		has_active_tradition = tr_cybernetics_integrated_anatomy
 		has_active_tradition = tr_cybernetics_assimilator_integrated_anatomy
-		# Ascension - Biological Module
-		has_technology = tech_yanz_rs_genemod
 		# EDA
 		has_valid_civic = civic_eda
 		# Madoka Magica NEW
@@ -4676,8 +4674,6 @@ can_remove_positive_traits_organic = {
 				has_tradition = tr_genetics_resequencing
 				has_active_tradition = tr_cybernetics_integrated_anatomy
 				has_active_tradition = tr_cybernetics_assimilator_integrated_anatomy
-				# Ascension - Biological Module
-				has_technology = tech_yanz_rs_genemod
 				# EDA
 				has_civic = civic_eda
 				is_eda_empire = yes
@@ -4714,8 +4710,6 @@ can_modify_organic_portraits = {
 	has_utopia = yes
 	OR = {
 		has_tradition = tr_genetics_enhanced_expression
-		# Ascension - Biological Module
-		# has_technology = tech_yanz_rs_genemod
 		# AssaultLily In Stellaris
 		is_lily_goverments = yes
 		# Madoka Magica NEW
@@ -5191,6 +5185,7 @@ can_dismiss_leader = {
 # this = leader
 should_count_towards_leader_cap = {
 	NOR = {
+		has_leader_flag = should_not_have_upkeep # Ariphaos Patch
 		leader_class = envoy
 		is_hidden = yes
 		has_leader_flag = hired_admiral_merc_leader

@@ -2,15 +2,6 @@ merg_has_cloning_building = {
 	OR = {
 		# Vanilla
 		has_active_building = building_clone_vats
-		# ANZ Advanced Cloning
-#		has_active_building = building_clone_vats_basic_organic
-#		has_active_building = building_clone_vats_improved_organic
-#		has_active_building = building_clone_vats_advanced_organic
-#		has_active_building = building_clone_vats_augmented_organic
-#		has_active_building = building_clone_vats_basic_mech
-#		has_active_building = building_clone_vats_improved_mech
-#		has_active_building = building_clone_vats_advanced_mech
-#		has_active_building = building_clone_vats_augmented_mech
 		# ACOT
 		has_active_building = building_fe_clone_vats
 		has_active_building = building_acot_ae_clone_vats
@@ -21,8 +12,6 @@ merg_has_cloning_building = {
 		has_active_building = building_avb_clone_vats_2
 		# Ancient Empire
 		has_active_building = ag_advanced_clone_vats
-		# Ascension - Biological Module
-		has_active_building = building_omega_cloning_vats
 		# Civic: Organic Zealots
 		has_active_building = building_clone_birth_labs
 		# Ethics and Civics Bug Branch
