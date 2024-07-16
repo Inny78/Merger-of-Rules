@@ -58,8 +58,8 @@ country_event = {
 		}
 		# Warship Girls R and MIST Species
 		NOR = {
-			has_authority = auth_wg_fe
-			has_authority = auth_sh_fe
+			wg_compat_is_auth_wg_fe = yes
+			wg_compat_is_auth_sh_fe = yes
 		}
 	}
 
@@ -147,8 +147,8 @@ country_event = {
 					modifier = {
 						factor = 0
 						OR = {
-							has_authority = auth_wg_fe
-							has_authority = auth_sh_fe
+							wg_compat_is_auth_wg_fe = yes
+							wg_compat_is_auth_sh_fe = yes
 						}
 					}
 					# War in Heaven with Fallen Empire of opposing ethos
@@ -194,8 +194,8 @@ country_event = {
 					modifier = {
 						factor = 0
 						OR = {
-							has_authority = auth_wg_fe
-							has_authority = auth_sh_fe
+							wg_compat_is_auth_wg_fe = yes
+							wg_compat_is_auth_sh_fe = yes
 						}
 					}
 					# War in Heaven with Fallen Empire of different ethos
@@ -281,8 +281,8 @@ country_event = {
 		NOT = { has_country_flag = timed_guardians_of_the_galaxy }
 		# Warship Girls R and MIST Species
 		NOR = {
-			has_authority = auth_wg_fe
-			has_authority = auth_sh_fe
+			wg_compat_is_auth_wg_fe = yes
+			wg_compat_is_auth_sh_fe = yes
 		}
 		# Nirvana Empire Project
 		NOT = { has_country_flag = nirvana_servant }

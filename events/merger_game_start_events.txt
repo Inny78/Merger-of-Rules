@@ -25,5 +25,7 @@ event = {
 	immediate = {
 		set_variable = { which = techno_pops_missing value = 0 }
 		set_variable = { which = sleeper_aggro value = 0 }
+		set_variable = { which = v_num_symbiont value = 0 }
+		set_variable = { which = v_behavioral_sink_count value = 0 }
 	}
 }

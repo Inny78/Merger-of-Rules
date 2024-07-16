@@ -5208,7 +5208,7 @@ should_count_towards_leader_cap = {
 			OR = {
 				is_heir = yes
 				AND = {
-					has_trait = leader_trait_eager_3
+					is_exp_eager3 = yes
 					has_skill < 8
 				}
 				AND = {

@@ -337,6 +337,7 @@ is_elaina = { always = no }
 is_exile_country = { always = no }
 is_exp_clone = { always = no }
 is_exp_cooperative = { always = no }
+is_exp_eager3 = { always = no }
 is_exp_lithoid_shiny = { always = no }
 is_exp_memorex_comatos = { always = no }
 is_exp_pheremone = { always = no }
@@ -608,6 +609,8 @@ wg_compat_has_auth_shenhai = { always = no }
 wg_compat_has_auth_warshipgirls = { always = no }
 wg_compat_has_intelligent_gallo = { always = no }
 wg_compat_has_sh_trait = { always = no }
+wg_compat_is_auth_wg_fe = { always = no }
+wg_compat_is_auth_sh_fe = { always = no }
 wg_compat_is_pc_ringworld_habitable_water = { always = no }
 wg_compat_is_pc_shenhai = { always = no }
 wg_compat_is_pc_wsg_port = { always = no }
