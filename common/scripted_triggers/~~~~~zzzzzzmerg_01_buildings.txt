@@ -112,7 +112,7 @@ has_upgraded_capital = {
 				has_building = building_phanon_hive_cluster
 				has_building = building_phanon_control_center
 				# AVB
-				has_building = building_avb_hab_capital_3
+				has_building = building_avb_hab_capital_4
 				# Dawn of the Republic
 				has_building = building_galactic_senate
 				# EDA
@@ -460,7 +460,7 @@ has_major_upgraded_capital = {
 				has_building = building_phanon_hive_cluster
 				has_building = building_phanon_control_center
 				# AVB
-				has_building = building_avb_hab_capital_3
+				has_building = building_avb_hab_capital_4
 				# Dawn of the Republic
 				has_building = building_galactic_senate
 				# EDA
@@ -796,7 +796,7 @@ has_fully_upgraded_capital = {
 				has_building = building_phanon_hive_cluster
 				has_building = building_phanon_control_center
 				# AVB
-				has_building = building_avb_hab_capital_3
+				has_building = building_avb_hab_capital_4
 				# Dawn of the Republic
 				has_building = building_galactic_senate
 				# EDA
