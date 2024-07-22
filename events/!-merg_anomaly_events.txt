@@ -30,11 +30,7 @@ ship_event = {
 						# Planetary Diversity
 						has_pd_special_preference = yes
 						# Voyage to Eternity
-						has_trait = trait_pc_KZ_VOY_hyper_ecumenopolis_preference
-						has_trait = trait_pc_KZ_VOY_astral_world_preference
-						has_trait = trait_pc_KZ_VOY_astral_world_solaria_preference
-						has_trait = trait_pc_KZ_VOY_luna_preference
-						has_trait = trait_pc_KZ_VOY_terran_relic_preference
+						vte_comp_mecha_preference = yes
 					}
 				}
 			}

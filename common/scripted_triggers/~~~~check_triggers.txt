@@ -229,6 +229,9 @@ merg_has_seooc = { has_global_flag = nep_SEoOC_active }
 # Special Colonies Overhaul
 merg_has_special_colonies = { has_global_flag = SCO_enabled_flag }
 
+# Star Wars Kuat
+merg_has_sw_kuat = { has_global_flag = kuat_settings_first_fired }
+
 # Stellaris Evolved
 merg_has_stellaris_evolved = { has_global_flag = stellarisevolved }
 

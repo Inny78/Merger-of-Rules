@@ -109,11 +109,12 @@ merg_is_arcology = {
 		# Star fantasy: Castle Scarlet
 		# uses_district_set = castle_scarlet
 		# Star Wars: Kuat Ancient Empire
-		# uses_district_set = Eternal_city
+		is_kuat_eternal_city = yes
 		# Voyage to Eternity
-		vte_compatch_hyper_ecu = yes
+		vte_compat_hyper_ecu = yes
 		# ZOFE
 		# uses_district_set = utopian_city
+		# Misc
 		uses_district_set = city_world
 	}
 	is_artificial = no
@@ -149,7 +150,6 @@ merg_is_barren = {
 		atw_is_barren = yes
 		# Mem
 		is_pc_mem_destroyed_barren = yes
-		is_pc_mem_broken_city = yes
 	}
 }
 
@@ -325,7 +325,7 @@ merg_is_aquatic = {
 		# Azur Lane
 		azl_comp_azur_ocean = yes
 		# Blue Archive
-		# uses_district_set = BA_planet
+		is_bluearch_comp_campus_planet = yes
 		# Gigastructural Engineering & More
 		giga_is_edge_of_eternity = yes
 	}
@@ -406,5 +406,15 @@ merg_is_tundra = {
 		atw_is_tundra = yes
 		# Planetary Diversity
 		pd_is_tundra = yes
+	}
+}
+
+merg_is_broken = {
+	OR = {
+		is_planet_class = pc_broken
+		is_planet_class = pc_shattered
+		is_planet_class = pc_shattered_2
+		# MEM
+		is_pc_mem_broken_city = yes
 	}
 }

@@ -189,6 +189,7 @@ has_fully_upgraded_penal_capital = { always = no }
 has_gf_comp_patch = { always = no }
 has_gigastructures = { always = no }
 has_holosphere_portraits_revisited_active = { always = no }
+has_kuat_compatch = { always = no }
 has_major_upgraded_penal_capital = { always = no }
 has_mca_auth_cooperative = { always = no }
 has_mca_auth_private = { always = no }
@@ -232,7 +233,7 @@ has_v_phototrophic_trait = { always = no }
 has_v_presapient_trait = { always = no }
 has_v_stealth_trait = { always = no }
 has_v_weak_immune_system = { always = no }
-has_vte_compatch = { always = no }
+has_vte_compat = { always = no }
 has_wg_traits = { always = no }
 has_wsg_comp_patch = { always = no }
 has_wsg_genemodding_tech = { always = no }
@@ -373,6 +374,9 @@ is_infested_basic = { always = no }
 is_KANSEN_species = { always = no }
 is_khan_country_type = { always = no }
 is_kilostructure = { always = no }
+is_kuat_eternal_city = { always = no }
+is_kuat_eternal_ringworld = { always = no }
+is_kuat_white_hole = { always = no }
 is_KZ_VOY_micro_black_hole = { always = no }
 is_KZ_VOY_organic_species = { always = no }
 is_lily_goverments = { always = no }
@@ -602,9 +606,10 @@ traits_restrict_worker_jobs = { always = no }
 UGRC_installed = { always = no }
 urmazin_system = { always = no }
 uses_grimdark_infected_world_district = { always = no }
-vte_compatch_hyper_ecu = { always = no }
-vte_compatch_magic_puppet = { always = no }
-vte_compatch_sub_dragon = { always = no }
+vte_compat_mecha_preference = { always = no }
+vte_compat_hyper_ecu = { always = no }
+vte_compat_magic_puppet = { always = no }
+vte_compat_sub_dragon = { always = no }
 wg_compat_has_auth_shenhai = { always = no }
 wg_compat_has_auth_warshipgirls = { always = no }
 wg_compat_has_intelligent_gallo = { always = no }
@@ -614,5 +619,11 @@ wg_compat_is_auth_sh_fe = { always = no }
 wg_compat_is_pc_ringworld_habitable_water = { always = no }
 wg_compat_is_pc_shenhai = { always = no }
 wg_compat_is_pc_wsg_port = { always = no }
+wg_compat_is_pc_wg_water = { always = no }
 wula_fallen_empire_mod_actived = { always = no }
 xvcv_mdlc_is_non_gate_mega = { always = no }
+has_wwv_compatch = { always = no }
+has_wwv_auth_witch_dict = { always = no }
+has_wwv_auth_grey_witch = { always = no }
+is_wwv_victorika = { always = no }
+vte_comp_mecha_preference = { always = no }

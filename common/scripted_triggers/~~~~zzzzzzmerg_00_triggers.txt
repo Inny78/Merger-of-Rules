@@ -422,7 +422,7 @@ is_autocracy = {
 		# More Corporate Authorities
 		has_mca_auth_private = yes
 		# Wandering Witch: Voyagers
-		has_authority = auth_witch_dictatorial
+		has_wwv_auth_witch_dict = yes
 	}
 }
 
@@ -433,7 +433,7 @@ is_oligarchy = {
 			OR = {
 				has_authority = auth_corporate
 				# Wandering Witch: Voyagers
-				has_authority = auth_grey_witch_council
+				has_wwv_auth_grey_witch = yes
 			}
 			OR = {
 				merg_has_mca = yes

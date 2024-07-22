@@ -56,7 +56,7 @@ country_event = {
             limit = {
                 is_ai = no
                 merg_has_voyage_eternity = yes
-                has_vte_compatch = no
+                has_vte_compat = no
             }
             country_event = { id = merg_check.7 }
         }
@@ -68,6 +68,23 @@ country_event = {
                 has_bluearch_compatch = no
             }
             country_event = { id = merg_check.8 }
+        }
+        # Star Wars Kuat Ancient Empire
+        if = {
+            limit = {
+                is_ai = no
+                merg_has_sw_kuat = yes
+                has_kuat_compatch = no
+            }
+            country_event = { id = merg_check.9 }
+        }
+        # Wandering Witch Voyager
+        if = {
+            limit = {
+                is_ai = no
+                merg_has_wandering_witch = yes
+                has_wwv_compatch = no
+            }
         }
     }
 }
@@ -148,6 +165,30 @@ country_event = {
     id = merg_check.8
     title = TRANSMISSION
     desc = merg_check.8.desc
+    picture = GFX_evt_communication_event
+    show_sound = event_default
+    is_triggered_only = yes
+
+    option = {
+        name = UNDERSTOOD
+    }
+}
+country_event = {
+    id = merg_check.9
+    title = TRANSMISSION
+    desc = merg_check.9.desc
+    picture = GFX_evt_communication_event
+    show_sound = event_default
+    is_triggered_only = yes
+
+    option = {
+        name = UNDERSTOOD
+    }
+}
+country_event = {
+    id = merg_check.10
+    title = TRANSMISSION
+    desc = merg_check.10.desc
     picture = GFX_evt_communication_event
     show_sound = event_default
     is_triggered_only = yes

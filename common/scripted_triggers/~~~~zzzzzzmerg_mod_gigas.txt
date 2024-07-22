@@ -68,10 +68,7 @@ is_maginotable_restricted = {
 		# Planetary Diversity
 		is_planetary_diversity_ringworld = yes
 		# Star Wars: Kuat Ancient Empire
-		# AND = {
-		#	is_ringworld = yes
-		# 	uses_district_set = Eternal_city
-		# }
+		is_kuat_eternal_ringworld = yes
 		# Star Wars: UnknownWorld Shipgirls Story
 		# uses_district_set = rw_swgs_engineer_world
 		# ThaumStellaris
@@ -375,5 +372,13 @@ giga_is_bitrinary = {
 		is_binary = yes
 		is_trinary = yes
 		is_paired = yes
+	}
+}
+giga_has_frameworld_origin = {
+	or = {
+		has_origin = origin_frameworld
+		has_origin = origin_frameworld_incohesive  #dodos mod
+		has_origin = origin_voidframe              #tempests mod
+		has_origin = origin_xhk_syncret_frame      #xahkarias mod
 	}
 }

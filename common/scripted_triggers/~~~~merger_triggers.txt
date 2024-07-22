@@ -244,6 +244,8 @@ merg_is_dense_star = {
 		is_hypo_stars_black_dwarf_star = yes
 		is_hypo_stars_strange_star = yes
 		is_hypo_stars_white_hole = yes
+		# Star Wars: Kuat Ancient Empire
+		is_kuat_white_hole = yes
 		# MEM
 		is_pc_mem_micro_black_hole = yes
 		# Real Space

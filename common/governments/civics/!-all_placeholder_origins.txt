@@ -28,3 +28,7 @@ origin_terraformer = { is_origin = yes potential = { always = no } }
 origin_vb_psi_soul_eater = { is_origin = yes potential = { always = no } }
 origin_nsc_freebooter = { is_origin = yes potential = { always = no } }
 origin_mem_eden_protocol = { is_origin = yes potential = { always = no } }
+origin_frameworld = { is_origin = yes potential = { always = no } }
+origin_frameworld_incohesive = { is_origin = yes potential = { always = no } }
+origin_voidframe = { is_origin = yes potential = { always = no } }
+origin_xhk_syncret_frame = { is_origin = yes potential = { always = no } }

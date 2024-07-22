@@ -108,8 +108,6 @@ has_upgraded_capital_4 = {
 				has_building = building_eternal_palace
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
-				# ZOFE Ascension
-				zofeac_capital_buildings = yes
 			}
 		}
 	}
@@ -213,8 +211,6 @@ has_upgraded_capital_4 = {
 				has_building = building_stellarite_galactic_machine_capital
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
-				# ZOFE Ascension
-				zofeac_capital_buildings = yes
             }
         }
     }
@@ -318,8 +314,6 @@ has_upgraded_capital_5 = {
 				has_building = building_stellarite_galactic_machine_capital
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
-				# ZOFE Ascension
-				zofeac_capital_buildings = yes
             }
         }
     }
@@ -420,8 +414,6 @@ has_upgraded_capital_6 = {
 				has_building = building_stellarite_galactic_machine_capital
 				# Wula Fallen Empire
 				merg_has_wula_capital = yes
-				# ZOFE Ascension
-				zofeac_capital_buildings = yes
             }
         }
     }
@@ -2082,6 +2074,61 @@ is_nebula_star = {
 		is_star_class = sc_lbv_blue
 		is_star_class = sc_lbv_green
 		is_star_class = sc_lbv_red
+	}
+}
+#
+wp_pv_is_clear_sky_planet = { # used to determine star visibility
+	NAND = {
+		exists = owner
+		owner = {
+			OR = {
+				has_origin = origin_subterranean
+				has_origin = origin_subterranean_machines
+			}
+		}
+		is_colony = yes
+		pd_is_planet_class_cave = yes
+	}
+	OR = {
+		merg_is_arid = yes
+		merg_is_desert = yes
+		merg_is_savannah = yes
+		merg_is_alpine = yes
+		merg_is_arctic = yes
+		merg_is_tundra = yes
+		merg_is_continental = yes
+		merg_is_tropical = yes
+		merg_is_ocean = yes
+		merg_is_gaia_basic = yes
+
+	}
+	NOT = {
+		has_planet_flag = planet_has_obscured_skies # other modders can set this flag to their planets to remove the stars from view
+	}
+}
+
+wp_pv_is_not_binary_or_trinary = {
+	NOR = {
+		is_star_class = sc_binary_1
+		is_star_class = sc_binary_2
+		is_star_class = sc_binary_3
+		is_star_class = sc_binary_4
+		is_star_class = sc_binary_5
+		is_star_class = sc_binary_6
+		is_star_class = sc_binary_7
+		is_star_class = sc_binary_8
+		is_star_class = sc_binary_9
+		is_star_class = sc_binary_10
+		is_star_class = sc_trinary_1
+		is_star_class = sc_trinary_2
+		is_star_class = sc_trinary_3
+		is_star_class = sc_trinary_4
+		# Forgotten Empires
+		is_star_class = sc_scfe_binary_1
+		# Real Space
+		is_binary = yes
+		is_trinary = yes
+		is_paired = yes
 	}
 }
 

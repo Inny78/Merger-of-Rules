@@ -1772,7 +1772,7 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 				OR = {
 					colonizable_planet = yes
 					uninhabitable_regular_planet = yes
-					is_pd_planet_class_all = yes
+					pd_is_planet_class_all = yes
 				}
 			}
 		}
@@ -1870,77 +1870,7 @@ can_destroy_planet_with_tech_GFnyto_accelerating_coil3 = {
 can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER_SERES = { can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER = yes }
 
 ############################### Planetary Diversity ###############################
-can_destroy_planet_with_PLANET_KILLER_METHANE_FREEZE_RAY = {
-	custom_tooltip = {
-		fail_text = merg_forbidden_target
-		merg_is_forbidden_target = no
-	}
-	custom_tooltip = {
-		fail_text = is_habitable_non_artificial
-		OR = {
-			is_colonizable = yes
-			is_colony = yes
-		}
-		is_artificial = no
-	}
-	custom_tooltip = {
-		fail_text = is_shielded
-		merg_is_shielded = no
-	}
-	custom_tooltip = {
-		fail_text = is_not_methane
-		is_pd_exotic_methaner = no
-	}
-	if = {
-		limit = { is_inside_border = from.owner }
-		if = {
-			limit = { #Uninhabited and primitive planets are always fine, if own colony then check if pops would be purged
-				exists = owner
-				owner = { is_same_value = from.owner }
-				any_owned_species = {
-					NOT = { has_pd_methane_preference = yes }
-				}
-			}
-			custom_tooltip = {
-				fail_text = requires_purge_allowed
-				success_text = will_purge_non_methane_pops
-				from.owner = {
-					is_ai = no
-					has_policy_flag = purge_allowed
-				}
-			}
-		}
-	}
-	else = {
-		custom_tooltip = {
-			fail_text = is_not_hostile_or_primitive_or_ours
-			OR = {
-				merg_planet_is_hostile_or_crisis = yes
-				AND = {
-					exists = owner
-					owner = { is_country_type = primitive }
-				}
-			}
-		}
-	}
-	if = {
-		limit = {
-			exists = owner
-			owner = { is_country_type = primitive }
-		}
-		custom_tooltip = {
-			fail_text = primitives_not_in_borders
-			exists = space_owner
-			space_owner = { is_same_value = from.owner }
-		}
-		custom_tooltip = {
-			fail_text = primitives_not_full_interference
-			from.owner = {
-				has_policy_flag = interference_aggressive
-			}
-		}
-	}
-}
+
 can_destroy_planet_with_PLANET_KILLER_PD_NECRO_RAY = {
 	custom_tooltip = {
 		fail_text = merg_forbidden_target
@@ -3686,7 +3616,7 @@ can_destroy_planet_with_PLANET_KILLER_WATERB = {
 		hidden_trigger = {
 			AND = {
 				FROM = { has_fleet_flag = RBQ_Dragon_fleet }
-				NOT = { is_planet_class = pc_wg_water }
+				wg_compat_is_pc_wg_water = no
 			}
 		}
 		AND = {
@@ -3701,8 +3631,8 @@ can_destroy_planet_with_PLANET_KILLER_WATERB = {
 			custom_tooltip = {
 				fail_text = is_water_planet
 				NOR = {
-					is_planet_class = pc_wg_water
-					is_planet_class = pc_ringworld_habitable_water
+					wg_compat_is_pc_wg_water = yes
+					wg_compat_is_pc_ringworld_habitable_water = yes
 				}
 			}
 			OR = {

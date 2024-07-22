@@ -1785,7 +1785,7 @@ can_species_procreate = {
 		limit = { 
 			OR = {
 				is_elaina = yes
-				has_trait = trait_victorika
+				is_wwv_victorika = yes
 			}
 		}
 		OR = {
@@ -1917,7 +1917,7 @@ can_species_be_assembled = {
 			}
 			# Voyage to Eternity
 			KZ_VOY_trgr_plnt_ASSEMBLY = yes
-			if = { limit = { vte_compatch_magic_puppet = yes }
+			if = { limit = { vte_compat_magic_puppet = yes }
 				KZ_VOY_can_assemble_magic_puppet = yes
 			}
 			# Vanilla
@@ -2203,7 +2203,7 @@ can_species_be_assembled = {
 	}
 	# Voyage to Eternity
 	if = {
-		limit = { vte_compatch_sub_dragon = yes }
+		limit = { vte_compat_sub_dragon = yes }
 		KZ_VOY_trgr_plnt_CLONE = yes
 	}
 	# TimeMod
@@ -2846,6 +2846,11 @@ ai_should_restrict_system = {
 					has_star_flag = sleeper_system
 				}
 			}
+		}
+		# Forgotten Empires
+		AND = {
+			has_star_flag = scfe_ai_avoid_system
+			NOT = { exists = owner }
 		}
 	}
 }
