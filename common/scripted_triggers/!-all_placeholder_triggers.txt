@@ -10,14 +10,8 @@ ag_is_ancient_system = { always = no }
 ag_is_mod_country = { always = no }
 ag_is_mod_habitable_ringworld = { always = no }
 ag_is_special_system = { always = no }
-al_has_auth_democratic = { has_authority = auth_AL_democratic } # Temp trigger
-al_has_rare_gov_skill = { # Temp trigger
-    OR = {
-        has_trait = leader_trait_AL_Rareskill_governor_Uberzain
-        has_trait = leader_trait_AL_Rareskill_governor_UberzainS
-        has_trait = leader_trait_AL_Rareskill_governor_UberzainEX
-    }
-}
+al_has_auth_democratic = { always = no }
+al_has_rare_gov_skill = { always = no }
 al_is_nest_planet = { always = no }
 annihilator_system = { always = no }
 aot_should_not_crave_runic_power = { always = yes }
