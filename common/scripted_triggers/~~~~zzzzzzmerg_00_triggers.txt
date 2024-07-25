@@ -72,7 +72,7 @@ habitable_planet_not_urban = {
 		giga_is_lifeless = yes
 		giga_is_katzenland = yes
 		# Real Space - Planetary Stations
-		is_rs_hollow = yes
+		is_rs_compat_hollow = yes
 		# Planetary Diversity
 		pd_is_planet_class_all = yes
 	}

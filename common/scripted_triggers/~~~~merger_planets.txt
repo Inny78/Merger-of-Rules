@@ -106,6 +106,10 @@ merg_is_arcology = {
 		giga_is_pc_flusion_gaia_ecu = yes
 		# Pokémon
 		# uses_district_set = EOE_city_world
+		# Real Space
+		is_rs_compat_manufactorum = yes
+		is_rs_compat_agropolis = yes
+		is_rs_compat_fortoria = yes
 		# Star fantasy: Castle Scarlet
 		# uses_district_set = castle_scarlet
 		# Star Wars: Kuat Ancient Empire

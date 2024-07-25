@@ -75,8 +75,8 @@ is_maginotable_restricted = {
 		# uses_district_set = pc_tc_alchemical_ringworld
 		# Warship Girls and MIST species
 		is_wg_upgraded_ringworld = yes
-		# uses_district_set = rw_auto_uf_world
-		# uses_district_set = dyson_ring_world
+		wg_compat_is_ringworld_hab_auto_uf = yes
+		wg_compat_is_dyson_ring = yes
 		# ZOFE
 		# uses_district_set = utopian_ringworld
 		# uses_district_set = utopian_machine_ringworld

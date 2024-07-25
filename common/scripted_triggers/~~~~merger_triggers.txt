@@ -251,7 +251,7 @@ merg_is_dense_star = {
 		# Real Space
 		is_planet_class_pc_collapsar = yes
 		is_planet_class_pc_magnetar = yes
-		is_rs_microquasar = yes
+		is_rs_compat_microquasar = yes
 		# Solar Storm
 		is_abyssal_black_hole = yes
 		# TimeMod
@@ -279,7 +279,7 @@ merg_is_black_or_white_hole = {
 		# MEM
 		is_pc_mem_micro_black_hole = yes
 		# Real Space
-		is_rs_microquasar = yes
+		is_rs_compat_microquasar = yes
 		# Solar Storm
 		is_abyssal_black_hole = yes
 		# TimeMod

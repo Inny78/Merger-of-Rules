@@ -455,12 +455,15 @@ is_real_KZ_VOY_solaria = { always = no }
 is_regular_giga_maginot_world = { always = no }
 is_ringworld_wg = { always = no }
 is_rooted_adult = { always = no }
-is_rs_fu_star = { always = no }
-is_rs_hollow = { always = no }
-is_rs_microquasar = { always = no }
-is_rs_molten_habitat = { always = no }
-is_rs_sterile = { always = no }
-is_rs_tidallylocked = { always = no }
+is_rs_compat_fu_star = { always = no }
+is_rs_compat_hollow = { always = no }
+is_rs_compat_microquasar = { always = no }
+is_rs_compat_molten_habitat = { always = no }
+is_rs_compat_sterile = { always = no }
+is_rs_compat_tidallylocked = { always = no }
+is_rs_compat_manufactorum = { always = no }
+is_rs_compat_agropolis = { always = no }
+is_rs_compat_fortoria = { always = no }
 is_sbtg_origin_starbase = { always = no }
 is_sbtg_playable_country = { always = no }
 is_servitor_empire = { always = no }
@@ -614,6 +617,8 @@ wg_compat_is_pc_ringworld_habitable_water = { always = no }
 wg_compat_is_pc_shenhai = { always = no }
 wg_compat_is_pc_wsg_port = { always = no }
 wg_compat_is_pc_wg_water = { always = no }
+wg_compat_is_ringworld_hab_auto_uf = { always = no }
+wg_compat_is_dyson_ring = { always = no }
 wula_fallen_empire_mod_actived = { always = no }
 xvcv_mdlc_is_non_gate_mega = { always = no }
 has_wwv_compatch = { always = no }
@@ -621,3 +626,4 @@ has_wwv_auth_witch_dict = { always = no }
 has_wwv_auth_grey_witch = { always = no }
 is_wwv_victorika = { always = no }
 vte_comp_mecha_preference = { always = no }
+check_ai_limits = { always = no }

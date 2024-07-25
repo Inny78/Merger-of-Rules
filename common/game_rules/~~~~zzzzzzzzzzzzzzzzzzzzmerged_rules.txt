@@ -1314,7 +1314,7 @@ can_terraform_planet = {
 	# Real Space New Frontiers
 	custom_tooltip = {
 		fail_text = NO_TERRAFORM_HOLLOW_WORLD
-		is_rs_hollow = no
+		is_rs_compat_hollow = no
 	}
 	custom_tooltip = {
 		fail_text = NO_TERRAFORM_OVERMIND
@@ -2292,7 +2292,7 @@ can_orbital_bombard = {
 	NOR = {
 		any_controlled_ship = { is_ship_size = colossus }
 		# Real Space New Frontiers
-		from = { is_rs_hollow = yes }
+		from = { is_rs_compat_hollow = yes }
 		# Star Wars: Kuat Ancient Empire
 		FROM.OWNER = { is_country_type = kuat_fire_base_hositle }
 		FROM = { has_planet_flag = enable_kuat_shield }

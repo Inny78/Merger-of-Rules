@@ -485,7 +485,7 @@ ag_is_compact_star = {
 		# Real Space
 		is_planet_class_pc_collapsar = yes
 		is_planet_class_pc_magnetar = yes
-		is_rs_microquasar = yes
+		is_rs_compat_microquasar = yes
 	}
 }
 ag_is_common_country = {
@@ -746,9 +746,9 @@ do3f_can_have_random_districts = {
 		AND = {
 			has_global_flag = has_new_frontiers_mod
 			OR = {
-				is_rs_tidallylocked = yes
-				is_rs_sterile = yes
-				is_rs_hollow = yes
+				is_rs_compat_tidallylocked = yes
+				is_rs_compat_sterile = yes
+				is_rs_compat_hollow = yes
 			}
 		}
 		can_have_habitable_deposits = yes
@@ -842,9 +842,9 @@ is_regular_star = {
 		is_planet_class_pc_ae_star = yes
 		is_planet_class_pc_collapsar = yes
 		is_planet_class_pc_magnetar = yes
-		is_rs_microquasar = yes
+		is_rs_compat_microquasar = yes
 		is_planet_class_pc_d_star = yes
-		is_rs_fu_star = yes
+		is_rs_compat_fu_star = yes
 		is_planet_class_pc_l_star = yes
 		is_planet_class_pc_nova_1 = yes
 		is_planet_class_pc_nova_2 = yes
@@ -1002,7 +1002,7 @@ ESC_TRIGGER_is_naked_mantle_planet = {
 		# Girls Frontline
 		gf_comp_devil_furnace = yes
 		# Real Space - Planetary Stations
-		is_rs_molten_habitat = yes
+		is_rs_compat_molten_habitat = yes
 		# Real Space - New Frontiers
 		has_modifier = infernal_world
 		has_modifier = lava_world
@@ -1543,7 +1543,7 @@ planetary_catastrophe_is_possible = {
 		merg_is_relic_world = yes
 		merg_is_hab_ringworld = yes
 		merg_is_habitat = yes
-		is_rs_sterile = yes
+		is_rs_compat_sterile = yes
 	}
 	NOR = {
 		has_planet_flag = colony_event
