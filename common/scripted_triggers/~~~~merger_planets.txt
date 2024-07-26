@@ -117,7 +117,7 @@ merg_is_arcology = {
 		# Voyage to Eternity
 		vte_compat_hyper_ecu = yes
 		# ZOFE
-		# uses_district_set = utopian_city
+		is_zofe_utopian_city = yes
 		# Misc
 		uses_district_set = city_world
 	}
@@ -212,7 +212,7 @@ merg_is_gaia = {
 		# Pokémon
 		# uses_district_set = EOE_pokemon_world
 		# ZOFE
-		# uses_district_set = utopian_world
+		is_zofe_utopian_gaia = yes
 	}
 }
 
@@ -265,8 +265,8 @@ merg_is_hive_world = {
 		# Planetary Ringworlds
 		is_planetary_ringworld_hive = yes
 		# ZOFE
-		# uses_district_set = utopian_hive_world
-		# uses_district_set = utopian_hive_ringworld
+		is_zofe_utopian_hive = yes
+		is_zofe_utopian_hive_ringworld = yes
 	}
 }
 
@@ -286,8 +286,8 @@ merg_is_machine_world = {
 		# Planetary Ringworlds
 		is_planetary_ringworld_machine = yes
 		# ZOFE
-		# uses_district_set = utopian_machine_world
-		# uses_district_set = utopian_machine_ringworld
+		is_zofe_utopian_machine = yes
+		is_zofe_utopian_machine_ringworld = yes
 	}
 }
 

@@ -103,7 +103,7 @@ merg_is_true_ringworld = {
 		# Warship Girls and MIST species
 		is_ringworld_wg = yes
 		# ZOFE
-		# uses_district_set = utopian_ringworld
+		is_zofe_utopian_ringworld = yes
 	}
 }
 
@@ -134,7 +134,7 @@ merg_is_habitat = {
 		# Wula Fallen Empire
 		# uses_district_set = fe_rogue_trader_habitat
 		# ZOFE
-		# uses_district_set = utopian_habitat
+		is_zofe_utopian_habitat = yes
 	}
 }
 
@@ -163,6 +163,8 @@ merg_is_habitat_non_PD = {
 		# uses_district_set = SRA_city_world
 		# Twinks Atlantean
 		# uses_district_set = skypalace
+		# ZOFE
+		is_zofe_utopian_habitat = yes
 	}
 }
 
