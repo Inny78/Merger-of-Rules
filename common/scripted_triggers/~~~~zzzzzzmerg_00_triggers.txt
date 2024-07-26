@@ -596,14 +596,24 @@ has_total_war_cb = {
 					is_country_type = awakened_fallen_empire
 					is_homicidal = yes
 					# Ethical Gestalts
-					has_valid_civic = civic_hive_assimilator
-					is_machine_assimilator = yes
+					AND = {
+						merg_has_ethical_gestalts = yes
+						OR = {
+							has_valid_civic = civic_hive_assimilator
+							is_machine_assimilator = yes
+						}
+					}
 					# Kek's Origins+
 					has_valid_civic = KO_hive_asm
 				}
 				# Ethical Gestalts
-				has_policy_flag = liberation_wars
-				has_policy_flag = no_wars
+				AND = {
+					merg_has_ethical_gestalts = yes
+					OR = {
+						has_policy_flag = liberation_wars
+						has_policy_flag = no_wars
+					}
+				}
 			}
 			from = {
 				OR = {
