@@ -2,8 +2,9 @@
 l_english:
 
 # Buildings
- building_dark_energy_psg: "Dark Energy Planetary Shield Generator"
- building_ae_dark_energy_psg: "Sky Shield"
+ building_fe_psg: "Sky Shield"
+ building_acot_dm_psg: "Dark Energy Planetary Shield Generator"
+ building_acot_ae_psg: "Sky Shield"
  building_phanon_psg: "Planetary Runic Shield Generator"
  building_stellarite_psg: "Planetary Transtemporal Shield Generator"
  building_avb_planetary_shield_generator_2: "Planetary Defense Screen"

@@ -134,6 +134,8 @@ giga_compat_hyperlane_exclude = {
 		has_star_flag = giga_no_lanes
 		# Darkspace
 		has_star_flag = darkspace_void_control
+		# Forgotten Empires
+		has_star_flag = scfe_shaded_colony_system
 		# Merger of Rules
 		merg_is_isolated_system = yes
 	}

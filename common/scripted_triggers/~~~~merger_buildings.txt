@@ -64,8 +64,9 @@ merg_has_planetary_shield = {
 		has_building = building_planetary_shield_generator # -0.5
 		has_building = building_planetary_shield_generator_fe# -0.5
 		# ACOT
-		has_building = building_dark_energy_psg # -0.7
-		has_building = building_acot_ae_dark_energy_psg # -0.95
+		has_building = building_fe_psg # -0.5
+		has_building = building_acot_dm_psg # -0.7
+		has_building = building_acot_ae_psg # -0.95
 		# AOT
 		has_building = building_phanon_psg # -0.99
 		has_building = building_stellarite_psg # -1

@@ -710,6 +710,7 @@ ds_hyperlane_create = {
 		has_star_flag = fe_xeno_zoo	
 		has_star_flag = fallen_shield_world
 		has_star_flag = fallen_empire_world
+		has_star_flag = scfe_shaded_colony_system
 		merg_is_isolated_system = yes
 		giga_is_core_system = yes
 		cohesive_system = yes
@@ -790,6 +791,8 @@ elec_hyperlane_create = {
 		merg_is_isolated_system = yes
 		# Darkspace
 		has_star_flag = darkspace_void_control
+		# Forgotten Empires
+		has_star_flag = scfe_shaded_colony_system
 		# Gigastructural Engineering & More
 		giga_is_core_system = yes
 		cohesive_system = yes
