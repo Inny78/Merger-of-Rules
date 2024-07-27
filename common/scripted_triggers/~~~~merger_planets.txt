@@ -94,18 +94,23 @@ merg_is_alpine = {
 
 merg_is_arcology = {
 	optimize_memory
+	is_artificial = no # Only planetary arcologies are listed here
 	OR = {
 		is_planet_class = pc_city
-		pd_is_pd_hive_arc = yes
-		pd_is_pd_machine_arc = yes
 		# Ancient Empire
 		# is_pc_ag_city = yes
 		# Azur Lane
 		azl_comp_harbor = yes
+		# Forgotten History
+		is_AAA_apocalyptic_city = yes
 		# Gigastructural Engineering & More
 		giga_is_pc_flusion_gaia_ecu = yes
-		# Pokémon
-		# uses_district_set = EOE_city_world
+		# Planetary Diversity
+		pd_is_pd_arcology = yes
+		pd_is_pd_hive_arc = yes
+		pd_is_pd_machine_arc = yes
+		# Playable Katzenartig Imperium
+		is_pki_flusion_ecu = yes
 		# Real Space
 		is_rs_compat_manufactorum = yes
 		is_rs_compat_agropolis = yes
@@ -121,9 +126,34 @@ merg_is_arcology = {
 		# Misc
 		uses_district_set = city_world
 	}
-	is_artificial = no
 }
-
+merg_is_arcology_non_gestalt = {
+	is_artificial = no
+	OR = {
+		is_planet_class = pc_city
+		# Gigastructural Engineering & More
+		giga_is_pc_flusion_gaia_ecu = yes
+		# Planetary Diversity
+		pd_is_pd_arcology = yes
+		# Playable Katzenartig Imperium
+		is_pki_flusion_ecu = yes
+		# Real Space
+		is_rs_compat_manufactorum = yes
+		is_rs_compat_agropolis = yes
+		is_rs_compat_fortoria = yes
+		# Voyage to Eternity
+		vte_compat_hyper_ecu = yes
+		# ZOFE
+		is_zofe_utopian_city = yes
+		# Misc
+		uses_district_set = city_world
+	}
+}
+merg_is_artificial_arcology = {
+	OR = {
+		giga_is_pc_ringworld_city = yes
+	}
+}
 merg_is_arctic = {
 	optimize_memory
 	OR = {
@@ -418,6 +448,7 @@ merg_is_broken = {
 		is_planet_class = pc_broken
 		is_planet_class = pc_shattered
 		is_planet_class = pc_shattered_2
+		is_planet_class = pc_egg_cracked
 		# MEM
 		is_pc_mem_broken_city = yes
 	}

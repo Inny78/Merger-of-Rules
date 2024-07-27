@@ -117,6 +117,7 @@ giga_is_pc_interstellar_ringworld_habitable = { always = no }
 giga_is_pc_maginot_ringworld = { always = no }
 giga_is_pc_pouchkinn_black_hole = { always = no }
 giga_is_pc_red_toxic = { always = no }
+giga_is_pc_ringworld_city = { always = no }
 giga_is_pc_ringworld_hive = { always = no }
 giga_is_pc_ringworld_machine = { always = no }
 giga_is_pc_squareworld_habitable = { always = no }
@@ -244,6 +245,7 @@ hfe_trigger_is_human_fallen = { always = no }
 hfe_trigger_system_in_someones_space = { always = no }
 hfe_trigger_unemployed_auto_migrate = { always = no }
 ideological_discomfort = { always = no }
+is_AAA_apocalyptic_city = { always = no }
 is_abyssal_black_hole = { always = no }
 is_acot_advanced_starbase = { always = no }
 is_acot_awesome_planet_class = { always = no }

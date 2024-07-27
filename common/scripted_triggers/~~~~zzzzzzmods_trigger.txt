@@ -648,15 +648,17 @@ PR_trgr_plnt_DOOM = {
 		merg_is_barren_cold = yes
 		merg_is_toxic = yes
 		merg_is_frozen = yes
+		merg_is_broken = yes
 		is_planet_class = pc_ai
 		is_planet_class = pc_infested
-		is_planet_class = pc_broken
-		is_planet_class = pc_shattered
 		is_planet_class = pc_shattered_ring_habitable
-		is_planet_class = pc_egg_cracked
 	}
 }
 
+############################### City World Flavour ###############################
+ef_is_ecu = {
+	merg_is_arcology_non_gestalt = yes
+}
 ############################### Cruel Conquerers ###############################
 cruel_has_shipyard = {
 	or = {
