@@ -584,10 +584,8 @@ can_generate_leader_from_pop = {
 		root = { has_origin = origin_hive_overmind }
 		# Lithoid Supremacy
 		is_pearl_born_drone = yes
-		# Protoss
-		has_trait = trait_protoss_probe
 		# Rogue Maid (Rogue Servitor Completely Remake)
-		has_trait = trait_working_machine
+		has_trait = trait_working_machine # is_rm_working_machine = yes
 		# Wandering Witch: Voyagers
 		has_ww_servitude = yes
 	}
@@ -2146,8 +2144,6 @@ can_species_be_assembled = {
 					is_archetype = NANITES_CROP
 					# Star Wars: UnknownWorld Shipgirls Story
 					is_archetype = STARSHIPGIRLS
-					# The DAL Species Mod
-					is_archetype = DATEALIVE
 					# Warship Girls R and MIST species
 					is_archetype = WARSHIPGIRL
 					is_archetype = SHENHAI
@@ -2525,14 +2521,16 @@ can_orbitable_repair_ships = {
 				has_starbase_size = enclave_mercenary_station
 				# ACOT
 				is_acot_advanced_starbase = yes
-				# ZOFE
-				has_starbase_size = fe_goliath
 				# AOT
 				is_ascended_juggernaut = yes
 				has_starbase_size = precursor_juggernaut
 				# Assault Lily
 				has_starbase_size = lily_super_college_ship
 				has_starbase_size = lily_college_ship
+				# DOA
+				has_starbase_size = doa_ascendant_juggernaut
+				# ZOFE
+				has_starbase_size = fe_goliath
 			}
 			fleet = { is_disabled = no }
 		}

@@ -456,6 +456,7 @@ is_real_KZ_VOY_Seclusion = { always = no }
 is_real_KZ_VOY_solaria = { always = no }
 is_regular_giga_maginot_world = { always = no }
 is_ringworld_wg = { always = no }
+is_rm_working_machine = { always = no }
 is_rooted_adult = { always = no }
 is_rs_compat_fu_star = { always = no }
 is_rs_compat_hollow = { always = no }

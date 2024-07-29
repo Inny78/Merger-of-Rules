@@ -1252,7 +1252,7 @@ can_think = {
 		# Diagraphers Trait Mod
 		is_subsapient_form = yes
 		# Rogue Maid
-		has_trait = trait_working_machine
+		has_trait = trait_working_machine # is_rm_working_machine = yes
 		# V_Traits
 		has_v_non_thinking_trait = yes
 	}

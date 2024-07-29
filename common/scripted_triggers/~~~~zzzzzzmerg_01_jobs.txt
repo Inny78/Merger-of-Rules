@@ -210,8 +210,6 @@ is_organic_species = {
 				}
 				# SW:UnknownWorld Shipgirls Story
 				is_archetype = STARSHIPGIRLS
-				# The DAL Species Mod
-				is_archetype = DATEALIVE
 				# Wandering Witch: Voyagers
 				is_archetype = WV_OBJECT
 				# Warship Girls R And MIST Species

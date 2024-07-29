@@ -54,8 +54,6 @@ STARSHIPGIRLS = { uses_modifiers = no }
 TC_GOLEM = { uses_modifiers = no }
 TC_GOLEM_HIVE = { uses_modifiers = no }
 TC_GOLEM_MACHINE = { uses_modifiers = no }
-# The DAL Species Mod
-DATEALIVE = { uses_modifiers = no }
 # Wandering Witch: Voyagers
 WV_OBJECT = { uses_modifiers = no }
 # Warship Girls R And MIST Species

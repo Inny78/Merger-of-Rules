@@ -147,8 +147,6 @@ has_food_upkeep = {
             is_archetype = NYTO
             # SW:UnknownWorld Shipgirls Story
             is_archetype = STARSHIPGIRLS
-            # The DAL Species Mod
-            is_archetype = DATEALIVE
             # Warship Girls R And MIST Species
             is_archetype = SHENHAI
             is_archetype = UNITED_FLEET
