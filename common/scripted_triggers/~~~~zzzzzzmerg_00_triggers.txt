@@ -630,7 +630,10 @@ has_total_war_cb = {
 					has_valid_civic = KO_hive_asm
 				}
 				# Ethical Gestalts
-				NOT = { has_policy_flag = no_wars }
+				AND = {
+					merg_has_ethical_gestalts = yes
+					NOT = { has_policy_flag = no_wars }
+				}
 			}
 		}
 	}

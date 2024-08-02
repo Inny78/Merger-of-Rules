@@ -540,6 +540,8 @@ KZ_VOY_can_not_destroy_by_planet_killer = { always = no }
 KZ_VOY_MOD = { always = no }
 KZ_VOY_trgr_plnt_ASSEMBLY = { always = yes }
 KZ_VOY_trgr_plnt_CLONE = { always = no }
+lex_compat_planet_dummy = { always = no }
+lex_compat_star_dummy = { always = no }
 Maid_trigger_0_can_build_branch_offices = { always = no }
 Maid_trigger_1_can_support_branch_offices = { always = no }
 Maid_trigger_2_can_build_branch_office_on_planet = { always = yes }

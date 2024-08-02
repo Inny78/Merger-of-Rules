@@ -1,4 +1,5 @@
 default_site_visible_trigger = {
+	NOT = { has_country_flag = chosen_empire }
 	OR = {
 		merg_is_default_empire = yes
 		AND = {

@@ -179,6 +179,9 @@ giga_is_nuked = {
 giga_is_arcology = {
 	merg_is_arcology = yes
 }
+gigas_is_toxic = {
+	merg_is_toxic = yes
+}
 giga_country_gets_bank_include = {
 	OR = {
 		# Darkspace

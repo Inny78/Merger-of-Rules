@@ -316,10 +316,10 @@ merg_is_empty_space = {
 		# Gigastructural Engineering & More
 		giga_is_pc_giga_empty_space = yes
 		# History of the Lost Empire
-		is_planet_class = pc_empty_space # is_asharms_empty_space = yes
+		# is_planet_class = pc_empty_space # is_asharms_empty_space = yes
 		# LEX
-		is_planet_class = pc_bwm_star_dummy
-		is_planet_class = pc_bwm_planet_dummy
+		lex_compat_star_dummy = yes
+		lex_compat_planet_dummy = yes
 		# Secrets of the Shroud
 		is_sm_empty_space = yes
 		# Some Events of Outside Cluster

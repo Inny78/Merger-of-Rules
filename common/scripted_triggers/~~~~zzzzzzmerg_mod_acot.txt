@@ -69,6 +69,8 @@ can_build_precursor_ship = {
 				is_sbtg_origin_starbase = yes
 				# Assault Lily
 				has_starbase_size >= lily_super_college_ship
+				# DOA
+				has_starbase_size = doa_ascendant_juggernaut
 				# Gigastructural Engineering & More
 				has_starbase_module = virtual_shipyard_uplink
 				# Universal Gateway Origin
