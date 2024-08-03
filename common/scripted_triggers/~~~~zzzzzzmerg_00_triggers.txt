@@ -595,6 +595,7 @@ has_total_war_cb = {
 				NOR = {
 					is_country_type = awakened_fallen_empire
 					is_homicidal = yes
+					has_valid_civic = civic_machine_assimilator
 					# Ethical Gestalts
 					AND = {
 						merg_has_ethical_gestalts = yes
@@ -619,6 +620,7 @@ has_total_war_cb = {
 				OR = {
 					is_country_type = awakened_fallen_empire
 					is_homicidal = yes
+					has_valid_civic = civic_machine_assimilator
 					# ACOT
 					is_progenitor_empires = yes
 					# Loud but Deadly
@@ -630,9 +632,12 @@ has_total_war_cb = {
 					has_valid_civic = KO_hive_asm
 				}
 				# Ethical Gestalts
-				AND = {
-					merg_has_ethical_gestalts = yes
-					NOT = { has_policy_flag = no_wars }
+				OR = {
+					merg_has_ethical_gestalts = no
+					AND = {
+						merg_has_ethical_gestalts = yes
+						NOT = { has_policy_flag = no_wars }
+					}
 				}
 			}
 		}
