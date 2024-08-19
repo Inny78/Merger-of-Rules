@@ -5,11 +5,15 @@ country_event = {
     hide_window = yes
     is_triggered_only = yes
 
+    trigger = {
+        is_ai = no
+        has_country_flag = merg_host_country
+    }
+
     immediate = {
         # Real Space
         if = {
             limit = {
-                is_ai = no
                 merg_has_real_space = yes
                 has_rs_comp_patch = no
             }
@@ -18,7 +22,6 @@ country_event = {
         # Warship Girls R and MIST Species
         if = {
             limit = {
-                is_ai = no
                 merg_has_warship_girls = yes
                 has_wsg_comp_patch = no
             }
@@ -27,7 +30,6 @@ country_event = {
         # Girls Frontline
         if = {
             limit = {
-                is_ai = no
                 merg_has_girls_frontline = yes
                 has_gf_comp_patch = no
             }
@@ -36,7 +38,6 @@ country_event = {
         # Azur Lane Stellaris DLC
         if = {
             limit = {
-                is_ai = no
                 merg_has_azur_lane = yes
                 has_azur_comp_patch = no
             }
@@ -45,7 +46,6 @@ country_event = {
         # Maiden Frontier Gunstar
         if = {
             limit = {
-                is_ai = no
                 merg_has_gunstar = yes
                 has_msgsc_compatch = no
             }
@@ -54,7 +54,6 @@ country_event = {
         # Voyage to Eternity
         if = {
             limit = {
-                is_ai = no
                 merg_has_voyage_eternity = yes
                 has_vte_compat = no
             }
@@ -63,7 +62,6 @@ country_event = {
         # Blue Archive
         if = {
             limit = {
-                is_ai = no
                 merg_has_bluearchive = yes
                 has_bluearch_compatch = no
             }
@@ -72,7 +70,6 @@ country_event = {
         # Star Wars Kuat Ancient Empire
         if = {
             limit = {
-                is_ai = no
                 merg_has_sw_kuat = yes
                 has_kuat_compatch = no
             }
@@ -81,7 +78,6 @@ country_event = {
         # Wandering Witch Voyager
         if = {
             limit = {
-                is_ai = no
                 merg_has_wandering_witch = yes
                 has_wwv_compatch = no
             }

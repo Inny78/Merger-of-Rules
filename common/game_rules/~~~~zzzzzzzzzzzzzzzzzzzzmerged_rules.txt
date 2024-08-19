@@ -3130,6 +3130,13 @@ can_enter_system_by_jump = {
 							}
 						}
 						has_star_flag = nep_arena
+						# Sparble's Stellar Hyperconstructs
+						has_star_flag = ssh_ark_system
+						has_star_flag = ssh_ark_jump_capital
+						has_star_flag = ssh_ark_jump_cluster_core
+						has_star_flag = ssh_ark_jump_new_system
+						has_star_flag = ssh_basement_universe_center
+						has_star_flag = ssh_basement_universe_system
 						# SW:Kuat Ancient Empire
 						kuat_is_kuat_system = yes
 						has_star_flag = ag_kae_e_area_system

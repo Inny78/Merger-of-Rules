@@ -1679,7 +1679,12 @@ is_shroud_rift_planet = {
 }
 
 ############################### Sparble's Stellar Hyperconstructs ###############################
-ssh_is_any_gas_giant = { merg_is_gas_giant = yes }
+ssh_is_any_gas_giant = {
+	OR = {
+		merg_is_gas_giant = yes
+		giga_is_pc_gigabrown_dwarf = yes
+	}
+}
 
 ############################### Star Wars: Kuat Ancient Empire ###############################
 kuat_is_common_country = {

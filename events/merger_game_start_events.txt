@@ -29,3 +29,18 @@ event = {
 		set_variable = { which = v_behavioral_sink_count value = 0 }
 	}
 }
+country_event = {
+	id = merg.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		NOT = { has_global_flag = merger_start_check }
+	}
+
+	immediate = {
+		set_global_flag = merger_start_check
+		set_country_flag = merg_host_country
+	}
+}

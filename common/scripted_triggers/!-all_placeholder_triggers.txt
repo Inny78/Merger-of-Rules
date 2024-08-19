@@ -112,6 +112,7 @@ giga_is_pc_giga_orbital = { always = no }
 giga_is_pc_giga_penrose_habitable = { always = no }
 giga_is_pc_giga_planetary_computer = { always = no }
 giga_is_pc_gigaorbital_ring = { always = no }
+giga_is_pc_gigabrown_dwarf = { always = no }
 giga_is_pc_interstellar_habitat = { always = no }
 giga_is_pc_interstellar_ringworld_habitable = { always = no }
 giga_is_pc_maginot_ringworld = { always = no }

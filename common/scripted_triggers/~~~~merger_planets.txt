@@ -22,7 +22,6 @@ merg_is_basic_planet = {
 		merg_is_tundra = yes
 	}
 }
-
 merg_is_basic_habitable = {
 	optimize_memory
 	OR ={
@@ -40,7 +39,6 @@ merg_is_basic_habitable = {
 		merg_is_tundra = yes
 	}
 }
-
 merg_is_standard_habitable = {
 	optimize_memory
 	OR ={
@@ -55,7 +53,6 @@ merg_is_standard_habitable = {
 		merg_is_tundra = yes
 	}
 }
-
 merg_is_standard_dry = {
 	optimize_memory
 	OR = {
@@ -91,7 +88,6 @@ merg_is_alpine = {
 		pd_is_alpine = yes
 	}
 }
-
 merg_is_arcology = {
 	optimize_memory
 	is_artificial = no # Only planetary arcologies are listed here
@@ -164,7 +160,6 @@ merg_is_arctic = {
 		pd_is_arctic = yes
 	}
 }
-
 merg_is_arid = {
 	optimize_memory
 	OR = {
@@ -175,7 +170,6 @@ merg_is_arid = {
 		pd_is_arid = yes
 	}
 }
-
 merg_is_barren = {
 	optimize_memory
 	OR = {
@@ -186,7 +180,6 @@ merg_is_barren = {
 		is_pc_mem_destroyed_barren = yes
 	}
 }
-
 merg_is_barren_cold = {
 	optimize_memory
 	OR = {
@@ -195,7 +188,6 @@ merg_is_barren_cold = {
 		atw_is_barren_cold = yes
 	}
 }
-
 merg_is_continental = {
 	optimize_memory
 	OR = {
@@ -206,7 +198,6 @@ merg_is_continental = {
 		pd_is_continental = yes
 	}
 }
-
 merg_is_desert = {
 	optimize_memory
 	OR = {
@@ -217,7 +208,6 @@ merg_is_desert = {
 		pd_is_desert = yes
 	}
 }
-
 merg_is_frozen = {
 	optimize_memory
 	OR = {
@@ -230,7 +220,6 @@ merg_is_frozen = {
 		is_mzilli_rogue = yes
 	}
 }
-
 merg_is_gaia = {
 	optimize_memory
 	OR = {
@@ -245,7 +234,6 @@ merg_is_gaia = {
 		is_zofe_utopian_gaia = yes
 	}
 }
-
 merg_is_gaia_basic = {
 	optimize_memory
 	OR = {
@@ -256,7 +244,6 @@ merg_is_gaia_basic = {
 		pd_is_planet_class_gaia = yes
 	}
 }
-
 merg_is_gas_giant_habitable = {
 	optimize_memory
 	OR = {
@@ -267,7 +254,6 @@ merg_is_gas_giant_habitable = {
 		is_tm_gas_colony = yes
 	}
 }
-
 merg_is_gas_giant = {
 	optimize_memory
 	OR = {
@@ -282,7 +268,6 @@ merg_is_gas_giant = {
 		is_nanite_gas_giant = yes
 	}
 }
-
 merg_is_hive_world = {
 	optimize_memory
 	OR = {
@@ -299,7 +284,6 @@ merg_is_hive_world = {
 		is_zofe_utopian_hive_ringworld = yes
 	}
 }
-
 merg_is_machine_world = {
 	optimize_memory
 	OR = {
@@ -320,7 +304,6 @@ merg_is_machine_world = {
 		is_zofe_utopian_machine_ringworld = yes
 	}
 }
-
 merg_is_molten = {
 	optimize_memory
 	OR = {
@@ -329,7 +312,6 @@ merg_is_molten = {
 		atw_is_molten = yes
 	}
 }
-
 merg_is_nuked = {
 	optimize_memory
 	OR = {
@@ -340,7 +322,6 @@ merg_is_nuked = {
 		giga_is_katzenland = yes
 	}
 }
-
 merg_is_nuked_basic = {
 	optimize_memory
 	OR = {
@@ -351,7 +332,6 @@ merg_is_nuked_basic = {
 		pd_is_planet_class_nuked = yes
 	}
 }
-
 merg_is_aquatic = {
 	optimize_memory
 	OR = {
@@ -364,7 +344,6 @@ merg_is_aquatic = {
 		giga_is_edge_of_eternity = yes
 	}
 }
-
 merg_is_ocean = {
 	optimize_memory
 	OR = {
@@ -376,7 +355,6 @@ merg_is_ocean = {
 		is_pd_planet_for_aqua_trait = yes
 	}
 }
-
 merg_is_relic_world = {
 	optimize_memory
 	OR = {
@@ -385,7 +363,6 @@ merg_is_relic_world = {
 		is_dessanu_relic = yes
 	}
 }
-
 merg_is_savannah = {
 	optimize_memory
 	OR = {
@@ -396,7 +373,6 @@ merg_is_savannah = {
 		pd_is_savannah = yes
 	}
 }
-
 merg_is_shielded_world = {
 	optimize_memory
 	OR = {
@@ -407,7 +383,6 @@ merg_is_shielded_world = {
 		is_nanite_habitat_shielded = yes
 	}
 }
-
 merg_is_toxic = {
 	optimize_memory
 	OR = {
@@ -418,7 +393,6 @@ merg_is_toxic = {
 		giga_is_pc_red_toxic = yes
 	}
 }
-
 merg_is_tropical = {
 	optimize_memory
 	OR = {
@@ -431,7 +405,6 @@ merg_is_tropical = {
 		pd_is_tropical = yes
 	}
 }
-
 merg_is_tundra = {
 	optimize_memory
 	OR = {
@@ -442,7 +415,6 @@ merg_is_tundra = {
 		pd_is_tundra = yes
 	}
 }
-
 merg_is_broken = {
 	OR = {
 		is_planet_class = pc_broken
@@ -451,5 +423,15 @@ merg_is_broken = {
 		is_planet_class = pc_egg_cracked
 		# MEM
 		is_pc_mem_broken_city = yes
+	}
+}
+merg_is_brown_dwarf = {
+	OR = {
+		is_planet_class = pc_t_star
+		# Gigastructural Engineering & More
+		giga_is_pc_gigabrown_dwarf = yes
+		# Real Space
+		is_planet_class_pc_l_star = yes
+		is_planet_class_pc_y_star = yes
 	}
 }

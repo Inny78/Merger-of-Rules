@@ -6,6 +6,7 @@ on_game_start = {
 }
 on_game_start_country = {
 	events = {
+		merg.2
 		merg_check.1
 	}
 }
