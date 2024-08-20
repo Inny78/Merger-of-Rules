@@ -90,6 +90,9 @@ is_toxic_world = {
 is_frozen_world = {
 	merg_is_frozen = yes
 }
+is_barren_dry_world = {
+	merg_is_barren = yes
+}
 is_barren_cold_world = {
 	merg_is_barren_cold = yes
 }

@@ -6,7 +6,10 @@ is_azaryn_preferred_terraform_pc = {
 	OR = {
 		merg_is_barren = yes
 		merg_is_barren_cold = yes
+		# Planetary Diversity
+		is_planet_class = pc_hothouse
 	}
 	planet_size >= 10
+	planet_size <= 30
 	NOT = { has_planet_flag = terraform_nucleus_transfixed }
 }
