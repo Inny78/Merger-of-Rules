@@ -9,9 +9,6 @@ can_use_ehof = {
 			is_fleet_idle = no
 		}
 		fleet = { is_mobile = no }
-		# ACOT
-		is_ship_size = acot_dragon_stellarite
-		is_ship_size = acot_tuborek_flagship
 	}
 }
 reshaper_eligible = {
@@ -70,7 +67,7 @@ is_maginotable_restricted = {
 		# Star Wars: Kuat Ancient Empire
 		is_kuat_eternal_ringworld = yes
 		# Star Wars: UnknownWorld Shipgirls Story
-		# uses_district_set = rw_swgs_engineer_world
+		is_swuss_swgs_engineer_ringworld_hab = yes
 		# ThaumStellaris
 		# uses_district_set = pc_tc_alchemical_ringworld
 		# Warship Girls and MIST species

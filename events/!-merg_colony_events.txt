@@ -37,6 +37,7 @@ planet_event = {
 		#owner = { NOT = { has_ethic = ethic_gestalt_consciousness } }
 		num_pops > 0
 		merg_is_standard_habitable = yes
+		is_artificial = no
 		NOR = {
 			has_global_flag = seismic_disturbance_global
 			has_planet_flag = colony_event

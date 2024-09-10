@@ -81,6 +81,15 @@ country_event = {
                 merg_has_wandering_witch = yes
                 has_wwv_compatch = no
             }
+            country_event = { id = merg_check.10 }
+        }
+        # Star Wars: UnknownWorld Shipgirls Story
+        if = {
+            limit = {
+                merg_has_swuss = yes
+                has_swuss_compatch = no
+            }
+            country_event = { id = merg_check.11 }
         }
     }
 }
@@ -185,6 +194,18 @@ country_event = {
     id = merg_check.10
     title = TRANSMISSION
     desc = merg_check.10.desc
+    picture = GFX_evt_communication_event
+    show_sound = event_default
+    is_triggered_only = yes
+
+    option = {
+        name = UNDERSTOOD
+    }
+}
+country_event = {
+    id = merg_check.11
+    title = TRANSMISSION
+    desc = merg_check.11.desc
     picture = GFX_evt_communication_event
     show_sound = event_default
     is_triggered_only = yes

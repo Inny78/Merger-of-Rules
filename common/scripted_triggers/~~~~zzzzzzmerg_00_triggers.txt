@@ -67,7 +67,8 @@ habitable_planet_not_urban = {
 		wg_compat_is_pc_wsg_port = yes
 		wg_compat_is_pc_shenhai = yes
 		# SW: UnknownWorld Shipgirls Story
-		# uses_district_set = engineer_world
+		is_swuss_swgs_engineer = yes
+		is_swuss_swgs_engineer_ringworld_hab = yes
 		# Gigastructures
 		giga_is_lifeless = yes
 		giga_is_katzenland = yes
@@ -157,13 +158,17 @@ has_encountered_other_species = {
 
 can_be_leader = {
 	has_citizenship_rights = yes
-	can_think = yes
+	# Rule out Traits for servitude & lack of free will
+	NOR = {
+		has_trait = trait_syncretic_proles
+		can_think = no
+	}
 	OR = {
 		is_robot_pop = no
 		root = {
 			OR = {
 				has_technology = tech_synthetic_leaders
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_mechanical_empire = yes
 				is_individual_machine = yes
 				# Maiden Frontier Gunstar Story Collection
@@ -387,7 +392,7 @@ is_default_or_fallen = {
 
 is_megacorp = {
 	OR = {
-		has_authority = auth_corporate
+		is_megacorp = yes
 		has_valid_civic = civic_galactic_sovereign_megacorp
 		has_government = gov_imperial_domain_megacorp
 		# Ethics and Civics - Bug Branch
@@ -410,8 +415,8 @@ is_megacorp = {
 is_autocracy = {
 	OR = {
 		is_gestalt = yes
-		has_authority = auth_imperial
-		has_authority = auth_dictatorial
+		is_imperial_authority = yes
+		is_dictatorial_authority = yes
 		# Ethics and Civics Bug Branch
 		is_bugged_dynastic_enterprise = yes
 		# Expanded Traits, Civics, Pops, and More
@@ -428,10 +433,10 @@ is_autocracy = {
 
 is_oligarchy = {
 	OR = {
-		has_authority = auth_oligarchic
+		is_oligarchic_authority = yes
 		AND = {
 			OR = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				# Wandering Witch: Voyagers
 				has_wwv_auth_grey_witch = yes
 			}
@@ -448,7 +453,7 @@ is_democracy = {
 	OR = {
 		has_authority = auth_democratic
 		AND = {
-			has_authority = auth_corporate
+			is_megacorp = yes
 			is_egalitarian = yes
 			merg_has_mca = no
 			merg_has_expanded_pops = no
@@ -480,7 +485,7 @@ can_set_ai_policy = {
 			OR = {
 				has_technology = tech_synthetic_workers
 				has_technology = tech_sapient_ai
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 			}
 			OR = {
 				merg_is_default_empire = yes
@@ -764,6 +769,8 @@ has_precursor_intro = {
 		has_country_flag = cybrex_intro
 		has_country_flag = zroni_intro
 		has_country_flag = baol_intro
+		has_country_flag = inetian_intro
+		has_country_flag = adakkaria_intro
 		has_country_flag = plexi_intro # Forgotten History
 		has_country_flag = lartia_intro # Forgotten History
 		has_country_flag = ixardian_intro # More Precursors
@@ -845,6 +852,7 @@ has_research_building = {
 		has_building = building_research_lab_3
 		has_building = building_institute
 		has_building = building_supercomputer
+		has_building = building_astrometeorology_observation_center
 		# ACOT
 		has_building = building_acot_dm_enigmatic_lab
 		has_building = building_acot_dm_institute
@@ -1251,7 +1259,6 @@ has_special_star_flag_trigger = {
 
 can_think = {
 	NOR = {
-		has_trait = trait_syncretic_proles
 		has_trait = trait_nerve_stapled
 		has_trait = trait_zombie
 		has_trait = trait_robot_suppressed

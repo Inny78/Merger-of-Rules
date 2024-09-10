@@ -212,6 +212,7 @@ has_species_trait_holooverseer = { always = no }
 has_species_trait_holowarrior = { always = no }
 has_str_genemodding_tech = { always = no }
 has_strict_democratic_auth = { always = no }
+has_swuss_compatch = { always = no }
 has_upgraded_penal_capital = { always = no }
 has_v_allelopathy = { always = no }
 has_v_asexual_reproduction = { always = no }
@@ -486,6 +487,9 @@ is_spy_empire = { always = no }
 is_steven_no_star = { always = no }
 is_submerged = { always = no }
 is_subsapient_form = { always = no }
+is_swuss_starshipgirls = { always = no }
+is_swuss_swgs_engineer = { always = no }
+is_swuss_swgs_engineer_ringworld_hab = { always = no }
 is_symbiote = { always = no }
 is_symbiote_of_prevprev = { always = no }
 is_tc_bedrock = { always = no }

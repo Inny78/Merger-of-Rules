@@ -38,8 +38,6 @@ can_build_precursor_ship = {
 				is_sofe_megastructure_shipyard = yes
 				# Assault Lily
 				is_megastructure_type = college_ship_creater_3
-				# Standalone Ancient Ships
-				has_starbase_size >= sas_xxtitan_warship
 				# Universal Gateway Origin
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_8
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9
@@ -69,12 +67,8 @@ can_build_precursor_ship = {
 				is_sbtg_origin_starbase = yes
 				# Assault Lily
 				has_starbase_size >= lily_super_college_ship
-				# DOA
-				has_starbase_size = doa_ascendant_juggernaut
 				# Gigastructural Engineering & More
 				has_starbase_module = virtual_shipyard_uplink
-				# Universal Gateway Origin
-                has_starbase_size >= universal_gateway_citadel
 			}
 		}
 	}

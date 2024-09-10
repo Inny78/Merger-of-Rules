@@ -1181,6 +1181,18 @@ can_colonize_planet = {
 			NOT = { owner = { has_event_chain = cosmogenesis_planet_pickup_chain } }
 		}
 	}
+	custom_tooltip = {
+		fail_text = "COLONIZATION_IMPOSSIBLE_CRIMSON_CRAWLERS"
+
+		if = {
+			limit = {
+				has_modifier = crimson_crawlers
+			}
+			root = {
+				cares_for_crimson_crawlers = yes
+			}
+		}
+	}
 	# Diagrapher's Factions and Ethics Mod
 	hidden_trigger = {
 		OR = {
@@ -1276,12 +1288,6 @@ can_terraform_planet = {
 			any_owned_pop = { is_sapient = no }
 		}
 	}
-	# Forgotten Empires
-	custom_tooltip = {
-		fail_text = scfe_cant_terraform_special_planet
-		NOT = { has_planet_flag = cant_terraform_planet }
-	}
-	# Vanilla
 	custom_tooltip = {
 		fail_text = "requires_actor_not_devouring_swarm_lithoid"
 		OR = {
@@ -1306,9 +1312,19 @@ can_terraform_planet = {
 		fail_text = requires_not_relentless_industrialists_situation
 		NOT = { any_targeting_situation = { is_situation_type = relentless_industrialists_situation } }
 	}
+	custom_tooltip = {
+		fail_text = terraform_fail_is_metal_planet
+		NOT = {
+			has_modifier = metal_planet
+		}
+	}
+	# Forgotten Empires
+	custom_tooltip = {
+		fail_text = scfe_cant_terraform_special_planet
+		NOT = { has_planet_flag = cant_terraform_planet }
+	}
 	# Planetary Diversity
 	pd_can_terraform_planet = yes
-
 	# Real Space New Frontiers
 	custom_tooltip = {
 		fail_text = NO_TERRAFORM_HOLLOW_WORLD
@@ -1448,6 +1464,7 @@ species_has_happiness = {
 	NOR = {
 		AND = {
 			has_trait = trait_machine_unit
+			exists = from
 			from = { is_machine_empire = yes }
 			# Ethics & Civics Bug Branch
 			from = {  is_bugged_happy_gestalt = no }
@@ -1540,7 +1557,7 @@ species_has_happiness = {
 						has_civic = civic_machine_assimilator # Assimilator empire
 					}
 					AND = {
-						has_authority = auth_democratic
+						is_democratic_authority = yes
 						has_country_flag = cyber_collectivist
 					}
 				}
@@ -2249,6 +2266,10 @@ can_species_be_assembled = {
 	has_population_control = { country = root.owner type = no }
 }
 
+# founder_species_uses_growth_speed
+# founder_species_uses_organic_assembly
+# founder_species_uses_assembly
+
 #This rule is a condition for bombarding planets
 #Root = fleet, potential attacker
 #From = planet, potential target
@@ -2527,8 +2548,8 @@ can_orbitable_repair_ships = {
 				# Assault Lily
 				has_starbase_size = lily_super_college_ship
 				has_starbase_size = lily_college_ship
-				# DOA
-				has_starbase_size = doa_ascendant_juggernaut
+				# Ethics & Civics Classic
+				has_starbase_size = enclave_pirate_mercenary_station
 				# ZOFE
 				has_starbase_size = fe_goliath
 			}
@@ -2964,10 +2985,11 @@ system_blocks_sensors = {
 				}
 			}
 		}
-		AND = { # Clusters, Sealed systems
+		AND = { # Clusters, Sealed systems and Storms
 			OR = {
 				has_star_flag = lcluster
 				has_star_flag = sealed_system
+				has_star_flag = storm_system
 				# Ariphaos Sensor Expansion
 				has_star_flag = surveillance_supercomputer_system
 			}
@@ -3413,7 +3435,7 @@ pop_generates_crime = {
 			}
 		}
 		# Star Wars: UnknownWorld Shipgirls Story
-		has_trait = swg_trait_starshipgirls
+		is_swuss_starshipgirls = yes
 		# AshArms Aquarius history
 		has_trait = adf_trait_dolls
 	}
@@ -4132,6 +4154,8 @@ is_criminal_syndicate_rule = {
 		has_ascension_perk = ap_BA_new_frontier
 		# Ethical Gestalts
 		has_policy_flag = infiltration_allowed
+		# Ethics & Civics Classic
+		has_valid_civic = civic_military_dictatorship_corporate
 		# Ethics & Civics Infinity
 		has_valid_civic = civic_family_business
 		has_valid_civic = civic_underworld_society
@@ -4610,14 +4634,19 @@ can_planet_auto_migrate = {
 	# Better Performance & Utilities
 	NOT = { has_global_flag = z_pf2_flg_vam_disabled }
 	# Casako's Framework & Modmenu
-	custom_tooltip = {
-		fail_text = UGRC_failtips_PF_VAM
-		NOT = { has_global_flag = PF_flg_VAM_disabled }
-	}
-	custom_tooltip = {
-		fail_text = UGRC_failtips_PR_planet
-		NOT = { has_planet_flag = PR_flg_plnt_ASCENDED }
-	}
+#	custom_tooltip = {
+#		fail_text = UGRC_failtips_PF_VAM
+#		NOT = { has_global_flag = PF_flg_VAM_disabled }
+#	}
+#	custom_tooltip = {
+#		fail_text = UGRC_failtips_PR_planet
+#		NOT = { has_planet_flag = PR_flg_plnt_ASCENDED }
+#	}
+	# Forgotten Empires
+    custom_tooltip = {
+        fail_text = SCFE_PLANET_IN_QUARANTINE
+        NOT = { has_planet_flag = scfe_plague_quarantined }
+    }
 }
 
 # can_planet_receive_auto_migration
@@ -5019,8 +5048,9 @@ can_fill_ruler_job = {
 			is_being_purged = no
 			is_being_assimilated = no
 			# Rule out Traits for servitude & lack of free will
-			can_think = yes
 			NOR = {
+				has_trait = trait_syncretic_proles
+				can_think = no
 				# Ethics & Civics Infinity
 				has_eci_flesh_components = yes
 				has_eci_fallen_god = yes
@@ -5484,3 +5514,7 @@ can_trade_fleet = {
 # can_ai_assign_governor
 # should_ai_support_galactic_empire
 # should_ai_undermine_galactic_empire
+# can_country_initiate_storm
+# can_initiate_storm_on_planet
+# can_force_see_fleets_in_system
+# has_breached_shroud_storm

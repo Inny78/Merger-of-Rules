@@ -17,6 +17,7 @@ country_event = {
 	trigger = {
 		is_country_type = fallen_empire
 		NOR = {
+			has_country_flag = awakening_not_allowed
 			# Gigastructural Engineering & More
 			has_ai_personality = fallen_empire_gamers
 			has_ai_personality = fallen_empire_pouchkinn

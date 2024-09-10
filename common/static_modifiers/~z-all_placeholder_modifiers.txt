@@ -40,3 +40,7 @@ volcanic_world = {}
 wiirlak_ac_modifier_project_cradle = {}
 world_shaper_mod = {}
 EOE_OKRA_effect = {}
+damaged_ecosystem = {}
+new_earth_planet = {}
+saved_homeworld = {}
+new_earth_country = {}

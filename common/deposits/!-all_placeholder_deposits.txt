@@ -20,3 +20,4 @@ gpm_d_spaceship_graveyard = { is_null = yes potential = { always = no } }
 gpm_d_super_volcano = { is_null = yes potential = { always = no } }
 gpm_d_surface_mineral_veins = { is_null = yes potential = { always = no } }
 gpm_d_unusual_formations = { is_null = yes potential = { always = no } }
+d_damaged_ecosystem = { is_null = yes potential = { always = no } }

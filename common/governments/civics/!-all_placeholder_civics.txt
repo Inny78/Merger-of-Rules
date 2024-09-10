@@ -45,6 +45,7 @@ civic_machine_trading = { potential = { always = no } }
 civic_master_race = { potential = { always = no } }
 civic_megastore = { potential = { always = no } }
 civic_memorialist_corp = { potential = { always = no } }
+civic_military_dictatorship_corporate = { potential = { always = no } }
 civic_moth_chasing_flames = { potential = { always = no } }
 civic_mutualistic_behavior = { potential = { always = no } }
 civic_nirvana_empire_council = { potential = { always = no } }

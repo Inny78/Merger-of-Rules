@@ -65,28 +65,6 @@ fe_goliath = {
 	icon_frame = 1
 	icon = ship_size_military_station
 }
-acot_dragon_stellarite = {
-	resources = { category = starbase_stations }
-	potential_construction = { always = no }
-	possible_construction = { always = no }
-	is_designable = no
-	enable_default_design = yes
-	prerequisites = { }
-	class = shipclass_starbase
-	icon_frame = 1
-	icon = ship_size_military_station
-}
-acot_tuborek_flagship = {
-	resources = { category = starbase_stations }
-	potential_construction = { always = no }
-	possible_construction = { always = no }
-	is_designable = no
-	enable_default_design = yes
-	prerequisites = { }
-	class = shipclass_starbase
-	icon_frame = 1
-	icon = ship_size_military_station
-}
 KZ_VOY_battlestar = {
 	resources = { category = starbase_stations }
 	potential_construction = { always = no }
@@ -186,17 +164,6 @@ exe_megastructure_starbase = {
 	icon_frame = 1
 	icon = ship_size_military_station
 }
-universal_gateway_citadel = {
-	resources = { category = starbase_stations }
-	potential_construction = { always = no }
-	possible_construction = { always = no }
-	is_designable = no
-	enable_default_design = yes
-	prerequisites = { }
-	class = shipclass_starbase
-	icon_frame = 1
-	icon = ship_size_military_station
-}
 IDC_station_fallen_empire = {
 	resources = { category = starbase_stations }
 	potential_construction = { always = no }
@@ -208,18 +175,7 @@ IDC_station_fallen_empire = {
 	icon_frame = 1
 	icon = ship_size_military_station
 }
-sas_xxtitan_warship = {
-	resources = { category = starbase_stations }
-	potential_construction = { always = no }
-	possible_construction = { always = no }
-	is_designable = no
-	enable_default_design = yes
-	prerequisites = { }
-	class = shipclass_starbase
-	icon_frame = 1
-	icon = ship_size_military_station
-}
-doa_ascendant_juggernaut = {
+enclave_pirate_mercenary_station = {
 	resources = { category = starbase_stations }
 	potential_construction = { always = no }
 	possible_construction = { always = no }
