@@ -391,7 +391,7 @@ is_default_or_fallen = {
 
 is_megacorp = {
 	OR = {
-		is_megacorp = yes
+		has_authority = auth_corporate
 		has_valid_civic = civic_galactic_sovereign_megacorp
 		has_government = gov_imperial_domain_megacorp
 		# Ethics and Civics - Bug Branch
