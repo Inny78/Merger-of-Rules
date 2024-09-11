@@ -1,4 +1,4 @@
-#Tooltips will be generated from these rules when they fail. Use of custom_tooltip is recommended
+#Tooltips will be generated FROM these rules when they fail. Use of custom_tooltip is recommended
 #There are still multiple hard-coded rules that apply in addition to these.
 #If rules here evaluate to true, there might still be other rules that make the action unavailable.
 #If a rule here evaluates to false the action will become unavailable
@@ -194,7 +194,7 @@ can_add_claim = {
 	# Reworked Advanced Ascension
 	custom_tooltip = {
 		fail_text = AAR_failtip_PREROGATIVE_no_claim
-		NOT = { has_star_flag = AAR_flg_sstm_NO_claim@ROOT }
+		NOT = { has_star_flag = AAR_flg_sstm_NO_claim@root }
 	}
 	# StarnetAI/StarTech
 	custom_tooltip = {
@@ -245,8 +245,8 @@ can_add_claim = {
 						}	
 					}
 				}
-				# liberation wars policy allows claiming from unaligned hive minds with non-drone subjects.
-				# gestalt control policy allows claiming from unaligned gestalts generally unless they're weak enough to subjugate instead
+				# liberation wars policy allows claiming FROM unaligned hive minds with non-drone subjects.
+				# gestalt control policy allows claiming FROM unaligned gestalts generally unless they're weak enough to subjugate instead
 				owner = {
 					is_gestalt = yes
 					OR = {
@@ -331,7 +331,7 @@ can_add_claim = {
 			}
 		}
 	}
-	custom_tooltip = { # organic zealots don't need to claim system from other non-OZ homicidals
+	custom_tooltip = { # organic zealots don't need to claim system FROM other non-OZ homicidals
 		fail_text = CANNOT_ADD_CLAIM_THEY_THREAT
 		NAND = {
 			exists = owner
@@ -427,9 +427,9 @@ should_abduct_pop = {
 	}
 	has_virtual_species_trait = no
 	OR = {
-		ROOT = { has_valid_civic = civic_living_hosts }
+		root = { has_valid_civic = civic_living_hosts }
 		# Expanded Mods Base
-		ROOT = { has_government = gov_parasitic_overmind }
+		root = { has_government = gov_parasitic_overmind }
 		# Vanilla
 		NAND = {
 			has_citizenship_type = { type = citizenship_purge country = root }
@@ -564,7 +564,7 @@ species_can_live_on_planet = {
 # can_vote_in_democratic_election
 # should_pay_for_leader_upkeep
 
-#Checks whether any leaders (scientists etc) can be formed from this pop
+#Checks whether any leaders (scientists etc) can be formed FROM this pop
 #Root = country
 #This = pop
 can_generate_leader_from_pop = {
@@ -757,12 +757,12 @@ can_modify_species = {
 	# Can't modify root Species during Ascension Situations
 	if = {
 		limit = {
-			is_same_species = ROOT
+			is_same_species = root
 		}
 		custom_tooltip = {
 			fail_text = "ASCENSION_SITUATION_ONGOING"
 
-			ROOT = {
+			root = {
 				NOT = {
 					any_situation = {
 						has_ascension_situation_ongoing = yes
@@ -782,7 +782,7 @@ can_modify_species = {
 		custom_tooltip = {
 			fail_text = "NEEDS_GENE_TAILORING_OR_INTERGRATED_ANATOMY"
 
-			ROOT = {
+			root = {
 				OR = {
 					has_technology = tech_gene_tailoring
 					has_active_tradition = tr_cybernetics_integrated_anatomy
@@ -801,7 +801,7 @@ can_modify_species = {
 		}
 		if = {
 			limit = {
-				ROOT = {
+				root = {
 					OR = {
 						AND = { ## organic trying to robomod
 							is_individual_machine = no
@@ -825,7 +825,7 @@ can_modify_species = {
 			custom_tooltip = {
 				fail_text = "NEEDS_ROBOT_MODDING"
 
-				ROOT = {
+				root = {
 					OR = {
 						has_technology = tech_robomodding
 						has_technology = tech_robomodding_m
@@ -893,8 +893,8 @@ can_take_hostile_actions = {
 	}
 	else_if = {
 		limit = {
-			has_country_flag = fotd_seperatist_country@ROOT
-			ROOT = { has_origin = origin_fear_of_the_dark }
+			has_country_flag = fotd_seperatist_country@root
+			root = { has_origin = origin_fear_of_the_dark }
 		}
 		custom_tooltip = {
 			text = "CAN_TAKE_HOSTILE_ACTION_FOTD"
@@ -920,15 +920,15 @@ can_take_hostile_actions = {
 	# BlueArchive
 	else_if = {
 		limit = {
-			exists = from
-			from = { has_country_flag = BA_Precursor_contactor }
+			exists = FROM
+			FROM = { has_country_flag = BA_Precursor_contactor }
 		}
 		always = no
 	}
 	# Origins of Civilization
 	else_if = {
 		limit = {
-			ROOT = { merg_is_default_empire = yes }
+			root = { merg_is_default_empire = yes }
 			is_country_type = mpo_lost_spacefarers
 		}
 		hidden_trigger = {
@@ -936,11 +936,11 @@ can_take_hostile_actions = {
 			OR = {
 				any_owned_fleet = {
 					exists = solar_system.space_owner
-					solar_system.space_owner = { is_same_value = ROOT }
+					solar_system.space_owner = { is_same_value = root }
 				}
 				any_owned_planet = {
 					exists = solar_system.space_owner
-					solar_system.space_owner = { is_same_value = ROOT }
+					solar_system.space_owner = { is_same_value = root }
 				}
 			}
 		}
@@ -975,7 +975,7 @@ can_take_hostile_actions = {
 	}
 	else_if = {
 		limit = {
-			ROOT = {
+			root = {
 				any_agreement = { agreement_preset = preset_satrapy }
 			}
 			is_country_type = faction
@@ -993,7 +993,7 @@ can_take_hostile_actions = {
 	}
 	else_if = {
 		limit = {
-			ROOT = { any_agreement = { agreement_preset = preset_satrapy } }
+			root = { any_agreement = { agreement_preset = preset_satrapy } }
 		}
 		custom_tooltip = {
 			text = "CAN_TAKE_HOSTILE_ACTION_SATRAPY"
@@ -1004,7 +1004,7 @@ can_take_hostile_actions = {
 		limit = {
 			exists = overlord
 			overlord = { is_same_value = root }
-			ROOT = { any_agreement = { agreement_preset = preset_satrapy } }
+			root = { any_agreement = { agreement_preset = preset_satrapy } }
 		}
 		custom_tooltip = {
 			text = "CAN_TAKE_HOSTILE_ACTION_OVERLORD"
@@ -1035,7 +1035,7 @@ can_take_hostile_actions = {
 	else_if = {
 		limit = {
 			is_country_type = planet_state
-			ROOT = { is_country_type = default }
+			root = { is_country_type = default }
 			capital_scope = {
 				root = {
 					NOT = {
@@ -1054,7 +1054,7 @@ can_take_hostile_actions = {
 	else_if = {
 		limit = {
 			is_country_type = planet_state
-			ROOT = {
+			root = {
 				OR = {
 					is_country_type = dormant_marauders
 					is_country_type = ruined_marauders
@@ -1464,15 +1464,15 @@ species_has_happiness = {
 	NOR = {
 		AND = {
 			has_trait = trait_machine_unit
-			exists = from
-			from = { is_machine_empire = yes }
+			exists = FROM
+			FROM = { is_machine_empire = yes }
 			# Ethics & Civics Bug Branch
-			from = {  is_bugged_happy_gestalt = no }
+			FROM = {  is_bugged_happy_gestalt = no }
 		}
 		AND = {
 			has_trait = trait_hive_mind
 			# Ethics & Civics Bug Branch
-			from = { is_bugged_happy_gestalt = no }
+			FROM = { is_bugged_happy_gestalt = no }
 		}
 		can_think = no
 		# Diagraphers Trait Mod
@@ -1495,8 +1495,8 @@ species_has_happiness = {
 		AND = {
 			has_ww_dummy = yes
 			OR = {
-				NOT = { exists = from }
-				from = { 
+				NOT = { exists = FROM }
+				FROM = { 
 					NOR = { 
 						has_technology = tech_synthetic_workers 
 						has_technology = tech_dummy_leaders
@@ -1504,7 +1504,7 @@ species_has_happiness = {
 						has_country_flag = synthetic_empire
 					} 
 				}
-				from = { has_policy_flag = ai_outlawed }
+				FROM = { has_policy_flag = ai_outlawed }
 			}
 		}
 		# Warship Girls R And MIST Species
@@ -1519,22 +1519,22 @@ species_has_happiness = {
 				merg_has_animated_synth = no
 				AND = {
 					merg_has_animated_synth = yes
-					from = { is_machine_empire = yes }
+					FROM = { is_machine_empire = yes }
 					is_extsynth_synthetic = yes
 					NOT = { has_trait = trait_psionic }
 				}
 				AND = {
 					merg_has_animated_synth = yes
 					NAND = {
-						from = { is_machine_empire = yes }
+						FROM = { is_machine_empire = yes }
 						is_extsynth_synthetic = yes
 					}
 				}
 			}
 			# Vanilla
 			OR = {
-				NOT = { exists = from }
-				from = {
+				NOT = { exists = FROM }
+				FROM = {
 					OR = {
 						is_machine_empire = yes
 						NOR = {
@@ -1549,8 +1549,8 @@ species_has_happiness = {
 		}
 		AND = {
 			has_trait = trait_cybernetic
-			exists = from
-			from = {
+			exists = FROM
+			FROM = {
 				OR = {
 					AND = {
 						is_machine_empire = yes
@@ -1572,7 +1572,7 @@ species_has_happiness = {
 can_be_hostile_towards = {
 	if = {
 		limit = { is_primitive = yes }
-		ROOT = {
+		root = {
 			NOR = {
 				has_policy_flag = interference_not_allowed
 				has_policy_flag = interference_subtle
@@ -1580,7 +1580,7 @@ can_be_hostile_towards = {
 		}
 	}
 	else_if = {
-		limit = { ROOT = { is_primitive = yes } }
+		limit = { root = { is_primitive = yes } }
 		NOR = {
 			has_policy_flag = interference_not_allowed
 			has_policy_flag = interference_subtle
@@ -2274,7 +2274,7 @@ can_species_be_assembled = {
 #Root = fleet, potential attacker
 #From = planet, potential target
 can_orbital_bombard = {
-	exists = from.OWNER
+	exists = FROM.OWNER
 	# Diagrapher's Factions and Ethics Mod
 	hidden_trigger = {
 		OR = {
@@ -2291,7 +2291,7 @@ can_orbital_bombard = {
 					}
 				}
 			}	
-			from.owner = { is_crisis_faction = yes }
+			FROM.owner = { is_crisis_faction = yes }
 		}
 	}
 	# ACOT
@@ -2309,7 +2309,7 @@ can_orbital_bombard = {
 	NOR = {
 		any_controlled_ship = { is_ship_size = colossus }
 		# Real Space New Frontiers
-		from = { is_rs_compat_hollow = yes }
+		FROM = { is_rs_compat_hollow = yes }
 		# Star Wars: Kuat Ancient Empire
 		FROM.OWNER = { is_country_type = kuat_fire_base_hositle }
 		FROM = { has_planet_flag = enable_kuat_shield }
@@ -2317,9 +2317,9 @@ can_orbital_bombard = {
 	OR = {
 		AND = {
 			root.CONTROLLER = {
-				NOT = { has_communications = from.OWNER }
+				NOT = { has_communications = FROM.OWNER }
 			}
-			from.CONTROLLER = {
+			FROM.CONTROLLER = {
 				NOT = { is_country_type = primitive }
 			}
 		}
@@ -2330,26 +2330,19 @@ can_orbital_bombard = {
 					has_policy_flag = interference_subtle
 				}
 			}
-			from.CONTROLLER = { is_country_type = primitive }
-		}
-		# Origins of Civilization
-		AND = {
-			ROOT.CONTROLLER = {
-				NOT = { has_policy_flag = ai_full_rights }
-			}
-			FROM.CONTROLLER = { is_country_type = vbp_machine }
+			FROM.CONTROLLER = { is_country_type = primitive }
 		}
 		# Vanilla
-		ROOT.CONTROLLER = { is_hostile = FROM.CONTROLLER }
-		root.CONTROLLER = { is_at_war_with = from.CONTROLLER }
-		from = {
+		root.CONTROLLER = { is_hostile = FROM.CONTROLLER }
+		root.CONTROLLER = { is_at_war_with = FROM.CONTROLLER }
+		FROM = {
 			OR = {
 				is_planet_class = pc_infested
 				# LEX
 				has_planet_flag = bwm_ancestor_world
 			}
 		}
-		from.CONTROLLER = {
+		FROM.CONTROLLER = {
 			OR = {
 				is_country_type = swarm
 				is_country_type = ai_empire
@@ -2410,7 +2403,7 @@ can_orbital_bombard = {
 						is_country_type = awakened_marauders
 						is_country_type = formless
 					}
-					from.CONTROLLER = { is_hostile = prev }
+					FROM.CONTROLLER = { is_hostile = prev }
 				}
 				is_khan_country_type = yes
 				# Ancient Empire
@@ -2462,32 +2455,32 @@ can_orbital_bombard = {
 			}
 		}
 		AND = {
-			from.controller = {
+			FROM.controller = {
 				is_country_type = faction
 				NOT = { is_same_value = root.CONTROLLER }
 			}
-			from.owner = {
+			FROM.owner = {
 				is_same_value = root.CONTROLLER
 			}
 		}
 		# More Events Mod
 		AND = {
 			exists = root.OWNER
-			exists = from.CONTROLLER
+			exists = FROM.CONTROLLER
 			root.CONTROLLER = {
 				OR = {
 					is_country_type = mem_surveyor_country_red
 					is_country_type = mem_vazurans
 				}
 			}
-			from.CONTROLLER = { merg_is_default_empire = yes }
+			FROM.CONTROLLER = { merg_is_default_empire = yes }
 		}
 		# The Empty Vagrant
 		root.CONTROLLER = { is_country_type = ev_leviathans_crisis }
 		# Eldar Revisited
 		AND = {
 			root.CONTROLLER = { is_country_type = shroud_spirits }
-			from = { has_planet_flag = is_shroud_attack_planet_target }
+			FROM = { has_planet_flag = is_shroud_attack_planet_target }
 		}
 	}
 	# TimeMod
@@ -2856,11 +2849,11 @@ ai_should_restrict_system = {
 			root = { merg_is_fallen_empire = yes }
 			OR = {
 				owner = { is_marauder = yes }
-				any_fleet_in_system = { # Stop FEs from just killing the Sleeper
+				any_fleet_in_system = { # Stop FEs FROM just killing the Sleeper
 					exists = owner
 					owner = { is_country_type = berserker_awoken_hive }
 				}
-				AND = { # Stop FEs from just killing the Sleeper
+				AND = { # Stop FEs FROM just killing the Sleeper
 					owner = { is_country_type = the_sleeper_fallen }
 					has_star_flag = sleeper_system
 				}
@@ -2958,7 +2951,7 @@ can_spawn_occupation_armies = {
 # this = system
 # root = country
 system_blocks_sensors = {
-	# Vanilla, includes code from Ariphaos' Sensor Expansion
+	# Vanilla, includes code FROM Ariphaos' Sensor Expansion
 	OR = {
 		AND = { # Nebulae
 			OR = {
@@ -2976,7 +2969,7 @@ system_blocks_sensors = {
 				is_star_class = sc_tt_white
 				is_star_class = sc_ae
 			}
-			ROOT = {
+			root = {
 				NOR = {
 					# Ariphaos Sensor Expansion
 					has_technology = tech_ariphaos_sensors_nebula
@@ -3003,7 +2996,7 @@ system_blocks_sensors = {
 				# Solar Storm
 				has_star_flag = ss_abyssal_shockwave
 			}
-			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_sealed } }
+			root = { NOT = { has_technology = tech_ariphaos_sensors_sealed } }
 		}
 		# Warship Girls R And MIST Species
 		has_star_flag = wg_sealed_system
@@ -3019,7 +3012,7 @@ system_blocks_sensors = {
 				has_aso_space_exploration = yes
 			}
 			merg_is_neutron_star_class = yes
-			ROOT = { NOT = { has_technology = tech_sensors_4 } }
+			root = { NOT = { has_technology = tech_sensors_4 } }
 		}
 		AND = { # Pulsars
 			OR = {
@@ -3027,7 +3020,7 @@ system_blocks_sensors = {
 				has_aso_space_exploration = yes
 			}
 			merg_is_pulsar_star_class = yes
-			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_pulsar } }
+			root = { NOT = { has_technology = tech_ariphaos_sensors_pulsar } }
 		}
 		AND = { # Wormholes
 			OR = {
@@ -3036,7 +3029,7 @@ system_blocks_sensors = {
 				has_aso_space_exploration = yes
 			}
 			has_natural_wormhole = yes
-			ROOT = {
+			root = {
 				NOR = {
 					has_technology = tech_ariphaos_sensors_wormhole
 					has_technology = tech_WS_sensors_wormhole
@@ -3049,13 +3042,13 @@ system_blocks_sensors = {
 				has_aso_space_exploration = yes
 			}
 			merg_is_hole_star_class = yes
-			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_black_hole } }
+			root = { NOT = { has_technology = tech_ariphaos_sensors_black_hole } }
 		}
 		AND = { # Jammer
 			merg_has_sensor_expansion = yes
 			exists = starbase
 			starbase = { has_starbase_building = ariphaos_sensors_jammer_starbase }
-			ROOT = { NOT = { has_technology = tech_ariphaos_sensors_jammed } }
+			root = { NOT = { has_technology = tech_ariphaos_sensors_jammed } }
 		}
 		# Assault Lily
 		AND = {
@@ -3173,7 +3166,7 @@ can_enter_system_by_jump = {
 					# Gigastructural Engineering and More
 					AND = {
 						cohesive_system = yes
-						ROOT = { is_eager_explorer_empire = yes }
+						root = { is_eager_explorer_empire = yes }
 						has_star_flag = ehof_system_created_by_@root
 					}
 				}
@@ -3494,7 +3487,7 @@ should_force_decline_species = {
 				has_trait = trait_clone_soldier_infertile
 				has_trait = trait_clone_soldier_infertile_full_potential
 			}
-			from = {
+			FROM = {
 				OR = {
 					# Check if country is unable to build Vats for this species.
 					AND = {
@@ -3530,7 +3523,7 @@ should_force_decline_species = {
 				success_text = sterile_force_decline
 				exists = this
 				diag_is_sterile = yes
-				from.owner = { has_artificial_wombs = no }
+				FROM.owner = { has_artificial_wombs = no }
 			}
 		}
 		AND = {
@@ -3538,7 +3531,7 @@ should_force_decline_species = {
 				success_text = needs_exotic_gases
 				exists = this
 				has_exotic_gas_dependency = yes
-				from.owner = { has_deficit = exotic_gases }
+				FROM.owner = { has_deficit = exotic_gases }
 			}
 		}
 		AND = {
@@ -3546,7 +3539,7 @@ should_force_decline_species = {
 				success_text = delicate_enslaved
 				exists = this
 				diag_is_delicate = yes
-				has_citizenship_type = { type = citizenship_slavery country = from.owner }
+				has_citizenship_type = { type = citizenship_slavery country = FROM.owner }
 			}
 		}
 		# Expanded Traits, Civics, Pops, and More
@@ -3557,7 +3550,7 @@ should_force_decline_species = {
 				success_text = TREEFOLK_FORCE_DECLINE
 				exists = this
 				is_exp_tree_caretaker = yes
-				from = {
+				FROM = {
 					NOR = {
 						has_deposit = d_tree_of_life_colony
 						has_deposit = d_tree_of_life_home
@@ -3579,17 +3572,17 @@ should_force_decline_species = {
 				merg_has_ethical_gestalts = yes
 				exists = this
 				has_trait = trait_hive_mind
-				exists = from
+				exists = FROM
 				NOR = {
 					AND = {
-						exists = from.owner
-						has_citizenship_type = { type = citizenship_full country = from.owner }
+						exists = FROM.owner
+						has_citizenship_type = { type = citizenship_full country = FROM.owner }
 					}
 					AND = {
-						exists = from.branch_office_owner
-						has_citizenship_type = { type = citizenship_full country = from.branch_office_owner }
+						exists = FROM.branch_office_owner
+						has_citizenship_type = { type = citizenship_full country = FROM.branch_office_owner }
 					}
-					NOT = { exists = from.owner }
+					NOT = { exists = FROM.owner }
 				}
 			}
 		}
@@ -3600,7 +3593,7 @@ should_force_decline_species = {
 				exists = this
 				has_ww_reanimated_materials = yes
 				AND = {
-					from = {
+					FROM = {
 						exists = owner
 						owner = {
 							NOT = { has_country_flag = syn_witch }
@@ -3612,7 +3605,7 @@ should_force_decline_species = {
 					has_ww_cro_implants_psionics = yes
 					has_trait = trait_psionic
 				}
-				from = {
+				FROM = {
 					OR = {
 						# Check if country is unable to build Vats for this species.
 						AND = {
@@ -3635,7 +3628,7 @@ should_force_decline_species = {
 			success_text = WEAK_IMMUNE_SYSTEM_FORCE_DECLINE
 			has_v_weak_immune_system = yes
 			has_v_cyborg_bubble = no
-			from = {
+			FROM = {
 				any_owned_species = {
 					NOR = {
 						has_v_weak_immune_system = yes
@@ -3915,10 +3908,7 @@ can_build_branch_office_on_planet = {
 				overlord = {
 					OR = {
 						is_same_empire = prevprev.owner
-						AND = {
-							exists = prevprev.owner.overlord
-							is_same_empire = prevprev.owner.overlord
-						}
+						is_same_empire = prevprev.owner.overlord
 					}
 				}
 			}
@@ -3928,10 +3918,7 @@ can_build_branch_office_on_planet = {
 				overlord = {
 					OR = {
 						is_same_empire = root
-						AND = {
-							exists = root.overlord
-							is_same_empire = root.overlord
-						}
+						is_same_empire = root.overlord
 					}
 					OR = {
 						is_megacorp = yes
@@ -3955,10 +3942,9 @@ can_build_branch_office_on_planet = {
 				OR = {
 					root = {
 						is_subject = yes
-						exists = overlord
 						overlord = {
 							OR = {
-								is_same_empire = prevprev.owner
+								is_same_value = prevprev.owner
 								AND = {
 									exists = prevprev.owner.overlord
 									is_same_value = prevprev.owner.overlord
@@ -3968,7 +3954,6 @@ can_build_branch_office_on_planet = {
 					}
 					owner = {
 						is_subject = yes
-						exists = overlord
 						overlord = { is_same_empire = root }
 					}
 				}
@@ -4004,7 +3989,6 @@ can_build_branch_office_on_planet = {
 					# Or if your overlord isn't a megacorp.
 					root = {
 						is_subject = yes
-						exists = overlord
 						overlord = {
 							NOR = {
 								is_megacorp = yes
@@ -4020,7 +4004,6 @@ can_build_branch_office_on_planet = {
 			AND = {
 				root = {
 					is_subject = yes
-					exists = overlord
 					overlord = {
 						OR = {
 							is_megacorp = yes
@@ -4033,8 +4016,7 @@ can_build_branch_office_on_planet = {
 						is_subject = no
 						AND = {
 							is_subject = yes
-							exists = overlord
-							overlord = { NOT = { is_same_empire = root.overlord } }
+							overlord = { NOT = { is_same_value = root.overlord } }
 						}
 					}
 				}
@@ -4313,7 +4295,7 @@ can_be_sold_on_slave_market = {
 		# Ariphaos Patch
 		OR = {
 			NOT = { has_trait = trait_syncretic_proles }
-			ROOT = {
+			root = {
 				NOT = { has_origin = origin_syncretic_evolution }
 			}
 		}
@@ -5276,7 +5258,7 @@ should_count_towards_leader_cap = {
 }
 
 # From = country, country that tries to connect using relay network
-# ROOT/This = country, target country to connect to using relay network
+# root/This = country, target country to connect to using relay network
 can_country_connect_to_relay_network = {
 	AND = {
 		is_primitive = no
@@ -5287,15 +5269,15 @@ can_country_connect_to_relay_network = {
 			# SirBlackAxe's Unofficial Bug Patch
 			merg_is_fallen_empire = yes
 			merg_is_awakened_fe = yes
-			from = { is_same_value = root }
-			is_in_federation_with = from
+			FROM = { is_same_value = root }
+			is_in_federation_with = FROM
 		}
 		# SirBlackAxe's Unofficial Bug Patch
 		NAND = {
-			has_closed_borders = from
-			can_control_access_for = from
+			has_closed_borders = FROM
+			can_control_access_for = FROM
 		}
-		NOT = { is_at_war_with = from }
+		NOT = { is_at_war_with = FROM }
 	}
 }
 
@@ -5303,19 +5285,19 @@ can_country_connect_to_relay_network = {
 # will_leader_retire
 
 # This = country, Country that wants to get an external leader
-# From = country, country that we are trying to get from
+# From = country, country that we are trying to get FROM
 can_get_external_leader_pool_candidate = {
-	exists = from
+	exists = FROM
 	OR = {
-		has_diplo_migration_treaty = from
-		is_in_federation_with = from
-		is_overlord_to = from
+		has_diplo_migration_treaty = FROM
+		is_in_federation_with = FROM
+		is_overlord_to = FROM
 		giga_can_get_external_leader_pool_candidate = yes
 	}
 	# Both empires must be regular empires, machine intelligences or hive-minds.
 	OR = {
 		AND = {
-			ROOT = {
+			root = {
 				is_regular_empire = yes
 			}
 			FROM = {
@@ -5323,7 +5305,7 @@ can_get_external_leader_pool_candidate = {
 			}
 		}
 		AND = {
-			ROOT = {
+			root = {
 				is_machine_empire = yes
 			}
 			FROM = {
@@ -5331,7 +5313,7 @@ can_get_external_leader_pool_candidate = {
 			}
 		}
 		AND = {
-			ROOT = {
+			root = {
 				is_hive_empire = yes
 			}
 			FROM = {
@@ -5347,7 +5329,7 @@ can_get_external_leader_pool_candidate = {
 can_trade_leader = {
 	# Better Performances and Utilities
 	hidden_trigger = { FW_trgr_ldr_SP = no }
-	# The leader must have a trait from a specialist subject type.
+	# The leader must have a trait FROM a specialist subject type.
 	this = {
 		OR = {
 			has_leader_flag = tradable_leader
@@ -5363,16 +5345,16 @@ can_trade_leader = {
 		is_heir = no
 	}
 	OR = {
-		AND = { # Either from subject to Overlord
-			ROOT = {
+		AND = { # Either FROM subject to Overlord
+			root = {
 				is_subject = yes
 			}
 			FROM = {
-				is_overlord_to = ROOT
+				is_overlord_to = root
 			}
 		}
-		AND = { # Or from a tactical cogitator empire to a NON tactical cogitator empire
-			ROOT = { has_valid_civic = civic_machine_tactical_algorithms }
+		AND = { # Or FROM a tactical cogitator empire to a NON tactical cogitator empire
+			root = { has_valid_civic = civic_machine_tactical_algorithms }
 			FROM = {
 				NOT = { has_valid_civic = civic_machine_tactical_algorithms }
 				is_fallen_empire = no
@@ -5387,7 +5369,7 @@ can_trade_leader = {
 	# The subject and overlord must both be regular empires, machine intelligences or hive-minds.
 	OR = {
 		AND = {
-			ROOT = {
+			root = {
 				is_regular_empire = yes
 				NOR = {
 					is_country_type = gate_builders
@@ -5403,15 +5385,15 @@ can_trade_leader = {
 			}
 		}
 		AND = {
-			ROOT = { is_machine_empire = yes }
+			root = { is_machine_empire = yes }
 			FROM = { is_machine_empire = yes }
 		}
 		AND = {
-			ROOT = { is_hive_empire = yes }
+			root = { is_hive_empire = yes }
 			FROM = { is_hive_empire = yes }
 		}
 		AND = { # Tactical Cogitator option
-			ROOT = {
+			root = {
 				has_valid_civic = civic_machine_tactical_algorithms
 			}
 			FROM = {
@@ -5429,12 +5411,12 @@ can_trade_leader = {
 			}
 		}
 		# Ethics and Civics Infinity
-		ROOT = { is_servitor_empire = yes }
+		root = { is_servitor_empire = yes }
 	}
 	# Can't trade gestalt nodes
 	is_gestalt_node = no
 	# The overlord can't be a fallen or awakened empire.
-	ROOT = {
+	root = {
 		NAND = {
 			is_overlord = yes
 			OR = {
@@ -5462,7 +5444,7 @@ can_trade_leader = {
 # From = country, country that would receive the fleet
 can_trade_fleet = {
 	AND = {
-		ROOT = {
+		root = {
 			NAND = {
 				is_overlord = yes
 				OR = {
