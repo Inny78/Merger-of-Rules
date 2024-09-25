@@ -63,19 +63,19 @@ habitable_planet_not_urban = {
 		merg_is_savannah = yes
 		merg_is_tropical = yes
 		merg_is_tundra = yes
-		# Warship Girls R And MIST Species
-		wg_compat_is_pc_wsg_port = yes
-		wg_compat_is_pc_shenhai = yes
-		# SW: UnknownWorld Shipgirls Story
-		is_swuss_swgs_engineer = yes
-		is_swuss_swgs_engineer_ringworld_hab = yes
 		# Gigastructures
 		giga_is_lifeless = yes
 		giga_is_katzenland = yes
-		# Real Space - Planetary Stations
-		is_rs_compat_hollow = yes
 		# Planetary Diversity
 		pd_is_planet_class_all = yes
+		# Real Space
+		is_rs_compat_hollow = yes
+		# SW: UnknownWorld Shipgirls Story
+		is_swuss_swgs_engineer = yes
+		is_swuss_swgs_engineer_ringworld_hab = yes
+		# Warship Girls R And MIST Species
+		wg_compat_is_pc_wsg_port = yes
+		wg_compat_is_pc_shenhai = yes
 	}
 }
 

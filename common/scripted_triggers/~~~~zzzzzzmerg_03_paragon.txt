@@ -7,7 +7,7 @@ is_azaryn_preferred_terraform_pc = {
 		merg_is_barren = yes
 		merg_is_barren_cold = yes
 		# Planetary Diversity
-		is_planet_class = pc_hothouse
+		pd_is_pc_hothouse = yes
 	}
 	planet_size >= 10
 	planet_size <= 30

@@ -5754,3 +5754,137 @@ Effect GigaDebug
 	VertexShader = "VertexPdxMeshStandard"
 	PixelShader = "PixelGigaDebug"
 }
+
+# // #########################################################################################################################################
+
+# // AOT Shader Effect Definitions here
+
+# // #########################################################################################################################################
+
+Effect AotPlanetShieldDM
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelAotPlanetShieldDM"
+	BlendState = "BlendStateAlphaBlend"
+	RasterizerState = "RasterizerStateNoCulling"
+	DepthStencilState = "DepthStencilNoZWrite"
+}
+
+Effect AotPlanetShieldDMSkinned
+{
+	VertexShader = "VertexPdxMeshStandardSkinned"
+	PixelShader = "PixelAotPlanetShieldDM"
+	BlendState = "BlendStateAlphaBlend"
+	RasterizerState = "RasterizerStateNoCulling"
+	DepthStencilState = "DepthStencilNoZWrite"
+}
+
+Effect AotPlanetShieldDMShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect AotPlanetShieldDMSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect AotPlanetShieldAE
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelAotPlanetShieldAE"
+	BlendState = "BlendStateAlphaBlend"
+	RasterizerState = "RasterizerStateNoCulling"
+	DepthStencilState = "DepthStencilNoZWrite"
+}
+
+Effect AotPlanetShieldAESkinned
+{
+	VertexShader = "VertexPdxMeshStandardSkinned"
+	PixelShader = "PixelAotPlanetShieldAE"
+	BlendState = "BlendStateAlphaBlend"
+	RasterizerState = "RasterizerStateNoCulling"
+	DepthStencilState = "DepthStencilNoZWrite"
+}
+
+Effect AotPlanetShieldAEShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect AotPlanetShieldAESkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect AotPlanetShieldStellarite
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelAotPlanetShieldStellarite"
+	BlendState = "BlendStateAlphaBlend"
+	RasterizerState = "RasterizerStateNoCulling"
+	DepthStencilState = "DepthStencilNoZWrite"
+}
+
+Effect AotPlanetShieldStellariteSkinned
+{
+	VertexShader = "VertexPdxMeshStandardSkinned"
+	PixelShader = "PixelAotPlanetShieldStellarite"
+	BlendState = "BlendStateAlphaBlend"
+	RasterizerState = "RasterizerStateNoCulling"
+	DepthStencilState = "DepthStencilNoZWrite"
+}
+
+Effect AotPlanetShieldStellariteShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect AotPlanetShieldStellariteSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect AotPlanetShieldPE
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelAotPlanetShieldPE"
+	BlendState = "BlendStateAlphaBlend"
+	RasterizerState = "RasterizerStateNoCulling"
+	DepthStencilState = "DepthStencilNoZWrite"
+}
+
+Effect AotPlanetShieldPESkinned
+{
+	VertexShader = "VertexPdxMeshStandardSkinned"
+	PixelShader = "PixelAotPlanetShieldPE"
+	BlendState = "BlendStateAlphaBlend"
+	RasterizerState = "RasterizerStateNoCulling"
+	DepthStencilState = "DepthStencilNoZWrite"
+}
+
+Effect AotPlanetShieldPEShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect AotPlanetShieldPESkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}

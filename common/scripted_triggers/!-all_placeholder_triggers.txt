@@ -357,6 +357,7 @@ is_giga_habitat = { always = no }
 is_giga_maginot_world = { always = no }
 is_giga_one_planet_origin = { always = no }
 is_giga_ringworld = { always = no }
+is_gpm_precursor_tomb = { always = no }
 is_green = { always = no }
 is_habitat_wg = { always = no }
 is_harvester_country = { always = no }
@@ -569,6 +570,7 @@ pd_is_arid = { always = no }
 pd_is_continental = { always = no }
 pd_is_desert = { always = no }
 pd_is_ocean = { always = no }
+pd_is_pc_hothouse = { always = no }
 pd_is_pd_arcology = { always = no }
 pd_is_pd_hive_arc = { always = no }
 pd_is_pd_hive_world = { always = no }

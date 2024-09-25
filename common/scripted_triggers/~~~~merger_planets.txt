@@ -391,6 +391,8 @@ merg_is_toxic = {
 		atw_is_toxic = yes
 		# Gigastructural Engineering & More
 		giga_is_pc_red_toxic = yes
+		# Planetary Diversity
+		pd_is_pc_hothouse = yes
 	}
 }
 merg_is_tropical = {

@@ -13,7 +13,7 @@ decision_baol_life_seed = {
         merg_is_hive_world = no
         merg_is_gaia = no
         # GPM
-        NOT = { is_planet_class = pc_gpm_precursor_tomb }
+        is_gpm_precursor_tomb = no
         # Forgotten Empires
         NAND = {
             has_planet_flag = cant_terraform_planet

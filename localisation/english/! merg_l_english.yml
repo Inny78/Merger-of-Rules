@@ -322,7 +322,7 @@ l_english:
  RG_requires_no_pacifist_star_killer: "\n§HOur $ethic_pacifist$ ideology does not permit the use of such weapons.§!"
  N_ISBS_longinus_triggers: "$TRIGGER_FAIL$Target is in neutral or friendly territory"
  N_ISBS_longinus_hited: "$TRIGGER_FAIL$After the Spear of Longinus has already been used."
- nep_no_sapient_pops: "No sapients here."
+ nep_no_sapient_pops: "No sapient here."
  SCFE_PLANET_IN_QUARANTINE: "The planet is quarantined."
  CAN_TAKE_HOSTILE_ACTION_NEP_PHANTOM: "Unable to attack the fleet in an uncertain phase."
  CAN_TAKE_HOSTILE_ACTION_PLANET_STATE: "We can only take hostile action against a Planet-State within our borders."
