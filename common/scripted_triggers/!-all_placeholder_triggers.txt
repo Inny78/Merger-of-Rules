@@ -397,6 +397,7 @@ is_nanite_habitat_shielded = { always = no }
 is_necromage = { always = no }
 is_nirvana_empire = { always = no }
 is_non_giga_habitat = { always = no }
+is_nyto_country = { always = no }
 is_organic_fourschildren = { always = no }
 is_organic_zealots = { always = no }
 is_paired = { always = no }

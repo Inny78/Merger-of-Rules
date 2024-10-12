@@ -25,6 +25,8 @@ merg_has_cloning_building = {
 		has_active_building = building_ocean_spawning_pool
 		# Unavoidable Changes
 		has_active_building = building_volgan_clone_vats
+		#Universal Gateway Origin
+		has_active_building = building_universal_gateway_origin_salvaged_resurrection_vat
 		# Wandering Witch: Voyagers
 		has_active_building = building_dimensional_instrument
 	}

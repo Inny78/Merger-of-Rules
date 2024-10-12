@@ -47,3 +47,13 @@ just_researched_fe_tech = {
         mcb_just_researched_fe_tech = yes
     }
 }
+
+is_individual_machine = {
+	OR = {
+		AND = {
+			founder_species = { is_archetype = MACHINE }
+			is_gestalt = no
+		}
+		is_nyto_country = yes
+	}
+}
