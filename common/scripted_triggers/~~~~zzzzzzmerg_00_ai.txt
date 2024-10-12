@@ -90,3 +90,135 @@ jobs_any_research = {
 		}
 	}
 }
+
+has_farming_designation = {
+	OR = {
+		has_designation = col_farming
+		has_designation = col_ring_farming
+		has_designation = col_habitat_farming
+		has_designation = col_habitat_gestalt_farming
+		# Ethics and Civics Infinity
+        has_designation = col_dome_food
+        has_designation = col_city_farming
+		# Freebooters Origin (reborn)
+		has_designation = col_habitat_nsc_freebooter_farming
+	}
+}
+
+# has_fortress_designation
+
+has_factory_designation = {
+	OR = {
+		has_designation = col_capital_factory
+		has_designation = col_factory
+		has_designation = col_mac_factory
+		has_designation = col_ecu_factory
+		has_designation = col_habitat_factory
+		# Ethics and Civics Infinity
+        has_designation = col_ring_factory
+        has_designation = col_dome_factory
+		# Freebooters Origin (reborn)
+		has_designation = col_habitat_nsc_freebooter_factory
+	}
+}
+
+has_foundry_designation = {
+	OR = {
+		has_designation = col_capital_foundry
+		has_designation = col_foundry
+		has_designation = col_ecu_foundry
+		has_designation = col_habitat_foundry
+		has_designation = col_mac_foundry
+		has_designation = col_hiv_foundry
+		# Ethics and Civics Infinity
+        has_designation = col_ring_foundry
+        has_designation = col_dome_foundry
+		# Freebooters Origin (reborn)
+		has_designation = col_habitat_nsc_freebooter_foundry
+		# TimeMod
+		has_designation = col_nanites_capital_machine_manufacturing
+	}
+}
+
+has_generator_designation = {
+	OR = {
+		has_designation = col_generator
+		has_designation = col_habitat_energy
+		has_designation = col_ring_generator
+		# Ethics and Civics Infinity
+		has_designation = col_dome_energy
+		# Libra: Gestalt Age
+		has_designation = col_libra_nanotech_generator
+	}
+}
+
+has_industrial_designation = {
+	OR = {
+		has_designation = col_industrial
+		has_designation = col_habitat_industrial
+		has_designation = col_ecu_industrial
+		# Ethics and Civics Infinity
+        has_designation = col_dome_industrial
+        has_designation = col_ring_industry
+		# TimeMod
+		has_designation = col_time_capital_manufacturing
+		has_designation = col_timesingularity_capital_manufacturing
+		has_designation = col_endless_time_capital_manufacturing
+		has_designation = col_psionic_best_capital_manufacturing
+		has_designation = col_psionic_capital_manufacturing
+	}
+}
+
+has_mining_designation = {
+	OR = {
+		has_designation = col_habitat_mining
+		has_designation = col_mining
+		# Ethics and Civics Infinity
+		has_designation = col_dome_mining
+		# Libra: Gestalt Age
+		has_designation = col_libra_nanotech_mining
+		# Freebooters Origin (reborn)
+		has_designation = col_habitat_nsc_freebooter_mining
+	}
+}
+
+has_refinery_designation = {
+	OR = {
+		has_designation = col_refinery
+		has_designation = col_habitat_refinery
+		# Ethics and Civics Infinity
+        has_designation = col_dome_refinery
+        has_designation = col_city_refinery
+		# Freebooters Origin (reborn)
+		has_designation = col_habitat_nsc_freebooter_refinery
+		# TimeMod
+		has_designation = col_gas_colony_capital_rare
+		has_designation = col_gas_colony_capital_hive_rare
+	}
+}
+
+has_research_designation = {
+	OR = {
+		has_designation = col_research
+		has_designation = col_ring_research
+		has_designation = col_habitat_research
+		has_designation = col_ecu_research
+		# Ethics and Civics Infinity
+		has_designation = col_dome_research
+		# Libra: Gestalt Age
+		has_designation = col_libra_nanotech_research
+		# Freebooters Origin (reborn)
+		has_designation = col_habitat_nsc_freebooter_research
+		# TimeMod
+		has_designation = col_time_capital_research
+		has_designation = col_timesingularity_capital_research
+		has_designation = col_endless_time_capital_research
+		has_designation = col_psionic_best_capital_research
+		has_designation = col_psionic_capital_research
+		has_designation = col_nanites_capital_machine_research
+	}
+}
+
+# has_unity_designation
+# has_rural_designation
+# has_trade_designation

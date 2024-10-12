@@ -263,8 +263,6 @@ allows_purge = {
 		}
 		# Electroids Species Pack
 		has_valid_civic = civic_elec_stellar_devourers
-		# Civic: Organic Zealots
-		is_valid_organic_zealots = yes
 	}
 }
 
@@ -559,16 +557,6 @@ has_total_war_cb = {
 				}
 				# ACOT
 				is_progenitor_empires = yes
-				# Civic: Organic Zealots
-				AND = {
-					is_valid_organic_zealots = yes
-					from = {
-						OR = {
-							is_robot_empire = yes
-							is_fallen_empire_machine = yes
-						}
-					}
-				}
 				# Ethical Gestalts
 				AND = {
 					has_valid_civic = civic_hive_assimilator
@@ -657,8 +645,6 @@ is_homicidal = {
 		has_valid_civic = civic_elec_stellar_devourers
 		# Expanded Traits, Civics, Pops, and More
 		has_valid_civic = civic_infestation
-		# Organic Zealots
-		has_valid_civic = civic_organic_zealots
 	}
 }
 
@@ -779,6 +765,7 @@ has_precursor_intro = {
 		has_country_flag = scfe_precursor_set_sless # Forgotten Empires
 		has_country_flag = scfe_precursor_set_coprean # Forgotten Empires
 		has_country_flag = scfe_precursor_set_astanine # Forgotten Empires
+		has_country_flag = scfe_vinarii_intro # Forgotten Empires
 		# Still in the early stages of 'On the Shoulders of Giants'
 		AND = {
 			has_origin = origin_shoulders_of_giants
@@ -927,6 +914,17 @@ can_have_sensory_readings = {
 		merg_is_gaia = yes
 		merg_is_relic_world = yes
 		merg_is_arcology = yes
+	}
+}
+
+is_reanimator = {
+	OR = {
+		has_valid_civic = civic_reanimated_armies
+		has_valid_civic = civic_permanent_employment
+		has_valid_civic = civic_hive_cordyceptic_drones
+		has_ascension_perk = ap_mechromancy
+		#  Libra: Gestalt Age
+		has_origin = origin_libra_ghost_mechanist
 	}
 }
 

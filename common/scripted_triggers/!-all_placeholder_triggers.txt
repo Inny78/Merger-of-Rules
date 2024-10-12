@@ -241,6 +241,7 @@ has_ww_psyborg_efficient_processors = { always = no }
 has_ww_reanimated_materials = { always = no }
 has_ww_servitude = { always = no }
 has_ww_victorika = { always = no }
+has_xvcv_mdlc_trait_bio_robot = { always = no }
 has_zofe_mc = { always = no }
 hfe_trigger_brainworm_country = { always = no }
 hfe_trigger_is_human_fallen = { always = no }
@@ -559,6 +560,7 @@ MECR_trigger_1_can_be_part_of_galactic_community = { always = yes }
 MECR_trigger_2_can_be_part_of_galactic_empire = { always = yes }
 msgsc_GF_sf_machine = { always = no }
 oxr_mdlc_can_release_vassal_from_species = { always = no }
+oxr_mdlc_can_remove_beneficial_genetic_traits = { always = yes }
 oxr_mdlc_planet_decision_dismantle_habitat_active = { always = no }
 pd_aw_cant_terraform = { always = yes }
 pd_aw_is_necro_planet = { always = no }

@@ -1,9 +1,13 @@
 is_merc_enclave_founding_allowed = {
 	owner = {
-		NOT = {
+		NOR = {
 			AND = {
 				has_ethic = ethic_gestalt_consciousness
-				NOT = { has_valid_civic = civic_machine_tactical_algorithms }
+				NOR = {
+					has_valid_civic = civic_machine_tactical_algorithms
+					# Libra: Gestalt Age
+					has_ascension_perk = ap_libra_gestalt_release_vassals
+				}
 			}
 			has_civic = civic_fanatic_purifiers
 		}

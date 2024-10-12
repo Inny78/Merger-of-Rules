@@ -124,25 +124,6 @@ country_event = {
 			has_civic = civic_elec_stellar_devourers
 		}
 	}
-	# Organic Zealots
-	option = {
-		name = "galcom.16.c.organic_zealots"
-		trigger = { is_organic_zealots = yes }
-	}
-	option = { # fallback for other, unknown homicidals
-		name = DISGUSTING
-		trigger = {
-			hidden_trigger = {
-				is_homicidal = yes
-				NOR = {
-					has_civic = civic_fanatic_purifiers
-					has_civic = civic_machine_terminator
-					has_civic = civic_hive_devouring_swarm
-					is_organic_zealots = yes
-				}
-			}
-		}
-	}
 
 	# Vanilla
 	option = { #This will make the Solarpunk Empire refuse to join the galcom until they return to the galaxy.

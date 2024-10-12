@@ -12,8 +12,6 @@ merg_has_cloning_building = {
 		has_active_building = building_avb_clone_vats_2
 		# Ancient Empire
 		has_active_building = ag_advanced_clone_vats
-		# Civic: Organic Zealots
-		has_active_building = building_clone_birth_labs
 		# Ethics and Civics Bug Branch
 		has_active_building = building_bugged_life_monastery
 		has_active_building = building_bugged_life_monastery_two
@@ -54,6 +52,8 @@ merg_has_hospital = {
 		# AOT
 		has_active_building = building_phanon_hospital
 		has_active_building = building_stellarite_hospital
+		# Ethics and Civics Infinity
+		has_active_building = building_medical_center
 		# Eutab
 		has_active_building = building_eutab_medigel_cultivator
 	}

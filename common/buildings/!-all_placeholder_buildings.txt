@@ -176,6 +176,7 @@ building_le_origin_palace = { potential = { always = no } allow = { always = no 
 building_lily_construction_group = { potential = { always = no } allow = { always = no } }
 building_lily_couture = { potential = { always = no } allow = { always = no } }
 building_lt_palace = { potential = { always = no } allow = { always = no } }
+building_medical_center = { potential = { always = no } allow = { always = no } }
 building_medical_mega_facility = { potential = { always = no } allow = { always = no } }
 building_mem_planetary_shield_generator = { potential = { always = no } allow = { always = no } }
 building_mem_planetary_shield_generator_heavy = { potential = { always = no } allow = { always = no } }

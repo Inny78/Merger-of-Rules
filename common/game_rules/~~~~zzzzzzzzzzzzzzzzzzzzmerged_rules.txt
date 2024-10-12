@@ -319,29 +319,6 @@ can_add_claim = {
 			}	
 		}
 	}
-	# Civic: Organic Zealots
-	custom_tooltip = {
-		fail_text = CANNOT_ADD_CLAIM_ORGANIC_ZEALOTS
-		NAND = {
-			root = { is_valid_organic_zealots = yes }
-			exists = owner
-			owner = {
-				NOT = { is_same_species = root }
-				is_robot_empire = yes
-			}
-		}
-	}
-	custom_tooltip = { # organic zealots don't need to claim system FROM other non-OZ homicidals
-		fail_text = CANNOT_ADD_CLAIM_THEY_THREAT
-		NAND = {
-			exists = owner
-			owner = {
-				is_homicidal = yes
-				is_valid_organic_zealots = no
-			}
-			root = { is_valid_organic_zealots = yes }
-		}
-	}
 }
 
 # Root = taker country
@@ -402,15 +379,6 @@ can_get_claim_from_lost_system = {
 				has_country_flag = synthetic_empire
 				is_machine_empire = yes
 			}
-		}
-	}
-	# Civic: Organic Zealots
-	custom_tooltip = {
-		fail_text = CANNOT_ADD_CLAIM_ORGANIC_ZEALOTS
-		NAND = {
-			is_valid_organic_zealots = yes
-			NOT = { is_same_species = root }
-			is_robot_empire = yes
 		}
 	}
 }
@@ -668,6 +636,26 @@ can_release_vassal = {
 			fail_text = default
 			NOT = { has_valid_civic = civic_elec_stellar_devourers }
 		}
+		# Libra: Gestalt Age
+		custom_tooltip = {
+			fail_text = default
+			NOT = { has_ascension_perk = ap_libra_gestalt_arcology }
+		}
+		custom_tooltip = {
+			fail_text = default
+			OR = {
+				NOT = { has_ascension_perk = ap_libra_ultimate_directive }
+				has_origin = origin_progenitor_hive
+			}
+		}
+		custom_tooltip = {
+			fail_text = default
+			OR = {
+				NOT = { has_ascension_perk = ap_libra_imperial_vermillion }
+				ruler = { has_trait = leader_trait_libra_imperial_vermillion_lord_forever }
+				ruler = { has_trait = leader_trait_libra_imperial_vermillion_galactic_emperor }
+			}
+		}
 	}
 }
 
@@ -682,7 +670,13 @@ can_release_vassal_from_species = {
 					AND = {
 						AND = {
 							has_trait = trait_machine_unit
-							prev.this = { is_individual_machine = no }
+							prev.this = {
+								NOR = {
+									is_individual_machine = yes
+									# Libra: Gestalt Age
+									has_ascension_perk = ap_libra_gestalt_release_vassals
+								}
+							}
 						}
 						# Expanded Traits, Civics, Pops, and More
 						NOT = { prev.this = { has_origin = origin_master_computer } }
@@ -690,7 +684,11 @@ can_release_vassal_from_species = {
 					AND = {
 						has_trait = trait_hive_mind
 						NOR = {
-							prev.this = { has_origin = origin_progenitor_hive }
+							prev.this = {
+								has_origin = origin_progenitor_hive
+									# Libra: Gestalt Age
+									has_ascension_perk = ap_libra_gestalt_release_vassals
+							}
 							# Empires Expanded
 							prev.this = { has_valid_civic = civic_hive_semi_autonomous_drones }
 						}
@@ -1948,48 +1946,17 @@ can_species_be_assembled = {
 						azl_comp_aut_azur_lane_1 = yes
 						azl_comp_aut_azur_lane_2 = yes
 						azl_comp_aut_azur_lane_k = yes
-						# Civic: Organic Zealots
-						AND = {
-							has_policy_flag = robots_outlawed
-							is_robot_empire = no
-						}
-						has_country_flag = lost_robot_policy_war
-						is_valid_organic_zealots = yes
-						AND = {
-							is_subject = yes
-							exists = overlord
-							overlord = { is_valid_organic_zealots = yes }
-						}
 						# Sirens
 						has_authority = auth_siren_group
 					}
 				}
 			}
+			# Machines & Robot Expansion Continued
+			has_xvcv_mdlc_trait_bio_robot = no
 		}
 		# Organics
 		AND = {
 			is_organic_species = yes
-			# Civic: Organic Zealots
-			root = {
-				check_modifier_value = {
-					modifier = planet_pop_assembly_organic_add
-					value > 0
-				}
-				owner = {
-					NAND = {
-						has_trait = trait_cybernetic
-						OR = {
-							has_country_flag = lost_robot_policy_war
-							is_valid_organic_zealots = yes
-							AND = {
-								is_subject = yes
-								exists = overlord
-								overlord = { is_valid_organic_zealots = yes }
-							}
-						}
-					}
-				}
-			}
 			# Hives can only clone drones
 			if = {
 				limit = { root.owner = { is_hive_empire = yes } }
@@ -3807,22 +3774,6 @@ can_build_branch_office_on_planet = {
 			}
 			has_observation_outpost = yes
 			observation_outpost_owner = { is_same_empire = root }
-		}
-	}
-	# Civic: Organic Zealots 
-	custom_tooltip = {
-		fail_text = requires_recipient_not_organic_zealots
-		OR = {
-			merg_has_organic_zealots = no
-			AND = {
-				exists = owner
-				owner = {
-					OR = {
-						NOT = { is_organic_zealots = no }
-						root = { is_robot_empire = no }
-					}
-				}
-			}
 		}
 	}
 	# Criminal Corp Rework

@@ -827,6 +827,9 @@ is_nuked_planet = {
     merg_is_nuked_basic = yes
 }
 
+############################### Ethics and Civics Infinity ###############################
+has_clinic = { merg_has_hospital = yes }
+
 ############################### Exalted Domination ###############################
 exalted_is_valid_as_vassal = {
 	OR = {
@@ -961,23 +964,6 @@ est_is_evil_dip_empire = {
 		has_valid_civic = civic_machine_assimilator	
 	}
 }
-est_uses_robots = {
-	OR = {
-		has_origin = origin_mechanists
-		has_country_flag = est_built_robot
-	}
-	NOR = {
-		has_policy_flag = robots_outlawed
-		# Organic Zealots
-		has_country_flag = lost_robot_policy_war
-		is_valid_organic_zealots = yes
-		AND = {
-			is_subject = yes
-			exists = overlord
-			overlord = { is_valid_organic_zealots = yes }
-		}
-	}
-}
 est_uses_slaves = {
 	OR = {
 		has_policy_flag = slavery_allowed
@@ -988,6 +974,9 @@ est_uses_slaves = {
 	}
 	NOT = { has_policy_flag = slavery_not_allowed }
 }
+
+############################### Extra Districts ###############################
+ED_is_pc_relic = { merg_is_relic_world = yes }
 
 ############################### Extra Ship Components NEXT ###############################
 ESC_TRIGGER_is_city_planet = {
@@ -1373,26 +1362,6 @@ FHMP_is_valid_werediran_planet = {
 ############################### Omega's Stellaris Traditions ###############################
 has_planetary_shield_building = {
 	merg_has_planetary_shield = yes
-}
-
-############################### Organic Zealots ###############################
-is_valid_target_to_outlaw_cybernetics_or_robot_pops_or_ai = {
-	merg_is_default_empire = yes
-	is_robot_empire = no
-	is_valid_organic_zealots = no
-	OR = {
-		has_ascension_perk = ap_the_flesh_is_weak
-		has_ascension_perk = ap_organo_machine_interfacing
-		has_ascension_perk = ap_synthetic_evolution
-		has_policy_flag = robots_allowed
-		AND = {
-			can_set_ai_policy = yes
-			OR = {
-				has_policy_flag = ai_servitude
-				has_policy_flag = ai_full_rights
-			}
-		}
-	}
 }
 
 ############################### Origin Beings ###############################

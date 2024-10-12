@@ -96,8 +96,6 @@ orbital_bombardment = {
 					merg_has_omega_add = yes
 					has_valid_civic = civic_hive_devouring_swarm
 				}
-				# Organic Zealots
-				has_valid_civic = civic_organic_zealots
 				# ZOFE
 				is_country_type = ascended_empire
 			}
@@ -116,8 +114,6 @@ orbital_bombardment = {
 					has_valid_civic = civic_machine_terminator
 					# EMEX
 					has_valid_civic = civic_bringers_of_death
-					# Organic Zealots
-					has_valid_civic = civic_organic_zealots
 					# ZOFE
 					has_valid_civic = civic_galactic_superpower
 				}
