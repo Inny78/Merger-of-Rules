@@ -685,9 +685,11 @@ can_release_vassal_from_species = {
 						has_trait = trait_hive_mind
 						NOR = {
 							prev.this = {
-								has_origin = origin_progenitor_hive
+								OR = {
+									has_origin = origin_progenitor_hive
 									# Libra: Gestalt Age
 									has_ascension_perk = ap_libra_gestalt_release_vassals
+								}
 							}
 							# Empires Expanded
 							prev.this = { has_valid_civic = civic_hive_semi_autonomous_drones }
