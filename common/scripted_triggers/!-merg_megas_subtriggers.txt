@@ -324,8 +324,6 @@ merg_has_gate_mega = {
 		has_megastructure = AAR_MEGA_webway_NODE
 		has_megastructure = AAR_MEGA_webway_NEXUS
 		has_megastructure = AAR_MEGA_webway_CLOSE
-		# Scripted Triggers Undercoat
-		has_megastructure_flag = stu_is_gate
 		# Shadowgate
 		has_megastructure = shadowrift_a
 		has_megastructure = shadowrift_b

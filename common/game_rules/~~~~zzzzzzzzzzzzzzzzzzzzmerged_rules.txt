@@ -552,8 +552,6 @@ can_generate_leader_from_pop = {
 		root = { has_origin = origin_hive_overmind }
 		# Lithoid Supremacy
 		is_pearl_born_drone = yes
-		# Rogue Maid (Rogue Servitor Completely Remake)
-		has_trait = trait_working_machine # is_rm_working_machine = yes
 		# Wandering Witch: Voyagers
 		has_ww_servitude = yes
 	}
@@ -677,6 +675,8 @@ can_release_vassal_from_species = {
 									has_ascension_perk = ap_libra_gestalt_release_vassals
 								}
 							}
+							# Rogue Maid
+							Maid_trigger_4_can_release_vassal_from_species = no
 						}
 						# Expanded Traits, Civics, Pops, and More
 						NOT = { prev.this = { has_origin = origin_master_computer } }
@@ -2231,6 +2231,8 @@ can_species_be_assembled = {
 			check_variable = { which = v_behavioral_sink_count value >= 0 }
 		}
 	}
+	# Rogue Maid
+	Maid_trigger_5_can_species_be_assembled = yes
 	# Vanilla
 	has_population_control = { country = root.owner type = no }
 }
