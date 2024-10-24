@@ -44,3 +44,4 @@ damaged_ecosystem = {}
 new_earth_planet = {}
 saved_homeworld = {}
 new_earth_country = {}
+scfe_invisibility_rune = {}

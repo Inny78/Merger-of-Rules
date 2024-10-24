@@ -2959,21 +2959,38 @@ system_blocks_sensors = {
 			}
 			# Making sure modded hidden systems will work as intended if Sensor Expansion is installed
 			NOR = {
-				# Warship Girls R And MIST Species
-				has_star_flag = wg_sealed_system
-				has_star_flag = wg_psionic_systems
 				# Ancient Empire
 				has_star_flag = ag_no_sensor_system
 				# Solar Storm
 				has_star_flag = ss_abyssal_shockwave
+				# Warship Girls R And MIST Species
+				has_star_flag = wg_sealed_system
+				has_star_flag = wg_psionic_systems
 			}
 			root = { NOT = { has_technology = tech_ariphaos_sensors_sealed } }
 		}
-		# Warship Girls R And MIST Species
-		has_star_flag = wg_sealed_system
-		has_star_flag = wg_psionic_systems
 		# Ancient Empire
 		has_star_flag = ag_no_sensor_system
+		# Assault Lily
+		AND = {
+			merg_has_assault_lily = yes
+			exists = sector
+			sector.sector_capital = {
+				exists = leader
+				leader = { al_has_rare_gov_skill = yes }
+			}
+		}
+		# Destiny: The Darkness Crisis
+		has_star_flag = "black_fleet_in_system"
+        # Forgotten Empires
+        AND = {
+            exists = owner
+            owner = {
+                has_relic = r_scfe_invisibility_rune
+                has_modifier = scfe_invisibility_rune
+            }
+            NOT = { root = { is_same_empire = prev.owner } }
+        }
 		# Solar Storm
 		has_star_flag = ss_abyssal_shockwave
 		# Sensor Expansion
@@ -3021,17 +3038,9 @@ system_blocks_sensors = {
 			starbase = { has_starbase_building = ariphaos_sensors_jammer_starbase }
 			root = { NOT = { has_technology = tech_ariphaos_sensors_jammed } }
 		}
-		# Assault Lily
-		AND = {
-			merg_has_assault_lily = yes
-			exists = sector
-			sector.sector_capital = {
-				exists = leader
-				leader = { al_has_rare_gov_skill = yes }
-			}
-		}
-		# Destiny: The Darkness Crisis
-		has_star_flag = "black_fleet_in_system"
+		# Warship Girls R And MIST Species
+		has_star_flag = wg_sealed_system
+		has_star_flag = wg_psionic_systems
 	}
 }
 

@@ -101,6 +101,7 @@ giga_is_empty_space = { always = no }
 giga_is_katzenland = { always = no }
 giga_is_lifeless = { always = no }
 giga_is_maginot_gas_giant = { always = no }
+giga_is_pc_giga_edge_of_eternity = { always = no }
 giga_is_pc_ehof_cplanet = { always = no }
 giga_is_pc_ehof_habitat = { always = no }
 giga_is_pc_equatorial_shipyard = { always = no }
@@ -108,6 +109,7 @@ giga_is_pc_flat_world = { always = no }
 giga_is_pc_flusion_gaia_ecu = { always = no }
 giga_is_pc_giga_elysium = { always = no }
 giga_is_pc_giga_empty_space = { always = no }
+giga_is_pc_giga_frameworld = { always = no }
 giga_is_pc_giga_orbital = { always = no }
 giga_is_pc_giga_penrose_habitable = { always = no }
 giga_is_pc_giga_planetary_computer = { always = no }
@@ -201,6 +203,7 @@ has_planetary_diversity_planetaryhabitats = { always = no }
 has_policy_residentliving_restricted = { always = yes }
 has_policy_slaveliving_restricted = { always = yes }
 has_reproductive_politics = { always = no }
+has_roguem_comp = { always = no }
 has_rs_comp_patch = { always = no }
 has_sbtg_upgraded_capital = { always = no }
 has_specialist_subject_leader_trait_maid = { always = no }
@@ -461,7 +464,7 @@ is_real_KZ_VOY_Seclusion = { always = no }
 is_real_KZ_VOY_solaria = { always = no }
 is_regular_giga_maginot_world = { always = no }
 is_ringworld_wg = { always = no }
-is_rm_working_machine = { always = no }
+is_roguem_working_machine = { always = no }
 is_rooted_adult = { always = no }
 is_rs_compat_fu_star = { always = no }
 is_rs_compat_hollow = { always = no }
@@ -487,6 +490,8 @@ is_sparta_citizenship_full = { always = no }
 is_special_affection_leader = { always = no }
 is_special_kancolle_leader = { always = no }
 is_spy_empire = { always = no }
+is_ssh_exodus_portal = { always = no }
+is_ssh_fusion_candle = { always = no }
 is_steven_no_star = { always = no }
 is_submerged = { always = no }
 is_subsapient_form = { always = no }

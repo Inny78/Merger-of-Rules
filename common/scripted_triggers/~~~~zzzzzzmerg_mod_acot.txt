@@ -88,8 +88,10 @@ acot_is_partially_affected_by_cascade = {
         is_acot_pmc_vault_weak = yes
 		# Gigastructural Engineering & More
 		is_giga_maginot_world = yes
-		has_star_flag = maginot_anti_jump_star
-		has_star_flag = siegfried_anti_jump_star
+		solar_system = {
+			has_star_flag = maginot_anti_jump_star
+			has_star_flag = siegfried_anti_jump_star
+		}
 		# Shadowgate
 		is_shadowgate_world = yes
     }

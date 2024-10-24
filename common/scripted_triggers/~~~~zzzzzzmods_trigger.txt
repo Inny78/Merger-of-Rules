@@ -1654,6 +1654,36 @@ ssh_is_any_gas_giant = {
 		giga_is_pc_gigabrown_dwarf = yes
 	}
 }
+ssh_is_special_planet = {
+	OR = {
+		# Hyperconstructs Types
+		is_ssh_fusion_candle = yes
+		is_ssh_exodus_portal = yes
+		# Special Vanilla Types
+		is_planet_class = pc_ai
+		is_planet_class = pc_cybrex
+		is_planet_class = pc_machine_broken
+		is_planet_class = pc_egg_cracked
+		is_planet_class = pc_infested
+		is_planet_class = pc_gray_goo
+		is_planet_class = pc_toxoid_star
+		is_planet_class = pc_astral_scar
+		is_planet_class = pc_rift_star
+		is_planet_class = pc_warden_guardian
+		is_planet_class = pc_rare_crystal_asteroid
+		# Gigastructures Types
+		giga_is_black_hole = yes
+		giga_is_birch_world = yes
+		giga_is_pc_giga_edge_of_eternity = yes
+		giga_is_pc_giga_frameworld = yes
+		giga_is_pc_flusion_gaia_ecu = yes
+		is_pki_flusion_ecu = yes
+		# Secrets of the Shroud
+		is_sots_soulsphere = yes
+		# Guillis PM
+		is_gpm_precursor_tomb = yes
+	}
+}
 
 ############################### Star Wars: Kuat Ancient Empire ###############################
 kuat_is_common_country = {
