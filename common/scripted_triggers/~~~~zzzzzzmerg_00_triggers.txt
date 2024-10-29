@@ -261,6 +261,7 @@ allows_purge = {
 			merg_has_ethical_gestalts = no
 			is_gestalt = yes
 		}
+		has_valid_civic = civic_fanatic_purifiers
 		# Electroids Species Pack
 		has_valid_civic = civic_elec_stellar_devourers
 	}
@@ -296,6 +297,7 @@ is_crisis_faction = {
 		is_country_type = awakened_marauders
 		is_country_type = synth_queen
 		is_country_type = synth_queen_storm
+		is_country_type = voidworms_crisis
 		# ACOT
 		is_country_type = sbtg_stellarborne_empire
 		# Cruel Conquerers
@@ -747,25 +749,7 @@ is_special_colony_type = {
 # Country scope
 has_precursor_intro = {
 	OR = {
-		has_country_flag = vultaum_intro
-		has_country_flag = yuht_intro
-		has_country_flag = first_league_intro
-		has_country_flag = irassian_intro
-		has_country_flag = cybrex_intro
-		has_country_flag = zroni_intro
-		has_country_flag = baol_intro
-		has_country_flag = inetian_intro
-		has_country_flag = adakkaria_intro
-		has_country_flag = plexi_intro # Forgotten History
-		has_country_flag = lartia_intro # Forgotten History
-		has_country_flag = ixardian_intro # More Precursors
-		has_country_flag = ezentian_intro # More Precursors
-		has_country_flag = werediran_intro # More Precursors
-		has_country_flag = volgan_intro # Unavoidable Changes
-		has_country_flag = scfe_precursor_set_sless # Forgotten Empires
-		has_country_flag = scfe_precursor_set_coprean # Forgotten Empires
-		has_country_flag = scfe_precursor_set_astanine # Forgotten Empires
-		has_country_flag = scfe_vinarii_intro # Forgotten Empires
+		merg_has_precursor_intro = yes
 		# Still in the early stages of 'On the Shoulders of Giants'
 		AND = {
 			has_origin = origin_shoulders_of_giants
@@ -936,10 +920,19 @@ is_organic_controllable_ship = {
 		is_ship_size = large_ship_swarm
 		is_ship_size = small_ship_swarm
 		is_ship_size = large_ship_carrier_swarm
+		AND = { # cloned space fauna
+			is_space_fauna = yes
+			is_reanimated = no
+			owner = {
+				is_fauna_country = no
+			}
+		}
+		# Scripted Triggers Undercoat
 		AND = {
 			is_scope_type = fleet
 			has_fleet_flag = stu_is_organic_controllable_ship
 		}
+		# Gigastructural Engineering & More
 		giga_is_vat_normal = yes 
 	}
 }
@@ -1142,6 +1135,8 @@ has_special_star_flag_trigger = {
 		# Leviathans
 		has_star_flag = tiyanki_home_system
 		has_star_flag = amoeba_home_system
+		has_star_flag = voidworms_system
+		has_star_flag = frenzied_voidworms_system
 		has_star_flag = crystal_system
 		has_star_flag = crystal_splitter_starting_system
 		has_star_flag = crystal_splitter_destination_system

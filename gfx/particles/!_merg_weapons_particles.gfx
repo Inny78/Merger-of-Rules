@@ -1,0 +1,39 @@
+objectTypes = {
+    # ACOT
+    pdxparticle = { name = "acot_planetary_bombardment_dm_effect" type = "planetary_bombardment" scale = 1.5 }
+    pdxparticle = { name = "acot_planetary_bombardment_ae_effect" type = "planetary_bombardment" scale = 2.0 }
+    pdxparticle = { name = "acot_planetary_bombardment_pe_effect" type = "planetary_bombardment" scale = 2.0 }
+    pdxparticle = { name = "acot_planetary_bombardment_edi_effect" type = "planetary_bombardment" scale = 2.0 }
+    pdxparticle = { name = "acot_planetary_bombardment_swarm_effect" type = "planetary_bombardment" scale = 2.0 }
+    pdxparticle = { name = "aot_planetary_bombardment_se" type = "planetary_bombardment" scale = 2.0 }
+    pdxparticle = { name = "acot_bombardment_oe_hit_effect" type = "planetary_bombardment" scale = 2.0 }
+    # Ancient Empire
+    pdxparticle = { name = "ag_planetary_bombardment_red_effect" type = "planetary_bombardment"  scale = 1.0 }
+    pdxparticle = { name = "ag_planetary_bombardment_orange_effect" type = "planetary_bombardment"  scale = 1.0 }
+    pdxparticle = { name = "ag_planetary_bombardment_violet_effect" type = "planetary_bombardment"  scale = 1.0 }
+    pdxparticle = { name = "ag_planet_shield_effect_red" type = "planetary_bombardment" scale = 0.2 }
+    pdxparticle = { name = "ag_planet_shield_effect_green" type = "planetary_bombardment" scale = 0.2 }
+    pdxparticle = { name = "ag_planet_shield_effect_blue" type = "planetary_bombardment" scale = 0.2 }
+    # AOT
+    pdxparticle = { name = "aot_bombardment_se_hit_effect" type = "planetary_bombardment" scale = 2 }
+    pdxparticle = { name = "aot_bombardment_pe_hit_effect" type = "planetary_bombardment" scale = 2 }
+    # Darkspace
+    pdxparticle = { name = "ds_planetary_bombardment_effect" type = "planetary_bombardment" scale = 1.0 }
+    # Electroids
+    pdxparticle = { name = "elec_neutron_effect" type = "planetary_bombardment" }
+    # Gigastructural Engineering & More
+    pdxparticle = { name = "compound_bombardment_effect" type = "planetary_bombardment" }
+    pdxparticle = { name = "redtoxin_bombardment_effect" type = "planetary_bombardment" }
+    pdxparticle = { name = "katzen_bombardment_effect" type = "planetary_bombardment" scale = 3.0 }
+    # Halo: Forerunner Ships & Portraits
+    pdxparticle = { name = "glassing_bombardment_effect" type = "planetary_bombardment" }
+    pdxparticle = { name = "ancestor_fibril_bombardment_effect" type = "planetary_bombardment" }
+    pdxparticle = { name = "forerunner_ion_bombardment_effect" type = "planetary_bombardment" scale = 1.0 }
+    pdxparticle = { name = "dark_energon_bombardment_effect" type = "planetary_bombardment" scale = 1.0 }
+    # Maiden Frontier Gunstar Story Collection
+    pdxparticle = { name = "collapse_bombardment_effect" type = "planetary_bombardment" scale = 1 }
+    # Nanite Expansion Continued
+    pdxparticle = { name = "subsumption_bombardment_effect" type = "planetary_bombardment" }
+    # Origin Beings
+    pdxparticle = { name = "infernal_bombardment_particle" type = "planetary_bombardment" scale = 1.0 }
+}

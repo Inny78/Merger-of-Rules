@@ -15,8 +15,7 @@ fleet_can_be_scrapped = {
 		giga_is_vat_leviathan = yes
 		giga_is_unscrappable = yes
 		# Scripted Trigger Undercoat
-		AND = {
-			is_scope_type = fleet
+		fleet = {
 			has_fleet_flag = stu_fleet_cant_be_scrapped
 		}
 		# Voyage to Eternity

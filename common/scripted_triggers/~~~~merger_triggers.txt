@@ -705,3 +705,31 @@ merg_is_standard_star = {
 		is_planet_class_pc_y_star = yes
 	}
 }
+
+merg_has_precursor_intro = {
+	if = {
+		limit = { has_ariphaos_assorted_precursors = no }
+		OR = {
+			has_country_flag = vultaum_intro
+			has_country_flag = yuht_intro
+			has_country_flag = first_league_intro
+			has_country_flag = irassian_intro
+			has_country_flag = cybrex_intro
+			has_country_flag = zroni_intro
+			has_country_flag = baol_intro
+			has_country_flag = inetian_intro
+			has_country_flag = adakkaria_intro
+			has_country_flag = plexi_intro # Forgotten History
+			has_country_flag = lartia_intro # Forgotten History
+			has_country_flag = ixardian_intro # More Precursors
+			has_country_flag = ezentian_intro # More Precursors
+			has_country_flag = werediran_intro # More Precursors
+			has_country_flag = volgan_intro # Unavoidable Changes
+			has_country_flag = scfe_precursor_set_sless # Forgotten Empires
+			has_country_flag = scfe_precursor_set_coprean # Forgotten Empires
+			has_country_flag = scfe_precursor_set_astanine # Forgotten Empires
+			has_country_flag = scfe_vinarii_intro # Forgotten Empires
+		}
+	}
+	else = { always = no }
+}

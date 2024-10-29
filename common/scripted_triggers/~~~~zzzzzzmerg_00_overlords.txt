@@ -43,7 +43,7 @@ is_merc_enclave_founding_allowed = {
 						is_hostile = prevprev.owner
 					}
 				}
-			}	
+			}
 		}
 	}
 	custom_tooltip = {
@@ -86,6 +86,14 @@ is_merc_enclave_founding_allowed = {
 		NOR = {
 			has_ship_owner_type = federation
 			has_ship_owner_type = galactic_community
+		}
+	}
+	custom_tooltip = {
+		fail_text = enclave.2.tooltip.g
+		NOT = {
+			any_owned_ship = {
+				is_space_fauna = yes
+			}
 		}
 	}
 	# KDC Story Pack

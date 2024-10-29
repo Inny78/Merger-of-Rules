@@ -1,9 +1,3 @@
-#########################################
-#
-# on_action_events patch rebuild outpost for orphaned colonies
-# by Fireprince
-#
-#########################################
 namespace = action
 
 # 81

@@ -1147,6 +1147,9 @@ can_take_hostile_actions = {
 #Root = country
 #This = planet
 can_colonize_planet = {
+	hidden_trigger = {
+		exists = root
+	}
 	custom_tooltip = {
 		fail_text = "COLONIZATION_IMPOSSIBLE_UNDER_INVESTIGATION"
 		NOT = { has_planet_flag = planet_under_investigation }
@@ -1183,7 +1186,6 @@ can_colonize_planet = {
 	}
 	custom_tooltip = {
 		fail_text = "COLONIZATION_IMPOSSIBLE_CRIMSON_CRAWLERS"
-
 		if = {
 			limit = {
 				has_modifier = crimson_crawlers
@@ -1192,6 +1194,15 @@ can_colonize_planet = {
 				cares_for_crimson_crawlers = yes
 			}
 		}
+	}
+	custom_tooltip = {
+		fail_text = "COLONIZATION_IMPOSSIBLE_DEFENDED_PLANET"
+		NOT = { has_planet_flag = planet_defended_forbid_colonization }
+	}
+
+	custom_tooltip = {
+		fail_text = "COLONIZATION_IMPOSSIBLE_SMEEGIBB_PLANET"
+		NOT = { has_planet_flag = cannot_colonize_smeegibb_shelter }
 	}
 	# Diagrapher's Factions and Ethics Mod
 	hidden_trigger = {
@@ -1317,6 +1328,14 @@ can_terraform_planet = {
 		NOT = {
 			has_modifier = metal_planet
 		}
+	}
+	custom_tooltip = {
+		fail_text = COLONIZATION_IMPOSSIBLE_DEFENDED_PLANET
+		NOT = { has_planet_flag = planet_defended_forbid_colonization }
+	}
+	custom_tooltip = {
+		fail_text = "COLONIZATION_IMPOSSIBLE_SMEEGIBB_PLANET"
+		NOT = { has_planet_flag = cannot_colonize_smeegibb_shelter }
 	}
 	# Forgotten Empires
 	custom_tooltip = {
@@ -2250,7 +2269,7 @@ can_orbital_bombard = {
 	hidden_trigger = {
 		OR = {
 			merg_has_diag_fact = no
-			root.owner = {
+			ROOT.owner = {
 				NAND = {
 					is_ai = yes
 					has_civic = civic_warrior_culture
@@ -2287,7 +2306,7 @@ can_orbital_bombard = {
 	}
 	OR = {
 		AND = {
-			root.CONTROLLER = {
+			ROOT.CONTROLLER = {
 				NOT = { has_communications = FROM.OWNER }
 			}
 			FROM.CONTROLLER = {
@@ -2295,7 +2314,7 @@ can_orbital_bombard = {
 			}
 		}
 		AND = {
-			root.CONTROLLER = {
+			ROOT.CONTROLLER = {
 				NOR = {
 					has_policy_flag = interference_not_allowed
 					has_policy_flag = interference_subtle
@@ -2304,8 +2323,8 @@ can_orbital_bombard = {
 			FROM.CONTROLLER = { is_country_type = primitive }
 		}
 		# Vanilla
-		root.CONTROLLER = { is_hostile = FROM.CONTROLLER }
-		root.CONTROLLER = { is_at_war_with = FROM.CONTROLLER }
+		ROOT.CONTROLLER = { is_hostile = FROM.CONTROLLER }
+		ROOT.CONTROLLER = { is_at_war_with = FROM.CONTROLLER }
 		FROM = {
 			OR = {
 				is_planet_class = pc_infested
@@ -2355,7 +2374,7 @@ can_orbital_bombard = {
 				is_sleeper = yes
 			}
 		}
-		root.CONTROLLER = {
+		ROOT.CONTROLLER = {
 			OR = {
 				is_country_type = extradimensional
 				is_country_type = extradimensional_2
@@ -2370,18 +2389,28 @@ can_orbital_bombard = {
 				is_country_type = gray_goo
 				is_country_type = vol
 				AND = {
+					is_country_type = frenzied_voidworms
+					has_country_flag = can_bombard
+					FROM.CONTROLLER = { has_country_flag = tormented_by_frenzied_voidworms }
+				}
+				AND = {
 					OR = {
 						is_country_type = awakened_marauders
 						is_country_type = formless
 					}
 					FROM.CONTROLLER = { is_hostile = prev }
 				}
+				AND = {
+					is_voidworms_hostile_country_type = yes
+					ROOT = {
+						is_ship_size = voidworms_titan
+					}
+				}
 				is_khan_country_type = yes
 				# Ancient Empire
 				ag_can_do_orbital_bombardment_country = yes
 				# ACOT
 				is_progenitor_empires = yes
-				is_country_type = katzenartig_imperium
 				is_country_type = void_lifeforms_1
 				is_country_type = void_lifeforms_2
 				is_country_type = acot_crazed_stellarite
@@ -2616,12 +2645,25 @@ ai_should_restrict_system = {
 			owner = { merg_is_fallen_empire = yes }
 		}
 		AND = {
+			root = { is_country_type = voidworms }
+			exists = owner
+			owner = {
+				OR = {
+					is_country_type = dormant_marauders
+					is_country_type = awakened_marauders
+					# The Empty Vagrant
+					is_country_type = awakened_marauders_ev
+				}
+			}
+		}
+		AND = {
 			root = {
 				OR = {
 					merg_is_fallen_empire = yes
 					is_country_type = awakened_marauders
 					is_country_type = marauder_raiders
 					is_country_type = caravaneer_fleet
+					is_country_type = voidworms
 					# The Empty Vagrant
 					is_country_type = awakened_marauders_ev
 				}
@@ -4452,7 +4494,19 @@ can_pop_auto_migrate = {
 	}
 	custom_tooltip = {
 		fail_text = AUTO_MIGRATE_VIRTUALITY
-		has_virtual_species_trait = no
+		OR = {
+			has_virtual_species_trait = no
+			AND = {
+				has_virtual_species_trait = yes
+				exists = owner
+				owner = {
+					OR = {
+						is_individual_machine = no
+						is_machine_empire = no
+					}
+				}
+			}
+		}
 	}
 	if = {
 		limit = {
@@ -5464,3 +5518,17 @@ can_trade_fleet = {
 # can_initiate_storm_on_planet
 # can_force_see_fleets_in_system
 # has_breached_shroud_storm
+# is_science_fleet_gravity_snare_on_cooldown
+# can_fleet_be_captured_by_snares
+# can_fauna_grow
+# can_use_exhibits
+# can_access_vivarium
+# can_scavenge_and_research_debris
+# can_scavenge_debris
+# can_excavate_outside_borders
+# can_voidworms_bombard_country
+# can_use_mutations
+# can_use_artificial_breeding
+# can_trade_specimens
+# force_create_default_ship_design
+# is_seeded

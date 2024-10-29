@@ -91,6 +91,14 @@ country_event = {
             }
             country_event = { id = merg_check.11 }
         }
+        # Rogue Maid
+        if = {
+            limit = {
+                merg_has_rogue_maid = yes
+                has_roguem_comp = no
+            }
+            country_event = { id = merg_check.12 }
+        }
     }
 }
 
@@ -206,6 +214,18 @@ country_event = {
     id = merg_check.11
     title = TRANSMISSION
     desc = merg_check.11.desc
+    picture = GFX_evt_communication_event
+    show_sound = event_default
+    is_triggered_only = yes
+
+    option = {
+        name = UNDERSTOOD
+    }
+}
+country_event = {
+    id = merg_check.12
+    title = TRANSMISSION
+    desc = merg_check.12.desc
     picture = GFX_evt_communication_event
     show_sound = event_default
     is_triggered_only = yes

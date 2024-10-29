@@ -152,6 +152,7 @@ has_apsr_produce_goods = { always = no }
 has_apsr_produce_minerals = { always = no }
 has_apsr_produce_science = { always = no }
 has_apsr_resource_local = { always = no }
+has_ariphaos_assorted_precursors = { always = no }
 has_artificial_aristocracy_emex = { always = no }
 has_artificial_wombs = { always = no }
 has_aso_space_exploration = { always = no }
