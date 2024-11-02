@@ -168,6 +168,7 @@ has_bug_branch = { always = no }
 has_bugged_criminal_corp_rework = { always = no }
 has_civic_organic_zealots_active = { always = no }
 has_civic_organic_zealots_active = { always = no }
+has_comp_mahoshoujo = { always = no }
 has_corporate_imperial_auth = { always = no }
 has_diagraphers_trait_mod = { always = no }
 has_dict_democratic_auth = { always = no }
@@ -189,6 +190,7 @@ has_gf_comp_patch = { always = no }
 has_gigastructures = { always = no }
 has_holosphere_portraits_revisited_active = { always = no }
 has_kuat_compatch = { always = no }
+has_madoka_comp = { always = no }
 has_major_upgraded_penal_capital = { always = no }
 has_mca_auth_cooperative = { always = no }
 has_mca_auth_private = { always = no }

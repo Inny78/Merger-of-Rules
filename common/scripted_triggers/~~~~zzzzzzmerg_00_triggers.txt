@@ -1228,7 +1228,7 @@ has_special_star_flag_trigger = {
 		}
 		# SW:Kuat Ancient Empire
 		AND = {
-			merg_has_kuat = yes
+			merg_has_sw_kuat = yes
 			OR = {
 				has_star_flag = Kuat_system
 				has_star_flag = Kuat_system_1
@@ -1246,6 +1246,8 @@ has_special_star_flag_trigger = {
 		# Warship Girls R And MIST Species
 		has_star_flag = wg_sealed_system
 		has_star_flag = wg_psionic_systems
+		# Misc
+		has_star_flag = extragalactic_cluster
 	}
 }
 

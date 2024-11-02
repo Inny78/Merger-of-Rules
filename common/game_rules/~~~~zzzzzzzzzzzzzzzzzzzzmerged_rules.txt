@@ -1389,7 +1389,7 @@ can_colonize_with_pop = {
 	}
 	NOR = {
 		# Madoka Magica NEW
-		has_trait = trait_mahoshoujo
+		has_comp_mahoshoujo = yes
 		# Diagraphers Trait Mod
 		is_subsapient_form = yes
 		is_rooted_adult = yes
@@ -1691,7 +1691,7 @@ can_species_procreate = {
 		# Lithoid Supremacy
 		is_pearl_born_drone = yes
 		# Madoka Magica NEW
-		has_trait = trait_mahoshoujo
+		has_comp_mahoshoujo = yes
 		# Wandering Witch: Voyagers
 		has_ww_dummy = yes
 	}

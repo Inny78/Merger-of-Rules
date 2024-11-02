@@ -163,8 +163,13 @@ merg_has_omega_add = { has_global_flag = osa_active }
 # Origin Beings
 merg_has_origin_beings = { has_global_flag = darhmod_precursor_seres }
 
-# Star Wars: Kuat Ancient Empire
-merg_has_kuat = { has_global_flag = install_kuat_mod }
+# Madoka Magicka New
+merg_has_madoka = {
+	OR = {
+		has_global_flag = merg_madoka_detected
+		any_country = { has_country_flag = maju_country }
+	}
+}
 
 # More Authorities
 merg_has_more_authorities = { has_more_authorities_triggers = yes }
@@ -229,8 +234,13 @@ merg_has_seooc = { has_global_flag = nep_SEoOC_active }
 # Special Colonies Overhaul
 merg_has_special_colonies = { has_global_flag = SCO_enabled_flag }
 
-# Star Wars Kuat
-merg_has_sw_kuat = { has_global_flag = kuat_settings_first_fired }
+# Star Wars: Kuat Ancient Empire
+merg_has_sw_kuat = {
+	OR = {
+		has_global_flag = kuat_settings_first_fired
+		has_global_flag = install_kuat_mod
+	}
+}
 
 # Star Wars Unknownworlds
 merg_has_swuss = { has_global_flag = has_swgs_mod }

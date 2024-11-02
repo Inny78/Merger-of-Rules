@@ -99,6 +99,22 @@ country_event = {
             }
             country_event = { id = merg_check.12 }
         }
+        # Madoka Magicka New
+        if = {
+            limit = {
+                any_country = { has_country_flag = maju_country }
+            }
+            set_global_flag = merg_madoka_detected
+        }
+        if = {
+            limit = {
+                merg_has_madoka = yes
+                has_madoka_comp = no
+            }
+            country_event = {
+                id = merg_check.13
+            }
+        }
     }
 }
 
@@ -226,6 +242,18 @@ country_event = {
     id = merg_check.12
     title = TRANSMISSION
     desc = merg_check.12.desc
+    picture = GFX_evt_communication_event
+    show_sound = event_default
+    is_triggered_only = yes
+
+    option = {
+        name = UNDERSTOOD
+    }
+}
+country_event = {
+    id = merg_check.13
+    title = TRANSMISSION
+    desc = merg_check.13.desc
     picture = GFX_evt_communication_event
     show_sound = event_default
     is_triggered_only = yes
