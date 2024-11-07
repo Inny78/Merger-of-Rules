@@ -326,3 +326,6 @@ l_english:
  SCFE_PLANET_IN_QUARANTINE: "The planet is quarantined."
  CAN_TAKE_HOSTILE_ACTION_NEP_PHANTOM: "Unable to attack the fleet in an uncertain phase."
  CAN_TAKE_HOSTILE_ACTION_PLANET_STATE: "We can only take hostile action against a Planet-State within our borders."
+ PREFTL_IS_XENOPHILE: "Curious about alien culture"
+ PREFTL_IS_MATERIALIST: "Curious about alien technology"
+ PREFTL_IS_COMPETETIVE: "Capitalist Values"

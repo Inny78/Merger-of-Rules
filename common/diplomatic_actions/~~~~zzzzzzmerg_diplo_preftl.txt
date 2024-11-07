@@ -62,7 +62,14 @@ action_reveal_presence = {
 			fail_text = "requires_recipient_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = {
+					NOR = {
+						has_valid_civic = civic_fanatic_purifiers
+						# More Primitives
+						has_country_flag = purifying_age
+						has_country_flag = late_purifying_age
+					}
+				}
 			}
 		}
 		custom_tooltip = {
@@ -250,7 +257,14 @@ action_societal_enlightenment = {
 			fail_text = "requires_recipient_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = {
+					NOR = {
+						has_valid_civic = civic_fanatic_purifiers
+						# More Primitives
+						has_country_flag = purifying_age
+						has_country_flag = late_purifying_age
+					}
+				}
 			}
 		}
 		custom_tooltip = {
@@ -339,7 +353,6 @@ action_societal_enlightenment = {
 			}
 		}
 	}
-	
 
 	should_ai_propose = {
 		weight = 0
@@ -364,6 +377,17 @@ action_societal_enlightenment = {
 				has_modifier = pre_ftl_distrustful
 			}
 			desc = pre_ftl_distrustful
+		}
+		# More Primitives
+		modifier = {
+			add = 25
+			has_ethic = ethic_xenophile
+			desc = PREFTL_IS_XENOPHILE
+		}
+		modifier = {
+			add = 50
+			has_ethic = ethic_fanatic_xenophile
+			desc = PREFTL_IS_XENOPHILE
 		}
 	}
 }
@@ -468,7 +492,14 @@ action_open_technological_enlightenment = {
 			fail_text = "requires_recipient_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = {
+					NOR = {
+						has_valid_civic = civic_fanatic_purifiers
+						# More Primitives
+						has_country_flag = purifying_age
+						has_country_flag = late_purifying_age
+					}
+				}
 			}
 		}
 		custom_tooltip = {
@@ -573,6 +604,61 @@ action_open_technological_enlightenment = {
 					}
 					set_country_flag = started_enlightening_from_ancient_era
 				}
+				# More Primitives
+				if = {
+					limit = { has_country_flag = stone_age }
+					set_country_flag = pre_ftl_enlightening_stone_age
+				}
+				else_if = {
+					limit = { has_country_flag = bronze_age }
+					set_country_flag = pre_ftl_enlightening_bronze_age
+				}
+				else_if = {
+					limit = { has_country_flag = iron_age }
+					set_country_flag = pre_ftl_enlightening_iron_age
+				}
+				else_if = {
+					limit = { has_country_flag = late_medieval_age }
+					set_country_flag = pre_ftl_enlightening_late_medieval_age
+				}
+				else_if = {
+					limit = { has_country_flag = renaissance_age }
+					set_country_flag = pre_ftl_enlightening_renaissance_age
+				}
+				else_if = {
+					limit = { has_country_flag = philosophy_age }
+					set_country_flag = pre_ftl_enlightening_philosophy_age
+				}
+				else_if = {
+					limit = { has_country_flag = industrial_age }
+					set_country_flag = pre_ftl_enlightening_industrial_age
+				}
+				else_if = {
+					limit = { has_country_flag = machine_age }
+					set_country_flag = pre_ftl_enlightening_machine_age
+				}
+				else_if = {
+					limit = { has_country_flag = pollution_age }
+					set_country_flag = pre_ftl_enlightening_pollution_age
+				}
+				else_if = {
+					limit = { has_country_flag = dieselpunk_age }
+					set_country_flag = pre_ftl_enlightening_dieselpunk_age
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_country_flag = apocalyptic_age
+							has_country_flag = post_apocalyptic_age
+						}
+					}
+					set_country_flag = pre_ftl_enlightening_apocalyptic_age
+				}
+				else_if = {
+					limit = { has_country_flag = pollution_age }
+					set_country_flag = pre_ftl_enlightening_pollution_age
+				}
+				# Vanilla
 				capital_scope.observation_outpost = {
 					set_event_locked = yes
 				}
@@ -603,6 +689,22 @@ action_open_technological_enlightenment = {
 				has_modifier = pre_ftl_distrustful
 			}
 			desc = pre_ftl_distrustful
+		}
+		# More Primitives
+		modifier = {
+			add = 25
+			has_ethic = ethic_xenophile
+			desc = PREFTL_IS_XENOPHILE
+		}
+		modifier = {
+			add = 50
+			has_ethic = ethic_fanatic_xenophile
+			desc = PREFTL_IS_XENOPHILE
+		}
+		modifier = {
+			add = 35
+			is_materialist = yes
+			desc = PREFTL_IS_MATERIALIST
 		}
 	}
 }
@@ -702,7 +804,14 @@ action_pre_ftl_trade = {
 			fail_text = "requires_recipient_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
-				from = { NOT = { has_valid_civic = civic_fanatic_purifiers } }
+				from = {
+					NOR = {
+						has_valid_civic = civic_fanatic_purifiers
+						# More Primitives
+						has_country_flag = purifying_age
+						has_country_flag = late_purifying_age
+					}
+				}
 			}
 		}
 		custom_tooltip = {
@@ -821,6 +930,25 @@ action_pre_ftl_trade = {
 				has_modifier = pre_ftl_distrustful
 			}
 			desc = pre_ftl_distrustful
+		}
+		# More Primitives
+		modifier = {
+			add = 25
+			has_ethic = ethic_xenophile
+			desc = PREFTL_IS_XENOPHILE
+		}
+		modifier = {
+			add = 50
+			has_ethic = ethic_fanatic_xenophile
+			desc = PREFTL_IS_XENOPHILE
+		}
+		modifier = {
+			add = 25
+			OR = {
+				is_capitalist = yes
+				is_competitive = yes
+			}
+			desc = PREFTL_IS_COMPETETIVE
 		}
 	}
 }

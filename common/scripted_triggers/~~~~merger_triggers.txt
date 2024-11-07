@@ -311,6 +311,8 @@ merg_is_empty_space = {
 		is_ag_void = yes
 		# Darkspace
 		is_ds_gc_star = yes
+		# Forgotten Empires
+		scfe_is_empty_space = yes
 		# GF Nyto
 		gf_comp_endles = yes
 		# Gigastructural Engineering & More
@@ -338,6 +340,8 @@ merg_is_hole_star_class = {
 		is_star_class = sc_acot_void_star
 		# Astro's Stellaris Overhaul - Galaxy Generation
 		is_star_class = sc_aso_gg_white_hole
+		# Forgotten Empires
+		is_star_class = sc_scfe_empty_space
 		# Gigastructural Engineering & More
 		is_star_class = sc_birch
 		is_star_class = sc_birch_built

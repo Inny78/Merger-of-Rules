@@ -67,3 +67,4 @@ sofe_inner_class = { class = g_star spawn_odds = 0 }
 sc_void_birch_built = { class = g_star spawn_odds = 0 }
 sc_white_hole = { class = g_star spawn_odds = 0 }
 sc_scfe_binary_1 = { class = g_star spawn_odds = 0 }
+sc_scfe_empty_space = { class = g_star spawn_odds = 0 }
