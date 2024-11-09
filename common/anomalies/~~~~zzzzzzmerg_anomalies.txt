@@ -1,0 +1,34 @@
+GAS_CLOUDY_CAT = {
+    desc = "GAS_CLOUDY_DESC"
+    picture = "GFX_evt_atmospheric_flight"
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            add = 3
+            is_planet_class = pc_gas_giant
+            # Riza Fix
+            has_any_strategic_resource = no
+            NOR = {
+                has_planet_flag = baldarak@from.owner
+                has_planet_flag = new_baldarak@from.owner
+                has_planet_flag = baldarak
+                has_planet_flag = new_baldarak
+                exists = archaeological_site
+            }
+        }
+        # Gigastructural Engineering & More
+        modifier = {
+            factor = 0
+            solar_system = {
+                OR = {
+                    merg_is_isolated_system = yes
+                    cohesive_system = yes
+                    urmazin_system = yes
+                    everchanging_system = yes
+                }
+            }
+        }
+    }
+    on_success = anomaly.240
+}

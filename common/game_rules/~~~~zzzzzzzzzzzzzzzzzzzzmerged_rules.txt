@@ -478,7 +478,7 @@ species_can_live_on_planet = {
 					root.owner = {
 						is_hive_empire = yes
 						has_valid_civic = civic_hive_parasitic
-						prev = { has_job = purge_parasitic }
+						prev = { any_species_pop = { has_job = purge_parasitic } }
 					}
 				}
 			}
@@ -2284,7 +2284,7 @@ can_orbital_bombard = {
 			FROM.owner = { is_crisis_faction = yes }
 		}
 	}
-	# ACOT
+	# ACOT/SOTS
 	NAND = {
 		OWNER = { is_progenitor_empires = no }
 		FROM = {

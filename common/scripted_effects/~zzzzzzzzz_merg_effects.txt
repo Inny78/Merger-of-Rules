@@ -1,3 +1,28 @@
+shroud_storm_events = {
+	random_system_planet = {
+		limit = {
+			solar_system = { NOT = { has_star_flag = shroud_storm_changed } }
+			NOT = { has_planet_flag = shroud_storm_changed }
+			merg_is_forbidden_target = no
+			is_artificial = no
+			is_astral_scar = no
+			is_asteroid = no
+			merg_is_molten = no
+			NOR = {
+				has_modifier = terraforming_candidate
+				has_modifier = toxic_terraforming_candidate
+				exists = archaeological_site
+			}
+		}
+		random_list = {
+			80 = {}
+			20 = {
+				planet_event = { id = cstorms.8500 }
+			}
+		}
+	}
+}
+
 # Acquisition of Technology
 remove_capital_building = {
 	switch = {
