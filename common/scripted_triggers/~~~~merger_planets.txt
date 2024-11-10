@@ -77,6 +77,19 @@ merg_is_standard_cold = {
 		merg_is_tundra = yes
 	}
 }
+merg_is_basic_vanilla_habitable = {
+	OR = {
+		is_planet_class = pc_alpine
+		is_planet_class = pc_arctic
+		is_planet_class = pc_arid
+		is_planet_class = pc_continental
+		is_planet_class = pc_desert
+		is_planet_class = pc_ocean
+		is_planet_class = pc_savannah
+		is_planet_class = pc_tropical
+		is_planet_class = pc_tundra
+	}
+}
 
 merg_is_alpine = {
 	optimize_memory
