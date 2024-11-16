@@ -2497,9 +2497,6 @@ has_full_sensor_range = {
 		has_megastructure = spy_orb_restored
 		# ACOT
 		has_megastructure = sofe_omega_spy_orb_center
-		# Core Framework & Modmenu
-		has_country_flag = z_fw_r_celestial_orrey_activited
-		has_country_flag = z_fw_r_cheat_quantum_beacon_activited
 		# BlueArchive
 		has_modifier = modifier_BA_Veritas_4
 		# Galaxius
@@ -2508,8 +2505,6 @@ has_full_sensor_range = {
 			any_owned_planet = { has_deposit = d_ie_sa }
 		}
 	}
-	# Core Framework & Modmenu
-	NOT = { has_country_flag = z_fw_misc_full_sensor_off }
 }
 
 # show_notification_for_ground_combat
@@ -2577,8 +2572,6 @@ can_orbitable_repair_ships = {
 # this = ship
 # root = country that kills ship
 can_spawn_debris = {
-	NOT = { has_global_flag = z_fw_flg_glbl_tech_overwhelm }
-	# Core Framework & Modmenu
 	root = { merg_is_default_empire = yes }
 	exists = owner
 	owner = {
@@ -3092,13 +3085,6 @@ can_enter_system_by_jump = {
 	custom_tooltip = {
 		fail_text = cannot_jump_to_system
 		OR = {
-			root = {
-				OR = {
-					# Core Framework & Modmenu
-					has_country_flag = z_fw_r_celestial_orrey_activited
-					has_country_flag = z_fw_r_cheat_quantum_beacon_activited
-				}
-			}
 			AND = {
 				# Sealed system
 				OR = {
@@ -4062,9 +4048,7 @@ can_build_branch_office_on_planet = {
 				}
 			}
 			AND = {
-				root = {
-					is_criminal_syndicate = yes
-				}
+				root = { is_criminal_syndicate = yes }
 				NOT = { has_planet_flag = criminal_branch_closed_cooldown_planet@root }
 			}
 		}
@@ -4532,9 +4516,7 @@ can_pop_auto_migrate = {
 							exists = orbital_defence
 							orbital_defence = {
 								exists = starbase
-								starbase = {
-									has_starbase_building = ring_slave_processing_facility
-								}
+								starbase = { has_starbase_building = ring_slave_processing_facility }
 							}
 						}
 					}
@@ -4610,12 +4592,9 @@ can_planet_auto_migrate = {
 				is_colony = yes
 				colony_age > 60
 			}
-			is_capital = yes								# Don't break Doomsday!
+			is_capital = yes	# Don't break Doomsday!
 			# z Expanded Traits, Civics, Pops, and More
-			has_planet_flag = void_dweller_habitat			# Don't break Void Dwellers!
-			# Planetary Diversity - Habitats
-			has_planet_flag = pd_habitat_start_luna
-			has_planet_flag = pd_habitat_start_mars
+			has_planet_flag = void_dweller_habitat	# Don't break Void Dwellers!
 		}
 	}
 	custom_tooltip = {
@@ -4631,22 +4610,6 @@ can_planet_auto_migrate = {
 			}
 		}
 	}
-	# Better Performance & Utilities
-	NOT = { has_global_flag = z_pf2_flg_vam_disabled }
-	# Casako's Framework & Modmenu
-#	custom_tooltip = {
-#		fail_text = UGRC_failtips_PF_VAM
-#		NOT = { has_global_flag = PF_flg_VAM_disabled }
-#	}
-#	custom_tooltip = {
-#		fail_text = UGRC_failtips_PR_planet
-#		NOT = { has_planet_flag = PR_flg_plnt_ASCENDED }
-#	}
-	# Forgotten Empires
-    custom_tooltip = {
-        fail_text = SCFE_PLANET_IN_QUARANTINE
-        NOT = { has_planet_flag = scfe_plague_quarantined }
-    }
 }
 
 # can_planet_receive_auto_migration
@@ -5315,28 +5278,16 @@ can_get_external_leader_pool_candidate = {
 	# Both empires must be regular empires, machine intelligences or hive-minds.
 	OR = {
 		AND = {
-			root = {
-				is_regular_empire = yes
-			}
-			FROM = {
-				is_regular_empire = yes
-			}
+			root = { is_regular_empire = yes }
+			FROM = { is_regular_empire = yes }
 		}
 		AND = {
-			root = {
-				is_machine_empire = yes
-			}
-			FROM = {
-				is_machine_empire = yes
-			}
+			root = { is_machine_empire = yes }
+			FROM = { is_machine_empire = yes }
 		}
 		AND = {
-			root = {
-				is_hive_empire = yes
-			}
-			FROM = {
-				is_hive_empire = yes
-			}
+			root = { is_hive_empire = yes }
+			FROM = { is_hive_empire = yes }
 		}
 	}
 }
@@ -5421,11 +5372,7 @@ can_trade_leader = {
 					has_authority = auth_machine_intelligence
 				}
 				NOT = { has_country_flag = no_murdering_tactical_leaders }
-				NOT = {
-					any_owned_leader = {
-						has_trait = leader_trait_tactical_algorithms
-					}
-				}
+				NOT = { any_owned_leader = { has_trait = leader_trait_tactical_algorithms } }
 			}
 		}
 		# Ethics and Civics Infinity
