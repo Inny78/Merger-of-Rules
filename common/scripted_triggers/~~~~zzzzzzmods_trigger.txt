@@ -640,21 +640,6 @@ is_BA_fallen_empire_awakened = {
 	}
 }
 
-############################### Casako's Framework & Modmenu ###############################
-PR_trgr_plnt_DOOM = {
-	OR = {
-		merg_is_molten = yes
-		merg_is_barren = yes
-		merg_is_barren_cold = yes
-		merg_is_toxic = yes
-		merg_is_frozen = yes
-		merg_is_broken = yes
-		is_planet_class = pc_ai
-		is_planet_class = pc_infested
-		is_planet_class = pc_shattered_ring_habitable
-	}
-}
-
 ############################### City World Flavour ###############################
 ef_is_ecu = {
 	merg_is_arcology_non_gestalt = yes
@@ -955,24 +940,6 @@ is_barren = {
 }
 is_city = {
 	merg_is_arcology = yes
-}
-
-############################### Expanded Stellaris Traditions ###############################
-est_is_evil_dip_empire = {
-	OR = {
-		is_unfriendly = yes
-		has_valid_civic = civic_machine_assimilator	
-	}
-}
-est_uses_slaves = {
-	OR = {
-		has_policy_flag = slavery_allowed
-		has_policy_flag = ai_servitude
-		merg_is_slaver = yes
-		is_slaver = yes
-		has_country_flag = est_built_robot
-	}
-	NOT = { has_policy_flag = slavery_not_allowed }
 }
 
 ############################### Extra Districts ###############################
@@ -1792,95 +1759,6 @@ can_be_ev_investment_country = {
 		has_country_flag = ev_received_an_investment
 	}
 	is_ai = yes
-}
-
-############################### The Storm Cluster ###############################
-scluster_uninhabitable_planet = {
-	OR = {
-		uninhabitable_regular_planet = yes
-		merg_is_gas_giant = yes
-	}
-}
-scluster_habitable_planet_urban = {
-	OR = {
-		merg_is_relic_world = yes
-		merg_is_arcology = yes
-	}
-}
-scluster_habitable_planet_normal_dry = {
-	OR = {
-		merg_is_arid = yes
-		merg_is_desert = yes
-		merg_is_savannah = yes
-	}
-}
-scluster_habitable_planet_normal_wet = {
-	OR = {
-		merg_is_continental = yes
-		merg_is_ocean = yes
-		merg_is_tropical = yes
-	}
-}
-scluster_habitable_planet_normal_cold = {
-	OR = {
-		merg_is_tundra = yes
-		merg_is_arctic = yes
-		merg_is_alpine = yes
-	}
-}
-scluster_is_barren = {
-	OR = {
-		merg_is_barren = yes
-		merg_is_barren_cold = yes
-		is_asteroid = yes
-	}
-}
-
-############################### Shadowgate ###############################
-shadowgate_is_fe = {
-	OR = {
-		is_country_type = fallen_empire
-		# History of the Lost Empire
-		is_country_type = LsE_fallen_empire
-		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_fallen_empire
-		# The Empty Vagrant
-		is_country_type = fallen_empire_ev
-		# ZOFE
-		is_country_type = lost_empire
-	}
-}
-shadowgate_is_ae = {
-	OR = {
-		is_country_type = awakened_fallen_empire
-		# A Deadly Tempest
-		is_country_type = awakened_gate_builders
-		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_awakened_fallen_empire
-		is_country_type = awakened_return_kuat_empire
-		# ZOFE
-		is_country_type = ascended_empire
-	}
-}
-shadowgate_aggressor_is_valid_cb_target = {
-	NOR = {
-		is_in_federation_with = root.from
-		is_hostile = root.from
-		has_casus_belli = { type = cb_shadowrift_attacked target = root.from }
-	}
-	root.from = {
-		OR = {
-			merg_is_default_empire = yes
-			shadowgate_is_fe = yes
-			shadowgate_is_ae = yes
-		}
-	}
-	OR = {
-		is_subject = no
-		overlord = { NOT = { is_same_value = root.from } }
-	}
-	root.fromfrom.solar_system = { has_access_fleet = event_target:shadowgate_assaulted_owner }
-	has_communications = root.from
 }
 
 ############################### Unique Ascension Perks ###############################

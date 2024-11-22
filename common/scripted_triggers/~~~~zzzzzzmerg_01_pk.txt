@@ -3993,7 +3993,6 @@ merg_is_untargetable = {
 		# Voyage to Eternity
 		KZ_VOY_can_not_destroy_by_planet_killer = yes
 		# ACOT/Gigas
-		has_planet_flag = cant_target_this_planet
 		has_planet_flag = cant_build_here
 		giga_is_pc_ehof_cplanet = yes
 		giga_is_birch_world = yes

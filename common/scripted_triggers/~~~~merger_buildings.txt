@@ -140,8 +140,6 @@ merg_has_food_building = {
 		has_building = building_avb_hydroponics_farm_2
 		# EUTAB
 		eutab_has_farming_building = yes
-		# Production Revolution
-		has_building = PR_BLDN_Res_food_farm_T4
 		# Plentiful Traditions
 		has_building = building_plentiful_traditions_pillar_of_affliction
 		has_building = building_plentiful_traditions_advanced_pillar_of_affliction

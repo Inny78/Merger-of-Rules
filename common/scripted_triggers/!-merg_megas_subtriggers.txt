@@ -117,13 +117,6 @@ merg_is_gate_mega = {
 		is_megastructure_type = AAR_MEGA_webway_CLOSE
 		# Scripted Triggers Undercoat
 		has_megastructure_flag = stu_is_gate
-		# Shadowgate
-		is_megastructure_type = shadowrift_a
-		is_megastructure_type = shadowrift_b
-		is_megastructure_type = shadowrift_c
-		is_megastructure_type = shadowrift_d
-		is_megastructure_type = shadowrift_e
-		is_megastructure_type = shadowrift_db
 		# Some Events of Outside Cluster
 		is_megastructure_type = nep_sealgate_ruined
 		is_megastructure_type = nep_sealgate_restored
@@ -324,13 +317,6 @@ merg_has_gate_mega = {
 		has_megastructure = AAR_MEGA_webway_NODE
 		has_megastructure = AAR_MEGA_webway_NEXUS
 		has_megastructure = AAR_MEGA_webway_CLOSE
-		# Shadowgate
-		has_megastructure = shadowrift_a
-		has_megastructure = shadowrift_b
-		has_megastructure = shadowrift_c
-		has_megastructure = shadowrift_d
-		has_megastructure = shadowrift_e
-		has_megastructure = shadowrift_db
 		# Some Events of Outside Cluster
 		has_megastructure = nep_sealgate_ruined
 		has_megastructure = nep_sealgate_restored

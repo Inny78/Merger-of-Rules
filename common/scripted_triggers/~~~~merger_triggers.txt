@@ -254,8 +254,6 @@ merg_is_dense_star = {
 		is_planet_class_pc_collapsar = yes
 		is_planet_class_pc_magnetar = yes
 		is_rs_compat_microquasar = yes
-		# Solar Storm
-		is_abyssal_black_hole = yes
 		# TimeMod
 		is_time_black_hole_planet_class = yes
 		# Voyage to Eternity
@@ -282,8 +280,6 @@ merg_is_black_or_white_hole = {
 		is_pc_mem_micro_black_hole = yes
 		# Real Space
 		is_rs_compat_microquasar = yes
-		# Solar Storm
-		is_abyssal_black_hole = yes
 		# TimeMod
 		is_time_black_hole_planet_class = yes
 		# Voyage to Eternity
@@ -354,8 +350,6 @@ merg_is_hole_star_class = {
 		# Real Space
 		is_star_class = sc_microquasar_1
 		is_star_class = sc_microquasar_2
-		# Shadowgate
-		is_star_class = shadowgate
 		# Some Events of Outside Cluster
 		is_star_class = sc_Aemethms
 		is_star_class = sc_grand_seal

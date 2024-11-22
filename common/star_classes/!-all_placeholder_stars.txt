@@ -61,7 +61,6 @@ sc_w_azure = { class = g_star spawn_odds = 0 }
 sc_w_green = { class = g_star spawn_odds = 0 }
 sc_w_purple = { class = g_star spawn_odds = 0 }
 sc_whitte_hole = { class = g_star spawn_odds = 0 }
-shadowgate = { class = g_star spawn_odds = 0 }
 sofe_outer_class = { class = g_star spawn_odds = 0 }
 sofe_inner_class = { class = g_star spawn_odds = 0 }
 sc_void_birch_built = { class = g_star spawn_odds = 0 }

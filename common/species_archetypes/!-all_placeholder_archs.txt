@@ -40,14 +40,10 @@ half_species_special = { uses_modifiers = no }
 half_aberration = { uses_modifiers = no }
 half_perfect = { uses_modifiers = no }
 half_amalgamated = { uses_modifiers = no }
-# Kancolle
-KANMUSU = { uses_modifiers = no }
 # Merger of Rules
 PLACEHOLDER = { uses_modifiers = no }
 # Nyto Species Events Pack
 NYTO = { uses_modifiers = no }
-# Silfae's Portrait Revisited
-HOLOARCH = { uses_modifiers = no }
 # SW:UnknownWorld Shipgirls Story
 STARSHIPGIRLS = { uses_modifiers = no }
 # ThaumStellaris

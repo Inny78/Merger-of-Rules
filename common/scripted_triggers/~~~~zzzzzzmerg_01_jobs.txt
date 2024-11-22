@@ -1,25 +1,4 @@
 # Vanilla scripted triggers from 01_scripted_triggers_jobs.txt
-complex_specialist_job_check_trigger = {
-	hidden_trigger = {
-		# Holofrixit Revisited / Silfae's Portraits: Revisited
-		has_species_trait_holowarrior = no
-		has_species_trait_holodrone = no
-		# Vanilla
-		exists = owner
-		OR = {
-			NOT = { has_trait = trait_mechanical }
-			AND = {
-				owner = { has_technology = tech_droid_workers }
-				owner = { NOT = { has_policy_flag = ai_outlawed } }
-			}
-			# Holofrixit Revisited / Silfae's Portraits: Revisited
-			AND = {
-				has_species_trait_holofrixit = yes
-				owner = { has_auth_holofrixit = yes }
-			}
-		}
-	}
-}
 
 entertainer_job_check_trigger = {
 	custom_tooltip = SPECIALIST_JOB_TRIGGER
@@ -210,11 +189,6 @@ is_organic_species = {
 				is_archetype = POKEMON
 				# Voyage to Eternity
 				is_KZ_VOY_organic_species = yes
-				# Silfae's Portrait Revisited
-				AND = {
-					is_archetype = HOLOARCH
-					has_species_trait_holofrixigram = no
-				}
 				# SW:UnknownWorld Shipgirls Story
 				is_archetype = STARSHIPGIRLS
 				# Wandering Witch: Voyagers

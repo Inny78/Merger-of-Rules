@@ -50,9 +50,6 @@ merg_has_bluearchive = { has_global_flag = Kivotos_detected }
 # Buildings and Districts Overhaul and Expansion
 merg_has_bdoe = { has_global_flag = bdoe_active }
 
-# Casako's Framework & Modmenu
-merg_has_cas_framework = { has_global_flag = FW_installed }
-
 # Coop: Start in Teams
 merg_has_coop_teams = { has_global_flag = coop_base_mod }
 
@@ -107,9 +104,6 @@ merg_has_expanded_megas = { has_global_flag = expanded_megastructures_installed 
 # Expanded Stellaris Ascension Perks
 merg_has_expanded_stel_perks = { has_global_flag = esap_mod_in_use }
 
-# Expanded Stellaris Traditions
-merg_has_expanded_stel_trad = { has_global_flag = expanded_stellaris_traditions_mod_in_use }
-
 # Expanded Traits, Civics, Pops, and More
 merg_has_expanded_pops = { has_global_flag = expanded_pops_active }
 
@@ -136,20 +130,6 @@ merg_has_gpm = { gpm_mod_active = yes }
 
 # Human Fallen Empire
 merg_has_human_fallen = { has_global_flag = hfe_installed }
-
-# Kancolle
-merg_has_kancolle = {
-	OR = {
-		has_global_flag = kancolle_crisis_jia
-		has_global_flag = kancolle_crisis_yi
-		has_global_flag = kancolle_crisis_bing
-		has_global_flag = kancolle_crisis_ding
-		has_global_flag = kancolle_crisis_disabled
-		has_global_flag = created_kc_fallen_empire
-		has_global_flag = kancolle_yukikaze_kaini
-		has_global_flag = Strike_Witches_precursors
-	}
-}
 
 # Lithoid Supremacy
 merg_has_lithoid_sup = { has_global_flag = lithoidsupremacy }
@@ -219,14 +199,8 @@ merg_has_safety_off = { has_global_flag = has_pk_safety_off }
 # Sensor Expansion
 merg_has_sensor_expansion = { has_global_flag = ariphaos_sensors_installed }
 
-# Shadowgate
-merg_has_shadowgate = { has_global_flag = shadowgate_mod_active }
-
 # Shroud Rising
 merg_has_shroud_rising = { has_global_flag = shroud_rising_active }
-
-# Silfae's Portraits: Revisited - Holofrixit Revisited
-merg_has_holofrixit = { has_holosphere_portraits_revisited_active = yes }
 
 # Some Events of Outside Cluster
 merg_has_seooc = { has_global_flag = nep_SEoOC_active }

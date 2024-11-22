@@ -42,12 +42,6 @@ pass_black_hole = { name = GATEWAY_GALACTIC }
 playable_kaiser_wormhole = { name = GATEWAY_GALACTIC }
 Rgate = { name = GATEWAY_GALACTIC }
 roz_gateway = { name = GATEWAY_GALACTIC }
-shadowgate_a = { name = GATEWAY_GALACTIC }
-shadowgate_b = { name = GATEWAY_GALACTIC }
-shadowgate_c = { name = GATEWAY_GALACTIC }
-shadowgate_d = { name = GATEWAY_GALACTIC }
-shadowgate_db = { name = GATEWAY_GALACTIC }
-shadowgate_e = { name = GATEWAY_GALACTIC }
 slipspace = { name = GATEWAY_GALACTIC }
 spacerift = { name = GATEWAY_GALACTIC }
 stellar_engine = { name = GATEWAY_GALACTIC }

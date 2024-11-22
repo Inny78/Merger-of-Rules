@@ -136,9 +136,6 @@ has_encountered_other_species = {
 		has_origin = origin_necrophage
 		has_origin = origin_payback
 		has_valid_civic = civic_machine_servitor
-		# Decision Origins
-		has_country_flag = decision_necrophage
-		has_country_flag = decision_payback
 		# Ethics and Civics Classic and all its variants
 		has_valid_civic = civic_symbiotic_race
 		has_valid_civic = civic_slave_race
@@ -184,11 +181,6 @@ can_be_leader = {
 				has_trait = trait_necrophage
 			}
 		}
-		# Silfae's Portraits: Revisited
-		species = {
-			has_species_flag = allow_leaders_organic_advisors@prev.owner
-			has_citizenship_type = { type = citizenship_organic_trophy country = prev.owner }
-		}
 		# Wandering Witch: Voyagers
 		root = { has_technology = tech_dummy_leaders }
 		# Girls Frontline
@@ -198,18 +190,6 @@ can_be_leader = {
 				OR = {
 					has_policy_flag = GF_doll_right_full
 					has_policy_flag = GF_doll_right_limited
-				}
-			}
-		}
-		# Holofrixit Revisited / Silfae's Portraits: Revisited
-		owner = {
-			has_origin = origin_holofrixit
-			prev.species = {
-				OR = {
-					has_species_trait_holofrixit = no
-					has_species_trait_holooverseer = yes
-					has_species_trait_hologanglion = yes
-					has_species_trait_holowarrior = yes
 				}
 			}
 		}
@@ -310,10 +290,6 @@ is_crisis_faction = {
 		is_country_type = shroud_cult
 		is_country_type = shroud_entities
 		is_country_type = shroud_horrors
-		# Solar Storm
-		is_country_type = abyssal_host_invaders_type
-		is_country_type = SSAB_ab_country_v2
-		is_country_type = SSAB_ab_remnant
 		# The Sleeper
 		is_country_type = berserker_awoken_hive
 	}
@@ -963,23 +939,6 @@ has_any_industry_district = {
 		has_district = district_archive_industrial
 		has_district = district_crucible_industrial
 		has_district = district_techno_industrial
-		# Production Revolution
-		has_district = PR_DSTR_city_forge
-		has_district = PR_DSTR_city_catalytic
-		has_district = PR_DSTR_arcology_arms_industry
-		has_district = PR_DSTR_arcology_catalytic
-		has_district = PR_DSTR_rw_forge
-		has_district = PR_DSTR_rw_catalytic
-		has_district = PR_DSTR_city_industrial
-		has_district = PR_DSTR_city_crafter
-		has_district = PR_DSTR_arcology_civilian_industry
-		has_district = PR_DSTR_arcology_crafter
-		has_district = PR_DSTR_rw_industrial
-		has_district = PR_DSTR_rw_crafter
-		has_district = PR_DSTR_hab_industrial
-		has_district = PR_DSTR_hab_crafter
-		has_district = PR_DSTR_hab_forge
-		has_district = PR_DSTR_hab_catalytic
 		# Real Space - Planetary Stations
 		has_district = district_foundry_plant
 		# Warship Girls R and MIST Species
@@ -1010,10 +969,6 @@ has_any_farming_district_or_buildings = {
 		# Planetary Diversity
 		has_district = district_pdhab_food_unlimited
 		has_district = district_pdhab_food
-		# Production Revolution
-		has_district = PR_DSTR_farming
-		has_district = PR_DSTR_farming_uncapped
-		has_district = PR_DSTR_rw_farming
 	}
 }
 
@@ -1039,11 +994,6 @@ has_any_mining_district = {
 		has_district = district_pdhab_mining
 		has_district = district_pdhab_mining_unlimited
 		has_district = district_scrapyard_mining
-		# Production Revolution
-		has_district = PR_DSTR_mining
-		has_district = PR_DSTR_mining_uncapped
-		has_district = PR_DSTR_rw_mining
-		has_district = PR_DSTR_hab_mining
 		# Real Space - Planetary Stations
 		has_district = district_mining_complex
 		has_district = district_ore_processing_complex
@@ -1083,11 +1033,6 @@ has_any_generator_district_or_building = {
 		has_district = district_pdhab_energy
 		has_district = district_archive_energy
 		has_district = district_scrapyard_energy
-		# Production Revolution
-		has_district = PR_DSTR_generator
-		has_district = PR_DSTR_generator_uncapped
-		has_district = PR_DSTR_rw_generator
-		has_district = PR_DSTR_hab_energy
 		# Real Space - Planetary Stations
 		has_district = district_geothermal_power_plant
 		has_district = district_hydrocarbon_power_plant

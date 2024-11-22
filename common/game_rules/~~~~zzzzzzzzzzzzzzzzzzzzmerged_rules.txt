@@ -464,11 +464,7 @@ species_can_live_on_planet = {
 					exists = root.owner
 					root.owner = {
 						is_hive_empire = yes
-						OR = {
-							has_origin = origin_necrophage
-							# Decision Origins
-							has_country_flag = decision_necrophage
-						}
+						has_origin = origin_necrophage
 						prev = { species_can_be_necrophaged = yes }
 					}
 				}
@@ -1686,8 +1682,6 @@ can_species_procreate = {
 
 		# Girls Frontline
 		gf_comp_trait_doll = yes
-		# Holofrixit Revisited / Silfae's Portraits: Revisited
-		has_species_trait_hologanglion = yes
 		# Lithoid Supremacy
 		is_pearl_born_drone = yes
 		# Madoka Magica NEW
@@ -2363,8 +2357,6 @@ can_orbital_bombard = {
 				is_country_type = mem_ancestor_guardian
 				# Scripted Triggers Undercoat
 				has_country_flag = stu_bombardable_by_everyone
-				# Solar Storm
-				is_country_type = abyssal_host_invaders_type
 				# Shroud Rising
 				is_country_type = shroud_horrors
 				is_country_type = shroud_cult
@@ -3183,17 +3175,6 @@ can_enter_system_by_jump = {
 			root = { has_country_flag = AAR_flg_cntr_JUMP_webway_TGT }
 		}
 	}
-	# The Storm Cluster
-	custom_tooltip = {
-		fail_text = cannot_jump_to_scluster_system_during_storm
-		NAND = {
-			has_global_flag = ongoing_space_storm
-			OR = {
-				has_star_flag = scluster
-				has_star_flag = scluster_entrance
-			}
-		}
-	}
 }
 
 # This = pop
@@ -3504,8 +3485,6 @@ should_force_decline_species = {
 							OR = {
 								NOR = {	# Can't have Vats.
 									has_origin = origin_clone_army
-									# Decision Origins
-									has_country_flag = decision_clone_army
 									# Galactic Imperium Origins
 									has_origin = origin_clone_guard
 								}
@@ -4943,11 +4922,7 @@ can_fill_ruler_job = {
 		limit = {
 			exists = owner
 			owner = {
-				OR = {
-					has_origin = origin_necrophage
-					# Decision Origins
-					has_country_flag = decision_necrophage
-				}
+				has_origin = origin_necrophage
 				has_trait = trait_necrophage
 			}
 		}

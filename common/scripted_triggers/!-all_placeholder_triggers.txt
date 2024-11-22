@@ -156,7 +156,6 @@ has_ariphaos_assorted_precursors = { always = no }
 has_artificial_aristocracy_emex = { always = no }
 has_artificial_wombs = { always = no }
 has_aso_space_exploration = { always = no }
-has_auth_holofrixit = { always = no }
 has_avb_generator_building = { always = no }
 has_avb_research_building = { always = no }
 has_azur_comp_patch = { always = no }
@@ -210,12 +209,6 @@ has_roguem_comp = { always = no }
 has_rs_comp_patch = { always = no }
 has_sbtg_upgraded_capital = { always = no }
 has_specialist_subject_leader_trait_maid = { always = no }
-has_species_trait_holodrone = { always = no }
-has_species_trait_holofrixigram = { always = no }
-has_species_trait_holofrixit = { always = no }
-has_species_trait_hologanglion = { always = no }
-has_species_trait_holooverseer = { always = no }
-has_species_trait_holowarrior = { always = no }
 has_str_genemodding_tech = { always = no }
 has_strict_democratic_auth = { always = no }
 has_swuss_compatch = { always = no }
@@ -255,7 +248,6 @@ hfe_trigger_system_in_someones_space = { always = no }
 hfe_trigger_unemployed_auto_migrate = { always = no }
 ideological_discomfort = { always = no }
 is_AAA_apocalyptic_city = { always = no }
-is_abyssal_black_hole = { always = no }
 is_acot_advanced_starbase = { always = no }
 is_acot_awesome_planet_class = { always = no }
 is_acot_fractured_planet_class = { always = no }
@@ -482,7 +474,6 @@ is_rs_compat_fortoria = { always = no }
 is_sbtg_origin_starbase = { always = no }
 is_sbtg_playable_country = { always = no }
 is_servitor_empire = { always = no }
-is_shadowgate_world = { always = no }
 is_shroud_entrepot = { always = no }
 is_sigma_solaripp = { always = no }
 is_SIREN_species = { always = no }
@@ -492,7 +483,6 @@ is_sofe_megastructure_shipyard = { always = no }
 is_sots_soulsphere = { always = no }
 is_sparta_citizenship_full = { always = no }
 is_special_affection_leader = { always = no }
-is_special_kancolle_leader = { always = no }
 is_spy_empire = { always = no }
 is_ssh_exodus_portal = { always = no }
 is_ssh_fusion_candle = { always = no }
