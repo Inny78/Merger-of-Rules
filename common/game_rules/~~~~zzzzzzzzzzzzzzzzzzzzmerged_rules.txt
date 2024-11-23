@@ -1894,8 +1894,6 @@ can_species_be_assembled = {
 		root = { owner = { has_valid_civic = civic_machine_replicators } }
 		is_fq_trait_machine_central = yes
 	}
-	# Holofrixit Revisited / Silfae's Portraits: Revisited
-	has_species_trait_holodrone = no
 	# Vanilla
 	OR = {
 		# Arknights Near Future
@@ -2426,8 +2424,6 @@ can_orbital_bombard = {
 				has_country_flag = mem_severance_harvesting_country
 				# Scripted Triggers Undercoat
 				has_country_flag = stu_can_bombard_everyone
-				# Solar Storm
-				is_country_type = abyssal_host_invaders_type
 				# Shroud Rising
 				is_country_type = shroud_horrors
 				is_country_type = shroud_cult
