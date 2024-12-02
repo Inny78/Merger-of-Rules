@@ -707,6 +707,15 @@ ds_hyperlane_create = {
 	}
 }
 
+# Destiny: Hive Portraits
+is_valid_pop_for_TAKING = {
+	NOR = {
+		merg_has_hive_trait = yes
+		has_trait = trait_mechanical
+		has_trait = trait_machine_unit
+	}
+}
+
 ############################### District Overhaul - FunEFork ###############################
 do3f_is_hive_planet = {
 	optimize_memory

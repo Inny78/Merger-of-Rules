@@ -225,12 +225,6 @@ can_be_military_leader = {
 				}
 			}
 		}
-		owner = {
-			AND = {
-				has_origin = origin_holofrixit
-				PREV.species = { has_species_trait_holowarrior = yes }
-			}
-		}
 	}
 }
 

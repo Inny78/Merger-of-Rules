@@ -4942,19 +4942,6 @@ can_fill_ruler_job = {
 			}
 		}
 	}
-	# Silfae's Portraits: Revisited - Holofrixit Revisited
-	if = {
-		limit = {
-			merg_has_holofrixit = yes
-			exists = owner
-			owner = {
-				is_gestalt = no
-				has_origin = origin_holofrixit
-				has_species_trait_holooverseer = yes
-			}
-		}
-		can_fill_holosphere_ruler_job = yes
-	}
 	# Ethics & Civcs Infinity
     else_if = {
         limit = {
@@ -5450,3 +5437,62 @@ can_trade_fleet = {
 # can_trade_specimens
 # force_create_default_ship_design
 # is_seeded
+
+# this = destroyed ship
+# from = attacker (ship)
+can_capture_ship = {
+	exists = this
+	exists = from
+	exists = controller
+	controller = {
+		merg_is_default_empire = yes
+	}
+	OR = {
+		# Civilian Ships
+		is_ship_size = constructor
+		is_ship_size = science
+		# Regular Ships
+		is_ship_size = corvette
+		is_ship_size = frigate
+		is_ship_size = destroyer
+		is_ship_size = cruiser
+		is_ship_size = battleship
+		# Galactic Nemesis Ships
+		is_ship_size = crisis_corvette
+		is_ship_size = crisis_destroyer
+		is_ship_size = crisis_cruiser
+		# Offspring Ships
+		AND = {
+			controller = {
+				has_origin = origin_progenitor_hive
+			}
+			OR = {
+				is_ship_size = offspring_corvette
+				is_ship_size = offspring_destroyer
+				is_ship_size = offspring_cruiser
+				is_ship_size = offspring_battleship
+			}
+		}
+		# Cosmogenesis Ships
+		is_ship_size = cosmo_crisis_destroyer
+		is_ship_size = cosmo_crisis_battlecruiser
+		# Nanotech Ships
+		AND = {
+			controller = {
+				has_tradition = tr_nanotech_finish
+			}
+			OR = {
+				is_ship_size = nanite_swarmer
+				is_ship_size = nanite_interdictor
+			}
+		}
+		# Fallen Empire Ships
+		is_ship_size = large_ship_fallen_empire
+		is_ship_size = small_ship_fallen_empire
+		# Marauder Ships
+		is_ship_size = marauder_corvette
+		is_ship_size = marauder_destroyer
+		is_ship_size = marauder_cruiser
+		is_ship_size = marauder_galleon
+	}
+}

@@ -329,3 +329,6 @@ l_english:
  PREFTL_IS_XENOPHILE: "Curious about alien culture"
  PREFTL_IS_MATERIALIST: "Curious about alien technology"
  PREFTL_IS_COMPETETIVE: "Capitalist Values"
+ is_not_vex_machine_world: "§R$TRIGGER_FAIL$Target is not a §HVex Machine World§!§!"
+ trait_robot_vex: "Vex"
+ will_convert_non_vex_pops: "§RPops lacking the §Y$trait_robot_vex$§! traits will be converted into §YVex§!§!"

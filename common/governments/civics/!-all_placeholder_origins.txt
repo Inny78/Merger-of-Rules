@@ -12,7 +12,6 @@ origin_gpm_precursor_world = { is_origin = yes potential = { always = no } }
 origin_hive_cx_hive_world = { is_origin = yes potential = { always = no } }
 origin_hive_overmind = { is_origin = yes potential = { always = no } }
 origin_hive_queen = { is_origin = yes potential = { always = no } }
-origin_holofrixit = { is_origin = yes potential = { always = no } }
 origin_incohesive = { is_origin = yes potential = { always = no } }
 origin_libra_ghost_mechanist = { is_origin = yes potential = { always = no } }
 origin_master_computer = { is_origin = yes potential = { always = no } }

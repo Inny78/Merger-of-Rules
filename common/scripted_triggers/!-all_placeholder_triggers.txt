@@ -518,6 +518,9 @@ is_valid_organic_zealots = { always = no }
 is_valid_pop_for_PLANET_KILLER_CM = { always = no }
 is_valid_pop_for_PLANET_KILLER_COMPOSER = { always = no }
 is_valid_pop_for_PLANET_KILLER_SLUMBER = { always = no }
+is_valid_pop_for_PLANET_KILLER_TAKEN_WEAPON = { always = no }
+is_valid_pop_for_PLANET_KILLER_VEX_MACHINOFORMING_BEAM = { always = no }
+is_vex_machine_world = { always = no }
 is_wg_event_leader = { always = no }
 is_wg_event_limit_ships = { always = no }
 is_wg_upgraded_ringworld = { always = no }
