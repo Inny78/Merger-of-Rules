@@ -26,6 +26,7 @@ planet_event = {
 			habitable_structure = yes
 			is_artificial = yes
 			is_giga_maginot_world = yes
+			pd_aw_is_wasteland_planet = yes
 		}
 		exists = owner
 		owner = { is_relentless_industrialist_empire = yes }

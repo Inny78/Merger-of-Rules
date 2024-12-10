@@ -569,6 +569,7 @@ oxr_mdlc_planet_decision_dismantle_habitat_active = { always = no }
 pd_aw_cant_terraform = { always = yes }
 pd_aw_is_necro_planet = { always = no }
 pd_aw_is_shroud_planet = { always = no }
+pd_aw_is_wasteland_planet = { always = no }
 pd_can_terraform_planet = { always = yes }
 pd_is_alpine = { always = no }
 pd_is_arctic = { always = no }
