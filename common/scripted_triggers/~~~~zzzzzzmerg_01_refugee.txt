@@ -17,7 +17,7 @@ is_valid_refugee_pop = {
 	owner = {
 		any_relation = {
 			merg_is_default_empire = yes
-			has_communications = prev			#relations include countries that have made first contact but not established comms
+			has_communications = prev #relations include countries that have made first contact but not established comms
 			NOT = { has_policy_flag = refugees_not_allowed }
 			prevprev = {
 				#this ensures Pop scope, as root will not always be pop scope
@@ -53,9 +53,11 @@ is_valid_refugee_pop = {
 has_any_habitability = {
 	merg_is_default_empire = yes
 	has_communications = prev
-	NOT = { has_policy_flag = refugees_not_allowed }
-	# Expanded Gestalts: Forgotten Queens
-	has_valid_civic = civic_mutualistic_behavior
+	OR = {
+		NOT = { has_policy_flag = refugees_not_allowed }
+		# Expanded Gestalts: Forgotten Queens
+		has_valid_civic = civic_mutualistic_behavior
+	}
 	# Vanilla
 	event_target:refugee_pop = {
 		OR = {
@@ -64,6 +66,18 @@ has_any_habitability = {
 			AND = {
 				has_citizenship_type = { type = citizenship_limited country = prev }
 				prev = { has_policy_flag = refugees_allowed }
+			}
+			# Rogue Maid
+			AND = {
+				merg_has_rogue_maid = yes
+				has_citizenship_type = { type = citizenship_assimilation country = prev }
+				OR = {
+					has_living_standard = { type = living_standard_tech_assimilation country = prev }
+					has_living_standard = { type = living_standard_cyborg_assimilation country = prev }
+					has_living_standard = { type = living_standard_cyborg_assimilation_psionic country = prev }
+					has_living_standard = { type = living_standard_psi_assimilation country = prev }
+					has_living_standard = { type = living_standard_psi_assimilation_cyborg country = prev }
+				}
 			}
 			# Expanded Gestalts: Forgotten Queens
 			prev = { has_valid_civic = civic_mutualistic_behavior }
