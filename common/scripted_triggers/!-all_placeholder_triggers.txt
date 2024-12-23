@@ -647,3 +647,4 @@ has_wwv_auth_grey_witch = { always = no }
 is_wwv_victorika = { always = no }
 vte_comp_mecha_preference = { always = no }
 check_ai_limits = { always = no }
+xhk_has_sentry_deposit = { always = no }

@@ -2487,6 +2487,8 @@ has_full_sensor_range = {
 		has_megastructure = sofe_omega_spy_orb_center
 		# BlueArchive
 		has_modifier = modifier_BA_Veritas_4
+		# Frameworld extra goodies
+		xhk_has_sentry_deposit = yes
 		# Galaxius
 		AND = {
 			merg_has_galaxius = yes
