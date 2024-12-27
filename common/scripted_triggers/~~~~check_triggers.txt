@@ -2,6 +2,9 @@
 # These triggers are also meant as a library for modders who want to reuse them in their own mods.
 # Modders, favor ID triggers over global flags as they can be detected before game start.
 
+# Additional Vanilla Buildings
+merg_has_avb = { has_avb_mod = yes }
+
 # Aggressive Crisis Engine
 merg_has_ace_mod = { has_global_flag = acemod_installed }
 

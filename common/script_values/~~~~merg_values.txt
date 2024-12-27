@@ -63,3 +63,36 @@ num_arc_furnace_planets = {
 		mode = add
 	}
 }
+virtuality_concentrated_production_mult = {
+	base = 1.75
+	# Additional Vanilla Buildings
+	modifier = {
+		add = 0.25
+		owner = {
+			has_technology = tech_avb_virtual_server
+		}
+	}
+	# AVB - Virtual Planetary Server
+	complex_trigger_modifier = {
+		trigger = count_owned_planet
+		trigger_scope = owner
+		parameters = {
+			limit = {
+				planet = {
+					has_building = building_avb_virtual_server
+				}
+			}
+		}
+		mult = 0.05
+		mode = add
+	}
+	# Vanilla
+	complex_trigger_modifier = {
+		trigger = count_owned_planet
+		trigger_scope = owner
+		mult = 0.25
+		mode = subtract
+	}
+	# Gigastructural Engineering & More
+	subtract = value:giga_virtuality_concentrated_production_mult
+}

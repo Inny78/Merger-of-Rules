@@ -2730,13 +2730,27 @@ Effect PdxMeshClouds
 	Defines = { "IS_PLANET" "IS_CLOUDS"  }
 }
 
-Effect PdxMeshCloudsSkinned
+Effect PdxMeshCloudsAnimateUV
 {
-	VertexShader = "VertexPdxMeshStandardSkinned"
-	PixelShader = "PixelPdxMeshStandard"
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshShip"
 	BlendState = "BlendStateAlphaBlend";
-	Defines = { "IS_PLANET" "IS_CLOUDS"  }
+	Defines = {
+		"IS_PLANET"
+		"IS_CLOUDS"
+		"ANIMATE_UV"
+		"NO_ALPHA_MULTIPLIED_EMISSIVE"
+	}
 }
+
+// Effect PdxMeshCloudsSkinned
+// {
+//	VertexShader = "VertexPdxMeshStandardSkinned"
+//	PixelShader = "PixelPdxMeshStandard"
+//	BlendState = "BlendStateAlphaBlend";
+//	Defines = { "IS_PLANET" "IS_CLOUDS"  }
+// }
+
 Effect PdxMeshCloudsConstruction
 {
 	VertexShader = "VertexPdxMeshStandard"
@@ -4189,6 +4203,27 @@ Effect AlphaBlendNoDepthSkinnedShadow
 	Defines = { "IS_SHADOW" }
 }
 
+# // #########################################################################################################################################
+
+# // Corsairmarks' Ringworld Enhancements
+
+# // #########################################################################################################################################
+
+Effect PdxMeshCloudsAnimateUVShadow
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshShip"
+	BlendState = "BlendStateAlphaBlend";
+	Defines = { "IS_PLANET" "IS_CLOUDS" "IS_SHADOW" "ANIMATE_UV" "NO_ALPHA_MULTIPLIED_EMISSIVE"	}
+}
+
+Effect PdxMeshCloudsSkinned
+{
+	VertexShader = "VertexPdxMeshStandardSkinned"
+	PixelShader = "PixelPdxMeshStandard"
+	BlendState = "BlendStateAlphaBlend";
+	Defines = { "IS_PLANET" "IS_CLOUDS"  }
+}
 
 # // #########################################################################################################################################
 

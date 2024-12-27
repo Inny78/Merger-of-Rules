@@ -19,3 +19,4 @@ tech_scourge_deployment = { cost = 0 area = physics category = { particles } tie
 tech_secondary_planets_adaption_0 = { cost = 0 area = physics category = { particles } tier = 4 potential = { merg_has_district_ovfun = yes } weight = 0 }
 tech_WS_sensors_nebula_1 = { cost = 0 area = physics category = { particles } tier = 4 potential = { merg_has_wild_space = yes } weight = 0 }
 tech_WS_sensors_wormhole = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_wild_space = yes } weight = 0 }
+tech_avb_virtual_server = { cost = 0 area = physics category = { particles } tier = 5 potential = { merg_has_avb = yes } weight = 0 }

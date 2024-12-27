@@ -315,3 +315,4 @@ building_cosmo_capital = { potential = { always = no } allow = { always = no } }
 building_fallen_palace = { potential = { always = no } allow = { always = no } }
 building_fallen_ancient_palace = { potential = { always = no } allow = { always = no } }
 building_resort_cosmo_capital = { potential = { always = no } allow = { always = no } }
+building_avb_virtual_server = { potential = { always = no } allow = { always = no } }

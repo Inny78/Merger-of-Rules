@@ -157,6 +157,7 @@ has_artificial_aristocracy_emex = { always = no }
 has_artificial_wombs = { always = no }
 has_aso_space_exploration = { always = no }
 has_avb_generator_building = { always = no }
+has_avb_mod = { always = no }
 has_avb_research_building = { always = no }
 has_azur_comp_patch = { always = no }
 has_battle_thrall_military_leaders_active = { always = no }
