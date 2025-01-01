@@ -1,0 +1,6 @@
+inline_script = {
+    script = merger_of_rules/toggled_code
+    code = "$code$"
+
+    toggle = @has_gigastructures
+}
