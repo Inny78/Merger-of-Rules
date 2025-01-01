@@ -1,0 +1,14 @@
+# Gives the IntelliJ pdx script plugin hints to tell it how to highlight the code parameter of the toggled code inline.
+# This lets it treat the content of that parameter as if it was in the context the inline was used in, so that it can check errors.
+# The second definition does the same for any script within the with_mod subfolder.
+parameters = {
+    ## context_key = inline_script@merger_of_rules/toggled_code
+    ## context_configs_type = multiple
+    ## inherit
+    code
+
+    ## context_key = ant:inline_script@merger_of_rules/with_mod/*
+    ## context_configs_type = multiple
+    ## inherit
+    code
+}
