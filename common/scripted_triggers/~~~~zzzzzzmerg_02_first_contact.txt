@@ -25,11 +25,29 @@ has_non_psionic_shields = {
 		has_component = MEDIUM_ARCHAEO_ARMOR
 		has_component = LARGE_ARCHAEO_ARMOR
 		# ACOT
-		acot_has_non_psionic_shields = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				acot_has_non_psionic_shields = yes
+			"
+			toggle = @has_ancient_caches
+		}
 		# ESC
-		esc_TRIGGER_is_non_psionic_shield = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				esc_TRIGGER_is_non_psionic_shield = yes
+			"
+			toggle = @has_esc_next
+		}
 		# Gigas
-		giga_has_non_psionic_shields = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_has_non_psionic_shields = yes
+			"
+			toggle = @has_gigastructures
+		}
 	}
 }
 
@@ -39,8 +57,20 @@ has_blocked_random_devastating_pre_ftl_events = {
 		has_country_flag = fotd_hunter
 		has_country_flag = solarpunk_country
 		# Ancient Empire
-		has_country_flag = ag_no_random_devastating_pre_ftl_events
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_country_flag = ag_no_random_devastating_pre_ftl_events
+			"
+			toggle = @ag_null_edict_length
+		}
 		# Gigastructural Engineering & More
-		giga_is_special_primitive = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_special_primitive = yes
+			"
+			toggle = @has_gigastructures
+		}
 	}
 }

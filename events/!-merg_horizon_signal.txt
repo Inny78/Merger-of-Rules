@@ -47,12 +47,30 @@ planet_event = {
 						merg_is_nuked = yes
 						merg_is_forbidden_target = yes
 						# Gigastructural Engineering & More
-						giga_habitable_structure = yes
-						# Madoka Magica
-						# uses_district_set = outpost
+						inline_script = {
+							script = merger_of_rules/toggled_code
+							code = "
+								giga_habitable_structure = yes
+							"
+							toggle = @has_gigastructures
+						}
+						# Madoka Magica NEW
+						inline_script = {
+							script = merger_of_rules/toggled_code
+							code = "
+								is_planet_class = pc_outpost
+							"
+							toggle = @madoka_compatch_var
+						}
 					    # Warship Girls R And MIST Species
-						has_planet_flag = port_home
- 						has_planet_flag = clovertheater_future_flag
+						inline_script = {
+							script = merger_of_rules/toggled_code
+							code = "
+								has_planet_flag = port_home
+								has_planet_flag = clovertheater_future_flag
+							"
+							toggle = @wsg_mod
+						}
  					}
 				}
 				every_owned_pop = {
@@ -101,19 +119,25 @@ planet_event = {
 							}
 						}
 						# Expanded Traits, Civics, Pops, and More
-						if = {
-							limit = { is_exp_pheremone = yes }
-							modify_species = {
-								species = this
-								remove_trait = trait_pheremones
-							}
-						}
-						if = {
-							limit = { is_exp_lithoid_shiny = yes }
-							modify_species = {
-								species = this
-								remove_trait = trait_lithoid_shiny
-							}
+						inline_script = {
+							script = merger_of_rules/toggled_code
+							code = "
+								if = {
+									limit = { is_exp_pheremone = yes }
+									modify_species = {
+										species = this
+										remove_trait = trait_pheremones
+									}
+								}
+								if = {
+									limit = { is_exp_lithoid_shiny = yes }
+									modify_species = {
+										species = this
+										remove_trait = trait_lithoid_shiny
+									}
+								}
+							"
+							toggle = @expops_compatch_var
 						}
 						# Vanilla
 						modify_species = {

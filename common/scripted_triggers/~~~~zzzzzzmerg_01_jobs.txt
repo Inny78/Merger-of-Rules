@@ -8,28 +8,34 @@ entertainer_job_check_trigger = {
 			is_enslaved = no
 			has_slavery_type = { type = slavery_domestic }
 			# Expanded Traits, Civics, Pops, and More
-			AND = {
-				merg_has_expanded_pops = yes
-				has_slavery_type = { type = slavery_indentured }
-				owner = { has_valid_civic = civic_indentured_assets }
-			}
-			AND = {
-				merg_has_expanded_pops = yes
-				NOT = { host_has_dlc = "Utopia" }
-				is_same_species = owner_main_species
-				owner = {
-					merg_is_slaver = yes
-				}
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					AND = {
+						has_slavery_type = { type = slavery_indentured }
+						owner = { has_valid_civic = civic_indentured_assets }
+					}
+					AND = {
+						has_utopia = no
+						is_same_species = owner_main_species
+						owner = { merg_is_slaver = yes }
+					}
+				"
+				toggle = @expops_compatch_var
 			}
 		}
 		is_being_purged = no
 		is_being_assimilated = no
 		NOR = {
 			has_trait = trait_presapient_docile_livestock
-			# Diagraphers Trait Mod
-			is_subsapient_form = yes
 			# Ethics and Civics Classic
-			has_ecc_slave_gene = yes
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_ecc_slave_gene = yes
+				"
+				toggle = @has_ecc_cog
+			}
 			# ECI
 			has_eci_flesh_components = yes
 			has_eci_slave_gene = yes
@@ -49,9 +55,15 @@ entertainer_job_check_trigger = {
 			divinity_right_to_work_job_check_trigger_specialist = yes
 		}
 		# Girls Frontline
-		NAND = {
-			gf_comp_trait_doll = yes
-			owner = { has_policy_flag = GF_doll_right_low }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				NAND = {
+					has_trait = GF_trait_doll
+					owner = { has_policy_flag = GF_doll_right_low }
+				}
+			"
+			toggle = @gf_compatch_var
 		}
 	}
 }
@@ -77,20 +89,19 @@ can_fill_specialist_job_trigger = {
 	hidden_trigger = {
 		exists = owner
 		OR = {
-			merg_has_ethical_gestalts = yes
-			AND = {
-				merg_has_ethical_gestalts = no
-				is_gestalt = no
-			}
-		}
-		OR = {
 			is_enslaved = no
 			has_slavery_type = { type = slavery_indentured }
 			# Expanded Traits, Civics, Pops, and More
-			AND = {
-				has_utopia = no
-				is_same_species = owner_main_species
-				owner = { merg_is_slaver = yes }
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					AND = {
+						has_utopia = no
+						is_same_species = owner_main_species
+						owner = { merg_is_slaver = yes }
+					}
+				"
+				toggle = @expops_compatch_var
 			}
 			# ECI
 			owner = { has_valid_civic = civic_du_contrat_social }
@@ -104,24 +115,36 @@ can_fill_specialist_job_trigger = {
 		}
 		NOR = {
 			# Ethics and Civics Bug Branch
-			is_bugged_slave_gene = yes
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					is_bugged_slave_gene = yes
+				"
+				toggle = @has_bug_branch
+			}
 			# Ethics and Civics Classic
-			has_ecc_slave_gene = yes
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_ecc_slave_gene = yes
+				"
+				toggle = @has_ecc_cog
+			}
 			# Expanded Traits, Civics, Pops, and More
-			is_exp_tree_caretaker = yes
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					is_exp_tree_caretaker = yes
+				"
+				toggle = @expops_compatch_var
+			}
 			has_trait = trait_presapient_docile_livestock
 			# ECI
 			has_eci_fallen_god = yes
 		}
 		OR = {
 			NOT = { has_trait = trait_mechanical }
-			owner = {
-				OR = {
-					has_technology = tech_droid_workers
-					# Wandering Witch: Voyagers
-					has_technology = tech_advanced_dummy_workers
-				} 
-			}
+			owner = { has_technology = tech_droid_workers }
 			# ECI
 			AND = {
 				has_eci_thl_doll = no
@@ -129,12 +152,6 @@ can_fill_specialist_job_trigger = {
 					has_technology = tech_droid_workers
 				}
 			}
-			#AND = {
-			#	has_eci_thl_doll = yes
-			#	owner = {
-			#		has_technology = tech_automatic_dolls
-			#	}
-			#}
 		}
 		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
 		if = {
@@ -143,16 +160,6 @@ can_fill_specialist_job_trigger = {
 		}
 		# ECI
 		ethic_sparta_job_check_trigger = no
-		# Wandering Witch: Voyagers
-		OR = {
-			has_ww_dummy = no
-			owner = {
-				OR = {
-					has_technology = tech_droid_workers 
-					has_technology = tech_advanced_dummy_workers
-				} 
-			}
-		}
 	}
 }
 
@@ -176,28 +183,58 @@ is_organic_species = {
 				is_archetype = JAYPEES_SQUID
 				is_archetype = JAYPEES_TURTLEHORSE
 				# AshArms Aquarius history
-				is_archetype = Dolls
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_archetype = Dolls
+					"
+					toggle = @asharm_mod
+				}
 				# Assault Lily
 				is_archetype = LILY
 				# Azur Lane Stellaris DLC
-				is_KANSEN_species = yes
-				# # BlueArchive species pack
-				is_archetype = Schale
-				# Cryogenesis Unofficial Species Pack
-				is_archetype = sm_ELEMENTAL
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_KANSEN_species = yes
+					"
+					toggle = @azl_mod
+				}
 				# Empire of Eeveelution
-				is_archetype = POKEMON
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_archetype = POKEMON
+					"
+					toggle = @s7_EOE_cost
+				}
 				# Voyage to Eternity
-				is_KZ_VOY_organic_species = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_KZ_VOY_organic_species = yes
+					"
+					toggle = @vte_mod
+				}
 				# SW:UnknownWorld Shipgirls Story
-				is_archetype = STARSHIPGIRLS
-				# Wandering Witch: Voyagers
-				is_archetype = WV_OBJECT
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_archetype = STARSHIPGIRLS
+					"
+					toggle = @swuss_mod
+				}
 				# Warship Girls R And MIST Species
-				is_archetype = WARSHIPGIRL
-				is_archetype = SHENHAI
-				# Others
-				is_archetype = UNITED_FLEET
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_archetype = WARSHIPGIRL
+						is_archetype = SHENHAI
+						is_archetype = UNITED_FLEET
+					"
+					toggle = @wsg_mod
+				}
+				# KDC Story Pack
 				is_archetype = NANITES_CROP
 			}
 		}
@@ -219,14 +256,34 @@ has_sr_producing_job = {
 		has_job = translucer
 		has_job = translucer_drone
 		# ACOT
-		has_job = acot_transmute_drone
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_job = acot_transmute_drone
+			"
+			toggle = @has_ancient_caches
+		}
 		# District Overhaul - FunEFork
-		has_job = 02_exotic_resource_collector
-		has_job = 02_exotic_resource_collection_drone
-		has_job = 02_siphon_pilot
-		has_job = 02_siphon_pilot_drone
-		has_job = 02_crystal_grower
-		has_job = 02_crystal_growing_drone
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_job = 02_exotic_resource_collector
+				has_job = 02_exotic_resource_collection_drone
+				has_job = 02_siphon_pilot
+				has_job = 02_siphon_pilot_drone
+				has_job = 02_crystal_grower
+				has_job = 02_crystal_growing_drone
+			"
+			toggle = @has_do3f_mod
+		}
+		# Extra Districts
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_any_habitat_district_job = yes
+			"
+			toggle = @is_ED_enabled
+		}
 	}
 }
 
@@ -255,47 +312,79 @@ has_research_job = {
 		has_job = astrometeorologist_hive
 		has_job = astrometeorologist_machine
 		# ACOT
-		has_job = acot_researcher
-		has_job = acot_researcher_drone
-		has_job = acot_priest
-		has_job = acot_voidsphere_labman
-		has_job = acot_voidsphere_labdrone
-		has_job = acot_free_thinker
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_job = acot_researcher
+				has_job = acot_researcher_drone
+				has_job = acot_priest
+				has_job = acot_voidsphere_labman
+				has_job = acot_voidsphere_labdrone
+				has_job = acot_free_thinker
+			"
+			toggle = @has_ancient_caches
+		}
 		# AOT
-		has_job = ae_researcher
-		has_job = ae_researcher_drone
-		has_job = phanon_researcher
-		has_job = phanon_researcher_drone
-		has_job = phanon_priest
-		has_job = stellarite_researcher
-		has_job = stellarite_researcher_drone
-		has_job = stellarite_priest
-		has_job = stellarite_bureaucrat
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_job = ae_researcher
+				has_job = ae_researcher_drone
+				has_job = phanon_researcher
+				has_job = phanon_researcher_drone
+				has_job = phanon_priest
+				has_job = stellarite_researcher
+				has_job = stellarite_researcher_drone
+				has_job = stellarite_priest
+				has_job = stellarite_bureaucrat
+			"
+			toggle = @has_acquisition_of_tech
+		}
 		# District Overhaul - FunEFork
-		has_job = 02_teacher
-		has_job = 02_engineer
-		has_job = 02_park_ranger
-		has_job = 02_physicist
-		has_job = 02_ecosystem_researcher
-		has_job = 02_biolumen_researcher
-		has_job = 02_technoorganic_researcher
-		has_job = 02_engineering_drone
-		has_job = 02_nature_research_drone
-		has_job = 02_experimental_drone
-		has_job = 02_ecosystem_researcher_drone
-		has_job = 02_biolumen_researcher_drone
-		has_job = 02_technoorganic_researcher_drone
-		has_job = 02_dark_matter_researcher
-		has_job = 02_dark_matter_brain_drone
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_job = 02_teacher
+				has_job = 02_engineer
+				has_job = 02_park_ranger
+				has_job = 02_physicist
+				has_job = 02_ecosystem_researcher
+				has_job = 02_biolumen_researcher
+				has_job = 02_technoorganic_researcher
+				has_job = 02_engineering_drone
+				has_job = 02_nature_research_drone
+				has_job = 02_experimental_drone
+				has_job = 02_ecosystem_researcher_drone
+				has_job = 02_biolumen_researcher_drone
+				has_job = 02_technoorganic_researcher_drone
+				has_job = 02_dark_matter_researcher
+				has_job = 02_dark_matter_brain_drone
+			"
+			toggle = @has_do3f_mod
+		}
 		# ECI
 		has_job = magician
 		has_job = legendary_mage
+		# Extra Districts
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_ED_research_job = yes
+			"
+			toggle = @is_ED_enabled
+		}
 		# GPM
-		has_job = gpm_archaeologist
-		has_job = gpm_archaeologist_drone
-		has_job = gpm_precursor_archaeologist
-		has_job = gpm_precursor_archaeologist_drone
-		has_job = gpm_orbital_researcher
-		has_job = gpm_orbital_researcher_drone
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_job = gpm_archaeologist
+				has_job = gpm_archaeologist_drone
+				has_job = gpm_precursor_archaeologist
+				has_job = gpm_precursor_archaeologist_drone
+				has_job = gpm_orbital_researcher
+				has_job = gpm_orbital_researcher_drone
+			"
+			toggle = @has_guillis_planet_modifiers
+		}
 	}
 }

@@ -15,7 +15,13 @@ planet_event = {
 			# Ariphaos Patch
 			has_planet_flag = ariphaos_patch_flag_tomb_bombardment
 			# Expanded Traits, Civics, Pops, and More
-			has_orbital_bombardment_stance = death
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_orbital_bombardment_stance = death
+				"
+				toggle = @expops_compatch_var
+			}
 		}
 		from = {
 			OR = {
@@ -47,14 +53,20 @@ planet_event = {
 				country_event = { id = action.82 }
 			}
 			# Expanded Traits, Civics, Pops, and More
-			else_if = {
-				limit = {
-					NAND = {
-						has_origin = origin_master_computer
-						root = { is_capital = yes }
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					else_if = {
+						limit = {
+							NAND = {
+								has_origin = origin_master_computer
+								root = { is_capital = yes }
+							}
+						}
+						country_event = { id = civicsexpanded.105 }
 					}
-				}
-				country_event = { id = civicsexpanded.105 }
+				"
+				toggle = @expops_compatch_var
 			}
 			# Vanilla
 			else = {
@@ -63,31 +75,76 @@ planet_event = {
 		}
 		from = { country_event = { id = action.83 } }
 		# Planetary Diversity
-		if = {
-			limit = { pd_is_planet_class_cave = yes }
-			pd_change_to_nuked_cave = yes
-		} 
-		else_if = {
-			limit = { pd_is_planet_class_superhabitable = yes }
-			pd_change_to_nuked_superhab = yes
-		} 
-		else_if = {
-			limit = { pd_is_planet_class_tidally_locked = yes }
-			pd_change_to_nuked_tl = yes
-		} 
-		else_if = {
-			limit = {
-				has_planetary_diversity = yes
-				OR = {
-					is_planet_class = pc_city
-					is_planet_class = pc_relic
-					pd_is_pd_arcology = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				if = {
+					limit = {
+						pd_is_planet_class_cave = yes
+					}
+					change_pc = pc_pd_nuked_cave
 				}
-			}
-			pd_change_to_nuked_relic = yes
-		} 
-		else = {
-			change_pc = pc_nuked
+				if = {
+					limit = {
+						pd_is_planet_class_superhabitable = yes
+					}
+					change_pc = pc_pd_nuked_superhabitable
+				}
+				if = {
+					limit = {
+						pd_is_planet_class_tidally_locked = yes
+					}
+					change_pc = pc_pd_nuked_tidally_locked
+				}
+				if = {
+					limit = {
+						is_planet_class = pc_city
+					}
+					change_pc = pc_relic
+					add_modifier = {
+						modifier = pc_pd_nuked_arcology
+						days = -1
+					}
+					set_planet_entity = {
+						picture = pc_pd_nuked_relic
+						entity = nuked_relic_world_01_entity
+					}
+				}
+				if = {
+					limit = {
+						is_planet_class = pc_relic
+					}
+					add_modifier = {
+						modifier = pc_pd_nuked_arcology
+						days = -1
+					}
+					set_planet_entity = {
+						picture = pc_pd_nuked_relic
+						entity = nuked_relic_world_01_entity
+					}
+				}
+				if = {
+					limit = {
+						NOR = {
+							is_planet_class = pc_city
+							is_planet_class = pc_relic
+							pd_is_planet_class_cave = yes
+							pd_is_planet_class_superhabitable = yes
+							pd_is_planet_class_tidally_locked = yes
+						}
+					}
+					change_pc = pc_nuked
+				}
+			"
+			toggle = @has_planetary_diversity
+		}
+		# Vanilla
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				change_pc = pc_nuked
+			"
+			toggle = @[ 1 - has_planetary_diversity ]
 		}
 		# Vanilla
 		set_planet_flag = nuked_planet_anomalies_disabled
@@ -96,10 +153,16 @@ planet_event = {
 		reroll_deposits = yes
 		tomb_world_modifier_cleanup = yes
 		# GPM
-		gpm_purge_all_planetary_modifiers = yes
-		gpm_random_modifier_crisis_purge = yes
-		gpm_remove_planetary_features = yes
-		gpm_roll_planetary_features = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				gpm_purge_all_planetary_modifiers = yes
+				gpm_random_modifier_crisis_purge = yes
+				gpm_remove_planetary_features = yes
+				gpm_roll_planetary_features = yes
+			"
+			toggle = @has_guillis_planet_modifiers
+		}
 		# Vanilla
 		set_planet_flag = armageddon_nuked
 		# Expanded Traits, Civics, Pops, and More

@@ -1,39 +1,19 @@
 # Checking for mod presence
 # These triggers are also meant as a library for modders who want to reuse them in their own mods.
 # Modders, favor ID triggers over global flags as they can be detected before game start.
-
-# Additional Vanilla Buildings
-merg_has_avb = { has_avb_mod = yes }
-
-# Aggressive Crisis Engine
-merg_has_ace_mod = { has_global_flag = acemod_installed }
+# Also please add a scripted variable to identify your mod, like @mymod = 1
 
 # A Deadly Tempest 2028826064
 merg_has_deadly_tempest = { has_global_flag = a_deadly_tempest_mod_active }
 
-# Acquisition of Technologies 2178603631
-merg_has_aot = { has_global_flag = has_aot_mod }
-
-# Ancient Cache of Technologies 1419304439
-merg_has_acot = { has_acot = yes }
-
 # Ancient Cache of Technologies : Secrets Beyond The Gates 1481972266
 merg_has_sofe = { has_global_flag = sofe_activated }
-
-# Ancient Empire 2389589691
-merg_has_ancient_empire = { has_global_flag = has_ancient_empire_mod }
 
 # Animated Synthetics Portraits Expanded: Reborn 1492025820
 merg_has_animated_synth = { has_global_flag = extended_synths_on }
 
 # Any fork of Ethics mod
 merg_has_any_ethics_mod = { has_global_flag = cultural_overhaul_active }
-
-# ANZ Advanced Cloning 2602243400
-merg_has_anz_cloning = { has_global_flag = anz_clones_installed }
-
-# APSR: Anomalies, Planetary and Space Resources 1346877266
-merg_has_apsr = { has_global_flag = apsr_mod_on }
 
 # Ariphaos Unofficial Patch 1995601384
 merg_has_ariphaos_patch = { has_global_flag = ariphaos_unofficial_patch_installed }
@@ -44,62 +24,11 @@ merg_has_assault_lily = { has_global_flag = Assault_Lily_activated }
 # Ascension Enhancements
 merg_has_uac = { has_global_flag = has_uac_mod }
 
-# Azur Lane Stellaris DLC
-merg_has_azur_lane = { has_global_flag = azurlane_KuRUMiiii }
-
-# BlueArchive
-merg_has_bluearchive = { has_global_flag = Kivotos_detected }
-
-# Buildings and Districts Overhaul and Expansion
-merg_has_bdoe = { has_global_flag = bdoe_active }
-
-# Coop: Start in Teams
-merg_has_coop_teams = { has_global_flag = coop_base_mod }
-
-# Diagrapher's Factions and Ethics Mod
-merg_has_diag_fact = { has_global_flag = using_mod_dfactions }
-
-# Diagrapher's Trait Mod
-merg_has_diag_trait = { has_diagraphers_trait_mod = yes }
-
-# District Overhaul - FunEFork
-merg_has_district_ovfun = { is_do3_active = yes }
-
-# EDA
-merg_has_eda = { has_global_flag = eda_start }
-
-# Extra Ship Components NEXT
-merg_has_esc_next = { has_global_flag = Extra_Ship_Components_NEXT }
-
-# Empires Expanded
-merg_has_empires_exp = { has_global_flag = emex_active }
-
-# Espionage Extended 2465577434
-merg_has_espionage_extended = { has_global_flag = has_mod_espionage_extended }
-
-# Ethical Gestalts
-merg_has_ethical_gestalts = { has_global_flag = using_mod_ethical_gestalts }
-
-# Ethics and Civics Alternative - FunEFork
-merg_has_ecaf = { has_ecaf_triggers = yes }
-
-# Ethics and Civics Bug Branch 2517213262
-merg_has_ethics_bug = { has_bug_branch = yes }
-
-# Ethics and Civics Classic 1100284147
-merg_has_ethics_classic = { has_global_flag = ethic_civic_classic_active }
-
 # Ethics and Civics : Infinity
 merg_has_eci = { has_global_flag = ideological_revolution }
 
-# Ethics and Civics Redux 2387799348
-merg_has_ethics_redux = { has_global_flag = cultural_overhaul_redux_active }
-
 # Expanded Events
 merg_has_expanded_events = { has_global_flag = expanded_events_active }
-
-# Expanded Gestalts 
-merg_has_expanded_gestalts = { has_global_flag = complex_hive }
 
 # Expanded Megastructures and Technology
 merg_has_expanded_megas = { has_global_flag = expanded_megastructures_installed }
@@ -110,41 +39,14 @@ merg_has_expanded_stel_perks = { has_global_flag = esap_mod_in_use }
 # Expanded Traits, Civics, Pops, and More
 merg_has_expanded_pops = { has_global_flag = expanded_pops_active }
 
-# Exalted domination
-merg_has_exalted_domination = { has_global_flag = has_exalted_domination_mod }
-
-# FCSS
-merg_has_fcss = { has_global_flag = FCSS_has_host }
-
-# Galactic Imperium Origins
-merg_has_gal_imperium = { has_global_flag = imperium_origins_active }
-
-# Galaxius
-merg_has_galaxius = { has_global_flag = ie_flag }
-
-# Gigastructural Engineering and More 1121692237
-merg_has_gigastructures = { has_gigastructures = yes }
-
 # Girls Frontline
 merg_has_girls_frontline = { has_global_flag = has_NYTO_mod }
-
-# Guilli's Planet Modifiers and Features
-merg_has_gpm = { gpm_mod_active = yes }
-
-# Human Fallen Empire
-merg_has_human_fallen = { has_global_flag = hfe_installed }
 
 # Lithoid Supremacy
 merg_has_lithoid_sup = { has_global_flag = lithoidsupremacy }
 
 # Maiden Frontier Gunstar Story Collection (少女前线群星故事集【正史线：危机联合】)
 merg_has_gunstar = { has_global_flag = GF_Stellairs_Crisis_Coalition_Installed }
-
-# Omega's Stellaris Additions
-merg_has_omega_add = { has_global_flag = osa_active }
-
-# Origin Beings
-merg_has_origin_beings = { has_global_flag = darhmod_precursor_seres }
 
 # Madoka Magicka New
 merg_has_madoka = {
@@ -154,14 +56,8 @@ merg_has_madoka = {
 	}
 }
 
-# More Authorities
-merg_has_more_authorities = { has_more_authorities_triggers = yes }
-
 # More Corporate Authorities
-merg_has_mca = { has_global_flag = using_mod_more_corporate_authorities }
-
-# More Events Mod
-merg_has_mem = { has_global_flag = mem_more_events_mod }
+merg_has_mca = { check_variable = { which = has_more_corporate_authorities value = 1 } }
 
 # More Default Origins
 merg_has_more_default_origins = { has_global_flag = wizz_origin_game_started }
@@ -172,18 +68,6 @@ merg_has_distar_ov = { has_global_flag = distar_overhaul_mod_active }
 # Nirvana Empire Project
 merg_has_nirvana_project = { has_global_flag = nirvana_empire_start }
 
-# Organic Zealots
-merg_has_organic_zealots = { has_civic_organic_zealots_active = yes }
-
-# Origins of Civilization
-merg_has_origins_of_civ = { has_origins_of_civilization = yes }
-
-# Planetary Diversity
-merg_has_planetary_diversity = { has_planetary_diversity = yes }
-
-# Planetary Diversity - Planetary Habitats
-merg_has_pd_planetary_habitats = { has_planetary_diversity_planetaryhabitats = yes }
-
 # Powerful & Realistic Orbital Bombardments
 merg_has_power_bombard = { has_global_flag = prob_global_flag }
 
@@ -192,9 +76,6 @@ merg_has_real_space = { has_global_flag = has_real_space_mod }
 
 # Real Space New Frontiers
 merg_has_real_new_frontiers = { has_global_flag = has_new_frontiers_mod }
-
-# Rogue Maid
-merg_has_rogue_maid = { has_global_flag = flag_rogue_maid_mod_activated }
 
 # Safety Off
 merg_has_safety_off = { has_global_flag = has_pk_safety_off }
@@ -205,37 +86,8 @@ merg_has_sensor_expansion = { has_global_flag = ariphaos_sensors_installed }
 # Shroud Rising
 merg_has_shroud_rising = { has_global_flag = shroud_rising_active }
 
-# Some Events of Outside Cluster
-merg_has_seooc = { has_global_flag = nep_SEoOC_active }
-
 # Special Colonies Overhaul
 merg_has_special_colonies = { has_global_flag = SCO_enabled_flag }
-
-# Star Wars: Kuat Ancient Empire
-merg_has_sw_kuat = {
-	OR = {
-		has_global_flag = kuat_settings_first_fired
-		has_global_flag = install_kuat_mod
-	}
-}
-
-# Star Wars Unknownworlds
-merg_has_swuss = { has_global_flag = has_swgs_mod }
-
-# Stellaris Evolved
-merg_has_stellaris_evolved = { has_global_flag = stellarisevolved }
-
-# ThaumStellaris
-merg_has_thaumstellaris = { has_global_flag = thaumstellaris_initialize }
-
-# The Belt
-merg_has_the_belt = { is_the_belt_active = yes }
-
-# The Empty Vagrant
-merg_has_empty_vagrant = { has_global_flag = enable_empty_vagrant_mod }
-
-# The Zenith of Fallen Empires
-merg_has_zofe = { has_global_flag = zofe_activated }
 
 # UGRP check
 # If true, open the gates of Hell. All of them.
@@ -244,23 +96,8 @@ merg_has_ugrp = { UGRC_installed = yes }
 # Unique Ascension Perks
 merg_has_uap = { has_global_flag = has_uap_mod }
 
-# V_traits 2872760980
-merg_has_v_traits = { has_global_flag = v_traits_is_active }
-
-# Vassals Expanded and Reworked
-merg_has_vassals_expanded = { has_global_flag = gf_veru_activated }
-
-# Voyage to Eternity
-merg_has_voyage_eternity = { KZ_VOY_MOD = yes }
-
-# Wandering Witch: Voyagers
-merg_has_wandering_witch = { has_global_flag = has_mod_wwvoyagers }
-
-# Warship Girls R And MIST Species
-merg_has_warship_girls = { has_global_flag = has_wsg_mod }
-
 # Wild Space
-merg_has_wild_space = { has_global_flag = has_wild_space_mod }
+merg_has_wild_space = { check_variable = { which = has_wild_space_mod value = 1 } }
 
-# Wula Fallen Empires
+# Wula Fallen Empire
 merg_has_wula_fe = { wula_fallen_empire_mod_actived = yes }

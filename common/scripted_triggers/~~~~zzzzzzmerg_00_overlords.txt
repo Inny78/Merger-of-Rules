@@ -6,7 +6,13 @@ is_merc_enclave_founding_allowed = {
 				NOR = {
 					has_valid_civic = civic_machine_tactical_algorithms
 					# Libra: Gestalt Age
-					has_ascension_perk = ap_libra_gestalt_release_vassals
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							has_ascension_perk = ap_libra_gestalt_release_vassals
+						"
+						toggle = @libra_mod
+					}
 				}
 			}
 			has_civic = civic_fanatic_purifiers
@@ -96,22 +102,34 @@ is_merc_enclave_founding_allowed = {
 			}
 		}
 	}
-	# KDC Story Pack
-	custom_tooltip = {
-		fail_text = "cannot_sold_wg_fleet"
-		NOT = {
-			any_controlled_ship = {
-				is_wg_event_limit_ships = yes
-			}
-		}
-	}
 	# Warship Girls R And MIST Species
-	custom_tooltip = {
-		fail_text = "cannot_sold_kuat_fleet"
-		NOT = {
-			any_owned_ship = {
-				kuat_is_flagship_system_protection = yes
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			custom_tooltip = {
+				fail_text = cannot_sold_wg_fleet
+				NOT = {
+					any_controlled_ship = {
+						is_wg_event_limit_ships = yes
+					}
+				}
 			}
-		}
+		"
+		toggle = @wsg_mod
+	}
+	# Star Wars: Kuat Ancient Empire
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			custom_tooltip = {
+				fail_text = cannot_sold_kuat_fleet
+				NOT = {
+					any_owned_ship = {
+						kuat_is_flagship_system_protection = yes
+					}
+				}
+			}
+		"
+		toggle = @sw_kuat_mod
 	}
 }

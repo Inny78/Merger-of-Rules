@@ -78,6 +78,7 @@ merg_is_standard_cold = {
 	}
 }
 merg_is_basic_vanilla_habitable = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_alpine
 		is_planet_class = pc_arctic
@@ -96,9 +97,21 @@ merg_is_alpine = {
 	OR = {
 		is_planet_class = pc_alpine
 		# All These Worlds
-		atw_is_alpine = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_alpine = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Planetary Diversity
-		pd_is_alpine = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_alpine = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 }
 merg_is_arcology = {
@@ -107,60 +120,157 @@ merg_is_arcology = {
 	OR = {
 		is_planet_class = pc_city
 		# Ancient Empire
-		# is_pc_ag_city = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_ag_city
+			"
+			toggle = @ag_null_edict_length
+		}
 		# Azur Lane
-		azl_comp_harbor = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_azur
+			"
+			toggle = @azl_mod
+		}
 		# Forgotten History
 		is_AAA_apocalyptic_city = yes
 		# Gigastructural Engineering & More
-		giga_is_pc_flusion_gaia_ecu = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_flusion_gaia_ecu = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Planetary Diversity
-		pd_is_pd_arcology = yes
-		pd_is_pd_hive_arc = yes
-		pd_is_pd_machine_arc = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_pd_arcology = yes
+				pd_is_pd_hive_arc = yes
+				pd_is_pd_machine_arc = yes
+			"
+			toggle = @has_planetary_diversity_more_arcologies
+		}
 		# Playable Katzenartig Imperium
-		is_pki_flusion_ecu = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_pki_flusion_ecu = yes
+			"
+			toggle = @has_pki_mod
+		}
 		# Real Space
-		is_rs_compat_manufactorum = yes
-		is_rs_compat_agropolis = yes
-		is_rs_compat_fortoria = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_manufactorum
+				is_planet_class = pc_agropolis
+				is_planet_class = pc_fortoria
+			"
+			toggle = @rs_compatch_var
+		}
 		# Star fantasy: Castle Scarlet
 		# uses_district_set = castle_scarlet
 		# Star Wars: Kuat Ancient Empire
-		is_kuat_eternal_city = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_kuat_eternal_city
+			"
+			toggle = @has_zofe_vanilla
+		}
 		# Voyage to Eternity
-		vte_compat_hyper_ecu = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_KZ_VOY_hyper_ecumenopolis
+			"
+			toggle = @vte_mod
+		}
 		# ZOFE
-		is_zofe_utopian_city = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_utopian_city
+			"
+			toggle = @has_zofe_vanilla
+		}
 		# Misc
 		uses_district_set = city_world
 	}
 }
 merg_is_arcology_non_gestalt = {
+	optimize_memory
 	is_artificial = no
 	OR = {
 		is_planet_class = pc_city
 		# Gigastructural Engineering & More
-		giga_is_pc_flusion_gaia_ecu = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_flusion_gaia_ecu = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Planetary Diversity
-		pd_is_pd_arcology = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_pd_arcology = yes
+			"
+			toggle = @has_planetary_diversity_more_arcologies
+		}
 		# Playable Katzenartig Imperium
-		is_pki_flusion_ecu = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_pki_flusion_ecu = yes
+			"
+			toggle = @has_pki_mod
+		}
 		# Real Space
-		is_rs_compat_manufactorum = yes
-		is_rs_compat_agropolis = yes
-		is_rs_compat_fortoria = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_manufactorum
+				is_planet_class = pc_agropolis
+				is_planet_class = pc_fortoria
+			"
+			toggle = @rs_compatch_var
+		}
 		# Voyage to Eternity
-		vte_compat_hyper_ecu = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_KZ_VOY_hyper_ecumenopolis
+			"
+			toggle = @vte_mod
+		}
 		# ZOFE
-		is_zofe_utopian_city = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_utopian_city
+			"
+			toggle = @has_zofe_vanilla
+		}
 		# Misc
 		uses_district_set = city_world
 	}
 }
 merg_is_artificial_arcology = {
 	OR = {
-		giga_is_pc_ringworld_city = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_ringworld_city = yes
+			"
+			toggle = @has_gigastructures
+		}
 	}
 }
 merg_is_arctic = {
@@ -168,9 +278,21 @@ merg_is_arctic = {
 	OR = {
 		is_planet_class = pc_arctic
 		# All These Worlds
-		atw_is_arctic = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_arctic = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Planetary Diversity
-		pd_is_arctic = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_arctic = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 }
 merg_is_arid = {
@@ -178,9 +300,21 @@ merg_is_arid = {
 	OR = {
 		is_planet_class = pc_arid
 		# All These Worlds
-		atw_is_arid = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_arid = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Planetary Diversity
-		pd_is_arid = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_arid = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 }
 merg_is_barren = {
@@ -188,9 +322,21 @@ merg_is_barren = {
 	OR = {
 		is_planet_class = pc_barren
 		# All These Worlds
-		atw_is_barren = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_barren = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Mem
-		is_pc_mem_destroyed_barren = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_pc_mem_destroyed_barren = yes
+			"
+			toggle = @has_more_events_mod
+		}
 	}
 }
 merg_is_barren_cold = {
@@ -198,7 +344,13 @@ merg_is_barren_cold = {
 	OR = {
 		is_planet_class = pc_barren_cold
 		# All These Worlds
-		atw_is_barren_cold = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_barren_cold = yes
+			"
+			toggle = @has_atw_lite
+		}
 	}
 }
 merg_is_continental = {
@@ -206,9 +358,21 @@ merg_is_continental = {
 	OR = {
 		is_planet_class = pc_continental
 		# All These Worlds
-		atw_is_continental = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_continental = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Planetary Diversity
-		pd_is_continental = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_continental = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 }
 merg_is_desert = {
@@ -216,9 +380,21 @@ merg_is_desert = {
 	OR = {
 		is_planet_class = pc_desert
 		# All These Worlds
-		atw_is_desert = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_desert = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Planetary Diversity
-		pd_is_desert = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_desert = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 }
 merg_is_frozen = {
@@ -226,9 +402,21 @@ merg_is_frozen = {
 	OR = {
 		is_planet_class = pc_frozen
 		# All These Worlds
-		atw_is_frozen = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_frozen = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Arknights Near Future
-		# is_planet_class = pc_ark_frozen
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_ark_frozen
+			"
+			toggle = @arknights_ANF
+		}
 		# Endless Frontier
 		is_mzilli_rogue = yes
 	}
@@ -238,13 +426,25 @@ merg_is_gaia = {
 	OR = {
 		merg_is_gaia_basic = yes
 		# Azur Lane
-		azl_comp_gaia = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_azur_gaia
+			"
+			toggle = @azl_mod
+		}
 		# Nanite Machine and Distant Stars Overhaul
 		is_nanite_gaia = yes
 		# Pokémon
 		# uses_district_set = EOE_pokemon_world
 		# ZOFE
-		is_zofe_utopian_gaia = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_utopian_gaia
+			"
+			toggle = @has_zofe_vanilla
+		}
 	}
 }
 merg_is_gaia_basic = {
@@ -252,19 +452,43 @@ merg_is_gaia_basic = {
 	OR = {
 		is_planet_class = pc_gaia
 		# All These Worlds
-		atw_is_gaia = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_gaia = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Planetary Diversity
-		pd_is_planet_class_gaia = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_planet_class_gaia = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 }
 merg_is_gas_giant_habitable = {
 	optimize_memory
 	OR = {
 		# Gigastructural Engineering & More
-		is_giga_habitable_gas_giant = yes
-		giga_is_maginot_gas_giant = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_giga_habitable_gas_giant = yes
+				giga_is_maginot_gas_giant = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# TimeMod
-		is_tm_gas_colony = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_tm_gas_colony = yes
+			"
+			toggle = @timemod
+		}
 	}
 }
 merg_is_gas_giant = {
@@ -272,11 +496,23 @@ merg_is_gas_giant = {
 	OR = {
 		is_planet_class = pc_gas_giant
 		# All these worlds
-		atw_is_gas_giant = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_gas_giant = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Astro's Stellaris Overhaul - Galaxy Generation
 		is_aso_gg_ice_giant = yes
 		# Azur Lane
-		azl_comp_gas_giant = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_azur_gas_giant
+			"
+			toggle = @azl_mod
+		}
 		# Nanite Machine and Distant Stars Overhaul
 		is_nanite_gas_giant = yes
 	}
@@ -286,15 +522,37 @@ merg_is_hive_world = {
 	OR = {
 		is_planet_class = pc_hive
 		# Gigastructural Engineering & More
-		giga_is_pc_ringworld_hive = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_ringworld_hive = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Planetary Diversity
-		pd_is_pd_hive_world = yes
-		pd_is_planet_class_hive = yes
-		# Planetary Ringworlds
-		is_planetary_ringworld_hive = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_pd_hive_world = yes
+			"
+			toggle = @has_planetary_diversity_ascension_worlds
+		}
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_planet_class_hive = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 		# ZOFE
-		is_zofe_utopian_hive = yes
-		is_zofe_utopian_hive_ringworld = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_utopian_hive
+				is_planet_class = pc_utopian_hive_ringworld
+			"
+			toggle = @has_zofe_vanilla
+		}
 	}
 }
 merg_is_machine_world = {
@@ -302,19 +560,53 @@ merg_is_machine_world = {
 	OR = {
 		is_planet_class = pc_machine
 		# Planetary Diversity
-		pd_is_pd_machine_arc = yes
-		pd_is_planet_class_machine = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_pd_machine_arc = yes
+			"
+			toggle = @has_planetary_diversity_ascension_worlds
+		}
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_planet_class_machine = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 		# Gigastructural Engineering & More
-		giga_is_pc_ringworld_machine = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_ringworld_machine = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Maiden Frontier Gunstar Story Collection
-		msgsc_GF_sf_machine = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				msgsc_GF_sf_machine = yes
+			"
+			toggle = @GF_OGAS_leveled_thread_add_start_after_level
+		}
 		# Origin - F.C.S.S & M.C.S.S
-		# uses_district_set = awaken_ai_world
-		# Planetary Ringworlds
-		is_planetary_ringworld_machine = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_awaken_ai
+			"
+			toggle = @fcss_mod
+		}
 		# ZOFE
-		is_zofe_utopian_machine = yes
-		is_zofe_utopian_machine_ringworld = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_utopian_machine
+				is_planet_class = pc_utopian_machine_ringworld
+			"
+			toggle = @has_zofe_vanilla
+		}
 	}
 }
 merg_is_molten = {
@@ -322,17 +614,27 @@ merg_is_molten = {
 	OR = {
 		is_planet_class = pc_molten
 		# All These Worlds
-		atw_is_molten = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_molten = yes
+			"
+			toggle = @has_atw_lite
+		}
 	}
 }
 merg_is_nuked = {
 	optimize_memory
 	OR = {
 		merg_is_nuked_basic = yes
-		# BlueArchive
-		is_bluarch_comp_ruined = yes
 		# Gigastructural Engineering & More
-		giga_is_katzenland = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_katzenland = yes
+			"
+			toggle = @has_gigastructures
+		}
 	}
 }
 merg_is_nuked_basic = {
@@ -340,9 +642,21 @@ merg_is_nuked_basic = {
 	OR = {
 		is_planet_class = pc_nuked
 		# All these worlds
-		atw_is_nuked = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_nuked = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Planetary Diversity
-		pd_is_planet_class_nuked = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_planet_class_nuked = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 }
 merg_is_aquatic = {
@@ -350,11 +664,21 @@ merg_is_aquatic = {
 	OR = {
 		merg_is_ocean = yes
 		# Azur Lane
-		azl_comp_azur_ocean = yes
-		# Blue Archive
-		is_bluearch_comp_campus_planet = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_azur_ocean
+			"
+			toggle = @azl_mod
+		}
 		# Gigastructural Engineering & More
-		giga_is_edge_of_eternity = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_edge_of_eternity = yes
+			"
+			toggle = @has_gigastructures
+		}
 	}
 }
 merg_is_ocean = {
@@ -362,12 +686,30 @@ merg_is_ocean = {
 	OR = {
 		is_planet_class = pc_ocean
 		# All These Worlds
-		atw_is_ocean_basic = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_ocean_basic = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Gigastructural Engineering & More
-		giga_is_pc_giga_edge_of_eternity = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_edge_of_eternity = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Planetary Diversity
-		pd_is_ocean = yes
-		is_pd_planet_for_aqua_trait = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_ocean = yes
+				is_pd_planet_for_aqua_trait = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 }
 merg_is_relic_world = {
@@ -383,9 +725,21 @@ merg_is_savannah = {
 	OR = {
 		is_planet_class = pc_savannah
 		# All These Worlds
-		atw_is_savannah = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_savannah = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Planetary Diversity
-		pd_is_savannah = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_savannah = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 }
 merg_is_shielded_world = {
@@ -403,11 +757,29 @@ merg_is_toxic = {
 	OR = {
 		is_planet_class = pc_toxic
 		# All These Worlds
-		atw_is_toxic = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_toxic = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Gigastructural Engineering & More
-		giga_is_pc_red_toxic = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_red_toxic = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Planetary Diversity
-		pd_is_pc_hothouse = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_pc_hothouse = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 }
 merg_is_tropical = {
@@ -415,11 +787,29 @@ merg_is_tropical = {
 	OR = {
 		is_planet_class = pc_tropical
 		# All These Worlds
-		atw_is_tropical = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_tropical = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# More Events Mod
-		is_pc_mem_death = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_pc_mem_death = yes
+			"
+			toggle = @has_more_events_mod
+		}
 		# Planetary Diversity
-		pd_is_tropical = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_tropical = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 }
 merg_is_tundra = {
@@ -427,28 +817,61 @@ merg_is_tundra = {
 	OR = {
 		is_planet_class = pc_tundra
 		# All These Worlds
-		atw_is_tundra = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				atw_is_tundra = yes
+			"
+			toggle = @has_atw_lite
+		}
 		# Planetary Diversity
-		pd_is_tundra = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_tundra = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 }
 merg_is_broken = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_broken
 		is_planet_class = pc_shattered
 		is_planet_class = pc_shattered_2
 		is_planet_class = pc_egg_cracked
+		is_planet_class = pc_machine_broken
 		# MEM
-		is_pc_mem_broken_city = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_pc_mem_broken_city = yes
+			"
+			toggle = @has_more_events_mod
+		}
 	}
 }
 merg_is_brown_dwarf = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_t_star
 		# Gigastructural Engineering & More
-		giga_is_pc_gigabrown_dwarf = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_gigabrown_dwarf = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Real Space
-		is_planet_class_pc_l_star = yes
-		is_planet_class_pc_y_star = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class_pc_l_star = yes
+				is_planet_class_pc_y_star = yes
+			"
+			toggle = @rs_compatch_var
+		}
 	}
 }

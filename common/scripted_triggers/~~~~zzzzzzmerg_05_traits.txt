@@ -1,18 +1,3 @@
-can_remove_beneficial_genetic_traits = {
-    hidden_trigger = { exists = from }
-    from = {
-        OR = {
-            has_tradition = tr_genetics_resequencing
-            # Machine and Robots Expansion Continued
-            has_ascension_perk = xvcv_mdlc_ap_genetics_mastery
-            # Planetary Diversity - Unique Worlds
-            has_tradition = pd_tr_biosynth_perk_2a
-            # Rogue Maid
-            has_technology = tech_advanced_gene_tailoring
-        }
-    }
-}
-
 # can_remove_overtuned_traits
 is_phototrophic = {
     OR = {
@@ -23,22 +8,28 @@ is_phototrophic = {
         has_trait = trait_harvested_radiotrophic
         has_trait = trait_lithoid_radiotrophic
         # V_Traits
-        has_v_phototrophic_trait = yes
-        AND = {
-            OR = {
-                has_v_grafting_trait = yes
-            }
-            planet = {
-                any_owned_species = {
+        inline_script = {
+            script = merger_of_rules/toggled_code
+            code = "
+                has_v_phototrophic_trait = yes
+                AND = {
                     OR = {
-                        has_trait = trait_plantoid_phototrophic
-                        has_trait = trait_plantoid_radiotrophic
-                        has_trait = trait_advanced_phototrophic
-                        has_trait = trait_advanced_radiotrophic
-                        has_trait = trait_lithoid_radiotrophic
+                        has_v_grafting_trait = yes
+                    }
+                    planet = {
+                        any_owned_species = {
+                            OR = {
+                                has_trait = trait_plantoid_phototrophic
+                                has_trait = trait_plantoid_radiotrophic
+                                has_trait = trait_advanced_phototrophic
+                                has_trait = trait_advanced_radiotrophic
+                                has_trait = trait_lithoid_radiotrophic
+                            }
+                        }
                     }
                 }
-            }
+			"
+            toggle = @has_v_traits_mod
         }
     }
 }
@@ -47,8 +38,6 @@ has_phototrophic_energy_upkeep = {
     OR = {
         has_trait = trait_plantoid_phototrophic
         has_trait = trait_advanced_radiotrophic
-        # V_Traits
-        has_v_phototrophic_trait = yes
         # Vanilla
         AND = {
             OR = {
@@ -60,33 +49,40 @@ has_phototrophic_energy_upkeep = {
             planet = { merg_is_nuked = no }
         }
         # V_TRAITS
-        AND = {
-            has_v_grafting_trait = yes
-            planet = {
-                any_owned_species = {
-                    OR = {
-                        has_trait = trait_plantoid_phototrophic
-                        has_trait = trait_advanced_phototrophic
-                        has_trait = trait_plantoid_radiotrophic
-                        has_trait = trait_advanced_radiotrophic
-                        has_trait = trait_lithoid_radiotrophic
-                    }
-                }
-            }
-            if = {
-                limit = {
+        inline_script = {
+            script = merger_of_rules/toggled_code
+            code = "
+                has_v_phototrophic_trait = yes
+                AND = {
+                    has_v_grafting_trait = yes
                     planet = {
                         any_owned_species = {
                             OR = {
+                                has_trait = trait_plantoid_phototrophic
+                                has_trait = trait_advanced_phototrophic
                                 has_trait = trait_plantoid_radiotrophic
                                 has_trait = trait_advanced_radiotrophic
                                 has_trait = trait_lithoid_radiotrophic
                             }
                         }
                     }
+                    if = {
+                        limit = {
+                            planet = {
+                                any_owned_species = {
+                                    OR = {
+                                        has_trait = trait_plantoid_radiotrophic
+                                        has_trait = trait_advanced_radiotrophic
+                                        has_trait = trait_lithoid_radiotrophic
+                                    }
+                                }
+                            }
+                        }
+                        planet = { merg_is_nuked = no }
+                    }
                 }
-                planet = { merg_is_nuked = no }
-            }
+			"
+            toggle = @has_v_traits_mod
         }
     }
 }
@@ -97,9 +93,21 @@ has_budding_trait = {
         has_trait = trait_lithoid_budding
         has_trait = trait_advanced_budding
         # V_Traits
-        has_v_budding_trait = yes
+        inline_script = {
+            script = merger_of_rules/toggled_code
+            code = "
+                has_v_budding_trait = yes
+			"
+            toggle = @has_v_traits_mod
+        }
         # Wula Fallen Empire
-        has_trait = trait_wula_tietie
+        inline_script = {
+            script = merger_of_rules/toggled_code
+            code = "
+                has_trait = trait_wula_tietie
+			"
+            toggle = @wula_compatch_var
+        }
     }
 }
 
@@ -121,38 +129,82 @@ has_food_upkeep = {
             is_archetype = JAYPEES_SQUID
             is_archetype = JAYPEES_TURTLEHORSE
             # AshArms Aquarius history
-            is_archetype = Dolls
+            inline_script = {
+                script = merger_of_rules/toggled_code
+                code = "
+                    is_archetype = Dolls
+				"
+                toggle = @asharm_mod
+            }
             # Assault Lily
             is_archetype = LILY
             # Azur Lane Stellaris DLC
-            is_KANSEN_species = yes
+            inline_script = {
+                script = merger_of_rules/toggled_code
+                code = "
+                    is_KANSEN_species = yes
+				"
+                toggle = @azl_mod
+            }
             # Empire of Eeveelution
-            is_archetype = POKEMON
+            inline_script = {
+                script = merger_of_rules/toggled_code
+                code = "
+                    is_archetype = POKEMON
+				"
+                toggle = @s7_EOE_cost
+            }
             # Expanded Traits, Civics, Pops, and More
-            is_archetype = HUMANOID
-            is_archetype = MAMMALIAN
-            is_archetype = REPTILIAN
-            is_archetype = AVIAN
-            is_archetype = ARTHROPOID
-            is_archetype = MOLUSCOID
-            is_archetype = FUNGOID
-            is_archetype = PLANTOID
-            is_archetype = NECROID
-            is_archetype = half_species
-            is_archetype = half_species_special
-            is_archetype = half_aberration
-            is_archetype = half_perfect
-            is_archetype = half_amalgamated
+            inline_script = {
+                script = merger_of_rules/toggled_code
+                code = "
+                    is_archetype = HUMANOID
+                    is_archetype = MAMMALIAN
+                    is_archetype = REPTILIAN
+                    is_archetype = AVIAN
+                    is_archetype = ARTHROPOID
+                    is_archetype = MOLUSCOID
+                    is_archetype = FUNGOID
+                    is_archetype = PLANTOID
+                    is_archetype = NECROID
+                    is_archetype = half_species
+                    is_archetype = half_species_special
+                    is_archetype = half_aberration
+                    is_archetype = half_perfect
+                    is_archetype = half_amalgamated
+				"
+                toggle = @expops_compatch_var
+            }
             # KDC Story Pack
             is_archetype = NANITES_CROP
             # Nyto Species Events Pack
             is_archetype = NYTO
             # SW:UnknownWorld Shipgirls Story
-            is_archetype = STARSHIPGIRLS
+            inline_script = {
+                script = merger_of_rules/toggled_code
+                code = "
+                    is_archetype = STARSHIPGIRLS
+				"
+                toggle = @swuss_mod
+            }
+            # Voyage to Eternity
+            inline_script = {
+                script = merger_of_rules/toggled_code
+                code = "
+                    KZ_VOY_has_food_upkeep = yes
+				"
+                toggle = @vte_mod
+            }
             # Warship Girls R And MIST Species
-            is_archetype = SHENHAI
-            is_archetype = UNITED_FLEET
-            is_archetype = WARSHIPGIRL
+            inline_script = {
+                script = merger_of_rules/toggled_code
+                code = "
+                    is_archetype = SHENHAI
+                    is_archetype = UNITED_FLEET
+                    is_archetype = WARSHIPGIRL
+				"
+                toggle = @wsg_mod
+            }
         }
     }
     NOT = { has_trait = trait_voidling }

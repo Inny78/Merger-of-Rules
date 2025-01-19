@@ -450,13 +450,16 @@ planet_event = {
 		change_pc = pc_ai
 		reset_planet = yes
 		# GPM
-		if = {
-			limit = { merg_has_gpm = yes }
-			gpm_purge_all_planetary_modifiers = yes
-			gpm_purge_all_core_modifiers = yes
-			gpm_roll_machine_world_modifiers = yes
-			gpm_remove_planetary_features = yes
-			gpm_roll_planetary_features = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				gpm_purge_all_planetary_modifiers = yes
+				gpm_purge_all_core_modifiers = yes
+				gpm_roll_machine_world_modifiers = yes
+				gpm_remove_planetary_features = yes
+				gpm_roll_planetary_features = yes
+			"
+			toggle = @has_guillis_planet_modifiers
 		}
 		# Vanilla
 		set_name = "NAME_Sterilization_Hub_1"

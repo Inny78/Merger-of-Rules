@@ -39,13 +39,29 @@ toxic_attendant_growth = {
 	# Extra Districts
 	add = value:toxic_attendant_growth_ED_districts
 	# Gigastructural Engineering & More
-	add = value:giga_toxic_attendant_growth
-	# Planetary Diversity
-	add = value:toxic_attendant_growth_PD_districts
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			add = value:giga_toxic_attendant_growth
+		"
+		toggle = @has_gigastructures
+	}
 	# Real Space - Planetary Stations
-	add = value:toxic_attendant_growth_RS_PS_districts
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			add = value:toxic_attendant_growth_RS_PS_districts
+		"
+		toggle = @rs_compatch_var
+	}
 	# Voidframe
-	add = value:voidframe_toxic_attendant_growth
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			add = value:voidframe_toxic_attendant_growth
+		"
+		toggle = @anz_voidframe_mod
+	}
 }
 num_arc_furnace_planets = {
 	base = 0
@@ -66,25 +82,30 @@ num_arc_furnace_planets = {
 virtuality_concentrated_production_mult = {
 	base = 1.75
 	# Additional Vanilla Buildings
-	modifier = {
-		add = 0.25
-		owner = {
-			has_technology = tech_avb_virtual_server
-		}
-	}
-	# AVB - Virtual Planetary Server
-	complex_trigger_modifier = {
-		trigger = count_owned_planet
-		trigger_scope = owner
-		parameters = {
-			limit = {
-				planet = {
-					has_building = building_avb_virtual_server
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			modifier = {
+				add = 0.25
+				owner = {
+					has_technology = tech_avb_virtual_server
 				}
 			}
-		}
-		mult = 0.05
-		mode = add
+			complex_trigger_modifier = {
+				trigger = count_owned_planet
+				trigger_scope = owner
+				parameters = {
+					limit = {
+						planet = {
+							has_building = building_avb_virtual_server
+						}
+					}
+				}
+				mult = 0.05
+				mode = add
+			}
+		"
+		toggle = @has_avb_mod
 	}
 	# Vanilla
 	complex_trigger_modifier = {
@@ -94,5 +115,11 @@ virtuality_concentrated_production_mult = {
 		mode = subtract
 	}
 	# Gigastructural Engineering & More
-	subtract = value:giga_virtuality_concentrated_production_mult
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			subtract = value:giga_virtuality_concentrated_production_mult
+		"
+		toggle = @has_gigastructures
+	}
 }

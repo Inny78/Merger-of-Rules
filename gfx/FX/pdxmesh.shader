@@ -2743,13 +2743,13 @@ Effect PdxMeshCloudsAnimateUV
 	}
 }
 
-// Effect PdxMeshCloudsSkinned
-// {
-//	VertexShader = "VertexPdxMeshStandardSkinned"
-//	PixelShader = "PixelPdxMeshStandard"
-//	BlendState = "BlendStateAlphaBlend";
-//	Defines = { "IS_PLANET" "IS_CLOUDS"  }
-// }
+# // Effect PdxMeshCloudsSkinned
+# // {
+# //	VertexShader = "VertexPdxMeshStandardSkinned"
+# //	PixelShader = "PixelPdxMeshStandard"
+# //	BlendState = "BlendStateAlphaBlend";
+# //	Defines = { "IS_PLANET" "IS_CLOUDS"  }
+# // }
 
 Effect PdxMeshCloudsConstruction
 {

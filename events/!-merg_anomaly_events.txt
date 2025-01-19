@@ -27,11 +27,27 @@ ship_event = {
 						has_trait = trait_pc_habitat_preference
 						has_trait = trait_pc_shattered_ring_habitable_preference
 						# Gigastructural Engineering & More
-						giga_has_artificial_preference_trait = yes
-						# Planetary Diversity
-						has_pd_special_preference = yes
+						inline_script = {
+							script = merger_of_rules/toggled_code
+							code = "
+								giga_has_artificial_preference_trait = yes
+							"
+							toggle = @has_guillis_planet_modifiers
+						}
 						# Voyage to Eternity
-						vte_comp_mecha_preference = yes
+						inline_script = {
+							script = merger_of_rules/toggled_code
+							code = "
+								OR = {
+									has_trait = trait_pc_KZ_VOY_hyper_ecumenopolis_preference
+									has_trait = trait_pc_KZ_VOY_astral_world_preference
+									has_trait = trait_pc_KZ_VOY_astral_world_solaria_preference
+									has_trait = trait_pc_KZ_VOY_luna_preference
+									has_trait = trait_pc_KZ_VOY_terran_relic_preference
+								}
+							"
+							toggle = @vte_mod
+						}
 					}
 				}
 			}

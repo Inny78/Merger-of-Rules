@@ -1,0 +1,261 @@
+# Acquisition of Technologies 2178603631
+@has_acquisition_of_tech = 0
+
+# Additional Mega-Engineering Projects 3155789435
+@has_epam_mod = 0
+
+# Additional Vanilla Buildings 2916082557
+@has_avb_mod = 0
+
+# All These Worlds Lite 2718002306
+@has_atw_lite = 0
+
+# Ancient Cache of Technologies 1419304439
+@has_ancient_caches = 0
+
+# Ancient Empire 2389589691
+@ag_null_edict_length = 0
+
+# ANZ Voidframe 3289877651
+@anz_voidframe_mod = 0
+
+# APSR 1346877266
+@has_apsr = 0
+
+# Archaeology Story Pack 3079374348
+@aspmod = 0
+
+# Arknights Near Future 2047260446
+@arknights_ANF = 0
+
+# AshArms Aquarius History 2234187039
+@asharm_mod = 0
+
+# Azur Lane Stellaris DLC 1617872589 (compatch)
+@azl_mod = 0
+
+# ACOT SBTG 1481972266
+# Pending @has_sbtg_mod = 0
+
+# Civil Wars 2434790082
+@has_civil_wars_mod = 0
+
+# Darkspace 2719075597
+# Pending
+
+# Diagrapher's Factions and Ethics Mod 2724573936
+@has_diagraphers_faction_and_ethic_mod = 0
+
+# Diagrapher's Trait Mod 2459686697
+@has_diagraphers_trait_mod = 0
+
+# Dawn Of Ascension 2816360131
+@has_doa = 0
+
+# District Overhaul - FunEFork 3068218539
+@has_do3f_mod = 0
+
+# EDA 2951910743
+@eda_mod = 0
+
+# Empire of Eeveelution 2398450274
+@s7_EOE_cost = 0
+
+# Empires Expanded 2717193796
+@has_emex_mod = 0
+
+# Eternal Empire 2854596966
+@has_eternal_empire = 0
+
+# Ethics and Civics Alternative - FunEFork 2949463581
+@has_eca_funefork = 0
+
+# Ethics and Civics Classic 1100284147
+@has_ecc_cog = 0
+
+# Ethics & Civics: Bug Branch 2517213262
+@has_bug_branch = 0
+
+# Ethics and Civics Infinity 2280945168
+# pending @has_ec_inf = 0
+
+# EUTAB - Ethos Unique Techs and Buildings (unofficial)
+@has_eutab_unofficial = 0
+
+# Expanded Events 1641807098 (compatch)
+@expevents_compatch_var = 0
+
+# Expanded Gestalts: Forgotten Queens 1715190550
+@has_forgotten_queens = 0
+
+# Expanded Megastructures and Technology 1628679535 (compatch)
+@emt_compatch_var = 0
+
+# Expanded Traits, Civics, Pops, and More
+@expops_compatch_var = 0
+
+# Extra Districts 2792270076
+@is_ED_enabled = 0
+
+# Extra Ship Components NEXT 2648658105
+@has_esc_next = 0
+
+# Forgotten Empires 3062038863
+@forgotten_empires = 0
+
+# Forgotten History 2916982793
+@HAS_AAA = 0
+
+# Frameworld Extra Goodies 3071450599
+@xhk_frame_mod = 0
+
+# Gigastructural Engineering and More 1121692237
+@has_gigastructures = 0
+
+# Girls Frontline 2070082709 (compatch)
+@gf_compatch_var = 0
+# pending @gf_nyto_mod = 0
+
+# Guilli's Planet Modifiers and Features (patch version) 3365265900
+@has_guillis_planet_modifiers = 0
+
+# Hydra's More Civics 3248725702
+@has_mc_hydra = 0
+
+# LEX 1320989536 (compatch)
+@lex_compatch_var = 0
+# pending @has_lex_mod = 0
+
+# Libra: Gestalt Age 3077190639
+@libra_mod = 0
+
+# Lithoid Supremacy 1736244986
+@has_lithoid_mod = 0
+
+# Machines & Robot Expansion Continued 3163759042
+@oxr_mdlc_mod = 0
+
+# Madoka Magica NEW 2027001560 (compatch)
+@madoka_compatch_var = 0
+
+# Maiden Frontier Gunstar 2068768158 (compatch)
+@GF_OGAS_leveled_thread_add_start_after_level = 0
+
+# More Corporate Authorities 2097102454
+@has_more_corporate_authorities = 0
+
+# More Events Mod 727000451
+@has_more_events_mod = 0
+
+# More Precursors 2951652477
+@HAS_FHMP = 0
+
+# More Traditions 3067902147
+@HAS_MT_Hydra = 0
+
+# Origin - F.C.S.S & M.C.S.S 2585368513
+@fcss_mod = 0
+
+# Origin Beings 2547826658
+@origin_beings_mod = 0
+
+# Origins of Civilization 2969817152
+@has_origins_of_civilization = 0
+
+# Planet States Revived 2998085316
+@planet_states_mod = 0
+
+# Planetary Diversity 819148835
+@has_planetary_diversity = 0
+
+# Planetary Diversity Ascension Worlds 3241119393
+@has_planetary_diversity_ascension_worlds = 0
+
+# Planetary Diversity More Arcologies 1732447147
+@has_planetary_diversity_more_arcologies = 0
+
+# Planetary Diversity Unique Worlds 1740165239
+@has_planetary_diversity_unique_worlds = 0
+
+# Planetary Population Restrictions 2288046502
+@planet_pop_restrict_mod = 0
+
+# Playable Katzenartig Imperium 2981429115
+@has_pki_mod = 0
+
+# Real Space (compatch)
+@rs_compatch_var = 0
+# Pending
+
+# Real Space New Frontiers
+# Pending
+
+# Real Space Nebulae
+@has_real_space_nebulae = 0
+
+# Secrets of the Shroud 2820330517
+@has_sots_mod = 0
+
+# Some Events of Outside Cluster 1562501671
+@has_seooc_mod = 0
+
+# Star Wars: Kuat Ancient Empire 2461014769
+@sw_kuat_mod = 0
+
+# Star Wars: UnknownWorld Shipgirls Story 2116422940 (compatch)
+@swuss_mod = 0
+
+# Steven Universe Homeworld Gems 1104213489
+@has_f93_gem_mod = 0
+
+# Superstates 3005307317
+@has_superstates = 0
+
+# ThaumStellaris 2517513764
+@has_tc_mod = 0
+
+# The Crimson Throng 2911573696
+@crimson_throng_mod = 0
+
+# The Empty Vagrant
+@homeless_class_trait_weight = 0
+# Pending
+
+# TimeMod 2735054420
+@timemod = 0
+
+# Unavoidable Changes
+@HAS_UCmod = 0
+
+# V_TRAITS 2872760980
+@has_v_traits_mod = 0
+
+# Vassals Expanded and Reworked - FunEFork	2183551683
+@has_vear_f_mod = 0
+
+# Viable Feudalism and Imperialism - Empire Federation	2114559224
+# @has_empire_federation_mod = 0
+
+# Voyage to Eternity 2766998502
+@vte_mod = 0
+
+# Warship Girls R And MIST Species 1747099270 (compatch)
+@wsg_mod = 0
+
+# Wiirlak Additional Civics & Origins 2425550468
+@has_wiirlak_ac = 0
+
+# Wild Space 2860980668
+@has_wild_space_mod = 0
+
+# Wula Fallen Empire 2881871180 (compatch)
+@wula_compatch_var = 0
+# pending @has_wfe_mod = 0
+
+# ZOFE 2958421797
+@has_zofe_vanilla = 0
+
+# ZOFE Sandbox 2958422000
+@has_zofe_sandbox = 0
+
+# EOF

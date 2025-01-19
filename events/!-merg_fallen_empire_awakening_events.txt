@@ -16,14 +16,18 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		is_country_type = fallen_empire
+		merg_has_wula_fe = no
 		NOR = {
 			has_country_flag = awakening_not_allowed
 			# Gigastructural Engineering & More
-			has_ai_personality = fallen_empire_gamers
-			has_ai_personality = fallen_empire_pouchkinn
-			# Blue Archive
-			has_country_flag = BA_Precursor
-			has_country_flag = BA_Gematria
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_ai_personality = fallen_empire_gamers
+					has_ai_personality = fallen_empire_pouchkinn
+				"
+				toggle = @has_gigastructures
+			}
 			# Nirvana Empire Project
 			has_country_flag = nirvana_servant
 		}
@@ -58,22 +62,20 @@ country_event = {
 			}
 		}
 		# Warship Girls R and MIST Species
-		NOR = {
-			wg_compat_is_auth_wg_fe = yes
-			wg_compat_is_auth_sh_fe = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				NOR = {
+					has_authority = auth_wg_fe
+					has_authority = auth_sh_fe
+				}
+			"
+			toggle = @wsg_mod
 		}
 	}
 
 	mean_time_to_happen = {
 		years = 50
-		modifier = {
-			factor = 2
-			NOT = { mid_game_years_passed >= 25 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { end_game_years_passed >= 0 }
-		}
 		modifier = {
 			factor = 0.5
 			any_country = {
@@ -106,12 +108,18 @@ country_event = {
 			}
 		}
 		# ZOFE
-		modifier = {
-			factor = 0.1
-			any_country = {
-				is_country_type = ascended_empire
-				has_country_flag = new_ascended_empire
-			}
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				modifier = {
+					factor = 0.1
+					any_country = {
+						is_country_type = ascended_empire
+						has_country_flag = new_ascended_empire
+					}
+				}
+			"
+			toggle = @has_zofe_vanilla
 		}
 	}
 
@@ -145,12 +153,18 @@ country_event = {
 			random_list = {
 				40 = {
 					# Warship Girls R and MIST Species
-					modifier = {
-						factor = 0
-						OR = {
-							wg_compat_is_auth_wg_fe = yes
-							wg_compat_is_auth_sh_fe = yes
-						}
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							modifier = {
+								factor = 0
+								OR = {
+									has_authority = auth_wg_fe
+									has_authority = auth_sh_fe
+								}
+							}
+						"
+						toggle = @wsg_mod
 					}
 					# War in Heaven with Fallen Empire of opposing ethos
 					random_country = {
@@ -192,12 +206,18 @@ country_event = {
 				}
 				20 = {
 					# Warship Girls R and MIST Species
-					modifier = {
-						factor = 0
-						OR = {
-							wg_compat_is_auth_wg_fe = yes
-							wg_compat_is_auth_sh_fe = yes
-						}
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							modifier = {
+								factor = 0
+								OR = {
+									has_authority = auth_wg_fe
+									has_authority = auth_sh_fe
+								}
+							}
+						"
+						toggle = @wsg_mod
 					}
 					# War in Heaven with Fallen Empire of different ethos
 					random_country = {
@@ -271,19 +291,25 @@ country_event = {
 	id = fallen_empires_awakening.4
 	title = OK
 	desc = OK
-
 	hide_window = yes
 
 	trigger = {
+		merg_has_wula_fe = no
 		has_global_flag = galactic_crisis_happened
 		NOT = { has_global_flag = sleepers_awake_rival_waking } # Not if WiH happened
 		has_country_flag = guardians_of_the_galaxy
 		NOT = { has_global_flag = guardians_of_the_galaxy_happened }
 		NOT = { has_country_flag = timed_guardians_of_the_galaxy }
 		# Warship Girls R and MIST Species
-		NOR = {
-			wg_compat_is_auth_wg_fe = yes
-			wg_compat_is_auth_sh_fe = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				NOR = {
+					has_authority = auth_wg_fe
+					has_authority = auth_sh_fe
+				}
+			"
+			toggle = @wsg_mod
 		}
 		# Nirvana Empire Project
 		NOT = { has_country_flag = nirvana_servant }

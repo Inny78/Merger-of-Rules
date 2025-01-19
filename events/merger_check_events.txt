@@ -6,7 +6,6 @@ country_event = {
     is_triggered_only = yes
 
     trigger = {
-        is_ai = no
         has_country_flag = merg_host_country
     }
 
@@ -19,29 +18,21 @@ country_event = {
             }
             country_event = { id = merg_check.2 }
         }
-        # Warship Girls R and MIST Species
-        if = {
-            limit = {
-                merg_has_warship_girls = yes
-                has_wsg_comp_patch = no
-            }
-            country_event = { id = merg_check.3 }
-        }
         # Girls Frontline
         if = {
             limit = {
                 merg_has_girls_frontline = yes
                 has_gf_comp_patch = no
             }
-            country_event = { id = merg_check.4 }
+            country_event = { id = merg_check.3 }
         }
-        # Azur Lane Stellaris DLC
+        # Expanded Pops
         if = {
             limit = {
-                merg_has_azur_lane = yes
-                has_azur_comp_patch = no
+                merg_has_expanded_pops = yes
+                has_expops_compatch = no
             }
-            country_event = { id = merg_check.5 }
+            country_event = { id = merg_check.4 }
         }
         # Maiden Frontier Gunstar
         if = {
@@ -49,55 +40,7 @@ country_event = {
                 merg_has_gunstar = yes
                 has_msgsc_compatch = no
             }
-            country_event = { id = merg_check.6 }
-        }
-        # Voyage to Eternity
-        if = {
-            limit = {
-                merg_has_voyage_eternity = yes
-                has_vte_compat = no
-            }
-            country_event = { id = merg_check.7 }
-        }
-        # Blue Archive
-        if = {
-            limit = {
-                merg_has_bluearchive = yes
-                has_bluearch_compatch = no
-            }
-            country_event = { id = merg_check.8 }
-        }
-        # Star Wars Kuat Ancient Empire
-        if = {
-            limit = {
-                merg_has_sw_kuat = yes
-                has_kuat_compatch = no
-            }
-            country_event = { id = merg_check.9 }
-        }
-        # Wandering Witch Voyager
-        if = {
-            limit = {
-                merg_has_wandering_witch = yes
-                has_wwv_compatch = no
-            }
-            country_event = { id = merg_check.10 }
-        }
-        # Star Wars: UnknownWorld Shipgirls Story
-        if = {
-            limit = {
-                merg_has_swuss = yes
-                has_swuss_compatch = no
-            }
-            country_event = { id = merg_check.11 }
-        }
-        # Rogue Maid
-        if = {
-            limit = {
-                merg_has_rogue_maid = yes
-                has_roguem_comp = no
-            }
-            country_event = { id = merg_check.12 }
+            country_event = { id = merg_check.5 }
         }
         # Madoka Magicka New
         if = {
@@ -112,8 +55,32 @@ country_event = {
                 has_madoka_comp = no
             }
             country_event = {
-                id = merg_check.13
+                id = merg_check.6
             }
+        }
+        # Wula Fallen Empire
+        if = {
+            limit = {
+                merg_has_wula_fe = yes
+                has_wula_compatch = no
+            }
+            country_event = { id = merg_check.7 }
+        }
+        # Expanded Events
+        if = {
+            limit = {
+                merg_has_expanded_events = yes
+                has_expevents_compatch = no
+            }
+            country_event = { id = merg_check.8 }
+        }
+        # Expanded Megastructures and Technology
+        if = {
+            limit = {
+                merg_has_expanded_megas = yes
+                has_emt_compatch = no
+            }
+            country_event = { id = merg_check.9 }
         }
     }
 }
@@ -206,54 +173,6 @@ country_event = {
     id = merg_check.9
     title = TRANSMISSION
     desc = merg_check.9.desc
-    picture = GFX_evt_communication_event
-    show_sound = event_default
-    is_triggered_only = yes
-
-    option = {
-        name = UNDERSTOOD
-    }
-}
-country_event = {
-    id = merg_check.10
-    title = TRANSMISSION
-    desc = merg_check.10.desc
-    picture = GFX_evt_communication_event
-    show_sound = event_default
-    is_triggered_only = yes
-
-    option = {
-        name = UNDERSTOOD
-    }
-}
-country_event = {
-    id = merg_check.11
-    title = TRANSMISSION
-    desc = merg_check.11.desc
-    picture = GFX_evt_communication_event
-    show_sound = event_default
-    is_triggered_only = yes
-
-    option = {
-        name = UNDERSTOOD
-    }
-}
-country_event = {
-    id = merg_check.12
-    title = TRANSMISSION
-    desc = merg_check.12.desc
-    picture = GFX_evt_communication_event
-    show_sound = event_default
-    is_triggered_only = yes
-
-    option = {
-        name = UNDERSTOOD
-    }
-}
-country_event = {
-    id = merg_check.13
-    title = TRANSMISSION
-    desc = merg_check.13.desc
     picture = GFX_evt_communication_event
     show_sound = event_default
     is_triggered_only = yes

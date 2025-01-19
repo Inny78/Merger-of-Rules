@@ -7,7 +7,13 @@ is_azaryn_preferred_terraform_pc = {
 		merg_is_barren = yes
 		merg_is_barren_cold = yes
 		# Planetary Diversity
-		pd_is_pc_hothouse = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_pc_hothouse = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 	planet_size >= 10
 	planet_size <= 30

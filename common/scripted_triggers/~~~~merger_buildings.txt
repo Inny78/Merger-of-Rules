@@ -3,42 +3,88 @@ merg_has_cloning_building = {
 		# Vanilla
 		has_active_building = building_clone_vats
 		# ACOT
-		has_active_building = building_fe_clone_vats
-		has_active_building = building_acot_ae_clone_vats
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_acot_ae_clone_vats
+			"
+			toggle = @has_ancient_caches
+		}
 		# AOT
-		has_active_building = building_stellarite_clone_vats
-		has_active_building = building_phanon_clone_vats
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_stellarite_clone_vats
+				has_active_building = building_phanon_clone_vats
+			"
+			toggle = @has_acquisition_of_tech
+		}
 		# Additional Vanilla Buildings
-		has_active_building = building_avb_clone_vats_2
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_avb_clone_vats_2
+			"
+			toggle = @has_avb_mod
+		}
 		# Ancient Empire
-		has_active_building = ag_advanced_clone_vats
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = ag_advanced_clone_vats
+			"
+			toggle = @ag_null_edict_length
+		}
 		# Ethics and Civics Bug Branch
-		has_active_building = building_bugged_life_monastery
-		has_active_building = building_bugged_life_monastery_two
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_bugged_life_monastery
+				has_active_building = building_bugged_life_monastery_two
+			"
+			toggle = @has_bug_branch
+		}
 		# EUTAB
-		eutab_has_active_cloning_building = yes
-		# Galaxius
-		has_active_building = building_ie_clone_vats
-		has_active_building = building_ie_spawning_pool
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				eutab_has_active_cloning_building = yes
+			"
+			toggle = @has_eutab_unofficial
+		}
 		# Lithoid Supremacy
-		has_active_building = building_crystallization_facilities
-		has_active_building = building_ocean_spawning_pool
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_crystallization_facilities
+				has_active_building = building_ocean_spawning_pool
+			"
+			toggle = @has_lithoid_mod
+		}
 		# Unavoidable Changes
-		has_active_building = building_volgan_clone_vats
-		#Universal Gateway Origin
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_volgan_clone_vats
+			"
+			toggle = @HAS_UCmod
+		}
+		# Universal Gateway Origin
 		has_active_building = building_universal_gateway_origin_salvaged_resurrection_vat
-		# Wandering Witch: Voyagers
-		has_active_building = building_dimensional_instrument
 	}
 }
 
 merg_has_clone_army_building = {
 	OR = {
 		has_active_building = building_clone_army_clone_vat
-		# Galactic Imperium Origin
-		has_active_building = building_clone_guard_clone_vat
 		# AVB
-		has_active_building = building_avb_clone_army_clone_vat_2
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_avb_clone_army_clone_vat_2
+			"
+			toggle = @has_avb_mod
+		}
 	}
 }
 
@@ -47,54 +93,154 @@ merg_has_hospital = {
 		has_active_building = building_clinic
 		has_active_building = building_hospital
 		# ACOT
-		has_active_building = building_fe_hospital
-		has_active_building = building_acot_ae_hospital
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_fe_hospital
+				has_active_building = building_acot_ae_hospital
+			"
+			toggle = @has_ancient_caches
+		}
 		# Ad Astra Technology Mod
 		has_active_building = building_medical_mega_facility
 		# AOT
-		has_active_building = building_phanon_hospital
-		has_active_building = building_stellarite_hospital
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_phanon_hospital
+				has_active_building = building_stellarite_hospital
+			"
+			toggle = @has_acquisition_of_tech
+		}
 		# Ethics and Civics Infinity
 		has_active_building = building_medical_center
 		# Eutab
-		has_active_building = building_eutab_medigel_cultivator
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_eutab_medigel_cultivator
+			"
+			toggle = @has_eutab_unofficial
+		}
 	}
 }
 
 merg_has_planetary_shield = {
 	OR = {
-		has_building = building_planetary_shield_generator # -0.5
-		has_building = building_planetary_shield_generator_fe# -0.5
+		has_building = building_planetary_shield_generator
+		has_building = building_planetary_shield_generator_fe
+		has_building_construction = building_planetary_shield_generator
+		has_building_construction = building_planetary_shield_generator_fe
+		AND = {
+			exists = orbital_defence
+			orbital_defence = {
+				exists = starbase
+				starbase = {
+					OR = {
+						has_starbase_building = ring_orbital_shield_generator
+						is_starbase_building_building = ring_orbital_shield_generator
+					}
+				}
+			}
+		}
 		# ACOT
-		has_building = building_fe_psg # -0.5
-		has_building = building_acot_dm_psg # -0.7
-		has_building = building_acot_ae_psg # -0.95
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_fe_psg
+				has_building = building_acot_dm_psg
+				has_building = building_acot_ae_psg
+				has_building_construction = building_fe_psg
+				has_building_construction = building_acot_dm_psg
+				has_building_construction = building_acot_ae_psg
+			"
+			toggle = @has_ancient_caches
+		}
 		# AOT
-		has_building = building_phanon_psg # -0.99
-		has_building = building_stellarite_psg # -1
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_phanon_psg
+				has_building = building_stellarite_psg
+				has_building_construction = building_phanon_psg
+				has_building_construction = building_stellarite_psg
+			"
+			toggle = @has_acquisition_of_tech
+		}
 		# AshArms Aquarius History
-		has_building = ADF_building_PGF_0547 # -5.5
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = ADF_building_PGF_0547
+				has_building_construction = ADF_building_PGF_0547
+			"
+			toggle = @asharm_mod
+		}
 		# AVB
-		has_building = building_avb_planetary_shield_generator_2 # -0.65
-		has_building = building_avb_planetary_shield_generator_3 # -0.85
-		has_building = building_avb_dark_matter_planetary_shield_generator # -0.95
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_avb_planetary_shield_generator_2
+				has_building = building_avb_planetary_shield_generator_3
+				has_building = building_avb_dark_matter_planetary_shield_generator
+				has_building_construction = building_avb_planetary_shield_generator_2
+				has_building_construction = building_avb_planetary_shield_generator_3
+				has_building_construction = building_avb_dark_matter_planetary_shield_generator
+			"
+			toggle = @has_avb_mod
+		}
 		# Gigas
-		has_building = building_giga_planetary_shield_generator_1 # -0.6
-		has_building = building_giga_planetary_shield_generator_2 # -0.7
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_giga_planetary_shield_generator_1
+				has_building = building_giga_planetary_shield_generator_2
+				has_building_construction = building_giga_planetary_shield_generator_1
+				has_building_construction = building_giga_planetary_shield_generator_2
+			"
+			toggle = @has_gigastructures
+		}
 		# More Events Mod
-		has_building = building_mem_planetary_shield_generator # -0.5
-		has_building = building_mem_planetary_shield_generator_heavy # -0.6
-		has_building = building_mem_planetary_shield_generator_orila # -0.7
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_mem_planetary_shield_generator
+				has_building = building_mem_planetary_shield_generator_heavy
+				has_building = building_mem_planetary_shield_generator_orila
+				has_building_construction = building_mem_planetary_shield_generator
+				has_building_construction = building_mem_planetary_shield_generator_heavy
+				has_building_construction = building_mem_planetary_shield_generator_orila
+			"
+			toggle = @has_more_events_mod
+		}
 		# Nirvana Empire Project
-		has_building = building_sky_shield # -1
+		has_building = building_sky_shield
+		has_building_construction = building_sky_shield
 		# Reworked Advanced Ascension
-		has_building = AAR_bldn_VEIL_shield_generator_T5 # -0.35
+		has_building = AAR_bldn_VEIL_shield_generator_T5
+		has_building_construction = AAR_bldn_VEIL_shield_generator_T5
 		# Star Wars: Kuat Ancient Empire
-		has_building = building_kuat_shield # -1
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_kuat_shield
+				has_building_construction = building_kuat_shield
+			"
+			toggle = @sw_kuat_mod
+		}
 		# ThaumStellaris
-		has_building = building_tc_rune_shield_t1 # -0.5
-		has_building = building_tc_rune_shield_t2 # -0.7
-		has_building = building_tc_rune_shield_t3 # -0.9
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_tc_rune_shield_t1
+				has_building = building_tc_rune_shield_t2
+				has_building = building_tc_rune_shield_t3
+				has_building_construction = building_tc_rune_shield_t1
+				has_building_construction = building_tc_rune_shield_t2
+				has_building_construction = building_tc_rune_shield_t3
+			"
+			toggle = @has_tc_mod
+		}
 	}
 }
 
@@ -104,7 +250,13 @@ merg_has_minerals_building = {
 		has_building = building_mineral_purification_plant
 		has_building = building_mineral_purification_hub
 		# APSR
-		has_apsr_produce_minerals = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_apsr_produce_minerals = yes
+			"
+			toggle = @has_apsr
+		}
 	}
 }
 
@@ -115,17 +267,47 @@ merg_has_energy_building = {
         has_building = building_betharian_power_plant
 		has_building = building_waste_reprocessing_center
 		# Ancient Empire
-		has_building = ag_class_5_singularity
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = ag_class_5_singularity
+			"
+			toggle = @ag_null_edict_length
+		}
 		# APSR
-		has_apsr_produce_energy = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_apsr_produce_energy = yes
+			"
+			toggle = @has_apsr
+		}
 		# AVB
-		has_building = building_avb_betharian_power_plant_2
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_avb_betharian_power_plant_2
+			"
+			toggle = @has_avb_mod
+		}
 		# EUTAB
-		eutab_has_generator_building = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				eutab_has_generator_building = yes
+			"
+			toggle = @has_eutab_unofficial
+		}
 		# Plentiful Traditions
 		has_building = building_plentiful_traditions_trading_depot
 		# Wula Fallen Empire
-		has_building = building_wula_singularity
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_wula_singularity
+			"
+			toggle = @wula_compatch_var
+		}
 	}
 }
 
@@ -135,16 +317,40 @@ merg_has_food_building = {
 		has_building = building_food_processing_center
 		has_building = building_hydroponics_farm
 		# APSR
-		has_apsr_produce_food = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_apsr_produce_food = yes
+			"
+			toggle = @has_apsr
+		}
 		# AVB
-		has_building = building_avb_hydroponics_farm_2
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_avb_hydroponics_farm_2
+			"
+			toggle = @has_avb_mod
+		}
 		# EUTAB
-		eutab_has_farming_building = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				eutab_has_farming_building = yes
+			"
+			toggle = @has_eutab_unofficial
+		}
 		# Plentiful Traditions
 		has_building = building_plentiful_traditions_pillar_of_affliction
 		has_building = building_plentiful_traditions_advanced_pillar_of_affliction
 		# Wula Fallen Empire
-		has_building = building_wula_nourishment_center
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_wula_nourishment_center
+			"
+			toggle = @wula_compatch_var
+		}
 	}
 }
 
@@ -155,35 +361,77 @@ merg_has_foundry_building = {
 		has_active_building = building_foundry_3
 		has_active_building = building_nano_forge
 		# ACOT
-		has_active_building = building_fe_alloy_forge
-		has_active_building = building_acot_ae_alloy_forge
-		has_active_building = building_acot_ae_nano_forge
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_fe_alloy_forge
+				has_active_building = building_acot_ae_alloy_forge
+				has_active_building = building_acot_ae_nano_forge
+			"
+			toggle = @has_ancient_caches
+		}
 		# AOT
-		has_active_building = building_fe_nano_forge
-		has_active_building = building_phanon_nano_forge
-		has_active_building = building_phanon_alloy_forge
-		has_active_building = building_stellarite_nano_forge
-		has_active_building = building_stellarite_alloy_forge
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_fe_nano_forge
+				has_active_building = building_phanon_nano_forge
+				has_active_building = building_phanon_alloy_forge
+				has_active_building = building_stellarite_nano_forge
+				has_active_building = building_stellarite_alloy_forge
+			"
+			toggle = @has_acquisition_of_tech
+		}
 		# APSR
-		has_apsr_produce_alloys = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_apsr_produce_alloys = yes
+			"
+			toggle = @has_apsr
+		}
 		# AVB
-		has_active_building = building_avb_foundry_4
-		has_active_building = building_avb_foundry_5
-		has_active_building = building_avb_foundry_6
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_avb_foundry_4
+				has_active_building = building_avb_foundry_5
+				has_active_building = building_avb_foundry_6
+			"
+			toggle = @has_avb_mod
+		}
 		# EDA
-		has_active_building = eda_building_alloy_foundry
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = eda_building_alloy_foundry
+			"
+			toggle = @eda_mod
+		}
 		# Protoss
 		has_active_building = protoss_building_bf
 		# Warship Girls R and MIST Species
-		has_active_building = building_sep_foundry
-		has_active_building = building_sep_foundry2
-		has_active_building = building_wsg_foundry
-		has_active_building = building_gray_nano_foundry
-		has_active_building = building_gray_nano_foundry2
-		has_active_building = building_sh_foundry
-		has_active_building = building_sh_foundryU
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_sep_foundry
+				has_active_building = building_sep_foundry2
+				has_active_building = building_wsg_foundry
+				has_active_building = building_gray_nano_foundry
+				has_active_building = building_gray_nano_foundry2
+				has_active_building = building_sh_foundry
+				has_active_building = building_sh_foundryU
+			"
+			toggle = @wsg_mod
+		}
 		# Wula Fallen Empire
-		has_active_building = building_wula_foundry
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_wula_foundry
+			"
+			toggle = @wula_compatch_var
+		}
 	}
 }
 
@@ -194,26 +442,68 @@ merg_has_manufacturing_building = {
 		has_active_building = building_factory_3
 		has_active_building = building_affluence_center
 		# ACOT
-		has_active_building = building_fe_factory
-		has_active_building = building_acot_ae_factory
-		has_active_building = building_acot_ae_affluence_center
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_fe_factory
+				has_active_building = building_acot_ae_factory
+				has_active_building = building_acot_ae_affluence_center
+			"
+			toggle = @has_ancient_caches
+		}
 		# AOT
-		has_active_building = building_fe_affluence_center
-		has_active_building = building_phanon_affluence_center
-		has_active_building = building_phanon_civilian_factory
-		has_active_building = building_stellarite_affluence_center
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_fe_affluence_center
+				has_active_building = building_phanon_affluence_center
+				has_active_building = building_phanon_civilian_factory
+				has_active_building = building_stellarite_affluence_center
+			"
+			toggle = @has_acquisition_of_tech
+		}
 		# APSR
-		has_apsr_produce_goods = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_apsr_produce_goods = yes
+			"
+			toggle = @has_apsr
+		}
 		# AVB
-		has_active_building = building_avb_factory_4
-		has_active_building = building_avb_factory_5
-		has_active_building = building_avb_factory_6
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_avb_factory_4
+				has_active_building = building_avb_factory_5
+				has_active_building = building_avb_factory_6
+			"
+			toggle = @has_avb_mod
+		}
 		# EDA
-		has_active_building = eda_building_factory
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = eda_building_factory
+			"
+			toggle = @eda_mod
+		}
 		# GPM
-		has_active_building = gpm_building_manufactory_hub
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = gpm_building_manufactory_hub
+			"
+			toggle = @has_guillis_planet_modifiers
+		}
 		# Warship Girls R and MIST Species
-		has_active_building = building_sep_foundry
-		has_active_building = building_gray_nano_factory
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_sep_foundry
+				has_active_building = building_gray_nano_factory
+			"
+			toggle = @wsg_mod
+		}
 	}
 }

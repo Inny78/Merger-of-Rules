@@ -8,21 +8,25 @@ action_reveal_presence = {
 	icon = "GFX_diplomacy_reveal_presence"
 	auto_accepted = yes
 	sound = fc_ui_reveal_yourself_button
-	
+
 	potential = {
 		hidden_trigger = {
 			OR = {
 				merg_is_default_empire = yes
 				# Wula Fallen Empire
-				AND = {
-					has_global_flag = has_fallen_empire_player
-					is_country_type = fallen_empire
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = fallen_empire
+					"
+					toggle = @wula_compatch_var
 				}
 			}
 			from = {
 				is_country_type = primitive
 				NOT = { has_country_flag = @diplo_flag }
 				NOT = { current_awareness_level = full }
+				observation_owner_is_actor = yes
 			}
 		}
 	}
@@ -115,7 +119,8 @@ action_reveal_presence = {
 					from = {
 						OR = {
 							has_country_flag = synthetic_empire
-							has_authority = auth_machine_intelligence
+							is_machine_empire = yes
+							is_individual_machine = yes
 						}
 					}
 				}
@@ -131,7 +136,8 @@ action_reveal_presence = {
 					from = { has_civic = civic_machine_terminator }
 					OR = {
 						has_country_flag = synthetic_empire
-						has_authority = auth_machine_intelligence
+							is_machine_empire = yes
+							is_individual_machine = yes
 					}
 				}
 			}
@@ -151,7 +157,7 @@ action_reveal_presence = {
 			}
 		}
 	}
-	
+
 	on_accept = {
 		from = {
 			switch = {
@@ -194,7 +200,7 @@ action_reveal_presence = {
 			country_event = { id = first_contact.6000 scopes = { from = from } }
 		}
 	}
-	
+
 	should_ai_propose = {
 		weight = 0
 
@@ -220,19 +226,23 @@ action_societal_enlightenment = {
 			OR = {
 				merg_is_default_empire = yes
 				# Wula Fallen Empire
-				AND = {
-					has_global_flag = has_fallen_empire_player
-					is_country_type = fallen_empire
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = fallen_empire
+					"
+					toggle = @wula_compatch_var
 				}
 			}
 			from = {
 				is_country_type = primitive
 				NOT = { has_country_flag = @diplo_flag }
-				NOR = { 
+				NOR = {
 					is_under_societal_enlightenment = root
 					has_country_flag = solarpunk_country
 				}
 				current_awareness_level = full
+				observation_owner_is_actor = yes
 			}
 		}
 	}
@@ -312,7 +322,8 @@ action_societal_enlightenment = {
 					from = {
 						OR = {
 							has_country_flag = synthetic_empire
-							has_authority = auth_machine_intelligence
+							is_machine_empire = yes
+							is_individual_machine = yes
 						}
 					}
 				}
@@ -328,20 +339,21 @@ action_societal_enlightenment = {
 					from = { has_civic = civic_machine_terminator }
 					OR = {
 						has_country_flag = synthetic_empire
-						has_authority = auth_machine_intelligence
+							is_machine_empire = yes
+							is_individual_machine = yes
 					}
 				}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "ACTION_CANNOT_INTERFERE_POLICY"
-			OR = { 
+			OR = {
 				has_policy_flag = interference_subtle
 				has_policy_flag = interference_active
 			}
 		}
 	}
-	
+
 	on_accept = {
 		hidden_effect = {
 			from = {
@@ -403,15 +415,19 @@ action_stop_societal_enlightenment = {
 			OR = {
 				merg_is_default_empire = yes
 				# Wula Fallen Empire
-				AND = {
-					has_global_flag = has_fallen_empire_player
-					is_country_type = fallen_empire
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = fallen_empire
+					"
+					toggle = @wula_compatch_var
 				}
 			}
 			from = {
 				is_country_type = primitive
 				NOT = { has_country_flag = @diplo_flag }
 				is_under_societal_enlightenment = root
+				observation_owner_is_actor = yes
 			}
 		}
 	}
@@ -451,9 +467,12 @@ action_open_technological_enlightenment = {
 			OR = {
 				merg_is_default_empire = yes
 				# Wula Fallen Empire
-				AND = {
-					has_global_flag = has_fallen_empire_player
-					is_country_type = fallen_empire
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = fallen_empire
+					"
+					toggle = @wula_compatch_var
 				}
 			}
 			from = {
@@ -464,6 +483,7 @@ action_open_technological_enlightenment = {
 					is_under_open_technological_enlightenment = root
 					has_country_flag = solarpunk_country
 				}
+				observation_owner_is_actor = yes
 			}
 		}
 	}
@@ -479,7 +499,14 @@ action_open_technological_enlightenment = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_recipient_not_tech_frozen"
-			from = { NOT = { has_country_flag =  tech_frozen } }
+			from = {
+				NOR = {
+					has_country_flag =  tech_frozen
+					capital_scope = {
+						merg_is_habitat = yes
+					}
+				}
+			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
@@ -545,7 +572,8 @@ action_open_technological_enlightenment = {
 					from = {
 						OR = {
 							has_country_flag = synthetic_empire
-							has_authority = auth_machine_intelligence
+							is_machine_empire = yes
+							is_individual_machine = yes
 						}
 					}
 				}
@@ -561,7 +589,8 @@ action_open_technological_enlightenment = {
 					from = { has_civic = civic_machine_terminator }
 					OR = {
 						has_country_flag = synthetic_empire
-						has_authority = auth_machine_intelligence
+							is_machine_empire = yes
+							is_individual_machine = yes
 					}
 				}
 			}
@@ -575,14 +604,15 @@ action_open_technological_enlightenment = {
 					from = { has_civic = civic_machine_terminator }
 					OR = {
 						has_country_flag = synthetic_empire
-						has_authority = auth_machine_intelligence
+							is_machine_empire = yes
+							is_individual_machine = yes
 					}
 				}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "ACTION_CANNOT_INTERFERE_POLICY"
-			OR = { 
+			OR = {
 				has_policy_flag = interference_subtle
 				has_policy_flag = interference_active
 			}
@@ -592,7 +622,7 @@ action_open_technological_enlightenment = {
 			has_policy_flag = enlightenment_allowed
 		}
 	}
-	
+
 	on_accept = {
 		hidden_effect = {
 			from = {
@@ -665,7 +695,7 @@ action_open_technological_enlightenment = {
 			}
 		}
 	}
-	
+
 	should_ai_propose = {
 		weight = 0
 
@@ -714,25 +744,29 @@ action_stop_open_technological_enlightenment = {
 	auto_accepted = yes
 	should_show_auto_accept_message_recipient = yes
 	action_type = negative
-	
+
 	potential = {
 		hidden_trigger = {
 			OR = {
 				merg_is_default_empire = yes
 				# Wula Fallen Empire
-				AND = {
-					has_global_flag = has_fallen_empire_player
-					is_country_type = fallen_empire
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = fallen_empire
+					"
+					toggle = @wula_compatch_var
 				}
 			}
 			from = {
 				is_country_type = primitive
 				NOT = { has_country_flag = @diplo_flag }
 				is_under_open_technological_enlightenment = root
+				observation_owner_is_actor = yes
 			}
 		}
 	}
-	
+
 	on_accept = {
 		hidden_effect = {
 			from = {
@@ -773,9 +807,12 @@ action_pre_ftl_trade = {
 			OR = {
 				merg_is_default_empire = yes
 				# Wula Fallen Empire
-				AND = {
-					has_global_flag = has_fallen_empire_player
-					is_country_type = fallen_empire
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = fallen_empire
+					"
+					toggle = @wula_compatch_var
 				}
 			}
 			from = {
@@ -784,10 +821,11 @@ action_pre_ftl_trade = {
 				NOT = { has_pre_ftl_trade = root }
 				current_awareness_level = full
 				NOT = { has_country_flag =  fotd_seperatist_country@root }
+				observation_owner_is_actor = yes
 			}
 		}
 	}
-	
+
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_recipient_not_invaded"
@@ -857,7 +895,8 @@ action_pre_ftl_trade = {
 					from = {
 						OR = {
 							has_country_flag = synthetic_empire
-							has_authority = auth_machine_intelligence
+							is_machine_empire = yes
+							is_individual_machine = yes
 						}
 					}
 				}
@@ -873,14 +912,15 @@ action_pre_ftl_trade = {
 					from = { has_civic = civic_machine_terminator }
 					OR = {
 						has_country_flag = synthetic_empire
-						has_authority = auth_machine_intelligence
+							is_machine_empire = yes
+							is_individual_machine = yes
 					}
 				}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "ACTION_CANNOT_INTERFERE_POLICY"
-			OR = { 
+			OR = {
 				has_policy_flag = interference_subtle
 				has_policy_flag = interference_active
 			}
@@ -901,7 +941,7 @@ action_pre_ftl_trade = {
 			}
 		}
 	}
-	
+
 	should_ai_propose = {
 		weight = 0
 
@@ -959,25 +999,29 @@ action_stop_pre_ftl_trade = {
 	auto_accepted = yes
 	should_show_auto_accept_message_recipient = yes
 	action_type = negative
-	
+
 	potential = {
 		hidden_trigger = {
 			OR = {
 				merg_is_default_empire = yes
 				# Wula Fallen Empire
-				AND = {
-					has_global_flag = has_fallen_empire_player
-					is_country_type = fallen_empire
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = fallen_empire
+					"
+					toggle = @wula_compatch_var
 				}
 			}
 			from = {
 				is_country_type = primitive
 				NOT = { has_country_flag = @diplo_flag }
 				has_pre_ftl_trade = root
+				observation_owner_is_actor = yes
 			}
 		}
 	}
-	
+
 	on_accept = {
 		hidden_effect = {
 			from = {
@@ -1016,15 +1060,18 @@ action_open_pre_ftl_homeworld = {
 	requires_actor_independence = no
 	requires_recipient_independence = no
 	action_type = neutral
-	
+
 	potential = {
 		hidden_trigger = {
 			OR = {
 				merg_is_default_empire = yes
 				# Wula Fallen Empire
-				AND = {
-					has_global_flag = has_fallen_empire_player
-					is_country_type = fallen_empire
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = fallen_empire
+					"
+					toggle = @wula_compatch_var
 				}
 			}
 			from = {

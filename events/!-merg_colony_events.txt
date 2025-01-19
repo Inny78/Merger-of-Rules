@@ -6,14 +6,14 @@ planet_event = {
 	desc = {
 		trigger = {
 			NOT = {
-				owner = { has_origin = origin_subterranean }
+				owner = { is_subterranean_empire = yes }
 			}
 		}
 		text = "colony.50.desc"
 	}
 	desc = {
 		trigger = {
-			owner = { has_origin = origin_subterranean }
+			owner = { is_subterranean_empire = yes }
 		}
 		text = "colony.50.desc.subterranean"
 	}

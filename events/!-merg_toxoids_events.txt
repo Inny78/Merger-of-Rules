@@ -25,8 +25,22 @@ planet_event = {
 			merg_is_hab_ringworld = yes
 			habitable_structure = yes
 			is_artificial = yes
-			is_giga_maginot_world = yes
-			pd_aw_is_wasteland_planet = yes
+			# Gigas
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					is_giga_maginot_world = yes
+				"
+				toggle = @has_gigastructures
+			}
+			# Planetary Diversity Ascension Worlds
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					pd_aw_is_wasteland_planet = yes
+				"
+				toggle = @has_planetary_diversity_ascension_worlds
+			}
 		}
 		exists = owner
 		owner = { is_relentless_industrialist_empire = yes }

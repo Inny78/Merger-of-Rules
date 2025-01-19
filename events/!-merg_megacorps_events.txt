@@ -15,73 +15,81 @@ planet_event = {
 	}
 
 	immediate = {
-		# Planetary Diversity
-		remove_modifier = engineered_environment
-		remove_modifier = engineered_environment_gaia
 		# GPM
-		if = {
-			limit = { merg_has_gpm = yes }
-			set_planet_flag = gpm_is_new_ecumenopolis
-			planet_event = { id = gpm_terraform.78871 }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				set_planet_flag = gpm_is_new_ecumenopolis
+				planet_event = { id = gpm_terraform.78871 }
+			"
+			toggle = @has_guillis_planet_modifiers
 		}
 	}
-
-	option = {
-		name = mega.200.a
-		exclusive_trigger = { merg_has_expanded_events = no }
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			option = {
+				name = mega.200.a
+			}
+		"
+		toggle = @[ 1 - expevents_compatch_var ]
 	}
-	option = {
-		name = mega.200.a
-		exclusive_trigger = { merg_has_expanded_events = yes }
-		if = {
-			limit = {
-				has_planet_flag = damaged_homeworld
-			}
-			remove_modifier = damaged_ecosystem
-			remove_deposit = d_damaged_ecosystem
-			if = {
-				limit = { has_modifier = deteriorating_ecosystem }
-				remove_modifier = deteriorating_ecosystem
-			}
-			if = {
-				limit = { has_modifier = new_earth_planet }
-				remove_modifier = new_earth_planet
-			}
-			hidden_effect = { remove_planet_flag = damaged_homeworld }
-			owner = {
-				add_monthly_resource_mult = {
-					resource = unity
-					value = @tier5unityreward
-				}
-				add_modifier = { modifier = saved_homeworld days = 7200 }
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			option = {
+				name = mega.200.a
 				if = {
-					limit = { has_modifier = new_earth_country }
-					remove_modifier = new_earth_country
-				}
-				add_random_research_option = {
-					add_progress = 0.25
-					category  = industry
-					area = engineering
-					ignore_prereqs = no
-					fail_effects = {
-						add_monthly_resource_mult = {
-							resource = engineering_research
-							value = @tier5researchreward
-							min = @tier5researchmin
-							max = @tier5researchmax
-						}
+					limit = {
+						has_planet_flag = damaged_homeworld
 					}
-				}
-				#end_event_chain = "damaged_ecosystem_chain"
-				hidden_effect = {
-					every_owned_pop = {
-						add_modifier = {
-							modifier = mandate_fulfilled_mod
-							days = 720
+					remove_modifier = damaged_ecosystem
+					remove_deposit = d_damaged_ecosystem
+					if = {
+						limit = { has_modifier = deteriorating_ecosystem }
+						remove_modifier = deteriorating_ecosystem
+					}
+					if = {
+						limit = { has_modifier = new_earth_planet }
+						remove_modifier = new_earth_planet
+					}
+					hidden_effect = { remove_planet_flag = damaged_homeworld }
+					owner = {
+						add_monthly_resource_mult = {
+							resource = unity
+							value = @tier5unityreward
+						}
+						add_modifier = { modifier = saved_homeworld days = 7200 }
+						if = {
+							limit = { has_modifier = new_earth_country }
+							remove_modifier = new_earth_country
+						}
+						add_random_research_option = {
+							add_progress = 0.25
+							category  = industry
+							area = engineering
+							ignore_prereqs = no
+							fail_effects = {
+								add_monthly_resource_mult = {
+									resource = engineering_research
+									value = @tier5researchreward
+									min = @tier5researchmin
+									max = @tier5researchmax
+								}
+							}
+						}
+						hidden_effect = {
+							every_owned_pop = {
+								add_modifier = {
+									modifier = mandate_fulfilled_mod
+									days = 720
+								}
+							}
 						}
 					}
 				}
 			}
-		}
+		"
+		toggle = @expevents_compatch_var
 	}
 }

@@ -1,9 +1,0 @@
-# Irony this is a placeholder file please ignore it
-cruel_pain_ship_labor_module = { icon = "GFX_starbase_shipyard" section = "HANGAR_STARBASE_SECTION" construction_days = 0 potential = { always = no } resources = { category = starbase_modules } ai_weight = { weight = 0 } }
-cruel_suffering_ship_labor_module = { icon = "GFX_starbase_shipyard" section = "HANGAR_STARBASE_SECTION" construction_days = 0 potential = { always = no } resources = { category = starbase_modules } ai_weight = { weight = 0 } }
-cruel_agony_ship_labor_module = { icon = "GFX_starbase_shipyard" section = "HANGAR_STARBASE_SECTION" construction_days = 0 potential = { always = no } resources = { category = starbase_modules } ai_weight = { weight = 0 } }
-acot_starbase_shipyard = { icon = "GFX_starbase_shipyard" section = "HANGAR_STARBASE_SECTION" construction_days = 0 potential = { always = no } resources = { category = starbase_modules } ai_weight = { weight = 0 } }
-acot_sigma_starbase_shipyard = { icon = "GFX_starbase_shipyard" section = "HANGAR_STARBASE_SECTION" construction_days = 0 potential = { always = no } resources = { category = starbase_modules } ai_weight = { weight = 0 } }
-acot_phanon_starbase_shipyard = { icon = "GFX_starbase_shipyard" section = "HANGAR_STARBASE_SECTION" construction_days = 0 potential = { always = no } resources = { category = starbase_modules } ai_weight = { weight = 0 } }
-acot_theta_starbase_shipyard = { icon = "GFX_starbase_shipyard" section = "HANGAR_STARBASE_SECTION" construction_days = 0 potential = { always = no } resources = { category = starbase_modules } ai_weight = { weight = 0 } }
-virtual_shipyard_uplink = { icon = "GFX_starbase_shipyard" section = "HANGAR_STARBASE_SECTION" construction_days = 0 potential = { always = no } resources = { category = starbase_modules } ai_weight = { weight = 0 } }

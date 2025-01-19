@@ -85,7 +85,13 @@ country_event = {
 				OR = {
 					has_ethic = ethic_xenophobe
 					# Expanded Traits, Civics, Pops, and More
-					has_civic = civic_living_hosts
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							has_civic = civic_living_hosts
+						"
+						toggle = @expops_compatch_var
+					}
 				}
 			}
 			modifier = {
@@ -93,8 +99,14 @@ country_event = {
 				OR = {
 					has_ethic = ethic_fanatic_xenophobe
 					# Expanded Traits, Civics, Pops, and More
-					has_civic = civic_closed_collective
-					has_civic = civic_closed_network
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							has_civic = civic_closed_collective
+							has_civic = civic_closed_network
+						"
+						toggle = @expops_compatch_var
+					}
 				}
 			}
 		}

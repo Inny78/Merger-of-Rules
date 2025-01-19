@@ -42,7 +42,13 @@ just_researched_fe_tech = {
         last_increased_tech = tech_cosmogenesis_battlecruiser
         last_increased_tech = tech_cosmogenesis_FE_titan
         # Gigastructural Engineeering & More
-        giga_just_researched_fe_tech = yes
+        inline_script = {
+            script = merger_of_rules/toggled_code
+            code = "
+                giga_just_researched_fe_tech = yes
+			"
+            toggle = @has_gigastructures
+        }
         # More Cosmogenesis Buildings
         mcb_just_researched_fe_tech = yes
     }
@@ -56,4 +62,30 @@ is_individual_machine = {
 		}
 		is_nyto_country = yes
 	}
+}
+
+has_murderous_civic_or_origin = {
+    OR = {
+        has_valid_civic = civic_scavengers
+        has_valid_civic = civic_shadow_council
+        has_valid_civic = civic_barbaric_despoilers
+        has_valid_civic = civic_sovereign_guardianship
+        has_valid_civic = civic_cutthroat_politics
+        has_valid_civic = civic_death_cult
+        has_origin = origin_necrophage
+        has_origin = origin_legendary_leader
+        has_origin = origin_cybernetic_creed
+        has_origin = origin_overtuned
+        # Destiny: The Darkness
+        has_valid_civic = civic_paracausal_darkness
+        has_origin = origin_the_darkness
+        # Ethics and Civics Classic
+        inline_script = {
+            script = merger_of_rules/toggled_code
+            code = "
+                has_valid_civic = civic_death_cult
+			"
+            toggle = @has_ecc_cog
+        }
+    }
 }

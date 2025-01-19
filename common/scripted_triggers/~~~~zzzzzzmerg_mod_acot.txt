@@ -1,4 +1,4 @@
-############################### ACOT/AOT/SOS ###############################
+############################### ACOT/AOT/SOTS ###############################
 
 is_memeable_space_habitat = {
 	optimize_memory
@@ -6,10 +6,14 @@ is_memeable_space_habitat = {
 		habitable_structure = yes
 		merg_is_habitat = yes
 		merg_is_hab_ringworld = yes
-		# Decadence of Sanity
-		is_shroud_entrepot = yes
 		# Gigastructural Engineering & More
-		giga_habitable_structure = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_habitable_structure = yes
+			"
+			toggle = @has_gigastructures
+		}
 	}
 }
 is_memeable_ringworld = {
@@ -23,18 +27,25 @@ can_build_precursor_ship = {
 		AND = {
 			is_scope_type = megastructure
 			OR = {
-				is_megastructure_type = acot_precursor_colossus_base
-				is_megastructure_type = acot_precursor_colossus_stage_two
-				is_megastructure_type = acot_amerigo
-				is_megastructure_type = acot_amerigo_ae
-				is_megastructure_type = acot_amerigo_se
-				is_megastructure_type = acot_amerigo_oe
-				is_megastructure_type = acot_amerigo_pe
-				is_megastructure_type = acot_phanon_master_reactor_sphere
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_megastructure_type = acot_precursor_colossus_base
+						is_megastructure_type = acot_precursor_colossus_stage_two
+						is_megastructure_type = acot_amerigo
+						is_megastructure_type = acot_amerigo_ae
+						is_megastructure_type = acot_amerigo_se
+						is_megastructure_type = acot_amerigo_oe
+						is_megastructure_type = acot_amerigo_pe
+						is_megastructure_type = acot_phanon_master_reactor_sphere
+						is_megastructure_type = acot_precursor_mega_shipyard
+					"
+					toggle = @has_ancient_caches
+				}
+				# SBTG
+				is_megastructure_type = sofe_omega_spy_orb_center
+				is_megastructure_type = sofe_omega_dyson_sphere
 				is_megastructure_type = sofe_omega_nexus
-                is_megastructure_type = sofe_omega_spy_orb_center
-                is_megastructure_type = sofe_omega_dyson_sphere
-				is_megastructure_type = acot_precursor_mega_shipyard
 				is_sofe_megastructure_shipyard = yes
 				# Assault Lily
 				is_megastructure_type = college_ship_creater_3
@@ -42,17 +53,23 @@ can_build_precursor_ship = {
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_8
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9_2
-				solar_system = {
-					OR = {
-						count_starbase_buildings = {
-							type = acot_precursor_database
-							count >= 1
-							include_being_constructed = no
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						solar_system = {
+							OR = {
+								count_starbase_buildings = {
+									type = acot_precursor_database
+									count >= 1
+									include_being_constructed = no
+								}
+								starbase = {
+									is_precursor_starbase = yes
+								}
+							}
 						}
-						starbase = {
-							is_precursor_starbase = yes
-						}
-					}
+					"
+					toggle = @has_ancient_caches
 				}
 			}
 		}
@@ -60,15 +77,28 @@ can_build_precursor_ship = {
 			is_scope_type = starbase
 			OR = {
 				has_starbase_size >= juggernaut
-				has_starbase_building = acot_precursor_database	
-				is_precursor_starbase = yes
-				has_starbase_size = precursor_juggernaut
-				is_acot_advanced_starbase = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_starbase_building = acot_precursor_database
+						is_precursor_starbase = yes
+						has_starbase_size = precursor_juggernaut
+						is_acot_advanced_starbase = yes
+					"
+					toggle = @has_ancient_caches
+				}
+				# SBTG
 				is_sbtg_origin_starbase = yes
 				# Assault Lily
 				has_starbase_size >= lily_super_college_ship
 				# Gigastructural Engineering & More
-				has_starbase_module = virtual_shipyard_uplink
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_starbase_module = virtual_shipyard_uplink
+					"
+					toggle = @has_gigastructures
+				}
 			}
 		}
 	}
@@ -84,12 +114,24 @@ acot_is_partially_affected_by_cascade = {
     OR = {
 		merg_is_broken = yes
         is_planet_class = pc_shielded
-        is_acot_pmc_vault_weak = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+		        is_acot_pmc_vault_weak = yes
+			"
+			toggle = @has_ancient_caches
+		}
 		# Gigastructural Engineering & More
-		is_giga_maginot_world = yes
-		solar_system = {
-			has_star_flag = maginot_anti_jump_star
-			has_star_flag = siegfried_anti_jump_star
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_giga_maginot_world = yes
+				solar_system = {
+					has_star_flag = maginot_anti_jump_star
+					has_star_flag = siegfried_anti_jump_star
+				}
+			"
+			toggle = @has_gigastructures
 		}
     }
 }
@@ -98,47 +140,130 @@ acot_is_not_affected_by_cascade = {
 		solar_system = {
 			OR = {
 				merg_is_void_system = yes
-				ag_is_ancient_system = yes
-				is_star_class = sc_ehof_black_hole
-				has_star_flag = giga_birch_core
-			}
-		}
-        is_acot_fractured_world = yes
-		is_acot_awesome_planet_class = yes
-		is_acot_pmc_vault_strong = yes
-		merg_is_empty_space = yes
-		# Ancient Empire
-		ag_is_ancient_ringworld = yes
-		# APSR
-		has_apsr_resource_local = yes
-		# Darkspace
-		is_ds_holosphere = yes
-		is_ds_stellar_engine = yes
-		# Decadence of Sanity
-		is_shroud_entrepot = yes
-		# Gigastructural Engineering & More
-		#is_planet_class = pc_ehof_cplanet
-		#is_planet_class = pc_whc_star
-		has_planet_flag = paluushia
-		has_planet_flag = corrona
-		has_planet_flag = ndb_immune_planet
-		has_planet_flag = cant_build_here
-		has_planet_flag = cant_target_this_planet
-		giga_is_birch_world = yes
-		AND = {
-			exists = owner
-			owner = {
-				AND = {
-					is_country_type = katzenartig_imperium
-					OR = {
-						has_global_flag = katzenartig_stellarite
-						has_global_flag = katzenartig_improbable
-					}
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						ag_is_ancient_system = yes
+					"
+					toggle = @ag_null_edict_length
+				}
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_star_class = sc_ehof_black_hole
+						has_star_flag = giga_birch_core
+					"
+					toggle = @has_gigastructures
 				}
 			}
 		}
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_acot_fractured_world = yes
+				is_acot_awesome_planet_class = yes
+				is_acot_pmc_vault_strong = yes
+			"
+			toggle = @has_ancient_caches
+		}
+		merg_is_empty_space = yes
+		# Ancient Empire
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				ag_is_ancient_ringworld = yes
+			"
+			toggle = @ag_null_edict_length
+		}
+		# APSR
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_apsr_resource_local = yes
+			"
+			toggle = @has_apsr
+		}
+		# Darkspace
+		is_ds_holosphere = yes
+		is_ds_stellar_engine = yes
+		# Gigastructural Engineering & More
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_ehof_cplanet
+				is_planet_class = pc_whc_star
+				has_planet_flag = paluushia
+				has_planet_flag = corrona
+				has_planet_flag = ndb_immune_planet
+				has_planet_flag = cant_build_here
+				has_planet_flag = cant_target_this_planet
+				giga_is_birch_world = yes
+				AND = {
+					exists = owner
+					owner = {
+						AND = {
+							is_country_type = katzenartig_imperium
+							OR = {
+								has_global_flag = katzenartig_stellarite
+								has_global_flag = katzenartig_improbable
+							}
+						}
+					}
+				}
+			"
+			toggle = @has_gigastructures
+		}
 		# Secrets of the Shroud
-		is_sots_soulsphere = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_sots_soulsphere = yes
+			"
+			toggle = @has_sots_mod
+		}
     }
 }
 acot_has_planetary_shield_building = { merg_has_planetary_shield = yes }
+is_memeable_planet = {
+	OR = {
+		is_giga_planet = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_pd_planet_class_all = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+		AND = {
+			colonizable_planet = yes
+			is_artificial = no
+		}
+	}
+}
+
+# GIGA STUFF HERE
+is_giga_planet = {
+	if = {
+		limit = { has_gigastructures = no }
+		always = no
+	}
+	else = {
+		OR = {
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					giga_is_pc_disco_moon = yes
+					giga_is_pc_strip_mined = yes
+					giga_is_pc_core_mined = yes
+					giga_is_pc_melted_frozen = yes
+					giga_is_lifeless = yes
+					giga_is_habitable_gas_giant = yes
+					giga_is_pc_giga_planetary_computer = yes
+					giga_is_pc_katzenland = yes
+					giga_is_pc_red_toxic = yes
+				"
+				toggle = @has_gigastructures
+			}
+		}
+	}
+}

@@ -5,13 +5,11 @@ gov_bur_collectivism = { possible = { always = no } weight = { base = 0 } ruler_
 gov_communist_dictatorship = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
 gov_cor_dictatorship = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
 gov_enlighted_socialism = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
-gov_eternal_continuum = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
 gov_liberal_democracy = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
 gov_megachurch_fam = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
 gov_optimized_venture = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
 gov_optimized_venture_fam = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
 gov_par_monarchy = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
-gov_parasitic_overmind = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
 gov_peoples_commissariat = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
 gov_peoples_republic = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }
 gov_research_development_corp = { possible = { always = no } weight = { base = 0 } ruler_title = RT_EMPEROR ruler_title_female = RT_EMPRESS }

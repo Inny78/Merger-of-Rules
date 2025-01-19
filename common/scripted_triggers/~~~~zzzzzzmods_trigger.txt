@@ -11,27 +11,66 @@ has_upgraded_capital_4 = {
     if = {
         limit = { has_modifier = resort_colony }
         custom_tooltip = {
-		    fail_text = "requires_building_resort_capital_3"
-			has_building = building_avb_resort_capital_3
-			# ACOT
-			has_building = building_acot_dm_ancient_palace
-			has_building = building_acot_ae_ancient_palace
-			has_sbtg_upgraded_capital = yes
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+				    fail_text = requires_building_resort_capital_3
+				"
+				toggle = @has_avb_mod
+			}
 			has_building = building_ancient_palace
-			has_eternal_palace = yes
-			has_building = building_phanon_tower
-			has_building = building_acot_ruined_giga_fortress
+			# ACOT
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_building = building_acot_dm_ancient_palace
+					has_building = building_acot_ae_ancient_palace
+					has_building = building_phanon_tower
+					has_building = building_acot_ruined_giga_fortress
+				"
+				toggle = @has_ancient_caches
+			}
+			# ACOT SBTG
+			has_sbtg_upgraded_capital = yes
 			# AOT
-			has_building = building_stellarite_palace
-			has_building = building_stellarite_control_center
-			has_building = building_stellarite_hive_cluster
-			has_building = building_phanon_palace
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_building = building_stellarite_palace
+					has_building = building_stellarite_control_center
+					has_building = building_stellarite_hive_cluster
+					has_building = building_phanon_palace
+				"
+				toggle = @has_acquisition_of_tech
+			}
+			# AVB
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_building = building_avb_resort_capital_3
+				"
+				toggle = @has_avb_mod
+			}
 			# EDA
-			has_building = eda_building_imperial_capital
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_building = eda_building_imperial_capital
+				"
+				toggle = @eda_mod
+			}
 			# Star Wars: Kuat Ancient Empire
-			has_building = building_kuat_command_center
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+						has_building = building_kuat_command_center
+					"
+				toggle = @sw_kuat_mod
+			}
 			# Twinks Atlantean
 			has_building = building_ancient_palace_at
+			# Twinks Eternal Empire
+			has_building = building_eternal_palace
 			# Twinks Kaldorei
 			has_building = building_nightelf_palace
 	    }
@@ -39,27 +78,66 @@ has_upgraded_capital_4 = {
     else_if = {
         limit = { has_modifier = slave_colony }
         custom_tooltip = {
-            fail_text = "requires_building_slave_capital_3"
-			has_building = building_avb_slave_capital_3
-			# ACOT
-			has_building = building_acot_dm_ancient_palace
-			has_building = building_acot_ae_ancient_palace
-			has_sbtg_upgraded_capital = yes
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+		            fail_text = requires_building_slave_capital_3
+				"
+				toggle = @has_avb_mod
+			}
 			has_building = building_ancient_palace
-			has_eternal_palace = yes
-			has_building = building_phanon_tower
-			has_building = building_acot_ruined_giga_fortress
+			# ACOT
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_building = building_acot_dm_ancient_palace
+					has_building = building_acot_ae_ancient_palace
+					has_building = building_phanon_tower
+					has_building = building_acot_ruined_giga_fortress
+				"
+				toggle = @has_ancient_caches
+			}
+			# ACOT SBTG
+			has_sbtg_upgraded_capital = yes
 			# AOT
-			has_building = building_stellarite_palace
-			has_building = building_stellarite_control_center
-			has_building = building_stellarite_hive_cluster
-			has_building = building_phanon_palace
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_building = building_stellarite_palace
+					has_building = building_stellarite_control_center
+					has_building = building_stellarite_hive_cluster
+					has_building = building_phanon_palace
+				"
+				toggle = @has_acquisition_of_tech
+			}
+			# AVB
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_building = building_avb_slave_capital_3
+				"
+				toggle = @has_avb_mod
+			}
 			# EDA
-			has_building = eda_building_imperial_capital
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_building = eda_building_imperial_capital
+				"
+				toggle = @eda_mod
+			}
 			# Star Wars: Kuat Ancient Empire
-			has_building = building_kuat_command_center
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+						has_building = building_kuat_command_center
+					"
+				toggle = @sw_kuat_mod
+			}
 			# Twinks Atlantean
 			has_building = building_ancient_palace_at
+			# Twinks Eternal Empire
+			has_building = building_eternal_palace
 			# Twinks Kaldorei
 			has_building = building_nightelf_palace
         }
@@ -72,33 +150,63 @@ has_upgraded_capital_4 = {
 				has_building = building_imperial_capital
 				has_building = building_imperial_machine_capital
 				has_building = building_imperial_hive_capital
-				#AVB
-				has_building = building_avb_hab_capital_4
-				# ACOT
-				has_building = building_acot_dm_ancient_palace
-				has_building = building_acot_ae_ancient_palace
-				has_building = building_acot_dm_ancient_hive_cluster
-				has_building = building_acot_ae_ancient_hive_cluster
-				has_building = building_acot_dm_ancient_control_center
-				has_building = building_acot_ae_ancient_control_center
-				has_sbtg_upgraded_capital = yes
 				has_building = building_ancient_palace
-				has_eternal_palace = yes
-				has_building = building_phanon_tower
-				has_building = building_acot_ruined_giga_fortress
+				# ACOT
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_acot_dm_ancient_palace
+						has_building = building_acot_ae_ancient_palace
+						has_building = building_acot_dm_ancient_hive_cluster
+						has_building = building_acot_ae_ancient_hive_cluster
+						has_building = building_acot_dm_ancient_control_center
+						has_building = building_acot_ae_ancient_control_center
+						has_building = building_phanon_tower
+						has_building = building_acot_ruined_giga_fortress
+					"
+					toggle = @has_ancient_caches
+				}
+				# ACOT SBTG
+				has_sbtg_upgraded_capital = yes
 				# AOT
-				has_building = building_stellarite_palace
-				has_building = building_stellarite_control_center
-				has_building = building_stellarite_hive_cluster
-				has_building = building_phanon_palace
-				has_building = building_phanon_hive_cluster
-				has_building = building_phanon_control_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_stellarite_palace
+						has_building = building_stellarite_control_center
+						has_building = building_stellarite_hive_cluster
+						has_building = building_phanon_palace
+						has_building = building_phanon_hive_cluster
+						has_building = building_phanon_control_center
+					"
+					toggle = @has_acquisition_of_tech
+				}
+				# AVB
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_avb_hab_capital_4
+					"
+					toggle = @has_avb_mod
+				}
 				# Dawn of the Republic
 				has_building = building_galactic_senate
 				# EDA
-				has_building = eda_building_imperial_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = eda_building_imperial_capital
+					"
+					toggle = @eda_mod
+				}
 				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_kuat_command_center
+					"
+					toggle = @sw_kuat_mod
+				}
 				# Twinks Atlantean
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
@@ -107,62 +215,139 @@ has_upgraded_capital_4 = {
 				has_building = building_eternal_nexus_ai
 				has_building = building_eternal_palace
 				# Wula Fallen Empire
-				merg_has_wula_capital = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_wula_archive
+						has_building = building_all_is_dust
+						has_building = building_wula_order_keep
+						has_building = building_wula_gene_bank
+					"
+					toggle = @wula_compatch_var
+				}
 			}
 		}
 	}
     else_if = {
         limit = { owner = { is_hive_empire = yes } }
         custom_tooltip = {
-            fail_text = "requires_building_hive_capital_3"
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+		            fail_text = requires_building_hive_capital_3
+				"
+				toggle = @has_avb_mod
+			}
 		    OR = {
-		    	has_building = building_avb_hive_capital_3
-		    	has_building = building_avb_hive_capital_4
 		    	has_building = building_imperial_hive_capital
 				# ACOT
-				has_building = building_acot_dm_ancient_hive_cluster
-				has_building = building_acot_ae_ancient_hive_cluster
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_acot_dm_ancient_hive_cluster
+						has_building = building_acot_ae_ancient_hive_cluster
+						has_building = building_phanon_tower
+						has_building = building_acot_ruined_giga_fortress
+					"
+					toggle = @has_ancient_caches
+				}
+				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
-				has_eternal_palace = yes
-				has_building = building_phanon_tower
-				has_building = building_acot_ruined_giga_fortress
 				# All That Is GRIMDARK
 				has_building = building_hive_major_capital_sick
 				# AOT
-				has_building = building_stellarite_hive_cluster
-				has_building = building_phanon_hive_cluster
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_stellarite_hive_cluster
+						has_building = building_phanon_hive_cluster
+					"
+					toggle = @has_acquisition_of_tech
+				}
+				# AVB
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_avb_hive_capital_3
+						has_building = building_avb_hive_capital_4
+					"
+					toggle = @has_avb_mod
+				}
 				# EDA
-				has_building = eda_building_imperial_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = eda_building_imperial_capital
+					"
+					toggle = @eda_mod
+				}
 				# galacot
 				has_building = building_stellarite_galactic_hive_capital
 				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_kuat_command_center
+					"
+					toggle = @sw_kuat_mod
+				}
 		    }
         }
     }
     else_if = {
         limit = { owner = { is_machine_empire = yes } }
         custom_tooltip = {
-			fail_text = "requires_building_machine_capital_4"
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					fail_text = requires_building_machine_capital_4
+				"
+				toggle = @has_avb_mod
+			}
             OR = {
-				has_building = building_avb_machine_capital_4
-				has_building = building_avb_machine_capital_5
-				has_building = building_avb_machine_capital_6
 				has_building = building_imperial_machine_capital
 				# ACOT
-				has_building = building_acot_dm_ancient_control_center
-				has_building = building_acot_ae_ancient_control_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_acot_dm_ancient_control_center
+						has_building = building_acot_ae_ancient_control_center
+						has_building = building_phanon_tower
+						has_building = building_acot_ruined_giga_fortress
+					"
+					toggle = @has_ancient_caches
+				}
+				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
-				has_eternal_palace = yes
-				has_building = building_phanon_tower
-				has_building = building_acot_ruined_giga_fortress
 				# AOT
-				has_building = building_stellarite_control_center
-				has_building = building_phanon_control_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_stellarite_control_center
+						has_building = building_phanon_control_center
+					"
+					toggle = @has_acquisition_of_tech
+				}
+				# AVB
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_avb_machine_capital_4
+						has_building = building_avb_machine_capital_5
+						has_building = building_avb_machine_capital_6
+					"
+					toggle = @has_avb_mod
+				}
 				# galacot
 				has_building = building_stellarite_galactic_machine_capital
 				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_kuat_command_center
+					"
+					toggle = @sw_kuat_mod
+				}
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
 			}
@@ -170,35 +355,78 @@ has_upgraded_capital_4 = {
     }
     else = {
         custom_tooltip = {
-            fail_text = "requires_building_capital_4"
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+		            fail_text = requires_building_capital_4
+				"
+				toggle = @has_avb_mod
+			}
             OR = {
-			    has_building = building_avb_capital_4
-			    has_building = building_avb_capital_5
-			    has_building = building_avb_capital_6
 			    has_building = building_imperial_capital
 				# ACOT
-				has_building = building_acot_dm_ancient_palace
-				has_building = building_acot_ae_ancient_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_acot_dm_ancient_palace
+						has_building = building_acot_ae_ancient_palace
+						has_building = building_phanon_tower
+						has_building = building_acot_ruined_giga_fortress
+					"
+					toggle = @has_ancient_caches
+				}
+				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
-				has_eternal_palace = yes
-				has_building = building_phanon_tower
-				has_building = building_acot_ruined_giga_fortress
 				# All That Is GRIMDARK
 				has_building = building_system_capital_gr
 				# AOT
-				has_building = building_stellarite_palace
-				has_building = building_phanon_palace
-				# Azur Lane Stellaris DlC
-				has_building = azur_building_mind_capital
-				has_building = azur_building_mind_net_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_stellarite_palace
+						has_building = building_phanon_palace
+					"
+					toggle = @has_acquisition_of_tech
+				}
+				# AVB
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_avb_capital_4
+						has_building = building_avb_capital_5
+						has_building = building_avb_capital_6
+					"
+					toggle = @has_avb_mod
+				}
+				# Azur Lane Stellaris DLC
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = azur_building_mind_capital
+						has_building = azur_building_mind_net_capital
+					"
+					toggle = @azl_mod
+				}
 				# Dawn of the Republic
 				has_building = building_galactic_senate
 				# EDA
-				has_building = eda_building_imperial_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = eda_building_imperial_capital
+					"
+					toggle = @eda_mod
+				}
 				# Nirvana Empire Project
 				has_building = building_nirvana_empire_palace
 				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_kuat_command_center
+					"
+					toggle = @sw_kuat_mod
+				}
 				# Twinks Atlantean
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
@@ -210,7 +438,16 @@ has_upgraded_capital_4 = {
 				has_building = building_stellarite_galactic_hive_capital
 				has_building = building_stellarite_galactic_machine_capital
 				# Wula Fallen Empire
-				merg_has_wula_capital = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_wula_archive
+						has_building = building_all_is_dust
+						has_building = building_wula_order_keep
+						has_building = building_wula_gene_bank
+					"
+					toggle = @wula_compatch_var
+				}
             }
         }
     }
@@ -219,54 +456,122 @@ has_upgraded_capital_5 = {
     if = {
         limit = { owner = { is_hive_empire = yes } }
         custom_tooltip = {
-            fail_text = "requires_building_hive_capital_3"
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+		            fail_text = requires_building_hive_capital_3
+				"
+				toggle = @has_avb_mod
+			}
 		    OR = {
-		    	has_building = building_avb_hive_capital_3
-		    	has_building = building_avb_hive_capital_4
 		    	has_building = building_imperial_hive_capital
 				# ACOT
-				has_building = building_acot_dm_ancient_hive_cluster
-				has_building = building_acot_ae_ancient_hive_cluster
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_acot_dm_ancient_hive_cluster
+						has_building = building_acot_ae_ancient_hive_cluster
+						has_building = building_phanon_tower
+						has_building = building_acot_ruined_giga_fortress
+					"
+					toggle = @has_ancient_caches
+				}
+				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
-				has_eternal_palace = yes
-				has_building = building_phanon_tower
-				has_building = building_acot_ruined_giga_fortress
 				# All That Is GRIMDARK
 				has_building = building_hive_major_capital_sick
 				# AOT
-				has_building = building_stellarite_hive_cluster
-				has_building = building_phanon_hive_cluster
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_stellarite_hive_cluster
+						has_building = building_phanon_hive_cluster
+					"
+					toggle = @has_acquisition_of_tech
+				}
+				# AVB
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_avb_hive_capital_3
+						has_building = building_avb_hive_capital_4
+					"
+					toggle = @has_avb_mod
+				}
 				# EDA
-				has_building = eda_building_imperial_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = eda_building_imperial_capital
+					"
+					toggle = @eda_mod
+				}
 				# galacot
 				has_building = building_stellarite_galactic_hive_capital
 				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_kuat_command_center
+					"
+					toggle = @sw_kuat_mod
+				}
 		    }
         }
     }
     else_if = {
         limit = { owner = { is_machine_empire = yes } }
         custom_tooltip = {
-			fail_text = "requires_building_machine_capital_5"
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					fail_text = requires_building_machine_capital_5
+				"
+				toggle = @has_avb_mod
+			}
 			OR = {
-				has_building = building_avb_machine_capital_5
-				has_building = building_avb_machine_capital_6
 				has_building = building_imperial_machine_capital
 				# ACOT
-				has_building = building_acot_dm_ancient_control_center
-				has_building = building_acot_ae_ancient_control_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_acot_dm_ancient_control_center
+						has_building = building_acot_ae_ancient_control_center
+						has_building = building_phanon_tower
+						has_building = building_acot_ruined_giga_fortress
+					"
+					toggle = @has_ancient_caches
+				}
+				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
-				has_eternal_palace = yes
-				has_building = building_phanon_tower
-				has_building = building_acot_ruined_giga_fortress
 				# AOT
-				has_building = building_stellarite_control_center
-				has_building = building_phanon_control_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_stellarite_control_center
+						has_building = building_phanon_control_center
+					"
+					toggle = @has_acquisition_of_tech
+				}
+				# AVB
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_avb_machine_capital_5
+						has_building = building_avb_machine_capital_6
+					"
+					toggle = @has_avb_mod
+				}
 				# galacot
 				has_building = building_stellarite_galactic_machine_capital
 				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_kuat_command_center
+					"
+					toggle = @sw_kuat_mod
+				}
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
 			}
@@ -274,34 +579,77 @@ has_upgraded_capital_5 = {
     }
     else = {
         custom_tooltip = {
-            fail_text = "requires_building_capital_5"
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+		            fail_text = requires_building_capital_5
+				"
+				toggle = @has_avb_mod
+			}
             OR = {
-			    has_building = building_avb_capital_5
-			    has_building = building_avb_capital_6
 			    has_building = building_imperial_capital
 				# ACOT
-				has_building = building_acot_dm_ancient_palace
-				has_building = building_acot_ae_ancient_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_acot_dm_ancient_palace
+						has_building = building_acot_ae_ancient_palace
+						has_building = building_phanon_tower
+						has_building = building_acot_ruined_giga_fortress
+					"
+					toggle = @has_ancient_caches
+				}
+				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
-				has_eternal_palace = yes
-				has_building = building_phanon_tower
-				has_building = building_acot_ruined_giga_fortress
 				# All That Is GRIMDARK
 				has_building = building_system_capital_gr
 				# AOT
-				has_building = building_stellarite_palace
-				has_building = building_phanon_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_stellarite_palace
+						has_building = building_phanon_palace
+					"
+					toggle = @has_acquisition_of_tech
+				}
+				# AVB
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_avb_capital_5
+						has_building = building_avb_capital_6
+					"
+					toggle = @has_avb_mod
+				}
 				# Azur Lane Stellaris DlC
-				has_building = azur_building_mind_capital
-				has_building = azur_building_mind_net_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = azur_building_mind_capital
+						has_building = azur_building_mind_net_capital
+					"
+					toggle = @azl_mod
+				}
 				# Dawn of the Republic
 				has_building = building_galactic_senate
 				# EDA
-				has_building = eda_building_imperial_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = eda_building_imperial_capital
+					"
+					toggle = @eda_mod
+				}
 				# Nirvana Empire Project
 				has_building = building_nirvana_empire_palace
 				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_kuat_command_center
+					"
+					toggle = @sw_kuat_mod
+				}
 				# Twinks Atlantean
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
@@ -313,7 +661,16 @@ has_upgraded_capital_5 = {
 				has_building = building_stellarite_galactic_hive_capital
 				has_building = building_stellarite_galactic_machine_capital
 				# Wula Fallen Empire
-				merg_has_wula_capital = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_wula_archive
+						has_building = building_all_is_dust
+						has_building = building_wula_order_keep
+						has_building = building_wula_gene_bank
+					"
+					toggle = @wula_compatch_var
+				}
             }
         }
     }
@@ -322,52 +679,120 @@ has_upgraded_capital_6 = {
     if = {
         limit = { owner = { is_hive_empire = yes } }
         custom_tooltip = {
-            fail_text = "requires_building_hive_capital_4"
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+		            fail_text = requires_building_hive_capital_4
+				"
+				toggle = @has_avb_mod
+			}
 		    OR = {
-		    	has_building = building_avb_hive_capital_4
 		    	has_building = building_imperial_hive_capital
 				# ACOT
-				has_building = building_acot_dm_ancient_hive_cluster
-				has_building = building_acot_ae_ancient_hive_cluster
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_acot_dm_ancient_hive_cluster
+						has_building = building_acot_ae_ancient_hive_cluster
+						has_building = building_phanon_tower
+						has_building = building_acot_ruined_giga_fortress
+					"
+					toggle = @has_ancient_caches
+				}
+				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
-				has_eternal_palace = yes
-				has_building = building_phanon_tower
-				has_building = building_acot_ruined_giga_fortress
 				# All That Is GRIMDARK
 				has_building = building_hive_major_capital_sick
 				# AOT
-				has_building = building_stellarite_hive_cluster
-				has_building = building_phanon_hive_cluster
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_stellarite_hive_cluster
+						has_building = building_phanon_hive_cluster
+					"
+					toggle = @has_acquisition_of_tech
+				}
+				# AVB
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+				    	has_building = building_avb_hive_capital_4
+					"
+					toggle = @has_avb_mod
+				}
 				# EDA
-				has_building = eda_building_imperial_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = eda_building_imperial_capital
+					"
+					toggle = @eda_mod
+				}
 				# galacot
 				has_building = building_stellarite_galactic_hive_capital
 				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_kuat_command_center
+					"
+					toggle = @sw_kuat_mod
+				}
 		    }
         }
     }
     else_if = {
         limit = { owner = { is_machine_empire = yes } }
         custom_tooltip = {
-			fail_text = "requires_building_machine_capital_6"
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					fail_text = requires_building_machine_capital_6
+				"
+				toggle = @has_avb_mod
+			}
 			OR = {
-				has_building = building_avb_machine_capital_6
 				has_building = building_imperial_machine_capital
 				# ACOT
-				has_building = building_acot_dm_ancient_control_center
-				has_building = building_acot_ae_ancient_control_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_acot_dm_ancient_control_center
+						has_building = building_acot_ae_ancient_control_center
+						has_building = building_phanon_tower
+						has_building = building_acot_ruined_giga_fortress
+					"
+					toggle = @has_ancient_caches
+				}
+				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
-				has_eternal_palace = yes
-				has_building = building_phanon_tower
-				has_building = building_acot_ruined_giga_fortress
 				# AOT
-				has_building = building_stellarite_control_center
-				has_building = building_phanon_control_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_stellarite_control_center
+						has_building = building_phanon_control_center
+					"
+					toggle = @has_acquisition_of_tech
+				}
+				# AVB
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_avb_machine_capital_6
+					"
+					toggle = @has_avb_mod
+				}
 				# galacot
 				has_building = building_stellarite_galactic_machine_capital
 				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_kuat_command_center
+					"
+					toggle = @sw_kuat_mod
+				}
 				# Twinks Eternal
 				has_building = building_eternal_nexus_ai
 			}
@@ -375,33 +800,76 @@ has_upgraded_capital_6 = {
     }
     else = {
         custom_tooltip = {
-            fail_text = "requires_building_capital_6"
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					fail_text = requires_building_machine_capital_6
+				"
+				toggle = @has_avb_mod
+			}
             OR = {
-			    has_building = building_avb_capital_6
 			    has_building = building_imperial_capital
 				# ACOT
-				has_building = building_acot_dm_ancient_palace
-				has_building = building_acot_ae_ancient_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_acot_dm_ancient_palace
+						has_building = building_acot_ae_ancient_palace
+						has_building = building_phanon_tower
+						has_building = building_acot_ruined_giga_fortress
+					"
+					toggle = @has_ancient_caches
+				}
+				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
-				has_eternal_palace = yes
-				has_building = building_phanon_tower
-				has_building = building_acot_ruined_giga_fortress
 				# All That Is GRIMDARK
 				has_building = building_system_capital_gr
 				# AOT
-				has_building = building_stellarite_palace
-				has_building = building_phanon_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_stellarite_palace
+						has_building = building_phanon_palace
+					"
+					toggle = @has_acquisition_of_tech
+				}
+				# AVB
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+					    has_building = building_avb_capital_6
+					"
+					toggle = @has_avb_mod
+				}
 				# Azur Lane Stellaris DlC
-				has_building = azur_building_mind_capital
-				has_building = azur_building_mind_net_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = azur_building_mind_capital
+						has_building = azur_building_mind_net_capital
+					"
+					toggle = @azl_mod
+				}
 				# Dawn of the Republic
 				has_building = building_galactic_senate
 				# EDA
-				has_building = eda_building_imperial_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = eda_building_imperial_capital
+					"
+					toggle = @eda_mod
+				}
 				# Nirvana Empire Project
 				has_building = building_nirvana_empire_palace
 				# Star Wars: Kuat Ancient Empire
-				has_building = building_kuat_command_center
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_kuat_command_center
+					"
+					toggle = @sw_kuat_mod
+				}
 				# Twinks Atlantean
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
@@ -413,7 +881,16 @@ has_upgraded_capital_6 = {
 				has_building = building_stellarite_galactic_hive_capital
 				has_building = building_stellarite_galactic_machine_capital
 				# Wula Fallen Empire
-				merg_has_wula_capital = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_wula_archive
+						has_building = building_all_is_dust
+						has_building = building_wula_order_keep
+						has_building = building_wula_gene_bank
+					"
+					toggle = @wula_compatch_var
+				}
             }
         }
     }
@@ -426,7 +903,13 @@ is_building_similar_to_clone_vats = {
 				owner = { is_machine_empire = no }
 			}
 			custom_tooltip = {
-				fail_text = "avb_orb_is_building_similar_to_clone_vats_fail"
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						fail_text = avb_orb_is_building_similar_to_clone_vats_fail
+					"
+					toggle = @has_avb_mod
+				}
 				merg_has_cloning_building = yes
 			}
 		}
@@ -435,7 +918,13 @@ is_building_similar_to_clone_vats = {
 is_building_similar_to_foundry = {
 	planet = {
 		custom_tooltip = {
-			fail_text = "avb_orb_is_building_similar_to_foundry_fail"
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					fail_text = avb_orb_is_building_similar_to_foundry_fail
+				"
+				toggle = @has_avb_mod
+			}
 			merg_has_foundry_building = yes
 		}
 	}
@@ -443,7 +932,13 @@ is_building_similar_to_foundry = {
 is_building_similar_to_factory = {
 	planet = {
 		custom_tooltip = {
-			fail_text = "avb_orb_is_building_similar_to_factory_fail"
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					fail_text = avb_orb_is_building_similar_to_factory_fail
+				"
+				toggle = @has_avb_mod
+			}
 			merg_has_manufacturing_building = yes
 		}
 	}
@@ -483,9 +978,15 @@ ag_is_compact_star = {
 		is_hypo_stars_strange_star = yes
 		is_hypo_stars_white_hole = yes
 		# Real Space
-		is_planet_class_pc_collapsar = yes
-		is_planet_class_pc_magnetar = yes
-		is_rs_compat_microquasar = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class_pc_collapsar = yes
+				is_planet_class_pc_magnetar = yes
+				is_rs_compat_microquasar = yes
+			"
+			toggle = @rs_compatch_var
+		}
 	}
 }
 ag_is_common_country = {
@@ -502,26 +1003,64 @@ ag_is_common_country = {
 ag_is_special_constructable_shipyard = {
 	optimize_memory
 	custom_tooltip = {
-		fail_text = "ag_need_ancient_construction_facilities"
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				fail_text = ag_need_ancient_construction_facilities
+			"
+			toggle = @ag_null_edict_length
+		}
 		OR = {
 			can_build_precursor_ship = yes
-			AND = { is_scope_type = starbase OR = {
-				has_starbase_size = ag_gamma_station_hostile
-				has_starbase_size = ag_gamma_station_0
-				has_starbase_size = ag_gamma_station_1
-				has_starbase_size = swfo_supremacy
-				has_starbase_size = exe_megastructure_starbase
-			} }
-			AND = { is_scope_type = megastructure OR = {
-				is_megastructure_type = ag_ancient_construction_section
-				has_megastructure_flag = ag_ancient_construction_section_megashipyard
-				
-				# is_megastructure_type = Shield_Gate
-				is_megastructure_type = StarForge
-				is_megastructure_type = exe_black_hole_restore
-				is_megastructure_type = exe_black_hole_facility
-			} }
-			AND = { exists = owner owner = { has_modifier = "ag_debug_modifier_buff_common" } }
+			AND = { is_scope_type = starbase
+				OR = {
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							has_starbase_size = ag_gamma_station_hostile
+							has_starbase_size = ag_gamma_station_0
+							has_starbase_size = ag_gamma_station_1
+						"
+						toggle = @ag_null_edict_length
+					}
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							has_starbase_size = swfo_supremacy
+							has_starbase_size = exe_megastructure_starbase
+						"
+						toggle = @sw_kuat_mod
+					}
+				}
+			}
+			AND = { is_scope_type = megastructure
+				OR = {
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							is_megastructure_type = ag_ancient_construction_section
+						"
+						toggle = @ag_null_edict_length
+					}
+					has_megastructure_flag = ag_ancient_construction_section_megashipyard
+					is_megastructure_type = StarForge
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							is_megastructure_type = exe_black_hole_restore
+							is_megastructure_type = exe_black_hole_facility
+						"
+						toggle = @sw_kuat_mod
+					}
+				}
+			}
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					AND = { exists = owner owner = { has_modifier = ag_debug_modifier_buff_common } }
+				"
+				toggle = @ag_null_edict_length
+			}
 		}
 	}
 }
@@ -533,10 +1072,22 @@ ag_is_star_killer_special_system = {
 	optimize_memory
 	OR = {
 		has_star_flag = ag_no_star_killer_target_system
-		kuat_is_kuat_system = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				kuat_is_kuat_system = yes
+			"
+			toggle = @sw_kuat_mod
+		}
 		# Gigastructural Engineering & More
-		has_star_flag = ehof_compound_system
-		has_star_flag = giga_core_03
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = ehof_compound_system
+				has_star_flag = giga_core_03
+			"
+			toggle = @has_gigastructures
+		}
 	}
 }
 
@@ -556,25 +1107,61 @@ has_active_al_factory_building = {
 		has_active_building = building_factory_3
 		has_active_building = building_affluence_center
 		# ACOT
-		has_active_building = building_fe_factory
-		has_active_building = building_acot_ae_factory
-		has_active_building = building_acot_ae_affluence_center
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_fe_factory
+				has_active_building = building_acot_ae_factory
+				has_active_building = building_acot_ae_affluence_center
+			"
+			toggle = @has_ancient_caches
+		}
 		# AOT
-		has_active_building = building_fe_affluence_center
-		has_active_building = building_phanon_affluence_center
-		has_active_building = building_phanon_civilian_factory
-		has_active_building = building_stellarite_affluence_center
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_fe_affluence_center
+				has_active_building = building_phanon_affluence_center
+				has_active_building = building_phanon_civilian_factory
+				has_active_building = building_stellarite_affluence_center
+			"
+			toggle = @has_acquisition_of_tech
+		}
 		# AVB
-		has_active_building = building_avb_factory_4
-		has_active_building = building_avb_factory_5
-		has_active_building = building_avb_factory_6
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_avb_factory_4
+				has_active_building = building_avb_factory_5
+				has_active_building = building_avb_factory_6
+			"
+			toggle = @has_avb_mod
+		}
 		# EDA
-		has_active_building = eda_building_factory
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = eda_building_factory
+			"
+			toggle = @eda_mod
+		}
 		# GPM
-		has_active_building = gpm_building_manufactory_hub
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = gpm_building_manufactory_hub
+			"
+			toggle = @has_guillis_planet_modifiers
+		}
 		# Warship Girls R and MIST Species
-		has_active_building = building_sep_foundry
-		has_active_building = building_gray_nano_factory
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_sep_foundry
+				has_active_building = building_gray_nano_factory
+			"
+			toggle = @wsg_mod
+		}
 	}
 }
 has_active_al_foundry_building = {
@@ -585,35 +1172,70 @@ has_active_al_foundry_building = {
 		has_active_building = building_foundry_3
 		has_active_building = building_nano_forge
 		# ACOT
-		has_active_building = building_fe_alloy_forge
-		has_active_building = building_acot_ae_alloy_forge
-		has_active_building = building_acot_ae_nano_forge
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_fe_alloy_forge
+				has_active_building = building_acot_ae_alloy_forge
+				has_active_building = building_acot_ae_nano_forge
+			"
+			toggle = @has_ancient_caches
+		}
 		# AOT
-		has_active_building = building_fe_nano_forge
-		has_active_building = building_phanon_nano_forge
-		has_active_building = building_phanon_alloy_forge
-		has_active_building = building_stellarite_nano_forge
-		has_active_building = building_stellarite_alloy_forge
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_fe_nano_forge
+				has_active_building = building_phanon_nano_forge
+				has_active_building = building_phanon_alloy_forge
+				has_active_building = building_stellarite_nano_forge
+				has_active_building = building_stellarite_alloy_forge
+			"
+			toggle = @has_acquisition_of_tech
+		}
 		# AVB
-		has_active_building = building_avb_foundry_4
-		has_active_building = building_avb_foundry_5
-		has_active_building = building_avb_foundry_6
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_avb_foundry_4
+				has_active_building = building_avb_foundry_5
+				has_active_building = building_avb_foundry_6
+			"
+			toggle = @has_avb_mod
+		}
 		# EDA
-		has_active_building = eda_building_alloy_foundry
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = eda_building_alloy_foundry
+			"
+			toggle = @eda_mod
+		}
 		# Protoss
 		has_active_building = protoss_building_bf
 		# Warship Girls R and MIST Species
-		has_active_building = building_sep_foundry2
-		has_active_building = building_wsg_foundry
-		has_active_building = building_gray_nano_foundry2
-		has_active_building = building_sh_foundryU
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_sep_foundry
+				has_active_building = building_wsg_foundry
+				has_active_building = building_gray_nano_foundry
+				has_active_building = building_sh_foundry
+				has_active_building = building_sep_foundry2
+				has_active_building = building_wsg_foundry
+				has_active_building = building_gray_nano_foundry2
+				has_active_building = building_sh_foundryU
+			"
+			toggle = @wsg_mod
+		}
 		# Wula Fallen Empire
-		has_active_building = building_wula_foundry
-		# Warship Girls R and MIST Species
-		has_active_building = building_sep_foundry
-		has_active_building = building_wsg_foundry
-		has_active_building = building_gray_nano_foundry
-		has_active_building = building_sh_foundry
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_wula_foundry
+			"
+			toggle = @wula_compatch_var
+		}
 	}
 }
 is_huge_can_colony_planet = {
@@ -624,54 +1246,9 @@ is_huge_can_colony_planet = {
 	}
 }
 
-############################### BlueArchive ###############################
-is_BA_fallen_empire = {
-	merg_is_fallen_empire = yes
-	OR = {
-		has_country_flag = BA_Gematria
-		has_country_flag = BA_Precursor
-	}
-}
-is_BA_fallen_empire_awakened = {
-	merg_is_awakened_fe = yes
-	OR = {
-		has_country_flag = BA_Gematria
-		has_country_flag = BA_Precursor
-	}
-}
-
 ############################### City World Flavour ###############################
 ef_is_ecu = {
 	merg_is_arcology_non_gestalt = yes
-}
-############################### Cruel Conquerers ###############################
-cruel_has_shipyard = {
-	or = {
-		has_starbase_module = shipyard
-		has_starbase_module = cruel_pain_ship_labor_module
-		has_starbase_module = cruel_suffering_ship_labor_module
-		has_starbase_module = cruel_agony_ship_labor_module
-		# ACOT/AOT/Secrets of the Shroud
-		has_starbase_module = acot_starbase_shipyard
-		has_starbase_module = acot_sigma_starbase_shipyard
-		has_starbase_module = acot_phanon_starbase_shipyard
-		has_starbase_module = acot_theta_starbase_shipyard
-		# Gigastructural Engineering & More
-		has_starbase_module = virtual_shipyard_uplink
-	}
-}
-cruel_can_trade = {
-	OR = {
-		is_gestalt = no
-		# Forgotten Queens
-		AND = {
-			is_gestalt = yes
-			OR = {
-				has_valid_civic = civic_mutualistic_behavior
-				has_valid_civic = civic_machine_trading
-			}
-		}
-	}
 }
 
 ############################### Darkspace ###############################
@@ -694,20 +1271,26 @@ ds_hyperlane_create = {
 		has_star_flag = holy_system_3
 		has_star_flag = holy_system_4
 		has_star_flag = holy_system_5
-		has_star_flag = fe_xeno_zoo	
+		has_star_flag = fe_xeno_zoo
 		has_star_flag = fallen_shield_world
 		has_star_flag = fallen_empire_world
 		has_star_flag = scfe_shaded_colony_system
 		merg_is_isolated_system = yes
-		giga_is_core_system = yes
-		cohesive_system = yes
-		compound_cluster = yes
-		annihilator_system = yes
-		urmazin_system = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_core_system = yes
+				cohesive_system = yes
+				compound_cluster = yes
+				annihilator_system = yes
+				urmazin_system = yes
+			"
+			toggle = @has_gigastructures
+		}
 	}
 }
 
-# Destiny: Hive Portraits
+############################### Destiny: Hive Portraits ###############################
 is_valid_pop_for_TAKING = {
 	NOR = {
 		merg_has_hive_trait = yes
@@ -738,26 +1321,34 @@ do3f_can_have_random_districts = {
 	OR = {
 		merg_is_basic_habitable = yes
 		# Lithoid Supremacy
-		is_geode_world = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_geode_world = yes
+			"
+			toggle = @has_lithoid_mod
+		}
 		# Real Space: New Frontiers
-		AND = {
-			has_global_flag = has_new_frontiers_mod
-			OR = {
-				is_rs_compat_tidallylocked = yes
-				is_rs_compat_sterile = yes
-				is_rs_compat_hollow = yes
-			}
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_tidallylocked
+				is_planet_class = pc_sterile
+				is_planet_class = pc_tidallylocked
+			"
+			toggle = @rs_compatch_var
 		}
 		can_have_habitable_deposits = yes
 	}
-	NOR = {
-		# Planetary Ringworlds
-		is_planetary_ringworld = yes
-		is_planetary_ringworld_city = yes
-		is_planetary_ringworld_hive = yes
-		is_planetary_ringworld_machine = yes
-		do3f_is_habitable_asteroid = yes
-		do3f_is_habitable_barren = yes
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			NOR = {
+				do3f_is_habitable_asteroid = yes
+				do3f_is_habitable_barren = yes
+			}
+		"
+		toggle = @has_do3f_mod
 	}
 }
 do3f_can_have_random_housing_districts = {
@@ -790,20 +1381,17 @@ elec_hyperlane_create = {
 		# Forgotten Empires
 		has_star_flag = scfe_shaded_colony_system
 		# Gigastructural Engineering & More
-		giga_is_core_system = yes
-		cohesive_system = yes
-		compound_cluster = yes
-		annihilator_system = yes
-		urmazin_system = yes
-	}
-}
-
-############################### Ethics and Civics Bug Branch ###############################
-is_bugged_starbase = {
-	OR = {
-		has_starbase_size >= starbase_starport
-		# ACOT/AOT/SOTS
-		is_precursor_starbase = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_core_system = yes
+				cohesive_system = yes
+				compound_cluster = yes
+				annihilator_system = yes
+				urmazin_system = yes
+			"
+			toggle = @has_gigastructures
+		}
 	}
 }
 
@@ -821,6 +1409,21 @@ is_nuked_planet = {
     merg_is_nuked_basic = yes
 }
 
+############################### Ethics and Civics Bug Branch ###############################
+is_bugged_starbase = {
+	OR = {
+		has_starbase_size >= starbase_starport
+		# ACOT/AOT/SOTS
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_precursor_starbase = yes
+			"
+			toggle = @has_ancient_caches
+		}
+	}
+}
+
 ############################### Ethics and Civics Infinity ###############################
 has_clinic = { merg_has_hospital = yes }
 
@@ -829,7 +1432,13 @@ exalted_is_valid_as_vassal = {
 	OR = {
 		is_country_type = default
 		# The Empty Vagrant
-		is_default_ev_country_type = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_default_ev_country_type = yes
+			"
+			toggle = @homeless_class_trait_weight
+		}
 		# Darkspace
 		is_country_type = ds_nomads
 	}
@@ -841,77 +1450,75 @@ is_regular_star = {
 	is_star = yes
 	merg_is_forbidden_target = no
 	NOR = {
-		is_planet_class_pc_ae_star = yes
-		is_planet_class_pc_collapsar = yes
-		is_planet_class_pc_magnetar = yes
-		is_rs_compat_microquasar = yes
-		is_planet_class_pc_d_star = yes
-		is_rs_compat_fu_star = yes
-		is_planet_class_pc_l_star = yes
-		is_planet_class_pc_nova_1 = yes
-		is_planet_class_pc_nova_2 = yes
-		is_planet_class_pc_protostar = yes
 		is_planet_class = pc_t_star
-		is_planet_class_pc_tt_red_star = yes
-		is_planet_class_pc_tt_orange_star = yes
-		is_planet_class_pc_tt_white_star = yes
-		is_planet_class_pc_y_star = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class_pc_ae_star = yes
+				is_planet_class_pc_collapsar = yes
+				is_planet_class_pc_magnetar = yes
+				is_rs_compat_microquasar = yes
+				is_planet_class_pc_d_star = yes
+				is_planet_class = pc_fu_star
+				is_planet_class_pc_l_star = yes
+				is_planet_class_pc_nova_1 = yes
+				is_planet_class_pc_nova_2 = yes
+				is_planet_class_pc_protostar = yes
+				is_planet_class_pc_tt_red_star = yes
+				is_planet_class_pc_tt_orange_star = yes
+				is_planet_class_pc_tt_white_star = yes
+				is_planet_class_pc_y_star = yes
+			"
+			toggle = @rs_compatch_var
+		}
 	}
 }
 terraforming_candidate_solar_system_check = {
 	optimize_memory
 	NOR = {
 		merg_is_standard_dense_star = yes
-		is_star_class = sc_o_super
-		is_star_class = sc_o_hyper
-		is_star_class = sc_b_super
-		is_star_class = sc_a_super
-		is_star_class = sc_f_super
-		is_star_class = sc_g_super
-		is_star_class = sc_k_super
-		is_star_class = sc_m_super
-		is_star_class = sc_m_hyper
-		is_star_class = sc_nova_1
-		is_star_class = sc_nova_2
-		is_star_class = sc_collapsar
-		is_star_class = sc_protostar
-		is_star_class = sc_lbv_blue
-		is_star_class = sc_lbv_green
-		is_star_class = sc_lbv_red
-		is_star_class = sc_o
 		is_star_class = sc_b
 		is_star_class = sc_a
-		is_star_class = sc_l
-		is_star_class = sc_d
-		is_star_class = sc_c_giant
-		is_star_class = sc_s_giant
-		is_star_class = sc_w_azure
-		is_star_class = sc_w_red
-		is_star_class = sc_w_green
-		is_star_class = sc_w_purple
-		is_star_class = sc_tt_red
-		is_star_class = sc_tt_orange
-		is_star_class = sc_tt_white
-		is_star_class = sc_ae
-		is_star_class = sc_p_purple
-		is_star_class = sc_p_green
-		is_star_class = sc_p_red
-		is_star_class = sc_magnetar
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_nova_1
+				is_star_class = sc_nova_2
+				is_star_class = sc_protostar
+				is_star_class = sc_l
+				is_star_class = sc_d
+				is_star_class = sc_s_giant
+				is_star_class = sc_w_azure
+				is_star_class = sc_w_red
+				is_star_class = sc_w_green
+				is_star_class = sc_w_purple
+				is_star_class = sc_o_super
+				is_star_class = sc_o_hyper
+				is_star_class = sc_b_super
+				is_star_class = sc_a_super
+				is_star_class = sc_f_super
+				is_star_class = sc_g_super
+				is_star_class = sc_k_super
+				is_star_class = sc_m_super
+				is_star_class = sc_m_hyper
+				is_star_class = sc_collapsar
+				is_star_class = sc_lbv_blue
+				is_star_class = sc_lbv_green
+				is_star_class = sc_lbv_red
+				is_star_class = sc_o
+				is_star_class = sc_c_giant
+				is_star_class = sc_tt_red
+				is_star_class = sc_tt_orange
+				is_star_class = sc_tt_white
+				is_star_class = sc_ae
+				is_star_class = sc_p_purple
+				is_star_class = sc_p_green
+				is_star_class = sc_p_red
+				is_star_class = sc_magnetar
+			"
+			toggle = @rs_compatch_var
+		}
 		merg_is_void_system = yes
-	}
-}
-is_spy_empire = {
-	OR = {
-		has_valid_civic = civic_cutthroat_politics
-		has_valid_civic = civic_shadow_council
-		has_valid_civic = civic_ruthless_competition
-		has_valid_civic = civic_criminal_heritage
-		has_valid_civic = civic_machine_predictive_analysis
-		# Expanded Events
-		has_valid_civic = civic_shadow_council_megacorp
-		has_valid_civic = civic_self_experimentation
-		# Espionage Extended
-		has_valid_civic = civic_shadow_state
 	}
 }
 living_metal_candidate = {
@@ -924,29 +1531,6 @@ living_metal_candidate = {
 }
 
 ############################### Expanded Mods Base ###############################
-is_alpine_world = { merg_is_alpine = yes }
-is_arctic_world = { merg_is_arctic = yes }
-is_arid_world = { merg_is_arid = yes }
-is_barren_cold_world = { merg_is_barren_cold = yes }
-is_barren_world = { merg_is_barren = yes }
-is_continental_world = { merg_is_continental = yes }
-is_desert_world = { merg_is_desert = yes }
-is_gaia_world = { merg_is_gaia = yes }
-is_hive_world = { merg_is_hive_world = yes }
-is_machine_world = { merg_is_machine_world = yes }
-is_molten_world = { merg_is_molten = yes }
-is_nuked_world = { merg_is_nuked_basic = yes }
-is_ocean_world = { merg_is_ocean = yes }
-is_savannah_world = { merg_is_savannah = yes }
-is_toxic_world = { merg_is_toxic = yes }
-is_tropical_world = { merg_is_tropical = yes }
-is_tundra_world = { merg_is_tundra = yes }
-is_barren = {
-	OR = {
-		merg_is_barren = yes
-		merg_is_barren_cold = yes
-	}
-}
 is_city = {
 	merg_is_arcology = yes
 }
@@ -968,15 +1552,39 @@ ESC_TRIGGER_is_city_planet = {
 ESC_TRIGGER_is_naked_mantle_planet = {
 	OR = {
 		# Gigastructural Engineering & More
-		giga_is_pc_equatorial_shipyard = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_equatorial_shipyard = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Girls Frontline
-		gf_comp_devil_furnace = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_GF_nyto_devil_furnace
+			"
+			toggle = @gf_compatch_var
+		}
 		# Real Space - Planetary Stations
-		is_rs_compat_molten_habitat = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_molten_station
+			"
+			toggle = @rs_compatch_var
+		}
 		# Real Space - New Frontiers
-		has_modifier = infernal_world
-		has_modifier = lava_world
-		has_modifier = volcanic_world
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_modifier = infernal_world
+				has_modifier = lava_world
+				has_modifier = volcanic_world
+			"
+			toggle = @rs_compatch_var
+		}
 	}
 }
 
@@ -1159,19 +1767,24 @@ gpm_is_country_type_awakened_fallen_empire = { merg_is_awakened_fe = yes }
 gpm_engine_forbidden_planets = {
 	optimize_memory
 	NOR = {
-		solar_system = {
-			exists = space_owner
-			space_owner = { has_origin = origin_gpm_death_world }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				solar_system = {
+					exists = space_owner
+					space_owner = { has_origin = origin_gpm_death_world }
+				}
+				solar_system = {
+					exists = space_owner
+					space_owner = { has_origin = origin_gpm_fallen_empire_colony }
+				}
+				solar_system = {
+					exists = space_owner
+					space_owner = { has_origin = origin_gpm_precursor_world }
+				}
+			"
+			toggle = @has_guillis_planet_modifiers
 		}
-		solar_system = {
-			exists = space_owner
-			space_owner = { has_origin = origin_gpm_fallen_empire_colony }
-		}
-		solar_system = {
-			exists = space_owner
-			space_owner = { has_origin = origin_gpm_precursor_world }
-		}
-		# space_owner = { has_origin = origin_scion} 							# keep it of for player story purposes
 		has_planet_flag	= hoard_planet
 		AND = {
 			is_planet_class = pc_relic
@@ -1180,6 +1793,7 @@ gpm_engine_forbidden_planets = {
 		merg_is_forbidden_target = yes
 	}
 }
+
 ############################### Harvest Engine Crisis ###############################
 harvester_is_crackable = {
 	optimize_memory
@@ -1196,21 +1810,9 @@ harvester_is_crackable = {
 		NOR = {
 			is_star = yes
 			is_asteroid = yes
-			is_planet_class = pc_shattered #Prevent Overcracking
-			is_planet_class = pc_shattered_2
-			is_planet_class = pc_egg_cracked
-			is_planet_class = pc_broken
-			is_planet_class = pc_machine_broken
+			merg_is_broken = yes
 		}
 		is_content_world = no
-	}
-}
-
-############################### Human Fallen Empire ###############################
-hfe_trigger_is_fallen = {
-	OR = {
-		merg_is_fallen_empire = yes
-		merg_is_awakened_fe = yes
 	}
 }
 
@@ -1242,13 +1844,37 @@ legw_megaplanet = {
 		merg_is_machine_world = yes
 		is_planet_class = pc_cybrex
 		# Maiden Frontier Gunstar Story Collection
-		msgsc_GF_sf_machine = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				msgsc_GF_sf_machine = yes
+			"
+			toggle = @GF_OGAS_leveled_thread_add_start_after_level
+		}
 		# Gigastructural Engineering & More
-		giga_is_pc_giga_planetary_computer = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_giga_planetary_computer = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Origin - F.C.S.S & M.C.S.S
-		# uses_district_set = awaken_ai_world
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_awaken_ai
+			"
+			toggle = @fcss_mod
+		}
 		# ZOFE
-		# uses_district_set = utopian_machine_world
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_utopian_machine
+			"
+			toggle = @has_zofe_vanilla
+		}
 	}
 }
 legw_is_dry = { is_dry = yes }
@@ -1270,10 +1896,14 @@ mem_is_spherical_world = {
 		habitable_structure = yes
 		merg_is_habitat = yes
 		merg_is_hab_ringworld = yes
-		# Decadence of Sanity
-		is_shroud_entrepot = yes
 		# Gigastructural Engineering & More
-		giga_habitable_structure = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_habitable_structure = yes
+			"
+			toggle = @has_gigastructures
+		}
 	}
 }
 mem_has_happiness = { merg_has_happiness = yes }
@@ -1281,8 +1911,8 @@ mem_has_shield_building = {
 	merg_has_planetary_shield = yes
 }
 mem_imperialist_intimidation_valid_bully = {
-    is_ai = yes
-    merg_is_default_empire = yes
+	is_ai = yes
+	merg_is_default_empire = yes
 	has_ai_personality_behaviour = conqueror
 	NOR = {
 		has_country_flag = mem_imperialist_intimidation_actor@root
@@ -1404,8 +2034,8 @@ is_appropriate_planet_state_system = {
 ############################### Primitive Conquest Enhancements ###############################
 pce_planet_uses_district_farming_uncapped = {
 	OR = {
-		uses_district_set = hive_world
-		uses_district_set = shattered_ring_world
+		merg_is_hive_world = yes
+		is_planet_class = pc_shattered_ring_habitable
 		AND = {
 			merg_is_ocean = yes
 			exists = owner
@@ -1424,24 +2054,36 @@ has_mineral_deposit = {
 		has_deposit = d_rich_mountain
 		has_deposit = d_submerged_ore_veins
 		# Real Space
-		has_deposit = d_offshore_fields
-		has_deposit = d_abundant_atoll
-		has_deposit = d_rich_lodes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_deposit = d_offshore_fields
+				has_deposit = d_abundant_atoll
+				has_deposit = d_rich_lodes
+			"
+			toggle = @rs_compatch_var
+		}
 		# GPM
-		has_deposit = gpm_d_spaceship_graveyard
-		has_deposit = gpm_d_unusual_formations
-		has_deposit = gpm_d_floating_rocks
-		has_deposit = gpm_d_super_volcano
-		has_deposit = gpm_d_obsidian_fields
-		has_deposit = gpm_d_rich_crater
-		has_deposit = gpm_d_surface_mineral_veins
-		has_deposit = gpm_d_dense_metal_veins
-		has_deposit = gpm_d_iron_mountain
-		has_deposit = gpm_d_garbage_patch
-		has_deposit = gpm_d_fossilized_egg_sacks
-		has_deposit = gpm_d_fossilized_structures
-		has_deposit = gpm_d_fossilized_creep
-		has_deposit = gpm_d_giant_skeleton
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_deposit = gpm_d_spaceship_graveyard
+				has_deposit = gpm_d_unusual_formations
+				has_deposit = gpm_d_floating_rocks
+				has_deposit = gpm_d_super_volcano
+				has_deposit = gpm_d_obsidian_fields
+				has_deposit = gpm_d_rich_crater
+				has_deposit = gpm_d_surface_mineral_veins
+				has_deposit = gpm_d_dense_metal_veins
+				has_deposit = gpm_d_iron_mountain
+				has_deposit = gpm_d_garbage_patch
+				has_deposit = gpm_d_fossilized_egg_sacks
+				has_deposit = gpm_d_fossilized_structures
+				has_deposit = gpm_d_fossilized_creep
+				has_deposit = gpm_d_giant_skeleton
+			"
+			toggle = @has_guillis_planet_modifiers
+		}
 	}
 }
 is_mineral_deposit = {
@@ -1453,24 +2095,36 @@ is_mineral_deposit = {
 		is_deposit_type = d_rich_mountain
 		is_deposit_type = d_submerged_ore_veins
 		# Real Space
-		is_deposit_type = d_offshore_fields
-		is_deposit_type = d_abundant_atoll
-		is_deposit_type = d_rich_lodes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_deposit_type = d_offshore_fields
+				is_deposit_type = d_abundant_atoll
+				is_deposit_type = d_rich_lodes
+			"
+			toggle = @rs_compatch_var
+		}
 		# GPM
-		is_deposit_type = gpm_d_spaceship_graveyard
-		is_deposit_type = gpm_d_unusual_formations
-		is_deposit_type = gpm_d_floating_rocks
-		is_deposit_type = gpm_d_super_volcano
-		is_deposit_type = gpm_d_obsidian_fields
-		is_deposit_type = gpm_d_rich_crater
-		is_deposit_type = gpm_d_surface_mineral_veins
-		is_deposit_type = gpm_d_dense_metal_veins
-		is_deposit_type = gpm_d_iron_mountain
-		is_deposit_type = gpm_d_garbage_patch
-		is_deposit_type = gpm_d_fossilized_egg_sacks
-		is_deposit_type = gpm_d_fossilized_structures
-		is_deposit_type = gpm_d_fossilized_creep
-		is_deposit_type = gpm_d_giant_skeleton
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_deposit_type = gpm_d_spaceship_graveyard
+				is_deposit_type = gpm_d_unusual_formations
+				is_deposit_type = gpm_d_floating_rocks
+				is_deposit_type = gpm_d_super_volcano
+				is_deposit_type = gpm_d_obsidian_fields
+				is_deposit_type = gpm_d_rich_crater
+				is_deposit_type = gpm_d_surface_mineral_veins
+				is_deposit_type = gpm_d_dense_metal_veins
+				is_deposit_type = gpm_d_iron_mountain
+				is_deposit_type = gpm_d_garbage_patch
+				is_deposit_type = gpm_d_fossilized_egg_sacks
+				is_deposit_type = gpm_d_fossilized_structures
+				is_deposit_type = gpm_d_fossilized_creep
+				is_deposit_type = gpm_d_giant_skeleton
+			"
+			toggle = @has_guillis_planet_modifiers
+		}
 	}
 }
 planetary_catastrophe_is_possible = {
@@ -1493,7 +2147,13 @@ planetary_catastrophe_is_possible = {
 		merg_is_relic_world = yes
 		merg_is_hab_ringworld = yes
 		merg_is_habitat = yes
-		is_rs_compat_sterile = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_sterile
+			"
+			toggle = @rs_compatch_var
+		}
 	}
 	NOR = {
 		has_planet_flag = colony_event
@@ -1509,13 +2169,19 @@ star_catastrophe_is_possible = {
 		is_planet_class = pc_g_star
 		is_planet_class = pc_f_star
 		is_planet_class = pc_m_giant_star
-		is_planet_class_pc_k_giant_star = yes
-		is_planet_class_pc_g_giant_star = yes
 		is_planet_class = pc_a_star
 		is_planet_class = pc_b_star
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class_pc_k_giant_star = yes
+				is_planet_class_pc_g_giant_star = yes
+			"
+			toggle = @rs_compatch_var
+		}
 	}
 	solar_system = {
-		NOR = { 
+		NOR = {
 			has_star_flag = star_disaster
 			has_star_flag = dyson_sphere_built
 			has_star_flag = AI_hub
@@ -1529,7 +2195,7 @@ star_catastrophe_is_possible = {
 			has_star_flag = vultaumar
 			has_star_flag = yuhtaan
 			has_star_flag = fen_habbanis
-			has_star_flag = irass 
+			has_star_flag = irass
 			has_star_flag = cybrex
 			has_star_flag = ruined_dyson_system
 			has_special_star_flag_trigger = yes
@@ -1573,41 +2239,6 @@ AAR_trgr_ship_SB_valid = {
 	}
 }
 
-############################### Rogue Maid ###############################
-maidai_has_minerals_building = {
-	merg_has_minerals_building = yes
-}
-maidai_has_energy_building = {
-	merg_has_energy_building = yes
-}
-maidai_has_food_building = {
-	merg_has_food_building = yes
-}
-maidai_has_manufact_building = {
-	OR = {
-		merg_has_manufacturing_building = yes
-		merg_has_foundry_building = yes
-	}
-}
-maidai_has_energy_minerals_building = {
-	OR = {
-		merg_has_energy_building = yes
-		merg_has_minerals_building = yes
-	}
-}
-maidai_has_energy_food_building = {
-	OR = {
-		merg_has_energy_building = yes
-		merg_has_food_building = yes
-	}
-}
-maidai_has_minerals_food_building = {
-	OR = {
-		merg_has_minerals_building = yes
-		merg_has_food_building = yes
-	}
-}
-
 ############################### Shroud Rising ###############################
 is_shroud_rift_planet = {
 	is_star = no
@@ -1627,7 +2258,13 @@ is_shroud_rift_planet = {
 ssh_is_any_gas_giant = {
 	OR = {
 		merg_is_gas_giant = yes
-		giga_is_pc_gigabrown_dwarf = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_gigabrown_dwarf = yes
+			"
+			toggle = @has_gigastructures
+		}
 	}
 }
 ssh_is_special_planet = {
@@ -1648,16 +2285,40 @@ ssh_is_special_planet = {
 		is_planet_class = pc_warden_guardian
 		is_planet_class = pc_rare_crystal_asteroid
 		# Gigastructures Types
-		giga_is_black_hole = yes
-		giga_is_birch_world = yes
-		giga_is_pc_giga_edge_of_eternity = yes
-		giga_is_pc_giga_frameworld = yes
-		giga_is_pc_flusion_gaia_ecu = yes
-		is_pki_flusion_ecu = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_black_hole = yes
+				giga_is_birch_world = yes
+				giga_is_pc_giga_edge_of_eternity = yes
+				giga_is_pc_giga_frameworld = yes
+				giga_is_pc_flusion_gaia_ecu = yes
+			"
+			toggle = @has_gigastructures
+		}
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_pki_flusion_ecu = yes
+			"
+			toggle = @has_pki_mod
+		}
 		# Secrets of the Shroud
-		is_sots_soulsphere = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_sots_soulsphere = yes
+			"
+			toggle = @has_sots_mod
+		}
 		# Guillis PM
-		is_gpm_precursor_tomb = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_gpm_precursor_tomb = yes
+			"
+			toggle = @has_guillis_planet_modifiers
+		}
 	}
 }
 
@@ -1675,9 +2336,15 @@ kuat_is_defense_galaxy_fleet = {
 		OR = {
 			is_crisis_faction = yes
 			# Ancient Empire
-			is_country_type = ag_ancient_gamma_guardian
-			is_country_type = ag_zeta_crisis_country
-			is_country_type = ag_ancient_primitive_crisis
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					is_country_type = ag_ancient_gamma_guardian
+					is_country_type = ag_zeta_crisis_country
+					is_country_type = ag_ancient_primitive_crisis
+				"
+				toggle = @ag_null_edict_length
+			}
 		}
 	}
 }
@@ -1695,8 +2362,17 @@ kuat_is_event_borderment_ringworld = {
 		merg_is_hab_ringworld = yes
 		merg_is_habitat = yes
 		AND = {
-			merg_has_ancient_empire = yes
-			kuat_is_holy_world_planet = yes
+			has_global_flag = has_ancient_empire_mod
+			OR = {
+				has_modifier = "holy_planet"
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_modifier = ag_shattered_holy_planet
+					"
+					toggle = @ag_null_edict_length
+				}
+			}
 		}
 	}
 }
@@ -1706,11 +2382,23 @@ kuat_is_playable_country = {
 		is_country_type = enclave_mercenary
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
-		is_country_type = ascended_empire
-		is_country_type = eternal_empire
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = eternal_empire
+			"
+			toggle = @has_eternal_empire
+		}
 		is_sbtg_playable_country = yes
 		is_country_type = star_fantasy_empire
 		is_country_type = endtime_star_fantasy_empire
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = ascended_empire
+			"
+			toggle = @has_zofe_vanilla
+		}
 	}
 }
 
@@ -1734,9 +2422,7 @@ tc_element_shard_candidate = {
 	OR = {
 		uninhabitable_regular_planet = yes
 		is_asteroid = yes
-		is_planet_class = pc_broken
-		is_planet_class = pc_shattered
-		is_planet_class = pc_shattered_2
+		merg_is_broken = yes
 	}
 }
 
@@ -1761,7 +2447,13 @@ can_be_ev_investment_country = {
 		has_ethic = ethic_fanatic_xenophobe
 		is_homicidal = yes
 		# Expanded Traits, Civics, Pops, and More
-		has_valid_civic = civic_infestation
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_valid_civic = civic_infestation
+			"
+			toggle = @expops_compatch_var
+		}
 	}
 	has_communications = ROOT
 	NOT = {
@@ -1775,6 +2467,23 @@ is_common_empire = {
 	is_regular_empire = yes
 	is_megacorp = no
 	is_hive_empire = no
+}
+
+############################### The Sleeper ###############################
+is_marauder = {
+	OR = {
+		is_country_type = dormant_marauders
+		is_country_type = ruined_marauders
+		is_country_type = awakened_marauders
+		is_country_type = marauder_raiders
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = awakemend_marauders_ev
+			"
+			toggle = @homeless_class_trait_weight
+		}
+	}
 }
 
 ############################### Voyage to Eternity ###############################
@@ -1801,35 +2510,18 @@ KZ_VOY_is_normal_habitable_planet = {
 	}
 }
 
-############################### Wandering Witch: Voyagers ###############################
-has_psi_jumpdrive = {
-	OR = {
-		has_component = PSI_JUMP_DRIVE_1
-		has_component = EST_JUMP_DRIVE
-		# ACOT
-		has_component = SHROUD_DRIVE
-	}
-}
-can_reduce_upkeep_dummy = {
-	has_ww_dummy = yes
-	planet = {
-		OR = {
-			merg_is_gaia = yes
-			merg_is_continental = yes
-			merg_is_tropical = yes
-			merg_is_ocean = yes
-			merg_is_hab_ringworld = yes
-			has_planet_flag = wet_planet
-		}
-	}
-}
-
 ############################### Warship Girls R and MIST Species ###############################
 is_habitat_wg = {
 	OR = {
-		giga_is_pc_flat_world = yes
-		giga_is_pc_squareworld_habitable = yes
 		merg_is_habitat = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_flat_world = yes
+				giga_is_pc_squareworld_habitable = yes
+			"
+			toggle = @has_gigastructures
+		}
 	}
 }
 is_default_and_fallen_country = {
@@ -1853,10 +2545,16 @@ has_active_wg_foundry_building_lv_low = {
 		has_active_building = building_foundry_1
 		has_active_building = building_foundry_2
 		# Warship Girls R and MIST Species
-		has_active_building = building_sep_foundry
-		has_active_building = building_wsg_foundry
-		has_active_building = building_gray_nano_foundry
-		has_active_building = building_sh_foundry
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_sep_foundry
+				has_active_building = building_wsg_foundry
+				has_active_building = building_gray_nano_foundry
+				has_active_building = building_sh_foundry
+			"
+			toggle = @wsg_mod
+		}
 	}
 }
 has_active_wg_foundry_building_lv_high = {
@@ -1864,30 +2562,66 @@ has_active_wg_foundry_building_lv_high = {
 		has_active_building = building_foundry_3
 		has_active_building = building_nano_forge
 		# ACOT
-		has_active_building = building_fe_alloy_forge
-		has_active_building = building_acot_ae_alloy_forge
-		has_active_building = building_acot_ae_nano_forge
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_fe_alloy_forge
+				has_active_building = building_acot_ae_alloy_forge
+				has_active_building = building_acot_ae_nano_forge
+			"
+			toggle = @has_ancient_caches
+		}
 		# AOT
-		has_active_building = building_fe_nano_forge
-		has_active_building = building_phanon_nano_forge
-		has_active_building = building_phanon_alloy_forge
-		has_active_building = building_stellarite_nano_forge
-		has_active_building = building_stellarite_alloy_forge
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_fe_nano_forge
+				has_active_building = building_phanon_nano_forge
+				has_active_building = building_phanon_alloy_forge
+				has_active_building = building_stellarite_nano_forge
+				has_active_building = building_stellarite_alloy_forge
+			"
+			toggle = @has_acquisition_of_tech
+		}
 		# AVB
-		has_active_building = building_avb_foundry_4
-		has_active_building = building_avb_foundry_5
-		has_active_building = building_avb_foundry_6
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_avb_foundry_4
+				has_active_building = building_avb_foundry_5
+				has_active_building = building_avb_foundry_6
+			"
+			toggle = @has_avb_mod
+		}
 		# EDA
-		has_active_building = eda_building_alloy_foundry
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = eda_building_alloy_foundry
+			"
+			toggle = @eda_mod
+		}
 		# Protoss
 		has_active_building = protoss_building_bf
 		# Warship Girls R and MIST Species
-		has_active_building = building_sep_foundry2
-		has_active_building = building_wsg_foundry
-		has_active_building = building_gray_nano_foundry2
-		has_active_building = building_sh_foundryU
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_sep_foundry2
+				has_active_building = building_wsg_foundry
+				has_active_building = building_gray_nano_foundry2
+				has_active_building = building_sh_foundryU
+			"
+			toggle = @wsg_mod
+		}
 		# Wula Fallen Empire
-		has_active_building = building_wula_foundry
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_wula_foundry
+			"
+			toggle = @wula_compatch_var
+		}
 	}
 }
 has_active_wg_factory_building = {
@@ -1903,7 +2637,7 @@ wiirlak_ac_project_entropy_system_check = {
 		who = ROOT
 		status = yes
 	}
-	
+
 	NOR = {
 		merg_is_hole_star_class = yes
 		merg_is_neutron_star_class = yes
@@ -1929,9 +2663,6 @@ wiirlak_ac_project_entropy_system_check = {
 				has_anomaly = yes
 				is_terraforming = yes
 				exists = archaeological_site
-			#	has_modifier = terraforming_candidate
-			#	has_modifier = frozen_terraforming_candidate
-			#	has_modifier = toxic_terraforming_candidate
 				has_modifier = wiirlak_ac_modifier_project_cradle
 			}
 		}
@@ -1940,27 +2671,8 @@ wiirlak_ac_project_entropy_system_check = {
 
 ############################### Wild Space ###############################
 is_nebula_star = {
-	Or = {
-		is_star_class = sc_collapsar
-		is_star_class = sc_p_purple
-		is_star_class = sc_p_green
-		is_star_class = sc_p_red
-		# Misc Nebulae
-		is_star_class = sc_p_purple
-		is_star_class = sc_p_green
-		is_star_class = sc_p_red
-		is_star_class = sc_nova_1
-		is_star_class = sc_nova_2
-		is_star_class = sc_w_azure
-		is_star_class = sc_w_red
-		is_star_class = sc_w_green
-		is_star_class = sc_w_purple
-		is_star_class = sc_lbv_blue
-		is_star_class = sc_lbv_green
-		is_star_class = sc_lbv_red
-	}
+	merg_is_nebulae = yes
 }
-#
 wp_pv_is_clear_sky_planet = { # used to determine star visibility
 	NAND = {
 		exists = owner
@@ -1971,7 +2683,13 @@ wp_pv_is_clear_sky_planet = { # used to determine star visibility
 			}
 		}
 		is_colony = yes
-		pd_is_planet_class_cave = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_planet_class_cave = yes
+			"
+			toggle = @has_planetary_diversity
+		}
 	}
 	OR = {
 		merg_is_arid = yes
@@ -1990,7 +2708,6 @@ wp_pv_is_clear_sky_planet = { # used to determine star visibility
 		has_planet_flag = planet_has_obscured_skies # other modders can set this flag to their planets to remove the stars from view
 	}
 }
-
 wp_pv_is_not_binary_or_trinary = {
 	NOR = {
 		is_star_class = sc_binary_1
@@ -2008,11 +2725,23 @@ wp_pv_is_not_binary_or_trinary = {
 		is_star_class = sc_trinary_3
 		is_star_class = sc_trinary_4
 		# Forgotten Empires
-		is_star_class = sc_scfe_binary_1
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_scfe_binary_1
+			"
+			toggle = @forgotten_empires
+		}
 		# Real Space
-		is_binary = yes
-		is_trinary = yes
-		is_paired = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_binary = yes
+				is_trinary = yes
+				is_paired = yes
+			"
+			toggle = @rs_compatch_var
+		}
 	}
 }
 

@@ -92,7 +92,6 @@ country_event = {
 				}
 				set_country_flag = instrument_craving_nanites
 			}
-			# ACOT
 			5 = {
 				modifier = {
 					factor = 0
@@ -182,7 +181,7 @@ country_event = {
 				set_country_flag = instrument_craving_tiyanki_parts
 			}
 		}
-		country_event = { id = utopia.3344 days = 720}
+		country_event = { id = utopia.3344 days = 720 }
 	}
 
 	option = {
@@ -213,20 +212,44 @@ country_event = {
 		remove_country_flag = instrument_craving_living_metal
 		remove_country_flag = instrument_craving_nanites
 		# ACOT
-		remove_country_flag = instrument_craving_dark_energy
-		remove_country_flag = instrument_craving_stellarite
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				remove_country_flag = instrument_craving_dark_energy
+				remove_country_flag = instrument_craving_stellarite
+			"
+			toggle = @has_ancient_caches
+		}
 		# AOT
-		remove_country_flag = instrument_craving_runic_power
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				remove_country_flag = instrument_craving_runic_power
+			"
+			toggle = @has_acquisition_of_tech
+		}
 		# Gigastructural Engineering & More
-		remove_country_flag = instrument_craving_iodizium
-		remove_country_flag = instrument_craving_amb_megaconstruction
-		remove_country_flag = instrument_craving_psionic_sublimate
-		remove_country_flag = instrument_craving_negative_mass
-		remove_country_flag = instrument_craving_sentient_metal
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				remove_country_flag = instrument_craving_iodizium
+				remove_country_flag = instrument_craving_amb_megaconstruction
+				remove_country_flag = instrument_craving_psionic_sublimate
+				remove_country_flag = instrument_craving_negative_mass
+				remove_country_flag = instrument_craving_sentient_metal
+			"
+			toggle = @has_gigastructures
+		}
 		# Planetary Diversity
-		remove_country_flag = instrument_craving_eludium
-		remove_country_flag = instrument_craving_acean
-		remove_country_flag = instrument_craving_rad_bloom
-		remove_country_flag = instrument_craving_tiyanki_parts
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				remove_country_flag = instrument_craving_eludium
+				remove_country_flag = instrument_craving_acean
+				# remove_country_flag = instrument_craving_rad_bloom
+				# remove_country_flag = instrument_craving_tiyanki_parts
+			"
+			toggle = @has_planetary_diversity_unique_worlds
+		}
 	}
 }

@@ -1,9 +1,4 @@
 # Irony this is a placeholder file please ignore it
-giga_toxic_attendant_growth = { base = 0 }
 giga_bonus_desired_constructors_min = { base = 0 }
 giga_bonus_desired_constructors_max = { base = 0 }
 toxic_attendant_growth_ED_districts = { base = 0 }
-voidframe_toxic_attendant_growth = { base = 0 }
-toxic_attendant_growth_PD_districts = { base = 0 }
-toxic_attendant_growth_RS_PS_districts = { base = 0 }
-giga_virtuality_concentrated_production_mult = { base = 0 }

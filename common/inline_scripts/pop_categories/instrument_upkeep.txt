@@ -100,124 +100,196 @@ upkeep = {
 
 # ACOT
 upkeep = {
-	trigger = {
-		has_trait = trait_psionic
-		owner = {
-			has_country_flag = instrument_craving_dark_energy
-		}
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			trigger = {
+				has_trait = trait_psionic
+				owner = {
+					has_country_flag = instrument_craving_dark_energy
+				}
+			}
+			acot_sr_dark_energy = @instrument_upkeep_rare
+		"
+		toggle = @has_ancient_caches
 	}
-	acot_sr_dark_energy = @instrument_upkeep_rare
 }
 
 upkeep = {
-	trigger = {
-		has_trait = trait_psionic
-		owner = {
-			has_country_flag = instrument_craving_stellarite
-		}
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			trigger = {
+				has_trait = trait_psionic
+				owner = {
+					has_country_flag = instrument_craving_stellarite
+				}
+			}
+			acot_sr_stellarite = @instrument_upkeep_rare
+		"
+		toggle = @has_acquisition_of_tech
 	}
-	acot_sr_stellarite = @instrument_upkeep_rare
 }
 
 # AOT
 upkeep = {
-	trigger = {
-		has_trait = trait_psionic
-		owner = {
-			has_country_flag = instrument_craving_runic_power
-		}
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			trigger = {
+				has_trait = trait_psionic
+				owner = {
+					has_country_flag = instrument_craving_runic_power
+				}
+			}
+			aot_sr_runic_power = @instrument_upkeep_rare
+		"
+		toggle = @has_acquisition_of_tech
 	}
-	aot_sr_runic_power = @instrument_upkeep_rare
 }
 
 # Gigas
 upkeep = {
-	trigger = {
-		has_trait = trait_psionic
-		owner = {
-			has_country_flag = instrument_craving_iodizium
-		}
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			trigger = {
+				has_trait = trait_psionic
+				owner = {
+					has_country_flag = instrument_craving_iodizium
+				}
+			}
+			sr_iodizium = @instrument_upkeep_epic
+		"
+		toggle = @has_gigastructures
 	}
-	sr_iodizium = @instrument_upkeep_epic
 }
 
 upkeep = {
-	trigger = {
-		has_trait = trait_psionic
-		owner = {
-			has_country_flag = instrument_craving_amb_megaconstruction
-		}
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			trigger = {
+				has_trait = trait_psionic
+				owner = {
+					has_country_flag = instrument_craving_amb_megaconstruction
+				}
+			}
+			giga_sr_amb_megaconstruction = @instrument_upkeep_epic
+		"
+		toggle = @has_gigastructures
 	}
-	giga_sr_amb_megaconstruction = @instrument_upkeep_epic
 }
 
 upkeep = {
-	trigger = {
-		has_trait = trait_psionic
-		owner = {
-			has_country_flag = instrument_craving_psionic_sublimate
-		}
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			trigger = {
+				has_trait = trait_psionic
+				owner = {
+					has_country_flag = instrument_craving_psionic_sublimate
+				}
+			}
+			sr_psionic_sublimate = @instrument_upkeep_epic
+		"
+		toggle = @has_gigastructures
 	}
-	sr_psionic_sublimate = @instrument_upkeep_epic
 }
 
 upkeep = {
-	trigger = {
-		has_trait = trait_psionic
-		owner = {
-			has_country_flag = instrument_craving_negative_mass
-		}
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			trigger = {
+				has_trait = trait_psionic
+				owner = {
+					has_country_flag = instrument_craving_negative_mass
+				}
+			}
+			ehof_sr_negative_mass = @instrument_upkeep_rare
+		"
+		toggle = @has_gigastructures
 	}
-	ehof_sr_negative_mass = @instrument_upkeep_rare
 }
 
 upkeep = {
-	trigger = {
-		has_trait = trait_psionic
-		owner = {
-			has_country_flag = instrument_craving_sentient_metal
-		}
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			trigger = {
+				has_trait = trait_psionic
+				owner = {
+					has_country_flag = instrument_craving_sentient_metal
+				}
+			}
+			ehof_sr_sentient_metal = @instrument_upkeep_rare
+		"
+		toggle = @has_gigastructures
 	}
-	ehof_sr_sentient_metal = @instrument_upkeep_rare
 }
 
 # Planetary Diversity
 upkeep = {
-	trigger = {
-		has_trait = trait_psionic
-		owner = {
-			has_country_flag = instrument_craving_eludium
-		}
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			trigger = {
+				has_trait = trait_psionic
+				owner = {
+					has_country_flag = instrument_craving_eludium
+				}
+			}
+			sr_eludium = @instrument_upkeep_very_rare
+		"
+		toggle = @has_planetary_diversity_unique_worlds
 	}
-	sr_eludium = @instrument_upkeep_very_rare
 }
 
 upkeep = {
-	trigger = {
-		has_trait = trait_psionic
-		owner = {
-			has_country_flag = instrument_craving_acean
-		}
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			trigger = {
+				has_trait = trait_psionic
+				owner = {
+					has_country_flag = instrument_craving_acean
+				}
+			}
+			sr_acean = @instrument_upkeep_very_rare
+		"
+		toggle = @has_planetary_diversity_unique_worlds
 	}
-	sr_acean = @instrument_upkeep_very_rare
 }
 
 upkeep = {
-	trigger = {
-		has_trait = trait_psionic
-		owner = {
-			has_country_flag = instrument_craving_rad_bloom
-		}
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			trigger = {
+				has_trait = trait_psionic
+				owner = {
+					has_country_flag = instrument_craving_rad_bloom
+				}
+			}
+			sr_rad_bloom = @instrument_upkeep_very_rare
+		"
+		toggle = @has_planetary_diversity_unique_worlds
 	}
-	sr_rad_bloom = @instrument_upkeep_very_rare
 }
 
 upkeep = {
-	trigger = {
-		has_trait = trait_psionic
-		owner = {
-			has_country_flag = instrument_craving_tiyanki_parts
-		}
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			trigger = {
+				has_trait = trait_psionic
+				owner = {
+					has_country_flag = instrument_craving_tiyanki_parts
+				}
+			}
+			sr_tiyanki_parts = @instrument_upkeep_very_rare
+		"
+		toggle = @has_planetary_diversity_unique_worlds
 	}
-	sr_tiyanki_parts = @instrument_upkeep_very_rare
 }

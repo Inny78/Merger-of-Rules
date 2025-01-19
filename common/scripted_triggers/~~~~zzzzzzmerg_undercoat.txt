@@ -21,10 +21,16 @@ is_endgame_crisis = {
 		is_country_type = ai_empire
 		is_country_type = synth_queen
 		is_country_type = synth_queen_storm
-		# ACOT
+		# ACOT SBTG
 		is_country_type = sbtg_stellarborne_empire 
 		# Gigastructural Engineering & More
-		is_giga_crisis_faction = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_giga_crisis_faction = yes
+			"
+			toggle = @has_gigastructures
+		}
 	}
 }
 has_slaver_civic = {
@@ -107,31 +113,67 @@ planet_is_neutron_star_including_pulsar = {
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
 		# Real Space
-		is_planet_class_pc_collapsar = yes
-		is_planet_class_pc_magnetar = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class_pc_collapsar = yes
+				is_planet_class_pc_magnetar = yes
+			"
+			toggle = @rs_compatch_var
+		}
 	}
 }
 planet_is_nonstandard_star = {
 	OR = {
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
-		# Real Space
-		is_planet_class_pc_collapsar = yes
-		is_planet_class_pc_magnetar = yes
 		is_planet_class = pc_black_hole
+		# Real Space
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class_pc_collapsar = yes
+				is_planet_class_pc_magnetar = yes
+			"
+			toggle = @rs_compatch_var
+		}
 		# Gigastructural Engineering & More
-		giga_is_black_hole = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_black_hole = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# TimeMod
-		is_tm_black_hole = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_tm_black_hole = yes
+			"
+			toggle = @timemod
+		}
 	}
 }
 planet_is_black_hole = {
 	OR = {
 		is_planet_class = pc_black_hole
 		# Gigastructural Engineering & More
-		giga_is_black_hole = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_black_hole = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# TimeMod
-		is_tm_black_hole = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_tm_black_hole = yes
+			"
+			toggle = @timemod
+		}
 	}
 }
 can_have_defense_platforms = {
@@ -139,7 +181,13 @@ can_have_defense_platforms = {
 	OR = {
 		has_starbase_size >= starbase_outpost
 		has_starbase_size >= orbital_ring_tier_1
-		is_precursor_starbase = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_precursor_starbase = yes
+			"
+			toggle = @has_ancient_caches
+		}
 	}
 }
 has_unrestricted_cbs = {

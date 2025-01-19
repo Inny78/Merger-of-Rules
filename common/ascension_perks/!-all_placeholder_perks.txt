@@ -1,14 +1,3 @@
 # Dummy ascension perks - to be overwritten by their respective mods.
 # Irony this is a placeholder file please ignore it
 ap_megacorp = { potential = { always = no } possible = { always = no } }
-ap_total_assimilation = { potential = { always = no } possible = { always = no } }
-ap_expactriate_service = { potential = { always = no } possible = { always = no } }
-ap_BA_new_frontier = { potential = { always = no } possible = { always = no } }
-ap_gestaltization = { potential = { always = no } possible = { always = no } }
-ap_libra_gestalt_arcology = { potential = { always = no } possible = { always = no } }
-ap_libra_gestalt_release_vassals = { potential = { always = no } possible = { always = no } }
-ap_libra_imperial_vermillion = { potential = { always = no } possible = { always = no } }
-ap_libra_ultimate_directive = { potential = { always = no } possible = { always = no } }
-ap_matters_all_have_minds = { potential = { always = no } possible = { always = no } }
-oxr_mdlc_ap_distributed_multikernel = { potential = { always = no } possible = { always = no } }
-xvcv_mdlc_ap_genetics_mastery = { potential = { always = no } possible = { always = no } }

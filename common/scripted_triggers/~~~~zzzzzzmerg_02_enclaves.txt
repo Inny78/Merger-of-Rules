@@ -12,15 +12,23 @@ fleet_can_be_scrapped = {
 	NOR = {
 		merg_is_special_ship = yes
 		# Gigastructural Engineering & More
-		giga_is_vat_leviathan = yes
-		giga_is_unscrappable = yes
-		# Scripted Trigger Undercoat
-		fleet = {
-			has_fleet_flag = stu_fleet_cant_be_scrapped
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_vat_leviathan = yes
+				giga_is_unscrappable = yes
+			"
+			toggle = @has_gigastructures
 		}
 		# Voyage to Eternity
-		is_ship_size = KZ_VOY_battlestar
-		is_ship_size = KZ_VOY_holo_training_ship
-		is_ship_size = KZ_VOY_planet_killer_prototype
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_ship_size = KZ_VOY_battlestar
+				is_ship_size = KZ_VOY_holo_training_ship
+				is_ship_size = KZ_VOY_planet_killer_prototype
+			"
+			toggle = @vte_mod
+		}
 	}
 }

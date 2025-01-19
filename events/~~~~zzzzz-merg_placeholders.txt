@@ -26,9 +26,6 @@ country_event = { id = anomalymod.107 hide_window = yes is_triggered_only = yes 
 country_event = { id = anomalymod.108 hide_window = yes is_triggered_only = yes immediate = { } }
 country_event = { id = anomalymod.109 hide_window = yes is_triggered_only = yes immediate = { } }
 
-namespace = civicsexpanded
-country_event = { id = civicsexpanded.105 hide_window = yes is_triggered_only = yes immediate = { } }
-
 namespace = countryexpanded
 country_event = { id = countryexpanded.44 hide_window = yes is_triggered_only = yes immediate = { } }
 
@@ -49,20 +46,8 @@ planet_event = { id = gpm_crisis.3 hide_window = yes is_triggered_only = yes imm
 namespace = gpm_planet_destruction
 planet_event = { id = gpm_planet_destruction.1 hide_window = yes is_triggered_only = yes immediate = { } }
 
-namespace = gpm_terraform
-planet_event = { id = gpm_terraform.78871 hide_window = yes is_triggered_only = yes immediate = { } }
-
 namespace = osom_subterranean_change
 planet_event = { id = osom_subterranean_change.1 hide_window = yes is_triggered_only = yes immediate = { } }
-
-namespace = cruel_pk
-planet_event = { id = cruel_pk.1 hide_window = yes is_triggered_only = yes immediate = { } }
-planet_event = { id = cruel_pk.2 hide_window = yes is_triggered_only = yes immediate = { } }
-planet_event = { id = cruel_pk.3 hide_window = yes is_triggered_only = yes immediate = { } }
-planet_event = { id = cruel_pk.4 hide_window = yes is_triggered_only = yes immediate = { } }
-planet_event = { id = cruel_pk.5 hide_window = yes is_triggered_only = yes immediate = { } }
-planet_event = { id = cruel_pk.6 hide_window = yes is_triggered_only = yes immediate = { } }
-planet_event = { id = cruel_pk.7 hide_window = yes is_triggered_only = yes immediate = { } }
 
 namespace = ap_wg_crisis
 planet_event = { id = ap_wg_crisis.12 hide_window = yes is_triggered_only = yes immediate = { } }
@@ -123,9 +108,6 @@ planet_event = { id = civicsexpanded.103 hide_window = yes is_triggered_only = y
 
 namespace = onactionpops
 planet_event = { id = onactionpops.12 hide_window = yes is_triggered_only = yes immediate = { } }
-
-namespace = pdshroudplanets
-planet_event = { id = pdshroudplanets.200 hide_window = yes is_triggered_only = yes immediate = { } }
 
 namespace = AL_magic_bullet
 planet_event = { id = AL_magic_bullet.5 hide_window = yes is_triggered_only = yes immediate = { } }

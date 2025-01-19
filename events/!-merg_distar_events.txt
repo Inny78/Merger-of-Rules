@@ -22,7 +22,7 @@ country_event = { #Atomic Clock follow-up: Selection
                             planet_size > 8
                             planet_size < 25
                             NOR = {
-                                is_planet_class = "pc_broken"
+                                merg_is_broken = yes
                                 is_planet_class = "pc_astral_scar"
                             }
                             is_star = no
@@ -39,7 +39,7 @@ country_event = { #Atomic Clock follow-up: Selection
                             planet_size > 8
                             planet_size < 25
                             NOR = {
-                                is_planet_class = "pc_broken"
+                                merg_is_broken = yes
                                 is_planet_class = "pc_astral_scar"
                             }
                             is_star = no
@@ -224,7 +224,7 @@ country_event = { #Atomic Clock follow-up: A system planet is terraformed
                     planet_size > 8
                     planet_size < 25
                     NOR = {
-                        is_planet_class = "pc_broken"
+                        merg_is_broken = yes
                         is_planet_class = pc_astral_scar
                     }
                     is_star = no

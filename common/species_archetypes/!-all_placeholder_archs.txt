@@ -11,51 +11,11 @@ JAYPEES_HAIRTENTACLE = { uses_modifiers = no }
 JAYPEES_SEAL = { uses_modifiers = no }
 JAYPEES_SQUID = { uses_modifiers = no }
 JAYPEES_TURTLEHORSE = { uses_modifiers = no }
-# AshArms Aquarius history
-Dolls = { uses_modifiers = no }
 # Assault Lily
 LILY = { uses_modifiers = no }
-# Azur Lane Stellaris DLC
-KANSEN = { uses_modifiers = no }
-# BlueArchive
-Schale = { uses_modifiers = no }
-# Cryogenesis Unofficial Species Pack
-sm_ELEMENTAL = { uses_modifiers = no }
-# EDA
-Areta = { uses_modifiers = no }
-# Empire of Eeveelution
-POKEMON = { uses_modifiers = no }
-# Expanded Traits, Civics, Pops, and More
-HUMANOID = { uses_modifiers = no }
-MAMMALIAN = { uses_modifiers = no }
-REPTILIAN = { uses_modifiers = no }
-AVIAN = { uses_modifiers = no }
-ARTHROPOID = { uses_modifiers = no }
-MOLUSCOID = { uses_modifiers = no }
-FUNGOID = { uses_modifiers = no }
-PLANTOID = { uses_modifiers = no }
-NECROID = { uses_modifiers = no }
-half_species = { uses_modifiers = no }
-half_species_special = { uses_modifiers = no }
-half_aberration = { uses_modifiers = no }
-half_perfect = { uses_modifiers = no }
-half_amalgamated = { uses_modifiers = no }
+# KDC Story Pack
+NANITES_CROP = { uses_modifiers = no }
 # Merger of Rules
 PLACEHOLDER = { uses_modifiers = no }
 # Nyto Species Events Pack
 NYTO = { uses_modifiers = no }
-# SW:UnknownWorld Shipgirls Story
-STARSHIPGIRLS = { uses_modifiers = no }
-# ThaumStellaris
-TC_GOLEM = { uses_modifiers = no }
-TC_GOLEM_HIVE = { uses_modifiers = no }
-TC_GOLEM_MACHINE = { uses_modifiers = no }
-# Wandering Witch: Voyagers
-WV_OBJECT = { uses_modifiers = no }
-# Warship Girls R And MIST Species
-WARSHIPGIRL = { uses_modifiers = no }
-SHENHAI = { uses_modifiers = no }
-# Misc
-NANITES_CROP = { uses_modifiers = no }
-UNITED_FLEET = { uses_modifiers = no }
-ASCENDED = { uses_modifiers = no }

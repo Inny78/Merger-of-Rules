@@ -9,7 +9,13 @@ districts_good_energy = {
 			has_modifier = gas_rich_planet_fo_realz
 			has_planet_flag = buildings_good_energy
 			# GPM
-			gpm_has_positive_energy_planet_modifier = yes
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					gpm_has_positive_energy_planet_modifier = yes
+				"
+				toggle = @has_guillis_planet_modifiers
+			}
 		}
 	}
 }
@@ -25,7 +31,13 @@ districts_good_minerals = {
 			has_modifier = minerals_relic
 			has_planet_flag = buildings_good_minerals
 			# GPM
-			gpm_has_positive_mineral_planet_modifier = yes
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					gpm_has_positive_mineral_planet_modifier = yes
+				"
+				toggle = @has_guillis_planet_modifiers
+			}
 		}
 		# SirBlackAxe's Unofficial Bug Patch
 		NOT = { has_modifier = pm_wenkwort_custodian }
@@ -42,7 +54,13 @@ districts_good_food = {
 			has_modifier = ancient_harvesters
 			has_modifier = eat_the_titans
 			# GPM
-			gpm_has_positive_food_planet_modifier = yes
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					gpm_has_positive_food_planet_modifier = yes
+				"
+				toggle = @has_guillis_planet_modifiers
+			}
 		}
 	}
 }
@@ -63,29 +81,47 @@ jobs_any_research = {
 				has_job = xeno_zoo_keeper
 				has_job = head_researcher
 				# ACOT
-				has_job = acot_researcher
-				has_job = acot_researcher_drone
-				has_job = acot_priest
-				has_job = acot_voidsphere_labman
-				has_job = acot_voidsphere_labdrone
-				has_job = acot_free_thinker
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_job = acot_researcher
+						has_job = acot_researcher_drone
+						has_job = acot_priest
+						has_job = acot_voidsphere_labman
+						has_job = acot_voidsphere_labdrone
+						has_job = acot_free_thinker
+					"
+					toggle = @has_ancient_caches
+				}
 				# AOT
-				has_job = ae_researcher
-				has_job = ae_researcher_drone
-				has_job = phanon_researcher
-				has_job = phanon_researcher_drone
-				has_job = phanon_priest
-				has_job = stellarite_researcher
-				has_job = stellarite_researcher_drone
-				has_job = stellarite_priest
-				has_job = stellarite_bureaucrat
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_job = ae_researcher
+						has_job = ae_researcher_drone
+						has_job = phanon_researcher
+						has_job = phanon_researcher_drone
+						has_job = phanon_priest
+						has_job = stellarite_researcher
+						has_job = stellarite_researcher_drone
+						has_job = stellarite_priest
+						has_job = stellarite_bureaucrat
+					"
+					toggle = @has_acquisition_of_tech
+				}
 				# GPM
-				has_job = gpm_archaeologist
-				has_job = gpm_archaeologist_drone
-				has_job = gpm_precursor_archaeologist
-				has_job = gpm_precursor_archaeologist_drone
-				has_job = gpm_orbital_researcher
-				has_job = gpm_orbital_researcher_drone
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_job = gpm_archaeologist
+						has_job = gpm_archaeologist_drone
+						has_job = gpm_precursor_archaeologist
+						has_job = gpm_precursor_archaeologist_drone
+						has_job = gpm_orbital_researcher
+						has_job = gpm_orbital_researcher_drone
+					"
+					toggle = @has_guillis_planet_modifiers
+				}
 			}
 		}
 	}
@@ -136,7 +172,13 @@ has_foundry_designation = {
 		# Freebooters Origin (reborn)
 		has_designation = col_habitat_nsc_freebooter_foundry
 		# TimeMod
-		has_designation = col_nanites_capital_machine_manufacturing
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_nanites_capital_machine_manufacturing
+			"
+			toggle = @timemod
+		}
 	}
 }
 
@@ -148,7 +190,13 @@ has_generator_designation = {
 		# Ethics and Civics Infinity
 		has_designation = col_dome_energy
 		# Libra: Gestalt Age
-		has_designation = col_libra_nanotech_generator
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_libra_nanotech_generator
+			"
+			toggle = @libra_mod
+		}
 	}
 }
 
@@ -161,11 +209,17 @@ has_industrial_designation = {
         has_designation = col_dome_industrial
         has_designation = col_ring_industry
 		# TimeMod
-		has_designation = col_time_capital_manufacturing
-		has_designation = col_timesingularity_capital_manufacturing
-		has_designation = col_endless_time_capital_manufacturing
-		has_designation = col_psionic_best_capital_manufacturing
-		has_designation = col_psionic_capital_manufacturing
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_time_capital_manufacturing
+				has_designation = col_timesingularity_capital_manufacturing
+				has_designation = col_endless_time_capital_manufacturing
+				has_designation = col_psionic_best_capital_manufacturing
+				has_designation = col_psionic_capital_manufacturing
+			"
+			toggle = @timemod
+		}
 	}
 }
 
@@ -176,7 +230,13 @@ has_mining_designation = {
 		# Ethics and Civics Infinity
 		has_designation = col_dome_mining
 		# Libra: Gestalt Age
-		has_designation = col_libra_nanotech_mining
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_libra_nanotech_mining
+			"
+			toggle = @libra_mod
+		}
 		# Freebooters Origin (reborn)
 		has_designation = col_habitat_nsc_freebooter_mining
 	}
@@ -192,8 +252,14 @@ has_refinery_designation = {
 		# Freebooters Origin (reborn)
 		has_designation = col_habitat_nsc_freebooter_refinery
 		# TimeMod
-		has_designation = col_gas_colony_capital_rare
-		has_designation = col_gas_colony_capital_hive_rare
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_gas_colony_capital_rare
+				has_designation = col_gas_colony_capital_hive_rare
+			"
+			toggle = @timemod
+		}
 	}
 }
 
@@ -206,16 +272,28 @@ has_research_designation = {
 		# Ethics and Civics Infinity
 		has_designation = col_dome_research
 		# Libra: Gestalt Age
-		has_designation = col_libra_nanotech_research
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_libra_nanotech_research
+			"
+			toggle = @libra_mod
+		}
 		# Freebooters Origin (reborn)
 		has_designation = col_habitat_nsc_freebooter_research
 		# TimeMod
-		has_designation = col_time_capital_research
-		has_designation = col_timesingularity_capital_research
-		has_designation = col_endless_time_capital_research
-		has_designation = col_psionic_best_capital_research
-		has_designation = col_psionic_capital_research
-		has_designation = col_nanites_capital_machine_research
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_time_capital_research
+				has_designation = col_timesingularity_capital_research
+				has_designation = col_endless_time_capital_research
+				has_designation = col_psionic_best_capital_research
+				has_designation = col_psionic_capital_research
+				has_designation = col_nanites_capital_machine_research
+			"
+			toggle = @timemod
+		}
 	}
 }
 

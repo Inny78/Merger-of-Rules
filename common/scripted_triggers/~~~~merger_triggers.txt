@@ -14,11 +14,23 @@ merg_is_standard_empire = {
 		has_country_flag = is_playable
 		has_country_flag = is_empire
 		# The Empty Vagrant
-		is_default_ev_country_type = yes
-		is_country_type = fallen_empire_ev
-		is_country_type = awakened_fallen_empire_ev
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_default_ev_country_type = yes
+				is_country_type = fallen_empire_ev
+				is_country_type = awakened_fallen_empire_ev
+			"
+			toggle = @homeless_class_trait_weight
+		}
 		# ZOFE
-		is_zofe_country = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_zofe_country = yes
+			"
+			toggle = @has_zofe_vanilla
+		}
 	}
 }
 
@@ -33,9 +45,21 @@ merg_is_default_empire = {
 		# Scripted Triggers Undercoat
 		has_country_flag = is_playable
 		# The Empty Vagrant
-		is_default_ev_country_type = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_default_ev_country_type = yes
+			"
+			toggle = @homeless_class_trait_weight
+		}
 		# ZOFE
-		is_zofe_country = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_zofe_country = yes
+			"
+			toggle = @has_zofe_vanilla
+		}
 	}
 }
 
@@ -43,14 +67,30 @@ merg_is_default_empire = {
 merg_is_fallen_empire = {
 	OR = {
 		is_country_type = fallen_empire
-		# History of the Lost Empire
-		is_country_type = LsE_fallen_empire
-		# Human Fallen Empire
-		hfe_trigger_is_human_fallen = yes
+		# AshArms Aquarius History
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = LsE_fallen_empire
+			"
+			toggle = @asharm_mod
+		}
 		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_fallen_empire
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = kuat_fallen_empire
+			"
+			toggle = @sw_kuat_mod
+		}
 		# The Empty Vagrant
-		is_country_type = fallen_empire_ev
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = fallen_empire_ev
+			"
+			toggle = @homeless_class_trait_weight
+		}
 	}
 }
 
@@ -64,13 +104,31 @@ merg_is_awakened_fe = {
 			is_country_type = awakened_gate_builders
 		}
 		# SW:KUAT ANCIENT EMPIRE
-		is_country_type = kuat_awakened_fallen_empire
-		is_country_type = awakened_return_kuat_empire
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = kuat_awakened_fallen_empire
+				is_country_type = awakened_return_kuat_empire
+			"
+			toggle = @sw_kuat_mod
+		}
 		# The Empty Vagrant
-		is_country_type = awakened_fallen_empire_ev
-		is_country_type = awakened_fallen_empire_event
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = awakened_fallen_empire_ev
+				is_country_type = awakened_fallen_empire_event
+			"
+			toggle = @homeless_class_trait_weight
+		}
 		# Wula Fallen Empire
-		is_country_type = first_emperor_awakened_fallen_empire
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = first_emperor_awakened_fallen_empire
+			"
+			toggle = @wula_compatch_var
+		}
 	}
 }
 
@@ -90,20 +148,42 @@ merg_is_true_ringworld = {
 		is_planet_class = pc_shattered_ring_habitable
 		is_planet_class = pc_cybrex
 		# Ancient Empire
-		ag_is_mod_habitable_ringworld = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				ag_is_mod_habitable_ringworld = yes
+			"
+			toggle = @ag_null_edict_length
+		}
 		# Assault Lily
 		# uses_district_set = lily_ring_world
 		# Darkspace
 		is_ds_ancient_ringworld = yes
 		is_ds_ringworld_spectrals = yes
 		# Gigastructural Engineering & More
-		giga_is_pc_maginot_ringworld = yes
-		# Planetary Diversity
-		is_planetary_diversity_ringworld = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_maginot_ringworld = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Warship Girls and MIST species
-		is_ringworld_wg = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_ringworld_wg = yes
+			"
+			toggle = @wsg_mod
+		}
 		# ZOFE
-		is_zofe_utopian_ringworld = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_utopian_ringworld
+			"
+			toggle = @has_zofe_vanilla
+		}
 	}
 }
 
@@ -112,29 +192,64 @@ merg_is_habitat = {
 	OR = {
 		is_planet_class = pc_habitat
 		# Acquisition of Technology
-		is_aot_habitat = yes
-		# Blue Archive
-		is_bluarch_comp_auto_habitat = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_aot_habitat = yes
+			"
+			toggle = @has_acquisition_of_tech
+		}
 		# DarkSpace
 		is_ds_skycatcher = yes
 		# Gigastructural Engineering & More
-		is_giga_habitat = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_giga_elysium = yes
+				giga_is_pc_giga_orbital = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Habitation
 		has_planet_flag = hab_init
 		# Living Space
 		has_planet_flag = stpg_planetary_habitat
 		# More Events Mod
-		is_pc_mem_vazuran_habitat = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_pc_mem_vazuran_habitat = yes
+			"
+			toggle = @has_more_events_mod
+		}
 		# Girls Frontline
-		gf_comp_habitis = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_GFnytp_habitis
+			"
+			toggle = @gf_compatch_var
+		}
 		# StellarRegulator Array
 		# uses_district_set = SRA_city_world
 		# Twinks Atlantean
 		# uses_district_set = skypalace
 		# Wula Fallen Empire
-		# uses_district_set = fe_rogue_trader_habitat
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_fallen_empire_rogue_trader_habitat
+			"
+			toggle = @wula_compatch_var
+		}
 		# ZOFE
-		is_zofe_utopian_habitat = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_utopian_habitat
+			"
+			toggle = @has_zofe_vanilla
+		}
 	}
 }
 
@@ -143,20 +258,30 @@ merg_is_habitat_non_PD = {
 	OR = {
 		is_planet_class = pc_habitat
 		# Gigastructural Engineering & More
-		giga_is_pc_giga_elysium = yes
-		giga_is_pc_giga_orbital = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_giga_elysium = yes
+				giga_is_pc_giga_orbital = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Acquisition of Technology
-		is_aot_habitat = yes
-		# Blue Archive
-		is_bluarch_comp_auto_habitat = yes
-		# Decadence of Sanity
-		is_shroud_entrepot = yes
-		# Habitation
-		has_planet_flag = hab_init
-		# Living Space
-		has_planet_flag = stpg_planetary_habitat
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_aot_habitat = yes
+			"
+			toggle = @has_acquisition_of_tech
+		}
 		# More Events Mod
-		is_pc_mem_vazuran_habitat = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_pc_mem_vazuran_habitat = yes
+			"
+			toggle = @has_more_events_mod
+		}
 		# Nyto Species Pack
 		# uses_district_set = GF_nyto_devil_furnace_world
 		# SRA
@@ -164,7 +289,13 @@ merg_is_habitat_non_PD = {
 		# Twinks Atlantean
 		# uses_district_set = skypalace
 		# ZOFE
-		is_zofe_utopian_habitat = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_utopian_habitat
+			"
+			toggle = @has_zofe_vanilla
+		}
 	}
 }
 
@@ -172,22 +303,34 @@ merg_is_habitat_non_PD = {
 merg_is_special_colony = {
 	OR = {
 		# Gigastructural Engineering & More
-		giga_is_pc_ehof_habitat = yes
-		is_regular_giga_maginot_world = yes
-		giga_is_pc_giga_planetary_computer = yes
-		giga_is_pc_flat_world = yes
-		giga_is_pc_interstellar_ringworld_habitable = yes
-		giga_is_pc_interstellar_habitat = yes
-		giga_is_pc_gigaorbital_ring = yes
-		giga_is_pc_giga_penrose_habitable = yes
-		giga_is_pc_equatorial_shipyard = yes
-		giga_is_pc_squareworld_habitable = yes
-		is_giga_habitable_gas_giant = yes
-		giga_is_alderson_disk = yes
-		giga_is_birch_world = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_ehof_habitat = yes
+				is_regular_giga_maginot_world = yes
+				giga_is_pc_giga_planetary_computer = yes
+				giga_is_pc_flat_world = yes
+				giga_is_pc_interstellar_ringworld_habitable = yes
+				giga_is_pc_interstellar_habitat = yes
+				giga_is_pc_gigaorbital_ring = yes
+				giga_is_pc_giga_penrose_habitable = yes
+				giga_is_pc_equatorial_shipyard = yes
+				giga_is_pc_squareworld_habitable = yes
+				is_giga_habitable_gas_giant = yes
+				giga_is_alderson_disk = yes
+				giga_is_birch_world = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Warship Girls R and MIST Species
-		is_habitat_wg = yes
-		is_ringworld_wg = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_habitat_wg = yes
+				is_ringworld_wg = yes
+			"
+			toggle = @wsg_mod
+		}
 	}
 }
 
@@ -195,172 +338,378 @@ merg_has_hive_trait = {
 	OR = {
 		has_trait = trait_hive_mind
 		# Ethics and Civics - Bug Branch
-		is_bugged_happy_drone = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_bugged_happy_drone = yes
+			"
+			toggle = @has_bug_branch
+		}
 		# Trait Diversity
 		is_td_multi_hiveminded = yes
-		# Diagraphers Trait Mod
-		is_multihive_drone = yes
 	}
 }
 
 merg_is_nebulae = {
+	optimize_memory
 	OR = {
-		# Real Space Nebulae
-		is_star_class = sc_collapsar
-		is_star_class = sc_p_purple
-		is_star_class = sc_p_green
-		is_star_class = sc_p_red
-		# Misc Nebulae
-		is_star_class = sc_p_purple
-		is_star_class = sc_p_green
-		is_star_class = sc_p_red
-		is_star_class = sc_nova_1
-		is_star_class = sc_nova_2
-		is_star_class = sc_w_azure
-		is_star_class = sc_w_red
-		is_star_class = sc_w_green
-		is_star_class = sc_w_purple
-		is_star_class = sc_lbv_blue
-		is_star_class = sc_lbv_green
-		is_star_class = sc_lbv_red
+		# Real Space
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_collapsar
+				is_star_class = sc_p_purple
+				is_star_class = sc_p_green
+				is_star_class = sc_p_red
+				is_star_class = sc_nova_1
+				is_star_class = sc_nova_2
+				is_star_class = sc_w_azure
+				is_star_class = sc_w_red
+				is_star_class = sc_w_green
+				is_star_class = sc_w_purple
+				is_star_class = sc_lbv_blue
+				is_star_class = sc_lbv_green
+				is_star_class = sc_lbv_red
+			"
+			toggle = @rs_compatch_var
+		}
 	}
 }
 
 # List of dense stars for planet killers
 merg_is_dense_star = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_black_hole
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
 		# ACOT
-		is_acot_void_hole = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_acot_void_hole = yes
+			"
+			toggle = @has_ancient_caches
+		}
 		# Astro's Stellaris Overhaul - Galaxy Generation
 		is_aso_gg_white_hole = yes
 		# Darkspace
 		is_ds_zeitriss_gc = yes
 		# Gigastructural Engineering & More
-		giga_is_birch_world = yes
-		giga_is_black_hole = yes
-		giga_is_white_hole = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_birch_world = yes
+				giga_is_black_hole = yes
+				giga_is_white_hole = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Hypothetical Stars
 		is_hypo_stars_black_dwarf_star = yes
 		is_hypo_stars_strange_star = yes
 		is_hypo_stars_white_hole = yes
 		# Star Wars: Kuat Ancient Empire
-		is_kuat_white_hole = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_kuat_white_hole
+			"
+			toggle = @sw_kuat_mod
+		}
 		# MEM
-		is_pc_mem_micro_black_hole = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_pc_mem_micro_black_hole = yes
+			"
+			toggle = @has_more_events_mod
+		}
 		# Real Space
-		is_planet_class_pc_collapsar = yes
-		is_planet_class_pc_magnetar = yes
-		is_rs_compat_microquasar = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class_pc_collapsar = yes
+				is_planet_class_pc_magnetar = yes
+				is_rs_compat_microquasar = yes
+			"
+			toggle = @rs_compatch_var
+		}
 		# TimeMod
-		is_time_black_hole_planet_class = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_time_black_hole_planet_class = yes
+			"
+			toggle = @timemod
+		}
 		# Voyage to Eternity
-		is_KZ_VOY_micro_black_hole = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_KZ_VOY_micro_black_hole = yes
+			"
+			toggle = @vte_mod
+		}
 	}
 }
 
 merg_is_black_or_white_hole = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_black_hole
 		# ACOT
-		is_acot_void_hole = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_acot_void_hole = yes
+			"
+			toggle = @has_ancient_caches
+		}
 		# Astro's Stellaris Overhaul - Galaxy Generation
 		is_aso_gg_white_hole = yes
 		# Darkspace
 		is_ds_zeitriss_gc = yes
 		# Gigastructural Engineering & More
-		giga_is_birch_world = yes
-		giga_is_black_hole = yes
-		giga_is_white_hole = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_birch_world = yes
+				giga_is_black_hole = yes
+				giga_is_white_hole = yes
+			"
+			toggle = @has_gigastructures
+		}
 		# Hypothetical Stars
 		is_hypo_stars_white_hole = yes
 		# MEM
-		is_pc_mem_micro_black_hole = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_pc_mem_micro_black_hole = yes
+			"
+			toggle = @has_more_events_mod
+		}
 		# Real Space
-		is_rs_compat_microquasar = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_rs_compat_microquasar = yes
+			"
+			toggle = @rs_compatch_var
+		}
 		# TimeMod
-		is_time_black_hole_planet_class = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_time_black_hole_planet_class = yes
+			"
+			toggle = @timemod
+		}
 		# Voyage to Eternity
-		is_KZ_VOY_micro_black_hole = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_KZ_VOY_micro_black_hole = yes
+			"
+			toggle = @vte_mod
+		}
 	}
 }
 
 merg_is_standard_dense_star = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_black_hole
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
 		# Real Space
-		is_planet_class_pc_collapsar = yes
-		is_planet_class_pc_magnetar = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class_pc_collapsar = yes
+				is_planet_class_pc_magnetar = yes
+			"
+			toggle = @rs_compatch_var
+		}
 	}
 }
 
 # List of void stars and planets for planet killers exclusion
 merg_is_empty_space = {
+	optimize_memory
 	OR = {
 		# ACOT
-		is_acot_invisible_star = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_acot_invisible_star = yes
+			"
+			toggle = @has_ancient_caches
+		}
 		# Ancient Empires
-		is_ag_void = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_ag_void = yes
+			"
+			toggle = @ag_null_edict_length
+		}
 		# Darkspace
 		is_ds_gc_star = yes
 		# Forgotten Empires
-		scfe_is_empty_space = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				scfe_is_empty_space = yes
+			"
+			toggle = @forgotten_empires
+		}
 		# GF Nyto
-		gf_comp_endles = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				gf_comp_endles = yes
+			"
+			toggle = @gf_compatch_var
+		}
 		# Gigastructural Engineering & More
-		giga_is_pc_giga_empty_space = yes
-		# History of the Lost Empire
-		# is_planet_class = pc_empty_space # is_asharms_empty_space = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				giga_is_pc_giga_empty_space = yes
+			"
+			toggle = @has_gigastructures
+		}
+		# AshArms Aquarius History
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_empty_space
+			"
+			toggle = @asharm_mod
+		}
 		# LEX
-		lex_compat_star_dummy = yes
-		lex_compat_planet_dummy = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_bwm_star_dummy
+				is_planet_class = pc_bwm_planet_dummy
+			"
+			toggle = @lex_compatch_var
+		}
 		# Secrets of the Shroud
-		is_sm_empty_space = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_sm_empty_space = yes
+			"
+			toggle = @has_sots_mod
+		}
 		# Some Events of Outside Cluster
-		# is_planet_class = pc_star_void_dummy_01
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_star_void_dummy_01
+			"
+			toggle = @has_seooc_mod
+		}
 		# Steven Universe Homeworld Gems
-		is_steven_no_star = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_steven_no_star = yes
+			"
+			toggle = @has_f93_gem_mod
+		}
 		# ThaumStellaris
-		is_tc_invisible = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_tc_invisible = yes
+			"
+			toggle = @has_tc_mod
+		}
 	}
 }
 
 merg_is_hole_star_class = {
+	optimize_memory
 	OR = {
 		is_star_class = sc_black_hole
 		# ACOT
-		is_star_class = sc_acot_void_star
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_acot_void_star
+			"
+			toggle = @has_ancient_caches
+		}
 		# Astro's Stellaris Overhaul - Galaxy Generation
 		is_star_class = sc_aso_gg_white_hole
 		# Forgotten Empires
-		is_star_class = sc_scfe_empty_space
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_scfe_empty_space
+			"
+			toggle = @forgotten_empires
+		}
 		# Gigastructural Engineering & More
-		is_star_class = sc_birch
-		is_star_class = sc_birch_built
-		is_star_class = sc_ehof_black_hole
-		is_star_class = sc_quasar
-		is_star_class = sc_void_birch_built
-		is_star_class = sc_white_hole # Also TimeMod
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_birch
+				is_star_class = sc_birch_built
+				is_star_class = sc_quasar
+				is_star_class = sc_ehof_black_hole
+				is_star_class = sc_void_birch_built
+				is_star_class = sc_white_hole
+			"
+			toggle = @has_gigastructures
+		}
 		# More Precursors
-		is_star_class = sc_FHMP_1 # Neutron Star around a Black Hole
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_FHMP_1 #
+			"
+			toggle = @HAS_FHMP
+		}
 		# Real Space
-		is_star_class = sc_microquasar_1
-		is_star_class = sc_microquasar_2
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_microquasar_1
+				is_star_class = sc_microquasar_2
+			"
+			toggle = @rs_compatch_var
+		}
 		# Some Events of Outside Cluster
-		is_star_class = sc_Aemethms
-		is_star_class = sc_grand_seal
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_Aemethms
+				is_star_class = sc_grand_seal
+			"
+			toggle = @has_seooc_mod
+		}
 		# TimeMod
-		is_time_black_hole_star_class = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_white_hole
+				is_time_black_hole_star_class = yes
+			"
+			toggle = @timemod
+		}
 		# Unique Ascension Perks
 		is_star_class = sc_whitte_hole
 	}
 }
 
 merg_is_neutron_star_class = {
+	optimize_memory
 	OR = {
 		is_star_class = sc_binary_2
 		is_star_class = sc_neutron_star
@@ -368,50 +717,101 @@ merg_is_neutron_star_class = {
 }
 
 merg_is_pulsar_star_class = {
+	optimize_memory
 	OR = {
 		is_star_class = sc_binary_1
 		is_star_class = sc_pulsar
 		# Real Space
-		is_star_class = sc_collapsar
-		is_star_class = sc_magnetar
-		is_star_class = sc_binary_pl_pl
-		is_star_class = sc_binary_pl_n
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_collapsar
+				is_star_class = sc_magnetar
+				is_star_class = sc_binary_pl_pl
+				is_star_class = sc_binary_pl_n
+			"
+			toggle = @rs_compatch_var
+		}
 	}
 }
 
 # List of void systems
 merg_is_void_system = {
+	optimize_memory
 	OR = {
 		# ACOT
-		is_star_class = sofe_outer_class
-		is_star_class = sofe_inner_class
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sofe_outer_class
+				is_star_class = sofe_inner_class
+			"
+			toggle = @has_ancient_caches
+		}
 		# Ancient Empire
-		is_star_class = sc_ag_void
-		is_star_class = sc_ag_void_alt
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_ag_void
+				is_star_class = sc_ag_void_alt
+			"
+			toggle = @ag_null_edict_length
+		}
 		# Darkspace
 		is_star_class = sc_gc
 		# GF Nyto
 		is_star_class = sc_GF_endler
 		# Gigas
-		is_star_class = sc_blokkat_stripmined
-		# History of the Lost Empire/Gigas
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_blokkat_stripmined
+			"
+			toggle = @has_gigastructures
+		}
+		# AshArms Aquarius History/Gigas
 		is_star_class = sc_empty_space
 		# Some Events of Outside Cluster
-		is_star_class = sc_Arena
-		is_star_class = sc_void_dummy
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_Arena
+				is_star_class = sc_void_dummy
+			"
+			toggle = @has_seooc_mod
+		}
 		# Steven Universe Homeworld Gems
-		is_star_class = sc_no_star
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_no_star
+			"
+			toggle = @has_f93_gem_mod
+		}
 		# Wild Space
-		is_star_class = sc_dn
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_dn
+			"
+			toggle = @has_wild_space_mod
+		}
 	}
 }
 
 merg_is_shielded = {
+	optimize_memory
 	OR = {
 		merg_is_shielded_world = yes
 		# AOT
-		has_active_building = building_phanon_psg
-		has_active_building = building_stellarite_psg
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_phanon_psg
+				has_active_building = building_stellarite_psg
+			"
+			toggle = @has_acquisition_of_tech
+		}
 	}
 }
 
@@ -425,7 +825,6 @@ merg_has_pacifist_government = {
 		}
 	}
 }
-
 merg_has_militarist_government = {
 	OR = {
 		has_militarist_government = yes
@@ -435,7 +834,6 @@ merg_has_militarist_government = {
 		}
 	}
 }
-
 merg_has_spiritualist_government = {
 	OR = {
 		has_spiritualist_government = yes
@@ -445,7 +843,6 @@ merg_has_spiritualist_government = {
 		}
 	}
 }
-
 merg_has_materialist_government = {
 	OR = {
 		has_materialist_government = yes
@@ -478,8 +875,8 @@ merg_is_special_ship = {
 	}
 }
 
-# Removed gigas triggers for more flexibility, adding them in the mods triggers instead.
 merg_is_isolated_system = {
+	optimize_memory
 	OR = {
 		has_star_flag = abandoned_gateway
 		has_star_flag = lcluster
@@ -487,26 +884,11 @@ merg_is_isolated_system = {
 		has_star_flag = surveillance_supercomputer_system
 		has_star_flag = chosen_system
 		has_star_flag = formless_system
-		has_star_flag = ag_no_jump_in_system
 		has_star_flag = ds_galactic_core
 		has_star_flag = ds_se_system_fixed
 		has_star_flag = extragalactic_cluster
-		has_star_flag = giga_grox_system
-		has_star_flag = giga_system_six
-		has_star_flag = giga_no_lanes
-		has_star_flag = Kuat_system
-		has_star_flag = Kuat_system_1
-		has_star_flag = Kuat_system_2
-		has_star_flag = Kuat_system_3
-		has_star_flag = kuat_initial_system
-		has_star_flag = Kuat_system_int
-		has_star_flag = Kuat_system_int_1
-		has_star_flag = Kuat_system_int_2
-		has_star_flag = Kuat_system_int_3
-		has_star_flag = Kuat_system_int_4
-		has_star_flag = lex_garden_cluster
-		has_star_flag = mem_sadrell_extant_cluster
 		has_star_flag = miniature_universe
+		# SEOOC
 		has_star_flag = nep_Krahen_cluster
 		has_star_flag = nep_dragon_system
 		has_star_flag = nep_heptagram_cluster
@@ -532,11 +914,70 @@ merg_is_isolated_system = {
 		has_star_flag = nep_whitegoo_portal_1
 		has_star_flag = nep_whitegoo_portal_2
 		has_star_flag = nep_whitegoo_origin
-		has_star_flag = nep_ugo_system 
+		has_star_flag = nep_ugo_system
+		# ACOT SBTG
 		has_star_flag = outercluster
-		has_star_flag = Paluush_system
-		has_star_flag = wg_sealed_system
-		has_star_flag = wg_psionic_systems
+		# Ancient Empire
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = ag_no_jump_in_system
+			"
+			toggle = @ag_null_edict_length
+		}
+		# LEX
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = lex_garden_cluster
+			"
+			toggle = @lex_compatch_var
+		}
+		# Star Wars: Kuat Ancient Empire
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = Kuat_system
+				has_star_flag = Kuat_system_1
+				has_star_flag = Kuat_system_2
+				has_star_flag = Kuat_system_3
+				has_star_flag = kuat_initial_system
+				has_star_flag = Kuat_system_int
+				has_star_flag = Kuat_system_int_1
+				has_star_flag = Kuat_system_int_2
+				has_star_flag = Kuat_system_int_3
+				has_star_flag = Kuat_system_int_4
+			"
+			toggle = @sw_kuat_mod
+		}
+		# More Events Mod
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = mem_sadrell_extant_cluster
+			"
+			toggle = @has_more_events_mod
+		}
+		# Gigastructural Engineering and More
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = giga_grox_system
+				has_star_flag = giga_system_six
+				has_star_flag = giga_no_lanes
+				has_star_flag = Paluush_system
+			"
+			toggle = @has_gigastructures
+		}
+		# Warship Girls R And MIST Species
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = wg_sealed_system
+				has_star_flag = wg_psionic_systems
+			"
+			toggle = @wsg_mod
+		}
 	}
 }
 
@@ -552,66 +993,90 @@ merg_has_happiness = {
 	NOR = {
 		AND = {
 			has_trait = trait_machine_unit
-			from = { is_machine_empire = yes }
+			exists = FROM
+			FROM = { is_machine_empire = yes }
 			# Ethics & Civics Bug Branch
-			from = {  is_bugged_happy_gestalt = no }
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					FROM = {  is_bugged_happy_gestalt = no }
+				"
+				toggle = @has_bug_branch
+			}
 		}
 		AND = {
 			has_trait = trait_hive_mind
 			# Ethics & Civics Bug Branch
-			from = { is_bugged_happy_gestalt = no }
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					FROM = {  is_bugged_happy_gestalt = no }
+				"
+				toggle = @has_bug_branch
+			}
 		}
 		can_think = no
-		# Diagraphers Trait Mod
-		is_multihive_drone = yes
+		# Diagrapher's Trait Mod
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				dtraits_happiness_restrictions = yes
+			"
+			toggle = @has_diagraphers_trait_mod
+		}
 		# ThaumStellaris
-		AND = {
-			merg_has_thaumstellaris = yes
-			species = {
-				OR = {
-					is_archetype = TC_GOLEM
-					is_archetype = TC_GOLEM_HIVE
-					is_archetype = TC_GOLEM_MACHINE
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				species = {
+					OR = {
+						is_archetype = TC_GOLEM
+						is_archetype = TC_GOLEM_HIVE
+						is_archetype = TC_GOLEM_MACHINE
+					}
 				}
-			}
+			"
+			toggle = @has_tc_mod
 		}
 		# Trait Diversity
 		td_has_no_happiness = yes
-		# Wandering Witch: Voyagers
-		has_ww_servitude = yes
-		AND = {
-			has_ww_dummy = yes
-			OR = {
-				NOT = { exists = from }
-				from = {
-					NOR = {
-						has_technology = tech_synthetic_workers
-						has_technology = tech_dummy_leaders
-						has_origin = origin_garbage_princesses
-						has_country_flag = synthetic_empire
-					}
-				}
-				from = { has_policy_flag = ai_outlawed }
-			}
-		}
 		# Warship Girls R And MIST Species
-		wg_compat_has_sh_trait = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				wg_compat_has_sh_trait = yes
+			"
+			toggle = @wsg_mod
+		}
 		# Zob
 		is_zob_uplifted = yes
 		# Vanilla
 		AND = {
 			has_trait = trait_mechanical
+			# Animated Synthetics Portraits Expanded: Reborn
+			OR = {
+				merg_has_animated_synth = no
+				AND = {
+					merg_has_animated_synth = yes
+					FROM = { is_machine_empire = yes }
+					is_extsynth_synthetic = yes
+					NOT = { has_trait = trait_psionic }
+				}
+				AND = {
+					merg_has_animated_synth = yes
+					NAND = {
+						FROM = { is_machine_empire = yes }
+						is_extsynth_synthetic = yes
+					}
+				}
+			}
 			# Vanilla
 			OR = {
-				NOT = { exists = from }
-				from = {
+				NOT = { exists = FROM }
+				FROM = {
 					OR = {
 						is_machine_empire = yes
-						NOR = {
-							has_technology = tech_synthetic_workers
-							# Wandering Witch: Voyagers
-							has_technology = tech_dummy_leaders
-						}
+						NOT = { has_technology = tech_synthetic_workers }
 						has_policy_flag = ai_outlawed
 					}
 				}
@@ -619,15 +1084,15 @@ merg_has_happiness = {
 		}
 		AND = {
 			has_trait = trait_cybernetic
-			exists = from
-			from = {
+			exists = FROM
+			FROM = {
 				OR = {
 					AND = {
 						is_machine_empire = yes
 						has_civic = civic_machine_assimilator # Assimilator empire
 					}
 					AND = {
-						has_authority = auth_democratic
+						is_democratic_authority = yes
 						has_country_flag = cyber_collectivist
 					}
 				}
@@ -635,33 +1100,73 @@ merg_has_happiness = {
 		}
 	}
 }
-
 merg_is_slaver = {
 	OR = {
 		has_valid_civic = civic_slaver_guilds
 		has_valid_civic = civic_indentured_assets
-		# DOA
-		has_valid_civic = civic_slave_masters
-		# ECAF
-		has_valid_civic = civic_slaving_despots
-		has_valid_civic = civic_slaving_despots_corpo
-		# ECBUG
-		has_valid_civic = civic_bugged_slaving_despots
-		has_valid_civic = civic_bugged_slaving_despots_corpo
+		has_valid_civic = civic_barbaric_despoilers
+		# Ethics and Civics Alternative - FunEFork / Ethics & Civics: Bug Branch
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_valid_civic = civic_slaving_despots
+				has_valid_civic = civic_slaving_despots_corpo
+			"
+			toggle = @[ has_eca_funefork + has_bug_branch ]
+		}
+		# Ethics and Civics Classic
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_valid_civic = civic_barbaric_despoilers_corporate
+				has_valid_civic = civic_divine_order
+			"
+			toggle = @has_ecc_cog
+		}
 		# ZOFE
-		has_valid_civic = civic_master_race
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_valid_civic = civic_master_race
+			"
+			toggle = @has_zofe_vanilla
+		}
 	}
 }
-
 merg_is_void_dweller = {
 	OR = {
 		has_origin = origin_void_dwellers
 		has_origin = origin_void_machines
-		has_origin = origin_mem_eden_protocol
+		# Freebooters
+		has_origin = origin_nsc_freebooter
+		has_origin = origin_nsc_freebooter_federations
+		# More Events Mod
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_origin = origin_mem_eden_protocol
+			"
+			toggle = @has_more_events_mod
+		}
+	}
+}
+merg_is_nomad = {
+	OR = {
+		# The Empty Vagrant
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = default_ev
+			"
+			toggle = @homeless_class_trait_weight
+		}
+		# Darkspace
+		is_country_type = ds_nomads
 	}
 }
 # Non-dense or failed stars
 merg_is_standard_star = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_a_star
 		is_planet_class = pc_b_star
@@ -670,37 +1175,43 @@ merg_is_standard_star = {
 		is_planet_class = pc_k_star
 		is_planet_class = pc_m_star
 		# Real Space
-		is_planet_class_pc_a_super_star = yes
-		is_planet_class_pc_ae_star = yes
-		is_planet_class_pc_b_super_star = yes
-		is_planet_class_pc_c_giant_star = yes
-		is_planet_class_pc_d_star = yes
-		is_planet_class_pc_f_super_star = yes
-		is_planet_class_pc_g_giant_star = yes
-		is_planet_class_pc_g_super_star = yes
-		is_planet_class_pc_k_giant_star = yes
-		is_planet_class_pc_k_super_star = yes
-		is_planet_class_pc_l_star = yes
-		is_planet_class_pc_lbv_blue_star = yes
-		is_planet_class_pc_lbv_green_star = yes
-		is_planet_class_pc_lbv_red_star = yes
-		is_planet_class_pc_m_super_star = yes
-		is_planet_class_pc_m_hyper_star = yes
-		is_planet_class_pc_nova_1 = yes
-		is_planet_class_pc_nova_2 = yes
-		is_planet_class_pc_o_star = yes
-		is_planet_class_pc_o_super_star = yes
-		is_planet_class_pc_o_hyper_star = yes
-		is_planet_class_pc_protostar = yes
-		is_planet_class_pc_s_giant_star = yes
-		is_planet_class_pc_tt_orange_star = yes
-		is_planet_class_pc_tt_red_star = yes
-		is_planet_class_pc_tt_white_star = yes
-		is_planet_class_pc_w_azure_star = yes
-		is_planet_class_pc_w_red_star = yes
-		is_planet_class_pc_w_green_star = yes
-		is_planet_class_pc_w_purple_star = yes
-		is_planet_class_pc_y_star = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class_pc_a_super_star = yes
+				is_planet_class_pc_ae_star = yes
+				is_planet_class_pc_b_super_star = yes
+				is_planet_class_pc_c_giant_star = yes
+				is_planet_class_pc_d_star = yes
+				is_planet_class_pc_f_super_star = yes
+				is_planet_class_pc_g_giant_star = yes
+				is_planet_class_pc_g_super_star = yes
+				is_planet_class_pc_k_giant_star = yes
+				is_planet_class_pc_k_super_star = yes
+				is_planet_class_pc_l_star = yes
+				is_planet_class_pc_lbv_blue_star = yes
+				is_planet_class_pc_lbv_green_star = yes
+				is_planet_class_pc_lbv_red_star = yes
+				is_planet_class_pc_m_super_star = yes
+				is_planet_class_pc_m_hyper_star = yes
+				is_planet_class_pc_nova_1 = yes
+				is_planet_class_pc_nova_2 = yes
+				is_planet_class_pc_o_star = yes
+				is_planet_class_pc_o_super_star = yes
+				is_planet_class_pc_o_hyper_star = yes
+				is_planet_class_pc_protostar = yes
+				is_planet_class_pc_s_giant_star = yes
+				is_planet_class_pc_tt_orange_star = yes
+				is_planet_class_pc_tt_red_star = yes
+				is_planet_class_pc_tt_white_star = yes
+				is_planet_class_pc_w_azure_star = yes
+				is_planet_class_pc_w_red_star = yes
+				is_planet_class_pc_w_green_star = yes
+				is_planet_class_pc_w_purple_star = yes
+				is_planet_class_pc_y_star = yes
+			"
+			toggle = @rs_compatch_var
+		}
 	}
 }
 
@@ -717,16 +1228,44 @@ merg_has_precursor_intro = {
 			has_country_flag = baol_intro
 			has_country_flag = inetian_intro
 			has_country_flag = adakkaria_intro
-			has_country_flag = plexi_intro # Forgotten History
-			has_country_flag = lartia_intro # Forgotten History
-			has_country_flag = ixardian_intro # More Precursors
-			has_country_flag = ezentian_intro # More Precursors
-			has_country_flag = werediran_intro # More Precursors
-			has_country_flag = volgan_intro # Unavoidable Changes
-			has_country_flag = scfe_precursor_set_sless # Forgotten Empires
-			has_country_flag = scfe_precursor_set_coprean # Forgotten Empires
-			has_country_flag = scfe_precursor_set_astanine # Forgotten Empires
-			has_country_flag = scfe_vinarii_intro # Forgotten Empires
+			# Forgotten History
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_country_flag = plexi_intro
+					has_country_flag = lartia_intro
+				"
+				toggle = @HAS_AAA
+			}
+			# More Precursors
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_country_flag = ixardian_intro
+					has_country_flag = ezentian_intro
+					has_country_flag = werediran_intro
+				"
+				toggle = @HAS_FHMP
+			}
+			# Unavoidable Changes
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_country_flag = volgan_intro
+				"
+				toggle = @HAS_UCmod
+			}
+			# Forgotten Empires
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_country_flag = scfe_precursor_set_sless
+					has_country_flag = scfe_precursor_set_coprean
+					has_country_flag = scfe_precursor_set_astanine
+					has_country_flag = scfe_vinarii_intro
+				"
+				toggle = @forgotten_empires
+			}
 		}
 	}
 	else = { always = no }

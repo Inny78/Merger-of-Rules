@@ -23,9 +23,15 @@ GAS_CLOUDY_CAT = {
             solar_system = {
                 OR = {
                     merg_is_isolated_system = yes
-                    cohesive_system = yes
-                    urmazin_system = yes
-                    everchanging_system = yes
+                    inline_script = {
+                        script = merger_of_rules/toggled_code
+                        code = "
+                            cohesive_system = yes
+                            urmazin_system = yes
+                            everchanging_system = yes
+            			"
+                        toggle = @has_gigastructures
+                    }
                 }
             }
         }
@@ -54,9 +60,15 @@ corrupt_data_cat = {
                     OR = {
                         has_star_flag = empire_cluster
                         merg_is_isolated_system = yes
-                        cohesive_system = yes
-                        urmazin_system = yes
-                        everchanging_system = yes
+                        inline_script = {
+                            script = merger_of_rules/toggled_code
+                            code = "
+                                cohesive_system = yes
+                                urmazin_system = yes
+                                everchanging_system = yes
+                            "
+                            toggle = @has_gigastructures
+                        }
                     }
                 }
                 has_deposit = d_betharian_deposit

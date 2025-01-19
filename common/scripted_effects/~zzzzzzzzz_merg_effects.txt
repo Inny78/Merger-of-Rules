@@ -47,28 +47,52 @@ remove_capital_building = {
 		building_hive_major_capital_sick = { remove_building = building_hive_major_capital_sick }
 		building_system_capital_gr = { remove_building = building_system_capital_gr }
 		# AVB
-		building_avb_capital_4 = { remove_building = building_avb_capital_4 }
-		building_avb_capital_5 = { remove_building = building_avb_capital_5 }
-		building_avb_capital_6 = { remove_building = building_avb_capital_6 }
-		building_avb_hab_capital_4 = { remove_building = building_avb_hab_capital_4 }
-		building_avb_hive_capital_3 = { remove_building = building_avb_hive_capital_3 }
-		building_avb_hive_capital_4 = { remove_building = building_avb_hive_capital_4 }
-		building_avb_machine_capital_4 = { remove_building = building_avb_machine_capital_4 }
-		building_avb_machine_capital_5 = { remove_building = building_avb_machine_capital_5 }
-		building_avb_machine_capital_6 = { remove_building = building_avb_machine_capital_6 }
-		building_avb_resort_capital_3 = { remove_building = building_avb_resort_capital_3 }
-		building_avb_slave_capital_3 = { remove_building = building_avb_slave_capital_3 }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				building_avb_capital_4 = { remove_building = building_avb_capital_4 }
+				building_avb_capital_5 = { remove_building = building_avb_capital_5 }
+				building_avb_capital_6 = { remove_building = building_avb_capital_6 }
+				building_avb_hab_capital_4 = { remove_building = building_avb_hab_capital_4 }
+				building_avb_hive_capital_3 = { remove_building = building_avb_hive_capital_3 }
+				building_avb_hive_capital_4 = { remove_building = building_avb_hive_capital_4 }
+				building_avb_machine_capital_4 = { remove_building = building_avb_machine_capital_4 }
+				building_avb_machine_capital_5 = { remove_building = building_avb_machine_capital_5 }
+				building_avb_machine_capital_6 = { remove_building = building_avb_machine_capital_6 }
+				building_avb_resort_capital_3 = { remove_building = building_avb_resort_capital_3 }
+				building_avb_slave_capital_3 = { remove_building = building_avb_slave_capital_3 }
+			"
+			toggle = @has_avb_mod
+		}
 		# Azur Lane Stellaris DLC
-		azur_building_mind_capital = { remove_building = azur_building_mind_capital }
-		azur_building_mind_net_capital = { remove_building = azur_building_mind_net_capital }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				azur_building_mind_capital = { remove_building = azur_building_mind_capital }
+				azur_building_mind_net_capital = { remove_building = azur_building_mind_net_capital }
+			"
+			toggle = @azl_mod
+		}
 		# Dawn of the Republic
 		building_galactic_senate = { remove_building = building_galactic_senate }
 		# EDA
-		eda_building_imperial_capital = { remove_building = eda_building_imperial_capital }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				eda_building_imperial_capital = { remove_building = eda_building_imperial_capital }
+			"
+			toggle = @eda_mod
+		}
 		# Empires Expanded
-		building_bok_capital_1 = { remove_building = building_bok_capital_1 }
-		building_bok_capital_2 = { remove_building = building_bok_capital_2 }
-		building_bok_capital_3 = { remove_building = building_bok_capital_3 }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				building_bok_capital_1 = { remove_building = building_bok_capital_1 }
+				building_bok_capital_2 = { remove_building = building_bok_capital_2 }
+				building_bok_capital_3 = { remove_building = building_bok_capital_3 }
+			"
+			toggle = @has_emex_mod
+		}
 		# More Cosmogenesis Buildings
 		building_resort_cosmo_capital = { remove_building = building_resort_cosmo_capital }
 		building_hab_cosmo_capital = { remove_building = building_hab_cosmo_capital }
@@ -78,42 +102,71 @@ remove_capital_building = {
 		# Nirvana Empire Project
 		building_nirvana_empire_palace = { remove_building = building_nirvana_empire_palace }
 		# Real Space - Planetary Stations
-		building_station_capital = { remove_building = building_station_capital }
-		building_station_major_capital = { remove_building = building_station_major_capital }
-		building_station_fe_capital = { remove_building = building_station_fe_capital }
-		building_station_system_capital = { remove_building = building_station_system_capital }
-		building_prison_capital = { remove_building = building_prison_capital }
-		building_prison_major_capital = { remove_building = building_prison_major_capital }
-		building_prison_system_capital = { remove_building = building_prison_system_capital }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				building_station_capital = { remove_building = building_station_capital }
+				building_station_major_capital = { remove_building = building_station_major_capital }
+				building_station_fe_capital = { remove_building = building_station_fe_capital }
+				building_station_system_capital = { remove_building = building_station_system_capital }
+				building_prison_capital = { remove_building = building_prison_capital }
+				building_prison_major_capital = { remove_building = building_prison_major_capital }
+				building_prison_system_capital = { remove_building = building_prison_system_capital }
+			"
+			toggle = @rs_compatch_var
+		}
 		# Special Colonies Overhaul
 		building_SCO_resort_system_capital = { remove_building = building_SCO_resort_system_capital }
 		building_SCO_slave_system_capital = { remove_building = building_SCO_slave_system_capital }
 		# Star Wars: Kuat Ancient Empire
-		building_kuat_command_center = { remove_building = building_kuat_command_center }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				building_kuat_command_center = { remove_building = building_kuat_command_center }
+			"
+			toggle = @sw_kuat_mod
+		}
 		# Superstates
-		building_central_citadel = { remove_building = building_central_citadel }
-		building_simple_citadel = { remove_building = building_simple_citadel }
-		building_cmachine = { remove_building = building_cmachine }
-		building_grand_dvorets = { remove_building = building_grand_dvorets }
-		building_just_dvorets = { remove_building = building_just_dvorets }
-		building_csenatec = { remove_building = building_csenatec }
-		building_cgranhq = { remove_building = building_cgranhq }
-		building_bugfables = { remove_building = building_bugfables }
-		building_cspire = { remove_building = building_cspire }
-		building_cfcouncil = { remove_building = building_cfcouncil }
-		building_ccathedral = { remove_building = building_ccathedral }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				building_central_citadel = { remove_building = building_central_citadel }
+				building_simple_citadel = { remove_building = building_simple_citadel }
+				building_cmachine = { remove_building = building_cmachine }
+				building_grand_dvorets = { remove_building = building_grand_dvorets }
+				building_just_dvorets = { remove_building = building_just_dvorets }
+				building_csenatec = { remove_building = building_csenatec }
+				building_cgranhq = { remove_building = building_cgranhq }
+				building_bugfables = { remove_building = building_bugfables }
+				building_cspire = { remove_building = building_cspire }
+				building_cfcouncil = { remove_building = building_cfcouncil }
+				building_ccathedral = { remove_building = building_ccathedral }
+			"
+			toggle = @has_superstates
+		}
 		# Twinks Atlantean
 		building_ancient_palace_at = { remove_building = building_ancient_palace_at }
 		# Twinks Kaldorei
 		building_nightelf_palace = { remove_building = building_ancient_palace_at }
-		# Twinks Eternal
-		building_eternal_nexus_ai = { remove_building = building_eternal_nexus_ai }
-		building_eternal_palace = { remove_building = building_eternal_palace }
+		# Eternal Empire
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				building_eternal_nexus_ai = { remove_building = building_eternal_nexus_ai }
+				building_eternal_palace = { remove_building = building_eternal_palace }
+			"
+			toggle = @has_eternal_empire
+		}
 		# Wula Fallen Empire
-		building_wula_archive = { remove_building = building_wula_archive }
-		building_all_is_dust = { remove_building = building_all_is_dust }
-		building_wula_order_keep = { remove_building = building_wula_order_keep }
-		building_wula_gene_bank = { remove_building = building_wula_gene_bank }
-		building_fe_xeno_zoo = { remove_building = building_fe_xeno_zoo }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				building_wula_archive = { remove_building = building_wula_archive }
+				building_all_is_dust = { remove_building = building_all_is_dust }
+				building_wula_order_keep = { remove_building = building_wula_order_keep }
+				building_wula_gene_bank = { remove_building = building_wula_gene_bank }
+			"
+			toggle = @wula_compatch_var
+		}
 	}
 }

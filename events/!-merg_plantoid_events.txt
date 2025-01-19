@@ -15,50 +15,64 @@ planet_event = {
 
 	immediate = {
 		# Planetary Diversity
-		if = {
-			limit = { merg_has_planetary_diversity = yes }
-			pd_make_all_gaia_worlds_effect = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_make_all_gaia_worlds_effect = yes
+			"
+			toggle = @has_planetary_diversity
 		}
 		# Vanilla
-		else = {
-			change_pc = pc_gaia
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				change_pc = pc_gaia
+			"
+			toggle = @[ 1 - has_planetary_diversity ]
 		}
 		set_planet_flag = gaia_seeder_bloom
 		# GPM
-		planet_event = { id = gpm_terraform.78871 }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				planet_event = { id = gpm_terraform.78871 }
+			"
+			toggle = @has_guillis_planet_modifiers
+		}
 		# Expanded Traits, Civics, Pops, and More
-		if = {
-			limit = { merg_has_expanded_pops = yes }
-			owner = {
-				remove_country_flag = spread_idyllic_bloom
-				set_timed_country_flag = { flag = spread_idyllic_bloom days = 3600 }
-			}
-		}
-		if = {
-			limit = {
-				merg_has_expanded_pops = yes
-				owner = { has_origin = origin_terraformer }
-				NOT = { has_modifier = terraformer_homeworld }
-			}
-			add_modifier = { modifier = terraformer_homeworld days = -1 }
-		}
-		if = {
-			limit = {
-				merg_has_expanded_pops = yes
-				OR = {
-					owner = { has_ascension_perk = ap_world_shaper }
-					AND = {
-						is_planet_class = pc_hive
-						owner = { has_ascension_perk = ap_hive_worlds }
-					}
-					AND = {
-						is_machine_world = yes
-						owner = { has_ascension_perk = ap_machine_worlds }
-					}
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				owner = {
+					remove_country_flag = spread_idyllic_bloom
+					set_timed_country_flag = { flag = spread_idyllic_bloom days = 3600 }
 				}
-				NOT = { has_modifier = world_shaper_mod }
-			}
-			add_modifier = { modifier = world_shaper_mod days = -1 }
+				if = {
+					limit = {
+						owner = { has_origin = origin_terraformer }
+						NOT = { has_modifier = terraformer_homeworld }
+					}
+					add_modifier = { modifier = terraformer_homeworld days = -1 }
+				}
+				if = {
+					limit = {
+						OR = {
+							owner = { has_ascension_perk = ap_world_shaper }
+							AND = {
+								is_planet_class = pc_hive
+								owner = { has_ascension_perk = ap_hive_worlds }
+							}
+							AND = {
+								is_machine_world = yes
+								owner = { has_ascension_perk = ap_machine_worlds }
+							}
+						}
+						NOT = { has_modifier = world_shaper_mod }
+					}
+					add_modifier = { modifier = world_shaper_mod days = -1 }
+				}
+			"
+			toggle = @expops_compatch_var
 		}
 	}
 
