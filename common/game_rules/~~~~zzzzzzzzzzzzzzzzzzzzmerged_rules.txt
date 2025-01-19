@@ -1348,14 +1348,11 @@ can_terraform_planet = {
 		code = "
 			custom_tooltip = {
 				fail_text = NO_TERRAFORM_HOLLOW_WORLD
-				is_planet_class = pc_hollow
+				NOT = { is_planet_class = pc_hollow }
 			}
 			custom_tooltip = {
 				fail_text = NO_TERRAFORM_OVERMIND
-				OR = {
-					merg_has_real_new_frontiers = no
-					NOT = { has_deposit = d_heart_of_the_overmind }
-				}
+				NOT = { has_deposit = d_heart_of_the_overmind }
 			}
 		"
 		toggle = @rs_compatch_var
