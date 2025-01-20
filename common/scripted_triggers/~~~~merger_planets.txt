@@ -136,7 +136,13 @@ merg_is_arcology = {
 			toggle = @azl_mod
 		}
 		# Forgotten History
-		is_AAA_apocalyptic_city = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_AAA_apocalyptic_city = yes
+			"
+			toggle = @HAS_AAA
+		}
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code

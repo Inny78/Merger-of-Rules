@@ -1,2 +1,0 @@
-# Irony this is a placeholder file please ignore it
-utility_component_template = { key = "EST_JUMP_DRIVE" size = small icon = "GFX_ship_part_hyper_drive_1" icon_frame = 1 power = 0 component_set = "ftl_components" ai_weight = { base = 0 } class_restriction = { shipclass_habitat_station } }

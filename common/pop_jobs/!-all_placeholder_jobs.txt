@@ -1,3 +1,0 @@
-# Irony this is a placeholder file please ignore it
-legendary_mage = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
-magician = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }

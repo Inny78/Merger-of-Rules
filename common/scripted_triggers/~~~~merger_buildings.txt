@@ -113,7 +113,13 @@ merg_has_hospital = {
 			toggle = @has_acquisition_of_tech
 		}
 		# Ethics and Civics Infinity
-		has_active_building = building_medical_center
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_medical_center
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# Eutab
 		inline_script = {
 			script = merger_of_rules/toggled_code

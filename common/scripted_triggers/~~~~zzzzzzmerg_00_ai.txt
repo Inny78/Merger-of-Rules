@@ -134,8 +134,14 @@ has_farming_designation = {
 		has_designation = col_habitat_farming
 		has_designation = col_habitat_gestalt_farming
 		# Ethics and Civics Infinity
-        has_designation = col_dome_food
-        has_designation = col_city_farming
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_dome_food
+				has_designation = col_city_farming
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# Freebooters Origin (reborn)
 		has_designation = col_habitat_nsc_freebooter_farming
 	}
@@ -151,8 +157,14 @@ has_factory_designation = {
 		has_designation = col_ecu_factory
 		has_designation = col_habitat_factory
 		# Ethics and Civics Infinity
-        has_designation = col_ring_factory
-        has_designation = col_dome_factory
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_ring_factory
+				has_designation = col_dome_factory
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# Freebooters Origin (reborn)
 		has_designation = col_habitat_nsc_freebooter_factory
 	}
@@ -167,8 +179,14 @@ has_foundry_designation = {
 		has_designation = col_mac_foundry
 		has_designation = col_hiv_foundry
 		# Ethics and Civics Infinity
-        has_designation = col_ring_foundry
-        has_designation = col_dome_foundry
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_ring_foundry
+				has_designation = col_dome_foundry
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# Freebooters Origin (reborn)
 		has_designation = col_habitat_nsc_freebooter_foundry
 		# TimeMod
@@ -188,7 +206,13 @@ has_generator_designation = {
 		has_designation = col_habitat_energy
 		has_designation = col_ring_generator
 		# Ethics and Civics Infinity
-		has_designation = col_dome_energy
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_dome_energy
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# Libra: Gestalt Age
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -206,8 +230,14 @@ has_industrial_designation = {
 		has_designation = col_habitat_industrial
 		has_designation = col_ecu_industrial
 		# Ethics and Civics Infinity
-        has_designation = col_dome_industrial
-        has_designation = col_ring_industry
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_dome_industrial
+				has_designation = col_ring_industry
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# TimeMod
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -228,7 +258,13 @@ has_mining_designation = {
 		has_designation = col_habitat_mining
 		has_designation = col_mining
 		# Ethics and Civics Infinity
-		has_designation = col_dome_mining
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_dome_mining
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# Libra: Gestalt Age
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -247,8 +283,21 @@ has_refinery_designation = {
 		has_designation = col_refinery
 		has_designation = col_habitat_refinery
 		# Ethics and Civics Infinity
-        has_designation = col_dome_refinery
-        has_designation = col_city_refinery
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_dome_mining
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_dome_refinery
+				has_designation = col_city_refinery
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# Freebooters Origin (reborn)
 		has_designation = col_habitat_nsc_freebooter_refinery
 		# TimeMod
@@ -270,7 +319,13 @@ has_research_designation = {
 		has_designation = col_habitat_research
 		has_designation = col_ecu_research
 		# Ethics and Civics Infinity
-		has_designation = col_dome_research
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_dome_research
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# Libra: Gestalt Age
 		inline_script = {
 			script = merger_of_rules/toggled_code

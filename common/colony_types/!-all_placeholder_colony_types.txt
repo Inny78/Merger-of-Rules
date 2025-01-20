@@ -1,20 +1,7 @@
 # Irony this is a placeholder file please ignore it
-col_city_farming = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_city_refinery = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_dome_energy = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_dome_factory = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_dome_food = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_dome_foundry = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_dome_industrial = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_dome_mining = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_dome_refinery = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_dome_research = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
 col_habitat_nsc_freebooter_factory = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
 col_habitat_nsc_freebooter_farming = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
 col_habitat_nsc_freebooter_foundry = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
 col_habitat_nsc_freebooter_mining = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
 col_habitat_nsc_freebooter_refinery = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
 col_habitat_nsc_freebooter_research = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_ring_factory = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_ring_foundry = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_ring_industry = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }

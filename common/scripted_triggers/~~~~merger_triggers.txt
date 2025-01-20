@@ -9,7 +9,13 @@ merg_is_standard_empire = {
 		# Darkspace
 		is_country_type = ds_nomads
 		# Ethics & Civics Infinity
-		is_country_type = uo_une_member_active
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = uo_une_member_active
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# Scripted Triggers Undercoat
 		has_country_flag = is_playable
 		has_country_flag = is_empire
@@ -41,7 +47,13 @@ merg_is_default_empire = {
 		# Darkspace
 		is_country_type = ds_nomads
 		# Ethics & Civics Infinity
-		is_country_type = uo_une_member_active
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = uo_une_member_active
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# Scripted Triggers Undercoat
 		has_country_flag = is_playable
 		# The Empty Vagrant

@@ -10,7 +10,6 @@ ds_nomads = { ai = { enabled = no } }
 endtime_star_fantasy_empire = { ai = { enabled = no } }
 huge_country = { ai = { enabled = no } }
 master_ai_country = { ai = { enabled = no } }
-original_empire = { ai = { enabled = no } }
 pg_last_hope = { ai = { enabled = no } }
 replicators = { ai = { enabled = no } }
 shroud_cult = { ai = { enabled = no } }
@@ -20,7 +19,6 @@ star_fantasy_empire = { ai = { enabled = no } }
 TAC_debris_ship_country = { ai = { enabled = no } }
 TAC_machine_crisis_country = { ai = { enabled = no } }
 the_sleeper_fallen = { ai = { enabled = no } }
-uo_une_member_active = { ai = { enabled = no } }
 vbp_machine = { ai = { enabled = no } }
 sbtg_sentinel_active = { ai = { enabled = no } }
 sbtg_light_seeker = { ai = { enabled = no } }

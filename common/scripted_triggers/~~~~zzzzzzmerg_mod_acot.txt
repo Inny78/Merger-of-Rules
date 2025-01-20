@@ -226,7 +226,13 @@ acot_is_not_affected_by_cascade = {
 acot_has_planetary_shield_building = { merg_has_planetary_shield = yes }
 is_memeable_planet = {
 	OR = {
-		is_giga_planet = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_giga_planet = yes
+			"
+			toggle = @has_gigastructures
+		}
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
@@ -237,33 +243,6 @@ is_memeable_planet = {
 		AND = {
 			colonizable_planet = yes
 			is_artificial = no
-		}
-	}
-}
-
-# GIGA STUFF HERE
-is_giga_planet = {
-	if = {
-		limit = { has_gigastructures = no }
-		always = no
-	}
-	else = {
-		OR = {
-			inline_script = {
-				script = merger_of_rules/toggled_code
-				code = "
-					giga_is_pc_disco_moon = yes
-					giga_is_pc_strip_mined = yes
-					giga_is_pc_core_mined = yes
-					giga_is_pc_melted_frozen = yes
-					giga_is_lifeless = yes
-					giga_is_habitable_gas_giant = yes
-					giga_is_pc_giga_planetary_computer = yes
-					giga_is_pc_katzenland = yes
-					giga_is_pc_red_toxic = yes
-				"
-				toggle = @has_gigastructures
-			}
 		}
 	}
 }

@@ -1,17 +1,9 @@
 # Irony this is a placeholder file please ignore it
-civic_altruism = { potential = { always = no } }
-civic_coalition_government = { potential = { always = no } }
-civic_du_contrat_social = { potential = { always = no } }
 civic_elec_stellar_devourers = { potential = { always = no } }
-civic_liberty_of_libido = { potential = { always = no } }
 civic_moth_chasing_flames = { potential = { always = no } }
 civic_nirvana_empire_council = { potential = { always = no } }
 civic_nirvana_empire_dragon = { potential = { always = no } }
 civic_tw_atlantis = { potential = { always = no } }
-civic_family_business = { potential = { always = no } }
-civic_underworld_society = { potential = { always = no } }
-civic_world_cooperative = { potential = { always = no } }
-civic_sparta_spirit = { potential = { always = no } }
 KO_hive_asm = { potential = { always = no } }
 civic_paracausal_darkness = { potential = { always = no } }
 civic_hive_reanimated_armies = { potential = { always = no } }

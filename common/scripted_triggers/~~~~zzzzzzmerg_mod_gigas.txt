@@ -168,8 +168,14 @@ giga_is_standard_country_type = {
 		is_country_type = ratlings
 		# Darkspace
 		is_country_type = ds_nomads
-		# Ethics & Civics Infinity
-		is_country_type = uo_une_member_active
+		# Ethics and Civics Infinity
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = uo_une_member_active
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# The Empty Vagrant
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -179,7 +185,13 @@ giga_is_standard_country_type = {
 			toggle = @homeless_class_trait_weight
 		}
 		# ZOFE
-		is_zofe_compatible = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_zofe_compatible = yes
+			"
+			toggle = @has_zofe_vanilla
+		}
 	}
 }
 giga_is_special_country_type = {
@@ -269,8 +281,14 @@ giga_country_gets_bank_include = {
 	OR = {
 		# Darkspace
 		is_country_type = ds_nomads
-		# Ethics & Civics Infinity
-		is_country_type = uo_une_member_active
+		# Ethics and Civics Infinity
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = uo_une_member_active
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# Scripted Triggers Undercoat
 		has_country_flag = is_playable
 		# The Empty Vagrant
@@ -367,9 +385,15 @@ giga_mod_country_gets_bank_exclude = {
 			"
 			toggle = @has_more_events_mod
 		}
-		is_country_type = nep_arena_hologram
-		is_country_type = nep_bounty_hologram
-		is_country_type = nep_phantom_passive
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = nep_arena_hologram
+				is_country_type = nep_bounty_hologram
+				is_country_type = nep_phantom_passive
+			"
+			toggle = @has_wild_space_mod
+		}
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
@@ -383,7 +407,13 @@ giga_mod_country_gets_bank_exclude = {
 		is_country_type = sbtg_sentinel_active
 		is_country_type = TAC_debris_ship_country
 		is_country_type = TAC_machine_crisis_country
-		is_country_type = throng_country
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = throng_country
+			"
+			toggle = @crimson_throng_mod
+		}
 		is_country_type = vbp_machine
 		inline_script = {
 			script = merger_of_rules/toggled_code

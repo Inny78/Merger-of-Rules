@@ -755,7 +755,13 @@ can_release_vassal_from_species = {
 						toggle = @has_emex_mod
 					}
 					# Ethics & Civcs Infinity
-					has_eci_flesh_components = yes
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							has_eci_flesh_components = yes
+						"
+						toggle = @post_revolutionary_re_revolution_years
+					}
 					# Girls Frontline
 					inline_script = {
 						script = merger_of_rules/toggled_code
@@ -894,13 +900,14 @@ subject_can_expand = {
 		OR = {
 			has_valid_civic = civic_feudal_realm
 			# Ethics & Civics Infinity
-			AND = {
-				merg_has_eci = yes
-				OR = {
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
 					has_valid_civic = civic_aristocratic_elite
 					has_valid_civic = civic_coalition_government
 					has_valid_civic = civic_altruism
-				}
+				"
+				toggle = @post_revolutionary_re_revolution_years
 			}
 		}
 	}
@@ -2001,7 +2008,13 @@ can_species_be_assembled = {
 						toggle = @has_bug_branch
 					}
 					# Ethics and Civics: Infinity
-					has_eci_psionic_link = yes
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							has_eci_psionic_link = yes
+						"
+						toggle = @post_revolutionary_re_revolution_years
+					}
 				}
 			}
 			# Expanded Traits, Civics, Pops, and More
@@ -2668,8 +2681,14 @@ will_anger_fallen_empire = {
 				OR = {
 					NOT = { has_relic = r_severed_head }
 					# Ethics and Civics Infinity
-					has_origin = origin_zarqlanism_idea
-					NOT = { has_origin = origin_im_your_father }
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							has_origin = origin_zarqlanism_idea
+							NOT = { has_origin = origin_im_your_father }
+						"
+						toggle = @post_revolutionary_re_revolution_years
+					}
 				}
 			}
 		}
@@ -4135,7 +4154,13 @@ can_support_branch_offices = {
 					toggle = @arknights_ANF
 				}
 				# Ethics & Civics Infinity
-				is_eci_megacorp = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_eci_megacorp = yes
+					"
+					toggle = @post_revolutionary_re_revolution_years
+				}
 				# More Corporate Authorities
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -4605,9 +4630,15 @@ is_criminal_syndicate_rule = {
 			toggle = @has_ecc_cog
 		}
 		# Ethics & Civics Infinity
-		has_valid_civic = civic_family_business
-		has_valid_civic = civic_underworld_society
-		has_valid_civic = civic_world_cooperative
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_valid_civic = civic_family_business
+				has_valid_civic = civic_underworld_society
+				has_valid_civic = civic_world_cooperative
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 	}
 }
 
@@ -4620,9 +4651,15 @@ can_crossbreed_species_on_planet = {
 			OR = {
 				has_ascension_perk = ap_xeno_compatibility
 				# Ethics & Civics Infinity
-				AND = {
-					has_valid_civic = civic_liberty_of_libido
-					has_ascension_perk = ap_evolutionary_mastery
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						AND = {
+							has_valid_civic = civic_liberty_of_libido
+							has_ascension_perk = ap_evolutionary_mastery
+						}
+					"
+					toggle = @post_revolutionary_re_revolution_years
 				}
 				# Kek's Origins+
 				has_country_flag = kokobreeed
@@ -4725,10 +4762,15 @@ can_use_galactic_market = {
 	}
 	is_homicidal = no
 	# Ethics and Civics : Infinity
-	NAND = {
-		merg_has_eci = yes
-        is_gestalt = yes
-        NOT = {  has_tradition = tr_future_economy }
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			NAND = {
+				is_gestalt = yes
+				NOT = {  has_tradition = tr_future_economy }
+			}
+		"
+		toggle = @post_revolutionary_re_revolution_years
 	}
 }
 
@@ -5473,7 +5515,13 @@ can_fill_worker_job = {
 	}
 	hidden_trigger = {
 		# Ethics & Civics Infinity
-		is_sparta_citizenship_full = no
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_sparta_citizenship_full = no
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# V_Traits
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -5663,8 +5711,14 @@ can_fill_ruler_job = {
 					toggle = @has_diagraphers_trait_mod
 				}
 				# Ethics & Civics Infinity
-				has_eci_flesh_components = yes
-				has_eci_fallen_god = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_eci_flesh_components = yes
+						has_eci_fallen_god = yes
+					"
+					toggle = @post_revolutionary_re_revolution_years
+				}
 				# Expanded Traits, Civics, Pops, and More
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -5710,12 +5764,18 @@ can_fill_ruler_job = {
 				divinity_right_to_work_job_check_trigger_ruler = yes
 			}
 			# Ethics & Civics Infinity
-            if = {
-                limit = {
-                    owner = { has_valid_civic = civic_sparta_spirit }
-                }
-				is_sparta_citizenship_full = yes
-            }
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					if = {
+						limit = {
+							owner = { has_valid_civic = civic_sparta_spirit }
+						}
+						is_sparta_citizenship_full = yes
+					}
+				"
+				toggle = @post_revolutionary_re_revolution_years
+			}
 		}
 		# Girls Frontline
 		inline_script = {
@@ -6062,7 +6122,13 @@ can_trade_leader = {
 			}
 		}
 		# Ethics and Civics Infinity
-		root = { is_servitor_empire = yes }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				root = { is_servitor_empire = yes }
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 	}
 	# Can't trade gestalt nodes
 	is_gestalt_node = no
@@ -6074,7 +6140,13 @@ can_trade_leader = {
 				merg_is_fallen_empire = yes
 				merg_is_awakened_fe = yes
 				# ZOFE
-				is_country_type = original_empire
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = original_empire
+					"
+					toggle = @has_zofe_vanilla
+				}
 			}
 		}
 	}
@@ -6108,7 +6180,13 @@ can_trade_fleet = {
 					merg_is_fallen_empire = yes
 					merg_is_awakened_fe = yes
 					# ZOFE
-					is_country_type = original_empire
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							is_country_type = original_empire
+						"
+						toggle = @has_zofe_vanilla
+					}
 				}
 			}
 		}

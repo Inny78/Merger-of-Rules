@@ -36,9 +36,15 @@ entertainer_job_check_trigger = {
 				"
 				toggle = @has_ecc_cog
 			}
-			# ECI
-			has_eci_flesh_components = yes
-			has_eci_slave_gene = yes
+			# Ethics and Civics Infinity
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_eci_flesh_components = yes
+					has_eci_slave_gene = yes
+				"
+				toggle = @post_revolutionary_re_revolution_years
+			}
 		}
 		# Rule out Traits for servitude & lack of free will
 		NOR = {
@@ -103,9 +109,15 @@ can_fill_specialist_job_trigger = {
 				"
 				toggle = @expops_compatch_var
 			}
-			# ECI
-			owner = { has_valid_civic = civic_du_contrat_social }
-			owner = { has_valid_civic = civic_sparta_spirit }
+			# Ethics and Civics Infinity
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					owner = { has_valid_civic = civic_du_contrat_social }
+					owner = { has_valid_civic = civic_sparta_spirit }
+				"
+				toggle = @post_revolutionary_re_revolution_years
+			}
 		}
 		is_being_purged = no
 		is_being_assimilated = no
@@ -139,18 +151,30 @@ can_fill_specialist_job_trigger = {
 				toggle = @expops_compatch_var
 			}
 			has_trait = trait_presapient_docile_livestock
-			# ECI
-			has_eci_fallen_god = yes
+			# Ethics and Civics Infinity
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_eci_fallen_god = yes
+				"
+				toggle = @post_revolutionary_re_revolution_years
+			}
 		}
 		OR = {
 			NOT = { has_trait = trait_mechanical }
 			owner = { has_technology = tech_droid_workers }
-			# ECI
-			AND = {
-				has_eci_thl_doll = no
-				owner = {
-					has_technology = tech_droid_workers
-				}
+			# Ethics and Civics Infinity
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					AND = {
+						has_eci_thl_doll = no
+						owner = {
+							has_technology = tech_droid_workers
+						}
+					}
+				"
+				toggle = @post_revolutionary_re_revolution_years
 			}
 		}
 		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
@@ -159,7 +183,13 @@ can_fill_specialist_job_trigger = {
 			divinity_right_to_work_job_check_trigger_specialist = yes
 		}
 		# ECI
-		ethic_sparta_job_check_trigger = no
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				ethic_sparta_job_check_trigger = no
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 	}
 }
 
@@ -362,9 +392,15 @@ has_research_job = {
 			"
 			toggle = @has_do3f_mod
 		}
-		# ECI
-		has_job = magician
-		has_job = legendary_mage
+		# Ethics and Civics Infinity
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_job = magician
+				has_job = legendary_mage
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 		# Extra Districts
 		inline_script = {
 			script = merger_of_rules/toggled_code

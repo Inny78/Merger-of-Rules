@@ -25,7 +25,7 @@ merg_has_assault_lily = { has_global_flag = Assault_Lily_activated }
 merg_has_uac = { has_global_flag = has_uac_mod }
 
 # Ethics and Civics : Infinity
-merg_has_eci = { has_global_flag = ideological_revolution }
+# merg_has_eci = { has_global_flag = ideological_revolution }
 
 # Expanded Events
 merg_has_expanded_events = { has_global_flag = expanded_events_active }

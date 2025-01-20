@@ -977,8 +977,14 @@ is_crossbreeding_possible = {
 			"
 			toggle = @expops_compatch_var
 		}
-		# ECI
-		has_eci_fallen_god = yes
+		# Ethics and Civics Infinity
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_eci_fallen_god = yes
+			"
+			toggle = @post_revolutionary_re_revolution_years
+		}
 	}
 }
 

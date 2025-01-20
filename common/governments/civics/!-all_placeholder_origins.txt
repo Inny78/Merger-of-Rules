@@ -2,6 +2,4 @@
 origin_nsc_freebooter = { is_origin = yes potential = { always = no } }
 origin_the_darkness = { is_origin = yes potential = { always = no } }
 origin_bioreformers = { is_origin = yes potential = { always = no } }
-origin_zarqlanism_idea = { is_origin = yes potential = { always = no } }
-origin_im_your_father = { is_origin = yes potential = { always = no } }
 origin_nsc_freebooter_federations = { is_origin = yes potential = { always = no } }
