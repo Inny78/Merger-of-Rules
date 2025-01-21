@@ -377,6 +377,7 @@ is_crisis_faction = {
 		is_country_type = gray_goo
 		is_country_type = awakened_marauders
 		is_country_type = synth_queen
+		is_country_type = awakened_synth_queen
 		is_country_type = synth_queen_storm
 		is_country_type = voidworms_crisis
 		# ACOT
