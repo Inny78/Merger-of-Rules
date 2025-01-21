@@ -1,10 +1,6 @@
 # Irony this is a placeholder file please ignore it
 a_gateway_0 = { entity = "" potential = { always = no } possible = { always = no } }
 a_gateway_final = { entity = "" potential = { always = no } possible = { always = no } }
-AAR_MEGA_webway_BASE = { entity = "" potential = { always = no } possible = { always = no } }
-AAR_MEGA_webway_CLOSE = { entity = "" potential = { always = no } possible = { always = no } }
-AAR_MEGA_webway_NEXUS = { entity = "" potential = { always = no } possible = { always = no } }
-AAR_MEGA_webway_NODE = { entity = "" potential = { always = no } possible = { always = no } }
 ancient_relay_0 = { entity = "" potential = { always = no } possible = { always = no } }
 ancient_relay_final = { entity = "" potential = { always = no } possible = { always = no } }
 college_ship_creater_3 = { entity = "" potential = { always = no } possible = { always = no } }
@@ -64,8 +60,6 @@ Agate_closed = { entity = "" potential = { always = no } possible = { always = n
 Agate_opened = { entity = "" potential = { always = no } possible = { always = no } }
 Rgate_closed = { entity = "" potential = { always = no } possible = { always = no } }
 Rgate_opened = { entity = "" potential = { always = no } possible = { always = no } }
-gateway_0_fast = { entity = "" potential = { always = no } possible = { always = no } }
-gateway_final_fast = { entity = "" potential = { always = no } possible = { always = no } }
 forerunner_slipspace_portal = { entity = "" potential = { always = no } possible = { always = no } }
 nanite_habitat_0 = { entity = "" potential = { always = no } possible = { always = no } }
 sofe_omega_spy_orb_center = { entity = "" potential = { always = no } possible = { always = no } }

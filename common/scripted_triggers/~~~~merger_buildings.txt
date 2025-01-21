@@ -229,8 +229,14 @@ merg_has_planetary_shield = {
 			toggle = @nirvana_mod
 		}
 		# Reworked Advanced Ascension
-		has_building = AAR_bldn_VEIL_shield_generator_T5
-		has_building_construction = AAR_bldn_VEIL_shield_generator_T5
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = AAR_bldn_VEIL_shield_generator_T5
+				has_building_construction = AAR_bldn_VEIL_shield_generator_T5
+			"
+			toggle = @aar_svar_mod
+		}
 		# Star Wars: Kuat Ancient Empire
 		inline_script = {
 			script = merger_of_rules/toggled_code

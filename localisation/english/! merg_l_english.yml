@@ -34,8 +34,6 @@ l_english:
  requires_not_special_lily_leader: "£trigger_no£ We cannot fire a young leader we are famous for."
  cannot_fire_StellarisCraft_leader: "£trigger_no£ CANNOT FIRED LEADER OF THIS MOD STELLARISCRAFT"
  need_a_planet_with_pops: "£trigger_no£ Need a planet with pops"
- AAR_decision_prerogative_clean: "§BClaim Sovereignty§!"
- AAR_failtip_PREROGATIVE_no_claim: "§RThe system owner has executed $AAR_decision_prerogative_clean$, and we are unable to claim the current system for a period of time.§!"
  POP_EDUCATED_LOW: "£trigger_no£ Education level is too low."
  What_are_you_doing: "£trigger_no£ What are you doing !"
  is_valid_target_for_sweeper: "£trigger_no£ It's a colony controlled by us or a belligerent."

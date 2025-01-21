@@ -2573,7 +2573,7 @@ has_stellarite_capital = {
 				inline_script = {
 					script = merger_of_rules/toggled_code
 					code = "
-						has_building = building_stellarite_control_center
+						has_building = building_stellarite_palace
 					"
 					toggle = @has_acquisition_of_tech
 				}

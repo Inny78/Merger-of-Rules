@@ -213,9 +213,15 @@ can_add_claim = {
 		}
 	}
 	# Reworked Advanced Ascension
-	custom_tooltip = {
-		fail_text = AAR_failtip_PREROGATIVE_no_claim
-		NOT = { has_star_flag = AAR_flg_sstm_NO_claim@root }
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			custom_tooltip = {
+				fail_text = AAR_failtip_PREROGATIVE_no_claim
+				NOT = { has_star_flag = AAR_flg_sstm_NO_claim@root }
+			}
+		"
+		toggle = @aar_svar_mod
 	}
 	# StarnetAI/StarTech
 	custom_tooltip = {
@@ -3642,7 +3648,13 @@ can_enter_system_by_jump = {
 				}
 			}
 			# Reworked Advanced Ascension
-			root = { has_country_flag = AAR_flg_cntr_JUMP_webway_TGT }
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					root = { has_country_flag = AAR_flg_cntr_JUMP_webway_TGT }
+				"
+				toggle = @aar_svar_mod
+			}
 		}
 	}
 }

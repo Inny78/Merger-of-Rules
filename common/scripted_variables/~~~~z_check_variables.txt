@@ -197,6 +197,9 @@
 # Real Space Nebulae
 @has_real_space_nebulae = 0
 
+# Reworked Avanced Ascension 1199002146
+@aar_svar_mod = 0
+
 # Secrets of the Shroud 2820330517
 @has_sots_mod = 0
 

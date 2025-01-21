@@ -1,5 +1,4 @@
 # Irony this is a placeholder file please ignore it
-AAR_bldn_VEIL_shield_generator_T5 = { potential = { always = no } allow = { always = no } }
 building_acid_maker = { potential = { always = no } allow = { always = no } }
 building_aegis_city = { potential = { always = no } allow = { always = no } }
 building_ancient_palace_at = { potential = { always = no } allow = { always = no } }

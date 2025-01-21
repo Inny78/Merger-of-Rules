@@ -131,19 +131,22 @@ merg_is_gate_mega = {
 			"
 			toggle = @has_more_events_mod
 		}
-		# More Emperor & Custodian Resolutions, and Galactic Unification
-		is_megastructure_type = gateway_0_fast
-		is_megastructure_type = gateway_final_fast
 		# More Origins Mod
 		is_megastructure_type = mom_junction_master
 		is_megastructure_type = mom_junction_termini
 		# Nyto Species Pack
 		is_megastructure_type = GFnyto_lgate_base
 		# Reworked Advanced Ascension
-		is_megastructure_type = AAR_MEGA_webway_BASE
-		is_megastructure_type = AAR_MEGA_webway_NODE
-		is_megastructure_type = AAR_MEGA_webway_NEXUS
-		is_megastructure_type = AAR_MEGA_webway_CLOSE
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_megastructure_type = AAR_MEGA_webway_BASE
+				is_megastructure_type = AAR_MEGA_webway_NODE
+				is_megastructure_type = AAR_MEGA_webway_NEXUS
+				is_megastructure_type = AAR_MEGA_webway_CLOSE
+			"
+			toggle = @aar_svar_mod
+		}
 		# Scripted Triggers Undercoat
 		has_megastructure_flag = stu_is_gate
 		# Some Events of Outside Cluster
@@ -398,19 +401,22 @@ merg_has_gate_mega = {
 			"
 			toggle = @has_more_events_mod
 		}
-		# More Emperor & Custodian Resolutions, and Galactic Unification
-		has_megastructure = gateway_0_fast
-		has_megastructure = gateway_final_fast
 		# More Origins Mod
 		has_megastructure = mom_junction_master
 		has_megastructure = mom_junction_termini
 		# Nyto Species Pack
 		has_megastructure = GFnyto_lgate_base
 		# Reworked Advanced Ascension
-		has_megastructure = AAR_MEGA_webway_BASE
-		has_megastructure = AAR_MEGA_webway_NODE
-		has_megastructure = AAR_MEGA_webway_NEXUS
-		has_megastructure = AAR_MEGA_webway_CLOSE
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_megastructure = AAR_MEGA_webway_BASE
+				has_megastructure = AAR_MEGA_webway_NODE
+				has_megastructure = AAR_MEGA_webway_NEXUS
+				has_megastructure = AAR_MEGA_webway_CLOSE
+			"
+			toggle = @aar_svar_mod
+		}
 		# Some Events of Outside Cluster
 		inline_script = {
 			script = merger_of_rules/toggled_code
