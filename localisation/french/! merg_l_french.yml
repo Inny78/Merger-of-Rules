@@ -5,15 +5,6 @@ l_french:
  policy_merger_fake_policy: ""
  policy_merger_fake_policy_desc: ""
 
- # Buildings
- building_sky_shield: "Sky Shield"
- AAR_bldn_VEIL_shield_generator_T5: "Iron Veil Facility"
-
- # Civics
- civic_elec_stellar_devourers: "Stellar Devourers"
- civic_galactic_superpower: "Galactic Superpower"
- civic_tw_atlantis: "Enigmatic Technology"
-
  # Starbase & Ship
  placeholder_ship: ""
  placeholder_ship_plural: ""
@@ -27,7 +18,7 @@ l_french:
  IDC_station_fallen_empire_plural: "Intervention missions deployed"
 
  # Tooltips and messages
- merg_forbidden_target: "£trigger_no£ §RThis can't be targeted by a colossus§!"
+ merg_forbidden_target: "£trigger_no£ §RCeci ne peut être la cible d'un $colossus$§!"
 
  AUTO_MIGRATE_ROBOT_DROIDS: "£trigger_no£ §RNon-sapient and shackled robots can only auto-migrate with the§! §Y$tech_droid_workers$§! technology.§!\n"
  COUNTRY_IS_ASCENDED_EMPIRE: "£trigger_no£ §RWe cannot build branches on other Ascended Empires.§!"

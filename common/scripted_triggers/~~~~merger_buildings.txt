@@ -220,8 +220,14 @@ merg_has_planetary_shield = {
 			toggle = @has_more_events_mod
 		}
 		# Nirvana Empire Project
-		has_building = building_sky_shield
-		has_building_construction = building_sky_shield
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_sky_shield
+				has_building_construction = building_sky_shield
+			"
+			toggle = @nirvana_mod
+		}
 		# Reworked Advanced Ascension
 		has_building = AAR_bldn_VEIL_shield_generator_T5
 		has_building_construction = AAR_bldn_VEIL_shield_generator_T5

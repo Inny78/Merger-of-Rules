@@ -2099,17 +2099,23 @@ can_species_be_assembled = {
 				}
 			}
 			# Nirvana Empire Project
-			else_if = {
-				limit = {
-					root.owner = {
-						OR = {
-							has_valid_civic = civic_nirvana_empire_dragon
-							has_valid_civic = civic_nirvana_empire_council
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					else_if = {
+						limit = {
+							root.owner = {
+								OR = {
+									has_valid_civic = civic_nirvana_empire_dragon
+									has_valid_civic = civic_nirvana_empire_council
+								}
+							}
+							is_same_species = root.owner
 						}
+						root = { check_modifier_value = { modifier = planet_pop_assembly_organic_add value > 0 } }
 					}
-					is_same_species = root.owner
-				}
-				root = { check_modifier_value = { modifier = planet_pop_assembly_organic_add value > 0 } }
+				"
+				toggle = @nirvana_mod
 			}
 			# V_TRAITS
 			inline_script = {
@@ -5250,7 +5256,13 @@ can_add_advanced_traits = {
 			toggle = @madoka_compatch_var
 		}
 		# Nirvana Empire DLC
-		is_nirvana_empire = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_nirvana_empire = yes
+			"
+			toggle = @nirvana_mod
+		}
 		# Warship Girls R And MIST Species
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -5313,7 +5325,13 @@ can_add_negative_traits_organic = {
 		}
 	}
 	# Nirvana Empire DLC
-	is_nirvana_empire = no
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			is_nirvana_empire = yes
+		"
+		toggle = @nirvana_mod
+	}
 }
 
 #This, root = country
@@ -5344,7 +5362,13 @@ can_remove_positive_traits_organic = {
 					toggle = @madoka_compatch_var
 				}
 				# Nirvana Empire DLC
-				is_nirvana_empire = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_nirvana_empire = yes
+					"
+					toggle = @nirvana_mod
+				}
 				# Warship Girls R And MIST Species
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -5631,8 +5655,14 @@ can_fill_ruler_job = {
 			has_trait = trait_necrophage
             OR = {
                 is_enslaved = no
-				# Ethics & Civcs Infinity
-                owner = { has_civic = civic_du_contrat_social }
+				# Ethics and Civcs Infinity
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+		                owner = { has_civic = civic_du_contrat_social }
+					"
+					toggle = @post_revolutionary_re_revolution_years
+				}
             }
 			is_being_purged = no
 			is_being_assimilated = no

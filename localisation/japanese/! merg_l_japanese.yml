@@ -5,15 +5,6 @@ l_japanese:
  policy_merger_fake_policy: ""
  policy_merger_fake_policy_desc: ""
 
- # Buildings
- building_sky_shield: "Sky Shield"
- AAR_bldn_VEIL_shield_generator_T5: "Iron Veil Facility"
-
- # Civics
- civic_elec_stellar_devourers: "Stellar Devourers"
- civic_galactic_superpower: "Galactic Superpower"
- civic_tw_atlantis: "Enigmatic Technology"
-
  # Starbase & Ship
  placeholder_ship: ""
  placeholder_ship_plural: ""

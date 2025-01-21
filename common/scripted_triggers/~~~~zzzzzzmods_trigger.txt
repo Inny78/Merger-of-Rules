@@ -418,7 +418,13 @@ has_upgraded_capital_4 = {
 					toggle = @eda_mod
 				}
 				# Nirvana Empire Project
-				has_building = building_nirvana_empire_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_nirvana_empire_palace
+					"
+					toggle = @nirvana_mod
+				}
 				# Star Wars: Kuat Ancient Empire
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -641,7 +647,13 @@ has_upgraded_capital_5 = {
 					toggle = @eda_mod
 				}
 				# Nirvana Empire Project
-				has_building = building_nirvana_empire_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_nirvana_empire_palace
+					"
+					toggle = @nirvana_mod
+				}
 				# Star Wars: Kuat Ancient Empire
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -861,7 +873,13 @@ has_upgraded_capital_6 = {
 					toggle = @eda_mod
 				}
 				# Nirvana Empire Project
-				has_building = building_nirvana_empire_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_nirvana_empire_palace
+					"
+					toggle = @nirvana_mod
+				}
 				# Star Wars: Kuat Ancient Empire
 				inline_script = {
 					script = merger_of_rules/toggled_code

@@ -1072,7 +1072,13 @@ default_endgame_early_start_triggers = {
 		}
 		NOR = {
 			# Nirvana Empire Project
-			has_global_flag = difficult_exe_invasion
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_global_flag = difficult_exe_invasion
+				"
+				toggle = @nirvana_mod
+			}
 			# Star Wars: UnknownWorld Shipgirls Story
 			inline_script = {
 				script = merger_of_rules/toggled_code

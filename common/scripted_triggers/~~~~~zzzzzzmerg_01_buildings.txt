@@ -607,7 +607,13 @@ has_upgraded_capital = {
 				# More Cosmogenesis Buildings
 				has_building = building_cosmo_capital
 				# Nirvana Empire Project
-				has_building = building_nirvana_empire_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_nirvana_empire_palace
+					"
+					toggle = @nirvana_mod
+				}
 				# Star Wars: Kuat Ancient Empire
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -1257,7 +1263,13 @@ has_major_upgraded_capital = {
 				# More Cosmogenesis Buildings
 				has_building = building_cosmo_capital
 				# Nirvana Empire Project
-				has_building = building_nirvana_empire_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_nirvana_empire_palace
+					"
+					toggle = @nirvana_mod
+				}
 				# Twinks Atlantean
 				has_building = building_ancient_palace_at
 				# Twinks Kaldorei
@@ -1892,7 +1904,13 @@ has_fully_upgraded_capital = {
 				# More Cosmogenesis Buildings
 				has_building = building_cosmo_capital
 				# Nirvana Empire Project
-				has_building = building_nirvana_empire_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_nirvana_empire_palace
+					"
+					toggle = @nirvana_mod
+				}
 				# Star Wars: Kuat Ancient Empire
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -2128,7 +2146,7 @@ has_enigmatic_capital = {
 				}
 			}
 		}
-	}	
+	}
 }
 
 has_ascended_capital = {
@@ -2290,7 +2308,7 @@ has_ascended_capital = {
 				has_building = building_stellarite_galactic_capital
 			}
 		}
-	}	
+	}
 }
 
 has_phanon_capital = {

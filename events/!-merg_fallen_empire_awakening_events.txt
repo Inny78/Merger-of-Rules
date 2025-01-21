@@ -29,7 +29,13 @@ country_event = {
 				toggle = @has_gigastructures
 			}
 			# Nirvana Empire Project
-			has_country_flag = nirvana_servant
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_country_flag = nirvana_servant
+				"
+				toggle = @nirvana_mod
+			}
 		}
 		OR = {
 			# Fragged a holy world
@@ -173,7 +179,13 @@ country_event = {
 							is_country_type = fallen_empire
 							is_gestalt = no
 							# Nirvana Empire Project
-							NOT = { has_country_flag = nirvana_servant }
+							inline_script = {
+								script = merger_of_rules/toggled_code
+								code = "
+									NOT = { has_country_flag = nirvana_servant }
+								"
+								toggle = @nirvana_mod
+							}
 							# Vanilla
 							OR = {
 								AND = {
@@ -276,9 +288,14 @@ country_event = {
 				}
 				NOT = { has_communications = root }
 				# Nirvana Empire Project
-				NOT = { has_country_flag = nirvana_servant }
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						NOT = { has_country_flag = nirvana_servant }
+					"
+					toggle = @nirvana_mod
+				}
 			}
-
 			establish_communications_no_message = root
 			root = { save_event_target_as = contact_empire }
 			country_event = { id = action.1 }
@@ -312,7 +329,13 @@ country_event = {
 			toggle = @wsg_mod
 		}
 		# Nirvana Empire Project
-		NOT = { has_country_flag = nirvana_servant }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				NOT = { has_country_flag = nirvana_servant }
+			"
+			toggle = @nirvana_mod
+		}
 	}
 
 	mean_time_to_happen = {

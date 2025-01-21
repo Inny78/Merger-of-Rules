@@ -100,7 +100,13 @@ remove_capital_building = {
 		building_cosmo_machine_capital = { remove_building = building_cosmo_machine_capital }
 		building_cosmo_capital = { remove_building = building_cosmo_capital }
 		# Nirvana Empire Project
-		building_nirvana_empire_palace = { remove_building = building_nirvana_empire_palace }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				building_nirvana_empire_palace = { remove_building = building_nirvana_empire_palace }
+			"
+			toggle = @nirvana_mod
+		}
 		# Real Space - Planetary Stations
 		inline_script = {
 			script = merger_of_rules/toggled_code

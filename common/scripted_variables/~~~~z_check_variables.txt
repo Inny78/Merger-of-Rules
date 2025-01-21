@@ -154,6 +154,9 @@
 # More Traditions 3067902147
 @HAS_MT_Hydra = 0
 
+# Nirvana Empire Project 828731704
+@nirvana_mod = 0
+
 # Origin - F.C.S.S & M.C.S.S 2585368513
 @fcss_mod = 0
 

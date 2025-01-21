@@ -17,7 +17,6 @@ building_lily_couture = { potential = { always = no } allow = { always = no } }
 building_lt_palace = { potential = { always = no } allow = { always = no } }
 building_medical_mega_facility = { potential = { always = no } allow = { always = no } }
 building_nightelf_palace = { potential = { always = no } allow = { always = no } }
-building_nirvana_empire_palace = { potential = { always = no } allow = { always = no } }
 building_object_converter = { potential = { always = no } allow = { always = no } }
 building_object_converter_2 = { potential = { always = no } allow = { always = no } }
 building_occulari_tower = { potential = { always = no } allow = { always = no } }
@@ -53,7 +52,6 @@ building_cosmo_capital = { potential = { always = no } allow = { always = no } }
 building_fallen_palace = { potential = { always = no } allow = { always = no } }
 building_fallen_ancient_palace = { potential = { always = no } allow = { always = no } }
 building_resort_cosmo_capital = { potential = { always = no } allow = { always = no } }
-building_sky_shield = { potential = { always = no } allow = { always = no } }
 building_stellarite_galactic_hive_capital = { potential = { always = no } allow = { always = no } }
 building_stellarite_galactic_machine_capital = { potential = { always = no } allow = { always = no } }
 building_stellarite_galactic_capital = { potential = { always = no } allow = { always = no } }
