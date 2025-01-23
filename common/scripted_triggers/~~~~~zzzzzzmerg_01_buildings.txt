@@ -72,10 +72,22 @@ has_upgraded_capital = {
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
 				# Special Colonies Overhaul
-				has_building = building_SCO_resort_system_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_SCO_resort_system_capital
+					"
+					toggle = @is_SCO_enabled
+				}
 				# ZOFE
-				has_building = building_fallen_palace
-				has_building = building_fallen_ancient_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_fallen_palace
+						has_building = building_fallen_ancient_palace
+					"
+					toggle = @has_zofe_vanilla
+				}
 			}
 		}
 	}
@@ -148,10 +160,22 @@ has_upgraded_capital = {
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
 				# Special Colonies Overhaul
-				has_building = building_SCO_slave_system_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_SCO_slave_system_capital
+					"
+					toggle = @is_SCO_enabled
+				}
 				# ZOFE
-				has_building = building_fallen_palace
-				has_building = building_fallen_ancient_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_fallen_palace
+						has_building = building_fallen_ancient_palace
+					"
+					toggle = @has_zofe_vanilla
+				}
 			}
 		}
 	}
@@ -669,8 +693,14 @@ has_upgraded_capital = {
 					toggle = @wula_compatch_var
 				}
 				# ZOFE
-				has_building = building_fallen_palace
-				has_building = building_fallen_ancient_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_fallen_palace
+						has_building = building_fallen_ancient_palace
+					"
+					toggle = @has_zofe_vanilla
+				}
 			}
 		}
 	}
@@ -743,10 +773,22 @@ has_major_upgraded_capital = {
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
 				# Special Colonies Overhaul
-				has_building = building_SCO_resort_system_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_SCO_resort_system_capital
+					"
+					toggle = @is_SCO_enabled
+				}
 				# ZOFE
-				has_building = building_fallen_ancient_palace
-				has_building = building_fallen_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_fallen_palace
+						has_building = building_fallen_ancient_palace
+					"
+					toggle = @has_zofe_vanilla
+				}
 			}
 		}
 	}
@@ -816,10 +858,22 @@ has_major_upgraded_capital = {
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
 				# Special Colonies Overhaul
-				has_building = building_SCO_slave_system_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_SCO_slave_system_capital
+					"
+					toggle = @is_SCO_enabled
+				}
 				# ZOFE
-				has_building = building_fallen_ancient_palace
-				has_building = building_fallen_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_fallen_palace
+						has_building = building_fallen_ancient_palace
+					"
+					toggle = @has_zofe_vanilla
+				}
 			}
 		}
 	}
@@ -1395,10 +1449,22 @@ has_fully_upgraded_capital = {
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
 				# Special Colonies Overhaul
-				has_building = building_SCO_resort_system_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_SCO_resort_system_capital
+					"
+					toggle = @is_SCO_enabled
+				}
 				# ZOFE
-				has_building = building_fallen_ancient_palace
-				has_building = building_fallen_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_fallen_palace
+						has_building = building_fallen_ancient_palace
+					"
+					toggle = @has_zofe_vanilla
+				}
 			}
 		}
 	}
@@ -1460,10 +1526,22 @@ has_fully_upgraded_capital = {
 				# Twinks Kaldorei
 				has_building = building_nightelf_palace
 				# Special Colonies Overhaul
-				has_building = building_SCO_slave_system_capital
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_SCO_slave_system_capital
+					"
+					toggle = @is_SCO_enabled
+				}
 				# ZOFE
-				has_building = building_fallen_ancient_palace
-				has_building = building_fallen_palace
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_fallen_palace
+						has_building = building_fallen_ancient_palace
+					"
+					toggle = @has_zofe_vanilla
+				}
 			}
 		}
 	}

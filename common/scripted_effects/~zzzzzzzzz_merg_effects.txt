@@ -122,8 +122,14 @@ remove_capital_building = {
 			toggle = @rs_compatch_var
 		}
 		# Special Colonies Overhaul
-		building_SCO_resort_system_capital = { remove_building = building_SCO_resort_system_capital }
-		building_SCO_slave_system_capital = { remove_building = building_SCO_slave_system_capital }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				building_SCO_resort_system_capital = { remove_building = building_SCO_resort_system_capital }
+				building_SCO_slave_system_capital = { remove_building = building_SCO_slave_system_capital }
+			"
+			toggle = @is_SCO_enabled
+		}
 		# Star Wars: Kuat Ancient Empire
 		inline_script = {
 			script = merger_of_rules/toggled_code

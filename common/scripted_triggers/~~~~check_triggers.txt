@@ -18,14 +18,8 @@ merg_has_any_ethics_mod = { has_global_flag = cultural_overhaul_active }
 # Ariphaos Unofficial Patch 1995601384
 merg_has_ariphaos_patch = { has_global_flag = ariphaos_unofficial_patch_installed }
 
-# Assault Lily
-merg_has_assault_lily = { has_global_flag = Assault_Lily_activated }
-
 # Ascension Enhancements
 merg_has_uac = { has_global_flag = has_uac_mod }
-
-# Ethics and Civics : Infinity
-# merg_has_eci = { has_global_flag = ideological_revolution }
 
 # Expanded Events
 merg_has_expanded_events = { has_global_flag = expanded_events_active }
@@ -86,18 +80,12 @@ merg_has_sensor_expansion = { has_global_flag = ariphaos_sensors_installed }
 # Shroud Rising
 merg_has_shroud_rising = { has_global_flag = shroud_rising_active }
 
-# Special Colonies Overhaul
-merg_has_special_colonies = { has_global_flag = SCO_enabled_flag }
-
 # UGRP check
 # If true, open the gates of Hell. All of them.
 merg_has_ugrp = { UGRC_installed = yes }
 
 # Unique Ascension Perks
 merg_has_uap = { has_global_flag = has_uap_mod }
-
-# Wild Space
-merg_has_wild_space = { check_variable = { which = has_wild_space_mod value = 1 } }
 
 # Wula Fallen Empire
 merg_has_wula_fe = { wula_fallen_empire_mod_actived = yes }

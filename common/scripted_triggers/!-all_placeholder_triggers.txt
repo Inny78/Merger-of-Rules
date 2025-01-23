@@ -1,7 +1,4 @@
 # Irony this is a placeholder file please ignore it
-al_has_auth_democratic = { always = no }
-al_has_rare_gov_skill = { always = no }
-al_is_nest_planet = { always = no }
 can_build_lily_garden = { always = no }
 can_build_senior_lily_garden = { always = no }
 has_ariphaos_assorted_precursors = { always = no }
@@ -20,8 +17,6 @@ has_upgraded_penal_capital = { always = no }
 has_wula_compatch = { always = no }
 has_zofe_mc = { always = no }
 ideological_discomfort = { always = no }
-is_al_puffer = { always = no }
-is_AL_puffer_species = { always = no }
 is_aso_gg_ice_giant = { always = no }
 is_aso_gg_white_hole = { always = no }
 is_civic_materialist = { always = no }

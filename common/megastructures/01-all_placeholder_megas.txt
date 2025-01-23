@@ -3,7 +3,6 @@ a_gateway_0 = { entity = "" potential = { always = no } possible = { always = no
 a_gateway_final = { entity = "" potential = { always = no } possible = { always = no } }
 ancient_relay_0 = { entity = "" potential = { always = no } possible = { always = no } }
 ancient_relay_final = { entity = "" potential = { always = no } possible = { always = no } }
-college_ship_creater_3 = { entity = "" potential = { always = no } possible = { always = no } }
 emergency_gateway = { entity = "" potential = { always = no } possible = { always = no } }
 Empyreal_Travel_Beacon_0 = { entity = "" potential = { always = no } possible = { always = no } }
 Empyreal_Travel_Beacon_1 = { entity = "" potential = { always = no } possible = { always = no } }
@@ -52,7 +51,6 @@ ttvl_rift_site = { entity = "" potential = { always = no } possible = { always =
 universal_gateway_origin_demiurge_forge_8 = { entity = "" potential = { always = no } possible = { always = no } }
 universal_gateway_origin_demiurge_forge_9 = { entity = "" potential = { always = no } possible = { always = no } }
 universal_gateway_origin_demiurge_forge_9_2 = { entity = "" potential = { always = no } possible = { always = no } }
-AL_gateway_0 = { entity = "" potential = { always = no } possible = { always = no } }
 elec_aurora_habitat = { entity = "" potential = { always = no } possible = { always = no } }
 elec_aurora_habitat_bh = { entity = "" potential = { always = no } possible = { always = no } }
 temporary_habitat_0 = { entity = "" potential = { always = no } possible = { always = no } }

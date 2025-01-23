@@ -33,7 +33,7 @@ planet_event = {
 						is_planet_class = pc_ringworld_seam_damaged
 						is_planet_class = pc_ringworld_habitable
 						is_planet_class = pc_shattered_ring_habitable
-						is_planet_city = yes
+						merg_is_arcology = yes
 						is_planet_class = pc_relic
 						is_star = yes
 						is_astral_scar = yes
@@ -162,12 +162,12 @@ planet_event = {
 					if = {
 						limit = { has_building = building_hab_capital }
 						remove_building = building_hab_capital
-						add_building = building_capital		
+						add_building = building_capital
 					}
 					if = {
 						limit = { has_building = building_hab_major_capital }
 						remove_building = building_hab_major_capital
-						add_building = building_major_capital		
+						add_building = building_major_capital
 					}
 				}
 				else = {

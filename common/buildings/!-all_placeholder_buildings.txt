@@ -33,8 +33,6 @@ building_plentiful_traditions_pillar_of_affliction = { potential = { always = no
 building_plentiful_traditions_trading_depot = { potential = { always = no } allow = { always = no } }
 building_plentiful_traditions_university_of_wisdom = { potential = { always = no } allow = { always = no } }
 building_precinct_house_at_b = { potential = { always = no } allow = { always = no } }
-building_SCO_resort_system_capital = { potential = { always = no } allow = { always = no } }
-building_SCO_slave_system_capital = { potential = { always = no } allow = { always = no } }
 building_storm_lab = { potential = { always = no } allow = { always = no } }
 building_summoner_site = { potential = { always = no } allow = { always = no } }
 building_system_capital_gr = { potential = { always = no } allow = { always = no } }
@@ -48,8 +46,6 @@ building_hab_cosmo_capital = { potential = { always = no } allow = { always = no
 building_cosmo_hive_capital = { potential = { always = no } allow = { always = no } }
 building_cosmo_machine_capital = { potential = { always = no } allow = { always = no } }
 building_cosmo_capital = { potential = { always = no } allow = { always = no } }
-building_fallen_palace = { potential = { always = no } allow = { always = no } }
-building_fallen_ancient_palace = { potential = { always = no } allow = { always = no } }
 building_resort_cosmo_capital = { potential = { always = no } allow = { always = no } }
 building_stellarite_galactic_hive_capital = { potential = { always = no } allow = { always = no } }
 building_stellarite_galactic_machine_capital = { potential = { always = no } allow = { always = no } }

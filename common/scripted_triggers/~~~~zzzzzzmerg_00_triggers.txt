@@ -1637,7 +1637,13 @@ has_special_star_flag_trigger = {
 		# ACOT SBTG
 		has_star_flag = outercluster
 		# Assault Lily
-		has_star_flag = al_huge_home_bed
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = al_huge_home_bed
+			"
+			toggle = @change_planet_size_bullet_num
+		}
 		# Battle for the Core
 		has_star_flag = Midrimguardian
 		# Fatherland

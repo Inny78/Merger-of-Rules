@@ -86,7 +86,13 @@ is_maginotable_restricted = {
 			toggle = @ag_null_edict_length
 		}
 		# Assault Lily
-		# uses_district_set = lily_ring_world
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_ringworld_habitable_lily
+			"
+			toggle = @change_planet_size_bullet_num
+		}
 		# AshArms Aquarius History
 		inline_script = {
 			script = merger_of_rules/toggled_code

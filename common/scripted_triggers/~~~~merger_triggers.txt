@@ -168,7 +168,13 @@ merg_is_true_ringworld = {
 			toggle = @ag_null_edict_length
 		}
 		# Assault Lily
-		# uses_district_set = lily_ring_world
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_ringworld_habitable_lily
+			"
+			toggle = @change_planet_size_bullet_num
+		}
 		# Darkspace
 		is_ds_ancient_ringworld = yes
 		is_ds_ringworld_spectrals = yes

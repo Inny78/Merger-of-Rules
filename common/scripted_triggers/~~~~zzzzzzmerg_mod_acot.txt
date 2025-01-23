@@ -48,7 +48,13 @@ can_build_precursor_ship = {
 				is_megastructure_type = sofe_omega_nexus
 				is_sofe_megastructure_shipyard = yes
 				# Assault Lily
-				is_megastructure_type = college_ship_creater_3
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_megastructure_type = college_ship_creater_3
+	    			"
+					toggle = @change_planet_size_bullet_num
+				}
 				# Universal Gateway Origin
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_8
                 is_megastructure_type = universal_gateway_origin_demiurge_forge_9
@@ -90,7 +96,13 @@ can_build_precursor_ship = {
 				# SBTG
 				is_sbtg_origin_starbase = yes
 				# Assault Lily
-				has_starbase_size >= lily_super_college_ship
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_starbase_size >= lily_super_college_ship
+	    			"
+					toggle = @change_planet_size_bullet_num
+				}
 				# Gigastructural Engineering & More
 				inline_script = {
 					script = merger_of_rules/toggled_code

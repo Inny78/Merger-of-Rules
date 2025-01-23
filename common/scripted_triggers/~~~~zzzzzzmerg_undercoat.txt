@@ -20,9 +20,10 @@ is_endgame_crisis = {
 		is_country_type = swarm
 		is_country_type = ai_empire
 		is_country_type = synth_queen
+		is_country_type = awakened_synth_queen
 		is_country_type = synth_queen_storm
 		# ACOT SBTG
-		is_country_type = sbtg_stellarborne_empire 
+		is_country_type = sbtg_stellarborne_empire
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code

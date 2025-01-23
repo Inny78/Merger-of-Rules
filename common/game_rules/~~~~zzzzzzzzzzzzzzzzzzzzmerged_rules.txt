@@ -531,7 +531,13 @@ can_generate_leader_from_pop = {
 	NOR = {
 		has_trait = trait_syncretic_proles
 		# Assault Lily
-		is_al_puffer = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_trait = trait_AL_puffer
+			"
+			toggle = @change_planet_size_bullet_num
+		}
 		# Ethics & Civics: Bug Branch
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -1475,7 +1481,13 @@ can_colonize_with_species = {
 			toggle = @has_tc_mod
 		}
 		# Assault Lily
-		is_AL_puffer_species = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_species_class = PUFFER
+			"
+			toggle = @change_planet_size_bullet_num
+		}
 	}
 	OR = {
 		NOT = { has_trait = trait_self_modified }
@@ -1715,7 +1727,7 @@ can_species_procreate = {
 			"
 			toggle = @has_forgotten_queens
 		}
-		# Expanded Megastructures and Technology
+		# Expanded Pops
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
@@ -1734,7 +1746,7 @@ can_species_procreate = {
 					}
 				}
 			"
-			toggle = @emt_compatch_var
+			toggle = @expops_compatch_var
 		}
 		# Girls Frontline
 		inline_script = {
@@ -1765,18 +1777,19 @@ can_species_procreate = {
 		root = { has_modifier = slave_colony }
 		NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
 		# Special Colonies Overhaul
-		AND = {
-			merg_has_special_colonies = yes
-			NOT = {
-				root = {
-					owner = {
-						or = {
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				NOT = {
+					root.owner = {
+						OR = {
 							has_valid_civic = civic_slaver_guilds
 							has_valid_civic = civic_indentured_assets
 						}
 					}
 				}
-			}
+			"
+			toggle = @is_SCO_enabled
 		}
 	}
 	# Diagrapher's Trait Mod
@@ -2140,7 +2153,13 @@ can_species_be_assembled = {
 			else = {
 				OR = {
 					# Assault Lily
-					is_archetype = LILY
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							is_archetype = LILY
+						"
+						toggle = @change_planet_size_bullet_num
+					}
 					# EDA
 					inline_script = {
 						script = merger_of_rules/toggled_code
@@ -2194,20 +2213,23 @@ can_species_be_assembled = {
 				}
 			}
 			# Special Colonies Overhaul
-			NAND = {
-				merg_has_special_colonies = yes
-				root = { has_modifier = slave_colony }
-				NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
-				not = {
-					root = {
-						owner = {
-							or = {
-								has_valid_civic = civic_slaver_guilds
-								has_valid_civic = civic_indentured_assets
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					NAND = {
+						root = { has_modifier = slave_colony }
+						NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
+						not = {
+							root.owner = {
+								or = {
+									has_valid_civic = civic_slaver_guilds
+									has_valid_civic = civic_indentured_assets
+								}
 							}
 						}
 					}
-				}
+				"
+				toggle = @is_SCO_enabled
 			}
 		}
 		# Azur lane Stellaris DLC
@@ -2771,8 +2793,14 @@ can_orbitable_repair_ships = {
 					toggle = @has_acquisition_of_tech
 				}
 				# Assault Lily
-				has_starbase_size = lily_super_college_ship
-				has_starbase_size = lily_college_ship
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_starbase_size = lily_super_college_ship
+						has_starbase_size = lily_college_ship
+					"
+					toggle = @change_planet_size_bullet_num
+				}
 				# Ethics & Civics Classic
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -2813,7 +2841,13 @@ can_orbitable_repair_ships = {
 					toggle = @has_ancient_caches
 				}
 				# Assault Lily
-				is_megastructure_type = college_ship_creater_3
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_megastructure_type = college_ship_creater_3
+					"
+					toggle = @change_planet_size_bullet_num
+				}
 				# Gigastructural Engineering & More
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -3267,24 +3301,26 @@ can_jump_drive = {
 		toggle = @ag_null_edict_length
 	}
 	# Assault Lily
-	custom_tooltip = {
-		fail_text = AL_cannot_start_jump
-		OR = {
-			merg_has_assault_lily = no
-			AND = {
-				merg_has_assault_lily = yes
-				exists = solar_system
-				NOT = {
-					solar_system = {
-						exists = starbase
-						starbase = {
-							has_starbase_building = AL_AntiFTL
-							owner = { is_hostile = prevprevprev.owner }
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			custom_tooltip = {
+				fail_text = AL_cannot_start_jump
+				AND = {
+					exists = solar_system
+					NOT = {
+						solar_system = {
+							exists = starbase
+							starbase = {
+								has_starbase_building = AL_AntiFTL
+								owner = { is_hostile = prevprevprev.owner }
+							}
 						}
 					}
 				}
 			}
-		}
+		"
+		toggle = @change_planet_size_bullet_num
 	}
 	# Some Events of Outside Cluster
 	inline_script = {
@@ -3433,13 +3469,18 @@ system_blocks_sensors = {
 		# Ancient Empire
 		has_star_flag = ag_no_sensor_system
 		# Assault Lily
-		AND = {
-			merg_has_assault_lily = yes
-			exists = sector
-			sector.sector_capital = {
-				exists = leader
-				leader = { al_has_rare_gov_skill = yes }
-			}
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				AND = {
+					exists = sector
+					sector.sector_capital = {
+						exists = leader
+						leader = { al_has_rare_gov_skill = yes }
+					}
+				}
+			"
+			toggle = @change_planet_size_bullet_num
 		}
 		# Destiny: The Darkness Crisis
 		has_star_flag = "black_fleet_in_system"
@@ -3480,7 +3521,7 @@ system_blocks_sensors = {
 		AND = { # Wormholes
 			OR = {
 				merg_has_sensor_expansion = yes
-				merg_has_wild_space = yes
+				check_variable = { which = has_wild_space_mod value = 1 }
 				has_aso_space_exploration = yes
 			}
 			has_natural_wormhole = yes
@@ -3544,7 +3585,13 @@ can_enter_system_by_jump = {
 						# Ancient Empire
 						has_star_flag = ag_no_jump_in_system
 						# Assault Lily
-						has_star_flag = al_huge_home_bed
+						inline_script = {
+							script = merger_of_rules/toggled_code
+							code = "
+								has_star_flag = al_huge_home_bed
+							"
+							toggle = @change_planet_size_bullet_num
+						}
 						# Forgotten Empires
 						inline_script = {
 							script = merger_of_rules/toggled_code
@@ -4070,7 +4117,13 @@ can_build_branch_offices = {
 				toggle = @arknights_ANF
 			}
 			# Assault Lily
-			al_has_auth_democratic = yes
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_authority = auth_AL_democratic
+				"
+				toggle = @change_planet_size_bullet_num
+			}
 			# Azur Lane Stellaris DLC
 			inline_script = {
 				script = merger_of_rules/toggled_code
@@ -4141,8 +4194,14 @@ can_support_branch_offices = {
 			merg_is_fallen_empire = yes
 			merg_is_awakened_fe = yes
 			# Assault Lily
-			is_country_type = al_fallen_empire
-			is_country_type = al_fallen_empire_no_ai
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					is_country_type = al_fallen_empire
+					is_country_type = al_fallen_empire_no_ai
+				"
+				toggle = @change_planet_size_bullet_num
+			}
 		}
 	}
 	custom_tooltip = {
@@ -4154,7 +4213,13 @@ can_support_branch_offices = {
 			NOR = {
 				is_megacorp = yes
 				# Assault Lily
-				is_country_type = huge_country
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = huge_country
+					"
+					toggle = @change_planet_size_bullet_num
+				}
 				# Azur Lane Stellaris DLC
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -4311,7 +4376,13 @@ can_build_branch_office_on_planet = {
 				OR = {
 					is_criminal_syndicate = yes
 					# Assault Lily
-					al_has_auth_democratic = yes
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							has_authority = auth_AL_democratic
+						"
+						toggle = @change_planet_size_bullet_num
+					}
 					# Azur Lane Stellaris DLC
 					inline_script = {
 						script = merger_of_rules/toggled_code
@@ -4523,7 +4594,13 @@ can_build_branch_office_on_planet = {
 				OR = {
 					is_criminal_syndicate = no
 					# Assault Lily
-					al_has_auth_democratic = yes
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							has_authority = auth_AL_democratic
+						"
+						toggle = @change_planet_size_bullet_num
+					}
 				}
 			}
 			owner = {
@@ -4550,7 +4627,13 @@ can_build_branch_office_on_planet = {
 				OR = {
 					is_criminal_syndicate = no
 					# Assault Lily
-					al_has_auth_democratic = yes
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							has_authority = auth_AL_democratic
+						"
+						toggle = @change_planet_size_bullet_num
+					}
 				}
 			}
 			AND = {
@@ -5916,9 +5999,15 @@ can_dismiss_leader = {
 		}
 	}
 	# Assault Lily
-	custom_tooltip = {
-		fail_text = "requires_not_special_lily_leader"
-		NOT = { has_leader_flag = AL_special_lily_leader }
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			custom_tooltip = {
+				fail_text = requires_not_special_lily_leader
+				NOT = { has_leader_flag = AL_special_lily_leader }
+			}
+		"
+		toggle = @change_planet_size_bullet_num
 	}
 	# Civil Wars
 	inline_script = {

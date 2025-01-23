@@ -84,8 +84,14 @@ merg_is_gate_mega = {
 			"
 			toggle = @arknights_ANF
 		}
-		# Assault Lilly in Stellaris
-		is_megastructure_type = AL_gateway_0
+		# Assault Lily in Stellaris
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_megastructure_type = AL_gateway_0
+			"
+			toggle = @change_planet_size_bullet_num
+		}
 		# Blorg
 		is_megastructure_type = Transwarp_hub_1
 		is_megastructure_type = Transwarp_hub_2
@@ -354,8 +360,14 @@ merg_has_gate_mega = {
 			"
 			toggle = @arknights_ANF
 		}
-		# Assault Lilly in Stellaris
-		has_megastructure = AL_gateway_0
+		# Assault Lily in Stellaris
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_megastructure = AL_gateway_0
+			"
+			toggle = @change_planet_size_bullet_num
+		}
 		# Blorg
 		has_megastructure = Transwarp_hub_1
 		has_megastructure = Transwarp_hub_2

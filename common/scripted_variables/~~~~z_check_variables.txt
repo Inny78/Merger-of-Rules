@@ -31,6 +31,9 @@
 # AshArms Aquarius History 2234187039
 @asharm_mod = 0
 
+# AssaultLily In Stellaris 2785989313
+@change_planet_size_bullet_num = 0
+
 # Azur Lane Stellaris DLC 1617872589 (compatch)
 @azl_mod = 0
 
@@ -205,6 +208,9 @@
 
 # Some Events of Outside Cluster 1562501671
 @has_seooc_mod = 0
+
+# Special Colonies Overhaul 2234990872
+@is_SCO_enabled = 0
 
 # Star Wars: Kuat Ancient Empire 2461014769
 @sw_kuat_mod = 0

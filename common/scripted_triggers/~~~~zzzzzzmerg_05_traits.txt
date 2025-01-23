@@ -137,7 +137,13 @@ has_food_upkeep = {
                 toggle = @asharm_mod
             }
             # Assault Lily
-            is_archetype = LILY
+            inline_script = {
+                script = merger_of_rules/toggled_code
+                code = "
+                    is_archetype = LILY
+    			"
+                toggle = @change_planet_size_bullet_num
+            }
             # Azur Lane Stellaris DLC
             inline_script = {
                 script = merger_of_rules/toggled_code
