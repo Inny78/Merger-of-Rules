@@ -722,7 +722,13 @@ merg_is_hole_star_class = {
 			toggle = @timemod
 		}
 		# Unique Ascension Perks
-		is_star_class = sc_whitte_hole
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_whitte_hole
+			"
+			toggle = @has_uap_mod
+		}
 	}
 }
 

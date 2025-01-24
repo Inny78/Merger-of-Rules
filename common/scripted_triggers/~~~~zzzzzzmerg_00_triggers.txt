@@ -393,9 +393,15 @@ is_crisis_faction = {
 		# Destiny: The Darkness Crisis
 		is_country_type = darkness_country
 		# Shroud Rising
-		is_country_type = shroud_cult
-		is_country_type = shroud_entities
-		is_country_type = shroud_horrors
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = shroud_horrors
+				is_country_type = shroud_entities
+				is_country_type = shroud_cult
+			"
+			toggle = @has_shroud_rising_mod
+		}
 		# The Sleeper
 		is_country_type = berserker_awoken_hive
 	}
@@ -615,14 +621,14 @@ is_democracy = {
 	OR = {
 		has_authority = auth_democratic
 		inline_script = {
-			script = merger_of_rules/toggled_code
+			script = merger_of_rules/toggled_code_inverse
 			code = "
 				AND = {
 					is_megacorp = yes
 					is_egalitarian = yes
 				}
 			"
-			toggle = @[ 1 - expops_compatch_var - has_eca_funefork - has_more_corporate_authorities ]
+			toggle = @[ expops_compatch_var + has_eca_funefork + has_more_corporate_authorities ]
 		}
 		# Ethics and Civics Bug Branch
 		inline_script = {
@@ -1133,7 +1139,13 @@ has_research_building = {
 			toggle = @has_ancient_caches
 		}
 		# Ad Astra Technology Mod
-		has_building = building_grand_academy
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_grand_academy
+			"
+			toggle = @has_ad_astra_tech_mod
+		}
 		# AOT
 		inline_script = {
 			script = merger_of_rules/toggled_code

@@ -1,11 +1,17 @@
 # Acquisition of Technologies 2178603631
 @has_acquisition_of_tech = 0
 
+# Ad Astra Technology Mod 2857350778
+@has_ad_astra_tech_mod = 0
+
 # Additional Mega-Engineering Projects 3155789435
 @has_epam_mod = 0
 
 # Additional Vanilla Buildings 2916082557
 @has_avb_mod = 0
+
+# All Ascension Paths 2909582424
+@aap_mod = 0
 
 # All These Worlds Lite 2718002306
 @has_atw_lite = 0
@@ -45,6 +51,9 @@
 
 # Darkspace 2719075597
 # Pending
+
+# Destiny: The Traveler 3317546633
+@has_dest_trav_mod = 0
 
 # Diagrapher's Factions and Ethics Mod 2724573936
 @has_diagraphers_faction_and_ethic_mod = 0
@@ -203,8 +212,17 @@
 # Reworked Avanced Ascension 1199002146
 @aar_svar_mod = 0
 
+# Sartek Tradition - Ascension Perk Merger
+# @sartek_ascmgr_main_mod_active = 0
+
+# Sartek TAP Merger - Ascension Path Fusion 2979443893
+@sartek_afusion_mod_active = 0
+
 # Secrets of the Shroud 2820330517
 @has_sots_mod = 0
+
+# Shroud Rising 3170252871
+@has_shroud_rising_mod = 0
 
 # Some Events of Outside Cluster 1562501671
 @has_seooc_mod = 0
@@ -239,6 +257,9 @@
 
 # Unavoidable Changes
 @HAS_UCmod = 0
+
+# Unique Ascension Perks
+@has_uap_mod = 0
 
 # V_TRAITS 2872760980
 @has_v_traits_mod = 0

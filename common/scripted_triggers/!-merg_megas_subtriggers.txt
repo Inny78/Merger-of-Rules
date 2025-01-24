@@ -229,8 +229,14 @@ merg_is_gate_mega = {
 		is_megastructure_type = gateway_heaven
 		is_megastructure_type = gateway_titan
 		# Unique Ascension Perks
-		is_megastructure_type = nanite_gateway
-		is_megastructure_type = emergency_gateway
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_megastructure_type = nanite_gateway
+				is_megastructure_type = emergency_gateway
+			"
+			toggle = @has_uap_mod
+		}
 		# Voyage to Eternity
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -503,8 +509,14 @@ merg_has_gate_mega = {
 		has_megastructure = gateway_heaven
 		has_megastructure = gateway_titan
 		# Unique Ascension Perks
-		has_megastructure = nanite_gateway
-		has_megastructure = emergency_gateway
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_megastructure = nanite_gateway
+				has_megastructure = emergency_gateway
+			"
+			toggle = @has_uap_mod
+		}
 		# Voyage to Eternity
 		inline_script = {
 			script = merger_of_rules/toggled_code

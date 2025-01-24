@@ -9,9 +9,6 @@ endtime_star_fantasy_empire = { ai = { enabled = no } }
 master_ai_country = { ai = { enabled = no } }
 pg_last_hope = { ai = { enabled = no } }
 replicators = { ai = { enabled = no } }
-shroud_cult = { ai = { enabled = no } }
-shroud_entities = { ai = { enabled = no } }
-shroud_horrors = { ai = { enabled = no } }
 star_fantasy_empire = { ai = { enabled = no } }
 TAC_debris_ship_country = { ai = { enabled = no } }
 TAC_machine_crisis_country = { ai = { enabled = no } }

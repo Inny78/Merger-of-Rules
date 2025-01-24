@@ -1,0 +1,10 @@
+# Dear Irony please fallback to simple parser
+
+inline_script = {
+    script = merger_of_rules/parts/switch
+    file = merger_of_rules/parts/toggled_code_case_
+
+    value = @[ 1 - (-1 * ((-1 * (($toggle$*$toggle$) / (($toggle$*$toggle$)+1))) - ((((-1 * (($toggle$*$toggle$) / (($toggle$*$toggle$)+1))) % 1) + 1) % 1))) ]
+
+    params = "code = \"$code$\"" # this is fine don't worry about it :)
+}

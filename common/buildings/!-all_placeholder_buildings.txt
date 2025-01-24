@@ -1,28 +1,17 @@
 # Irony this is a placeholder file please ignore it
 building_acid_maker = { potential = { always = no } allow = { always = no } }
-building_aegis_city = { potential = { always = no } allow = { always = no } }
 building_ancient_palace_at = { potential = { always = no } allow = { always = no } }
 building_enigmatic_assembly_plant = { potential = { always = no } allow = { always = no } }
 building_enigmatic_lab = { potential = { always = no } allow = { always = no } }
-building_eternal_nexus_ai = { potential = { always = no } allow = { always = no } }
-building_eternal_palace = { potential = { always = no } allow = { always = no } }
-building_fortress_city = { potential = { always = no } allow = { always = no } }
 building_galactic_senate = { potential = { always = no } allow = { always = no } }
-building_grand_academy = { potential = { always = no } allow = { always = no } }
 building_hive_major_capital_sick = { potential = { always = no } allow = { always = no } }
 building_house_of_the_fleshsculpter = { potential = { always = no } allow = { always = no } }
-building_lily_construction_group = { potential = { always = no } allow = { always = no } }
-building_lily_couture = { potential = { always = no } allow = { always = no } }
 building_lt_palace = { potential = { always = no } allow = { always = no } }
-building_medical_mega_facility = { potential = { always = no } allow = { always = no } }
 building_nightelf_palace = { potential = { always = no } allow = { always = no } }
 building_object_converter = { potential = { always = no } allow = { always = no } }
 building_object_converter_2 = { potential = { always = no } allow = { always = no } }
-building_occulari_tower = { potential = { always = no } allow = { always = no } }
 building_oe_palace = { potential = { always = no } allow = { always = no } }
 building_omega_cloning_vats = { potential = { always = no } allow = { always = no } }
-building_panopticon_fortress = { potential = { always = no } allow = { always = no } }
-building_planetary_citadel = { potential = { always = no } allow = { always = no } }
 building_planetary_shield_generator_fe = { potential = { always = no } allow = { always = no } }
 building_plentiful_traditions_advanced_pillar_of_affliction = { potential = { always = no } allow = { always = no } }
 building_plentiful_traditions_advanced_slave_processing = { potential = { always = no } allow = { always = no } }
@@ -39,7 +28,6 @@ building_system_capital_gr = { potential = { always = no } allow = { always = no
 building_techno_04_clone_vat = { potential = { always = no } allow = { always = no } }
 building_tw_arcane_hold = { potential = { always = no } allow = { always = no } }
 building_universal_gateway_origin_salvaged_resurrection_vat = { potential = { always = no } allow = { always = no } }
-building_wyrmguard_citadel = { potential = { always = no } allow = { always = no } }
 building_zitadom = { potential = { always = no } allow = { always = no } }
 protoss_building_bf = { potential = { always = no } allow = { always = no } }
 building_hab_cosmo_capital = { potential = { always = no } allow = { always = no } }
@@ -50,4 +38,3 @@ building_resort_cosmo_capital = { potential = { always = no } allow = { always =
 building_stellarite_galactic_hive_capital = { potential = { always = no } allow = { always = no } }
 building_stellarite_galactic_machine_capital = { potential = { always = no } allow = { always = no } }
 building_stellarite_galactic_capital = { potential = { always = no } allow = { always = no } }
-building_alpha_fortress = { potential = { always = no } allow = { always = no } }

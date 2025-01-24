@@ -580,6 +580,14 @@ can_generate_leader_from_pop = {
 can_generate_leader_from_species = {
 	is_sapient = yes
 	OR = {
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				oxr_mdlc_can_generate_leader_from_species = yes
+			"
+			toggle = @oxr_mdlc_mod
+		}
+		# Vanilla
 		NAND = {
 			NOT = { root = { has_technology = tech_synthetic_leaders } }
 			has_trait = trait_mechanical
@@ -690,6 +698,15 @@ can_release_vassal = {
 can_release_vassal_from_species = {
 	root = {
 		OR = {
+			# Machine & Robot Expansion Continued
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					oxr_mdlc_can_release_vassal_from_species = yes
+				"
+				toggle = @oxr_mdlc_mod
+			}
+			# Vanilla
 			AND = {
 				is_sapient = yes
 				NOR = {
@@ -796,14 +813,6 @@ can_release_vassal_from_species = {
 						toggle = @expops_compatch_var
 					}
 				}
-			}
-			# Machine & Robot Expansion Continued
-			inline_script = {
-				script = merger_of_rules/toggled_code
-				code = "
-					oxr_mdlc_can_release_vassal_from_species = yes
-				"
-				toggle = @oxr_mdlc_mod
 			}
 		}
 	}
@@ -2475,8 +2484,14 @@ can_orbital_bombard = {
 				# Scripted Triggers Undercoat
 				has_country_flag = stu_bombardable_by_everyone
 				# Shroud Rising
-				is_country_type = shroud_horrors
-				is_country_type = shroud_cult
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = shroud_horrors
+						is_country_type = shroud_cult
+					"
+					toggle = @has_shroud_rising_mod
+				}
 				# StellarRegulator Array
 				SRA_can_do_orbital_bombardment_country = yes
 				# The Sleeper
@@ -2578,8 +2593,14 @@ can_orbital_bombard = {
 				# Scripted Triggers Undercoat
 				has_country_flag = stu_can_bombard_everyone
 				# Shroud Rising
-				is_country_type = shroud_horrors
-				is_country_type = shroud_cult
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = shroud_horrors
+						is_country_type = shroud_cult
+					"
+					toggle = @has_shroud_rising_mod
+				}
 				# Replicators
 				is_country_type = replicators
 				# Star Wars: Kuat Ancient Empire
@@ -3357,6 +3378,13 @@ can_jump_drive = {
 		"
 		toggle = @has_seooc_mod
 	}
+	inline_script = {
+		script = merger_of_rules/toggled_code_inverse
+		code = "
+			always = yes
+		"
+		toggle = @[ ag_null_edict_length + change_planet_size_bullet_num + has_seooc_mod ]
+	}
 }
 
 # this = country
@@ -3981,7 +4009,13 @@ can_pops_grow_on_planet = {
 					is_country_type = ai_empire
 					is_country_type = swarm
 					# Shroud Rising
-					is_country_type = shroud_cult
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							is_country_type = shroud_cult
+						"
+						toggle = @has_shroud_rising_mod
+					}
 				}
 			}
 		}
@@ -4268,7 +4302,13 @@ can_support_branch_offices = {
 				}
 			}
 			# Unique Ascension Perks
-			has_ascension_perk = ap_megacorp
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_ascension_perk = ap_megacorp
+				"
+				toggle = @has_uap_mod
+			}
 		}
 	}
 	custom_tooltip = {
@@ -4523,7 +4563,13 @@ can_build_branch_office_on_planet = {
 						is_gestalt = yes
 					}
 				}
-				root = { has_ascension_perk = ap_megacorp }
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						root = { has_ascension_perk = ap_megacorp }
+					"
+					toggle = @has_uap_mod
+				}
 			}
 			# EDA
 			inline_script = {

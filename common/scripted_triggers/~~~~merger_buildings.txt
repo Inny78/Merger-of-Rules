@@ -102,7 +102,13 @@ merg_has_hospital = {
 			toggle = @has_ancient_caches
 		}
 		# Ad Astra Technology Mod
-		has_active_building = building_medical_mega_facility
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_active_building = building_medical_mega_facility
+			"
+			toggle = @has_ad_astra_tech_mod
+		}
 		# AOT
 		inline_script = {
 			script = merger_of_rules/toggled_code

@@ -1,5 +1,465 @@
 namespace = action
 
+# 64
+event = {
+	id = action.64
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_playable_country = {
+			num_unique_species > 1
+			any_owned_species = {
+				has_citizenship_type = {
+					type = citizenship_assimilation
+					country = prev
+				}
+				count_species_pop = { count > 0 }
+			}
+		}
+	}
+
+	immediate = {
+		set_update_modifiers_batch = begin
+		every_playable_country = {
+			limit = {
+				num_unique_species > 1
+				any_owned_species = {
+					has_citizenship_type = {
+						type = citizenship_assimilation
+						country = prev
+					}
+					count_species_pop = { count > 0 }
+				}
+			}
+
+			if = { # ascended synths
+				limit = {
+					OR = {
+						NOT = { has_country_flag = synthetic_empire }
+						# All Ascension Paths
+						inline_script = {
+							script = merger_of_rules/toggled_code
+							code = "
+								has_policy_flag = synth_assimilation_bio
+								has_policy_flag = synth_assimilation_targeted
+							"
+							toggle = @aap_mod
+						}
+					}
+				}
+				every_owned_species = {
+					limit = {
+						has_citizenship_type = {
+							type = citizenship_assimilation
+							country = prev
+						}
+						count_species_pop = { count > 0 }
+					}
+					if = { # machines assimlating machines
+						limit = {
+							OR = {
+								has_trait = trait_mechanical
+								has_trait = trait_machine_unit
+							}
+							prev = {
+								is_machine_empire = yes
+								has_active_tradition = tr_synthetics_adopt_machine
+							}
+						}
+						# Deliberately do nothing here, see assimilation_effect
+						# All Ascension Paths
+						inline_script = {
+							script = merger_of_rules/toggled_code
+							code = "
+								set_timed_species_flag = {
+									flag = assimilate_into_synths
+									days = 30
+								}
+							"
+							toggle = @aap_mod
+						}
+					}
+					# All Ascension Paths
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							else_if = { # stop targetted bio ascension creating psionic robots
+								limit = {
+									OR = {
+										has_trait = trait_mechanical
+										has_trait = trait_machine_unit
+									}
+									prev = { has_country_flag = synthetic_empire }
+								}
+								set_timed_species_flag = {
+									flag = assimilate_into_synths
+									days = 30
+								}
+							}
+							else_if = {
+								limit = { ga_assimilation_event_suitable_species = yes }
+								ga_tag_species = yes
+							}
+							else_if = {
+								limit = {
+									prev = { has_policy_flag = synth_assimilation_targeted }
+									OR = {
+										has_living_standard = {
+											type = living_standard_tech_assimilation
+											country = prev
+										}
+										has_living_standard = {
+											type = living_standard_cyborg_assimilation
+											country = prev
+										}
+										has_living_standard = {
+											type = living_standard_cyborg_assimilation_psionic
+											country = prev
+										}
+									}
+								}
+								set_timed_species_flag = {
+									flag = assimilate_into_synths
+									days = 30
+								}
+							}
+							else_if = {
+								limit = {
+									prev = {
+										OR = {
+											AND = {
+												is_hive_empire = no
+												has_tradition = tr_cybernetics_transubstantiation_synthesis
+												has_tradition = tr_psionics_psionic_assimilation
+											}
+											AND = {
+												is_machine_empire = yes
+												has_civic = civic_machine_assimilator
+												has_tradition = tr_psionics_psionic_assimilation
+											}
+										}
+									}
+								}
+								modify_species = {
+									species = this
+									add_trait = trait_cybernetic
+									add_trait = trait_psionic
+									add_traits_at_start_of_list = yes
+									remove_trait = trait_hive_mind
+									remove_trait = trait_self_modified
+									remove_trait = trait_latent_psionic
+									change_scoped_species = no
+
+									effect = {
+										set_timed_species_flag = {
+											flag = assimilation_species_of_species@prev
+											days = 30
+										}
+										set_timed_species_flag = {
+											flag = assimilation_species_of_empire@prevprev
+											days = 30
+										}
+									}
+								}
+							}
+						"
+						toggle = @aap_mod
+					}
+					# Sartek TAP Merger - Ascension Path Fusion
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							else_if = { # cyborg and psionic
+								limit = {
+									prev = {
+										OR = {
+											AND = {
+												is_hive_empire = no
+												has_tradition = tr_cybernetics_transubstantiation_synthesis
+												has_tradition = tr_psionics_psionic_assimilation
+											}
+											AND = {
+												has_authority = auth_machine_intelligence
+												has_civic = civic_machine_assimilator
+												has_tradition = tr_psionics_psionic_assimilation
+											}
+										}
+									}
+								}
+								modify_species = {
+									species = this
+									add_trait = trait_cybernetic
+									add_trait = trait_psionic
+									add_traits_at_start_of_list = yes
+									remove_trait = trait_hive_mind
+									remove_trait = trait_self_modified
+									remove_trait = trait_latent_psionic
+									change_scoped_species = no
+
+									effect = {
+										set_timed_species_flag = {
+											flag = assimilation_species_of_species@prev
+											days = 30
+										}
+										set_timed_species_flag = {
+											flag = assimilation_species_of_empire@prevprev
+											days = 30
+										}
+									}
+								}
+							}
+						"
+						toggle = @sartek_afusion_mod_active
+					}
+					# Vanilla
+					else_if = { # assimilator empire or cyborg empire
+						limit = {
+							prev = {
+								OR = {
+									AND = {
+										is_hive_empire = no
+										has_tradition = tr_cybernetics_transubstantiation_synthesis
+									}
+									AND = {
+										is_machine_empire = yes
+										has_civic = civic_machine_assimilator
+									}
+								}
+							}
+						}
+						modify_species = {
+							species = this
+							add_trait = trait_cybernetic
+							add_traits_at_start_of_list = yes
+							remove_trait = trait_hive_mind
+							remove_trait = trait_self_modified
+							remove_trait = trait_latent_psionic
+							remove_trait = trait_psionic
+							change_scoped_species = no
+
+							effect = {
+								set_timed_species_flag = {
+									flag = assimilation_species_of_species@prev
+									days = 30
+								}
+								set_timed_species_flag = {
+									flag = assimilation_species_of_empire@prevprev
+									days = 30
+								}
+							}
+						}
+					}
+					# All Ascension Paths
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							else_if = {
+								limit = {
+									prev = {
+										is_hive_empire = yes
+										has_tradition = tr_genetics_creation
+										has_tradition = tr_cybernetics_transubstantiation_synthesis
+										NOT = { has_civic = civic_hive_devouring_swarm }
+									}
+								}
+								modify_species = {
+									species = this
+									add_trait = trait_cybernetic
+									add_trait = trait_hive_mind
+									remove_trait = trait_self_modified
+									remove_trait = trait_latent_psionic
+									remove_trait = trait_psionic
+									change_scoped_species = no
+
+									effect = {
+										set_timed_species_flag = {
+											flag = assimilation_species_of_species@prev
+											days = 30
+										}
+										set_timed_species_flag = {
+											flag = assimilation_species_of_empire@prevprev
+											days = 30
+										}
+									}
+								}
+							}
+						"
+						toggle = @aap_mod
+					}
+					# Ethics and Civics Bug Branch
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							else_if = { # assimilating hive bug branch
+								limit = {
+									prev = {
+										is_hive_empire = yes
+										has_valid_civic = civic_bugged_hive_aggressive_proliferation
+									}
+								}
+								modify_species = {
+									species = this
+									add_trait = trait_hive_mind
+									remove_trait = trait_self_modified
+									remove_trait = trait_latent_psionic
+									remove_trait = trait_psionic
+									change_scoped_species = no
+
+									effect = {
+										set_timed_species_flag = {
+											flag = assimilation_species_of_species@prev
+											days = 30
+										}
+										set_timed_species_flag = {
+											flag = assimilation_species_of_empire@prevprev
+											days = 30
+										}
+									}
+								}
+							}
+						"
+						toggle = @has_bug_branch
+					}
+					# Vanilla
+					else_if = { # genetic hive mind
+						limit = {
+							prev = {
+								is_hive_empire = yes
+								OR = {
+									has_tradition = tr_genetics_creation
+									# Empires Expanded
+									inline_script = {
+										script = merger_of_rules/toggled_code
+										code = "
+											has_civic = civic_hive_assimilators
+										"
+										toggle = @has_emex_mod
+									}
+								}
+								NOT = {
+									has_civic = civic_hive_devouring_swarm
+								}
+							}
+						}
+						modify_species = {
+							species = this
+							add_trait = trait_hive_mind
+							remove_trait = trait_self_modified
+							remove_trait = trait_latent_psionic
+							remove_trait = trait_psionic
+							change_scoped_species = no
+
+							effect = {
+								set_timed_species_flag = {
+									flag = assimilation_species_of_species@prev
+									days = 30
+								}
+								set_timed_species_flag = {
+									flag = assimilation_species_of_empire@prevprev
+									days = 30
+								}
+							}
+						}
+					}
+					else_if = { # cyborg hive mind
+						limit = {
+							prev = {
+								is_hive_empire = yes
+								has_tradition = tr_cybernetics_transubstantiation_synthesis
+								NOT = {
+									has_civic = civic_hive_devouring_swarm
+								}
+							}
+						}
+						modify_species = {
+							species = this
+							add_trait = trait_cybernetic
+							add_trait = trait_hive_mind
+							add_traits_at_start_of_list = yes
+							remove_trait = trait_self_modified
+							remove_trait = trait_latent_psionic
+							remove_trait = trait_psionic
+							change_scoped_species = no
+
+							effect = {
+								set_timed_species_flag = {
+									flag = assimilation_species_of_species@prev
+									days = 30
+								}
+								set_timed_species_flag = {
+									flag = assimilation_species_of_empire@prevprev
+									days = 30
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							prev = {
+								NOR = {
+									has_ethic = ethic_gestalt_consciousness
+									has_tradition = tr_cybernetics_transubstantiation_synthesis
+								}
+							}
+							has_trait = trait_hive_mind
+						}
+						modify_species = {
+							species = this
+							remove_trait = trait_hive_mind
+							change_scoped_species = no
+
+							effect = {
+								set_timed_species_flag = {
+									flag = assimilation_species_of_species@prev
+									days = 30
+								}
+								set_timed_species_flag = {
+									flag = assimilation_species_of_empire@prevprev
+									days = 30
+								}
+							}
+						}
+					}
+					else_if = { #### Psionic Assimilation ADD OTHER RANDOM OPTIONS TOO
+						limit = {
+							prev = {
+								has_tradition = tr_psionics_psionic_assimilation
+							}
+						}
+						modify_species = {
+							species = this
+							add_trait = trait_psionic
+							add_traits_at_start_of_list = yes
+							remove_trait = trait_latent_psionic
+							remove_trait = trait_cybernetic
+							inline_script = {
+								script = traits/remove_all_cybernetic_traits
+							}
+
+							effect = {
+								set_timed_species_flag = {
+									flag = assimilation_species_of_species@prev
+									days = 30
+								}
+								set_timed_species_flag = {
+									flag = assimilation_species_of_empire@prevprev
+									days = 30
+								}
+							}
+						}
+					}
+				}
+			}
+
+			every_owned_planet = {
+				planet_event = { id = action.65 }
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+}
+
 # 81
 # Planet is turned into tomb world by special bombing stance
 planet_event = {

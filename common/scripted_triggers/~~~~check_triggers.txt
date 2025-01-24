@@ -77,15 +77,9 @@ merg_has_safety_off = { has_global_flag = has_pk_safety_off }
 # Sensor Expansion
 merg_has_sensor_expansion = { has_global_flag = ariphaos_sensors_installed }
 
-# Shroud Rising
-merg_has_shroud_rising = { has_global_flag = shroud_rising_active }
-
 # UGRP check
 # If true, open the gates of Hell. All of them.
 merg_has_ugrp = { UGRC_installed = yes }
-
-# Unique Ascension Perks
-merg_has_uap = { has_global_flag = has_uap_mod }
 
 # Wula Fallen Empire
 merg_has_wula_fe = { wula_fallen_empire_mod_actived = yes }

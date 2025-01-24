@@ -1,3 +1,0 @@
-# Dummy ascension perks - to be overwritten by their respective mods.
-# Irony this is a placeholder file please ignore it
-ap_megacorp = { potential = { always = no } possible = { always = no } }

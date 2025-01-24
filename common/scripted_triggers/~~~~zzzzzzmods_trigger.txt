@@ -2267,8 +2267,8 @@ is_shroud_rift_planet = {
 		merg_is_nuked = yes
 		merg_is_gas_giant = yes
 		is_planet_class = pc_shrouded
-		habitable_planet_not_urban = yes # is_starting_planet_type = yes
-		can_have_mineral_deposits = yes # uninhabitable_regular_planet = yes
+		habitable_planet_not_urban = yes
+		can_have_mineral_deposits = yes
 	}
 }
 

@@ -2779,13 +2779,19 @@ has_advanced_fort = {
 				toggle = @has_sots_mod
 			}
 			# Ad Astra Technology Mod
-			has_building = building_fortress_city
-			has_building = building_planetary_citadel
-			has_building = building_aegis_city
-			has_building = building_panopticon_fortress
-			has_building = building_wyrmguard_citadel
-			has_building = building_alpha_fortress
-			has_building = building_occulari_tower
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_building = building_fortress_city
+					has_building = building_planetary_citadel
+					has_building = building_aegis_city
+					has_building = building_panopticon_fortress
+					has_building = building_wyrmguard_citadel
+					has_building = building_alpha_fortress
+					has_building = building_occulari_tower
+				"
+				toggle = @has_ad_astra_tech_mod
+			}
 			# Ancient Empire
 			inline_script = {
 				script = merger_of_rules/toggled_code

@@ -5,6 +5,5 @@ sc_empty_space = { class = g_star spawn_odds = 0 }
 sc_endless_time = { class = g_star spawn_odds = 0 }
 sc_gc = { class = g_star spawn_odds = 0 }
 sc_GF_endler = { class = g_star spawn_odds = 0 }
-sc_whitte_hole = { class = g_star spawn_odds = 0 }
 sofe_outer_class = { class = g_star spawn_odds = 0 }
 sofe_inner_class = { class = g_star spawn_odds = 0 }
