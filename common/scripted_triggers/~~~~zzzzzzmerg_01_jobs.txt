@@ -360,6 +360,25 @@ has_research_job = {
 			"
 			toggle = @has_ancient_caches
 		}
+		# Additional Planetary Projects
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_job = epap_engineering_researcher
+				has_job = epap_engineering_drone
+				has_job = epap_engineering_calculator
+				has_job = epap_physics_researcher
+				has_job = epap_physics_drone
+				has_job = epap_physics_calculator
+				has_job = epap_society_researcher
+				has_job = epap_society_drone
+				has_job = epap_society_calculator
+				has_job = epap_biology_researcher
+				has_job = epap_biology_drone
+				has_job = epap_biology_calculator
+			"
+			toggle = @has_epap_mod
+		}
 		# AOT
 		inline_script = {
 			script = merger_of_rules/toggled_code

@@ -119,6 +119,21 @@ merg_is_arcology = {
 	is_artificial = no # Only planetary arcologies are listed here
 	OR = {
 		is_planet_class = pc_city
+		# Additional Planetary Projects
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_epap_aquatic
+				is_planet_class = pc_epap_assembly
+				is_planet_class = pc_epap_cloning
+				is_planet_class = pc_epap_logistics
+				is_planet_class = pc_epap_mercantile
+				is_planet_class = pc_epap_military
+				is_planet_class = pc_epap_refinery
+				is_planet_class = pc_epap_research
+			"
+			toggle = @has_epap_mod
+		}
 		# Ancient Empire
 		inline_script = {
 			script = merger_of_rules/toggled_code

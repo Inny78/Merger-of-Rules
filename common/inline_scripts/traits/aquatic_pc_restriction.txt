@@ -20,4 +20,5 @@ allowed_planet_classes = {
 	pc_asp_ocean_red
 	pc_azur_ocean
 	pc_giga_edge_of_eternity
+	pc_epap_aquatic
 }

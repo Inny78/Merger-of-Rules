@@ -30,6 +30,7 @@ colonizable_planet = {
 			"
 			toggle = @has_ancient_caches
 		}
+		# SOTS
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
@@ -489,9 +490,12 @@ is_regular_empire = {
 		merg_is_standard_empire = yes
 		is_country_type = awakened_marauders
 		# Nanite Machines and Distant Stars Overhaul
-		AND = {
-			merg_has_distar_ov = yes
-			is_country_type = gate_builders
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = gate_builders
+			"
+			toggle = @dso_pnm
 		}
 	}
 	is_gestalt = no
@@ -926,9 +930,12 @@ is_fallen_empire = {
 			toggle = @asharm_mod
 		}
 		# Nanite Machines and Distant Stars Overhaul
-		AND = {
-			merg_has_distar_ov = yes
-			is_country_type = gate_builders
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = gate_builders
+			"
+			toggle = @dso_pnm
 		}
 		# SW:KUAT ANCIENT EMPIRE
 		inline_script = {
@@ -1077,31 +1084,29 @@ default_endgame_early_start_triggers = {
 			"
 			toggle = @has_ancient_caches
 		}
-		NOR = {
-			# Nirvana Empire Project
-			inline_script = {
-				script = merger_of_rules/toggled_code
-				code = "
-					has_global_flag = difficult_exe_invasion
-				"
-				toggle = @nirvana_mod
-			}
-			# Star Wars: UnknownWorld Shipgirls Story
-			inline_script = {
-				script = merger_of_rules/toggled_code
-				code = "
-					has_global_flag = afk_crisis_real
-				"
-				toggle = @swuss_mod
-			}
-			# Warship Girls R And MIST Species
-			inline_script = {
-				script = merger_of_rules/toggled_code
-				code = "
-					has_global_flag = wg_crisis_insane
-				"
-				toggle = @wsg_mod
-			}
+		# Nirvana Empire Project
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				NOT = { has_global_flag = difficult_exe_invasion }
+			"
+			toggle = @nirvana_mod
+		}
+		# Star Wars: UnknownWorld Shipgirls Story
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				NOT = { has_global_flag = afk_crisis_real }
+			"
+			toggle = @swuss_mod
+		}
+		# Warship Girls R And MIST Species
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				NOT = { has_global_flag = wg_crisis_insane }
+			"
+			toggle = @wsg_mod
 		}
 	}
 }

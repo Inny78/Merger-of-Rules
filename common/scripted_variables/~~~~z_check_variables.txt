@@ -7,6 +7,9 @@
 # Additional Mega-Engineering Projects 3155789435
 @has_epam_mod = 0
 
+# Additional Planetary Projects 3409711742
+@has_epap_mod = 0
+
 # Additional Vanilla Buildings 2916082557
 @has_avb_mod = 0
 
@@ -61,8 +64,8 @@
 # Diagrapher's Trait Mod 2459686697
 @has_diagraphers_trait_mod = 0
 
-# Dawn Of Ascension 2816360131
-@has_doa = 0
+# Distant Stars Overhaul & Playable Nanite Machines 1971940221
+@dso_pnm = 0
 
 # District Overhaul - FunEFork 3068218539
 @has_do3f_mod = 0
@@ -212,9 +215,6 @@
 # Reworked Avanced Ascension 1199002146
 @aar_svar_mod = 0
 
-# Sartek Tradition - Ascension Perk Merger
-# @sartek_ascmgr_main_mod_active = 0
-
 # Sartek TAP Merger - Ascension Path Fusion 2979443893
 @sartek_afusion_mod_active = 0
 
@@ -266,9 +266,6 @@
 
 # Vassals Expanded and Reworked - FunEFork	2183551683
 @has_vear_f_mod = 0
-
-# Viable Feudalism and Imperialism - Empire Federation	2114559224
-# @has_empire_federation_mod = 0
 
 # Voyage to Eternity 2766998502
 @vte_mod = 0

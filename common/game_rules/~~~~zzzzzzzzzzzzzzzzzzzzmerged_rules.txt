@@ -2332,6 +2332,8 @@ can_species_be_assembled = {
 					check_variable = { which = v_behavioral_sink_count value >= 0 }
 				}
 			}
+			TIME_RULE_trgr_CAN_spcs_be_assembled = yes
+			better_ascension_traits_RULE_trgr_CAN_spcs_be_assembled = yes
 		"
 		toggle = @has_v_traits_mod
 	}

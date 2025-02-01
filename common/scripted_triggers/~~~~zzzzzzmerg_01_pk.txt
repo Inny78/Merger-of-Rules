@@ -71,11 +71,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 					space_owner = { is_same_empire = from.owner }
 				}
 			}
-			OR = {
-				colonizable_planet = yes
-				is_artificial = yes
-				uninhabitable_regular_planet = yes
-			}
+			merg_is_valid_for_test_fire = yes
 		}
 	}
 }
@@ -1682,11 +1678,7 @@ can_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = {
 					space_owner = { is_same_value = from.owner }
 				}
 			}
-			OR = {
-				colonizable_planet = yes
-				is_artificial = yes
-				uninhabitable_regular_planet = yes
-			}
+			merg_is_valid_for_test_fire = yes
 		}
 	}
 }
@@ -1868,11 +1860,7 @@ can_destroy_planet_with_PLANET_KILLER_GRAYGOO = {
 					space_owner = { is_same_value = from.owner }
 				}
 			}
-			OR = {
-				colonizable_planet = yes
-				is_artificial = yes
-				uninhabitable_regular_planet = yes
-			}
+			merg_is_valid_for_test_fire = yes
 		}
 	}
 }
@@ -1947,17 +1935,7 @@ can_destroy_planet_with_PLANET_KILLER_NANO = {
 						space_owner = { is_same_value = from.owner }
 					}
 				}
-				OR = {
-					colonizable_planet = yes
-					uninhabitable_regular_planet = yes
-					inline_script = {
-						script = merger_of_rules/toggled_code
-						code = "
-							pd_is_planet_class_all = yes
-						"
-						toggle = @has_planetary_diversity
-					}
-				}
+				merg_is_valid_for_test_fire = yes
 			}
 		}
 	}
@@ -2503,11 +2481,7 @@ can_destroy_planet_with_daelaam_giant_twilight_archon_power_overwhelming = {
 					space_owner = { is_same_value = from.owner }
 				}
 			}
-			OR = {
-				colonizable_planet = yes
-				is_artificial = yes
-				uninhabitable_regular_planet = yes
-			}
+			merg_is_valid_for_test_fire = yes
 		}
 	}
 }
@@ -3919,12 +3893,7 @@ can_destroy_planet_with_PLANET_KILLER_WATERB = {
 							space_owner = { is_same_value = from.owner }
 						}
 					}
-					OR = {
-						colonizable_planet = yes
-						is_artificial = yes
-						is_colonizable = yes
-						uninhabitable_regular_planet = yes
-					}
+					merg_is_valid_for_test_fire = yes
 				}
 			}
 		}
@@ -4079,9 +4048,7 @@ is_a_planet_megastructure = {
 		merg_is_gas_giant = yes
 		is_asteroid = yes
 		is_planet_class = pc_shrouded
-		is_planet_class = pc_broken
-		is_planet_class = pc_shattered
-		is_planet_class = pc_shattered_2
+		merg_is_broken = yes
 		has_planet_flag = has_arc_furnace
 		# Additional Mega-Engineering Projects
 		inline_script = {
@@ -4108,6 +4075,11 @@ planet_is_hostile_or_crisis = {
 					has_country_flag = acemod_can_target_hostile_with_colossus # Fallback flag in case needed.
 					is_crisis_faction = yes # Narrow down to just crises as to not alter more than needed.
 				}
+			}
+			# Safety Off
+			AND = {
+				merg_has_safety_off = yes
+				is_same_value = from.owner
 			}
 		}
 	}
@@ -4172,6 +4144,7 @@ merg_is_at_war = {
 merg_is_untargetable = {
 	optimize_memory
 	OR = {
+		is_astral_scar = yes
 		# MEM
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -4235,5 +4208,13 @@ merg_is_forbidden_target = {
 		merg_is_dense_star = yes
 		merg_is_empty_space = yes
 		merg_is_untargetable = yes
+	}
+}
+merg_is_valid_for_test_fire = {
+	OR = {
+		colonizable_planet = yes
+		is_artificial = yes
+		uninhabitable_regular_planet = yes
+		merg_has_safety_off = yes
 	}
 }
