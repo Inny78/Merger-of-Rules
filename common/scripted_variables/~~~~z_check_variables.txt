@@ -255,6 +255,9 @@
 # TimeMod 2735054420
 @timemod = 0
 
+# 小狐狸的底层框架 (Time Framework) 3243731913
+@time_framework = 0
+
 # Unavoidable Changes
 @HAS_UCmod = 0
 

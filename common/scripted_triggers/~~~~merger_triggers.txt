@@ -520,7 +520,7 @@ merg_is_black_or_white_hole = {
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
-				is_time_black_hole_planet_class = yes
+				is_time_black_hole_or_white_hole_planet_class = yes
 			"
 			toggle = @timemod
 		}
@@ -1014,110 +1014,121 @@ merg_is_sapient = {
 }
 
 merg_has_happiness = {
-	NOR = {
-		AND = {
-			has_trait = trait_machine_unit
-			exists = FROM
-			FROM = { is_machine_empire = yes }
-			# Ethics & Civics Bug Branch
-			inline_script = {
-				script = merger_of_rules/toggled_code
-				code = "
-					FROM = {  is_bugged_happy_gestalt = no }
-				"
-				toggle = @has_bug_branch
-			}
-		}
-		AND = {
-			has_trait = trait_hive_mind
-			# Ethics & Civics Bug Branch
-			inline_script = {
-				script = merger_of_rules/toggled_code
-				code = "
-					FROM = {  is_bugged_happy_gestalt = no }
-				"
-				toggle = @has_bug_branch
-			}
-		}
-		can_think = no
-		# Diagrapher's Trait Mod
+	AND = {
+		# Timemod
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
-				dtraits_happiness_restrictions = yes
+				TIME_RULE_trgr_Force_has_happiness = no
 			"
-			toggle = @has_diagraphers_trait_mod
+			toggle = @timemod
 		}
-		# ThaumStellaris
-		inline_script = {
-			script = merger_of_rules/toggled_code
-			code = "
-				species = {
-					OR = {
-						is_archetype = TC_GOLEM
-						is_archetype = TC_GOLEM_HIVE
-						is_archetype = TC_GOLEM_MACHINE
-					}
-				}
-			"
-			toggle = @has_tc_mod
-		}
-		# Trait Diversity
-		td_has_no_happiness = yes
-		# Warship Girls R And MIST Species
-		inline_script = {
-			script = merger_of_rules/toggled_code
-			code = "
-				wg_compat_has_sh_trait = yes
-			"
-			toggle = @wsg_mod
-		}
-		# Zob
-		is_zob_uplifted = yes
 		# Vanilla
-		AND = {
-			has_trait = trait_mechanical
-			# Animated Synthetics Portraits Expanded: Reborn
-			OR = {
-				merg_has_animated_synth = no
-				AND = {
-					merg_has_animated_synth = yes
-					FROM = { is_machine_empire = yes }
-					is_extsynth_synthetic = yes
-					NOT = { has_trait = trait_psionic }
+		NOR = {
+			AND = {
+				has_trait = trait_machine_unit
+				exists = FROM
+				FROM = { is_machine_empire = yes }
+				# Ethics & Civics Bug Branch
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						FROM = {  is_bugged_happy_gestalt = no }
+					"
+					toggle = @has_bug_branch
 				}
-				AND = {
-					merg_has_animated_synth = yes
-					NAND = {
+			}
+			AND = {
+				has_trait = trait_hive_mind
+				# Ethics & Civics Bug Branch
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						FROM = {  is_bugged_happy_gestalt = no }
+					"
+					toggle = @has_bug_branch
+				}
+			}
+			can_think = no
+			# Diagrapher's Trait Mod
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					dtraits_happiness_restrictions = yes
+				"
+				toggle = @has_diagraphers_trait_mod
+			}
+			# ThaumStellaris
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					species = {
+						OR = {
+							is_archetype = TC_GOLEM
+							is_archetype = TC_GOLEM_HIVE
+							is_archetype = TC_GOLEM_MACHINE
+						}
+					}
+				"
+				toggle = @has_tc_mod
+			}
+			# Trait Diversity
+			td_has_no_happiness = yes
+			# Warship Girls R And MIST Species
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					wg_compat_has_sh_trait = yes
+				"
+				toggle = @wsg_mod
+			}
+			# Zob
+			is_zob_uplifted = yes
+			# Vanilla
+			AND = {
+				has_trait = trait_mechanical
+				# Animated Synthetics Portraits Expanded: Reborn
+				OR = {
+					merg_has_animated_synth = no
+					AND = {
+						merg_has_animated_synth = yes
 						FROM = { is_machine_empire = yes }
 						is_extsynth_synthetic = yes
+						NOT = { has_trait = trait_psionic }
+					}
+					AND = {
+						merg_has_animated_synth = yes
+						NAND = {
+							FROM = { is_machine_empire = yes }
+							is_extsynth_synthetic = yes
+						}
+					}
+				}
+				# Vanilla
+				OR = {
+					NOT = { exists = FROM }
+					FROM = {
+						OR = {
+							is_machine_empire = yes
+							NOT = { has_technology = tech_synthetic_workers }
+							has_policy_flag = ai_outlawed
+						}
 					}
 				}
 			}
-			# Vanilla
-			OR = {
-				NOT = { exists = FROM }
+			AND = {
+				has_trait = trait_cybernetic
+				exists = FROM
 				FROM = {
 					OR = {
-						is_machine_empire = yes
-						NOT = { has_technology = tech_synthetic_workers }
-						has_policy_flag = ai_outlawed
-					}
-				}
-			}
-		}
-		AND = {
-			has_trait = trait_cybernetic
-			exists = FROM
-			FROM = {
-				OR = {
-					AND = {
-						is_machine_empire = yes
-						has_civic = civic_machine_assimilator # Assimilator empire
-					}
-					AND = {
-						is_democratic_authority = yes
-						has_country_flag = cyber_collectivist
+						AND = {
+							is_machine_empire = yes
+							has_civic = civic_machine_assimilator # Assimilator empire
+						}
+						AND = {
+							is_democratic_authority = yes
+							has_country_flag = cyber_collectivist
+						}
 					}
 				}
 			}

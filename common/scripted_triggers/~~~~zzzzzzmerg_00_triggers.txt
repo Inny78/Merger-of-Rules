@@ -54,9 +54,9 @@ colonizable_planet = {
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
-				is_tm_gas_colony = yes
-				is_tm_psionic_world = yes
-				is_tm_nanites_world = yes
+				is_planet_class = pc_gas_colony
+				is_planet_class = pc_psionic
+				is_planet_class = pc_nanites
 			"
 			toggle = @timemod
 		}
@@ -381,7 +381,7 @@ is_crisis_faction = {
 		is_country_type = awakened_synth_queen
 		is_country_type = synth_queen_storm
 		is_country_type = voidworms_crisis
-		# ACOT
+		# ACOT SBTG
 		is_country_type = sbtg_stellarborne_empire
 		# Gigastructural Engineering & More
 		inline_script = {
@@ -405,6 +405,15 @@ is_crisis_faction = {
 		}
 		# The Sleeper
 		is_country_type = berserker_awoken_hive
+		# Timemod
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = dimensional_horror_crisis
+			"
+			toggle = @timemod
+		}
+
 	}
 }
 

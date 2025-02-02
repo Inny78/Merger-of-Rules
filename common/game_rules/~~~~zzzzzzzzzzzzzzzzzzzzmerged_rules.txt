@@ -491,13 +491,13 @@ species_can_live_on_planet = {
 		"
 		toggle = @planet_pop_restrict_mod
 	}
-	# TimeMod
+	# Time Framework
 	inline_script = {
 		script = merger_of_rules/toggled_code
 		code = "
 			TIME_RULE_trgr_spcs_CAN_live_on_planet = yes
 		"
-		toggle = @timemod
+		toggle = @time_framework
 	}
 	# Expanded Gestalts: Forgotten Queens
 	inline_script = {
@@ -1564,110 +1564,121 @@ can_colonize_with_species = {
 # From = Country
 # This = Species
 species_has_happiness = {
-	NOR = {
-		AND = {
-			has_trait = trait_machine_unit
-			exists = FROM
-			FROM = { is_machine_empire = yes }
-			# Ethics & Civics Bug Branch
-			inline_script = {
-				script = merger_of_rules/toggled_code
-				code = "
-					FROM = {  is_bugged_happy_gestalt = no }
-				"
-				toggle = @has_bug_branch
-			}
-		}
-		AND = {
-			has_trait = trait_hive_mind
-			# Ethics & Civics Bug Branch
-			inline_script = {
-				script = merger_of_rules/toggled_code
-				code = "
-					FROM = {  is_bugged_happy_gestalt = no }
-				"
-				toggle = @has_bug_branch
-			}
-		}
-		can_think = no
-		# Diagrapher's Trait Mod
+	AND = {
+		# Timemod
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
-				dtraits_happiness_restrictions = yes
+				TIME_RULE_trgr_Force_has_happiness = no
 			"
-			toggle = @has_diagraphers_trait_mod
+			toggle = @timemod
 		}
-		# ThaumStellaris
-		inline_script = {
-			script = merger_of_rules/toggled_code
-			code = "
-				species = {
-					OR = {
-						is_archetype = TC_GOLEM
-						is_archetype = TC_GOLEM_HIVE
-						is_archetype = TC_GOLEM_MACHINE
-					}
-				}
-			"
-			toggle = @has_tc_mod
-		}
-		# Trait Diversity
-		td_has_no_happiness = yes
-		# Warship Girls R And MIST Species
-		inline_script = {
-			script = merger_of_rules/toggled_code
-			code = "
-				wg_compat_has_sh_trait = yes
-			"
-			toggle = @wsg_mod
-		}
-		# Zob
-		is_zob_uplifted = yes
 		# Vanilla
-		AND = {
-			has_trait = trait_mechanical
-			# Animated Synthetics Portraits Expanded: Reborn
-			OR = {
-				merg_has_animated_synth = no
-				AND = {
-					merg_has_animated_synth = yes
-					FROM = { is_machine_empire = yes }
-					is_extsynth_synthetic = yes
-					NOT = { has_trait = trait_psionic }
+		NOR = {
+			AND = {
+				has_trait = trait_machine_unit
+				exists = FROM
+				FROM = { is_machine_empire = yes }
+				# Ethics & Civics Bug Branch
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						FROM = { is_bugged_happy_gestalt = no }
+					"
+					toggle = @has_bug_branch
 				}
-				AND = {
-					merg_has_animated_synth = yes
-					NAND = {
+			}
+			AND = {
+				has_trait = trait_hive_mind
+				# Ethics & Civics Bug Branch
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						FROM = { is_bugged_happy_gestalt = no }
+					"
+					toggle = @has_bug_branch
+				}
+			}
+			can_think = no
+			# Diagrapher's Trait Mod
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					dtraits_happiness_restrictions = yes
+				"
+				toggle = @has_diagraphers_trait_mod
+			}
+			# ThaumStellaris
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					species = {
+						OR = {
+							is_archetype = TC_GOLEM
+							is_archetype = TC_GOLEM_HIVE
+							is_archetype = TC_GOLEM_MACHINE
+						}
+					}
+				"
+				toggle = @has_tc_mod
+			}
+			# Trait Diversity
+			td_has_no_happiness = yes
+			# Warship Girls R And MIST Species
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					wg_compat_has_sh_trait = yes
+				"
+				toggle = @wsg_mod
+			}
+			# Zob
+			is_zob_uplifted = yes
+			# Vanilla
+			AND = {
+				has_trait = trait_mechanical
+				# Animated Synthetics Portraits Expanded: Reborn
+				OR = {
+					merg_has_animated_synth = no
+					AND = {
+						merg_has_animated_synth = yes
 						FROM = { is_machine_empire = yes }
 						is_extsynth_synthetic = yes
+						NOT = { has_trait = trait_psionic }
+					}
+					AND = {
+						merg_has_animated_synth = yes
+						NAND = {
+							FROM = { is_machine_empire = yes }
+							is_extsynth_synthetic = yes
+						}
+					}
+				}
+				# Vanilla
+				OR = {
+					NOT = { exists = FROM }
+					FROM = {
+						OR = {
+							is_machine_empire = yes
+							NOT = { has_technology = tech_synthetic_workers }
+							has_policy_flag = ai_outlawed
+						}
 					}
 				}
 			}
-			# Vanilla
-			OR = {
-				NOT = { exists = FROM }
+			AND = {
+				has_trait = trait_cybernetic
+				exists = FROM
 				FROM = {
 					OR = {
-						is_machine_empire = yes
-						NOT = { has_technology = tech_synthetic_workers }
-						has_policy_flag = ai_outlawed
-					}
-				}
-			}
-		}
-		AND = {
-			has_trait = trait_cybernetic
-			exists = FROM
-			FROM = {
-				OR = {
-					AND = {
-						is_machine_empire = yes
-						has_civic = civic_machine_assimilator # Assimilator empire
-					}
-					AND = {
-						is_democratic_authority = yes
-						has_country_flag = cyber_collectivist
+						AND = {
+							is_machine_empire = yes
+							has_civic = civic_machine_assimilator # Assimilator empire
+						}
+						AND = {
+							is_democratic_authority = yes
+							has_country_flag = cyber_collectivist
+						}
 					}
 				}
 			}
@@ -2332,10 +2343,17 @@ can_species_be_assembled = {
 					check_variable = { which = v_behavioral_sink_count value >= 0 }
 				}
 			}
+		"
+		toggle = @has_v_traits_mod
+	}
+	# Time Framework
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
 			TIME_RULE_trgr_CAN_spcs_be_assembled = yes
 			better_ascension_traits_RULE_trgr_CAN_spcs_be_assembled = yes
 		"
-		toggle = @has_v_traits_mod
+		toggle = @time_framework
 	}
 	# Vanilla
 	has_population_control = { country = root.owner type = no }
@@ -2684,7 +2702,7 @@ can_orbital_bombard = {
 		code = "
 			TIME_RULE_trgr_CAN_orbital_bombard = yes
 		"
-		toggle = @timemod
+		toggle = @time_framework
 	}
 }
 
@@ -5619,13 +5637,13 @@ can_fill_drone_job = {
 			toggle = @has_v_traits_mod
 		}
 	}
-	# TimeMod
+	# Time Framework
 	inline_script = {
 		script = merger_of_rules/toggled_code
 		code = "
 			TIME_RULE_trgr_CAN_fill_drone_job = yes
 		"
-		toggle = @timemod
+		toggle = @time_framework
 	}
 }
 
@@ -5722,13 +5740,13 @@ can_fill_worker_job = {
 				has_modifier = pop_highly_educated
 			}
 		}
-		# TimeMod
+		# Time Framework
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
 				TIME_RULE_trgr_CAN_fill_worker_job = yes
 			"
-			toggle = @timemod
+			toggle = @time_framework
 		}
 	}
 }
@@ -5772,13 +5790,13 @@ can_fill_specialist_job = {
 		"
 		toggle = @gf_compatch_var
 	}
-	# TimeMod
+	# Time Framework
 	inline_script = {
 		script = merger_of_rules/toggled_code
 		code = "
 			TIME_RULE_trgr_CAN_fill_specialist_job = yes
 		"
-		toggle = @timemod
+		toggle = @time_framework
 	}
 }
 
@@ -5968,13 +5986,13 @@ can_fill_ruler_job = {
 			toggle = @gf_compatch_var
 		}
 	}
-	# TimeMod
+	# Time Framework
 	inline_script = {
 		script = merger_of_rules/toggled_code
 		code = "
 			TIME_RULE_trgr_CAN_fill_ruler_job = yes
 		"
-		toggle = @timemod
+		toggle = @time_framework
 	}
 	# Diagrapher's Trait Mod
 	inline_script = {
