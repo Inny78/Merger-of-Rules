@@ -1130,7 +1130,7 @@ can_take_hostile_actions = {
 							inline_script = {
 								script = merger_of_rules/toggled_code
 								code = \"
-									is_country_type = awakemend_marauders_ev
+									is_country_type = awakened_marauders_ev
 								\"
 								toggle = @homeless_class_trait_weight
 							}
