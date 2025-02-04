@@ -121,4 +121,3 @@ pd_should_not_crave_tiyanki_parts = { always = yes }
 is_freebooter_empire = { always = no }
 has_emt_compatch = { always = no }
 has_expevents_compatch = { always = no }
-galactic_diversity_habitable_planet = { always = yes }

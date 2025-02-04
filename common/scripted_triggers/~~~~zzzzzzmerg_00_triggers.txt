@@ -69,14 +69,6 @@ habitable_planet = {
 		habitable_planet_not_urban = yes
 		merg_is_relic_world = yes
 		merg_is_arcology = yes
-		# All These Worlds
-		inline_script = {
-			script = merger_of_rules/toggled_code
-			code = "
-				galactic_diversity_habitable_planet = yes
-			"
-			toggle = @has_atw_lite
-		}
 		# Merger of Rules
 		has_planet_flag = merg_is_habitable_planet
 	}
@@ -176,14 +168,6 @@ can_have_habitable_deposits = {
 		merg_is_savannah = yes
 		merg_is_gaia_basic = yes
 		merg_is_relic_world = yes
-		# All These Worlds
-		inline_script = {
-			script = merger_of_rules/toggled_code
-			code = "
-				galactic_diversity_habitable_planet = yes
-			"
-			toggle = @has_atw_lite
-		}
 		# Planetary Diversity
 		inline_script = {
 			script = merger_of_rules/toggled_code
