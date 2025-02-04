@@ -22,7 +22,6 @@ is_aso_gg_white_hole = { always = no }
 is_civic_materialist = { always = no }
 is_civic_militarist = { always = no }
 is_competitive = { always = no }
-is_content_world = { always = no }
 is_crimson_infected = { always = no }
 is_dessanu_relic = { always = no }
 is_ds_ancient_ringworld = { always = no }
@@ -51,7 +50,6 @@ is_ds_zeitriss_gc = { always = no }
 is_elaina = { always = no }
 is_exile_country = { always = no }
 is_extsynth_synthetic = { always = no }
-is_harvester_country = { always = no }
 is_hypo_stars_antimatter_star = { always = no }
 is_hypo_stars_black_dwarf_star = { always = no }
 is_hypo_stars_blue_dwarf_star = { always = no }
@@ -73,7 +71,6 @@ is_nanite_habitat_shielded = { always = no }
 is_nyto_country = { always = no }
 is_sbtg_origin_starbase = { always = no }
 is_sbtg_playable_country = { always = no }
-is_sleeper = { always = no }
 is_sofe_megastructure_shipyard = { always = no }
 is_special_affection_leader = { always = no }
 is_spy_empire = { always = no }
@@ -118,6 +115,5 @@ pd_should_not_crave_acean = { always = yes }
 pd_should_not_crave_eludium = { always = yes }
 pd_should_not_crave_rad_bloom = { always = yes }
 pd_should_not_crave_tiyanki_parts = { always = yes }
-is_freebooter_empire = { always = no }
 has_emt_compatch = { always = no }
 has_expevents_compatch = { always = no }

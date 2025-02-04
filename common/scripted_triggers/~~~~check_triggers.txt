@@ -9,9 +9,6 @@ merg_has_deadly_tempest = { has_global_flag = a_deadly_tempest_mod_active }
 # Ancient Cache of Technologies : Secrets Beyond The Gates 1481972266
 merg_has_sofe = { has_global_flag = sofe_activated }
 
-# Animated Synthetics Portraits Expanded: Reborn 1492025820
-merg_has_animated_synth = { has_global_flag = extended_synths_on }
-
 # Any fork of Ethics mod
 merg_has_any_ethics_mod = { has_global_flag = cultural_overhaul_active }
 

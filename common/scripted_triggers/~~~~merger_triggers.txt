@@ -453,6 +453,14 @@ merg_is_dense_star = {
 			"
 			toggle = @rs_compatch_var
 		}
+		# Solar Storm
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_ss_abyssal_black_hole
+			"
+			toggle = @ss_abyssal_laser_hull_damage
+		}
 		# TimeMod
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -515,6 +523,14 @@ merg_is_black_or_white_hole = {
 				is_rs_compat_microquasar = yes
 			"
 			toggle = @rs_compatch_var
+		}
+		# Solar Storm
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_ss_abyssal_black_hole
+			"
+			toggle = @ss_abyssal_laser_hull_damage
 		}
 		# TimeMod
 		inline_script = {
@@ -1087,23 +1103,6 @@ merg_has_happiness = {
 			# Vanilla
 			AND = {
 				has_trait = trait_mechanical
-				# Animated Synthetics Portraits Expanded: Reborn
-				OR = {
-					merg_has_animated_synth = no
-					AND = {
-						merg_has_animated_synth = yes
-						FROM = { is_machine_empire = yes }
-						is_extsynth_synthetic = yes
-						NOT = { has_trait = trait_psionic }
-					}
-					AND = {
-						merg_has_animated_synth = yes
-						NAND = {
-							FROM = { is_machine_empire = yes }
-							is_extsynth_synthetic = yes
-						}
-					}
-				}
 				# Vanilla
 				OR = {
 					NOT = { exists = FROM }
@@ -1173,8 +1172,14 @@ merg_is_void_dweller = {
 		has_origin = origin_void_dwellers
 		has_origin = origin_void_machines
 		# Freebooters
-		has_origin = origin_nsc_freebooter
-		has_origin = origin_nsc_freebooter_federations
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_origin = origin_nsc_freebooter
+				has_origin = origin_nsc_freebooter_federations
+			"
+			toggle = @has_nsc_freebooter_mod
+		}
 		# More Events Mod
 		inline_script = {
 			script = merger_of_rules/toggled_code

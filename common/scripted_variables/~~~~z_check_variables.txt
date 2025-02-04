@@ -43,7 +43,7 @@
 # AssaultLily In Stellaris 2785989313
 @change_planet_size_bullet_num = 0
 
-# Azur Lane Stellaris DLC 1617872589 (compatch)
+# Azur Lane Stellaris DLC 1617872589
 @azl_mod = 0
 
 # ACOT SBTG 1481972266
@@ -125,6 +125,9 @@
 # Frameworld Extra Goodies 3071450599
 @xhk_frame_mod = 0
 
+# Freebooters Origin 3253479588
+@has_nsc_freebooter_mod = 0
+
 # Gigastructural Engineering and More 1121692237
 @has_gigastructures = 0
 
@@ -134,6 +137,9 @@
 
 # Guilli's Planet Modifiers and Features (patch version) 3365265900
 @has_guillis_planet_modifiers = 0
+
+# Harvest Engine Crisis 3381939844
+@harvester_beamcage_ship_count = 0
 
 # Hydra's More Civics 3248725702
 @has_mc_hydra = 0
@@ -224,6 +230,9 @@
 # Shroud Rising 3170252871
 @has_shroud_rising_mod = 0
 
+# Solar Storm 2536609215
+@ss_abyssal_laser_hull_damage = 0
+
 # Some Events of Outside Cluster 1562501671
 @has_seooc_mod = 0
 
@@ -248,9 +257,12 @@
 # The Crimson Throng 2911573696
 @crimson_throng_mod = 0
 
-# The Empty Vagrant
+# The Empty Vagrant 2990576983
 @homeless_class_trait_weight = 0
 # Pending
+
+# The Sleeper 3043795628
+@has_the_sleeper_mod = 0
 
 # TimeMod 2735054420
 @timemod = 0

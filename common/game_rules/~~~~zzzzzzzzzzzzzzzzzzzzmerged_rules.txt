@@ -101,7 +101,13 @@ can_add_claim = {
 					is_country_type = sbtg_stellarborne_empire_active
 					is_country_type = sbtg_light_seeker
 					# The Sleeper
-					is_country_type = awakened_sleeper
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							is_country_type = awakened_sleeper
+						"
+						toggle = @has_the_sleeper_mod
+					}
 					# Twinks Eternal Empire
 					inline_script = {
 						script = merger_of_rules/toggled_code
@@ -1637,23 +1643,6 @@ species_has_happiness = {
 			# Vanilla
 			AND = {
 				has_trait = trait_mechanical
-				# Animated Synthetics Portraits Expanded: Reborn
-				OR = {
-					merg_has_animated_synth = no
-					AND = {
-						merg_has_animated_synth = yes
-						FROM = { is_machine_empire = yes }
-						is_extsynth_synthetic = yes
-						NOT = { has_trait = trait_psionic }
-					}
-					AND = {
-						merg_has_animated_synth = yes
-						NAND = {
-							FROM = { is_machine_empire = yes }
-							is_extsynth_synthetic = yes
-						}
-					}
-				}
 				# Vanilla
 				OR = {
 					NOT = { exists = FROM }
@@ -2512,10 +2501,24 @@ can_orbital_bombard = {
 					"
 					toggle = @has_shroud_rising_mod
 				}
+				# Solar Storm
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = abyssal_host_invaders_type
+					"
+					toggle = @ss_abyssal_laser_hull_damage
+				}
 				# StellarRegulator Array
 				SRA_can_do_orbital_bombardment_country = yes
 				# The Sleeper
-				is_sleeper = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_sleeper = yes
+					"
+					toggle = @has_the_sleeper_mod
+				}
 			}
 		}
 		ROOT.CONTROLLER = {
@@ -2610,6 +2613,8 @@ can_orbital_bombard = {
 					"
 					toggle = @has_more_events_mod
 				}
+				# Replicators
+				is_country_type = replicators
 				# Scripted Triggers Undercoat
 				has_country_flag = stu_can_bombard_everyone
 				# Shroud Rising
@@ -2621,8 +2626,14 @@ can_orbital_bombard = {
 					"
 					toggle = @has_shroud_rising_mod
 				}
-				# Replicators
-				is_country_type = replicators
+				# Solar Storm
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_country_type = abyssal_host_invaders_type
+					"
+					toggle = @ss_abyssal_laser_hull_damage
+				}
 				# Star Wars: Kuat Ancient Empire
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -2649,7 +2660,13 @@ can_orbital_bombard = {
 					toggle = @homeless_class_trait_weight
 				}
 				# The Sleeper
-				is_sleeper = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_sleeper = yes
+					"
+					toggle = @has_the_sleeper_mod
+				}
 				# Warship Girls R And MIST Species
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -3235,77 +3252,84 @@ ai_should_restrict_system = {
 			toggle = @ag_null_edict_length
 		}
 		# Harvest Engine Crisis
-		AND = {
-			root = { is_harvester_country = yes }
-			OR = {
-				any_country_neighbor_to_system  = { merg_is_fallen_empire = yes }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
 				AND = {
-					has_star_flag = guardian
-					any_fleet_in_system = {
-						exists = owner
-						owner = {
-							OR = {
-								is_country_type = guardian_fortress
-								is_guardian_country = yes
+					root = { is_harvester_country = yes }
+					OR = {
+						any_country_neighbor_to_system  = { merg_is_fallen_empire = yes }
+						AND = {
+							has_star_flag = guardian
+							any_fleet_in_system = {
+								exists = owner
+								owner = { is_guardian_country = yes }
 							}
+						}
+						AND = {
+							exists = owner
+							owner = { merg_is_fallen_empire = yes }
 						}
 					}
 				}
-				AND = {
-					exists = owner
-					owner = { merg_is_fallen_empire = yes }
-				}
-			}
+			"
+			toggle = @harvester_beamcage_ship_count
 		}
 		# Scripted Triggers Undercoat
 		has_star_flag = stu_ai_restrict_system@root
 		# The Sleeper
-		AND = {
-			exists = owner
-			has_star_flag = sleeper_system
-			root = {
-				merg_is_default_empire = yes
-				is_homicidal = no
-				OR = {
-					AND = {
-						OR = {
-							has_valid_civic = civic_inwards_perfection
-							has_global_flag = sleeper_warning_happened
-						}
-						NOT = { has_ethic = ethic_fanatic_xenophobe }
-					}
-					AND = {
-						is_xenophile = yes
-						is_militarist = no
-					}
-					is_pacifist = yes
-					has_valid_civic = civic_machine_servitor
-					AND = {
-						is_active_resolution = resolution_sleeper_sanctions
-						is_militarist = no
-						OR = {
-							is_xenophobe = no
-							has_valid_civic = civic_inwards_perfection
-						}
-					}
-					any_neighbor_country = { is_country_type = the_sleeper_fallen check_variable = { which = sleeper_aggro value > 500 } }
-				}
-			}
-		}
-		AND = {
-			exists = owner
-			root = { merg_is_fallen_empire = yes }
-			OR = {
-				owner = { is_marauder = yes }
-				any_fleet_in_system = { # Stop FEs FROM just killing the Sleeper
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				AND = {
 					exists = owner
-					owner = { is_country_type = berserker_awoken_hive }
-				}
-				AND = { # Stop FEs FROM just killing the Sleeper
-					owner = { is_country_type = the_sleeper_fallen }
 					has_star_flag = sleeper_system
+					root = {
+						merg_is_default_empire = yes
+						is_homicidal = no
+						OR = {
+							AND = {
+								OR = {
+									has_valid_civic = civic_inwards_perfection
+									has_global_flag = sleeper_warning_happened
+								}
+								NOT = { has_ethic = ethic_fanatic_xenophobe }
+							}
+							AND = {
+								is_xenophile = yes
+								is_militarist = no
+							}
+							is_pacifist = yes
+							has_valid_civic = civic_machine_servitor
+							AND = {
+								is_active_resolution = resolution_sleeper_sanctions
+								is_militarist = no
+								OR = {
+									is_xenophobe = no
+									has_valid_civic = civic_inwards_perfection
+								}
+							}
+							any_neighbor_country = { is_country_type = the_sleeper_fallen check_variable = { which = sleeper_aggro value > 500 } }
+						}
+					}
 				}
-			}
+				AND = {
+					exists = owner
+					root = { merg_is_fallen_empire = yes }
+					OR = {
+						owner = { is_marauder = yes }
+						any_fleet_in_system = {
+							exists = owner
+							owner = { is_country_type = berserker_awoken_hive }
+						}
+						AND = {
+							owner = { is_country_type = the_sleeper_fallen }
+							has_star_flag = sleeper_system
+						}
+					}
+				}
+			"
+			toggle = @has_the_sleeper_mod
 		}
 		# Forgotten Empires
 		inline_script = {
@@ -3501,7 +3525,13 @@ system_blocks_sensors = {
 					toggle = @ag_null_edict_length
 				}
 				# Solar Storm
-				has_star_flag = ss_abyssal_shockwave
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_star_flag = ss_abyssal_shockwave
+					"
+					toggle = @ss_abyssal_laser_hull_damage
+				}
 				# Warship Girls R And MIST Species
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -3548,7 +3578,13 @@ system_blocks_sensors = {
 			toggle = @forgotten_empires
 		}
 		# Solar Storm
-		has_star_flag = ss_abyssal_shockwave
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = ss_abyssal_shockwave
+			"
+			toggle = @ss_abyssal_laser_hull_damage
+		}
 		# Sensor Expansion
 		AND = { # Neutron stars
 			OR = {
@@ -6243,7 +6279,13 @@ can_trade_leader = {
 			has_leader_flag = tradable_leader
 			has_specialist_subject_leader_trait = yes
 			# Freebooters Origin
-			root = { is_freebooter_empire = yes }
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					root = { is_freebooter_empire = yes }
+				"
+				toggle = @has_nsc_freebooter_mod
+			}
 			# Girls Frontline
 			inline_script = {
 				script = merger_of_rules/toggled_code

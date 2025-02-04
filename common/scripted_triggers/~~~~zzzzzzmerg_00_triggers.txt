@@ -388,7 +388,13 @@ is_crisis_faction = {
 			toggle = @has_shroud_rising_mod
 		}
 		# The Sleeper
-		is_country_type = berserker_awoken_hive
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = berserker_awoken_hive
+			"
+			toggle = @has_the_sleeper_mod
+		}
 		# Timemod
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -1141,6 +1147,20 @@ has_research_building = {
 			script = merger_of_rules/toggled_code
 			code = "
 				has_building = building_grand_academy
+				has_building = building_cynosural_beacon
+				has_building = building_cynosural_lighthouse
+				has_building = building_academy_district
+				has_building = building_expedition_headquarters
+				has_building = building_deep_research_hives
+				has_building = building_cynosural_nexus
+				has_building = building_cynosural_link
+				has_building = building_orbital_research_hive
+				has_building = building_expedition_vault
+				has_building = building_omni_network_nodes
+				has_building = building_cynosural_uplink_node
+				has_building = building_cynosural_uplink_nexus
+				has_building = building_orbital_research_uplink
+				has_building = building_cynosural_singularity
 			"
 			toggle = @has_ad_astra_tech_mod
 		}
@@ -1314,11 +1334,6 @@ is_organic_controllable_ship = {
 				is_fauna_country = no
 			}
 		}
-		# Scripted Triggers Undercoat
-		# AND = {
-		# 	is_scope_type = fleet
-		# 	has_fleet_flag = stu_is_organic_controllable_ship
-		# }
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -1501,14 +1516,6 @@ has_any_generator_district_or_building = {
 		has_district = district_generator_uncapped
 		has_district = district_rw_generator
 		merg_has_energy_building = yes
-		# Additional Vanilla Buildings
-		inline_script = {
-			script = merger_of_rules/toggled_code
-			code = "
-				has_avb_generator_building = yes
-			"
-			toggle = @has_avb_mod
-		}
 		# District Overhaul - FunEFork
 		inline_script = {
 			script = merger_of_rules/toggled_code

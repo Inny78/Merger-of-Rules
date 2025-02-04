@@ -1,5 +1,3 @@
 # Irony this is a placeholder file please ignore it
-origin_nsc_freebooter = { is_origin = yes potential = { always = no } }
 origin_the_darkness = { is_origin = yes potential = { always = no } }
 origin_bioreformers = { is_origin = yes potential = { always = no } }
-origin_nsc_freebooter_federations = { is_origin = yes potential = { always = no } }

@@ -290,6 +290,23 @@ merg_has_energy_building = {
 		has_building = building_energy_nexus
         has_building = building_betharian_power_plant
 		has_building = building_waste_reprocessing_center
+		# Ad Astra Technology Mod
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_reactor_complex
+				has_building = building_reactor_megacomplex
+			"
+			toggle = @has_ad_astra_tech_mod
+		}
+		# Additional Vanilla Buildings
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_avb_generator_building = yes
+			"
+			toggle = @has_avb_mod
+		}
 		# Ancient Empire
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -340,6 +357,24 @@ merg_has_food_building = {
 		has_building = building_food_processing_facility
 		has_building = building_food_processing_center
 		has_building = building_hydroponics_farm
+		# Ad Astra Technology Mod
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_evolutionary_spire
+				has_building = building_hydroponics_complex
+				has_building = building_adaptation_hive
+				has_building = building_evolutionary_forge
+				has_building = building_hive_garden
+				has_building = building_orbital_mutation_hive
+				has_building = building_bio_analysis_core
+				has_building = building_bio_codex_core
+				has_building = building_bio_codex_vault
+				has_building = building_orbital_bio_analysis_unit
+				has_building = building_world_engine
+			"
+			toggle = @has_ad_astra_tech_mod
+		}
 		# APSR
 		inline_script = {
 			script = merger_of_rules/toggled_code

@@ -1,2 +1,0 @@
-# Irony this is a placeholder file please ignore it
-resolution_sleeper_sanctions = { icon = "GFX_resolution_mutual_defense" resources = { category = resolutions cost = { influence = 0 } } target = no effect = {} fail_effects = {} potential = { always = no } allow = { always = no } active = { always = no } ai_weight = { weight = 0 } }

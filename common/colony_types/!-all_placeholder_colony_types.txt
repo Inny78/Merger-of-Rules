@@ -1,7 +1,0 @@
-# Irony this is a placeholder file please ignore it
-col_habitat_nsc_freebooter_factory = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_habitat_nsc_freebooter_farming = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_habitat_nsc_freebooter_foundry = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_habitat_nsc_freebooter_mining = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_habitat_nsc_freebooter_refinery = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }
-col_habitat_nsc_freebooter_research = { icon = GFX_colony_type_generator potential = { always = no } weight_modifier = { base = 0 } }

@@ -143,7 +143,13 @@ has_farming_designation = {
 			toggle = @post_revolutionary_re_revolution_years
 		}
 		# Freebooters Origin (reborn)
-		has_designation = col_habitat_nsc_freebooter_farming
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_habitat_nsc_freebooter_farming
+			"
+			toggle = @has_nsc_freebooter_mod
+		}
 	}
 }
 
@@ -166,7 +172,13 @@ has_factory_designation = {
 			toggle = @post_revolutionary_re_revolution_years
 		}
 		# Freebooters Origin (reborn)
-		has_designation = col_habitat_nsc_freebooter_factory
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_habitat_nsc_freebooter_factory
+			"
+			toggle = @has_nsc_freebooter_mod
+		}
 	}
 }
 
@@ -188,7 +200,13 @@ has_foundry_designation = {
 			toggle = @post_revolutionary_re_revolution_years
 		}
 		# Freebooters Origin (reborn)
-		has_designation = col_habitat_nsc_freebooter_foundry
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_habitat_nsc_freebooter_foundry
+			"
+			toggle = @has_nsc_freebooter_mod
+		}
 		# TimeMod
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -274,7 +292,13 @@ has_mining_designation = {
 			toggle = @libra_mod
 		}
 		# Freebooters Origin (reborn)
-		has_designation = col_habitat_nsc_freebooter_mining
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_habitat_nsc_freebooter_mining
+			"
+			toggle = @has_nsc_freebooter_mod
+		}
 	}
 }
 
@@ -299,7 +323,13 @@ has_refinery_designation = {
 			toggle = @post_revolutionary_re_revolution_years
 		}
 		# Freebooters Origin (reborn)
-		has_designation = col_habitat_nsc_freebooter_refinery
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_habitat_nsc_freebooter_refinery
+			"
+			toggle = @has_nsc_freebooter_mod
+		}
 		# TimeMod
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -335,7 +365,13 @@ has_research_designation = {
 			toggle = @libra_mod
 		}
 		# Freebooters Origin (reborn)
-		has_designation = col_habitat_nsc_freebooter_research
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_designation = col_habitat_nsc_freebooter_research
+			"
+			toggle = @has_nsc_freebooter_mod
+		}
 		# TimeMod
 		inline_script = {
 			script = merger_of_rules/toggled_code
