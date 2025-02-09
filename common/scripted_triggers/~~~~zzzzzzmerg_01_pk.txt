@@ -2492,12 +2492,24 @@ can_destroy_planet_with_SRA_T4_weapon_planet_killer = {
 		fail_text = merg_forbidden_target
 		merg_is_forbidden_target = no
 	}
-	custom_tooltip = {
-		fail_text = "SRA_requires_a_star_star_killer"
-		merg_is_empty_space = no
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			custom_tooltip = {
+				fail_text = SRA_requires_a_star_star_killer
+				merg_is_empty_space = no
+			}
+		"
+		toggle = @SRA_t_weapon_shield_damage
 	}
 	custom_tooltip = {
-		fail_text = "SRA_requires_a_star_star_killer"
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				fail_text = SRA_requires_is_star_star_killer
+			"
+			toggle = @SRA_t_weapon_shield_damage
+		}
 		OR = {
 			AND = {
 				from.owner = {
@@ -2512,7 +2524,13 @@ can_destroy_planet_with_SRA_T4_weapon_planet_killer = {
 		}
 	}
 	custom_tooltip = {
-		fail_text = "SRA_requires_outside_border_star_killer"
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				fail_text = SRA_requires_outside_border_star_killer
+			"
+			toggle = @SRA_t_weapon_shield_damage
+		}
 		NOR = {
 			AND = {
 				from.owner = {
@@ -2543,28 +2561,33 @@ can_destroy_planet_with_SRA_T4_weapon_planet_killer = {
 			}
 		}
 	}
-	custom_tooltip = {
-		fail_text = "SRA_requires_declares_war_star_killer"
-		NAND = {
-			has_country_flag = SRA_T4_weapon_planet_killer_killer_mode
-			has_country_flag = SRA_T4_weapon_planet_killer_sweeper_mode
-		}
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			custom_tooltip = {
+				fail_text = SRA_requires_declares_war_star_killer
+				NAND = {
+					has_country_flag = SRA_T4_weapon_planet_killer_killer_mode
+					has_country_flag = SRA_T4_weapon_planet_killer_sweeper_mode
+				}
+			}
+			custom_tooltip = {
+				fail_text = SRA_requires_no_ancient_system
+				SRA_is_ancient_system = no
+			}
+			custom_tooltip = {
+				fail_text = SRA_requires_no_zeta_crisis_system
+				NOT = { has_star_flag = ag_zeta_crisis_core_system }
+			}
+			custom_tooltip = {
+				fail_text = SRA_requires_no_special_system
+				SRA_is_special_system = no
+			}
+		"
+		toggle = @SRA_t_weapon_shield_damage
 	}
-
 	custom_tooltip = {
-		fail_text = "SRA_requires_no_ancient_system"
-		SRA_is_ancient_system = no
-	}
-	custom_tooltip = {
-		fail_text = "SRA_requires_no_zeta_crisis_system"
-		NOT = { has_star_flag = ag_zeta_crisis_core_system }
-	}
-	custom_tooltip = {
-		fail_text = "SRA_requires_no_special_system"
-		SRA_is_special_system = no
-	}
-	custom_tooltip = {
-		fail_text = "SRA_requires_no_is_cloaked"
+		fail_text = SRA_requires_no_is_cloaked
 		from = { is_cloaked = no }
 	}
 }

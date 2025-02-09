@@ -248,8 +248,6 @@ merg_is_habitat = {
 			"
 			toggle = @gf_compatch_var
 		}
-		# StellarRegulator Array
-		# uses_district_set = SRA_city_world
 		# Twinks Atlantean
 		# uses_district_set = skypalace
 		# Wula Fallen Empire

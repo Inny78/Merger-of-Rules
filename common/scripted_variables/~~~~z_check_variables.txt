@@ -16,6 +16,9 @@
 # All Ascension Paths 2909582424
 @aap_mod = 0
 
+# All That Is GRIMDARK 3041579530
+@has_allthatisgrimdark_mod = 0
+
 # All These Worlds Lite 2718002306
 @has_atw_lite = 0
 
@@ -208,6 +211,9 @@
 # Playable Katzenartig Imperium 2981429115
 @has_pki_mod = 0
 
+# Plentiful Traditions (compatch)
+@plentrad_compatch_var = 0
+
 # Real Space (compatch)
 @rs_compatch_var = 0
 # Pending
@@ -244,6 +250,9 @@
 
 # Star Wars: UnknownWorld Shipgirls Story 2116422940 (compatch)
 @swuss_mod = 0
+
+# StellarRegulator Array 2293827000
+@SRA_t_weapon_shield_damage = 0
 
 # Steven Universe Homeworld Gems 1104213489
 @has_f93_gem_mod = 0

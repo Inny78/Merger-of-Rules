@@ -272,7 +272,13 @@ has_upgraded_capital_4 = {
 				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
 				# All That Is GRIMDARK
-				has_building = building_hive_major_capital_sick
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_hive_major_capital_sick
+					"
+					toggle = @has_allthatisgrimdark_mod
+				}
 				# AOT
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -402,7 +408,13 @@ has_upgraded_capital_4 = {
 				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
 				# All That Is GRIMDARK
-				has_building = building_system_capital_gr
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_system_capital_gr
+					"
+					toggle = @has_allthatisgrimdark_mod
+				}
 				# AOT
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -515,7 +527,13 @@ has_upgraded_capital_5 = {
 				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
 				# All That Is GRIMDARK
-				has_building = building_hive_major_capital_sick
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_hive_major_capital_sick
+					"
+					toggle = @has_allthatisgrimdark_mod
+				}
 				# AOT
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -644,7 +662,13 @@ has_upgraded_capital_5 = {
 				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
 				# All That Is GRIMDARK
-				has_building = building_system_capital_gr
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_system_capital_gr
+					"
+					toggle = @has_allthatisgrimdark_mod
+				}
 				# AOT
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -756,7 +780,13 @@ has_upgraded_capital_6 = {
 				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
 				# All That Is GRIMDARK
-				has_building = building_hive_major_capital_sick
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_hive_major_capital_sick
+					"
+					toggle = @has_allthatisgrimdark_mod
+				}
 				# AOT
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -883,7 +913,13 @@ has_upgraded_capital_6 = {
 				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
 				# All That Is GRIMDARK
-				has_building = building_system_capital_gr
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_system_capital_gr
+					"
+					toggle = @has_allthatisgrimdark_mod
+				}
 				# AOT
 				inline_script = {
 					script = merger_of_rules/toggled_code

@@ -89,14 +89,10 @@ is_valid_pop_for_PLANET_KILLER_VEX_MACHINOFORMING_BEAM = { always = no }
 is_vex_machine_world = { always = no }
 is_zob_uplifted = { always = no }
 mcb_just_researched_fe_tech = { always = no }
-SRA_can_do_orbital_bombardment_country = { always = no }
-SRA_is_ancient_system = { always = no }
-SRA_is_special_system = { always = no }
 td_has_no_happiness = { always = no }
 traits_restrict_specialist_jobs = { always = no }
 traits_restrict_worker_jobs = { always = no }
 UGRC_installed = { always = no }
-uses_grimdark_infected_world_district = { always = no }
 wula_fallen_empire_mod_actived = { always = no }
 check_ai_limits = { always = no }
 is_acot_sbtg_arkship = { always = no }
@@ -117,3 +113,4 @@ pd_should_not_crave_rad_bloom = { always = yes }
 pd_should_not_crave_tiyanki_parts = { always = yes }
 has_emt_compatch = { always = no }
 has_expevents_compatch = { always = no }
+has_plentrad_compatch = { always = no }

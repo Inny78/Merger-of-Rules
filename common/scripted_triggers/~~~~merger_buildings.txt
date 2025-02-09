@@ -340,7 +340,13 @@ merg_has_energy_building = {
 			toggle = @has_eutab_unofficial
 		}
 		# Plentiful Traditions
-		has_building = building_plentiful_traditions_trading_depot
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_plentiful_traditions_trading_depot
+			"
+			toggle = @plentrad_compatch_var
+		}
 		# Wula Fallen Empire
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -400,8 +406,14 @@ merg_has_food_building = {
 			toggle = @has_eutab_unofficial
 		}
 		# Plentiful Traditions
-		has_building = building_plentiful_traditions_pillar_of_affliction
-		has_building = building_plentiful_traditions_advanced_pillar_of_affliction
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_plentiful_traditions_pillar_of_affliction
+				has_building = building_plentiful_traditions_advanced_pillar_of_affliction
+			"
+			toggle = @plentrad_compatch_var
+		}
 		# Wula Fallen Empire
 		inline_script = {
 			script = merger_of_rules/toggled_code

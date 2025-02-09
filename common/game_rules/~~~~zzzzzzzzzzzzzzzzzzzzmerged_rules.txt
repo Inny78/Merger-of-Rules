@@ -2510,7 +2510,13 @@ can_orbital_bombard = {
 					toggle = @ss_abyssal_laser_hull_damage
 				}
 				# StellarRegulator Array
-				SRA_can_do_orbital_bombardment_country = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						SRA_can_do_orbital_bombardment_country = yes
+					"
+					toggle = @SRA_t_weapon_shield_damage
+				}
 				# The Sleeper
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -5325,7 +5331,13 @@ can_pop_auto_migrate = {
 						OR = {
 							has_building = building_slave_processing
 							# Plentiful Traditions
-							has_building = building_plentiful_traditions_advanced_slave_processing
+							inline_script = {
+								script = merger_of_rules/toggled_code
+								code = "
+									has_building = building_plentiful_traditions_advanced_slave_processing
+								"
+								toggle = @plentrad_compatch_var
+							}
 						}
 						AND = {
 							exists = orbital_defence

@@ -397,7 +397,13 @@ has_upgraded_capital = {
 				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
 				# All That Is GRIMDARK
-				has_building = building_hive_major_capital_sick
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_hive_major_capital_sick
+					"
+					toggle = @has_allthatisgrimdark_mod
+				}
 				# AOT
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -581,7 +587,13 @@ has_upgraded_capital = {
 				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
 				# All That Is GRIMDARK
-				has_building = building_system_capital_gr
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_system_capital_gr
+					"
+					toggle = @has_allthatisgrimdark_mod
+				}
 				# AOT
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -1084,7 +1096,13 @@ has_major_upgraded_capital = {
 				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
 				# All That Is GRIMDARK
-				has_building = building_hive_major_capital_sick
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_hive_major_capital_sick
+					"
+					toggle = @has_allthatisgrimdark_mod
+				}
 				# AOT
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -1265,7 +1283,13 @@ has_major_upgraded_capital = {
 				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
 				# All That Is GRIMDARK
-				has_building = building_system_capital_gr
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_system_capital_gr
+					"
+					toggle = @has_allthatisgrimdark_mod
+				}
 				# AOT
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -1753,7 +1777,13 @@ has_fully_upgraded_capital = {
 				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
 				# All That Is GRIMDARK
-				has_building = building_hive_major_capital_sick
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_hive_major_capital_sick
+					"
+					toggle = @has_allthatisgrimdark_mod
+				}
 				# AOT
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -1930,7 +1960,13 @@ has_fully_upgraded_capital = {
 				# ACOT SBTG
 				has_sbtg_upgraded_capital = yes
 				# All That Is GRIMDARK
-				has_building = building_system_capital_gr
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						has_building = building_system_capital_gr
+					"
+					toggle = @has_allthatisgrimdark_mod
+				}
 				# AOT
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -2687,7 +2723,13 @@ uses_district_industrial = {
 			toggle = @has_gigastructures
 		}
 		# All That Is GRIMDARK
-		uses_grimdark_infected_world_district = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				uses_grimdark_infected_world_district = yes
+			"
+			toggle = @has_allthatisgrimdark_mod
+		}
 	}
 }
 
@@ -2723,7 +2765,13 @@ has_fort = {
 				toggle = @has_guillis_planet_modifiers
 			}
 			# Plentiful Traditions
-			has_building = building_zitadom
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_building = building_zitadom
+				"
+				toggle = @plentrad_compatch_var
+			}
 		}
 	}
 }

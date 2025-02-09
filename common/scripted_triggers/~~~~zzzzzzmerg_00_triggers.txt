@@ -1271,10 +1271,16 @@ has_research_building = {
 			toggle = @has_planetary_diversity
 		}
 		# Plentiful Traditions
-		has_building = building_plentiful_traditions_university_of_wisdom
-		has_building = building_plentiful_traditions_cybernetics_facility
-		has_building = building_plentiful_traditions_experimental_weapons_facility
-		has_building = building_plentiful_traditions_biogenesis_lab
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_building = building_plentiful_traditions_university_of_wisdom
+				has_building = building_plentiful_traditions_cybernetics_facility
+				has_building = building_plentiful_traditions_experimental_weapons_facility
+				has_building = building_plentiful_traditions_biogenesis_lab
+			"
+			toggle = @plentrad_compatch_var
+		}
 	}
 }
 
@@ -1306,8 +1312,14 @@ is_reanimator = {
 		has_valid_civic = civic_hive_cordyceptic_drones
 		has_ascension_perk = ap_mechromancy
 		# All That Is GRIMDARK
-		has_valid_civic = civic_hive_reanimated_armies
-		has_origin = origin_bioreformers
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_valid_civic = civic_hive_reanimated_armies
+				has_origin = origin_bioreformers
+			"
+			toggle = @has_allthatisgrimdark_mod
+		}
 		# Libra: Gestalt Age
 		inline_script = {
 			script = merger_of_rules/toggled_code

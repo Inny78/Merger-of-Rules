@@ -44,8 +44,14 @@ remove_capital_building = {
 		building_fe_xeno_zoo = { remove_building = building_fe_xeno_zoo }
 		building_hab_fe_capital = { remove_building = building_hab_fe_capital }
 		# All that is GRIMDARK
-		building_hive_major_capital_sick = { remove_building = building_hive_major_capital_sick }
-		building_system_capital_gr = { remove_building = building_system_capital_gr }
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				building_hive_major_capital_sick = { remove_building = building_hive_major_capital_sick }
+				building_system_capital_gr = { remove_building = building_system_capital_gr }
+			"
+			toggle = @has_allthatisgrimdark_mod
+		}
 		# AVB
 		inline_script = {
 			script = merger_of_rules/toggled_code
