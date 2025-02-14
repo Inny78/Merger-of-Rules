@@ -2515,7 +2515,13 @@ kuat_is_playable_country = {
 			"
 			toggle = @has_eternal_empire
 		}
-		is_sbtg_playable_country = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_sbtg_playable_country = yes
+   			"
+			toggle = @has_sbtg_mod
+		}
 		is_country_type = star_fantasy_empire
 		is_country_type = endtime_star_fantasy_empire
 		inline_script = {

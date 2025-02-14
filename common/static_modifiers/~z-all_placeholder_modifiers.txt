@@ -3,5 +3,4 @@ mzilli_decaying_moon_3 = {}
 mzilli_events_dying_world = {}
 N_ISBS_longinus_hit_planet_modifier = {}
 planet_dal_war_in_eden = {}
-pop_highly_educated = {}
 wiirlak_ac_modifier_project_cradle = {}

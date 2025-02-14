@@ -98,8 +98,14 @@ can_add_claim = {
 					merg_is_default_empire = yes
 					is_fallen_empire = yes
 					# ACOT SBTG
-					is_country_type = sbtg_stellarborne_empire_active
-					is_country_type = sbtg_light_seeker
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							is_country_type = sbtg_stellarborne_empire_active
+							is_country_type = sbtg_light_seeker
+						"
+						toggle = @has_sbtg_mod
+					}
 					# The Sleeper
 					inline_script = {
 						script = merger_of_rules/toggled_code
@@ -260,8 +266,14 @@ can_get_claim_from_lost_system = {
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
 			# ACOT SBTG
-			is_country_type = sbtg_stellarborne_empire_active
-			is_country_type = sbtg_light_seeker
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					is_country_type = sbtg_stellarborne_empire_active
+					is_country_type = sbtg_light_seeker
+				"
+				toggle = @has_sbtg_mod
+			}
 			# Twinks Eternal Empire
 			inline_script = {
 				script = merger_of_rules/toggled_code
@@ -286,8 +298,14 @@ can_get_claim_from_lost_system = {
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
 				# ACOT SBTG
-				is_country_type = sbtg_stellarborne_empire_active
-				is_country_type = sbtg_light_seeker
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+							is_country_type = sbtg_stellarborne_empire_active
+							is_country_type = sbtg_light_seeker
+						"
+					toggle = @has_sbtg_mod
+				}
 				# Twinks Eternal Empire
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -1083,10 +1101,18 @@ can_take_hostile_actions = {
 			always = no
 		}
 	}
-	else_if = {
-		limit = { this = { is_country_type = sbtg_stellarborne_empire_passive } }
-		custom_tooltip = { always = no }
+	# ACOT STBG
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			else_if = {
+				limit = { this = { is_country_type = sbtg_stellarborne_empire_passive } }
+				custom_tooltip = { always = no }
+			}
+		"
+		toggle = @has_sbtg_mod
 	}
+	# ACOT
 	inline_script = {
 		script = merger_of_rules/toggled_code
 		code = "
@@ -2737,13 +2763,13 @@ has_full_sensor_range = {
 	OR = {
 		has_megastructure = spy_orb_4
 		has_megastructure = spy_orb_restored
-		# ACOT
+		# ACOT SBTG
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
 				has_megastructure = sofe_omega_spy_orb_center
 			"
-			toggle = @has_ancient_caches
+			toggle = @has_sbtg_mod
 		}
 		# Frameworld extra goodies
 		inline_script = {
@@ -3195,18 +3221,24 @@ ai_should_restrict_system = {
 			"
 			toggle = @has_ancient_caches
 		}
-		AND = {
-			merg_has_sofe = yes
-			root = { merg_is_fallen_empire = yes }
-			any_ship_in_system = {
-				exists = owner
-				owner = {
-					OR = {
-						is_guardian_country = yes
-						is_country_type = sbtg_sentinel_active
+		# ACOT STBG
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				AND = {
+					root = { merg_is_fallen_empire = yes }
+					any_ship_in_system = {
+						exists = owner
+						owner = {
+							OR = {
+								is_guardian_country = yes
+								is_country_type = sbtg_sentinel_active
+							}
+						}
 					}
 				}
-			}
+			"
+			toggle = @has_sbtg_mod
 		}
 		# A Deadly Tempest
 		AND = {
@@ -3443,16 +3475,15 @@ can_spawn_occupation_armies = {
 		is_country_type = default
 		merg_is_fallen_empire = yes
 		merg_is_awakened_fe = yes
-		# ACOT
+		# ACOT SBTG
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
 				is_progenitor_empires = yes
+				is_country_type = sbtg_light_seeker
 			"
-			toggle = @has_ancient_caches
+			toggle = @has_sbtg_mod
 		}
-		# ACOT SBTG
-		is_country_type = sbtg_light_seeker
 		# ZOFE
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -3671,9 +3702,21 @@ can_enter_system_by_jump = {
 						# Formless system
 						has_star_flag = formless_system
 						# ACOT SBTG
-						has_star_flag = outercluster
+						inline_script = {
+							script = merger_of_rules/toggled_code
+							code = "
+								has_star_flag = outercluster
+							"
+							toggle = @has_sbtg_mod
+						}
 						# Ancient Empire
-						has_star_flag = ag_no_jump_in_system
+						inline_script = {
+							script = merger_of_rules/toggled_code
+							code = "
+								has_star_flag = ag_no_jump_in_system
+							"
+							toggle = @ag_null_edict_length
+						}
 						# Assault Lily
 						inline_script = {
 							script = merger_of_rules/toggled_code
@@ -4947,7 +4990,13 @@ can_use_galactic_market = {
 	OR = {
 		merg_is_default_empire = yes
 		# ACOT SBTG
-		is_country_type = sbtg_stellarborne_empire_active
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = sbtg_stellarborne_empire_active
+			"
+			toggle = @has_sbtg_mod
+		}
 		# The Empty Vagrant
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -5105,7 +5154,13 @@ can_be_part_of_galactic_community = {
 		OR = {
 			merg_is_default_empire = yes
 			# ACOT SBTG
-			is_country_type = sbtg_stellarborne_empire_active
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					is_country_type = sbtg_stellarborne_empire_active
+				"
+				toggle = @has_sbtg_mod
+			}
 			# ZOFE
 			inline_script = {
 				script = merger_of_rules/toggled_code
@@ -5213,7 +5268,13 @@ can_see_galactic_community = {
 		has_country_flag = galcom_form_nay
 		is_galactic_community_member = yes
 		# ACOT SBTG
-		is_country_type = sbtg_stellarborne_empire_active
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = sbtg_stellarborne_empire_active
+			"
+			toggle = @has_sbtg_mod
+		}
 		# ZOFE
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -5242,7 +5303,13 @@ can_be_part_of_galactic_council = {
 	OR = {
 		merg_is_default_empire = yes
 		# ACOT SBTG
-		is_country_type = sbtg_stellarborne_empire_active
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = sbtg_stellarborne_empire_active
+			"
+			toggle = @has_sbtg_mod
+		}
 		# ZOFE
 		inline_script = {
 			script = merger_of_rules/toggled_code

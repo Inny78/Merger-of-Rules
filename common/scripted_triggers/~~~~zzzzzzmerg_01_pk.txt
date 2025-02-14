@@ -1478,7 +1478,10 @@ can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
 	OR = {
 		custom_tooltip = {
 			text = is_not_hostile_cracker
-			OR = {
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					OR = {
 				AND = {
 					exists = space_owner
 					space_owner = {
@@ -1513,6 +1516,9 @@ can_destroy_planet_with_PLANET_KILLER_CORRUPT = {
 						}
 					}
 				}
+			}
+				"
+				toggle = @has_emex_mod
 			}
 		}
 		custom_tooltip = {
@@ -2586,9 +2592,15 @@ can_destroy_planet_with_SRA_T4_weapon_planet_killer = {
 		"
 		toggle = @SRA_t_weapon_shield_damage
 	}
-	custom_tooltip = {
-		fail_text = SRA_requires_no_is_cloaked
-		from = { is_cloaked = no }
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			custom_tooltip = {
+				fail_text = SRA_requires_no_is_cloaked
+				from = { is_cloaked = no }
+			}
+		"
+		toggle = @SRA_t_weapon_shield_damage
 	}
 }
 can_destroy_planet_with_SRA_Rokia_dragon_weapon_planet_killer = {

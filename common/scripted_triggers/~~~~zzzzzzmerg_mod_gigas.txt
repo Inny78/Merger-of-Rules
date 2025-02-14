@@ -363,10 +363,14 @@ giga_mod_country_gets_bank_exclude = {
 			"
 			toggle = @swuss_mod
 		}
-		is_country_type = ag_kae_ge_invasion_country
-		is_country_type = ag_kuat_invasion_country
 		is_country_type = awakened_gate_builders
-		is_country_type = berserker_awoken_hive
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = berserker_awoken_hive
+			"
+			toggle = @has_the_sleeper_mod
+		}
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
@@ -375,7 +379,13 @@ giga_mod_country_gets_bank_exclude = {
 			"
 			toggle = @homeless_class_trait_weight
 		}
-		is_country_type = master_ai_country
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = master_ai_country
+			"
+			toggle = @has_emex_mod
+		}
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
@@ -408,9 +418,21 @@ giga_mod_country_gets_bank_exclude = {
 			toggle = @planet_states_mod
 		}
 		is_country_type = replicators
-		is_country_type = shroud_entities
-		is_country_type = shroud_horrors
-		is_country_type = sbtg_sentinel_active
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = shroud_entities
+				is_country_type = shroud_horrors
+			"
+			toggle = @has_shroud_rising_mod
+		}
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = sbtg_sentinel_active
+			"
+			toggle = @has_sbtg_mod
+		}
 		is_country_type = TAC_debris_ship_country
 		is_country_type = TAC_machine_crisis_country
 		inline_script = {

@@ -366,7 +366,13 @@ is_crisis_faction = {
 		is_country_type = synth_queen_storm
 		is_country_type = voidworms_crisis
 		# ACOT SBTG
-		is_country_type = sbtg_stellarborne_empire
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = sbtg_stellarborne_empire
+			"
+			toggle = @has_sbtg_mod
+		}
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -414,15 +420,15 @@ planet_can_be_liberated_from_owner = {
 			is_machine_empire = yes
 			is_country_type = awakened_fallen_empire
 			is_country_type = fallen_empire
-			# ACOT
+			# ACOT SBTG
 			inline_script = {
 				script = merger_of_rules/toggled_code
 				code = "
 					is_progenitor_empires = yes
+					is_country_type = sbtg_light_seeker
 				"
-				toggle = @has_ancient_caches
+				toggle = @has_sbtg_mod
 			}
-			is_country_type = sbtg_light_seeker
 			# Twinks Eternal Empire
 			inline_script = {
 				script = merger_of_rules/toggled_code
@@ -449,13 +455,13 @@ is_country_type_with_subjects = {
 		is_country_type = default
 		is_country_type = awakened_fallen_empire
 		is_country_type = awakened_marauders
-		# ACOT
+		# ACOT SBTG
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
 				is_progenitor_empires = yes
 			"
-			toggle = @has_ancient_caches
+			toggle = @has_sbtg_mod
 		}
 		# Twinks Eternal Empire
 		inline_script = {
@@ -709,16 +715,15 @@ has_comms_with_alien_empire = {
 			merg_is_default_empire = yes
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			# ACOT
+			# ACOT SBTG
 			inline_script = {
 				script = merger_of_rules/toggled_code
 				code = "
 					is_progenitor_empires = yes
+					is_country_type = sbtg_light_seeker
 				"
-				toggle = @has_ancient_caches
+				toggle = @has_sbtg_mod
 			}
-			# SBTG
-			is_country_type = sbtg_light_seeker
 		}
 	}
 }
@@ -734,16 +739,15 @@ has_comms_with_alien_civilization = {
 			is_country_type = nomad
 			is_country_type = dormant_marauders
 			is_country_type = awakened_marauders
-			# ACOT
+			# ACOT SBTG
 			inline_script = {
 				script = merger_of_rules/toggled_code
 				code = "
 					is_progenitor_empires = yes
+					is_country_type = sbtg_light_seeker
 				"
-				toggle = @has_ancient_caches
+				toggle = @has_sbtg_mod
 			}
-			# SBTG
-			is_country_type = sbtg_light_seeker
 			# Scripted Trigger Undercoat
 			has_country_flag = stu_counts_as_civilization_for_comms
 		}
@@ -763,7 +767,7 @@ has_total_war_cb = {
 					code = "
 						is_progenitor_empires = yes
 					"
-					toggle = @has_ancient_caches
+					toggle = @has_sbtg_mod
 				}
 			}
 			OR = {
@@ -784,13 +788,13 @@ has_total_war_cb = {
 					has_valid_civic = civic_fanatic_purifiers
 					NOT = { is_same_species = from }
 				}
-				# ACOT
+				# ACOT SBTG
 				inline_script = {
 					script = merger_of_rules/toggled_code
 					code = "
 						is_progenitor_empires = yes
 					"
-					toggle = @has_ancient_caches
+					toggle = @has_sbtg_mod
 				}
 				# Expanded Traits, Civics, Pops, and More
 				inline_script = {
@@ -810,13 +814,13 @@ has_total_war_cb = {
 		AND = {
 			OR = {
 				merg_is_default_empire = yes
-				# ACOT
+				# ACOT SBTG
 				inline_script = {
 					script = merger_of_rules/toggled_code
 					code = "
 						is_progenitor_empires = yes
 					"
-					toggle = @has_ancient_caches
+					toggle = @has_sbtg_mod
 				}
 			}
 			OR = {
@@ -833,13 +837,13 @@ has_total_war_cb = {
 					is_country_type = awakened_fallen_empire
 					is_homicidal = yes
 					has_valid_civic = civic_machine_assimilator
-					# ACOT
+					# ACOT SBTG
 					inline_script = {
 						script = merger_of_rules/toggled_code
 						code = "
 							is_progenitor_empires = yes
 						"
-						toggle = @has_ancient_caches
+						toggle = @has_sbtg_mod
 					}
 					# Loud but Deadly
 					has_country_flag = lbd_dathnak_country
@@ -1664,7 +1668,13 @@ has_special_star_flag_trigger = {
 			toggle = @ag_null_edict_length
 		}
 		# ACOT SBTG
-		has_star_flag = outercluster
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = outercluster
+			"
+			toggle = @has_sbtg_mod
+		}
 		# Assault Lily
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -1704,13 +1714,13 @@ has_special_star_flag_trigger = {
 			"
 			toggle = @has_more_events_mod
 		}
-		# Planetary Diversity
+		# Planetary Diversity Unique Worlds
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
-				has_star_flag = archive_system
 				has_star_flag = floating_system
 				has_star_flag = pdcrystal_system
+				has_star_flag = biosynth_system
 			"
 			toggle = @has_planetary_diversity_unique_worlds
 		}

@@ -54,16 +54,6 @@ just_researched_fe_tech = {
     }
 }
 
-is_individual_machine = {
-	OR = {
-		AND = {
-			founder_species = { is_archetype = MACHINE }
-			is_gestalt = no
-		}
-		is_nyto_country = yes
-	}
-}
-
 has_murderous_civic_or_origin = {
     OR = {
         has_valid_civic = civic_scavengers

@@ -1,20 +1,11 @@
 # Irony this is a placeholder file please ignore it
 awakened_gate_builders = { ai = { enabled = no } }
-awakened_original_empire = { ai = { enabled = no } }
 darkness_country = { ai = { enabled = no } }
 ds_nomads = { ai = { enabled = no } }
 endtime_star_fantasy_empire = { ai = { enabled = no } }
-master_ai_country = { ai = { enabled = no } }
 pg_last_hope = { ai = { enabled = no } }
 replicators = { ai = { enabled = no } }
 star_fantasy_empire = { ai = { enabled = no } }
 TAC_debris_ship_country = { ai = { enabled = no } }
 TAC_machine_crisis_country = { ai = { enabled = no } }
 vbp_machine = { ai = { enabled = no } }
-sbtg_sentinel_active = { ai = { enabled = no } }
-sbtg_light_seeker = { ai = { enabled = no } }
-sbtg_stellarborne_empire_active = { ai = { enabled = no } }
-sbtg_stellarborne_empire = { ai = { enabled = no } }
-sbtg_stellarborne_empire_passive = { ai = { enabled = no } }
-ag_kae_ge_invasion_country = { ai = { enabled = no } }
-ag_kuat_invasion_country = { ai = { enabled = no } }

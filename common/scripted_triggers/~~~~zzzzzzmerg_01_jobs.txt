@@ -75,21 +75,27 @@ entertainer_job_check_trigger = {
 }
 
 can_fill_specialist_job_trigger = {
-	if = {
-		limit = {
-			has_global_flag = eci_educated
-			exists = owner
-			owner = {
-				OR = {
-					has_valid_civic = civic_moth_chasing_flames
-					has_valid_civic = civic_ruthless_competition
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			if = {
+				limit = {
+					has_global_flag = eci_educated
+					exists = owner
+					owner = {
+						OR = {
+							has_valid_civic = civic_moth_chasing_flames
+							has_valid_civic = civic_ruthless_competition
+						}
+					}
+				}
+				custom_tooltip = {
+					text = POP_EDUCATED_LOW
+					has_modifier = pop_highly_educated
 				}
 			}
-		}
-		custom_tooltip = {
-			text = POP_EDUCATED_LOW
-			has_modifier = pop_highly_educated
-		}
+		"
+		toggle = @post_revolutionary_re_revolution_years
 	}
 	custom_tooltip = SPECIALIST_JOB_TRIGGER
 	hidden_trigger = {

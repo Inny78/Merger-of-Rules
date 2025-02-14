@@ -1,6 +1,5 @@
 # Irony this is a placeholder file please ignore it
 civic_elec_stellar_devourers = { potential = { always = no } }
-civic_moth_chasing_flames = { potential = { always = no } }
 civic_tw_atlantis = { potential = { always = no } }
 KO_hive_asm = { potential = { always = no } }
 civic_paracausal_darkness = { potential = { always = no } }

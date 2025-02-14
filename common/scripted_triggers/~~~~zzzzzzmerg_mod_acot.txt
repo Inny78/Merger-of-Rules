@@ -43,10 +43,16 @@ can_build_precursor_ship = {
 					toggle = @has_ancient_caches
 				}
 				# SBTG
-				is_megastructure_type = sofe_omega_spy_orb_center
-				is_megastructure_type = sofe_omega_dyson_sphere
-				is_megastructure_type = sofe_omega_nexus
-				is_sofe_megastructure_shipyard = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_megastructure_type = sofe_omega_spy_orb_center
+						is_megastructure_type = sofe_omega_dyson_sphere
+						is_megastructure_type = sofe_omega_nexus
+						is_sofe_megastructure_shipyard = yes
+	    			"
+					toggle = @has_sbtg_mod
+				}
 				# Assault Lily
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -94,7 +100,13 @@ can_build_precursor_ship = {
 					toggle = @has_ancient_caches
 				}
 				# SBTG
-				is_sbtg_origin_starbase = yes
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_sbtg_origin_starbase = yes
+	    			"
+					toggle = @has_sbtg_mod
+				}
 				# Assault Lily
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -119,7 +131,13 @@ is_playable_country = {
 	optimize_memory
 	OR = {
 		merg_is_standard_empire = yes
-		is_sbtg_playable_country = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_sbtg_playable_country = yes
+   			"
+			toggle = @has_sbtg_mod
+		}
 	}
 }
 acot_is_partially_affected_by_cascade = {

@@ -1,6 +1,9 @@
 # Acquisition of Technologies 2178603631
 @has_acquisition_of_tech = 0
 
+# ACOT - Secrets Beyond The Gates 1481972266
+@has_sbtg_mod = 0
+
 # Ad Astra Technology Mod 2857350778
 @has_ad_astra_tech_mod = 0
 

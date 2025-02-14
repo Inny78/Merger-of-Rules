@@ -577,7 +577,7 @@ merg_is_empty_space = {
 			code = "
 				is_acot_invisible_star = yes
 			"
-			toggle = @has_ancient_caches
+			toggle = @has_sbtg_mod
 		}
 		# Ancient Empires
 		inline_script = {
@@ -777,14 +777,14 @@ merg_is_pulsar_star_class = {
 merg_is_void_system = {
 	optimize_memory
 	OR = {
-		# ACOT
+		# ACOT SBTG
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
 				is_star_class = sofe_outer_class
 				is_star_class = sofe_inner_class
 			"
-			toggle = @has_ancient_caches
+			toggle = @has_sbtg_mod
 		}
 		# Ancient Empire
 		inline_script = {
@@ -954,7 +954,13 @@ merg_is_isolated_system = {
 		has_star_flag = nep_whitegoo_origin
 		has_star_flag = nep_ugo_system
 		# ACOT SBTG
-		has_star_flag = outercluster
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = outercluster
+			"
+			toggle = @has_sbtg_mod
+		}
 		# Ancient Empire
 		inline_script = {
 			script = merger_of_rules/toggled_code

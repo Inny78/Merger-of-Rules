@@ -18,8 +18,14 @@ merg_is_gate_mega = {
 		is_megastructure_type = hyper_relay_restored
 		is_megastructure_type = hyper_relay_ruined
 		# ACOT SBTG
-		is_megastructure_type = sofe_inner_gate
-		is_megastructure_type = sofe_outer_gate
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_megastructure_type = sofe_inner_gate
+				is_megastructure_type = sofe_outer_gate
+   			"
+			toggle = @has_sbtg_mod
+		}
 		# Ancient Empire
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -300,8 +306,14 @@ merg_has_gate_mega = {
 		has_megastructure = hyper_relay_restored
 		has_megastructure = hyper_relay_ruined
 		# ACOT SBTG
-		has_megastructure = sofe_inner_gate
-		has_megastructure = sofe_outer_gate
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_megastructure = sofe_inner_gate
+				has_megastructure = sofe_outer_gate
+   			"
+			toggle = @has_sbtg_mod
+		}
 		# Ancient Empire
 		inline_script = {
 			script = merger_of_rules/toggled_code

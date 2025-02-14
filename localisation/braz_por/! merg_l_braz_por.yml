@@ -27,7 +27,6 @@ l_braz_por:
  OBJ_MASTER_FORCE_DECLINE: "§R§RInsufficient §Y$job_matter_reanimator$§! to sustain §YObject Avatar§! population§!"
  cannot_fire_StellarisCraft_leader: "£trigger_no£ CANNOT FIRED LEADER OF THIS MOD STELLARISCRAFT"
  need_a_planet_with_pops: "£trigger_no£ Need a planet with pops"
- POP_EDUCATED_LOW: "£trigger_no£ Education level is too low."
  What_are_you_doing: "£trigger_no£ What are you doing !"
  is_valid_target_for_sweeper: "£trigger_no£ It's a colony controlled by us or a belligerent."
  elec_must_be_colony: "§RTarget must be a colony.§!"
