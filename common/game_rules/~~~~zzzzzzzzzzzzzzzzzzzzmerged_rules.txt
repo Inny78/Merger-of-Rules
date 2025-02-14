@@ -5839,21 +5839,26 @@ can_fill_worker_job = {
 			toggle = @has_v_traits_mod
 		}
 		# Ethics & Civics Infinity
-		if = {
-			limit = {
-				has_global_flag = eci_educated
-				exists = owner
-				owner = {
-					OR = {
-						has_valid_civic = civic_moth_chasing_flames
-						has_valid_civic = civic_ruthless_competition
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				if = {
+					limit = {
+						exists = owner
+						owner = {
+							OR = {
+								has_valid_civic = civic_moth_chasing_flames
+								has_valid_civic = civic_ruthless_competition
+							}
+						}
+					}
+					custom_tooltip = {
+						text = POP_EDUCATED_LOW
+						has_modifier = pop_highly_educated
 					}
 				}
-			}
-			custom_tooltip = {
-				text = POP_EDUCATED_LOW
-				has_modifier = pop_highly_educated
-			}
+			"
+			toggle = @post_revolutionary_re_revolution_years
 		}
 		# Time Framework
 		inline_script = {
@@ -5871,22 +5876,27 @@ can_fill_worker_job = {
 can_fill_specialist_job = {
 	can_fill_specialist_job_trigger = yes
 	# Ethics & Civics Infinity
-    if = {
-        limit = {
-            has_global_flag = eci_educated
-            exists = owner
-            owner = {
-                OR = {
-                    has_valid_civic = civic_moth_chasing_flames
-                    has_valid_civic = civic_ruthless_competition
-                }
-            }
-        }
-        custom_tooltip = {
-            text = POP_EDUCATED_LOW
-            has_modifier = pop_highly_educated
-        }
-    }
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			if = {
+				limit = {
+					exists = owner
+					owner = {
+						OR = {
+							has_valid_civic = civic_moth_chasing_flames
+							has_valid_civic = civic_ruthless_competition
+						}
+					}
+				}
+				custom_tooltip = {
+					text = POP_EDUCATED_LOW
+					has_modifier = pop_highly_educated
+				}
+			}
+		"
+		toggle = @post_revolutionary_re_revolution_years
+	}
 	# Girls Frontline
 	inline_script = {
 		script = merger_of_rules/toggled_code
@@ -5979,22 +5989,27 @@ can_fill_ruler_job = {
 		}
 	}
 	# Ethics & Civcs Infinity
-    else_if = {
-        limit = {
-            has_global_flag = eci_educated
-            exists = owner
-            owner = {
-                OR = {
-                    has_valid_civic = civic_moth_chasing_flames
-                    has_valid_civic = civic_ruthless_competition
-                }
-            }
-        }
-        custom_tooltip = {
-            text = POP_EDUCATED_LOW
-            has_modifier = pop_highly_educated
-        }
-    }
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			else_if = {
+				limit = {
+					exists = owner
+					owner = {
+						OR = {
+							has_valid_civic = civic_moth_chasing_flames
+							has_valid_civic = civic_ruthless_competition
+						}
+					}
+				}
+				custom_tooltip = {
+					text = POP_EDUCATED_LOW
+					has_modifier = pop_highly_educated
+				}
+			}
+		"
+		toggle = @post_revolutionary_re_revolution_years
+	}
 	# Vanilla
 	else = {
 		custom_tooltip = RULER_JOB_TRIGGER
