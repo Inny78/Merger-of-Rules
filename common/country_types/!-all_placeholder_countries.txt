@@ -6,6 +6,4 @@ endtime_star_fantasy_empire = { ai = { enabled = no } }
 pg_last_hope = { ai = { enabled = no } }
 replicators = { ai = { enabled = no } }
 star_fantasy_empire = { ai = { enabled = no } }
-TAC_debris_ship_country = { ai = { enabled = no } }
-TAC_machine_crisis_country = { ai = { enabled = no } }
 vbp_machine = { ai = { enabled = no } }

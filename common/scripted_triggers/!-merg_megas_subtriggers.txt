@@ -98,7 +98,7 @@ merg_is_gate_mega = {
 			"
 			toggle = @change_planet_size_bullet_num
 		}
-		# Blorg
+		# Borg Faction Pack
 		is_megastructure_type = Transwarp_hub_1
 		is_megastructure_type = Transwarp_hub_2
 		is_megastructure_type = Transwarp_hub_3
@@ -123,10 +123,6 @@ merg_is_gate_mega = {
 		}
 		# Halo: Forerunner Ships & Portraits
 		is_megastructure_type = forerunner_slipspace_portal
-		# Imperial Projects
-		is_megastructure_type = Empyreal_Travel_Beacon_0
-		is_megastructure_type = Empyreal_Travel_Beacon_1
-		is_megastructure_type = Empyreal_Travel_Beacon_2
 		# KDC Story Pack
 		is_megastructure_type = Agate_closed
 		is_megastructure_type = Agate_opened
@@ -212,25 +208,28 @@ merg_is_gate_mega = {
 			toggle = @has_tc_mod
 		}
 		# THE ABYSS CONTRACT
-		is_megastructure_type = TACgate_opened
-		is_megastructure_type = TACgate_closed
-		is_megastructure_type = TACgate_system_01
-		is_megastructure_type = TACgate_system_02
-		is_megastructure_type = TAC_DebrisFleet_gate_open
-		is_megastructure_type = TAC_DebrisFleet_gate_open_crisis_type
-		is_megastructure_type = TAC_DebrisFleet_gate_open_player_type
-		is_megastructure_type = TAC_DebrisFleet_gate_close
-		is_megastructure_type = TACgate_opened_A
-		is_megastructure_type = TACgate_system_01_A
-		is_megastructure_type = TACgate_opened_B
-		is_megastructure_type = TACgate_system_01_B
-		is_megastructure_type = TACgate_opened_C
-		is_megastructure_type = TACgate_system_01_C
-		is_megastructure_type = TAC_gateway_control_01
-		is_megastructure_type = TAC_gateway_control_02
-		# Through the Veil
-		is_megastructure_type = ttvl_dimensional_rift
-		is_megastructure_type = ttvl_rift_site
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_megastructure_type = TACgate_opened
+				is_megastructure_type = TACgate_closed
+				is_megastructure_type = TACgate_system_01
+				is_megastructure_type = TACgate_system_02
+				is_megastructure_type = TAC_DebrisFleet_gate_open
+				is_megastructure_type = TAC_DebrisFleet_gate_open_crisis_type
+				is_megastructure_type = TAC_DebrisFleet_gate_open_player_type
+				is_megastructure_type = TAC_DebrisFleet_gate_close
+				is_megastructure_type = TACgate_opened_A
+				is_megastructure_type = TACgate_system_01_A
+				is_megastructure_type = TACgate_opened_B
+				is_megastructure_type = TACgate_system_01_B
+				is_megastructure_type = TACgate_opened_C
+				is_megastructure_type = TACgate_system_01_C
+				is_megastructure_type = TAC_gateway_control_01
+				is_megastructure_type = TAC_gateway_control_02
+			"
+			toggle = @TAC_COUNTER_VALUE_01
+		}
 		# Twinks Atlanteans
 		is_megastructure_type = gateway_heaven
 		is_megastructure_type = gateway_titan
@@ -411,10 +410,6 @@ merg_has_gate_mega = {
 		}
 		# Halo: Forerunner Ships & Portraits
 		has_megastructure = forerunner_slipspace_portal
-		# Imperial Projects
-		has_megastructure = Empyreal_Travel_Beacon_0
-		has_megastructure = Empyreal_Travel_Beacon_1
-		has_megastructure = Empyreal_Travel_Beacon_2
 		# KDC Story Pack
 		has_megastructure = Agate_closed
 		has_megastructure = Agate_opened
@@ -498,25 +493,28 @@ merg_has_gate_mega = {
 			toggle = @has_tc_mod
 		}
 		# THE ABYSS CONTRACT
-		has_megastructure = TACgate_opened
-		has_megastructure = TACgate_closed
-		has_megastructure = TACgate_system_01
-		has_megastructure = TACgate_system_02
-		has_megastructure = TAC_DebrisFleet_gate_open
-		has_megastructure = TAC_DebrisFleet_gate_open_crisis_type
-		has_megastructure = TAC_DebrisFleet_gate_open_player_type
-		has_megastructure = TAC_DebrisFleet_gate_close
-		has_megastructure = TACgate_opened_A
-		has_megastructure = TACgate_system_01_A
-		has_megastructure = TACgate_opened_B
-		has_megastructure = TACgate_system_01_B
-		has_megastructure = TACgate_opened_C
-		has_megastructure = TACgate_system_01_C
-		has_megastructure = TAC_gateway_control_01
-		has_megastructure = TAC_gateway_control_02
-		# Through the Veil
-		has_megastructure = ttvl_dimensional_rift
-		has_megastructure = ttvl_rift_site
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_megastructure = TACgate_opened
+				has_megastructure = TACgate_closed
+				has_megastructure = TACgate_system_01
+				has_megastructure = TACgate_system_02
+				has_megastructure = TAC_DebrisFleet_gate_open
+				has_megastructure = TAC_DebrisFleet_gate_open_crisis_type
+				has_megastructure = TAC_DebrisFleet_gate_open_player_type
+				has_megastructure = TAC_DebrisFleet_gate_close
+				has_megastructure = TACgate_opened_A
+				has_megastructure = TACgate_system_01_A
+				has_megastructure = TACgate_opened_B
+				has_megastructure = TACgate_system_01_B
+				has_megastructure = TACgate_opened_C
+				has_megastructure = TACgate_system_01_C
+				has_megastructure = TAC_gateway_control_01
+				has_megastructure = TAC_gateway_control_02
+			"
+			toggle = @TAC_COUNTER_VALUE_01
+		}
 		# Twinks Atlanteans
 		has_megastructure = gateway_heaven
 		has_megastructure = gateway_titan

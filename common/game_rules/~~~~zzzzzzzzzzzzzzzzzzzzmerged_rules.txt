@@ -4447,14 +4447,6 @@ can_support_branch_offices = {
 			}
 		}
 	}
-	# Ethics and Civics Alternative - FunEFork
-	inline_script = {
-		script = merger_of_rules/toggled_code
-		code = "
-			ecaf_can_support_branch_offices_trigger = yes
-		"
-		toggle = @has_eca_funefork
-	}
 }
 
 # This = planet

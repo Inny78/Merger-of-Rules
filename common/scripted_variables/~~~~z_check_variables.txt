@@ -266,6 +266,9 @@
 # ThaumStellaris 2517513764
 @has_tc_mod = 0
 
+# The Abyss Contract 2847901464
+@TAC_COUNTER_VALUE_01 = 0
+
 # The Crimson Throng 2911573696
 @crimson_throng_mod = 0
 

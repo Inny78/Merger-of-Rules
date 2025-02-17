@@ -2558,6 +2558,47 @@ tc_element_shard_candidate = {
 	}
 }
 
+############################### THE ABYSS CONTRACT ###############################
+TAC_is_pc_desert = { merg_is_desert = yes }
+TAC_is_pc_arid = { merg_is_arid = yes }
+TAC_is_pc_savannah = { merg_is_savannah = yes }
+TAC_is_pc_tropical = { merg_is_tropical = yes }
+TAC_is_pc_continental = { merg_is_continental = yes }
+TAC_is_pc_ocean = { merg_is_ocean = yes }
+TAC_is_pc_tundra = { merg_is_tundra = yes }
+TAC_is_pc_arctic = { merg_is_arctic = yes }
+TAC_is_pc_alpine = { merg_is_alpine = yes }
+TAC_is_pc_molten = { merg_is_molten = yes }
+TAC_is_pc_barren = { merg_is_barren = yes }
+TAC_is_pc_barren_cold = { merg_is_barren_cold = yes }
+TAC_is_pc_toxic = { merg_is_toxic = yes }
+TAC_is_pc_frozen = { merg_is_frozen = yes }
+TAC_is_pc_nuked = { merg_is_nuked_basic = yes }
+TAC_is_pc_hive = { merg_is_hive_world = yes }
+TAC_is_pc_machine = { merg_is_machine_world = yes }
+TAC_is_pc_gaia = { merg_is_gaia_basic = yes }
+TAC_is_pc_city = { merg_is_arcology = yes }
+TAC_is_pc_relic = { merg_is_relic_world = yes }
+
+# ###########
+# Special Planets
+# ###########
+TAC_is_pc_nuked = { is_planet_class = pc_nuked }
+TAC_is_pc_hive = { is_planet_class = pc_hive }
+TAC_is_pc_machine = { is_planet_class = pc_machine }
+TAC_is_pc_shielded = { is_planet_class = pc_shielded }
+TAC_is_pc_ai = { is_planet_class = pc_ai }
+TAC_is_pc_infested = { is_planet_class = pc_infested }
+TAC_is_pc_gaia = { is_planet_class = pc_gaia }
+TAC_is_pc_shrouded = { is_planet_class = pc_shrouded }
+TAC_is_pc_broken = { is_planet_class = pc_broken }
+TAC_is_pc_shattered = { is_planet_class = pc_shattered }
+TAC_is_pc_shrouded = { is_planet_class = pc_shrouded }
+TAC_is_pc_gray_goo = { is_planet_class = pc_gray_goo }
+TAC_is_pc_city = { is_planet_class = pc_city }
+TAC_is_pc_relic = { is_planet_class = pc_relic }
+
+
 ############################### The Empty Vagrant ###############################
 can_be_ev_investment_country = {
 	OR = {
@@ -2805,6 +2846,36 @@ wiirlak_ac_project_entropy_system_check = {
 is_nebula_star = {
 	merg_is_nebulae = yes
 }
+
+############################### WP's Mysterious Worlds ###############################
+wp_mw_is_alpine = { merg_is_alpine = yes }
+wp_mw_is_arctic = { merg_is_arctic = yes }
+wp_mw_is_arid = { merg_is_arid = yes }
+wp_mw_is_continental = { merg_is_continental = yes }
+wp_mw_is_desert = { merg_is_desert = yes }
+wp_mw_is_gaia = { merg_is_gaia_basic = yes }
+wp_mw_is_nuked = { merg_is_nuked_basic = yes }
+wp_mw_is_ocean = { merg_is_ocean = yes }
+wp_mw_is_savannah = { merg_is_savannah = yes }
+wp_mw_is_tropical = { merg_is_tropical = yes }
+wp_mw_is_tundra = { merg_is_tundra = yes }
+
+wp_mw_planets_affected_at_game_start = {
+	is_colonizable = yes
+	NOR = {
+		AND = {
+			is_capital = yes
+			owner = { is_primitive = no }
+		}
+		merg_is_relic_world = yes
+		merg_is_arcology = yes
+		is_artificial = yes
+		has_planet_flag = planet_earth
+		has_planet_flag = wp_mw_ignore_planet_flag
+	}
+}
+
+############################### WP's Planet View ###############################
 wp_pv_is_clear_sky_planet = { # used to determine star visibility
 	NAND = {
 		exists = owner

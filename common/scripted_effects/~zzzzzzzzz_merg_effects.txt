@@ -165,7 +165,7 @@ remove_capital_building = {
 		# Twinks Atlantean
 		building_ancient_palace_at = { remove_building = building_ancient_palace_at }
 		# Twinks Kaldorei
-		building_nightelf_palace = { remove_building = building_ancient_palace_at }
+		building_nightelf_palace = { remove_building = building_nightelf_palace }
 		# Eternal Empire
 		inline_script = {
 			script = merger_of_rules/toggled_code

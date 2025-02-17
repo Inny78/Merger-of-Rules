@@ -433,8 +433,6 @@ giga_mod_country_gets_bank_exclude = {
 			"
 			toggle = @has_sbtg_mod
 		}
-		is_country_type = TAC_debris_ship_country
-		is_country_type = TAC_machine_crisis_country
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
