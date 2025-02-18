@@ -2935,6 +2935,15 @@ wp_pv_is_not_binary_or_trinary = {
 			"
 			toggle = @forgotten_empires
 		}
+		# Sparble's Stellar Hyperconstructs
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_ssh_binary_1
+				is_star_class = sc_ssh_binary_2
+			"
+			toggle = @ssh_tech_tier_a_mega_cost
+		}
 		# Real Space
 		inline_script = {
 			script = merger_of_rules/toggled_code

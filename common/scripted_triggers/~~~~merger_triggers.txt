@@ -182,7 +182,10 @@ merg_is_true_ringworld = {
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
-				giga_is_pc_maginot_ringworld = yes
+				is_planet_class = pc_giga_maginot_ringworld
+				is_planet_class = pc_ringworld_city
+				is_planet_class = pc_ringworld_machine
+				is_planet_class = pc_ringworld_hive
 			"
 			toggle = @has_gigastructures
 		}
@@ -190,7 +193,11 @@ merg_is_true_ringworld = {
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
-				is_ringworld_wg = yes
+				is_planet_class = pc_ringworld_habitable_uf
+				is_planet_class = pc_ringworld_habitable_auto_uf
+				is_planet_class = pc_ringworld_habitable_sh
+				is_planet_class = pc_ringworld_habitable_wsg
+				is_planet_class = pc_ringworld_habitable_swim
 			"
 			toggle = @wsg_mod
 		}
@@ -459,6 +466,16 @@ merg_is_dense_star = {
 			"
 			toggle = @ss_abyssal_laser_hull_damage
 		}
+		# Sparble's Stellar Hyperconstructs
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_white_dwarf_star
+				is_planet_class = pc_black_dwarf_star
+				is_planet_class = pc_quark_star
+			"
+			toggle = @ssh_tech_tier_a_mega_cost
+		}
 		# TimeMod
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -587,6 +604,14 @@ merg_is_empty_space = {
 			"
 			toggle = @ag_null_edict_length
 		}
+		# AshArms Aquarius History
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_empty_space
+			"
+			toggle = @asharm_mod
+		}
 		# Darkspace
 		is_ds_gc_star = yes
 		# Forgotten Empires
@@ -597,14 +622,6 @@ merg_is_empty_space = {
 			"
 			toggle = @forgotten_empires
 		}
-		# GF Nyto
-		inline_script = {
-			script = merger_of_rules/toggled_code
-			code = "
-				gf_comp_endles = yes
-			"
-			toggle = @gf_compatch_var
-		}
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -612,14 +629,6 @@ merg_is_empty_space = {
 				giga_is_pc_giga_empty_space = yes
 			"
 			toggle = @has_gigastructures
-		}
-		# AshArms Aquarius History
-		inline_script = {
-			script = merger_of_rules/toggled_code
-			code = "
-				is_planet_class = pc_empty_space
-			"
-			toggle = @asharm_mod
 		}
 		# LEX
 		inline_script = {
@@ -645,6 +654,14 @@ merg_is_empty_space = {
 				is_planet_class = pc_star_void_dummy_01
 			"
 			toggle = @has_seooc_mod
+		}
+		# Sparble's Stellar Hyperconstructs
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_ssh_empty_space
+			"
+			toggle = @ssh_tech_tier_a_mega_cost
 		}
 		# Steven Universe Homeworld Gems
 		inline_script = {
@@ -679,14 +696,6 @@ merg_is_hole_star_class = {
 		}
 		# Astro's Stellaris Overhaul - Galaxy Generation
 		is_star_class = sc_aso_gg_white_hole
-		# Forgotten Empires
-		inline_script = {
-			script = merger_of_rules/toggled_code
-			code = "
-				is_star_class = sc_scfe_empty_space
-			"
-			toggle = @forgotten_empires
-		}
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -725,6 +734,15 @@ merg_is_hole_star_class = {
 				is_star_class = sc_grand_seal
 			"
 			toggle = @has_seooc_mod
+		}
+		# Sparble's Stellar Hyperconstructs
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_ssh_binary_1
+				is_star_class = sc_ssh_binary_2
+			"
+			toggle = @ssh_tech_tier_a_mega_cost
 		}
 		# TimeMod
 		inline_script = {
@@ -795,10 +813,24 @@ merg_is_void_system = {
 			"
 			toggle = @ag_null_edict_length
 		}
+		# AshArms Aquarius History/Gigas
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_empty_space
+			"
+			toggle = @[ has_gigastructures + asharm_mod ]
+		}
 		# Darkspace
 		is_star_class = sc_gc
-		# GF Nyto
-		is_star_class = sc_GF_endler
+		# Forgotten Empires
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_scfe_empty_space
+			"
+			toggle = @forgotten_empires
+		}
 		# Gigas
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -807,8 +839,6 @@ merg_is_void_system = {
 			"
 			toggle = @has_gigastructures
 		}
-		# AshArms Aquarius History/Gigas
-		is_star_class = sc_empty_space
 		# Some Events of Outside Cluster
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -818,6 +848,14 @@ merg_is_void_system = {
 			"
 			toggle = @has_seooc_mod
 		}
+		# Sparble's Stellar Hyperconstructs
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_ssh_space
+			"
+			toggle = @ssh_tech_tier_a_mega_cost
+		}
 		# Steven Universe Homeworld Gems
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -825,6 +863,14 @@ merg_is_void_system = {
 				is_star_class = sc_no_star
 			"
 			toggle = @has_f93_gem_mod
+		}
+		# ThaumStellaris
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_tc_void
+			"
+			toggle = @has_tc_mod
 		}
 		# Wild Space
 		inline_script = {
@@ -1208,7 +1254,7 @@ merg_is_nomad = {
 		is_country_type = ds_nomads
 	}
 }
-# Non-dense or failed stars
+# Non-dense or failed stars (WIP)
 merg_is_standard_star = {
 	optimize_memory
 	OR = {

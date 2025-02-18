@@ -245,6 +245,9 @@
 # Some Events of Outside Cluster 1562501671
 @has_seooc_mod = 0
 
+# Sparble's Stellar Hyperconstructs 3022132203
+@ssh_tech_tier_a_mega_cost = 0
+
 # Special Colonies Overhaul 2234990872
 @is_SCO_enabled = 0
 

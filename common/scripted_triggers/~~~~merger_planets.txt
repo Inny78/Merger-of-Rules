@@ -642,6 +642,14 @@ merg_is_molten = {
 			"
 			toggle = @has_atw_lite
 		}
+		# Sparble's Stellar Hyperconstructs
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_ssh_lava
+			"
+			toggle = @ssh_tech_tier_a_mega_cost
+		}
 	}
 }
 merg_is_nuked = {

@@ -4220,8 +4220,22 @@ merg_is_untargetable = {
 			"
 			toggle = @has_sots_mod
 		}
+		# Sparble's Stellar Hyperconstructs
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_exodus_portal
+			"
+			toggle = @ssh_tech_tier_a_mega_cost
+		}
 		# ThaumStellaris
-		has_planet_flag = tc_not_pk_target
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_planet_flag = tc_not_pk_target
+			"
+			toggle = @has_tc_mod
+		}
 		# Voyage to Eternity
 		inline_script = {
 			script = merger_of_rules/toggled_code
