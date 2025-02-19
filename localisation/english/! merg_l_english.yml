@@ -1,53 +1,15 @@
 ﻿# Irony this is a placeholder file please ignore it
 l_english:
 
-# Policy
+ # Policy
  policy_merger_fake_policy: ""
  policy_merger_fake_policy_desc: ""
 
-# Starbase & Ship
+ # Starbase & Ship
  placeholder_ship: ""
  placeholder_ship_plural: ""
  starbase_placeholder: ""
  starbase_placeholder_plural: ""
- IDC_station_fallen_empire: "Intervention missions deployed"
- IDC_station_fallen_empire_plural: "Intervention missions deployed"
 
-# Tooltips and messages
- merg_forbidden_target: "£trigger_no£ §RThis can't be targeted by a colossus§!"
-
- AUTO_MIGRATE_ROBOT_DROIDS: "£trigger_no£ §RNon-sapient and shackled robots can only auto-migrate with the§! §Y$tech_droid_workers$§! technology.§!\n"
- COUNTRY_IS_ASCENDED_EMPIRE: "£trigger_no£ §RWe cannot build branches on other Ascended Empires.§!"
- acot_requires_fort_building: "£trigger_no£ Has a fortress or stronghold constructed on the planet."
- is_sc_black_hole: "\n£trigger_no£ Target system must be destroyed"
- is_colony_of_someone: "£trigger_no£ You can't sow life at the expense of destroying other lives."
- has_been_sowed_by_genesis: "£trigger_no£ Seeding programs have been implemented."
- delicate_enslaved: "Delicate pops decline if enslaved."
- job_matter_reanimator: "Object Personificator"
- OBJ_MASTER_FORCE_DECLINE: "§R§RInsufficient §Y$job_matter_reanimator$§! to sustain §YObject Avatar§! population§!"
- cannot_fire_StellarisCraft_leader: "£trigger_no£ CANNOT FIRED LEADER OF THIS MOD STELLARISCRAFT"
- need_a_planet_with_pops: "£trigger_no£ Need a planet with pops"
- What_are_you_doing: "£trigger_no£ What are you doing !"
- is_valid_target_for_sweeper: "£trigger_no£ It's a colony controlled by us or a belligerent."
- elec_must_be_colony: "§RTarget must be a colony.§!"
- is_already_corrupt: "£trigger_no£ Target is not already a §YCorrupted World§!"
- cannot_jump_to_scluster_system_during_storm: "£trigger_no£ Due to roiling subspace tides caused by the ongoing space storm, we can only enter the $STORM_CLUSTER$ through conventional means."
- is_not_infected: "Target must be an §YAfflicted World§!"
- no_pops_infected: "Any Pops have the §YCrimson-Infected§! trait"
- not_owned_world: "Target is owned by you"
- needs_regular_star_blokkat_harvest: "Must target a star in a harvestable system. Some systems are §ROFF-LIMITS§!."
- no_pops_to_compose: "§RNo pops to Compose§!"
- is_not_pc_graygoo: "§R£trigger_no£ The target is already a §Y$pc_gray_goo$§!§!"
- will_purge_robots_and_zombie: "§RRobotic Pops will be destroyed and biological pops will gain the §Y$trait_zombie$§! trait§!"
- RG_requires_a_star_star_killer: "\n§HThe target cannot be a vacuum.§!"
- RG_requires_outside_border_star_killer: "\n§HThe target of the attack cannot be within the territory§!"
- RG_requires_inside_border_star_killer: "\n§HThe ship's manual calls for us to fire only on friendly targets...?§!"
- RG_requires_no_pacifist_star_killer: "\n§HOur $ethic_pacifist$ ideology does not permit the use of such weapons.§!"
- N_ISBS_longinus_triggers: "$TRIGGER_FAIL$Target is in neutral or friendly territory"
- N_ISBS_longinus_hited: "$TRIGGER_FAIL$After the Spear of Longinus has already been used."
- PREFTL_IS_XENOPHILE: "Curious about alien culture"
- PREFTL_IS_MATERIALIST: "Curious about alien technology"
- PREFTL_IS_COMPETETIVE: "Capitalist Values"
- is_not_vex_machine_world: "§R$TRIGGER_FAIL$Target is not a §HVex Machine World§!§!"
- trait_robot_vex: "Vex"
- will_convert_non_vex_pops: "§RPops lacking the §Y$trait_robot_vex$§! traits will be converted into §YVex§!§!"
+ # Tooltips and messages
+ merg_forbidden_target: "£trigger_no£ §RThis can't be targeted by a $colossus$§!"

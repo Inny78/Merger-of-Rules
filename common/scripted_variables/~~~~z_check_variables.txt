@@ -31,6 +31,9 @@
 # Ancient Empire 2389589691
 @ag_null_edict_length = 0
 
+# Antarans Attack! 2643405879
+@has_antarans_attack = 0
+
 # ANZ Voidframe 3289877651
 @anz_voidframe_mod = 0
 
@@ -51,9 +54,6 @@
 
 # Azur Lane Stellaris DLC 1617872589
 @azl_mod = 0
-
-# ACOT SBTG 1481972266
-# Pending @has_sbtg_mod = 0
 
 # Civil Wars 2434790082
 @has_civil_wars_mod = 0
@@ -150,9 +150,11 @@
 # Hydra's More Civics 3248725702
 @has_mc_hydra = 0
 
+# KDC Story Pack 2737603165&
+@gray_t1_tech_days = 0
+
 # LEX 1320989536 (compatch)
 @lex_compatch_var = 0
-# pending @has_lex_mod = 0
 
 # Libra: Gestalt Age 3077190639
 @libra_mod = 0
@@ -277,7 +279,6 @@
 
 # The Empty Vagrant 2990576983
 @homeless_class_trait_weight = 0
-# Pending
 
 # The Sleeper 3043795628
 @has_the_sleeper_mod = 0

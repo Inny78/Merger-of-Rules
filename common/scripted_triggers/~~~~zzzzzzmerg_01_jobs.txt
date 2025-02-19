@@ -277,7 +277,13 @@ is_organic_species = {
 					toggle = @wsg_mod
 				}
 				# KDC Story Pack
-				is_archetype = NANITES_CROP
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						is_archetype = NANITES_CROP
+					"
+					toggle = @gray_t1_tech_days
+				}
 			}
 		}
 	}

@@ -182,7 +182,13 @@ has_food_upkeep = {
                 toggle = @expops_compatch_var
             }
             # KDC Story Pack
-            is_archetype = NANITES_CROP
+            inline_script = {
+                script = merger_of_rules/toggled_code
+                code = "
+					is_archetype = NANITES_CROP
+				"
+                toggle = @gray_t1_tech_days
+            }
             # Nyto Species Events Pack
             is_archetype = NYTO
             # SW:UnknownWorld Shipgirls Story

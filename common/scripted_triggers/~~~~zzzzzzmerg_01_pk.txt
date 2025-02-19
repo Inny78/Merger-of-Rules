@@ -1826,9 +1826,15 @@ can_destroy_planet_with_PLANET_KILLER_GRAYGOO = {
 		fail_text = is_not_a_standard_planet_or_megastructure
 		is_a_planet_megastructure = yes
 	}
-	custom_tooltip = {
-		fail_text = is_not_pc_graygoo
-		NOT = { is_planet_class = pc_gray_goo }
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			custom_tooltip = {
+				fail_text = is_not_pc_graygoo
+				NOT = { is_planet_class = pc_gray_goo }
+			}
+		"
+		toggle = @gray_t1_tech_days
 	}
 	custom_tooltip = {
 		fail_text = is_shielded

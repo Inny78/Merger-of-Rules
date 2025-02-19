@@ -63,16 +63,13 @@ merg_is_gate_mega = {
 			toggle = @ag_null_edict_length
 		}
 		# Antarans Attack!
-		is_megastructure_type = a_gateway_0
-		is_megastructure_type = a_gateway_final
-		# AOT
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
-				is_megastructure_type = dimensional_mirror_0
-				is_megastructure_type = dimensional_mirror_final
+				is_megastructure_type = a_gateway_0
+				is_megastructure_type = a_gateway_final
 			"
-			toggle = @has_acquisition_of_tech
+			toggle = @has_antarans_attack
 		}
 		# Archaeology Story Pack
 		inline_script = {
@@ -124,10 +121,16 @@ merg_is_gate_mega = {
 		# Halo: Forerunner Ships & Portraits
 		is_megastructure_type = forerunner_slipspace_portal
 		# KDC Story Pack
-		is_megastructure_type = Agate_closed
-		is_megastructure_type = Agate_opened
-		is_megastructure_type = Rgate_closed
-		is_megastructure_type = Rgate_opened
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_megastructure_type = Agate_closed
+				is_megastructure_type = Agate_opened
+				is_megastructure_type = Rgate_closed
+				is_megastructure_type = Rgate_opened
+			"
+			toggle = @gray_t1_tech_days
+		}
 		# MEM
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -350,16 +353,13 @@ merg_has_gate_mega = {
 			toggle = @ag_null_edict_length
 		}
 		# Antarans Attack!
-		has_megastructure = a_gateway_0
-		has_megastructure = a_gateway_final
-		# AOT
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
-				has_megastructure = dimensional_mirror_0
-				has_megastructure = dimensional_mirror_final
+				has_megastructure = a_gateway_0
+				has_megastructure = a_gateway_final
 			"
-			toggle = @has_guillis_planet_modifiers
+			toggle = @has_antarans_attack
 		}
 		# Archaeology Story Pack
 		inline_script = {
@@ -411,10 +411,16 @@ merg_has_gate_mega = {
 		# Halo: Forerunner Ships & Portraits
 		has_megastructure = forerunner_slipspace_portal
 		# KDC Story Pack
-		has_megastructure = Agate_closed
-		has_megastructure = Agate_opened
-		has_megastructure = Rgate_closed
-		has_megastructure = Rgate_opened
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_megastructure = Agate_closed
+				has_megastructure = Agate_opened
+				has_megastructure = Rgate_closed
+				has_megastructure = Rgate_opened
+			"
+			toggle = @gray_t1_tech_days
+		}
 		# MEM
 		inline_script = {
 			script = merger_of_rules/toggled_code

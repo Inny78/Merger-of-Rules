@@ -11,8 +11,6 @@ JAYPEES_HAIRTENTACLE = { uses_modifiers = no }
 JAYPEES_SEAL = { uses_modifiers = no }
 JAYPEES_SQUID = { uses_modifiers = no }
 JAYPEES_TURTLEHORSE = { uses_modifiers = no }
-# KDC Story Pack
-NANITES_CROP = { uses_modifiers = no }
 # Merger of Rules
 PLACEHOLDER = { uses_modifiers = no }
 # Nyto Species Events Pack

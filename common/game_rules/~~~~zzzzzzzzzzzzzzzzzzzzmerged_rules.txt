@@ -2212,7 +2212,13 @@ can_species_be_assembled = {
 						toggle = @has_eternal_empire
 					}
 					# KDC Story Pack
-					is_archetype = NANITES_CROP
+					inline_script = {
+						script = merger_of_rules/toggled_code
+						code = "
+							is_archetype = NANITES_CROP
+						"
+						toggle = @gray_t1_tech_days
+					}
 					# Star Wars: UnknownWorld Shipgirls Story
 					inline_script = {
 						script = merger_of_rules/toggled_code
@@ -3460,6 +3466,7 @@ can_jump_drive = {
 		"
 		toggle = @has_seooc_mod
 	}
+	# Fallback - if no mod is present, then set the vanilla value
 	inline_script = {
 		script = merger_of_rules/toggled_code_inverse
 		code = "
@@ -3996,22 +4003,6 @@ can_resettle_pop = {
 		custom_tooltip = {
 			fail_text = RESETTLEMENT_POLICY_FAIL
 			owner = { has_policy_flag = resettlement_allowed }
-		}
-	}
-}
-
-can_country_resettle = {
-	OR = {
-		has_policy_flag = resettlement_allowed
-		is_gestalt = yes
-		has_ascension_perk = ap_cosmogenesis
-		custom_tooltip = {
-			text = owns_non_sapient_robots
-			country_has_shackled_robots = yes
-		}
-		hidden_trigger = {
-			#don't need to show this as tooltip only shown when all game rule fails, and this is a special case
-			any_owned_planet = { is_doomsday_planet = yes }
 		}
 	}
 }
@@ -4947,7 +4938,13 @@ can_crossbreed_species = {
 				toggle = @wsg_mod
 			}
 			# KDC Story Pack
-			is_archetype = NANITES_CROP
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					is_archetype = NANITES_CROP
+				"
+				toggle = @gray_t1_tech_days
+			}
 		}
 	}
 	NOR = {
@@ -4962,7 +4959,13 @@ can_crossbreed_species = {
 			toggle = @GF_OGAS_leveled_thread_add_start_after_level
 		}
 		# KDC Story Pack
-		is_archetype = NANITES_CROP
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_archetype = NANITES_CROP
+			"
+			toggle = @gray_t1_tech_days
+		}
 		# Warship Girls R And MIST Species
 		inline_script = {
 			script = merger_of_rules/toggled_code
