@@ -554,6 +554,13 @@ merg_is_hive_world = {
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
+				pd_is_planet_class_hive = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
 				pd_is_pd_hive_world = yes
 			"
 			toggle = @has_planetary_diversity_ascension_worlds
@@ -561,9 +568,9 @@ merg_is_hive_world = {
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
-				pd_is_planet_class_hive = yes
+				pd_is_pd_hive_arc = yes
 			"
-			toggle = @has_planetary_diversity
+			toggle = @has_planetary_diversity_more_arcologies
 		}
 		# ZOFE
 		inline_script = {
@@ -584,16 +591,16 @@ merg_is_machine_world = {
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
-				pd_is_pd_machine_arc = yes
+				pd_is_planet_class_machine = yes
 			"
-			toggle = @has_planetary_diversity_ascension_worlds
+			toggle = @has_planetary_diversity
 		}
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
-				pd_is_planet_class_machine = yes
+				pd_is_pd_machine_arc = yes
 			"
-			toggle = @has_planetary_diversity
+			toggle = @has_planetary_diversity_more_arcologies
 		}
 		# Gigastructural Engineering & More
 		inline_script = {
