@@ -5699,6 +5699,7 @@ can_fill_drone_job = {
 	custom_tooltip = DRONE_JOB_TRIGGER
 	hidden_trigger = {
 		exists = owner
+		owner = { is_gestalt = yes }
 		is_being_purged = no
 		OR = {
 			is_enslaved = no

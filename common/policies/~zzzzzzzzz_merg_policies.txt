@@ -38,7 +38,7 @@ orbital_bombardment = {
 						toggle = @has_bug_branch
 					}
 				}
-				NOT = {
+				NAND = {
 					is_galactic_community_member = yes
 					OR = {
 						is_active_resolution = "resolution_rulesofwar_independent_tribunals"
