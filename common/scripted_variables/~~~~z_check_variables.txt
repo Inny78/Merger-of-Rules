@@ -219,6 +219,9 @@
 # Plentiful Traditions (compatch)
 @plentrad_compatch_var = 0
 
+# Powerful & Realistic Orbital Bombardments 2584335328
+@has_prob_mod = 0
+
 # Real Space (compatch)
 @rs_compatch_var = 0
 # Pending

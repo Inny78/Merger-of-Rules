@@ -57,8 +57,6 @@ is_hypo_stars_dark_star = { always = no }
 is_hypo_stars_quasi_star = { always = no }
 is_hypo_stars_strange_star = { always = no }
 is_hypo_stars_white_hole = { always = no }
-is_khan_country_type = { always = no }
-is_lily_goverments = { always = no }
 is_machine_assimilator = { always = no }
 is_mindless_undead = { always = no }
 is_mzilli_rogue = { always = no }
@@ -71,8 +69,6 @@ is_nanite_habitat_shielded = { always = no }
 is_nyto_country = { always = no }
 is_special_affection_leader = { always = no }
 is_spy_empire = { always = no }
-is_ssh_exodus_portal = { always = no }
-is_ssh_fusion_candle = { always = no }
 is_steven_no_star = { always = no }
 is_submerged = { always = no }
 is_td_multi_hiveminded = { always = no }

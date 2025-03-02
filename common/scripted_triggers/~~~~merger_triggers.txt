@@ -973,32 +973,38 @@ merg_is_isolated_system = {
 		has_star_flag = extragalactic_cluster
 		has_star_flag = miniature_universe
 		# SEOOC
-		has_star_flag = nep_Krahen_cluster
-		has_star_flag = nep_dragon_system
-		has_star_flag = nep_heptagram_cluster
-		has_star_flag = nep_Scrus_cluster
-		has_star_flag = nep_seal_system
-		has_star_flag = nep_highway_station_system
-		has_star_flag = nep_highway_note_system
-		has_star_flag = nep_Step_to_the_Void_1
-		has_star_flag = nep_Step_to_the_Void_2
-		has_star_flag = nep_Step_to_the_Void_3
-		has_star_flag = nep_Step_to_the_Void_4
-		has_star_flag = nep_Step_to_the_Void_5
-		has_star_flag = nep_Step_to_the_Void_6
-		has_star_flag = nep_Step_to_the_Void_7
-		has_star_flag = nep_Step_to_the_Void_8
-		has_star_flag = nep_Step_to_the_Void_9
-		has_star_flag = nep_Step_to_the_Void_10
-		has_star_flag = nep_wohp_system
-		has_star_flag = nep_deus_system
-		has_star_flag = nep_deus_system_2
-		has_star_flag = nep_deus_system_3
-		has_star_flag = nep_deus_system_4
-		has_star_flag = nep_whitegoo_portal_1
-		has_star_flag = nep_whitegoo_portal_2
-		has_star_flag = nep_whitegoo_origin
-		has_star_flag = nep_ugo_system
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = nep_Krahen_cluster
+				has_star_flag = nep_dragon_system
+				has_star_flag = nep_heptagram_cluster
+				has_star_flag = nep_Scrus_cluster
+				has_star_flag = nep_seal_system
+				has_star_flag = nep_highway_station_system
+				has_star_flag = nep_highway_note_system
+				has_star_flag = nep_Step_to_the_Void_1
+				has_star_flag = nep_Step_to_the_Void_2
+				has_star_flag = nep_Step_to_the_Void_3
+				has_star_flag = nep_Step_to_the_Void_4
+				has_star_flag = nep_Step_to_the_Void_5
+				has_star_flag = nep_Step_to_the_Void_6
+				has_star_flag = nep_Step_to_the_Void_7
+				has_star_flag = nep_Step_to_the_Void_8
+				has_star_flag = nep_Step_to_the_Void_9
+				has_star_flag = nep_Step_to_the_Void_10
+				has_star_flag = nep_wohp_system
+				has_star_flag = nep_deus_system
+				has_star_flag = nep_deus_system_2
+				has_star_flag = nep_deus_system_3
+				has_star_flag = nep_deus_system_4
+				has_star_flag = nep_whitegoo_portal_1
+				has_star_flag = nep_whitegoo_portal_2
+				has_star_flag = nep_whitegoo_origin
+				has_star_flag = nep_ugo_system
+			"
+			toggle = @has_seooc_mod
+		}
 		# ACOT SBTG
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -1014,6 +1020,13 @@ merg_is_isolated_system = {
 				has_star_flag = ag_no_jump_in_system
 			"
 			toggle = @ag_null_edict_length
+		}
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = ark_isolated
+			"
+			toggle = @arknights_ANF
 		}
 		# LEX
 		inline_script = {

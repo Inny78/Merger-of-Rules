@@ -392,8 +392,8 @@ should_abduct_pop = {
 		script = merger_of_rules/toggled_code
 		code = "
 			is_v_mobile = yes
-			has_v_stealth_trait = no
-			is_v_overgrown = no
+			has_trait_v_active_camouflage = no
+			has_trait_v_self_decoration = no
 		"
 		toggle = @has_v_traits_mod
 	}
@@ -766,6 +766,8 @@ can_release_vassal_from_species = {
 							prev.this = {
 								OR = {
 									has_origin = origin_progenitor_hive
+									# Plentiful Perks
+									has_ascension_perk = ap_plentiful_traditions_mass_effect
 									# Libra: Gestalt Age
 									inline_script = {
 										script = merger_of_rules/toggled_code
@@ -1986,14 +1988,6 @@ can_species_be_assembled = {
 		# Robots
 		AND = {
 			is_robotic = yes
-			# Azur lane Stellaris DLC
-			inline_script = {
-				script = merger_of_rules/toggled_code
-				code = "
-					NOT = { has_trait = trait_robot_mind_relic_core }
-				"
-				toggle = @azl_mod
-			}
 			# Girls Frontline
 			inline_script = {
 				script = merger_of_rules/toggled_code
@@ -2278,7 +2272,7 @@ can_species_be_assembled = {
 			script = merger_of_rules/toggled_code
 			code = "
 				AND = {
-					is_KANSEN_species = yes
+					is_Azur_Lane_organic_species = yes
 					root = { check_modifier_value = { modifier = planet_pop_assembly_organic_add value > 0 } }
 				}
 			"
@@ -2325,44 +2319,24 @@ can_species_be_assembled = {
 		script = merger_of_rules/toggled_code
 		code = "
 			if = {
-				limit = {
-					has_v_difficult_reproduction = yes
-				}
-				root = {
-					habitability = { who = this value >= 0.8 }
-				}
+				limit = { has_v_difficult_reproduction = yes }
+				root = { habitability = { who = this value >= 0.8 } }
 			}
 			if = {
-				limit = {
-					has_v_embryonic_diapause = yes
-				}
-				root = {
-					NOT = { has_v_diapause_modifier = yes }
-				}
+				limit = { has_v_embryonic_diapause = yes }
+				root = { NOT = { has_v_diapause_modifier = yes } }
 			}
 			if = {
-				limit = {
-					is_v_symbiont_a = yes
-				}
-				root = {
-					check_variable = { which = v_num_symbiont value <= 0 }
-				}
+				limit = { is_v_symbiont_a = yes }
+				root = { check_variable = { which = v_num_symbiont value <= 0 } }
 			}
 			if = {
-				limit = {
-					is_v_symbiont_b = yes
-				}
-				root = {
-					check_variable = { which = v_num_symbiont value >= 0 }
-				}
+				limit = { is_v_symbiont_b = yes }
+				root = { check_variable = { which = v_num_symbiont value >= 0 } }
 			}
 			if = {
-				limit = {
-					has_v_behavioral_sink = yes
-				}
-				root = {
-					check_variable = { which = v_behavioral_sink_count value >= 0 }
-				}
+				limit = { has_v_behavioral_sink = yes }
+				root = { check_variable = { which = v_behavioral_sink_count value >= 0 } }
 			}
 		"
 		toggle = @has_v_traits_mod
@@ -2591,7 +2565,6 @@ can_orbital_bombard = {
 						is_ship_size = voidworms_titan
 					}
 				}
-				is_khan_country_type = yes
 				# Ancient Empire
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -2709,6 +2682,7 @@ can_orbital_bombard = {
 				inline_script = {
 					script = merger_of_rules/toggled_code
 					code = "
+						is_khan_country_type = yes
 						is_country_type = wg_crisis_country
 					"
 					toggle = @wsg_mod
@@ -3589,7 +3563,21 @@ system_blocks_sensors = {
 			root = { NOT = { has_technology = tech_ariphaos_sensors_sealed } }
 		}
 		# Ancient Empire
-		has_star_flag = ag_no_sensor_system
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = ag_no_sensor_system
+			"
+			toggle = @ag_null_edict_length
+		}
+		# Arknight Near Future
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_star_flag = ark_isolated
+			"
+			toggle = @arknights_ANF
+		}
 		# Assault Lily
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -3723,6 +3711,14 @@ can_enter_system_by_jump = {
 								has_star_flag = ag_no_jump_in_system
 							"
 							toggle = @ag_null_edict_length
+						}
+						# Arknight Near Future
+						inline_script = {
+							script = merger_of_rules/toggled_code
+							code = "
+								has_star_flag = ark_isolated
+							"
+							toggle = @arknights_ANF
 						}
 						# Assault Lily
 						inline_script = {
@@ -4258,10 +4254,10 @@ can_build_branch_offices = {
 			inline_script = {
 				script = merger_of_rules/toggled_code
 				code = "
-					has_authority = auth_azur_lane_0
-					has_authority = auth_azur_lane_1
-					has_authority = auth_azur_lane_2
-					has_authority = auth_azur_lane_k
+					AND = {
+						exists = event_target:elizabeth_leader
+						has_country_flag = azur_lane_leader_elizabeth
+					}
 				"
 				toggle = @azl_mod
 			}
@@ -4332,6 +4328,14 @@ can_support_branch_offices = {
 				"
 				toggle = @change_planet_size_bullet_num
 			}
+			# Azur Lane Stellaris DLC
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_authority = auth_azur_dictatorial
+				"
+				toggle = @azl_mod
+			}
 		}
 	}
 	custom_tooltip = {
@@ -4349,14 +4353,6 @@ can_support_branch_offices = {
 						is_country_type = huge_country
 					"
 					toggle = @change_planet_size_bullet_num
-				}
-				# Azur Lane Stellaris DLC
-				inline_script = {
-					script = merger_of_rules/toggled_code
-					code = "
-						has_authority = auth_azur_lane_1
-					"
-					toggle = @azl_mod
 				}
 				# Arknights Near Future
 				inline_script = {
@@ -4515,7 +4511,10 @@ can_build_branch_office_on_planet = {
 					inline_script = {
 						script = merger_of_rules/toggled_code
 						code = "
-							has_authority = auth_azur_lane_1
+							root = {
+								exists = event_target:elizabeth_leader
+								has_country_flag = azur_lane_leader_elizabeth
+							}
 						"
 						toggle = @azl_mod
 					}
@@ -4561,23 +4560,6 @@ can_build_branch_office_on_planet = {
 					}
 				"
 				toggle = @wsg_mod
-			}
-			# Azur Lane Stellaris DLC
-			inline_script = {
-				script = merger_of_rules/toggled_code
-				code = "
-					owner = {
-						AND = {
-							OR = {
-								has_authority = auth_azur_lane_2
-								has_authority = auth_azur_lane_0
-								has_authority = auth_azur_lane_k
-							}
-							is_same_value = root
-						}
-					}
-				"
-				toggle = @azl_mod
 			}
 			# Vanilla
 			# allow branch offices in subsidiaries and vice versa (and fellow subjects)
@@ -4744,19 +4726,15 @@ can_build_branch_office_on_planet = {
 				}
 			}
 		}
-		# Azur Lane Stellaris DLC
-		inline_script = {
-			script = merger_of_rules/toggled_code
-			code = "
-				NOT = { root = { has_authority = auth_azur_lane_1 } }
-			"
-			toggle = @azl_mod
-		}
 	}
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_CRIMINAL_COOLDOWN
 		exists = owner
 		OR = {
+			AND = {
+				root = { is_criminal_syndicate = yes }
+				NOT = { has_planet_flag = criminal_branch_closed_cooldown_planet@root }
+			}
 			root = {
 				OR = {
 					is_criminal_syndicate = no
@@ -4770,18 +4748,14 @@ can_build_branch_office_on_planet = {
 					}
 				}
 			}
-			AND = {
-				root = { is_criminal_syndicate = yes }
-				NOT = { has_planet_flag = criminal_branch_closed_cooldown_planet@root }
+			# Powerful & Realistic Orbital Bombardments
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					root = { is_criminal_syndicate = yes has_country_flag = prob_no_criminal_branch@root.owner }
+				"
+				toggle = @has_prob_mod
 			}
-		}
-		# Azur Lane Stellaris DLC
-		inline_script = {
-			script = merger_of_rules/toggled_code
-			code = "
-				NOT = { root = { has_authority = auth_azur_lane_1 } }
-			"
-			toggle = @azl_mod
 		}
 	}
 	# Warship Girls R And MIST Species
@@ -5510,6 +5484,17 @@ can_add_advanced_traits = {
 	has_utopia = yes
 	OR = {
 		has_tradition = tr_genetics_enhanced_expression
+		# Azur Lane Stellaris DLC
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				AND = {
+					has_ascension_perk = ap_AL_R_kansen_species
+					has_country_flag = ap_AL_R_kansen_species_traits_success
+				}
+			"
+			toggle = @azl_mod
+		}
 		# EDA
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -5560,6 +5545,17 @@ can_add_negative_traits_organic = {
 		has_tradition = tr_genetics_resequencing
 		has_active_tradition = tr_cybernetics_integrated_anatomy
 		has_active_tradition = tr_cybernetics_assimilator_integrated_anatomy
+		# Azur Lane Stellaris DLC
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				AND = {
+					has_ascension_perk = ap_AL_R_kansen_species
+					has_country_flag = ap_AL_R_kansen_species_traits_success
+				}
+			"
+			toggle = @azl_mod
+		}
 		# EDA
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -5614,6 +5610,17 @@ can_remove_positive_traits_organic = {
 				has_tradition = tr_genetics_resequencing
 				has_active_tradition = tr_cybernetics_integrated_anatomy
 				has_active_tradition = tr_cybernetics_assimilator_integrated_anatomy
+				# Azur Lane Stellaris DLC
+				inline_script = {
+					script = merger_of_rules/toggled_code
+					code = "
+						AND = {
+							has_ascension_perk = ap_AL_R_kansen_species
+							has_country_flag = ap_AL_R_kansen_species_traits_success
+						}
+					"
+					toggle = @azl_mod
+				}
 				# EDA
 				inline_script = {
 					script = merger_of_rules/toggled_code
@@ -5669,7 +5676,24 @@ can_modify_organic_portraits = {
 	OR = {
 		has_tradition = tr_genetics_enhanced_expression
 		# AssaultLily In Stellaris
-		is_lily_goverments = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_lily_goverments = yes
+			"
+			toggle = @change_planet_size_bullet_num
+		}
+		# Azur Lane Stellaris DLC
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				AND = {
+					has_ascension_perk = ap_AL_R_kansen_species
+					has_country_flag = ap_AL_R_kansen_species_traits_success
+				}
+			"
+			toggle = @azl_mod
+		}
 		# Madoka Magica NEW
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -5823,12 +5847,7 @@ can_fill_worker_job = {
 			script = merger_of_rules/toggled_code
 			code = "
 				if = {
-					limit = {
-						OR = {
-							is_v_social_parasite = yes
-							is_v_clockwork = yes
-						}
-					}
+					limit = { has_trait_v_social_parasite = yes }
 					has_citizenship_type = { type = citizenship_slavery }
 				}
 			"
@@ -6214,7 +6233,7 @@ can_dismiss_leader = {
 	}
 	# StellarisCraft
 	custom_tooltip = {
-		fail_text = "cannot_fire_StellarisCraft_leader"
+		fail_text = cannot_fire_StellarisCraft_leader
 		NOT = { has_leader_flag = StellarisCraft_event_leader }
 	}
 	# Warship Girls R And MIST Species

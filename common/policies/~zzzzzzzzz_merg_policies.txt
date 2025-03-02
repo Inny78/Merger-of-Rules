@@ -104,6 +104,42 @@ orbital_bombardment = {
 			}
 		}
 	}
+	# Powerful & Realistic Orbital Bombardments
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			option = {
+				name = orbital_bombardment_full
+				policy_flags = { orbital_bombardment_indiscriminate orbital_bombardment_full }
+				potential = {
+					prob_forced_armageddon_bombardment = no
+					OR = {
+						has_country_flag = prob_enable_full_bombardment
+						AND = {
+							is_pacifist = no
+							OR = {
+								is_gestalt = yes
+								is_militarist = yes
+								is_xenophobe = yes
+								has_tradition = tr_supremacy_finish # tr_supremacy_adopt
+								AND = { has_ascension_perk = ap_become_the_crisis has_menace_perk = menp_death_from_above }
+							}
+						}
+					}
+				}
+				valid = { is_pacifist = no }
+				AI_weight = {
+					weight = 3
+					modifier = { factor = 0.1
+						is_galactic_community_member = yes
+						OR = { is_active_resolution = resolution_galacticstudies_ethical_guideline_refactoring is_active_resolution = resolution_galacticstudies_extradimensional_experimentation }
+					}
+				}
+			}
+		"
+		toggle = @has_prob_mod
+	}
+	# Vanilla
 	option = {
 		name = "orbital_bombardment_armageddon"
 

@@ -56,9 +56,6 @@ merg_has_more_default_origins = { has_global_flag = wizz_origin_game_started }
 # Nirvana Empire Project
 merg_has_nirvana_project = { has_global_flag = nirvana_empire_start }
 
-# Powerful & Realistic Orbital Bombardments
-merg_has_power_bombard = { has_global_flag = prob_global_flag }
-
 # Real Space
 merg_has_real_space = { has_global_flag = has_real_space_mod }
 
