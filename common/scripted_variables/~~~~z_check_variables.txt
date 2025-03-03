@@ -58,8 +58,8 @@
 # Civil Wars 2434790082
 @has_civil_wars_mod = 0
 
-# Darkspace 2719075597
-# Pending
+# Darkspace 2719075597 (wait for fix)
+@has_darkspace_installed = 0
 
 # Destiny: The Traveler 3317546633
 @has_dest_trav_mod = 0
@@ -176,6 +176,9 @@
 
 # More Events Mod 727000451
 @has_more_events_mod = 0
+
+# More Origins Mod 2025131190
+@has_more_origins_mod = 0
 
 # More Precursors 2951652477
 @HAS_FHMP = 0

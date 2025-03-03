@@ -143,8 +143,14 @@ merg_is_gate_mega = {
 			toggle = @has_more_events_mod
 		}
 		# More Origins Mod
-		is_megastructure_type = mom_junction_master
-		is_megastructure_type = mom_junction_termini
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_megastructure_type = mom_junction_master
+				is_megastructure_type = mom_junction_termini
+			"
+			toggle = @has_more_origins_mod
+		}
 		# Nyto Species Pack
 		is_megastructure_type = GFnyto_lgate_base
 		# Reworked Advanced Ascension
@@ -433,8 +439,14 @@ merg_has_gate_mega = {
 			toggle = @has_more_events_mod
 		}
 		# More Origins Mod
-		has_megastructure = mom_junction_master
-		has_megastructure = mom_junction_termini
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_megastructure = mom_junction_master
+				has_megastructure = mom_junction_termini
+			"
+			toggle = @has_more_origins_mod
+		}
 		# Nyto Species Pack
 		has_megastructure = GFnyto_lgate_base
 		# Reworked Advanced Ascension

@@ -12,22 +12,6 @@ is_phototrophic = {
             script = merger_of_rules/toggled_code
             code = "
                 has_v_phototrophic_trait = yes
-                AND = {
-                    OR = {
-                        has_v_grafting_trait = yes
-                    }
-                    planet = {
-                        any_owned_species = {
-                            OR = {
-                                has_trait = trait_plantoid_phototrophic
-                                has_trait = trait_plantoid_radiotrophic
-                                has_trait = trait_advanced_phototrophic
-                                has_trait = trait_advanced_radiotrophic
-                                has_trait = trait_lithoid_radiotrophic
-                            }
-                        }
-                    }
-                }
 			"
             toggle = @has_v_traits_mod
         }
@@ -54,32 +38,13 @@ has_phototrophic_energy_upkeep = {
             code = "
                 has_v_phototrophic_trait = yes
                 AND = {
-                    has_v_grafting_trait = yes
-                    planet = {
-                        any_owned_species = {
-                            OR = {
-                                has_trait = trait_plantoid_phototrophic
-                                has_trait = trait_advanced_phototrophic
-                                has_trait = trait_plantoid_radiotrophic
-                                has_trait = trait_advanced_radiotrophic
-                                has_trait = trait_lithoid_radiotrophic
-                            }
-                        }
+                    OR = {
+                        has_trait = trait_plantoid_radiotrophic
+                        has_trait = trait_advanced_radiotrophic
+                        has_trait = trait_harvested_radiotrophic
+                        has_trait = trait_lithoid_radiotrophic
                     }
-                    if = {
-                        limit = {
-                            planet = {
-                                any_owned_species = {
-                                    OR = {
-                                        has_trait = trait_plantoid_radiotrophic
-                                        has_trait = trait_advanced_radiotrophic
-                                        has_trait = trait_lithoid_radiotrophic
-                                    }
-                                }
-                            }
-                        }
-                        planet = { merg_is_nuked = no }
-                    }
+                    NOT = { planet = { merg_is_nuked = yes } }
                 }
 			"
             toggle = @has_v_traits_mod
@@ -96,7 +61,7 @@ has_budding_trait = {
         inline_script = {
             script = merger_of_rules/toggled_code
             code = "
-                has_v_budding_trait = yes
+                has_trait_v_strobilation = yes
 			"
             toggle = @has_v_traits_mod
         }

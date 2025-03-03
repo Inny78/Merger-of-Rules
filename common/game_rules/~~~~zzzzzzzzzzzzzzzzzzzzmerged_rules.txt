@@ -5767,7 +5767,7 @@ can_fill_drone_job = {
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
-				is_v_social_parasite = no
+				has_trait_v_social_parasite = no
 			"
 			toggle = @has_v_traits_mod
 		}
