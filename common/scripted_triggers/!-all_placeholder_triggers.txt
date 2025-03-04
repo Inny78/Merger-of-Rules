@@ -3,7 +3,6 @@ can_build_lily_garden = { always = no }
 can_build_senior_lily_garden = { always = no }
 has_ariphaos_assorted_precursors = { always = no }
 has_aso_space_exploration = { always = no }
-has_bccr = { always = no }
 has_expanded_events = { always = no }
 has_gf_comp_patch = { always = no }
 has_holosphere_portraits_revisited_active = { always = no }
@@ -90,7 +89,6 @@ wula_fallen_empire_mod_actived = { always = no }
 check_ai_limits = { always = no }
 is_acot_sbtg_arkship = { always = no }
 is_progenitor_empires = { always = no }
-has_bugged_criminal_corp_rework = { always = no }
 has_expops_compatch = { always = no }
 acot_should_not_crave_dark_energy = { always = yes }
 acot_should_not_crave_stellarite = { always = yes }

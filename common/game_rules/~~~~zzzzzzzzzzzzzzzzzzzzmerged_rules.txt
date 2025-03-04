@@ -4340,8 +4340,6 @@ can_support_branch_offices = {
 	}
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_ON_MEGACORP_PLANET
-		# Criminal Corp Rework
-		has_bccr = no
 		# Vanilla
 		OR = {
 			NOR = {
@@ -4422,15 +4420,6 @@ can_support_branch_offices = {
 			OR = {
 				has_pre_ftl_age = atomic_age
 				has_pre_ftl_age = early_space_age
-				# BCCR
-				AND = {
-					has_bccr = yes
-					capital_scope = {
-						space_owner = {
-							is_criminal_syndicate = yes
-						}
-					}
-				}
 			}
 		}
 	}
@@ -4472,23 +4461,6 @@ can_build_branch_office_on_planet = {
 			}
 			has_observation_outpost = yes
 			observation_outpost_owner = { is_same_empire = root }
-		}
-	}
-	# Criminal Corp Rework
-	custom_tooltip = { # bccr Normal megacorps cant build on other corps, only criminal corps
-		fail_text = BRANCH_OFFICE_NOT_ON_MEGACORP_PLANET
-		OR = {
-			has_bugged_criminal_corp_rework = no
-			root = { is_criminal_syndicate = yes }
-			AND = {
-				root = { is_criminal_syndicate = yes }
-				owner = {
-					is_megacorp = yes
-					is_criminal_syndicate = no
-				}
-			}
-			owner = { has_commercial_pact = root is_megacorp = no }
-			owner = { is_in_federation_with = root is_megacorp = no }
 		}
 	}
 	# Vanilla
