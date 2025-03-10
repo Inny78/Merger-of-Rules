@@ -657,6 +657,15 @@ event = {
 	is_triggered_only = yes
 	trigger = {
 		any_playable_country = {
+			# Ethics and Civics Classic
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					has_technology = tech_starbase_1
+				"
+				toggle = @has_ecc_cog
+			}
+			# Vanilla
 			any_owned_planet = {
 				is_controlled_by = prev
 				solar_system = { NOT = { exists = starbase } }
