@@ -323,30 +323,28 @@ can_be_military_leader = {
 
 has_any_megastructure_in_empire = {
 	any_owned_megastructure = {
-		AND = {
-			exists = this
-			NOR = {
-				merg_is_gate_mega = yes
-				merg_is_habitat_mega = yes
-				is_megastructure_type = orbital_ring
-				is_megastructure_type = orbital_ring_ruined
-				is_megastructure_type = orbital_ring_restored
-				# Gigastructural Engineering & More
-				inline_script = {
-					script = merger_of_rules/toggled_code
-					code = "
-						is_kilostructure = yes
-					"
-					toggle = @has_gigastructures
-				}
-				# Machine & Robot Expansion
-				inline_script = {
-					script = merger_of_rules/toggled_code
-					code = "
-						xvcv_mdlc_is_non_gate_mega = yes
-					"
-					toggle = @oxr_mdlc_mod
-				}
+		exists = this
+		NOR = {
+			merg_is_gate_mega = yes
+			merg_is_habitat_mega = yes
+			is_megastructure_type = orbital_ring
+			is_megastructure_type = orbital_ring_ruined
+			is_megastructure_type = orbital_ring_restored
+			# Gigastructural Engineering & More
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					is_kilostructure = yes
+				"
+				toggle = @has_gigastructures
+			}
+			# Machine & Robot Expansion
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					xvcv_mdlc_is_non_gate_mega = yes
+				"
+				toggle = @oxr_mdlc_mod
 			}
 		}
 	}
@@ -861,6 +859,8 @@ is_homicidal = {
 		has_valid_civic = civic_fanatic_purifiers
 		has_valid_civic = civic_machine_terminator
 		has_valid_civic = civic_hive_devouring_swarm
+		# Darkspace
+		has_country_flag = is_homicidal_empire
 		# Electroids Species Pack
 		has_valid_civic = civic_elec_stellar_devourers
 		# Expanded Traits, Civics, Pops, and More
@@ -878,6 +878,8 @@ is_unfriendly = {
 	OR = {
 		is_homicidal = yes
 		has_valid_civic = civic_barbaric_despoilers
+		# Darkspace
+		has_country_flag = is_unfriendly_empire
 		# Expanded Traits, Civics, Pops, and More
 		inline_script = {
 			script = merger_of_rules/toggled_code

@@ -58,7 +58,7 @@
 # Civil Wars 2434790082
 @has_civil_wars_mod = 0
 
-# Darkspace 2719075597 (wait for fix)
+# Darkspace 2719075597
 @has_darkspace_installed = 0
 
 # Destiny: The Traveler 3317546633

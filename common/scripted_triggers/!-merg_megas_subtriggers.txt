@@ -102,8 +102,14 @@ merg_is_gate_mega = {
 		is_megastructure_type = Transwarp_hub_4
 		is_megastructure_type = Transwarp_hub_5
 		# Darkspace
-		is_megastructure_type = ancient_relay_0
-		is_megastructure_type = ancient_relay_final
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_megastructure_type = ancient_relay_0
+				is_megastructure_type = ancient_relay_final
+			"
+			toggle = @has_darkspace_installed
+		}
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -398,8 +404,14 @@ merg_has_gate_mega = {
 		has_megastructure = Transwarp_hub_4
 		has_megastructure = Transwarp_hub_5
 		# Darkspace
-		has_megastructure = ancient_relay_0
-		has_megastructure = ancient_relay_final
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_megastructure = ancient_relay_0
+				has_megastructure = ancient_relay_final
+			"
+			toggle = @has_darkspace_installed
+		}
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code

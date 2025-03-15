@@ -214,8 +214,14 @@ acot_is_not_affected_by_cascade = {
 			toggle = @has_apsr
 		}
 		# Darkspace
-		is_ds_holosphere = yes
-		is_ds_stellar_engine = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_ds_holosphere = yes
+				is_ds_stellar_engine = yes
+			"
+			toggle = @has_darkspace_installed
+		}
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code

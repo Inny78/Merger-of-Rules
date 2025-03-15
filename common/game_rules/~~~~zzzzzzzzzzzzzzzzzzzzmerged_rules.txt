@@ -5102,6 +5102,14 @@ can_be_part_of_galactic_community = {
 				"
 				toggle = @has_sbtg_mod
 			}
+			# Darkspace
+			inline_script = {
+				script = merger_of_rules/toggled_code
+				code = "
+					is_country_type = ds_nomads
+				"
+				toggle = @has_darkspace_installed
+			}
 			# ZOFE
 			inline_script = {
 				script = merger_of_rules/toggled_code

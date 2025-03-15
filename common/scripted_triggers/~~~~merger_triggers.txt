@@ -6,8 +6,6 @@ merg_is_standard_empire = {
 		is_country_type = default
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
-		# Darkspace
-		is_country_type = ds_nomads
 		# Ethics & Civics Infinity
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -44,8 +42,6 @@ merg_is_standard_empire = {
 merg_is_default_empire = {
 	OR = {
 		is_country_type = default
-		# Darkspace
-		is_country_type = ds_nomads
 		# Ethics & Civics Infinity
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -176,8 +172,14 @@ merg_is_true_ringworld = {
 			toggle = @change_planet_size_bullet_num
 		}
 		# Darkspace
-		is_ds_ancient_ringworld = yes
-		is_ds_ringworld_spectrals = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_ds_ancient_ringworld = yes
+				is_ds_ringworld_spectrals = yes
+			"
+			toggle = @has_darkspace_installed
+		}
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -225,7 +227,13 @@ merg_is_habitat = {
 			toggle = @has_acquisition_of_tech
 		}
 		# DarkSpace
-		is_ds_skycatcher = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_ds_skycatcher = yes
+			"
+			toggle = @has_darkspace_installed
+		}
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -417,7 +425,13 @@ merg_is_dense_star = {
 		# Astro's Stellaris Overhaul - Galaxy Generation
 		is_aso_gg_white_hole = yes
 		# Darkspace
-		is_ds_zeitriss_gc = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_ds_zeitriss_gc = yes
+			"
+			toggle = @has_darkspace_installed
+		}
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -510,7 +524,13 @@ merg_is_black_or_white_hole = {
 		# Astro's Stellaris Overhaul - Galaxy Generation
 		is_aso_gg_white_hole = yes
 		# Darkspace
-		is_ds_zeitriss_gc = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_ds_zeitriss_gc = yes
+			"
+			toggle = @has_darkspace_installed
+		}
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -613,7 +633,13 @@ merg_is_empty_space = {
 			toggle = @asharm_mod
 		}
 		# Darkspace
-		is_ds_gc_star = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_ds_gc_star = yes
+			"
+			toggle = @has_darkspace_installed
+		}
 		# Forgotten Empires
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -822,7 +848,13 @@ merg_is_void_system = {
 			toggle = @[ has_gigastructures + asharm_mod ]
 		}
 		# Darkspace
-		is_star_class = sc_gc
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_star_class = sc_gc
+			"
+			toggle = @has_darkspace_installed
+		}
 		# Forgotten Empires
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -1264,7 +1296,13 @@ merg_is_nomad = {
 			toggle = @homeless_class_trait_weight
 		}
 		# Darkspace
-		is_country_type = ds_nomads
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_country_type = ds_nomads
+			"
+			toggle = @has_darkspace_installed
+		}
 	}
 }
 # Non-dense or failed stars (WIP)

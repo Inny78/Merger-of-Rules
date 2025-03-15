@@ -1,3 +1,2 @@
 # Irony this is a placeholder file please ignore it
 sc_aso_gg_white_hole = { class = g_star spawn_odds = 0 }
-sc_gc = { class = g_star spawn_odds = 0 }

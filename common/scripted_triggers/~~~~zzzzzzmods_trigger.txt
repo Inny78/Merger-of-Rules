@@ -1409,6 +1409,22 @@ ds_hyperlane_create = {
 		}
 	}
 }
+ds_modded_invalid_planet = {
+	OR = {
+		merg_is_forbidden_target = yes
+		# Darkspace
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_constructor_ark
+				is_planet_class = pc_stellar_engine
+				is_planet_class = pc_ds_xeelee_holosphere
+				is_planet_class = pc_kompass
+			"
+			toggle = @has_darkspace_installed
+		}
+	}
+}
 
 ############################### Destiny: Hive Portraits ###############################
 is_valid_pop_for_TAKING = {

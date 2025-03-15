@@ -502,7 +502,15 @@ ndb_can_target_planet = {
 			toggle = @has_ancient_caches
 		}
 		# Darkspace
-		is_ds_zeitriss_gc = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_ds_holosphere = yes
+				is_ds_stellar_engine = yes
+				is_ds_gc_star = yes
+			"
+			toggle = @has_darkspace_installed
+		}
 	}
 }
 ndb_can_target_system = {

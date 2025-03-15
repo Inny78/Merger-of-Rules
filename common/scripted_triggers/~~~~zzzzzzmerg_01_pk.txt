@@ -1250,29 +1250,6 @@ can_destroy_planet_with_azur_shippart_W3_T3 = {
 	}
 }
 
-############################### Darkspace ###############################
-can_destroy_planet_with_PLANET_KILLER_DS_UPLOAD = {
-	custom_tooltip = {
-		fail_text = merg_forbidden_target
-		merg_is_forbidden_target = no
-	}
-	custom_tooltip = { fail_text = is_unpopulated num_pops > 0 }
-	custom_tooltip = {
-		fail_text = is_not_hostile
-		planet_is_hostile_or_crisis = yes
-	}
-	custom_tooltip = {
-		fail_text = cannot_crack_pre_ftl_planet_ownership
-		exists = owner
-		owner = {
-			NOR = {
-				is_country_type = primitive
-				is_primitive = yes
-			}
-		}
-	}
-}
-
 ############################### Destiny: Hive Portraits ###############################
 can_destroy_planet_with_PLANET_KILLER_TAKEN_WEAPON = {
 	custom_tooltip = {
@@ -4205,8 +4182,15 @@ merg_is_untargetable = {
 			toggle = @has_ancient_caches
 		}
 		# Darkspace
-		is_ds_holosphere = yes
-		is_ds_stellar_engine = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_ds_holosphere = yes
+				is_ds_stellar_engine = yes
+				is_ds_gc_star = yes
+			"
+			toggle = @has_darkspace_installed
+		}
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code
