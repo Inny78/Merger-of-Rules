@@ -1423,6 +1423,29 @@ ds_modded_invalid_planet = {
 			"
 			toggle = @has_darkspace_installed
 		}
+		merg_is_shielded = yes
+		is_ringworld = yes
+		merg_is_habitat = yes
+		merg_is_broken = yes
+		merg_is_gas_giant = yes
+		is_asteroid = yes
+	}
+}
+ds_modded_valid_planet = {
+	is_artificial = no
+	OR = {
+		is_planet_class = pc_infested
+		merg_is_basic_planet = yes
+		merg_is_hive_world = yes
+		merg_is_machine_world = yes
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_ds_stahl
+				is_planet_class = pc_immortal
+			"
+			toggle = @has_darkspace_installed
+		}
 	}
 }
 
