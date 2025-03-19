@@ -604,6 +604,7 @@ can_generate_leader_from_pop = {
 can_generate_leader_from_species = {
 	is_sapient = yes
 	OR = {
+		# Machines & Robot Expansion Continued
 		inline_script = {
 			script = merger_of_rules/toggled_code
 			code = "
@@ -620,10 +621,7 @@ can_generate_leader_from_species = {
 		# Special Leadership Privileges for Battle Thralls & Bio-Trophies
 		AND = {
 			has_species_flag = allow_leaders_organic_advisors@root
-			has_citizenship_type = {
-				type = citizenship_organic_trophy
-				country = root
-			}
+			has_citizenship_type = { type = citizenship_organic_trophy country = root }
 		}
 	}
 	NOR = {
@@ -1313,14 +1311,18 @@ can_colonize_planet = {
 	inline_script = {
 		script = merger_of_rules/toggled_code
 		code = "
-		custom_tooltip = {
-			fail_text = oxr_mdlc_can_colonize_planet_pc_habitat.fail_active
-			NAND = {
-				is_planet_class = pc_habitat
-				oxr_mdlc_planet_decision_dismantle_habitat_active = yes
+			custom_tooltip = {
+				fail_text = oxr_mdlc_can_colonize_planet_pc_habitat.fail_active
+				NAND = {
+					is_planet_class = pc_habitat
+					oxr_mdlc_planet_decision_dismantle_habitat_active = yes
+				}
 			}
-		}
-	"
+			custom_tooltip = {
+				fail_text = oxr_mdlc_can_colonize_planet.wm_is_rebooting
+				NOT = { oxr_mdlc_planet_world_machine_is_rebooting = yes }
+			}
+		"
 		toggle = @oxr_mdlc_mod
 	}
 	# StarnetAI/StarTech
