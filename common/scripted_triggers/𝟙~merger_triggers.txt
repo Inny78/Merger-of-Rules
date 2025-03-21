@@ -243,6 +243,22 @@ merg_is_habitat = {
 			"
 			toggle = @has_gigastructures
 		}
+		# Genshin Impact
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_tiankongdao
+			"
+			toggle = @trait_shijianzhe_sci_amt
+		}
+		# Girls Frontline
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_GFnytp_habitis
+			"
+			toggle = @gf_compatch_var
+		}
 		# Habitation
 		has_planet_flag = hab_init
 		# Living Space
@@ -254,14 +270,6 @@ merg_is_habitat = {
 				is_pc_mem_vazuran_habitat = yes
 			"
 			toggle = @has_more_events_mod
-		}
-		# Girls Frontline
-		inline_script = {
-			script = merger_of_rules/toggled_code
-			code = "
-				is_planet_class = pc_GFnytp_habitis
-			"
-			toggle = @gf_compatch_var
 		}
 		# Twinks Atlantean
 		# uses_district_set = skypalace
@@ -1302,6 +1310,14 @@ merg_is_nomad = {
 				is_country_type = ds_nomads
 			"
 			toggle = @has_darkspace_installed
+		}
+		# None
+		inline_script = {
+			script = merger_of_rules/toggled_code_inverse
+			code = "
+				is_country_type = ds_nomads
+			"
+			toggle = @[ homeless_class_trait_weight + has_darkspace_installed ]
 		}
 	}
 }

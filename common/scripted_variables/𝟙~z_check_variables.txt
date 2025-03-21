@@ -134,6 +134,9 @@
 # Freebooters Origin 3253479588
 @has_nsc_freebooter_mod = 0
 
+# Genshin Impact 2848888776
+@trait_shijianzhe_sci_amt = 0
+
 # Gigastructural Engineering and More 1121692237
 @has_gigastructures = 0
 

@@ -1,0 +1,2 @@
+# Irony this is a placeholder file please ignore it
+ap_plentiful_traditions_mass_effect = { potential = { always = no } possible = { always = no } }

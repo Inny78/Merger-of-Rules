@@ -158,6 +158,14 @@ merg_is_arcology = {
 			"
 			toggle = @HAS_AAA
 		}
+		# Genshin Impact
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_planet_class = pc_tiwate_yuansu_planet
+			"
+			toggle = @trait_shijianzhe_sci_amt
+		}
 		# Gigastructural Engineering & More
 		inline_script = {
 			script = merger_of_rules/toggled_code

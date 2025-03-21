@@ -365,6 +365,15 @@ should_abduct_pop = {
 		owner = { is_hostile = root }
 	}
 	has_virtual_species_trait = no
+	# Genshin Impact
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			has_lingjing_species_trait = no
+		"
+		toggle = @trait_shijianzhe_sci_amt
+	}
+	# Vanilla
 	OR = {
 		# Expanded Mods Base
 		inline_script = {
@@ -849,18 +858,11 @@ can_release_vassal_from_species = {
 can_modify_species = {
 	# Can't modify root Species during Ascension Situations
 	if = {
-		limit = {
-			is_same_species = root
-		}
+		limit = { is_same_species = root }
 		custom_tooltip = {
 			fail_text = "ASCENSION_SITUATION_ONGOING"
-
 			root = {
-				NOT = {
-					any_situation = {
-						has_ascension_situation_ongoing = yes
-					}
-				}
+				NOT = { any_situation = { has_ascension_situation_ongoing = yes } }
 			}
 		}
 	}
@@ -933,6 +935,17 @@ can_modify_species = {
 		NOT = {
 			has_trait = trait_self_modified
 		}
+	}
+	# Genshin Impact
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			custom_tooltip = {
+				fail_text = CANNOT_MODIFY_SELF_MODIFIED_LINGJING_SPECIES
+				NOT = { has_trait = trait_robot_lingjing_digital }
+			}
+		"
+		toggle = @trait_shijianzhe_sci_amt
 	}
 }
 
@@ -1446,6 +1459,14 @@ can_colonize_with_pop = {
 	NOR = {
 		has_trait = trait_pathogenic_genes
 		has_trait = trait_limited_cybernetic
+		# Genshin Impact
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_trait = trait_robot_lingjing_digital
+			"
+			toggle = @trait_shijianzhe_sci_amt
+		}
 	}
 	# The Empty Vagrant
 	inline_script = {
@@ -1946,13 +1967,24 @@ can_species_be_assembled = {
 			root.owner = { is_individual_machine = yes }
 		}
 	}
-	NOT = {
+	NAND = {
 		AND = {
 			has_virtual_species_trait = yes
 			root.owner = {
 				is_fallen_empire = no
 				has_active_tradition = tr_virtuality_finish
 			}
+		}
+		# Genshin Impact
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				AND = {
+					has_lingjing_species_trait = yes
+					root.owner = { is_fallen_empire = no }
+				}
+			"
+			toggle = @trait_shijianzhe_sci_amt
 		}
 	}
 	# Expanded Gestalts: Forgotten Queens
@@ -1986,6 +2018,17 @@ can_species_be_assembled = {
 				is_archetype = ASCENDED
 			"
 			toggle = @has_eternal_empire
+		}
+		# Genshin Impact
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				AND = {
+					is_archetype = TIWATE
+					root = { check_modifier_value = { modifier = planet_pop_assembly_add value > 0 } }
+				}
+			"
+			toggle = @trait_shijianzhe_sci_amt
 		}
 		# Robots
 		AND = {
@@ -3867,16 +3910,11 @@ can_resettle_pop = {
 	custom_tooltip = {
 		fail_text = "no_resettling_apps"
 		if = {
-			limit = {
-				has_virtual_species_trait = yes
-			}
+			limit = { has_virtual_species_trait = yes }
 			exists = owner
 			owner = {
 				is_fallen_empire = no
-				NOT = {
-					has_active_tradition = tr_virtuality_adopt
-				}
-
+				NOT = { has_active_tradition = tr_virtuality_adopt }
 			}
 		}
 	}
@@ -3890,6 +3928,17 @@ can_resettle_pop = {
 			}
 		"
 		toggle = @expops_compatch_var
+	}
+	# Genshin Impact
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			custom_tooltip = {
+				fail_text = no_has_lingjing_species_trait_apps
+				NOT = { has_lingjing_species_trait = yes }
+			}
+		"
+		toggle = @trait_shijianzhe_sci_amt
 	}
 	# V_Traits
 	inline_script = {
@@ -3955,9 +4004,7 @@ can_resettle_pop = {
 		limit = {
 			planet = {
 				is_planet_class = pc_cosmogenesis_world
-				owner = {
-					has_ascension_perk = ap_cosmogenesis
-				}
+				owner = { has_ascension_perk = ap_cosmogenesis }
 				num_pops < 2
 			}
 		}
@@ -3970,14 +4017,9 @@ can_resettle_pop = {
 		limit = {
 			planet = {
 				has_deposit = d_genesis_preserve
-				count_owned_pop = {
-					limit = { is_sapient = yes }
-					count < 2
-				}
+				count_owned_pop = { limit = { is_sapient = yes } count < 2 }
 			}
-			owner = {
-				is_guided_sapience_empire = yes
-			}
+			owner = { is_guided_sapience_empire = yes }
 		}
 		custom_tooltip = {
 			fail_text = "no_abandon_genesis_preserve"
@@ -3991,9 +4033,7 @@ can_resettle_pop = {
 		always = yes
 	}
 	else_if = {
-		limit = {
-			owner = { is_gestalt = yes }
-		}
+		limit = { owner = { is_gestalt = yes } }
 		always = yes
 	}
 	# Vanilla
@@ -4029,7 +4069,7 @@ can_resettle_planet = {
 		script = merger_of_rules/toggled_code
 		code = "
 			giga_can_resettle_planet = yes
-			"
+		"
 		toggle = @has_gigastructures
 	}
 }
@@ -5071,6 +5111,14 @@ can_be_sold_on_slave_market = {
 			"
 			toggle = @has_diagraphers_trait_mod
 		}
+		# Genshin Impact
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				has_lingjing_species_trait = yes
+			"
+			toggle = @trait_shijianzhe_sci_amt
+		}
 		# Warship Girls R And MIST Species
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -5328,6 +5376,18 @@ can_pop_auto_migrate = {
 			}
 		}
 	}
+	# Genshin Impact
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			custom_tooltip = {
+				fail_text = AUTO_MIGRATE_LINGJING
+				has_lingjing_species_trait = no
+			}
+		"
+		toggle = @trait_shijianzhe_sci_amt
+	}
+	# Vanilla
 	if = {
 		limit = {
 			OR = {

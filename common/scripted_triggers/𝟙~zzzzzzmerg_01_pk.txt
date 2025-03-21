@@ -1585,6 +1585,43 @@ can_destroy_planet_with_PLANET_KILLER_NECROZMA= {
 	}
 }
 
+# Genshin Impact
+can_destroy_planet_with_PLANET_KILLER_TIWATE_SHIPPART_XINGQIUTAIHAI = {
+	custom_tooltip = {
+		fail_text = merg_forbidden_target
+		merg_is_forbidden_target = no
+	}
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		is_a_habitable_planet_megastructure = yes
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		merg_is_shielded = no
+	}
+	custom_tooltip = {
+		fail_text = is_not_hostile_or_primitive
+		OR = {
+			planet_is_hostile_or_crisis = yes
+			AND = {
+				exists = owner
+				owner = { is_country_type = primitive }
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_country_type = primitive }
+		}
+		custom_tooltip = {
+			fail_text = primitives_not_in_borders
+			exists = space_owner
+			space_owner = { is_same_value = from.owner }
+		}
+	}
+}
+
 ############################### Gigastructural Engineering & More ###############################
 can_destroy_planet_with_PLANET_KILLER_BLOKKAT_GENERATOR = {
 	is_colony = no

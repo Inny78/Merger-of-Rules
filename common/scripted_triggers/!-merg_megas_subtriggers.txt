@@ -159,6 +159,8 @@ merg_is_gate_mega = {
 		}
 		# Nyto Species Pack
 		is_megastructure_type = GFnyto_lgate_base
+		# Psionic Species Expanded
+		is_megastructure_type = pse_wormhole_megastructure
 		# Reworked Advanced Ascension
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -461,6 +463,8 @@ merg_has_gate_mega = {
 		}
 		# Nyto Species Pack
 		has_megastructure = GFnyto_lgate_base
+		# Psionic Species Expanded
+		has_megastructure = pse_wormhole_megastructure
 		# Reworked Advanced Ascension
 		inline_script = {
 			script = merger_of_rules/toggled_code
@@ -625,6 +629,14 @@ merg_is_habitat_mega = {
 		# Electroids
 		is_megastructure_type = elec_aurora_habitat
 		is_megastructure_type = elec_aurora_habitat_bh
+		# Genshin Impact
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				is_megastructure_type = sky_island
+			"
+			toggle = @trait_shijianzhe_sci_amt
+		}
 		# More Events Mod
 		inline_script = {
 			script = merger_of_rules/toggled_code

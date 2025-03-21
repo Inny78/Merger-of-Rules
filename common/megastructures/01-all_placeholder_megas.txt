@@ -20,3 +20,4 @@ elec_aurora_habitat_bh = { entity = "" potential = { always = no } possible = { 
 temporary_habitat_0 = { entity = "" potential = { always = no } possible = { always = no } }
 forerunner_slipspace_portal = { entity = "" potential = { always = no } possible = { always = no } }
 nanite_habitat_0 = { entity = "" potential = { always = no } possible = { always = no } }
+pse_wormhole_megastructure = { entity = "" potential = { always = no } possible = { always = no } }
