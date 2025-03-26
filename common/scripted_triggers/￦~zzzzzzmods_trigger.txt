@@ -1554,6 +1554,42 @@ elec_hyperlane_create = {
 	}
 }
 
+############################### Empires Expanded ###############################
+is_symbiosis_world_positive = {
+	OR = {
+		merg_is_hive_world = yes
+		merg_is_gaia = yes
+		merg_is_hab_ringworld = yes
+	}
+}
+is_symbiosis_world_negative = {
+	OR = {
+		merg_is_nuked = yes
+		merg_is_arcology = yes
+	}
+}
+is_caretakers_world_positive = {
+	OR = {
+		merg_is_gaia = yes
+		merg_is_hab_ringworld = yes
+		# Planetary Diversity
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				pd_is_planet_class_superhabitable = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+
+	}
+}
+is_caretakers_world_negative = {
+	OR = {
+		merg_is_nuked = yes
+		merg_is_arcology = yes
+	}
+}
+
 ############################### Ethics and Civics Alternative - FunEFork/Classics ###############################
 is_toxic_planet = {
 	optimize_memory

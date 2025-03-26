@@ -9,7 +9,6 @@ has_holosphere_portraits_revisited_active = { always = no }
 has_madoka_comp = { always = no }
 has_msgsc_compatch = { always = no }
 has_rs_comp_patch = { always = no }
-has_sbtg_upgraded_capital = { always = no }
 has_specialist_subject_leader_trait_maid = { always = no }
 has_strict_democratic_auth = { always = no }
 has_upgraded_penal_capital = { always = no }
