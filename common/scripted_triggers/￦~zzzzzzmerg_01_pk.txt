@@ -4253,7 +4253,7 @@ merg_is_untargetable = {
 			code = "
 				is_planet_class = pc_exodus_portal
 			"
-			toggle = @ssh_tech_tier_a_mega_cost
+			toggle = @has_stellar_hyperconstructs
 		}
 		# ThaumStellaris
 		inline_script = {

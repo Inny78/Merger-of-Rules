@@ -663,7 +663,7 @@ merg_is_molten = {
 			code = "
 				is_planet_class = pc_ssh_lava
 			"
-			toggle = @ssh_tech_tier_a_mega_cost
+			toggle = @has_stellar_hyperconstructs
 		}
 	}
 }

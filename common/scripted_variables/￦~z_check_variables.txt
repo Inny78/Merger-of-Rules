@@ -134,6 +134,9 @@
 # Freebooters Origin 3253479588
 @has_nsc_freebooter_mod = 0
 
+# Galactic Community Overhaul
+@galactic_community_overhaul = 0
+
 # Genshin Impact 2848888776
 @trait_shijianzhe_sci_amt = 0
 
@@ -185,6 +188,9 @@
 
 # More Precursors 2951652477
 @HAS_FHMP = 0
+
+# More Primitives
+@has_more_primitives_mod = 0
 
 # More Traditions 3067902147
 @HAS_MT_Hydra = 0
@@ -257,7 +263,7 @@
 @has_seooc_mod = 0
 
 # Sparble's Stellar Hyperconstructs 3022132203
-@ssh_tech_tier_a_mega_cost = 0
+@has_stellar_hyperconstructs = 0
 
 # Special Colonies Overhaul 2234990872
 @is_SCO_enabled = 0

@@ -496,7 +496,7 @@ merg_is_dense_star = {
 				is_planet_class = pc_black_dwarf_star
 				is_planet_class = pc_quark_star
 			"
-			toggle = @ssh_tech_tier_a_mega_cost
+			toggle = @has_stellar_hyperconstructs
 		}
 		# TimeMod
 		inline_script = {
@@ -695,7 +695,7 @@ merg_is_empty_space = {
 			code = "
 				is_planet_class = pc_ssh_empty_space
 			"
-			toggle = @ssh_tech_tier_a_mega_cost
+			toggle = @has_stellar_hyperconstructs
 		}
 		# Steven Universe Homeworld Gems
 		inline_script = {
@@ -776,7 +776,7 @@ merg_is_hole_star_class = {
 				is_star_class = sc_ssh_binary_1
 				is_star_class = sc_ssh_binary_2
 			"
-			toggle = @ssh_tech_tier_a_mega_cost
+			toggle = @has_stellar_hyperconstructs
 		}
 		# TimeMod
 		inline_script = {
@@ -894,7 +894,7 @@ merg_is_void_system = {
 			code = "
 				is_star_class = sc_ssh_space
 			"
-			toggle = @ssh_tech_tier_a_mega_cost
+			toggle = @has_stellar_hyperconstructs
 		}
 		# Steven Universe Homeworld Gems
 		inline_script = {
@@ -1426,4 +1426,22 @@ merg_has_precursor_intro = {
 		}
 	}
 	else = { always = no }
+}
+is_homicidal_no_terminator = {
+	OR = {
+		has_valid_civic = civic_fanatic_purifiers
+		has_valid_civic = civic_hive_devouring_swarm
+		# Darkspace
+		has_country_flag = is_homicidal_empire
+		# Electroids Species Pack
+		has_valid_civic = civic_elec_stellar_devourers
+		# Expanded Traits, Civics, Pops, and More
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+			has_valid_civic = civic_infestation
+		"
+			toggle = @expops_compatch_var
+		}
+	}
 }

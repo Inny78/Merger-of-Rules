@@ -2963,7 +2963,7 @@ wp_pv_is_not_binary_or_trinary = {
 				is_star_class = sc_ssh_binary_1
 				is_star_class = sc_ssh_binary_2
 			"
-			toggle = @ssh_tech_tier_a_mega_cost
+			toggle = @has_stellar_hyperconstructs
 		}
 		# Real Space
 		inline_script = {

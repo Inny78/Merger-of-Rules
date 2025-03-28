@@ -5001,7 +5001,27 @@ can_use_galactic_market = {
 			toggle = @has_zofe_vanilla
 		}
 	}
-	is_homicidal = no
+	inline_script = {
+		script = merger_of_rules/toggled_code_inverse
+		code = "
+			is_homicidal = no
+		"
+		toggle = @galactic_community_overhaul
+	}
+	# Galactic Community Overhaul
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			NOR = {
+				is_homicidal_no_terminator = yes
+				AND = {
+					has_civic = civic_machine_terminator
+					NOT = { has_global_flag = terminators_can_join_galcom }
+				}
+			}
+		"
+		toggle = @galactic_community_overhaul
+	}
 	# Ethics and Civics : Infinity
 	inline_script = {
 		script = merger_of_rules/toggled_code
@@ -5172,7 +5192,27 @@ can_be_part_of_galactic_community = {
 	}
 	custom_tooltip = {
 		fail_text = community_homicidal_failtext
-		is_homicidal = no
+		inline_script = {
+			script = merger_of_rules/toggled_code_inverse
+			code = "
+				is_homicidal = no
+			"
+			toggle = @galactic_community_overhaul
+		}
+		# Galactic Community Overhaul
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				NOR = {
+					is_homicidal_no_terminator = yes
+					AND = {
+						has_civic = civic_machine_terminator
+						NOT = { has_global_flag = terminators_can_join_galcom }
+					}
+				}
+			"
+			toggle = @galactic_community_overhaul
+		}
 	}
 	custom_tooltip = {
 		fail_text = community_declared_crisis_failtext
@@ -5237,7 +5277,27 @@ can_be_part_of_galactic_empire = {
 	}
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"
-		is_homicidal = no
+		inline_script = {
+			script = merger_of_rules/toggled_code_inverse
+			code = "
+				is_homicidal = no
+			"
+			toggle = @galactic_community_overhaul
+		}
+		# Galactic Community Overhaul
+		inline_script = {
+			script = merger_of_rules/toggled_code
+			code = "
+				NOR = {
+					is_homicidal_no_terminator = yes
+					AND = {
+						has_civic = civic_machine_terminator
+						NOT = { has_global_flag = terminators_can_join_galcom }
+					}
+				}
+			"
+			toggle = @galactic_community_overhaul
+		}
 	}
 	custom_tooltip = {
 		fail_text = "community_declared_crisis_failtext"
@@ -5319,7 +5379,27 @@ can_be_part_of_galactic_council = {
 			toggle = @has_zofe_vanilla
 		}
 	}
-	is_homicidal = no
+	inline_script = {
+		script = merger_of_rules/toggled_code_inverse
+		code = "
+			is_homicidal = no
+		"
+		toggle = @galactic_community_overhaul
+	}
+	# Galactic Community Overhaul
+	inline_script = {
+		script = merger_of_rules/toggled_code
+		code = "
+			NOR = {
+				is_homicidal_no_terminator = yes
+				AND = {
+					has_civic = civic_machine_terminator
+					NOT = { has_global_flag = terminators_can_join_galcom }
+				}
+			}
+		"
+		toggle = @galactic_community_overhaul
+	}
 	inline_script = {
 		script = merger_of_rules/toggled_code
 		code = "
